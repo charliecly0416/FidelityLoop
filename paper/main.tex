@@ -1,0 +1,31 @@
+% Retained MLSys 2025 style; verify the target-year CFP when announced.
+% Anonymous review entrypoint; submit its PDF separately from the supplement.
+\documentclass{article}
+\usepackage{mlsys2025}
+\usepackage{microtype,graphicx,booktabs,amsmath,amssymb,natbib,xurl,hyperref,placeins}
+\usepackage{enumitem}
+\hypersetup{hidelinks,pdfauthor={Anonymous Authors},pdftitle={FidelityLoop: Closed-Loop Validation of Elastic LLM-Serving Policies}}
+\newcommand{\theHalgorithm}{\arabic{algorithm}}
+\newcommand{\papertitle}{FidelityLoop: Closed-Loop Validation of Elastic LLM-Serving Policies}
+\mlsystitlerunning{FidelityLoop: Closed-Loop Validation}
+\newcommand{\experimentfacility}{a university computing facility}
+\begin{document}
+\twocolumn[
+\mlsystitle{\papertitle}
+\begin{mlsysauthorlist}
+\mlsysauthor{Anonymous Author(s)}{anon}
+\end{mlsysauthorlist}
+\mlsysaffiliation{anon}{Anonymous Institution}
+\mlsyscorrespondingauthor{Anonymous Author}{anonymous@example.invalid}
+\mlsyskeywords{LLM serving, lifecycle validation, simulation fidelity, elastic inference}
+\vskip 0.3in
+\begin{abstract}
+\input{abstract}
+\end{abstract}
+]
+\printAffiliationsAndNotice{}
+\input{body}
+\FloatBarrier
+\bibliographystyle{mlsys2025}
+\bibliography{references}
+\end{document}

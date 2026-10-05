@@ -1,0 +1,39 @@
+{
+  "schema": "maxopt-v7-claim-lock-v1",
+  "scope": [
+    "manuscript/abstract.tex",
+    "manuscript/body.tex",
+    "manuscript/appendix.tex",
+    "manuscript/appendix_e1.tex",
+    "manuscript/appendix_e2.tex",
+    "manuscript/appendix_e2_policy.tex",
+    "manuscript/appendix_v4.tex",
+    "manuscript/appendix_v5_mechanism.tex",
+    "manuscript/cpu_model_evidence.tex",
+    "manuscript/external_validity.tex"
+  ],
+  "required_substrings": [
+    "20/32",
+    "32/32",
+    "0.0804",
+    "0.4657",
+    "36/38",
+    "21/38",
+    "4.06\\%",
+    "30.3\\%",
+    "76.19",
+    "891.98",
+    "42.74\\%",
+    "not a saving",
+    "not pooled",
+    "synthetic API",
+    "separately re-provisioned runtime lock",
+    "P1+",
+    "no row overlap"
+  ],
+  "forbidden_regex": [
+    "(?i)\\bsame runtime\\b",
+    "(?i)\\bP arm\\b",
+    "(?i)\\buniversal PPO superiority\\s+(?:is|holds|is demonstrated)"
+  ]
+}

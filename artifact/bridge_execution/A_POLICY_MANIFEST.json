@@ -1,0 +1,205 @@
+{
+  "schema": "maxopt-bridge-f4-policy-manifest-v1",
+  "status": "HISTORICAL_REPLAY_ONLY",
+  "contract_sha256": "4a47c9adeec0387540c41c54687ab0548c36167f7b14d8ed398cabac38d7d62f",
+  "members": [
+    {
+      "id": "hysteresis_u8_d0_c60",
+      "policy": {
+        "cooldown_seconds": 60,
+        "down_threshold": 0,
+        "min_devices": 0,
+        "name": "hysteresis",
+        "up_threshold": 8
+      },
+      "reservation": false,
+      "scale": false,
+      "guard_model": "E"
+    },
+    {
+      "id": "hysteresis_u8_d0_c60__guard",
+      "policy": {
+        "cooldown_seconds": 60,
+        "down_threshold": 0,
+        "min_devices": 0,
+        "name": "hysteresis",
+        "up_threshold": 8
+      },
+      "reservation": true,
+      "scale": true,
+      "guard_model": "E"
+    },
+    {
+      "id": "hysteresis_u8_d1_c60",
+      "policy": {
+        "cooldown_seconds": 60,
+        "down_threshold": 1,
+        "min_devices": 0,
+        "name": "hysteresis",
+        "up_threshold": 8
+      },
+      "reservation": false,
+      "scale": false,
+      "guard_model": "E"
+    },
+    {
+      "id": "hysteresis_u8_d1_c60__guard",
+      "policy": {
+        "cooldown_seconds": 60,
+        "down_threshold": 1,
+        "min_devices": 0,
+        "name": "hysteresis",
+        "up_threshold": 8
+      },
+      "reservation": true,
+      "scale": true,
+      "guard_model": "E"
+    }
+  ],
+  "initial_target": 2,
+  "initial_devices": "two active, empty queues",
+  "decision_seconds": 1,
+  "observation_schema": "maxopt-v3-observation-v1",
+  "input_sha256": {
+    "docs/maxopt_bridge_execution_20260930/CONTRACT.json": "4a47c9adeec0387540c41c54687ab0548c36167f7b14d8ed398cabac38d7d62f",
+    "docs/maxopt_bridge_execution_20260930/SOURCE_MANIFEST.json": "8a2823fd47106103b22715cf68fddd20e10fd9eab0fce81635473b4a25d2d65d",
+    "artifacts/maxopt_bridge_20260930/inputs/development/train_burst_offline_v2.jsonl": "4f35a287a48bd3dc37416ec227a7ce6fdd774cb3af41b147495bda674d14801f",
+    "artifacts/maxopt_bridge_20260930/inputs/development/train_recovery_v2.jsonl": "70fc159edee72ddb720934fb2e1043dab422aac33ac9dca0c36501f5cf9c67ff",
+    "artifacts/maxopt_bridge_20260930/inputs/development/train_steady_v2.jsonl": "b8e5bd48d9ce150ffd93135dadca8edc6af9c9b16a33392a6f11f641de16f56d",
+    "artifacts/maxopt_bridge_20260930/inputs/development/validation_burst_offline_v2.jsonl": "94e8c1c19b024571ec1e031f0b7117267a2fbae5828ac1241c6087a7d7581455",
+    "artifacts/maxopt_bridge_20260930/inputs/development/validation_recovery_v2.jsonl": "a9188ab24b256561287050fc12117fa6d6e1df2a71b27548df4286e166fa12d7",
+    "artifacts/maxopt_bridge_20260930/inputs/development/validation_steady_v2.jsonl": "554772d3a740245ab8ba891fd19e9dba80f363ecc9ef211d28dde2f3e6d25b0f",
+    "artifacts/maxopt_bridge_20260930/inputs/models.json": "2741b92460de865cf54f5d00c3a506d57eee026aada6a2d19914db249649fb65",
+    "artifacts/maxopt_bridge_20260930/inputs/candidates.json": "4e66e8b9a0f0b90115b30c385d3cab175b141c5d3e5f70e3610db8298e5754cb",
+    "artifacts/maxopt_bridge_20260930/inputs/guard_safety.json": "a95b0611065900f7a5cbda6fe24afba2f11c17ab2c9e7c955504da3f71517634",
+    "artifacts/maxopt_bridge_20260930/inputs/simulator_contract.json": "1862df57e7109dc0242dccab0b7dc6531f319258605710a8ee4573ef2c97cfa3",
+    "artifacts/maxopt_bridge_20260930/inputs/historical/search_results.json": "e9cf5c0eadd87c01dd138b283d6459dbb0f49933f8d0704da0f2bf395e761446",
+    "artifacts/maxopt_bridge_20260930/inputs/historical/rankings.json": "296555fca40c5fe39bcdcb300e1ece42d33a0a2776504c71d33e3559b18d1efe",
+    "artifacts/maxopt_bridge_20260930/inputs/historical/selection.json": "db7a8a2ef3b97ed9bb1ead98e5194287169b7338349aa8d4b7fa031bc455f5ca"
+  },
+  "full_pool_selection": {
+    "C": {
+      "selected": {
+        "id": "hysteresis_u8_d1_c60",
+        "policy": {
+          "cooldown_seconds": 60,
+          "down_threshold": 1,
+          "min_devices": 0,
+          "name": "hysteresis",
+          "up_threshold": 8
+        },
+        "reservation": false,
+        "scale": false,
+        "feasible": true,
+        "mean_cost": 2.0182888243067185,
+        "worst_offline_slack": 106.90199687425047,
+        "failed_windows": []
+      },
+      "equal_cost_and_slack_ids": [
+        "hysteresis_u8_d1_c60",
+        "hysteresis_u8_d1_c60__guard"
+      ],
+      "candidate_count": 50,
+      "development_cells": 300,
+      "ranking_rebuilt_exactly": true
+    },
+    "C30": {
+      "selected": {
+        "id": "hysteresis_u8_d0_c60__guard",
+        "policy": {
+          "cooldown_seconds": 60,
+          "down_threshold": 0,
+          "min_devices": 0,
+          "name": "hysteresis",
+          "up_threshold": 8
+        },
+        "reservation": true,
+        "scale": true,
+        "feasible": true,
+        "mean_cost": 1.213593011113408,
+        "worst_offline_slack": 24.90199687425047,
+        "failed_windows": []
+      },
+      "equal_cost_and_slack_ids": [
+        "hysteresis_u8_d0_c60__guard"
+      ],
+      "candidate_count": 50,
+      "development_cells": 300,
+      "ranking_rebuilt_exactly": true
+    },
+    "E": {
+      "selected": {
+        "id": "hysteresis_u8_d0_c60__guard",
+        "policy": {
+          "cooldown_seconds": 60,
+          "down_threshold": 0,
+          "min_devices": 0,
+          "name": "hysteresis",
+          "up_threshold": 8
+        },
+        "reservation": true,
+        "scale": true,
+        "feasible": true,
+        "mean_cost": 1.1182691270505003,
+        "worst_offline_slack": 28.90199687425047,
+        "failed_windows": []
+      },
+      "equal_cost_and_slack_ids": [
+        "hysteresis_u8_d0_c60__guard"
+      ],
+      "candidate_count": 50,
+      "development_cells": 300,
+      "ranking_rebuilt_exactly": true
+    },
+    "O": {
+      "selected": {
+        "id": "hysteresis_u8_d0_c60__guard",
+        "policy": {
+          "cooldown_seconds": 60,
+          "down_threshold": 0,
+          "min_devices": 0,
+          "name": "hysteresis",
+          "up_threshold": 8
+        },
+        "reservation": true,
+        "scale": true,
+        "feasible": true,
+        "mean_cost": 1.5241512666687866,
+        "worst_offline_slack": 25,
+        "failed_windows": []
+      },
+      "equal_cost_and_slack_ids": [
+        "hysteresis_u8_d0_c60__guard"
+      ],
+      "candidate_count": 50,
+      "development_cells": 300,
+      "ranking_rebuilt_exactly": true
+    },
+    "V": {
+      "selected": {
+        "id": "hysteresis_u8_d0_c60__guard",
+        "policy": {
+          "cooldown_seconds": 60,
+          "down_threshold": 0,
+          "min_devices": 0,
+          "name": "hysteresis",
+          "up_threshold": 8
+        },
+        "reservation": true,
+        "scale": true,
+        "feasible": true,
+        "mean_cost": 1.1233063524606002,
+        "worst_offline_slack": 28.90199687425047,
+        "failed_windows": []
+      },
+      "equal_cost_and_slack_ids": [
+        "hysteresis_u8_d0_c60__guard"
+      ],
+      "candidate_count": 50,
+      "development_cells": 300,
+      "ranking_rebuilt_exactly": true
+    }
+  },
+  "final_test_inputs_generated": false,
+  "deployment_status": "NOT_RUN_NEEDS_GPU_DEVELOPMENT_PREFLIGHT"
+}

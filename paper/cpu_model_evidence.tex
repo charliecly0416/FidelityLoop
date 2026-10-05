@@ -1,0 +1,28 @@
+The within-Llama model comparison is also negative. On fixed H, $O_x$ and $E_x$
+both have equal-window $L=0.00421052$ and occupied MAE 25.1458 GPU seconds:
+neither improves over the other. The registered gate requires at least 20\%
+$L$ reduction \emph{and} each window's occupied MAE no worse than $O_x+21$;
+passing the latter does not rescue zero improvement. The inherited 20\%
+occupied-improvement diagnostic also fails. These locks use development
+median/max aggregate service lookups with identical lifecycle endpoints, not
+a new Llama demonstration of the Qwen endpoint-adaptation gain. M2 passes on
+completed-local common support (minimum 206 requests, maximum MAE 0.02964 s),
+but H and guard cover only 51.24\% and 58.90\% of all arrivals on an equal-window
+basis. This service-subset result does not establish whole-stream or controller
+fidelity; the supplement reports coverage and target disagreement separately.
+
+\subsection{Same-environment lifecycle refit}
+W3 asks whether a bounded same-environment refit resolves the original V--E
+comparison's environment caveat. It selects $V'$ by loss on two preformal
+development canaries; a separate preformal drift probe constrains lifecycle
+lower bounds. It freezes the model before CPU replay and evaluates all
+36 existing physical records without new GPU runs. On fixed H, equal-window
+$L$ falls from 0.01352738 to 0.01284857, a 5.02\% reduction below the registered
+10\% threshold, while every window satisfies the occupied-MAE safety line
+$V'\leq E+21$. Steady-window $L$ worsens despite the aggregate reduction.
+The result is a scientific negative, not evidence that refitting has no effect.
+Only lifecycle scalars are eligible for fitting; service, setup, and guard
+safety remain fixed. The researchers already knew V3's aggregate results,
+although the fitting code never consumed formal outcomes. This is a bounded
+retrospective replay, not a newly blinded experiment, and it does not erase the
+historical V--E caveat.

@@ -1,0 +1,2245 @@
+{
+  "cells": [
+    {
+      "P1plus": true,
+      "attempt_count": 1,
+      "cell_index": 1,
+      "checkpoint_sha256": null,
+      "classification": "COMPLETED",
+      "completed": 478,
+      "cpu_recalculation_path": "recalculation/cells/001.json",
+      "final_attempt": 1,
+      "final_result_path": "cells/01/attempts/attempt_01/CELL_RESULT.json",
+      "hardware": "2×A100 80GB, GPU0/1",
+      "kind": "CAPACITY",
+      "late": 0,
+      "observation_horizon_seconds": 2100,
+      "observation_window_cost": {
+        "gpu": 4.2,
+        "offline_miss": 0.0,
+        "operating": 4.2,
+        "scope": "registered_observation_window",
+        "shutdown": 0.0,
+        "startup": 0.0,
+        "synthetic_api": 0,
+        "total": 4.2,
+        "units": "scenario_USD_not_real_bill"
+      },
+      "offline": {
+        "arrivals": 120,
+        "completed": 120,
+        "late": 0,
+        "not_on_time": 0,
+        "on_time": 120,
+        "on_time_rate": 1.0,
+        "unfinished": 0
+      },
+      "online": {
+        "arrivals": 358,
+        "completed": 358,
+        "late": 0,
+        "not_on_time": 0,
+        "on_time": 358,
+        "on_time_rate": 1.0,
+        "unfinished": 0
+      },
+      "policy_id": "all2",
+      "prediction_refs": [
+        {
+          "path": "predictions/cells/C__all2__bridge_locked_test_recovery_v1.json.gz",
+          "policy_id": "all2",
+          "prediction_model": "C",
+          "sha256": "4931592cfc3624e3de1400f7ae8186b0cb0e4708d645f18fce3425007df62a2a"
+        },
+        {
+          "path": "predictions/cells/C30__all2__bridge_locked_test_recovery_v1.json.gz",
+          "policy_id": "all2",
+          "prediction_model": "C30",
+          "sha256": "beb25bebcefc2916b5fc5240b8117ba64632b592db3d4f795ce7f49484e78773"
+        }
+      ],
+      "repeat": 1,
+      "request_count_unit": "requests",
+      "run_id": "all2__bridge_locked_test_recovery_v1__r1",
+      "schema": "maxopt-v7-e2-uniform-cell-summary-v1",
+      "technical_retry_history_path": "cells/01/ATTEMPT_HISTORY.json",
+      "technical_valid": true,
+      "tensor_sha256": null,
+      "time_unit": "seconds",
+      "training_model": null,
+      "unfinished": 0,
+      "window_id": "bridge_locked_test_recovery_v1"
+    },
+    {
+      "P1plus": false,
+      "attempt_count": 1,
+      "cell_index": 2,
+      "checkpoint_sha256": "e1d2c1caa8786cd0d35b9d9dedd3a37a041bbd5cf76d83d281c1861e4a2ce981",
+      "classification": "NEGATIVE_RESULT",
+      "completed": 402,
+      "cpu_recalculation_path": "recalculation/cells/002.json",
+      "final_attempt": 1,
+      "final_result_path": "cells/02/attempts/attempt_01/CELL_RESULT.json",
+      "hardware": "2×A100 80GB, GPU0/1",
+      "kind": "COMPARISON",
+      "late": 40,
+      "observation_horizon_seconds": 2100,
+      "observation_window_cost": {
+        "gpu": 1.314025907809,
+        "offline_miss": 1.16,
+        "operating": 1.566537907809,
+        "scope": "registered_observation_window",
+        "shutdown": 0.015,
+        "startup": 0.026000000000000002,
+        "synthetic_api": 0.211512,
+        "total": 2.726537907809,
+        "units": "scenario_USD_not_real_bill"
+      },
+      "offline": {
+        "arrivals": 120,
+        "completed": 44,
+        "late": 40,
+        "not_on_time": 116,
+        "on_time": 4,
+        "on_time_rate": 0.03333333333333333,
+        "unfinished": 76
+      },
+      "online": {
+        "arrivals": 358,
+        "completed": 358,
+        "late": 0,
+        "not_on_time": 0,
+        "on_time": 358,
+        "on_time_rate": 1.0,
+        "unfinished": 0
+      },
+      "policy_id": "ppo_C_r2",
+      "prediction_refs": [
+        {
+          "path": "predictions/cells/C__ppo_C_r2__bridge_locked_test_recovery_v1.json.gz",
+          "policy_id": "ppo_C_r2",
+          "prediction_model": "C",
+          "sha256": "3a45c8563d4c9331ebe0c721e4a5c915b2bbf50d262fafb0ccf2b5c6d4e7dc85"
+        },
+        {
+          "path": "predictions/cells/C30__ppo_C_r2__bridge_locked_test_recovery_v1.json.gz",
+          "policy_id": "ppo_C_r2",
+          "prediction_model": "C30",
+          "sha256": "19992c13979af16b257d793cc15dfbe70b60b6c6d4879f806fed7ada40c48b7b"
+        }
+      ],
+      "repeat": 1,
+      "request_count_unit": "requests",
+      "run_id": "ppo_C_r2__bridge_locked_test_recovery_v1__r1",
+      "schema": "maxopt-v7-e2-uniform-cell-summary-v1",
+      "technical_retry_history_path": "cells/02/ATTEMPT_HISTORY.json",
+      "technical_valid": true,
+      "tensor_sha256": "a042f1b897c2981694390ab84984449142969302c081877419824ee7f82facff",
+      "time_unit": "seconds",
+      "training_model": "C",
+      "unfinished": 76,
+      "window_id": "bridge_locked_test_recovery_v1"
+    },
+    {
+      "P1plus": true,
+      "attempt_count": 1,
+      "cell_index": 3,
+      "checkpoint_sha256": "60f59f251227273e9926f5588e1ff2d8e443fec23766ffec99abbe348343f218",
+      "classification": "COMPLETED",
+      "completed": 478,
+      "cpu_recalculation_path": "recalculation/cells/003.json",
+      "final_attempt": 1,
+      "final_result_path": "cells/03/attempts/attempt_01/CELL_RESULT.json",
+      "hardware": "2×A100 80GB, GPU0/1",
+      "kind": "COMPARISON",
+      "late": 0,
+      "observation_horizon_seconds": 2100,
+      "observation_window_cost": {
+        "gpu": 2.1545971779279998,
+        "offline_miss": 0.0,
+        "operating": 2.297622177928,
+        "scope": "registered_observation_window",
+        "shutdown": 0.016,
+        "startup": 0.028,
+        "synthetic_api": 0.099025,
+        "total": 2.297622177928,
+        "units": "scenario_USD_not_real_bill"
+      },
+      "offline": {
+        "arrivals": 120,
+        "completed": 120,
+        "late": 0,
+        "not_on_time": 0,
+        "on_time": 120,
+        "on_time_rate": 1.0,
+        "unfinished": 0
+      },
+      "online": {
+        "arrivals": 358,
+        "completed": 358,
+        "late": 0,
+        "not_on_time": 0,
+        "on_time": 358,
+        "on_time_rate": 1.0,
+        "unfinished": 0
+      },
+      "policy_id": "ppo_C_s101",
+      "prediction_refs": [
+        {
+          "path": "predictions/cells/C__ppo_C_s101__bridge_locked_test_recovery_v1.json.gz",
+          "policy_id": "ppo_C_s101",
+          "prediction_model": "C",
+          "sha256": "e59e7bc08c32fb27bce092eadcc927264d59ae944c037dd06f44c8b87c1869e9"
+        },
+        {
+          "path": "predictions/cells/C30__ppo_C_s101__bridge_locked_test_recovery_v1.json.gz",
+          "policy_id": "ppo_C_s101",
+          "prediction_model": "C30",
+          "sha256": "cac0205934a39704b25f9a84c5c4adb317fc0ae39c278b03973525d1dea8806d"
+        }
+      ],
+      "repeat": 1,
+      "request_count_unit": "requests",
+      "run_id": "ppo_C_s101__bridge_locked_test_recovery_v1__r1",
+      "schema": "maxopt-v7-e2-uniform-cell-summary-v1",
+      "technical_retry_history_path": "cells/03/ATTEMPT_HISTORY.json",
+      "technical_valid": true,
+      "tensor_sha256": "d0d3916574bb2d710361c068fd9f2ff2f1b2f4b0ea6111665aa7442edbfe4238",
+      "time_unit": "seconds",
+      "training_model": "C",
+      "unfinished": 0,
+      "window_id": "bridge_locked_test_recovery_v1"
+    },
+    {
+      "P1plus": true,
+      "attempt_count": 1,
+      "cell_index": 4,
+      "checkpoint_sha256": "b3079e6a36249ef9b49ba033460ab4b901b30cc3e209c227f2b844c9e520909f",
+      "classification": "COMPLETED",
+      "completed": 478,
+      "cpu_recalculation_path": "recalculation/cells/004.json",
+      "final_attempt": 1,
+      "final_result_path": "cells/04/attempts/attempt_01/CELL_RESULT.json",
+      "hardware": "2×A100 80GB, GPU0/1",
+      "kind": "COMPARISON",
+      "late": 0,
+      "observation_horizon_seconds": 2100,
+      "observation_window_cost": {
+        "gpu": 2.1107837318600002,
+        "offline_miss": 0.0,
+        "operating": 2.1177837318600004,
+        "scope": "registered_observation_window",
+        "shutdown": 0.003,
+        "startup": 0.004,
+        "synthetic_api": 0,
+        "total": 2.1177837318600004,
+        "units": "scenario_USD_not_real_bill"
+      },
+      "offline": {
+        "arrivals": 120,
+        "completed": 120,
+        "late": 0,
+        "not_on_time": 0,
+        "on_time": 120,
+        "on_time_rate": 1.0,
+        "unfinished": 0
+      },
+      "online": {
+        "arrivals": 358,
+        "completed": 358,
+        "late": 0,
+        "not_on_time": 0,
+        "on_time": 358,
+        "on_time_rate": 1.0,
+        "unfinished": 0
+      },
+      "policy_id": "ppo_C30_r2",
+      "prediction_refs": [
+        {
+          "path": "predictions/cells/C__ppo_C30_r2__bridge_locked_test_recovery_v1.json.gz",
+          "policy_id": "ppo_C30_r2",
+          "prediction_model": "C",
+          "sha256": "c81baf22b38e06e6302208bb356d3ded3fd0a96515c9118b767710f8508e29a8"
+        },
+        {
+          "path": "predictions/cells/C30__ppo_C30_r2__bridge_locked_test_recovery_v1.json.gz",
+          "policy_id": "ppo_C30_r2",
+          "prediction_model": "C30",
+          "sha256": "36f1a7c04b98b4586c7e20ef1381a861c084effa0be612284d52e4ae87d6c9dc"
+        }
+      ],
+      "repeat": 1,
+      "request_count_unit": "requests",
+      "run_id": "ppo_C30_r2__bridge_locked_test_recovery_v1__r1",
+      "schema": "maxopt-v7-e2-uniform-cell-summary-v1",
+      "technical_retry_history_path": "cells/04/ATTEMPT_HISTORY.json",
+      "technical_valid": true,
+      "tensor_sha256": "2b5117e17adc94c86fd980055fafdca5c47c1e2b1570a9b717c3bc0a9975b10e",
+      "time_unit": "seconds",
+      "training_model": "C30",
+      "unfinished": 0,
+      "window_id": "bridge_locked_test_recovery_v1"
+    },
+    {
+      "P1plus": false,
+      "attempt_count": 1,
+      "cell_index": 5,
+      "checkpoint_sha256": "6d7b4a01816d495c56ea4e4bc28078d20bce0cc0833188543dbc4ddf91b867cb",
+      "classification": "NEGATIVE_RESULT",
+      "completed": 478,
+      "cpu_recalculation_path": "recalculation/cells/005.json",
+      "final_attempt": 1,
+      "final_result_path": "cells/05/attempts/attempt_01/CELL_RESULT.json",
+      "hardware": "2×A100 80GB, GPU0/1",
+      "kind": "COMPARISON",
+      "late": 11,
+      "observation_horizon_seconds": 2100,
+      "observation_window_cost": {
+        "gpu": 1.605912724128,
+        "offline_miss": 0.11,
+        "operating": 1.810124724128,
+        "scope": "registered_observation_window",
+        "shutdown": 0.008,
+        "startup": 0.014,
+        "synthetic_api": 0.182212,
+        "total": 1.9201247241280002,
+        "units": "scenario_USD_not_real_bill"
+      },
+      "offline": {
+        "arrivals": 120,
+        "completed": 120,
+        "late": 11,
+        "not_on_time": 11,
+        "on_time": 109,
+        "on_time_rate": 0.9083333333333333,
+        "unfinished": 0
+      },
+      "online": {
+        "arrivals": 358,
+        "completed": 358,
+        "late": 0,
+        "not_on_time": 0,
+        "on_time": 358,
+        "on_time_rate": 1.0,
+        "unfinished": 0
+      },
+      "policy_id": "ppo_C30_s103",
+      "prediction_refs": [
+        {
+          "path": "predictions/cells/C__ppo_C30_s103__bridge_locked_test_recovery_v1.json.gz",
+          "policy_id": "ppo_C30_s103",
+          "prediction_model": "C",
+          "sha256": "ec7ebae9c81ffe659344ea3da6f25e806ad5888a08779df745d0a31a79481d28"
+        },
+        {
+          "path": "predictions/cells/C30__ppo_C30_s103__bridge_locked_test_recovery_v1.json.gz",
+          "policy_id": "ppo_C30_s103",
+          "prediction_model": "C30",
+          "sha256": "e2aa31ded0387d39f27d3e178cdef74f3279b2f8aed87d71e5892ee710945699"
+        }
+      ],
+      "repeat": 1,
+      "request_count_unit": "requests",
+      "run_id": "ppo_C30_s103__bridge_locked_test_recovery_v1__r1",
+      "schema": "maxopt-v7-e2-uniform-cell-summary-v1",
+      "technical_retry_history_path": "cells/05/ATTEMPT_HISTORY.json",
+      "technical_valid": true,
+      "tensor_sha256": "de0136e53a719317b6db126764d4a95ca20d3d498ec020ec821297e69ae67c60",
+      "time_unit": "seconds",
+      "training_model": "C30",
+      "unfinished": 0,
+      "window_id": "bridge_locked_test_recovery_v1"
+    },
+    {
+      "P1plus": true,
+      "attempt_count": 1,
+      "cell_index": 6,
+      "checkpoint_sha256": "e03a5695275a67ccbe9ea1dde08792d007a0a6aaf0d8d51de30b921286584157",
+      "classification": "COMPLETED",
+      "completed": 478,
+      "cpu_recalculation_path": "recalculation/cells/006.json",
+      "final_attempt": 1,
+      "final_result_path": "cells/06/attempts/attempt_01/CELL_RESULT.json",
+      "hardware": "2×A100 80GB, GPU0/1",
+      "kind": "COMPARISON",
+      "late": 0,
+      "observation_horizon_seconds": 2100,
+      "observation_window_cost": {
+        "gpu": 2.046814844288,
+        "offline_miss": 0.0,
+        "operating": 2.050814844288,
+        "scope": "registered_observation_window",
+        "shutdown": 0.002,
+        "startup": 0.002,
+        "synthetic_api": 0,
+        "total": 2.050814844288,
+        "units": "scenario_USD_not_real_bill"
+      },
+      "offline": {
+        "arrivals": 120,
+        "completed": 120,
+        "late": 0,
+        "not_on_time": 0,
+        "on_time": 120,
+        "on_time_rate": 1.0,
+        "unfinished": 0
+      },
+      "online": {
+        "arrivals": 358,
+        "completed": 358,
+        "late": 0,
+        "not_on_time": 0,
+        "on_time": 358,
+        "on_time_rate": 1.0,
+        "unfinished": 0
+      },
+      "policy_id": "ppo_C30_raw",
+      "prediction_refs": [
+        {
+          "path": "predictions/cells/C__ppo_C30_selected__bridge_locked_test_recovery_v1.json.gz",
+          "policy_id": "ppo_C30_selected",
+          "prediction_model": "C",
+          "sha256": "a7324f414644c3985e9217b558a694084eda1178b2ce231eda27dc20daa0f336"
+        },
+        {
+          "path": "predictions/cells/C30__ppo_C30_selected__bridge_locked_test_recovery_v1.json.gz",
+          "policy_id": "ppo_C30_selected",
+          "prediction_model": "C30",
+          "sha256": "54aee4159dd9c39efbeb55b70a98b284565f5c031efd7a247c41c5d82a5a16be"
+        }
+      ],
+      "repeat": 1,
+      "request_count_unit": "requests",
+      "run_id": "ppo_C30_raw__bridge_locked_test_recovery_v1__r1",
+      "schema": "maxopt-v7-e2-uniform-cell-summary-v1",
+      "technical_retry_history_path": "cells/06/ATTEMPT_HISTORY.json",
+      "technical_valid": true,
+      "tensor_sha256": "9c6cd1c2af99293634c9bd25c7ce946683c3fe255cda8a647778603ec8d5bff4",
+      "time_unit": "seconds",
+      "training_model": "C30",
+      "unfinished": 0,
+      "window_id": "bridge_locked_test_recovery_v1"
+    },
+    {
+      "P1plus": true,
+      "attempt_count": 2,
+      "cell_index": 7,
+      "checkpoint_sha256": "60f59f251227273e9926f5588e1ff2d8e443fec23766ffec99abbe348343f218",
+      "classification": "COMPLETED",
+      "completed": 478,
+      "cpu_recalculation_path": "recalculation/cells/007.json",
+      "final_attempt": 2,
+      "final_result_path": "cells/07/attempts/attempt_02/CELL_RESULT.json",
+      "hardware": "2×A100 80GB, GPU0/1",
+      "kind": "COMPARISON",
+      "late": 0,
+      "observation_horizon_seconds": 2100,
+      "observation_window_cost": {
+        "gpu": 2.1747959892849997,
+        "offline_miss": 0.0,
+        "operating": 2.320177989285,
+        "scope": "registered_observation_window",
+        "shutdown": 0.016,
+        "startup": 0.028,
+        "synthetic_api": 0.101382,
+        "total": 2.320177989285,
+        "units": "scenario_USD_not_real_bill"
+      },
+      "offline": {
+        "arrivals": 120,
+        "completed": 120,
+        "late": 0,
+        "not_on_time": 0,
+        "on_time": 120,
+        "on_time_rate": 1.0,
+        "unfinished": 0
+      },
+      "online": {
+        "arrivals": 358,
+        "completed": 358,
+        "late": 0,
+        "not_on_time": 0,
+        "on_time": 358,
+        "on_time_rate": 1.0,
+        "unfinished": 0
+      },
+      "policy_id": "ppo_C_s101",
+      "prediction_refs": [
+        {
+          "path": "predictions/cells/C__ppo_C_s101__bridge_locked_test_recovery_v1.json.gz",
+          "policy_id": "ppo_C_s101",
+          "prediction_model": "C",
+          "sha256": "e59e7bc08c32fb27bce092eadcc927264d59ae944c037dd06f44c8b87c1869e9"
+        },
+        {
+          "path": "predictions/cells/C30__ppo_C_s101__bridge_locked_test_recovery_v1.json.gz",
+          "policy_id": "ppo_C_s101",
+          "prediction_model": "C30",
+          "sha256": "cac0205934a39704b25f9a84c5c4adb317fc0ae39c278b03973525d1dea8806d"
+        }
+      ],
+      "repeat": 2,
+      "request_count_unit": "requests",
+      "run_id": "ppo_C_s101__bridge_locked_test_recovery_v1__r2",
+      "schema": "maxopt-v7-e2-uniform-cell-summary-v1",
+      "technical_retry_history_path": "cells/07/ATTEMPT_HISTORY.json",
+      "technical_valid": true,
+      "tensor_sha256": "d0d3916574bb2d710361c068fd9f2ff2f1b2f4b0ea6111665aa7442edbfe4238",
+      "time_unit": "seconds",
+      "training_model": "C",
+      "unfinished": 0,
+      "window_id": "bridge_locked_test_recovery_v1"
+    },
+    {
+      "P1plus": true,
+      "attempt_count": 1,
+      "cell_index": 8,
+      "checkpoint_sha256": "b3079e6a36249ef9b49ba033460ab4b901b30cc3e209c227f2b844c9e520909f",
+      "classification": "COMPLETED",
+      "completed": 478,
+      "cpu_recalculation_path": "recalculation/cells/008.json",
+      "final_attempt": 1,
+      "final_result_path": "cells/08/attempts/attempt_01/CELL_RESULT.json",
+      "hardware": "2×A100 80GB, GPU0/1",
+      "kind": "COMPARISON",
+      "late": 0,
+      "observation_horizon_seconds": 2100,
+      "observation_window_cost": {
+        "gpu": 2.047574726138,
+        "offline_miss": 0.0,
+        "operating": 2.051574726138,
+        "scope": "registered_observation_window",
+        "shutdown": 0.002,
+        "startup": 0.002,
+        "synthetic_api": 0,
+        "total": 2.051574726138,
+        "units": "scenario_USD_not_real_bill"
+      },
+      "offline": {
+        "arrivals": 120,
+        "completed": 120,
+        "late": 0,
+        "not_on_time": 0,
+        "on_time": 120,
+        "on_time_rate": 1.0,
+        "unfinished": 0
+      },
+      "online": {
+        "arrivals": 358,
+        "completed": 358,
+        "late": 0,
+        "not_on_time": 0,
+        "on_time": 358,
+        "on_time_rate": 1.0,
+        "unfinished": 0
+      },
+      "policy_id": "ppo_C30_r2",
+      "prediction_refs": [
+        {
+          "path": "predictions/cells/C__ppo_C30_r2__bridge_locked_test_recovery_v1.json.gz",
+          "policy_id": "ppo_C30_r2",
+          "prediction_model": "C",
+          "sha256": "c81baf22b38e06e6302208bb356d3ded3fd0a96515c9118b767710f8508e29a8"
+        },
+        {
+          "path": "predictions/cells/C30__ppo_C30_r2__bridge_locked_test_recovery_v1.json.gz",
+          "policy_id": "ppo_C30_r2",
+          "prediction_model": "C30",
+          "sha256": "36f1a7c04b98b4586c7e20ef1381a861c084effa0be612284d52e4ae87d6c9dc"
+        }
+      ],
+      "repeat": 2,
+      "request_count_unit": "requests",
+      "run_id": "ppo_C30_r2__bridge_locked_test_recovery_v1__r2",
+      "schema": "maxopt-v7-e2-uniform-cell-summary-v1",
+      "technical_retry_history_path": "cells/08/ATTEMPT_HISTORY.json",
+      "technical_valid": true,
+      "tensor_sha256": "2b5117e17adc94c86fd980055fafdca5c47c1e2b1570a9b717c3bc0a9975b10e",
+      "time_unit": "seconds",
+      "training_model": "C30",
+      "unfinished": 0,
+      "window_id": "bridge_locked_test_recovery_v1"
+    },
+    {
+      "P1plus": false,
+      "attempt_count": 1,
+      "cell_index": 9,
+      "checkpoint_sha256": "6d7b4a01816d495c56ea4e4bc28078d20bce0cc0833188543dbc4ddf91b867cb",
+      "classification": "NEGATIVE_RESULT",
+      "completed": 478,
+      "cpu_recalculation_path": "recalculation/cells/009.json",
+      "final_attempt": 1,
+      "final_result_path": "cells/09/attempts/attempt_01/CELL_RESULT.json",
+      "hardware": "2×A100 80GB, GPU0/1",
+      "kind": "COMPARISON",
+      "late": 14,
+      "observation_horizon_seconds": 2100,
+      "observation_window_cost": {
+        "gpu": 1.626423342309,
+        "offline_miss": 0.14,
+        "operating": 1.825897342309,
+        "scope": "registered_observation_window",
+        "shutdown": 0.007,
+        "startup": 0.012,
+        "synthetic_api": 0.180474,
+        "total": 1.9658973423089998,
+        "units": "scenario_USD_not_real_bill"
+      },
+      "offline": {
+        "arrivals": 120,
+        "completed": 120,
+        "late": 14,
+        "not_on_time": 14,
+        "on_time": 106,
+        "on_time_rate": 0.8833333333333333,
+        "unfinished": 0
+      },
+      "online": {
+        "arrivals": 358,
+        "completed": 358,
+        "late": 0,
+        "not_on_time": 0,
+        "on_time": 358,
+        "on_time_rate": 1.0,
+        "unfinished": 0
+      },
+      "policy_id": "ppo_C30_s103",
+      "prediction_refs": [
+        {
+          "path": "predictions/cells/C__ppo_C30_s103__bridge_locked_test_recovery_v1.json.gz",
+          "policy_id": "ppo_C30_s103",
+          "prediction_model": "C",
+          "sha256": "ec7ebae9c81ffe659344ea3da6f25e806ad5888a08779df745d0a31a79481d28"
+        },
+        {
+          "path": "predictions/cells/C30__ppo_C30_s103__bridge_locked_test_recovery_v1.json.gz",
+          "policy_id": "ppo_C30_s103",
+          "prediction_model": "C30",
+          "sha256": "e2aa31ded0387d39f27d3e178cdef74f3279b2f8aed87d71e5892ee710945699"
+        }
+      ],
+      "repeat": 2,
+      "request_count_unit": "requests",
+      "run_id": "ppo_C30_s103__bridge_locked_test_recovery_v1__r2",
+      "schema": "maxopt-v7-e2-uniform-cell-summary-v1",
+      "technical_retry_history_path": "cells/09/ATTEMPT_HISTORY.json",
+      "technical_valid": true,
+      "tensor_sha256": "de0136e53a719317b6db126764d4a95ca20d3d498ec020ec821297e69ae67c60",
+      "time_unit": "seconds",
+      "training_model": "C30",
+      "unfinished": 0,
+      "window_id": "bridge_locked_test_recovery_v1"
+    },
+    {
+      "P1plus": true,
+      "attempt_count": 1,
+      "cell_index": 10,
+      "checkpoint_sha256": "e03a5695275a67ccbe9ea1dde08792d007a0a6aaf0d8d51de30b921286584157",
+      "classification": "COMPLETED",
+      "completed": 478,
+      "cpu_recalculation_path": "recalculation/cells/010.json",
+      "final_attempt": 1,
+      "final_result_path": "cells/10/attempts/attempt_01/CELL_RESULT.json",
+      "hardware": "2×A100 80GB, GPU0/1",
+      "kind": "COMPARISON",
+      "late": 0,
+      "observation_horizon_seconds": 2100,
+      "observation_window_cost": {
+        "gpu": 2.047008304671,
+        "offline_miss": 0.0,
+        "operating": 2.051008304671,
+        "scope": "registered_observation_window",
+        "shutdown": 0.002,
+        "startup": 0.002,
+        "synthetic_api": 0,
+        "total": 2.051008304671,
+        "units": "scenario_USD_not_real_bill"
+      },
+      "offline": {
+        "arrivals": 120,
+        "completed": 120,
+        "late": 0,
+        "not_on_time": 0,
+        "on_time": 120,
+        "on_time_rate": 1.0,
+        "unfinished": 0
+      },
+      "online": {
+        "arrivals": 358,
+        "completed": 358,
+        "late": 0,
+        "not_on_time": 0,
+        "on_time": 358,
+        "on_time_rate": 1.0,
+        "unfinished": 0
+      },
+      "policy_id": "ppo_C30_raw",
+      "prediction_refs": [
+        {
+          "path": "predictions/cells/C__ppo_C30_selected__bridge_locked_test_recovery_v1.json.gz",
+          "policy_id": "ppo_C30_selected",
+          "prediction_model": "C",
+          "sha256": "a7324f414644c3985e9217b558a694084eda1178b2ce231eda27dc20daa0f336"
+        },
+        {
+          "path": "predictions/cells/C30__ppo_C30_selected__bridge_locked_test_recovery_v1.json.gz",
+          "policy_id": "ppo_C30_selected",
+          "prediction_model": "C30",
+          "sha256": "54aee4159dd9c39efbeb55b70a98b284565f5c031efd7a247c41c5d82a5a16be"
+        }
+      ],
+      "repeat": 2,
+      "request_count_unit": "requests",
+      "run_id": "ppo_C30_raw__bridge_locked_test_recovery_v1__r2",
+      "schema": "maxopt-v7-e2-uniform-cell-summary-v1",
+      "technical_retry_history_path": "cells/10/ATTEMPT_HISTORY.json",
+      "technical_valid": true,
+      "tensor_sha256": "9c6cd1c2af99293634c9bd25c7ce946683c3fe255cda8a647778603ec8d5bff4",
+      "time_unit": "seconds",
+      "training_model": "C30",
+      "unfinished": 0,
+      "window_id": "bridge_locked_test_recovery_v1"
+    },
+    {
+      "P1plus": false,
+      "attempt_count": 1,
+      "cell_index": 11,
+      "checkpoint_sha256": "e1d2c1caa8786cd0d35b9d9dedd3a37a041bbd5cf76d83d281c1861e4a2ce981",
+      "classification": "NEGATIVE_RESULT",
+      "completed": 394,
+      "cpu_recalculation_path": "recalculation/cells/011.json",
+      "final_attempt": 1,
+      "final_result_path": "cells/11/attempts/attempt_01/CELL_RESULT.json",
+      "hardware": "2×A100 80GB, GPU0/1",
+      "kind": "COMPARISON",
+      "late": 32,
+      "observation_horizon_seconds": 2100,
+      "observation_window_cost": {
+        "gpu": 1.3269242874229998,
+        "offline_miss": 1.16,
+        "operating": 1.5723842874229998,
+        "scope": "registered_observation_window",
+        "shutdown": 0.015,
+        "startup": 0.026000000000000002,
+        "synthetic_api": 0.20446,
+        "total": 2.7323842874229998,
+        "units": "scenario_USD_not_real_bill"
+      },
+      "offline": {
+        "arrivals": 120,
+        "completed": 36,
+        "late": 32,
+        "not_on_time": 116,
+        "on_time": 4,
+        "on_time_rate": 0.03333333333333333,
+        "unfinished": 84
+      },
+      "online": {
+        "arrivals": 358,
+        "completed": 358,
+        "late": 0,
+        "not_on_time": 0,
+        "on_time": 358,
+        "on_time_rate": 1.0,
+        "unfinished": 0
+      },
+      "policy_id": "ppo_C_r2",
+      "prediction_refs": [
+        {
+          "path": "predictions/cells/C__ppo_C_r2__bridge_locked_test_recovery_v1.json.gz",
+          "policy_id": "ppo_C_r2",
+          "prediction_model": "C",
+          "sha256": "3a45c8563d4c9331ebe0c721e4a5c915b2bbf50d262fafb0ccf2b5c6d4e7dc85"
+        },
+        {
+          "path": "predictions/cells/C30__ppo_C_r2__bridge_locked_test_recovery_v1.json.gz",
+          "policy_id": "ppo_C_r2",
+          "prediction_model": "C30",
+          "sha256": "19992c13979af16b257d793cc15dfbe70b60b6c6d4879f806fed7ada40c48b7b"
+        }
+      ],
+      "repeat": 2,
+      "request_count_unit": "requests",
+      "run_id": "ppo_C_r2__bridge_locked_test_recovery_v1__r2",
+      "schema": "maxopt-v7-e2-uniform-cell-summary-v1",
+      "technical_retry_history_path": "cells/11/ATTEMPT_HISTORY.json",
+      "technical_valid": true,
+      "tensor_sha256": "a042f1b897c2981694390ab84984449142969302c081877419824ee7f82facff",
+      "time_unit": "seconds",
+      "training_model": "C",
+      "unfinished": 84,
+      "window_id": "bridge_locked_test_recovery_v1"
+    },
+    {
+      "P1plus": true,
+      "attempt_count": 1,
+      "cell_index": 12,
+      "checkpoint_sha256": "b3079e6a36249ef9b49ba033460ab4b901b30cc3e209c227f2b844c9e520909f",
+      "classification": "COMPLETED",
+      "completed": 478,
+      "cpu_recalculation_path": "recalculation/cells/012.json",
+      "final_attempt": 1,
+      "final_result_path": "cells/12/attempts/attempt_01/CELL_RESULT.json",
+      "hardware": "2×A100 80GB, GPU0/1",
+      "kind": "COMPARISON",
+      "late": 0,
+      "observation_horizon_seconds": 2100,
+      "observation_window_cost": {
+        "gpu": 2.046927656707,
+        "offline_miss": 0.0,
+        "operating": 2.050927656707,
+        "scope": "registered_observation_window",
+        "shutdown": 0.002,
+        "startup": 0.002,
+        "synthetic_api": 0,
+        "total": 2.050927656707,
+        "units": "scenario_USD_not_real_bill"
+      },
+      "offline": {
+        "arrivals": 120,
+        "completed": 120,
+        "late": 0,
+        "not_on_time": 0,
+        "on_time": 120,
+        "on_time_rate": 1.0,
+        "unfinished": 0
+      },
+      "online": {
+        "arrivals": 358,
+        "completed": 358,
+        "late": 0,
+        "not_on_time": 0,
+        "on_time": 358,
+        "on_time_rate": 1.0,
+        "unfinished": 0
+      },
+      "policy_id": "ppo_C30_r2",
+      "prediction_refs": [
+        {
+          "path": "predictions/cells/C__ppo_C30_r2__bridge_locked_test_recovery_v1.json.gz",
+          "policy_id": "ppo_C30_r2",
+          "prediction_model": "C",
+          "sha256": "c81baf22b38e06e6302208bb356d3ded3fd0a96515c9118b767710f8508e29a8"
+        },
+        {
+          "path": "predictions/cells/C30__ppo_C30_r2__bridge_locked_test_recovery_v1.json.gz",
+          "policy_id": "ppo_C30_r2",
+          "prediction_model": "C30",
+          "sha256": "36f1a7c04b98b4586c7e20ef1381a861c084effa0be612284d52e4ae87d6c9dc"
+        }
+      ],
+      "repeat": 3,
+      "request_count_unit": "requests",
+      "run_id": "ppo_C30_r2__bridge_locked_test_recovery_v1__r3",
+      "schema": "maxopt-v7-e2-uniform-cell-summary-v1",
+      "technical_retry_history_path": "cells/12/ATTEMPT_HISTORY.json",
+      "technical_valid": true,
+      "tensor_sha256": "2b5117e17adc94c86fd980055fafdca5c47c1e2b1570a9b717c3bc0a9975b10e",
+      "time_unit": "seconds",
+      "training_model": "C30",
+      "unfinished": 0,
+      "window_id": "bridge_locked_test_recovery_v1"
+    },
+    {
+      "P1plus": false,
+      "attempt_count": 1,
+      "cell_index": 13,
+      "checkpoint_sha256": "6d7b4a01816d495c56ea4e4bc28078d20bce0cc0833188543dbc4ddf91b867cb",
+      "classification": "NEGATIVE_RESULT",
+      "completed": 478,
+      "cpu_recalculation_path": "recalculation/cells/013.json",
+      "final_attempt": 1,
+      "final_result_path": "cells/13/attempts/attempt_01/CELL_RESULT.json",
+      "hardware": "2×A100 80GB, GPU0/1",
+      "kind": "COMPARISON",
+      "late": 6,
+      "observation_horizon_seconds": 2100,
+      "observation_window_cost": {
+        "gpu": 1.5470208505660001,
+        "offline_miss": 0.06,
+        "operating": 1.7505008505660002,
+        "scope": "registered_observation_window",
+        "shutdown": 0.008,
+        "startup": 0.014,
+        "synthetic_api": 0.18148,
+        "total": 1.8105008505660003,
+        "units": "scenario_USD_not_real_bill"
+      },
+      "offline": {
+        "arrivals": 120,
+        "completed": 120,
+        "late": 6,
+        "not_on_time": 6,
+        "on_time": 114,
+        "on_time_rate": 0.95,
+        "unfinished": 0
+      },
+      "online": {
+        "arrivals": 358,
+        "completed": 358,
+        "late": 0,
+        "not_on_time": 0,
+        "on_time": 358,
+        "on_time_rate": 1.0,
+        "unfinished": 0
+      },
+      "policy_id": "ppo_C30_s103",
+      "prediction_refs": [
+        {
+          "path": "predictions/cells/C__ppo_C30_s103__bridge_locked_test_recovery_v1.json.gz",
+          "policy_id": "ppo_C30_s103",
+          "prediction_model": "C",
+          "sha256": "ec7ebae9c81ffe659344ea3da6f25e806ad5888a08779df745d0a31a79481d28"
+        },
+        {
+          "path": "predictions/cells/C30__ppo_C30_s103__bridge_locked_test_recovery_v1.json.gz",
+          "policy_id": "ppo_C30_s103",
+          "prediction_model": "C30",
+          "sha256": "e2aa31ded0387d39f27d3e178cdef74f3279b2f8aed87d71e5892ee710945699"
+        }
+      ],
+      "repeat": 3,
+      "request_count_unit": "requests",
+      "run_id": "ppo_C30_s103__bridge_locked_test_recovery_v1__r3",
+      "schema": "maxopt-v7-e2-uniform-cell-summary-v1",
+      "technical_retry_history_path": "cells/13/ATTEMPT_HISTORY.json",
+      "technical_valid": true,
+      "tensor_sha256": "de0136e53a719317b6db126764d4a95ca20d3d498ec020ec821297e69ae67c60",
+      "time_unit": "seconds",
+      "training_model": "C30",
+      "unfinished": 0,
+      "window_id": "bridge_locked_test_recovery_v1"
+    },
+    {
+      "P1plus": true,
+      "attempt_count": 1,
+      "cell_index": 14,
+      "checkpoint_sha256": "e03a5695275a67ccbe9ea1dde08792d007a0a6aaf0d8d51de30b921286584157",
+      "classification": "COMPLETED",
+      "completed": 478,
+      "cpu_recalculation_path": "recalculation/cells/014.json",
+      "final_attempt": 1,
+      "final_result_path": "cells/14/attempts/attempt_01/CELL_RESULT.json",
+      "hardware": "2×A100 80GB, GPU0/1",
+      "kind": "COMPARISON",
+      "late": 0,
+      "observation_horizon_seconds": 2100,
+      "observation_window_cost": {
+        "gpu": 2.047435373629,
+        "offline_miss": 0.0,
+        "operating": 2.051435373629,
+        "scope": "registered_observation_window",
+        "shutdown": 0.002,
+        "startup": 0.002,
+        "synthetic_api": 0,
+        "total": 2.051435373629,
+        "units": "scenario_USD_not_real_bill"
+      },
+      "offline": {
+        "arrivals": 120,
+        "completed": 120,
+        "late": 0,
+        "not_on_time": 0,
+        "on_time": 120,
+        "on_time_rate": 1.0,
+        "unfinished": 0
+      },
+      "online": {
+        "arrivals": 358,
+        "completed": 358,
+        "late": 0,
+        "not_on_time": 0,
+        "on_time": 358,
+        "on_time_rate": 1.0,
+        "unfinished": 0
+      },
+      "policy_id": "ppo_C30_raw",
+      "prediction_refs": [
+        {
+          "path": "predictions/cells/C__ppo_C30_selected__bridge_locked_test_recovery_v1.json.gz",
+          "policy_id": "ppo_C30_selected",
+          "prediction_model": "C",
+          "sha256": "a7324f414644c3985e9217b558a694084eda1178b2ce231eda27dc20daa0f336"
+        },
+        {
+          "path": "predictions/cells/C30__ppo_C30_selected__bridge_locked_test_recovery_v1.json.gz",
+          "policy_id": "ppo_C30_selected",
+          "prediction_model": "C30",
+          "sha256": "54aee4159dd9c39efbeb55b70a98b284565f5c031efd7a247c41c5d82a5a16be"
+        }
+      ],
+      "repeat": 3,
+      "request_count_unit": "requests",
+      "run_id": "ppo_C30_raw__bridge_locked_test_recovery_v1__r3",
+      "schema": "maxopt-v7-e2-uniform-cell-summary-v1",
+      "technical_retry_history_path": "cells/14/ATTEMPT_HISTORY.json",
+      "technical_valid": true,
+      "tensor_sha256": "9c6cd1c2af99293634c9bd25c7ce946683c3fe255cda8a647778603ec8d5bff4",
+      "time_unit": "seconds",
+      "training_model": "C30",
+      "unfinished": 0,
+      "window_id": "bridge_locked_test_recovery_v1"
+    },
+    {
+      "P1plus": false,
+      "attempt_count": 1,
+      "cell_index": 15,
+      "checkpoint_sha256": "e1d2c1caa8786cd0d35b9d9dedd3a37a041bbd5cf76d83d281c1861e4a2ce981",
+      "classification": "NEGATIVE_RESULT",
+      "completed": 394,
+      "cpu_recalculation_path": "recalculation/cells/015.json",
+      "final_attempt": 1,
+      "final_result_path": "cells/15/attempts/attempt_01/CELL_RESULT.json",
+      "hardware": "2×A100 80GB, GPU0/1",
+      "kind": "COMPARISON",
+      "late": 32,
+      "observation_horizon_seconds": 2100,
+      "observation_window_cost": {
+        "gpu": 1.315220220683,
+        "offline_miss": 1.16,
+        "operating": 1.569732220683,
+        "scope": "registered_observation_window",
+        "shutdown": 0.015,
+        "startup": 0.028,
+        "synthetic_api": 0.211512,
+        "total": 2.729732220683,
+        "units": "scenario_USD_not_real_bill"
+      },
+      "offline": {
+        "arrivals": 120,
+        "completed": 36,
+        "late": 32,
+        "not_on_time": 116,
+        "on_time": 4,
+        "on_time_rate": 0.03333333333333333,
+        "unfinished": 84
+      },
+      "online": {
+        "arrivals": 358,
+        "completed": 358,
+        "late": 0,
+        "not_on_time": 0,
+        "on_time": 358,
+        "on_time_rate": 1.0,
+        "unfinished": 0
+      },
+      "policy_id": "ppo_C_r2",
+      "prediction_refs": [
+        {
+          "path": "predictions/cells/C__ppo_C_r2__bridge_locked_test_recovery_v1.json.gz",
+          "policy_id": "ppo_C_r2",
+          "prediction_model": "C",
+          "sha256": "3a45c8563d4c9331ebe0c721e4a5c915b2bbf50d262fafb0ccf2b5c6d4e7dc85"
+        },
+        {
+          "path": "predictions/cells/C30__ppo_C_r2__bridge_locked_test_recovery_v1.json.gz",
+          "policy_id": "ppo_C_r2",
+          "prediction_model": "C30",
+          "sha256": "19992c13979af16b257d793cc15dfbe70b60b6c6d4879f806fed7ada40c48b7b"
+        }
+      ],
+      "repeat": 3,
+      "request_count_unit": "requests",
+      "run_id": "ppo_C_r2__bridge_locked_test_recovery_v1__r3",
+      "schema": "maxopt-v7-e2-uniform-cell-summary-v1",
+      "technical_retry_history_path": "cells/15/ATTEMPT_HISTORY.json",
+      "technical_valid": true,
+      "tensor_sha256": "a042f1b897c2981694390ab84984449142969302c081877419824ee7f82facff",
+      "time_unit": "seconds",
+      "training_model": "C",
+      "unfinished": 84,
+      "window_id": "bridge_locked_test_recovery_v1"
+    },
+    {
+      "P1plus": true,
+      "attempt_count": 1,
+      "cell_index": 16,
+      "checkpoint_sha256": "60f59f251227273e9926f5588e1ff2d8e443fec23766ffec99abbe348343f218",
+      "classification": "COMPLETED",
+      "completed": 478,
+      "cpu_recalculation_path": "recalculation/cells/016.json",
+      "final_attempt": 1,
+      "final_result_path": "cells/16/attempts/attempt_01/CELL_RESULT.json",
+      "hardware": "2×A100 80GB, GPU0/1",
+      "kind": "COMPARISON",
+      "late": 0,
+      "observation_horizon_seconds": 2100,
+      "observation_window_cost": {
+        "gpu": 2.312416672657,
+        "offline_miss": 0.0,
+        "operating": 2.454271672657,
+        "scope": "registered_observation_window",
+        "shutdown": 0.016,
+        "startup": 0.028,
+        "synthetic_api": 0.097855,
+        "total": 2.454271672657,
+        "units": "scenario_USD_not_real_bill"
+      },
+      "offline": {
+        "arrivals": 120,
+        "completed": 120,
+        "late": 0,
+        "not_on_time": 0,
+        "on_time": 120,
+        "on_time_rate": 1.0,
+        "unfinished": 0
+      },
+      "online": {
+        "arrivals": 358,
+        "completed": 358,
+        "late": 0,
+        "not_on_time": 0,
+        "on_time": 358,
+        "on_time_rate": 1.0,
+        "unfinished": 0
+      },
+      "policy_id": "ppo_C_s101",
+      "prediction_refs": [
+        {
+          "path": "predictions/cells/C__ppo_C_s101__bridge_locked_test_recovery_v1.json.gz",
+          "policy_id": "ppo_C_s101",
+          "prediction_model": "C",
+          "sha256": "e59e7bc08c32fb27bce092eadcc927264d59ae944c037dd06f44c8b87c1869e9"
+        },
+        {
+          "path": "predictions/cells/C30__ppo_C_s101__bridge_locked_test_recovery_v1.json.gz",
+          "policy_id": "ppo_C_s101",
+          "prediction_model": "C30",
+          "sha256": "cac0205934a39704b25f9a84c5c4adb317fc0ae39c278b03973525d1dea8806d"
+        }
+      ],
+      "repeat": 3,
+      "request_count_unit": "requests",
+      "run_id": "ppo_C_s101__bridge_locked_test_recovery_v1__r3",
+      "schema": "maxopt-v7-e2-uniform-cell-summary-v1",
+      "technical_retry_history_path": "cells/16/ATTEMPT_HISTORY.json",
+      "technical_valid": true,
+      "tensor_sha256": "d0d3916574bb2d710361c068fd9f2ff2f1b2f4b0ea6111665aa7442edbfe4238",
+      "time_unit": "seconds",
+      "training_model": "C",
+      "unfinished": 0,
+      "window_id": "bridge_locked_test_recovery_v1"
+    },
+    {
+      "P1plus": true,
+      "attempt_count": 1,
+      "cell_index": 17,
+      "checkpoint_sha256": null,
+      "classification": "COMPLETED",
+      "completed": 1064,
+      "cpu_recalculation_path": "recalculation/cells/017.json",
+      "final_attempt": 1,
+      "final_result_path": "cells/17/attempts/attempt_01/CELL_RESULT.json",
+      "hardware": "2×A100 80GB, GPU0/1",
+      "kind": "CAPACITY",
+      "late": 0,
+      "observation_horizon_seconds": 2100,
+      "observation_window_cost": {
+        "gpu": 4.2,
+        "offline_miss": 0.0,
+        "operating": 4.2,
+        "scope": "registered_observation_window",
+        "shutdown": 0.0,
+        "startup": 0.0,
+        "synthetic_api": 0,
+        "total": 4.2,
+        "units": "scenario_USD_not_real_bill"
+      },
+      "offline": {
+        "arrivals": 120,
+        "completed": 120,
+        "late": 0,
+        "not_on_time": 0,
+        "on_time": 120,
+        "on_time_rate": 1.0,
+        "unfinished": 0
+      },
+      "online": {
+        "arrivals": 944,
+        "completed": 944,
+        "late": 0,
+        "not_on_time": 0,
+        "on_time": 944,
+        "on_time_rate": 1.0,
+        "unfinished": 0
+      },
+      "policy_id": "all2",
+      "prediction_refs": [
+        {
+          "path": "predictions/cells/C__all2__bridge_locked_test_steady_v1.json.gz",
+          "policy_id": "all2",
+          "prediction_model": "C",
+          "sha256": "9af064833565c8c03f0891476b6da649de5cef87b159865d0a862bb64fb3f7c4"
+        },
+        {
+          "path": "predictions/cells/C30__all2__bridge_locked_test_steady_v1.json.gz",
+          "policy_id": "all2",
+          "prediction_model": "C30",
+          "sha256": "6ffa30a7cea678bb5eded0583c98b00fab68f0cbd36584ca41488eca402137c1"
+        }
+      ],
+      "repeat": 1,
+      "request_count_unit": "requests",
+      "run_id": "all2__bridge_locked_test_steady_v1__r1",
+      "schema": "maxopt-v7-e2-uniform-cell-summary-v1",
+      "technical_retry_history_path": "cells/17/ATTEMPT_HISTORY.json",
+      "technical_valid": true,
+      "tensor_sha256": null,
+      "time_unit": "seconds",
+      "training_model": null,
+      "unfinished": 0,
+      "window_id": "bridge_locked_test_steady_v1"
+    },
+    {
+      "P1plus": false,
+      "attempt_count": 1,
+      "cell_index": 18,
+      "checkpoint_sha256": "e1d2c1caa8786cd0d35b9d9dedd3a37a041bbd5cf76d83d281c1861e4a2ce981",
+      "classification": "NEGATIVE_RESULT",
+      "completed": 1000,
+      "cpu_recalculation_path": "recalculation/cells/018.json",
+      "final_attempt": 1,
+      "final_result_path": "cells/18/attempts/attempt_01/CELL_RESULT.json",
+      "hardware": "2×A100 80GB, GPU0/1",
+      "kind": "COMPARISON",
+      "late": 52,
+      "observation_horizon_seconds": 2100,
+      "observation_window_cost": {
+        "gpu": 1.246233035041,
+        "offline_miss": 1.16,
+        "operating": 1.807909035041,
+        "scope": "registered_observation_window",
+        "shutdown": 0.016,
+        "startup": 0.03,
+        "synthetic_api": 0.515676,
+        "total": 2.967909035041,
+        "units": "scenario_USD_not_real_bill"
+      },
+      "offline": {
+        "arrivals": 120,
+        "completed": 56,
+        "late": 52,
+        "not_on_time": 116,
+        "on_time": 4,
+        "on_time_rate": 0.03333333333333333,
+        "unfinished": 64
+      },
+      "online": {
+        "arrivals": 944,
+        "completed": 944,
+        "late": 0,
+        "not_on_time": 0,
+        "on_time": 944,
+        "on_time_rate": 1.0,
+        "unfinished": 0
+      },
+      "policy_id": "ppo_C_r2",
+      "prediction_refs": [
+        {
+          "path": "predictions/cells/C__ppo_C_r2__bridge_locked_test_steady_v1.json.gz",
+          "policy_id": "ppo_C_r2",
+          "prediction_model": "C",
+          "sha256": "a468edca199a35c64db3d5ebefd1a0334398a00a3dfd101ea4faf264c25e9035"
+        },
+        {
+          "path": "predictions/cells/C30__ppo_C_r2__bridge_locked_test_steady_v1.json.gz",
+          "policy_id": "ppo_C_r2",
+          "prediction_model": "C30",
+          "sha256": "c6debcf6cf25fbb0ba1e874dcd7d79ff8f731471a2f341dc638c867bb0462b77"
+        }
+      ],
+      "repeat": 1,
+      "request_count_unit": "requests",
+      "run_id": "ppo_C_r2__bridge_locked_test_steady_v1__r1",
+      "schema": "maxopt-v7-e2-uniform-cell-summary-v1",
+      "technical_retry_history_path": "cells/18/ATTEMPT_HISTORY.json",
+      "technical_valid": true,
+      "tensor_sha256": "a042f1b897c2981694390ab84984449142969302c081877419824ee7f82facff",
+      "time_unit": "seconds",
+      "training_model": "C",
+      "unfinished": 64,
+      "window_id": "bridge_locked_test_steady_v1"
+    },
+    {
+      "P1plus": true,
+      "attempt_count": 2,
+      "cell_index": 19,
+      "checkpoint_sha256": "60f59f251227273e9926f5588e1ff2d8e443fec23766ffec99abbe348343f218",
+      "classification": "COMPLETED",
+      "completed": 1064,
+      "cpu_recalculation_path": "recalculation/cells/019.json",
+      "final_attempt": 2,
+      "final_result_path": "cells/19/attempts/attempt_02/CELL_RESULT.json",
+      "hardware": "2×A100 80GB, GPU0/1",
+      "kind": "COMPARISON",
+      "late": 0,
+      "observation_horizon_seconds": 2100,
+      "observation_window_cost": {
+        "gpu": 2.2872642087250004,
+        "offline_miss": 0.0,
+        "operating": 2.5845962087250003,
+        "scope": "registered_observation_window",
+        "shutdown": 0.016,
+        "startup": 0.028,
+        "synthetic_api": 0.253332,
+        "total": 2.5845962087250003,
+        "units": "scenario_USD_not_real_bill"
+      },
+      "offline": {
+        "arrivals": 120,
+        "completed": 120,
+        "late": 0,
+        "not_on_time": 0,
+        "on_time": 120,
+        "on_time_rate": 1.0,
+        "unfinished": 0
+      },
+      "online": {
+        "arrivals": 944,
+        "completed": 944,
+        "late": 0,
+        "not_on_time": 0,
+        "on_time": 944,
+        "on_time_rate": 1.0,
+        "unfinished": 0
+      },
+      "policy_id": "ppo_C_s101",
+      "prediction_refs": [
+        {
+          "path": "predictions/cells/C__ppo_C_s101__bridge_locked_test_steady_v1.json.gz",
+          "policy_id": "ppo_C_s101",
+          "prediction_model": "C",
+          "sha256": "c005cf3d5e1a6e89c453dc22bc1c5e26c03e5ce01b6310a901806574296cd332"
+        },
+        {
+          "path": "predictions/cells/C30__ppo_C_s101__bridge_locked_test_steady_v1.json.gz",
+          "policy_id": "ppo_C_s101",
+          "prediction_model": "C30",
+          "sha256": "6e347e2362ad48194915642df3ab0962aa49516967590333763c2ec3b993b051"
+        }
+      ],
+      "repeat": 1,
+      "request_count_unit": "requests",
+      "run_id": "ppo_C_s101__bridge_locked_test_steady_v1__r1",
+      "schema": "maxopt-v7-e2-uniform-cell-summary-v1",
+      "technical_retry_history_path": "cells/19/ATTEMPT_HISTORY.json",
+      "technical_valid": true,
+      "tensor_sha256": "d0d3916574bb2d710361c068fd9f2ff2f1b2f4b0ea6111665aa7442edbfe4238",
+      "time_unit": "seconds",
+      "training_model": "C",
+      "unfinished": 0,
+      "window_id": "bridge_locked_test_steady_v1"
+    },
+    {
+      "P1plus": true,
+      "attempt_count": 2,
+      "cell_index": 20,
+      "checkpoint_sha256": "b3079e6a36249ef9b49ba033460ab4b901b30cc3e209c227f2b844c9e520909f",
+      "classification": "COMPLETED",
+      "completed": 1064,
+      "cpu_recalculation_path": "recalculation/cells/020.json",
+      "final_attempt": 2,
+      "final_result_path": "cells/20/attempts/attempt_02/CELL_RESULT.json",
+      "hardware": "2×A100 80GB, GPU0/1",
+      "kind": "COMPARISON",
+      "late": 0,
+      "observation_horizon_seconds": 2100,
+      "observation_window_cost": {
+        "gpu": 2.046084664527,
+        "offline_miss": 0.0,
+        "operating": 2.0897836645270003,
+        "scope": "registered_observation_window",
+        "shutdown": 0.002,
+        "startup": 0.002,
+        "synthetic_api": 0.039699,
+        "total": 2.0897836645270003,
+        "units": "scenario_USD_not_real_bill"
+      },
+      "offline": {
+        "arrivals": 120,
+        "completed": 120,
+        "late": 0,
+        "not_on_time": 0,
+        "on_time": 120,
+        "on_time_rate": 1.0,
+        "unfinished": 0
+      },
+      "online": {
+        "arrivals": 944,
+        "completed": 944,
+        "late": 0,
+        "not_on_time": 0,
+        "on_time": 944,
+        "on_time_rate": 1.0,
+        "unfinished": 0
+      },
+      "policy_id": "ppo_C30_r2",
+      "prediction_refs": [
+        {
+          "path": "predictions/cells/C__ppo_C30_r2__bridge_locked_test_steady_v1.json.gz",
+          "policy_id": "ppo_C30_r2",
+          "prediction_model": "C",
+          "sha256": "a1e626c8259c49c7ddc06faf4db4d71db04f21e3d456f7e4778c84db38982aab"
+        },
+        {
+          "path": "predictions/cells/C30__ppo_C30_r2__bridge_locked_test_steady_v1.json.gz",
+          "policy_id": "ppo_C30_r2",
+          "prediction_model": "C30",
+          "sha256": "371147f85d5166325a05a501d92d73346bfb84af3870a16cadd03c0fcbb4533e"
+        }
+      ],
+      "repeat": 1,
+      "request_count_unit": "requests",
+      "run_id": "ppo_C30_r2__bridge_locked_test_steady_v1__r1",
+      "schema": "maxopt-v7-e2-uniform-cell-summary-v1",
+      "technical_retry_history_path": "cells/20/ATTEMPT_HISTORY.json",
+      "technical_valid": true,
+      "tensor_sha256": "2b5117e17adc94c86fd980055fafdca5c47c1e2b1570a9b717c3bc0a9975b10e",
+      "time_unit": "seconds",
+      "training_model": "C30",
+      "unfinished": 0,
+      "window_id": "bridge_locked_test_steady_v1"
+    },
+    {
+      "P1plus": false,
+      "attempt_count": 1,
+      "cell_index": 21,
+      "checkpoint_sha256": "6d7b4a01816d495c56ea4e4bc28078d20bce0cc0833188543dbc4ddf91b867cb",
+      "classification": "NEGATIVE_RESULT",
+      "completed": 1064,
+      "cpu_recalculation_path": "recalculation/cells/021.json",
+      "final_attempt": 1,
+      "final_result_path": "cells/21/attempts/attempt_01/CELL_RESULT.json",
+      "hardware": "2×A100 80GB, GPU0/1",
+      "kind": "COMPARISON",
+      "late": 11,
+      "observation_horizon_seconds": 2100,
+      "observation_window_cost": {
+        "gpu": 1.519199428423,
+        "offline_miss": 0.11,
+        "operating": 1.933139428423,
+        "scope": "registered_observation_window",
+        "shutdown": 0.008,
+        "startup": 0.014,
+        "synthetic_api": 0.39194,
+        "total": 2.043139428423,
+        "units": "scenario_USD_not_real_bill"
+      },
+      "offline": {
+        "arrivals": 120,
+        "completed": 120,
+        "late": 11,
+        "not_on_time": 11,
+        "on_time": 109,
+        "on_time_rate": 0.9083333333333333,
+        "unfinished": 0
+      },
+      "online": {
+        "arrivals": 944,
+        "completed": 944,
+        "late": 0,
+        "not_on_time": 0,
+        "on_time": 944,
+        "on_time_rate": 1.0,
+        "unfinished": 0
+      },
+      "policy_id": "ppo_C30_s103",
+      "prediction_refs": [
+        {
+          "path": "predictions/cells/C__ppo_C30_s103__bridge_locked_test_steady_v1.json.gz",
+          "policy_id": "ppo_C30_s103",
+          "prediction_model": "C",
+          "sha256": "902a9ecd51d7ee3fe0cc9dcfafabd6d35189c4d54d1a9bbe13a44e549369c87d"
+        },
+        {
+          "path": "predictions/cells/C30__ppo_C30_s103__bridge_locked_test_steady_v1.json.gz",
+          "policy_id": "ppo_C30_s103",
+          "prediction_model": "C30",
+          "sha256": "8ea7f9cf4fb6ea8e0178d9006409fd4f52dfbd826345e016eaf8ff38833bb4a3"
+        }
+      ],
+      "repeat": 1,
+      "request_count_unit": "requests",
+      "run_id": "ppo_C30_s103__bridge_locked_test_steady_v1__r1",
+      "schema": "maxopt-v7-e2-uniform-cell-summary-v1",
+      "technical_retry_history_path": "cells/21/ATTEMPT_HISTORY.json",
+      "technical_valid": true,
+      "tensor_sha256": "de0136e53a719317b6db126764d4a95ca20d3d498ec020ec821297e69ae67c60",
+      "time_unit": "seconds",
+      "training_model": "C30",
+      "unfinished": 0,
+      "window_id": "bridge_locked_test_steady_v1"
+    },
+    {
+      "P1plus": true,
+      "attempt_count": 1,
+      "cell_index": 22,
+      "checkpoint_sha256": "e03a5695275a67ccbe9ea1dde08792d007a0a6aaf0d8d51de30b921286584157",
+      "classification": "COMPLETED",
+      "completed": 1064,
+      "cpu_recalculation_path": "recalculation/cells/022.json",
+      "final_attempt": 1,
+      "final_result_path": "cells/22/attempts/attempt_01/CELL_RESULT.json",
+      "hardware": "2×A100 80GB, GPU0/1",
+      "kind": "COMPARISON",
+      "late": 0,
+      "observation_horizon_seconds": 2100,
+      "observation_window_cost": {
+        "gpu": 2.046281426647,
+        "offline_miss": 0.0,
+        "operating": 2.081868426647,
+        "scope": "registered_observation_window",
+        "shutdown": 0.002,
+        "startup": 0.002,
+        "synthetic_api": 0.031587,
+        "total": 2.081868426647,
+        "units": "scenario_USD_not_real_bill"
+      },
+      "offline": {
+        "arrivals": 120,
+        "completed": 120,
+        "late": 0,
+        "not_on_time": 0,
+        "on_time": 120,
+        "on_time_rate": 1.0,
+        "unfinished": 0
+      },
+      "online": {
+        "arrivals": 944,
+        "completed": 944,
+        "late": 0,
+        "not_on_time": 0,
+        "on_time": 944,
+        "on_time_rate": 1.0,
+        "unfinished": 0
+      },
+      "policy_id": "ppo_C30_raw",
+      "prediction_refs": [
+        {
+          "path": "predictions/cells/C__ppo_C30_selected__bridge_locked_test_steady_v1.json.gz",
+          "policy_id": "ppo_C30_selected",
+          "prediction_model": "C",
+          "sha256": "7523d0652d3e39e2e02e9e547633e20276746c473e54435e28ebab5f27384af2"
+        },
+        {
+          "path": "predictions/cells/C30__ppo_C30_selected__bridge_locked_test_steady_v1.json.gz",
+          "policy_id": "ppo_C30_selected",
+          "prediction_model": "C30",
+          "sha256": "f4facfb79c43454c69fc76e10aeaa29725635802b042ae2b4f489d9dd6f7f9f9"
+        }
+      ],
+      "repeat": 1,
+      "request_count_unit": "requests",
+      "run_id": "ppo_C30_raw__bridge_locked_test_steady_v1__r1",
+      "schema": "maxopt-v7-e2-uniform-cell-summary-v1",
+      "technical_retry_history_path": "cells/22/ATTEMPT_HISTORY.json",
+      "technical_valid": true,
+      "tensor_sha256": "9c6cd1c2af99293634c9bd25c7ce946683c3fe255cda8a647778603ec8d5bff4",
+      "time_unit": "seconds",
+      "training_model": "C30",
+      "unfinished": 0,
+      "window_id": "bridge_locked_test_steady_v1"
+    },
+    {
+      "P1plus": true,
+      "attempt_count": 2,
+      "cell_index": 23,
+      "checkpoint_sha256": "60f59f251227273e9926f5588e1ff2d8e443fec23766ffec99abbe348343f218",
+      "classification": "COMPLETED",
+      "completed": 1064,
+      "cpu_recalculation_path": "recalculation/cells/023.json",
+      "final_attempt": 2,
+      "final_result_path": "cells/23/attempts/attempt_02/CELL_RESULT.json",
+      "hardware": "2×A100 80GB, GPU0/1",
+      "kind": "COMPARISON",
+      "late": 0,
+      "observation_horizon_seconds": 2100,
+      "observation_window_cost": {
+        "gpu": 2.072973008505,
+        "offline_miss": 0.0,
+        "operating": 2.350628008505,
+        "scope": "registered_observation_window",
+        "shutdown": 0.016,
+        "startup": 0.028,
+        "synthetic_api": 0.233655,
+        "total": 2.350628008505,
+        "units": "scenario_USD_not_real_bill"
+      },
+      "offline": {
+        "arrivals": 120,
+        "completed": 120,
+        "late": 0,
+        "not_on_time": 0,
+        "on_time": 120,
+        "on_time_rate": 1.0,
+        "unfinished": 0
+      },
+      "online": {
+        "arrivals": 944,
+        "completed": 944,
+        "late": 0,
+        "not_on_time": 0,
+        "on_time": 944,
+        "on_time_rate": 1.0,
+        "unfinished": 0
+      },
+      "policy_id": "ppo_C_s101",
+      "prediction_refs": [
+        {
+          "path": "predictions/cells/C__ppo_C_s101__bridge_locked_test_steady_v1.json.gz",
+          "policy_id": "ppo_C_s101",
+          "prediction_model": "C",
+          "sha256": "c005cf3d5e1a6e89c453dc22bc1c5e26c03e5ce01b6310a901806574296cd332"
+        },
+        {
+          "path": "predictions/cells/C30__ppo_C_s101__bridge_locked_test_steady_v1.json.gz",
+          "policy_id": "ppo_C_s101",
+          "prediction_model": "C30",
+          "sha256": "6e347e2362ad48194915642df3ab0962aa49516967590333763c2ec3b993b051"
+        }
+      ],
+      "repeat": 2,
+      "request_count_unit": "requests",
+      "run_id": "ppo_C_s101__bridge_locked_test_steady_v1__r2",
+      "schema": "maxopt-v7-e2-uniform-cell-summary-v1",
+      "technical_retry_history_path": "cells/23/ATTEMPT_HISTORY.json",
+      "technical_valid": true,
+      "tensor_sha256": "d0d3916574bb2d710361c068fd9f2ff2f1b2f4b0ea6111665aa7442edbfe4238",
+      "time_unit": "seconds",
+      "training_model": "C",
+      "unfinished": 0,
+      "window_id": "bridge_locked_test_steady_v1"
+    },
+    {
+      "P1plus": true,
+      "attempt_count": 1,
+      "cell_index": 24,
+      "checkpoint_sha256": "b3079e6a36249ef9b49ba033460ab4b901b30cc3e209c227f2b844c9e520909f",
+      "classification": "COMPLETED",
+      "completed": 1064,
+      "cpu_recalculation_path": "recalculation/cells/024.json",
+      "final_attempt": 1,
+      "final_result_path": "cells/24/attempts/attempt_01/CELL_RESULT.json",
+      "hardware": "2×A100 80GB, GPU0/1",
+      "kind": "COMPARISON",
+      "late": 0,
+      "observation_horizon_seconds": 2100,
+      "observation_window_cost": {
+        "gpu": 2.0474709836250002,
+        "offline_miss": 0.0,
+        "operating": 2.0806949836250004,
+        "scope": "registered_observation_window",
+        "shutdown": 0.002,
+        "startup": 0.002,
+        "synthetic_api": 0.029224,
+        "total": 2.0806949836250004,
+        "units": "scenario_USD_not_real_bill"
+      },
+      "offline": {
+        "arrivals": 120,
+        "completed": 120,
+        "late": 0,
+        "not_on_time": 0,
+        "on_time": 120,
+        "on_time_rate": 1.0,
+        "unfinished": 0
+      },
+      "online": {
+        "arrivals": 944,
+        "completed": 944,
+        "late": 0,
+        "not_on_time": 0,
+        "on_time": 944,
+        "on_time_rate": 1.0,
+        "unfinished": 0
+      },
+      "policy_id": "ppo_C30_r2",
+      "prediction_refs": [
+        {
+          "path": "predictions/cells/C__ppo_C30_r2__bridge_locked_test_steady_v1.json.gz",
+          "policy_id": "ppo_C30_r2",
+          "prediction_model": "C",
+          "sha256": "a1e626c8259c49c7ddc06faf4db4d71db04f21e3d456f7e4778c84db38982aab"
+        },
+        {
+          "path": "predictions/cells/C30__ppo_C30_r2__bridge_locked_test_steady_v1.json.gz",
+          "policy_id": "ppo_C30_r2",
+          "prediction_model": "C30",
+          "sha256": "371147f85d5166325a05a501d92d73346bfb84af3870a16cadd03c0fcbb4533e"
+        }
+      ],
+      "repeat": 2,
+      "request_count_unit": "requests",
+      "run_id": "ppo_C30_r2__bridge_locked_test_steady_v1__r2",
+      "schema": "maxopt-v7-e2-uniform-cell-summary-v1",
+      "technical_retry_history_path": "cells/24/ATTEMPT_HISTORY.json",
+      "technical_valid": true,
+      "tensor_sha256": "2b5117e17adc94c86fd980055fafdca5c47c1e2b1570a9b717c3bc0a9975b10e",
+      "time_unit": "seconds",
+      "training_model": "C30",
+      "unfinished": 0,
+      "window_id": "bridge_locked_test_steady_v1"
+    },
+    {
+      "P1plus": false,
+      "attempt_count": 1,
+      "cell_index": 25,
+      "checkpoint_sha256": "6d7b4a01816d495c56ea4e4bc28078d20bce0cc0833188543dbc4ddf91b867cb",
+      "classification": "NEGATIVE_RESULT",
+      "completed": 1064,
+      "cpu_recalculation_path": "recalculation/cells/025.json",
+      "final_attempt": 1,
+      "final_result_path": "cells/25/attempts/attempt_01/CELL_RESULT.json",
+      "hardware": "2×A100 80GB, GPU0/1",
+      "kind": "COMPARISON",
+      "late": 11,
+      "observation_horizon_seconds": 2100,
+      "observation_window_cost": {
+        "gpu": 1.546113236704,
+        "offline_miss": 0.11,
+        "operating": 1.989366236704,
+        "scope": "registered_observation_window",
+        "shutdown": 0.008,
+        "startup": 0.014,
+        "synthetic_api": 0.421253,
+        "total": 2.099366236704,
+        "units": "scenario_USD_not_real_bill"
+      },
+      "offline": {
+        "arrivals": 120,
+        "completed": 120,
+        "late": 11,
+        "not_on_time": 11,
+        "on_time": 109,
+        "on_time_rate": 0.9083333333333333,
+        "unfinished": 0
+      },
+      "online": {
+        "arrivals": 944,
+        "completed": 944,
+        "late": 0,
+        "not_on_time": 0,
+        "on_time": 944,
+        "on_time_rate": 1.0,
+        "unfinished": 0
+      },
+      "policy_id": "ppo_C30_s103",
+      "prediction_refs": [
+        {
+          "path": "predictions/cells/C__ppo_C30_s103__bridge_locked_test_steady_v1.json.gz",
+          "policy_id": "ppo_C30_s103",
+          "prediction_model": "C",
+          "sha256": "902a9ecd51d7ee3fe0cc9dcfafabd6d35189c4d54d1a9bbe13a44e549369c87d"
+        },
+        {
+          "path": "predictions/cells/C30__ppo_C30_s103__bridge_locked_test_steady_v1.json.gz",
+          "policy_id": "ppo_C30_s103",
+          "prediction_model": "C30",
+          "sha256": "8ea7f9cf4fb6ea8e0178d9006409fd4f52dfbd826345e016eaf8ff38833bb4a3"
+        }
+      ],
+      "repeat": 2,
+      "request_count_unit": "requests",
+      "run_id": "ppo_C30_s103__bridge_locked_test_steady_v1__r2",
+      "schema": "maxopt-v7-e2-uniform-cell-summary-v1",
+      "technical_retry_history_path": "cells/25/ATTEMPT_HISTORY.json",
+      "technical_valid": true,
+      "tensor_sha256": "de0136e53a719317b6db126764d4a95ca20d3d498ec020ec821297e69ae67c60",
+      "time_unit": "seconds",
+      "training_model": "C30",
+      "unfinished": 0,
+      "window_id": "bridge_locked_test_steady_v1"
+    },
+    {
+      "P1plus": true,
+      "attempt_count": 1,
+      "cell_index": 26,
+      "checkpoint_sha256": "e03a5695275a67ccbe9ea1dde08792d007a0a6aaf0d8d51de30b921286584157",
+      "classification": "COMPLETED",
+      "completed": 1064,
+      "cpu_recalculation_path": "recalculation/cells/026.json",
+      "final_attempt": 1,
+      "final_result_path": "cells/26/attempts/attempt_01/CELL_RESULT.json",
+      "hardware": "2×A100 80GB, GPU0/1",
+      "kind": "COMPARISON",
+      "late": 0,
+      "observation_horizon_seconds": 2100,
+      "observation_window_cost": {
+        "gpu": 2.046568921431,
+        "offline_miss": 0.0,
+        "operating": 2.082155921431,
+        "scope": "registered_observation_window",
+        "shutdown": 0.002,
+        "startup": 0.002,
+        "synthetic_api": 0.031587,
+        "total": 2.082155921431,
+        "units": "scenario_USD_not_real_bill"
+      },
+      "offline": {
+        "arrivals": 120,
+        "completed": 120,
+        "late": 0,
+        "not_on_time": 0,
+        "on_time": 120,
+        "on_time_rate": 1.0,
+        "unfinished": 0
+      },
+      "online": {
+        "arrivals": 944,
+        "completed": 944,
+        "late": 0,
+        "not_on_time": 0,
+        "on_time": 944,
+        "on_time_rate": 1.0,
+        "unfinished": 0
+      },
+      "policy_id": "ppo_C30_raw",
+      "prediction_refs": [
+        {
+          "path": "predictions/cells/C__ppo_C30_selected__bridge_locked_test_steady_v1.json.gz",
+          "policy_id": "ppo_C30_selected",
+          "prediction_model": "C",
+          "sha256": "7523d0652d3e39e2e02e9e547633e20276746c473e54435e28ebab5f27384af2"
+        },
+        {
+          "path": "predictions/cells/C30__ppo_C30_selected__bridge_locked_test_steady_v1.json.gz",
+          "policy_id": "ppo_C30_selected",
+          "prediction_model": "C30",
+          "sha256": "f4facfb79c43454c69fc76e10aeaa29725635802b042ae2b4f489d9dd6f7f9f9"
+        }
+      ],
+      "repeat": 2,
+      "request_count_unit": "requests",
+      "run_id": "ppo_C30_raw__bridge_locked_test_steady_v1__r2",
+      "schema": "maxopt-v7-e2-uniform-cell-summary-v1",
+      "technical_retry_history_path": "cells/26/ATTEMPT_HISTORY.json",
+      "technical_valid": true,
+      "tensor_sha256": "9c6cd1c2af99293634c9bd25c7ce946683c3fe255cda8a647778603ec8d5bff4",
+      "time_unit": "seconds",
+      "training_model": "C30",
+      "unfinished": 0,
+      "window_id": "bridge_locked_test_steady_v1"
+    },
+    {
+      "P1plus": false,
+      "attempt_count": 1,
+      "cell_index": 27,
+      "checkpoint_sha256": "e1d2c1caa8786cd0d35b9d9dedd3a37a041bbd5cf76d83d281c1861e4a2ce981",
+      "classification": "NEGATIVE_RESULT",
+      "completed": 983,
+      "cpu_recalculation_path": "recalculation/cells/027.json",
+      "final_attempt": 1,
+      "final_result_path": "cells/27/attempts/attempt_01/CELL_RESULT.json",
+      "hardware": "2×A100 80GB, GPU0/1",
+      "kind": "COMPARISON",
+      "late": 26,
+      "observation_horizon_seconds": 2100,
+      "observation_window_cost": {
+        "gpu": 1.236719868484,
+        "offline_miss": 1.07,
+        "operating": 1.804654868484,
+        "scope": "registered_observation_window",
+        "shutdown": 0.016,
+        "startup": 0.03,
+        "synthetic_api": 0.521935,
+        "total": 2.874654868484,
+        "units": "scenario_USD_not_real_bill"
+      },
+      "offline": {
+        "arrivals": 120,
+        "completed": 39,
+        "late": 26,
+        "not_on_time": 107,
+        "on_time": 13,
+        "on_time_rate": 0.10833333333333334,
+        "unfinished": 81
+      },
+      "online": {
+        "arrivals": 944,
+        "completed": 944,
+        "late": 0,
+        "not_on_time": 0,
+        "on_time": 944,
+        "on_time_rate": 1.0,
+        "unfinished": 0
+      },
+      "policy_id": "ppo_C_r2",
+      "prediction_refs": [
+        {
+          "path": "predictions/cells/C__ppo_C_r2__bridge_locked_test_steady_v1.json.gz",
+          "policy_id": "ppo_C_r2",
+          "prediction_model": "C",
+          "sha256": "a468edca199a35c64db3d5ebefd1a0334398a00a3dfd101ea4faf264c25e9035"
+        },
+        {
+          "path": "predictions/cells/C30__ppo_C_r2__bridge_locked_test_steady_v1.json.gz",
+          "policy_id": "ppo_C_r2",
+          "prediction_model": "C30",
+          "sha256": "c6debcf6cf25fbb0ba1e874dcd7d79ff8f731471a2f341dc638c867bb0462b77"
+        }
+      ],
+      "repeat": 2,
+      "request_count_unit": "requests",
+      "run_id": "ppo_C_r2__bridge_locked_test_steady_v1__r2",
+      "schema": "maxopt-v7-e2-uniform-cell-summary-v1",
+      "technical_retry_history_path": "cells/27/ATTEMPT_HISTORY.json",
+      "technical_valid": true,
+      "tensor_sha256": "a042f1b897c2981694390ab84984449142969302c081877419824ee7f82facff",
+      "time_unit": "seconds",
+      "training_model": "C",
+      "unfinished": 81,
+      "window_id": "bridge_locked_test_steady_v1"
+    },
+    {
+      "P1plus": true,
+      "attempt_count": 1,
+      "cell_index": 28,
+      "checkpoint_sha256": "b3079e6a36249ef9b49ba033460ab4b901b30cc3e209c227f2b844c9e520909f",
+      "classification": "COMPLETED",
+      "completed": 1064,
+      "cpu_recalculation_path": "recalculation/cells/028.json",
+      "final_attempt": 1,
+      "final_result_path": "cells/28/attempts/attempt_01/CELL_RESULT.json",
+      "hardware": "2×A100 80GB, GPU0/1",
+      "kind": "COMPARISON",
+      "late": 0,
+      "observation_horizon_seconds": 2100,
+      "observation_window_cost": {
+        "gpu": 2.046895050292,
+        "offline_miss": 0.0,
+        "operating": 2.082482050292,
+        "scope": "registered_observation_window",
+        "shutdown": 0.002,
+        "startup": 0.002,
+        "synthetic_api": 0.031587,
+        "total": 2.082482050292,
+        "units": "scenario_USD_not_real_bill"
+      },
+      "offline": {
+        "arrivals": 120,
+        "completed": 120,
+        "late": 0,
+        "not_on_time": 0,
+        "on_time": 120,
+        "on_time_rate": 1.0,
+        "unfinished": 0
+      },
+      "online": {
+        "arrivals": 944,
+        "completed": 944,
+        "late": 0,
+        "not_on_time": 0,
+        "on_time": 944,
+        "on_time_rate": 1.0,
+        "unfinished": 0
+      },
+      "policy_id": "ppo_C30_r2",
+      "prediction_refs": [
+        {
+          "path": "predictions/cells/C__ppo_C30_r2__bridge_locked_test_steady_v1.json.gz",
+          "policy_id": "ppo_C30_r2",
+          "prediction_model": "C",
+          "sha256": "a1e626c8259c49c7ddc06faf4db4d71db04f21e3d456f7e4778c84db38982aab"
+        },
+        {
+          "path": "predictions/cells/C30__ppo_C30_r2__bridge_locked_test_steady_v1.json.gz",
+          "policy_id": "ppo_C30_r2",
+          "prediction_model": "C30",
+          "sha256": "371147f85d5166325a05a501d92d73346bfb84af3870a16cadd03c0fcbb4533e"
+        }
+      ],
+      "repeat": 3,
+      "request_count_unit": "requests",
+      "run_id": "ppo_C30_r2__bridge_locked_test_steady_v1__r3",
+      "schema": "maxopt-v7-e2-uniform-cell-summary-v1",
+      "technical_retry_history_path": "cells/28/ATTEMPT_HISTORY.json",
+      "technical_valid": true,
+      "tensor_sha256": "2b5117e17adc94c86fd980055fafdca5c47c1e2b1570a9b717c3bc0a9975b10e",
+      "time_unit": "seconds",
+      "training_model": "C30",
+      "unfinished": 0,
+      "window_id": "bridge_locked_test_steady_v1"
+    },
+    {
+      "P1plus": false,
+      "attempt_count": 1,
+      "cell_index": 29,
+      "checkpoint_sha256": "6d7b4a01816d495c56ea4e4bc28078d20bce0cc0833188543dbc4ddf91b867cb",
+      "classification": "NEGATIVE_RESULT",
+      "completed": 1064,
+      "cpu_recalculation_path": "recalculation/cells/029.json",
+      "final_attempt": 1,
+      "final_result_path": "cells/29/attempts/attempt_01/CELL_RESULT.json",
+      "hardware": "2×A100 80GB, GPU0/1",
+      "kind": "COMPARISON",
+      "late": 12,
+      "observation_horizon_seconds": 2100,
+      "observation_window_cost": {
+        "gpu": 1.646286356869,
+        "offline_miss": 0.12,
+        "operating": 2.008686356869,
+        "scope": "registered_observation_window",
+        "shutdown": 0.006,
+        "startup": 0.01,
+        "synthetic_api": 0.3464,
+        "total": 2.128686356869,
+        "units": "scenario_USD_not_real_bill"
+      },
+      "offline": {
+        "arrivals": 120,
+        "completed": 120,
+        "late": 12,
+        "not_on_time": 12,
+        "on_time": 108,
+        "on_time_rate": 0.9,
+        "unfinished": 0
+      },
+      "online": {
+        "arrivals": 944,
+        "completed": 944,
+        "late": 0,
+        "not_on_time": 0,
+        "on_time": 944,
+        "on_time_rate": 1.0,
+        "unfinished": 0
+      },
+      "policy_id": "ppo_C30_s103",
+      "prediction_refs": [
+        {
+          "path": "predictions/cells/C__ppo_C30_s103__bridge_locked_test_steady_v1.json.gz",
+          "policy_id": "ppo_C30_s103",
+          "prediction_model": "C",
+          "sha256": "902a9ecd51d7ee3fe0cc9dcfafabd6d35189c4d54d1a9bbe13a44e549369c87d"
+        },
+        {
+          "path": "predictions/cells/C30__ppo_C30_s103__bridge_locked_test_steady_v1.json.gz",
+          "policy_id": "ppo_C30_s103",
+          "prediction_model": "C30",
+          "sha256": "8ea7f9cf4fb6ea8e0178d9006409fd4f52dfbd826345e016eaf8ff38833bb4a3"
+        }
+      ],
+      "repeat": 3,
+      "request_count_unit": "requests",
+      "run_id": "ppo_C30_s103__bridge_locked_test_steady_v1__r3",
+      "schema": "maxopt-v7-e2-uniform-cell-summary-v1",
+      "technical_retry_history_path": "cells/29/ATTEMPT_HISTORY.json",
+      "technical_valid": true,
+      "tensor_sha256": "de0136e53a719317b6db126764d4a95ca20d3d498ec020ec821297e69ae67c60",
+      "time_unit": "seconds",
+      "training_model": "C30",
+      "unfinished": 0,
+      "window_id": "bridge_locked_test_steady_v1"
+    },
+    {
+      "P1plus": true,
+      "attempt_count": 1,
+      "cell_index": 30,
+      "checkpoint_sha256": "e03a5695275a67ccbe9ea1dde08792d007a0a6aaf0d8d51de30b921286584157",
+      "classification": "COMPLETED",
+      "completed": 1064,
+      "cpu_recalculation_path": "recalculation/cells/030.json",
+      "final_attempt": 1,
+      "final_result_path": "cells/30/attempts/attempt_01/CELL_RESULT.json",
+      "hardware": "2×A100 80GB, GPU0/1",
+      "kind": "COMPARISON",
+      "late": 0,
+      "observation_horizon_seconds": 2100,
+      "observation_window_cost": {
+        "gpu": 2.110372127647,
+        "offline_miss": 0.0,
+        "operating": 2.144304127647,
+        "scope": "registered_observation_window",
+        "shutdown": 0.003,
+        "startup": 0.004,
+        "synthetic_api": 0.026932,
+        "total": 2.144304127647,
+        "units": "scenario_USD_not_real_bill"
+      },
+      "offline": {
+        "arrivals": 120,
+        "completed": 120,
+        "late": 0,
+        "not_on_time": 0,
+        "on_time": 120,
+        "on_time_rate": 1.0,
+        "unfinished": 0
+      },
+      "online": {
+        "arrivals": 944,
+        "completed": 944,
+        "late": 0,
+        "not_on_time": 0,
+        "on_time": 944,
+        "on_time_rate": 1.0,
+        "unfinished": 0
+      },
+      "policy_id": "ppo_C30_raw",
+      "prediction_refs": [
+        {
+          "path": "predictions/cells/C__ppo_C30_selected__bridge_locked_test_steady_v1.json.gz",
+          "policy_id": "ppo_C30_selected",
+          "prediction_model": "C",
+          "sha256": "7523d0652d3e39e2e02e9e547633e20276746c473e54435e28ebab5f27384af2"
+        },
+        {
+          "path": "predictions/cells/C30__ppo_C30_selected__bridge_locked_test_steady_v1.json.gz",
+          "policy_id": "ppo_C30_selected",
+          "prediction_model": "C30",
+          "sha256": "f4facfb79c43454c69fc76e10aeaa29725635802b042ae2b4f489d9dd6f7f9f9"
+        }
+      ],
+      "repeat": 3,
+      "request_count_unit": "requests",
+      "run_id": "ppo_C30_raw__bridge_locked_test_steady_v1__r3",
+      "schema": "maxopt-v7-e2-uniform-cell-summary-v1",
+      "technical_retry_history_path": "cells/30/ATTEMPT_HISTORY.json",
+      "technical_valid": true,
+      "tensor_sha256": "9c6cd1c2af99293634c9bd25c7ce946683c3fe255cda8a647778603ec8d5bff4",
+      "time_unit": "seconds",
+      "training_model": "C30",
+      "unfinished": 0,
+      "window_id": "bridge_locked_test_steady_v1"
+    },
+    {
+      "P1plus": false,
+      "attempt_count": 1,
+      "cell_index": 31,
+      "checkpoint_sha256": "e1d2c1caa8786cd0d35b9d9dedd3a37a041bbd5cf76d83d281c1861e4a2ce981",
+      "classification": "NEGATIVE_RESULT",
+      "completed": 970,
+      "cpu_recalculation_path": "recalculation/cells/031.json",
+      "final_attempt": 1,
+      "final_result_path": "cells/31/attempts/attempt_01/CELL_RESULT.json",
+      "hardware": "2×A100 80GB, GPU0/1",
+      "kind": "COMPARISON",
+      "late": 22,
+      "observation_horizon_seconds": 2100,
+      "observation_window_cost": {
+        "gpu": 1.264461872873,
+        "offline_miss": 1.16,
+        "operating": 1.847531872873,
+        "scope": "registered_observation_window",
+        "shutdown": 0.016,
+        "startup": 0.028,
+        "synthetic_api": 0.53907,
+        "total": 3.007531872873,
+        "units": "scenario_USD_not_real_bill"
+      },
+      "offline": {
+        "arrivals": 120,
+        "completed": 26,
+        "late": 22,
+        "not_on_time": 116,
+        "on_time": 4,
+        "on_time_rate": 0.03333333333333333,
+        "unfinished": 94
+      },
+      "online": {
+        "arrivals": 944,
+        "completed": 944,
+        "late": 0,
+        "not_on_time": 0,
+        "on_time": 944,
+        "on_time_rate": 1.0,
+        "unfinished": 0
+      },
+      "policy_id": "ppo_C_r2",
+      "prediction_refs": [
+        {
+          "path": "predictions/cells/C__ppo_C_r2__bridge_locked_test_steady_v1.json.gz",
+          "policy_id": "ppo_C_r2",
+          "prediction_model": "C",
+          "sha256": "a468edca199a35c64db3d5ebefd1a0334398a00a3dfd101ea4faf264c25e9035"
+        },
+        {
+          "path": "predictions/cells/C30__ppo_C_r2__bridge_locked_test_steady_v1.json.gz",
+          "policy_id": "ppo_C_r2",
+          "prediction_model": "C30",
+          "sha256": "c6debcf6cf25fbb0ba1e874dcd7d79ff8f731471a2f341dc638c867bb0462b77"
+        }
+      ],
+      "repeat": 3,
+      "request_count_unit": "requests",
+      "run_id": "ppo_C_r2__bridge_locked_test_steady_v1__r3",
+      "schema": "maxopt-v7-e2-uniform-cell-summary-v1",
+      "technical_retry_history_path": "cells/31/ATTEMPT_HISTORY.json",
+      "technical_valid": true,
+      "tensor_sha256": "a042f1b897c2981694390ab84984449142969302c081877419824ee7f82facff",
+      "time_unit": "seconds",
+      "training_model": "C",
+      "unfinished": 94,
+      "window_id": "bridge_locked_test_steady_v1"
+    },
+    {
+      "P1plus": true,
+      "attempt_count": 1,
+      "cell_index": 32,
+      "checkpoint_sha256": "60f59f251227273e9926f5588e1ff2d8e443fec23766ffec99abbe348343f218",
+      "classification": "COMPLETED",
+      "completed": 1064,
+      "cpu_recalculation_path": "recalculation/cells/032.json",
+      "final_attempt": 1,
+      "final_result_path": "cells/32/attempts/attempt_01/CELL_RESULT.json",
+      "hardware": "2×A100 80GB, GPU0/1",
+      "kind": "COMPARISON",
+      "late": 0,
+      "observation_horizon_seconds": 2100,
+      "observation_window_cost": {
+        "gpu": 2.122434203808,
+        "offline_miss": 0.0,
+        "operating": 2.411815203808,
+        "scope": "registered_observation_window",
+        "shutdown": 0.016,
+        "startup": 0.028,
+        "synthetic_api": 0.24538100000000002,
+        "total": 2.411815203808,
+        "units": "scenario_USD_not_real_bill"
+      },
+      "offline": {
+        "arrivals": 120,
+        "completed": 120,
+        "late": 0,
+        "not_on_time": 0,
+        "on_time": 120,
+        "on_time_rate": 1.0,
+        "unfinished": 0
+      },
+      "online": {
+        "arrivals": 944,
+        "completed": 944,
+        "late": 0,
+        "not_on_time": 0,
+        "on_time": 944,
+        "on_time_rate": 1.0,
+        "unfinished": 0
+      },
+      "policy_id": "ppo_C_s101",
+      "prediction_refs": [
+        {
+          "path": "predictions/cells/C__ppo_C_s101__bridge_locked_test_steady_v1.json.gz",
+          "policy_id": "ppo_C_s101",
+          "prediction_model": "C",
+          "sha256": "c005cf3d5e1a6e89c453dc22bc1c5e26c03e5ce01b6310a901806574296cd332"
+        },
+        {
+          "path": "predictions/cells/C30__ppo_C_s101__bridge_locked_test_steady_v1.json.gz",
+          "policy_id": "ppo_C_s101",
+          "prediction_model": "C30",
+          "sha256": "6e347e2362ad48194915642df3ab0962aa49516967590333763c2ec3b993b051"
+        }
+      ],
+      "repeat": 3,
+      "request_count_unit": "requests",
+      "run_id": "ppo_C_s101__bridge_locked_test_steady_v1__r3",
+      "schema": "maxopt-v7-e2-uniform-cell-summary-v1",
+      "technical_retry_history_path": "cells/32/ATTEMPT_HISTORY.json",
+      "technical_valid": true,
+      "tensor_sha256": "d0d3916574bb2d710361c068fd9f2ff2f1b2f4b0ea6111665aa7442edbfe4238",
+      "time_unit": "seconds",
+      "training_model": "C",
+      "unfinished": 0,
+      "window_id": "bridge_locked_test_steady_v1"
+    }
+  ],
+  "schema": "maxopt-v7-e2-continuous-32-results-v1"
+}

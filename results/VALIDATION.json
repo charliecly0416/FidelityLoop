@@ -1,0 +1,54 @@
+{
+  "schema": "fidelityloop-cpu-validation-v1",
+  "status": "PASS",
+  "checks": [
+    {
+      "devices": 2,
+      "slots": 1,
+      "arrived": 5,
+      "completed": 5,
+      "censored": 0,
+      "request_conservation": true,
+      "state_conservation": true,
+      "cost_conservation": true
+    },
+    {
+      "devices": 2,
+      "slots": 2,
+      "arrived": 5,
+      "completed": 5,
+      "censored": 0,
+      "request_conservation": true,
+      "state_conservation": true,
+      "cost_conservation": true
+    },
+    {
+      "devices": 3,
+      "slots": 1,
+      "arrived": 5,
+      "completed": 5,
+      "censored": 0,
+      "request_conservation": true,
+      "state_conservation": true,
+      "cost_conservation": true
+    }
+  ],
+  "ppo_adapter_action": {
+    "target": 2,
+    "reserve": false,
+    "scale_action": 1,
+    "base_target": 2,
+    "risky_ids": [],
+    "schema": "ppo-action-adapter-v1"
+  },
+  "scope": [
+    "CPU bounded facade",
+    "synthetic workload",
+    "no GPU or network"
+  ],
+  "excluded": [
+    "heterogeneous-GPU accuracy",
+    "new PPO training",
+    "private trace redistribution"
+  ]
+}

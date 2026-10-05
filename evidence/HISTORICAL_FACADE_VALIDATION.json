@@ -1,0 +1,78 @@
+{
+  "schema": "maxopt-framework-validation-v1",
+  "status": "PASS",
+  "historical_default": {
+    "exact": true,
+    "configurations": [
+      {
+        "name": "C_all2",
+        "exact": true,
+        "requests_sha256": "1bd0931b3e0c57187fe284be0981f1e1fccf135cb06fc2c53d59ca0dd02e9fe0",
+        "events_sha256": "03e453fcc91448ea98f4a43ec038db51727e21a5dcbede3fb2da548881a29d3e",
+        "summary_sha256": "fda493eb80d225b5faf0aecaf190194aa8664988db98e959083fa1d37d8405d7",
+        "event_count": 41
+      },
+      {
+        "name": "C_all1",
+        "exact": true,
+        "requests_sha256": "fb24ad401250de43c3e5d5077dc1ef4181f825c338aeef89c969f1accfd70ff0",
+        "events_sha256": "3f2468118b93e2b1829b79831a1a1ffdd19e9980621610b34e3eff1108f22fa3",
+        "summary_sha256": "b64d4905c3260db388e466056248761992bf189aaeaa1f8890ff22a68b45b154",
+        "event_count": 44
+      },
+      {
+        "name": "C_hysteresis",
+        "exact": true,
+        "requests_sha256": "1bd0931b3e0c57187fe284be0981f1e1fccf135cb06fc2c53d59ca0dd02e9fe0",
+        "events_sha256": "dfed7a06d0e7ff195a8da642f3a17c6f430b705efd37f42ab9c5d30c8cc7ca5f",
+        "summary_sha256": "ec58d7f9d8b2fffa8227f6304f0ade93da7734ec413f43c74b1b99e6ef34592c",
+        "event_count": 44
+      },
+      {
+        "name": "C_guard_hysteresis",
+        "exact": true,
+        "requests_sha256": "1bd0931b3e0c57187fe284be0981f1e1fccf135cb06fc2c53d59ca0dd02e9fe0",
+        "events_sha256": "52e89d01ed2902051abc41e3c9555a866c98dba147250b92a36024a2f71d0548",
+        "summary_sha256": "ec58d7f9d8b2fffa8227f6304f0ade93da7734ec413f43c74b1b99e6ef34592c",
+        "event_count": 44
+      }
+    ]
+  },
+  "extensions": [
+    {
+      "name": "two_devices_two_slots",
+      "device_count": 2,
+      "local_slots": 2,
+      "requests": 3,
+      "completed": 3,
+      "censored": 0,
+      "request_conservation": true,
+      "state_conservation": true,
+      "cost_conservation": true,
+      "events_sha256": "54cce35ef51ddbe6827493956e38fa60c1c16cd98cf4746a4dc9d2c2a757b16f",
+      "summary_sha256": "016fa079acdf7edd1e67b2f7206d0618f6571b74219c9f5ec6ae309c812fa5fb"
+    },
+    {
+      "name": "three_devices_one_slot",
+      "device_count": 3,
+      "local_slots": 1,
+      "requests": 3,
+      "completed": 3,
+      "censored": 0,
+      "request_conservation": true,
+      "state_conservation": true,
+      "cost_conservation": true,
+      "events_sha256": "0cb5342c5c9c411ff8cbf503396059e47c1fbe6fd90d176f96d67d437028645d",
+      "summary_sha256": "7f114efe2d2b31b57164f8e1f5ca2798020315b8e30e078b37ea2f668b99641e"
+    }
+  ],
+  "scope": [
+    "CPU-only facade and synthetic bounded configurations",
+    "historical two-device default exact replay"
+  ],
+  "excluded": [
+    "heterogeneous GPU accuracy",
+    "new policy training/tuning",
+    "arbitrary policy/device compatibility"
+  ]
+}

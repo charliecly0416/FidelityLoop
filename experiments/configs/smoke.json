@@ -1,0 +1,10 @@
+{
+  "scenario": "bounded_cpu_smoke",
+  "window_seconds": 12,
+  "drain_seconds": 8,
+  "device_counts": [2, 3],
+  "local_slots": [1, 2],
+  "service_seconds": 1.0,
+  "policies": ["all1", "all2", "allN", "hysteresis", "guard"],
+  "seed": 0
+}

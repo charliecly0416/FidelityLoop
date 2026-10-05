@@ -1,0 +1,9 @@
+{
+  "schema": "fidelityloop-public-baseline-v1",
+  "protected_files": {
+    "paper/main.pdf": "7d95e1213928ae369e3869fcf469d31b41c8dfeca76270303da2d2554019d534",
+    "paper/supplement.pdf": "356996cbf4308520e3be9cc4af8804a46557f252bf7ae7d954e6d02fb1de4554",
+    "paper/main.tex": "d2be73bfc21735b346817d78922b3aaeb7c68f13cb1897d56be811d84cf2f4a7",
+    "paper/supplement.tex": "feaf045df7ffac0ed3da98b42b9c52ae4112504c65eda52ff07b54f16a7db57b"
+  }
+}

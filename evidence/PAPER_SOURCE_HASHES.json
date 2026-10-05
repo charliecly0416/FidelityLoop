@@ -1,0 +1,23 @@
+{
+  "docs/maxopt_v3_closeout_20260923/data/barriers.csv": "46253706d21c97e83f289bd198cb79a6918693fbd912fcf9ea91f22826d5537e",
+  "docs/maxopt_v3_closeout_20260923/data/common_support.csv": "8ae9a1cda1828d94deeb2443d13bfb96ed1d89d94eb3ffa27cfe7bfe1c474f8d",
+  "docs/maxopt_v3_closeout_20260923/data/decisions.json": "4e670a17ea6b5135284807736af7882c7127678bb93b7b0f25db75143646d82f",
+  "docs/maxopt_v3_closeout_20260923/data/guard_events.csv": "28935a5af8cb0bc353ceefbd1a5e2dd39ecae9c2b5a7406aa10ea8d1cdb9a7ae",
+  "docs/maxopt_v3_closeout_20260923/data/lifecycle.csv": "625eb35a761dd7428b3a9bccb48479835aa19ccf1086b5a9c10b900f0cc9939c",
+  "docs/maxopt_v3_closeout_20260923/data/lifecycle_groups.csv": "52741333c96155c976085504a9abcd342e3d15c23dc1a3cc210d3ac0e02d2068",
+  "docs/maxopt_v3_closeout_20260923/data/misses.csv": "06af2d5396d4d644e705a8d986cc31b01b5f919070c6619fd52a14d24d44fcbe",
+  "docs/maxopt_v3_closeout_20260923/data/paired_costs.csv": "ffd1297405696df2bd63f9b765cd42559396f0649d273131422e1a26ba8457a3",
+  "docs/maxopt_v3_closeout_20260923/data/prediction_errors.csv": "4f28ef7e3693bcaf08e6b926164218d4744a98a90216c40d2327c39807865df1",
+  "docs/maxopt_v3_closeout_20260923/data/prediction_groups.csv": "eda76aa5b90bcc2db05fa73373fcf44b68e7056a11830da78b9a7b89b14ac4da",
+  "docs/maxopt_v3_closeout_20260923/data/price_grid.csv": "27740eb89337ae1cbfe1b3b2df2b316f92e66bead850f9e17c949be8d896e6be",
+  "docs/maxopt_v3_closeout_20260923/data/raw_audit.csv": "01021112670035a565b05676d63e28d890f5d480f799c9273e27d27024fe8add",
+  "docs/maxopt_v3_closeout_20260923/data/route_confusion.csv": "b4329d146e0bc1d4072535129b91fb7a801baeda5975ed54844ac1d4af9143e8",
+  "docs/maxopt_v3_closeout_20260923/data/run_groups.csv": "e7692413b173ecd23782f67710b061c94ccbf6f0b252316f1e6aa4b319f550e7",
+  "docs/maxopt_v3_closeout_20260923/data/run_metrics.csv": "903e913ff636862aa00ed6caf53852dbf251db5207e64decd2dabb1e785f5373",
+  "docs/maxopt_v3_closeout_20260923/data/source_manifest.json": "e39bd9dd91ef6ef798acc2b0533421601b3f31c9e49582570d83376b43d61188",
+  "docs/maxopt_v3_closeout_20260923/data/target_transitions.csv": "45b131becfde072827f25889f0c37c06d8110c86349d2c22a4df83cfb0d38c7f",
+  "docs/maxopt_v3_closeout_20260923/data/timelines.csv": "be77868be3e98f60912d89f7b658fbbcc3d50944f61e990941183bc3f97ab02e",
+  "artifacts/max_optimization_v3_20260921/s4/workload_manifest.json": "2258fa76b16c811aac8274abd1dd02e00ba4822d3eedada0776fef6f5c59b5b1",
+  "artifacts/max_optimization_v3_20260921/s4/window_selection.json": "fce22c4d63cac9d9bfa57cef0613b335e825d58265ded3db878dae345f754721",
+  "artifacts/max_optimization_v3_20260921/s4_generation_lock.json": "8eccdeca7b0a21847e555a822f1106a247840bc2f4270a0368284af5c62e6697"
+}

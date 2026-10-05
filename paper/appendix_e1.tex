@@ -1,0 +1,148 @@
+\section{E1: same-runtime supplementary comparison}
+\label{app:e1}
+E1 compares frozen H+guard and B-HPA on the previously observed
+\path{locked_test_steady_v3} and \path{locked_test_recovery_v3}
+inputs without revising the V3/V4 locks. All 110 formal lifecycle generations
+share the two-A100 Qwen2.5-7B-Instruct FP16 runtime, model closure, service lookup,
+health probe, synthetic API, and accounting contract. Both instances start
+physically ready with empty queues; adapter targets remain B-HPA=0 and H+guard=2.
+These targets and the intrinsic dispatch rules belong to the complete policy
+treatments, so E1 does not isolate the causal contribution of the guard module.
+
+\subsection{Identities, feasibility, and retained smoke outcomes}
+The formal matrix contains one all2 capacity run per window and three fresh
+repeats of each comparison policy per window: 2 capacity plus 12 comparison
+identities. Each steady run contains 1,444 online and 120 offline arrivals;
+each recovery run contains 334 online and 120 offline arrivals. Independent raw
+recomputation finds all 14,126 formal arrivals completed on time, with zero late,
+failed, or unfinished requests. Both capacity runs pass $G_F$ and every comparison
+run passes P1/P1+. Table~\ref{tab:e1runs} retains all 14 identities; the capacity
+runs are qualification evidence, not extra B-HPA or guard repeats.
+
+\begin{table*}[t]
+\centering
+\small
+\caption{All E1 formal identities. Occupied time is window GPU seconds; costs
+are scenario USD. API is the percentage of all online arrivals, p99 is each
+run's completed-online end-to-end quantile in seconds, and S/D counts window
+starts/shutdowns. Every row completes all online and offline arrivals on time.}
+\label{tab:e1runs}
+\setlength{\tabcolsep}{3pt}
+\par\vspace{4pt}
+\begin{tabular*}{0.92\linewidth}{@{\extracolsep{\fill}}lllrrrrrr@{}}
+\toprule
+Window & Policy & Repeat & Occupied & Window cost & Full cost & API (\%) & p99 & S/D\\
+\midrule
+\input{generated/v4r3_e1_runs_rows.tex}
+\end{tabular*}
+\end{table*}
+
+The 17 entries include three 90-second nonformal smokes.
+B-HPA a1 is \texttt{TECHNICAL\_INVALID}: its lifecycle callback rejected
+ready after forced stopping, leaving four offline arrivals unfinished.
+After repair, a2 records 68/68 online completions on time but 0/4 offline
+completions at cutoff; its \texttt{NEGATIVE\_RESULT} and false gate remain intact.
+The wrapper's \texttt{PASS} denotes technical integration only.
+Guard's smoke completes all 68 online and four offline arrivals on time.
+None enters the formal comparison. The raw \texttt{formal\_accepted=false}
+field is not overwritten; scientific qualification is independently derived from
+request and lifecycle records.
+
+\subsection{Resource use and cost boundary}
+For window $w$, let $\overline C_{g,w}$ and $\overline C_{h,w}$ be the arithmetic
+means across the three H+guard and B-HPA repeats. E1 reports
+$R_w=1-\overline C_{g,w}/\overline C_{h,w}$ only after both arms qualify in
+all three runs, then $R=(R_{\rm steady}+R_{\rm recovery})/2$.
+This is the equal average of within-window ratios, not a pooled ratio or the
+average of six per-pair percentages. The fixed repeat blocks support descriptive
+paired differences, not confidence intervals or population-level significance.
+Window scenario-cost reductions are 32.5975\% and 49.3598\%, hence 40.9786\%
+equally weighted. Full-deployment reductions are 31.7650\% and 47.8629\%.
+
+\begin{table}[t]
+\centering
+\small
+\caption{E1 mean phase costs (scenario USD), three repeats per comparison
+arm/window. Full includes setup, window, and cleanup.}
+\label{tab:e1phases}
+\setlength{\tabcolsep}{2pt}
+\par\vspace{4pt}
+\begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}llrrrr@{}}
+\toprule
+Window & Policy & Setup & Window & Cleanup & Full\\
+\midrule
+\input{generated/v4r3_e1_phase_rows.tex}
+\end{tabular*}
+\end{table}
+
+Occupied time spans \texttt{launch\_issued} through \texttt{verified\_release},
+including starting and stopping, clipped to each phase. Window occupied-time
+reductions are 50.8839\% and 56.1240\%; the corresponding mean savings are
+1,224.82 and 1,147.44 GPU seconds. This is local resource occupancy, not total
+compute across the local and external services. Active time is not GPU compute
+utilization. Guard's zero cleanup cost means that release already completed
+within the window, not that release or setup is free.
+
+Repricing the fixed ledgers makes the cost boundary explicit. Let
+$\Delta C_G$, $\Delta C_A$, and $\Delta C_E$ denote mean H+guard minus
+B-HPA GPU, API, and lifecycle-event costs in scenario USD.
+Their steady values are $(-1.2248,0.3862,0.0340)$;
+recovery gives $(-1.1474,0.0930,0.0320)$.
+With GPU price multiplier $x$, a common API input/output-budget multiplier
+$y$, and fixed lifecycle-event prices, the cost difference is
+$\Delta C(x,y)=x\Delta C_G+y\Delta C_A+\Delta C_E$.
+Neither arm incurs missed-job penalties. Since $\Delta C_A>0$, H+guard
+costs less when
+\[
+y<y^*(x)=-\frac{x\Delta C_G+\Delta C_E}{\Delta C_A}.
+\]
+At $x=1$, the API break-even multipliers are 3.08 and 11.99
+(3.09 and 12.02 for full deployment).
+At $y=1$, window savings require GPU price multipliers above 0.343 and
+0.109. Lower local GPU occupancy therefore need not imply lower cost:
+the boundary depends on external-service prices. This analysis holds
+routing and lifecycle events fixed, without retuning either policy.
+
+\subsection{Routing, lifecycle, and queue trade-offs}
+The online API fraction uses all online arrivals as denominator, not only local
+completions. Its mean rises from 6.44\% to 51.64\% in steady and from 11.68\% to
+59.38\% in recovery. Table~\ref{tab:e1tradeoffs} retains the additional lifecycle
+events and queue exposure. Queue exposure sums each request's actual
+release-to-dispatch time, or release-to-cutoff time if undispatched, in request
+seconds. It is neither a queue-latency p99 nor a new value of the historical
+prediction loss $L$. Tail latency uses completed online requests; the all-arrival
+feasibility checks above independently rule out hidden formal failures.
+
+\begin{table}[t]
+\centering
+\small
+\caption{E1 trade-offs. S and D are mean window starts and shutdowns; Q is
+mean queue request-seconds. p99 ranges span three per-run completed-online
+quantiles (seconds), not confidence intervals or pooled-request quantiles.}
+\label{tab:e1tradeoffs}
+\setlength{\tabcolsep}{2pt}
+\par\vspace{4pt}
+\begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}llrrrr@{}}
+\toprule
+Window & Policy & S & D & Q & p99 range\\
+\midrule
+\input{generated/v4r3_e1_tradeoff_rows.tex}
+\end{tabular*}
+\end{table}
+
+The two known inputs and three repeats per cell establish a bounded policy
+comparison. Greater API use and queue exposure rule out all-dimensional
+dominance; quality-equivalent API substitution, energy, provider bills, and
+new-trace generalization remain unmeasured.
+
+\subsection{Independent recomputation and artifact links}
+The accepted table source is
+\path{docs/maxopt_v4_r3_p5_20260929/ANALYSIS/P5_RAW_v2/}:
+\path{FORMAL_RUNS.csv} retains 14 formal identities, \path{ATTEMPTS.csv}
+all attempts, \path{PAIRS.csv} six repeat blocks, and \path{AGGREGATES.json}
+the qualified estimands. \path{COMPARABILITY.json} binds plans, runtime,
+and permitted policy differences. In the parent documentation directory,
+\path{REVIEW_B.json} and \path{REVIEW_B_V2.json} bind accepted output hashes;
+\path{P6_GENERATE_E1_TABLES.py} and \path{P6_TABLE_MANIFEST.json} reproduce
+and bind the displayed rows. Price-boundary recomputation is provided in
+\path{docs/maxopt_v5_e1_boundary_20260930/analysis.py}.

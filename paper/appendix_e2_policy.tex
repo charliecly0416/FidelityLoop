@@ -1,0 +1,49 @@
+\section{E2 policy evidence}
+\label{app:e2policy}
+The E2 handoff is independently verified by
+\path{tools/verify_portable_32_cpu.py}. Its package SHA256 is
+\path{079e2b7e146b1706c2500ac9a3c4a5ff0c4310885cc013907e9b86c754399aa3};
+the extracted package contains 32 cells, 36 attempts, 20 strict P1+ results,
+12 scientific negative results, and four retained technical-invalid attempts.
+No checkpoint was retrained or selected after physical execution. The all2
+reference is one cell per window; each PPO cell is a repeated execution of the
+same frozen checkpoint, not a new training seed.
+
+\begin{table*}[t]
+\centering
+\small
+\caption{Complete E2 policy summary. Costs are means over three PPO repeats or
+the single all2 anchor in each window. A negative arm can have lower cost while
+still violating the strict deadline contract.}
+\label{tab:e2appendix}
+\setlength{\tabcolsep}{5pt}
+\par\vspace{4pt}
+\begin{tabular*}{0.92\linewidth}{@{\extracolsep{\fill}}llrrrrr@{}}
+\toprule
+Arm & training environment & R P1+ & S P1+ & cost R & cost S & offline outcome\\
+\midrule
+all2 & anchor & 1/1 & 1/1 & 4.200 & 4.200 & 120/120\\
+ppo-C-$r2$ & C & 0/3 & 0/3 & 2.730 & 2.950 & 4--13 on time\\
+ppo-C-$s101$ & C & 3/3 & 3/3 & 2.357 & 2.449 & 120/120\\
+ppo-C30-$r2$ & C30 & 3/3 & 3/3 & 2.073 & 2.084 & 120/120\\
+ppo-C30-ref & C30 & 3/3 & 3/3 & 2.051 & 2.103 & 120/120\\
+ppo-C30-$s103$ & C30 & 0/3 & 0/3 & 1.899 & 2.090 & 106--114/120\\
+\bottomrule
+\end{tabular*}
+\end{table*}
+
+The physical package stores both C and C30 predictions for each cell. Comparing
+the frozen prediction labels with the final physical labels gives 32/32
+feasibility-direction agreement for C and 20/32 for C30. Window-cost MAE is
+0.0804 and 0.4657 scenario USD, respectively; these metrics use the same
+registered observation-window ledger and do not estimate provider billing.
+The C30 prediction marks ppo-C30-$s103$ feasible in both windows, while all six
+physical repeats fail the offline deadline. This is a false-positive deployment
+case, not a reason to remove the negative cells.
+
+The package also retains the exact attempt history, source and tensor hashes,
+request terminals, controller events, lifecycle manifests, budget receipts, and
+CPU recomputation for every cell. The four technical-invalid attempts remain in
+the audit trail and are excluded from scientific repeat counts. The evidence is
+bounded to two locked windows, two A100 GPUs, one Qwen model, five checkpoints,
+and the declared synthetic-API scenario ledger.

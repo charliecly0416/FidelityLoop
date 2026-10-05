@@ -1,0 +1,570 @@
+[
+  {
+    "id": "all1",
+    "policy": {
+      "name": "all1"
+    },
+    "reservation": false,
+    "scale": false
+  },
+  {
+    "id": "all2",
+    "policy": {
+      "name": "all2"
+    },
+    "reservation": false,
+    "scale": false
+  },
+  {
+    "id": "hpa_p2_c0",
+    "policy": {
+      "cooldown_seconds": 0,
+      "min_devices": 0,
+      "name": "hpa",
+      "target_pressure": 2
+    },
+    "reservation": false,
+    "scale": false
+  },
+  {
+    "id": "hpa_p2_c15",
+    "policy": {
+      "cooldown_seconds": 15,
+      "min_devices": 0,
+      "name": "hpa",
+      "target_pressure": 2
+    },
+    "reservation": false,
+    "scale": false
+  },
+  {
+    "id": "hpa_p2_c30",
+    "policy": {
+      "cooldown_seconds": 30,
+      "min_devices": 0,
+      "name": "hpa",
+      "target_pressure": 2
+    },
+    "reservation": false,
+    "scale": false
+  },
+  {
+    "id": "hpa_p2_c60",
+    "policy": {
+      "cooldown_seconds": 60,
+      "min_devices": 0,
+      "name": "hpa",
+      "target_pressure": 2
+    },
+    "reservation": false,
+    "scale": false
+  },
+  {
+    "id": "hpa_p4_c0",
+    "policy": {
+      "cooldown_seconds": 0,
+      "min_devices": 0,
+      "name": "hpa",
+      "target_pressure": 4
+    },
+    "reservation": false,
+    "scale": false
+  },
+  {
+    "id": "hpa_p4_c15",
+    "policy": {
+      "cooldown_seconds": 15,
+      "min_devices": 0,
+      "name": "hpa",
+      "target_pressure": 4
+    },
+    "reservation": false,
+    "scale": false
+  },
+  {
+    "id": "hpa_p4_c30",
+    "policy": {
+      "cooldown_seconds": 30,
+      "min_devices": 0,
+      "name": "hpa",
+      "target_pressure": 4
+    },
+    "reservation": false,
+    "scale": false
+  },
+  {
+    "id": "hpa_p4_c60",
+    "policy": {
+      "cooldown_seconds": 60,
+      "min_devices": 0,
+      "name": "hpa",
+      "target_pressure": 4
+    },
+    "reservation": false,
+    "scale": false
+  },
+  {
+    "id": "hpa_p8_c0",
+    "policy": {
+      "cooldown_seconds": 0,
+      "min_devices": 0,
+      "name": "hpa",
+      "target_pressure": 8
+    },
+    "reservation": false,
+    "scale": false
+  },
+  {
+    "id": "hpa_p8_c15",
+    "policy": {
+      "cooldown_seconds": 15,
+      "min_devices": 0,
+      "name": "hpa",
+      "target_pressure": 8
+    },
+    "reservation": false,
+    "scale": false
+  },
+  {
+    "id": "hpa_p8_c30",
+    "policy": {
+      "cooldown_seconds": 30,
+      "min_devices": 0,
+      "name": "hpa",
+      "target_pressure": 8
+    },
+    "reservation": false,
+    "scale": false
+  },
+  {
+    "id": "hpa_p8_c60",
+    "policy": {
+      "cooldown_seconds": 60,
+      "min_devices": 0,
+      "name": "hpa",
+      "target_pressure": 8
+    },
+    "reservation": false,
+    "scale": false
+  },
+  {
+    "id": "hysteresis_u2_d0_c15",
+    "policy": {
+      "cooldown_seconds": 15,
+      "down_threshold": 0,
+      "min_devices": 0,
+      "name": "hysteresis",
+      "up_threshold": 2
+    },
+    "reservation": false,
+    "scale": false
+  },
+  {
+    "id": "hysteresis_u2_d0_c60",
+    "policy": {
+      "cooldown_seconds": 60,
+      "down_threshold": 0,
+      "min_devices": 0,
+      "name": "hysteresis",
+      "up_threshold": 2
+    },
+    "reservation": false,
+    "scale": false
+  },
+  {
+    "id": "hysteresis_u2_d1_c15",
+    "policy": {
+      "cooldown_seconds": 15,
+      "down_threshold": 1,
+      "min_devices": 0,
+      "name": "hysteresis",
+      "up_threshold": 2
+    },
+    "reservation": false,
+    "scale": false
+  },
+  {
+    "id": "hysteresis_u2_d1_c60",
+    "policy": {
+      "cooldown_seconds": 60,
+      "down_threshold": 1,
+      "min_devices": 0,
+      "name": "hysteresis",
+      "up_threshold": 2
+    },
+    "reservation": false,
+    "scale": false
+  },
+  {
+    "id": "hysteresis_u4_d0_c15",
+    "policy": {
+      "cooldown_seconds": 15,
+      "down_threshold": 0,
+      "min_devices": 0,
+      "name": "hysteresis",
+      "up_threshold": 4
+    },
+    "reservation": false,
+    "scale": false
+  },
+  {
+    "id": "hysteresis_u4_d0_c60",
+    "policy": {
+      "cooldown_seconds": 60,
+      "down_threshold": 0,
+      "min_devices": 0,
+      "name": "hysteresis",
+      "up_threshold": 4
+    },
+    "reservation": false,
+    "scale": false
+  },
+  {
+    "id": "hysteresis_u4_d1_c15",
+    "policy": {
+      "cooldown_seconds": 15,
+      "down_threshold": 1,
+      "min_devices": 0,
+      "name": "hysteresis",
+      "up_threshold": 4
+    },
+    "reservation": false,
+    "scale": false
+  },
+  {
+    "id": "hysteresis_u4_d1_c60",
+    "policy": {
+      "cooldown_seconds": 60,
+      "down_threshold": 1,
+      "min_devices": 0,
+      "name": "hysteresis",
+      "up_threshold": 4
+    },
+    "reservation": false,
+    "scale": false
+  },
+  {
+    "id": "hysteresis_u8_d0_c15",
+    "policy": {
+      "cooldown_seconds": 15,
+      "down_threshold": 0,
+      "min_devices": 0,
+      "name": "hysteresis",
+      "up_threshold": 8
+    },
+    "reservation": false,
+    "scale": false
+  },
+  {
+    "id": "hysteresis_u8_d0_c60",
+    "policy": {
+      "cooldown_seconds": 60,
+      "down_threshold": 0,
+      "min_devices": 0,
+      "name": "hysteresis",
+      "up_threshold": 8
+    },
+    "reservation": false,
+    "scale": false
+  },
+  {
+    "id": "hysteresis_u8_d1_c15",
+    "policy": {
+      "cooldown_seconds": 15,
+      "down_threshold": 1,
+      "min_devices": 0,
+      "name": "hysteresis",
+      "up_threshold": 8
+    },
+    "reservation": false,
+    "scale": false
+  },
+  {
+    "id": "hysteresis_u8_d1_c60",
+    "policy": {
+      "cooldown_seconds": 60,
+      "down_threshold": 1,
+      "min_devices": 0,
+      "name": "hysteresis",
+      "up_threshold": 8
+    },
+    "reservation": false,
+    "scale": false
+  },
+  {
+    "id": "hpa_p2_c0__guard",
+    "policy": {
+      "cooldown_seconds": 0,
+      "min_devices": 0,
+      "name": "hpa",
+      "target_pressure": 2
+    },
+    "reservation": true,
+    "scale": true
+  },
+  {
+    "id": "hpa_p2_c15__guard",
+    "policy": {
+      "cooldown_seconds": 15,
+      "min_devices": 0,
+      "name": "hpa",
+      "target_pressure": 2
+    },
+    "reservation": true,
+    "scale": true
+  },
+  {
+    "id": "hpa_p2_c30__guard",
+    "policy": {
+      "cooldown_seconds": 30,
+      "min_devices": 0,
+      "name": "hpa",
+      "target_pressure": 2
+    },
+    "reservation": true,
+    "scale": true
+  },
+  {
+    "id": "hpa_p2_c60__guard",
+    "policy": {
+      "cooldown_seconds": 60,
+      "min_devices": 0,
+      "name": "hpa",
+      "target_pressure": 2
+    },
+    "reservation": true,
+    "scale": true
+  },
+  {
+    "id": "hpa_p4_c0__guard",
+    "policy": {
+      "cooldown_seconds": 0,
+      "min_devices": 0,
+      "name": "hpa",
+      "target_pressure": 4
+    },
+    "reservation": true,
+    "scale": true
+  },
+  {
+    "id": "hpa_p4_c15__guard",
+    "policy": {
+      "cooldown_seconds": 15,
+      "min_devices": 0,
+      "name": "hpa",
+      "target_pressure": 4
+    },
+    "reservation": true,
+    "scale": true
+  },
+  {
+    "id": "hpa_p4_c30__guard",
+    "policy": {
+      "cooldown_seconds": 30,
+      "min_devices": 0,
+      "name": "hpa",
+      "target_pressure": 4
+    },
+    "reservation": true,
+    "scale": true
+  },
+  {
+    "id": "hpa_p4_c60__guard",
+    "policy": {
+      "cooldown_seconds": 60,
+      "min_devices": 0,
+      "name": "hpa",
+      "target_pressure": 4
+    },
+    "reservation": true,
+    "scale": true
+  },
+  {
+    "id": "hpa_p8_c0__guard",
+    "policy": {
+      "cooldown_seconds": 0,
+      "min_devices": 0,
+      "name": "hpa",
+      "target_pressure": 8
+    },
+    "reservation": true,
+    "scale": true
+  },
+  {
+    "id": "hpa_p8_c15__guard",
+    "policy": {
+      "cooldown_seconds": 15,
+      "min_devices": 0,
+      "name": "hpa",
+      "target_pressure": 8
+    },
+    "reservation": true,
+    "scale": true
+  },
+  {
+    "id": "hpa_p8_c30__guard",
+    "policy": {
+      "cooldown_seconds": 30,
+      "min_devices": 0,
+      "name": "hpa",
+      "target_pressure": 8
+    },
+    "reservation": true,
+    "scale": true
+  },
+  {
+    "id": "hpa_p8_c60__guard",
+    "policy": {
+      "cooldown_seconds": 60,
+      "min_devices": 0,
+      "name": "hpa",
+      "target_pressure": 8
+    },
+    "reservation": true,
+    "scale": true
+  },
+  {
+    "id": "hysteresis_u2_d0_c15__guard",
+    "policy": {
+      "cooldown_seconds": 15,
+      "down_threshold": 0,
+      "min_devices": 0,
+      "name": "hysteresis",
+      "up_threshold": 2
+    },
+    "reservation": true,
+    "scale": true
+  },
+  {
+    "id": "hysteresis_u2_d0_c60__guard",
+    "policy": {
+      "cooldown_seconds": 60,
+      "down_threshold": 0,
+      "min_devices": 0,
+      "name": "hysteresis",
+      "up_threshold": 2
+    },
+    "reservation": true,
+    "scale": true
+  },
+  {
+    "id": "hysteresis_u2_d1_c15__guard",
+    "policy": {
+      "cooldown_seconds": 15,
+      "down_threshold": 1,
+      "min_devices": 0,
+      "name": "hysteresis",
+      "up_threshold": 2
+    },
+    "reservation": true,
+    "scale": true
+  },
+  {
+    "id": "hysteresis_u2_d1_c60__guard",
+    "policy": {
+      "cooldown_seconds": 60,
+      "down_threshold": 1,
+      "min_devices": 0,
+      "name": "hysteresis",
+      "up_threshold": 2
+    },
+    "reservation": true,
+    "scale": true
+  },
+  {
+    "id": "hysteresis_u4_d0_c15__guard",
+    "policy": {
+      "cooldown_seconds": 15,
+      "down_threshold": 0,
+      "min_devices": 0,
+      "name": "hysteresis",
+      "up_threshold": 4
+    },
+    "reservation": true,
+    "scale": true
+  },
+  {
+    "id": "hysteresis_u4_d0_c60__guard",
+    "policy": {
+      "cooldown_seconds": 60,
+      "down_threshold": 0,
+      "min_devices": 0,
+      "name": "hysteresis",
+      "up_threshold": 4
+    },
+    "reservation": true,
+    "scale": true
+  },
+  {
+    "id": "hysteresis_u4_d1_c15__guard",
+    "policy": {
+      "cooldown_seconds": 15,
+      "down_threshold": 1,
+      "min_devices": 0,
+      "name": "hysteresis",
+      "up_threshold": 4
+    },
+    "reservation": true,
+    "scale": true
+  },
+  {
+    "id": "hysteresis_u4_d1_c60__guard",
+    "policy": {
+      "cooldown_seconds": 60,
+      "down_threshold": 1,
+      "min_devices": 0,
+      "name": "hysteresis",
+      "up_threshold": 4
+    },
+    "reservation": true,
+    "scale": true
+  },
+  {
+    "id": "hysteresis_u8_d0_c15__guard",
+    "policy": {
+      "cooldown_seconds": 15,
+      "down_threshold": 0,
+      "min_devices": 0,
+      "name": "hysteresis",
+      "up_threshold": 8
+    },
+    "reservation": true,
+    "scale": true
+  },
+  {
+    "id": "hysteresis_u8_d0_c60__guard",
+    "policy": {
+      "cooldown_seconds": 60,
+      "down_threshold": 0,
+      "min_devices": 0,
+      "name": "hysteresis",
+      "up_threshold": 8
+    },
+    "reservation": true,
+    "scale": true
+  },
+  {
+    "id": "hysteresis_u8_d1_c15__guard",
+    "policy": {
+      "cooldown_seconds": 15,
+      "down_threshold": 1,
+      "min_devices": 0,
+      "name": "hysteresis",
+      "up_threshold": 8
+    },
+    "reservation": true,
+    "scale": true
+  },
+  {
+    "id": "hysteresis_u8_d1_c60__guard",
+    "policy": {
+      "cooldown_seconds": 60,
+      "down_threshold": 1,
+      "min_devices": 0,
+      "name": "hysteresis",
+      "up_threshold": 8
+    },
+    "reservation": true,
+    "scale": true
+  }
+]

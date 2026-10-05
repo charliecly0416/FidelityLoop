@@ -1,0 +1,405 @@
+{
+  "schema": "maxopt-v7-e2-paper-evidence-v1",
+  "archive_sha256": "079e2b7e146b1706c2500ac9a3c4a5ff0c4310885cc013907e9b86c754399aa3",
+  "handoff_files": {
+    "CONTINUOUS_32_RESULTS.json": {
+      "sha256": "51e3055e5493cab80bd404ac220bb291a0c10372ceba03ea8eeb249de8dcde31",
+      "bytes": 77597
+    },
+    "RESULTS_32.csv": {
+      "sha256": "dacc8b2572751c674adf182e1b4299a1dbf18b57a66d16cbeee0b96b3b8b6a41",
+      "bytes": 14238
+    },
+    "PACKAGE_MANIFEST.json": {
+      "sha256": "80b71e6e45a768ef53412bd4383d2147d4a8228206c9ebec07835b42a90d787f",
+      "bytes": 1062770
+    },
+    "E2_32_EXECUTION_AND_RESULTS_ZH.md": {
+      "sha256": "3a00d81ef8ab6caafd1062738642ce35b2cb8ca71c7ebf1bbea35f97a21e9372",
+      "bytes": 4819
+    },
+    "archive": {
+      "path": "docs/maxopt_v7_e2_launch_20261003/E2_CONTINUOUS_32_CPU_HANDOFF_20261004.zip",
+      "sha256": "079e2b7e146b1706c2500ac9a3c4a5ff0c4310885cc013907e9b86c754399aa3",
+      "bytes": 220483227
+    }
+  },
+  "actual_summary": [
+    {
+      "policy_id": "all2",
+      "window_id": "bridge_locked_test_recovery_v1",
+      "n": 1,
+      "p1plus": 1,
+      "cost_mean": 4.2,
+      "offline_on_time_mean": 120,
+      "offline_late_mean": 0,
+      "offline_unfinished_mean": 0,
+      "online_on_time_mean": 358
+    },
+    {
+      "policy_id": "all2",
+      "window_id": "bridge_locked_test_steady_v1",
+      "n": 1,
+      "p1plus": 1,
+      "cost_mean": 4.2,
+      "offline_on_time_mean": 120,
+      "offline_late_mean": 0,
+      "offline_unfinished_mean": 0,
+      "online_on_time_mean": 944
+    },
+    {
+      "policy_id": "ppo_C_s101",
+      "window_id": "bridge_locked_test_recovery_v1",
+      "n": 3,
+      "p1plus": 3,
+      "cost_mean": 2.3573572799566667,
+      "offline_on_time_mean": 120,
+      "offline_late_mean": 0,
+      "offline_unfinished_mean": 0,
+      "online_on_time_mean": 358
+    },
+    {
+      "policy_id": "ppo_C_s101",
+      "window_id": "bridge_locked_test_steady_v1",
+      "n": 3,
+      "p1plus": 3,
+      "cost_mean": 2.449013140346,
+      "offline_on_time_mean": 120,
+      "offline_late_mean": 0,
+      "offline_unfinished_mean": 0,
+      "online_on_time_mean": 944
+    },
+    {
+      "policy_id": "ppo_C30_r2",
+      "window_id": "bridge_locked_test_recovery_v1",
+      "n": 3,
+      "p1plus": 3,
+      "cost_mean": 2.0734287049016666,
+      "offline_on_time_mean": 120,
+      "offline_late_mean": 0,
+      "offline_unfinished_mean": 0,
+      "online_on_time_mean": 358
+    },
+    {
+      "policy_id": "ppo_C30_r2",
+      "window_id": "bridge_locked_test_steady_v1",
+      "n": 3,
+      "p1plus": 3,
+      "cost_mean": 2.084320232814667,
+      "offline_on_time_mean": 120,
+      "offline_late_mean": 0,
+      "offline_unfinished_mean": 0,
+      "online_on_time_mean": 944
+    },
+    {
+      "policy_id": "ppo_C30_raw",
+      "window_id": "bridge_locked_test_recovery_v1",
+      "n": 3,
+      "p1plus": 3,
+      "cost_mean": 2.051086174196,
+      "offline_on_time_mean": 120,
+      "offline_late_mean": 0,
+      "offline_unfinished_mean": 0,
+      "online_on_time_mean": 358
+    },
+    {
+      "policy_id": "ppo_C30_raw",
+      "window_id": "bridge_locked_test_steady_v1",
+      "n": 3,
+      "p1plus": 3,
+      "cost_mean": 2.102776158575,
+      "offline_on_time_mean": 120,
+      "offline_late_mean": 0,
+      "offline_unfinished_mean": 0,
+      "online_on_time_mean": 944
+    },
+    {
+      "policy_id": "ppo_C30_s103",
+      "window_id": "bridge_locked_test_recovery_v1",
+      "n": 3,
+      "p1plus": 0,
+      "cost_mean": 1.8988409723343334,
+      "offline_on_time_mean": 109.66666666666667,
+      "offline_late_mean": 10.333333333333334,
+      "offline_unfinished_mean": 0,
+      "online_on_time_mean": 358
+    },
+    {
+      "policy_id": "ppo_C30_s103",
+      "window_id": "bridge_locked_test_steady_v1",
+      "n": 3,
+      "p1plus": 0,
+      "cost_mean": 2.090397340665333,
+      "offline_on_time_mean": 108.66666666666667,
+      "offline_late_mean": 11.333333333333334,
+      "offline_unfinished_mean": 0,
+      "online_on_time_mean": 944
+    },
+    {
+      "policy_id": "ppo_C_r2",
+      "window_id": "bridge_locked_test_recovery_v1",
+      "n": 3,
+      "p1plus": 0,
+      "cost_mean": 2.7295514719716665,
+      "offline_on_time_mean": 4,
+      "offline_late_mean": 34.666666666666664,
+      "offline_unfinished_mean": 81.33333333333333,
+      "online_on_time_mean": 358
+    },
+    {
+      "policy_id": "ppo_C_r2",
+      "window_id": "bridge_locked_test_steady_v1",
+      "n": 3,
+      "p1plus": 0,
+      "cost_mean": 2.950031925466,
+      "offline_on_time_mean": 7,
+      "offline_late_mean": 33.333333333333336,
+      "offline_unfinished_mean": 79.66666666666667,
+      "online_on_time_mean": 944
+    }
+  ],
+  "prediction_summary": [
+    {
+      "file": "C30__all2__bridge_locked_test_recovery_v1.json.gz",
+      "policy_id": "all2",
+      "model": "C30",
+      "window_id": "bridge_locked_test_recovery_v1",
+      "feasible": true,
+      "cost": 4.2,
+      "offline_on_time": 120,
+      "online_on_time": 358
+    },
+    {
+      "file": "C30__all2__bridge_locked_test_steady_v1.json.gz",
+      "policy_id": "all2",
+      "model": "C30",
+      "window_id": "bridge_locked_test_steady_v1",
+      "feasible": true,
+      "cost": 4.2,
+      "offline_on_time": 120,
+      "online_on_time": 944
+    },
+    {
+      "file": "C30__ppo_C30_r2__bridge_locked_test_recovery_v1.json.gz",
+      "policy_id": "ppo_C30_r2",
+      "model": "C30",
+      "window_id": "bridge_locked_test_recovery_v1",
+      "feasible": true,
+      "cost": 1.4308854850277226,
+      "offline_on_time": 120,
+      "online_on_time": 358
+    },
+    {
+      "file": "C30__ppo_C30_r2__bridge_locked_test_steady_v1.json.gz",
+      "policy_id": "ppo_C30_r2",
+      "model": "C30",
+      "window_id": "bridge_locked_test_steady_v1",
+      "feasible": true,
+      "cost": 1.6412189152732894,
+      "offline_on_time": 120,
+      "online_on_time": 944
+    },
+    {
+      "file": "C30__ppo_C30_s103__bridge_locked_test_recovery_v1.json.gz",
+      "policy_id": "ppo_C30_s103",
+      "model": "C30",
+      "window_id": "bridge_locked_test_recovery_v1",
+      "feasible": true,
+      "cost": 1.7967252028520682,
+      "offline_on_time": 120,
+      "online_on_time": 358
+    },
+    {
+      "file": "C30__ppo_C30_s103__bridge_locked_test_steady_v1.json.gz",
+      "policy_id": "ppo_C30_s103",
+      "model": "C30",
+      "window_id": "bridge_locked_test_steady_v1",
+      "feasible": true,
+      "cost": 1.8199969871463277,
+      "offline_on_time": 120,
+      "online_on_time": 944
+    },
+    {
+      "file": "C30__ppo_C30_selected__bridge_locked_test_recovery_v1.json.gz",
+      "policy_id": "ppo_C30_selected",
+      "model": "C30",
+      "window_id": "bridge_locked_test_recovery_v1",
+      "feasible": true,
+      "cost": 1.990010583870755,
+      "offline_on_time": 120,
+      "online_on_time": 358
+    },
+    {
+      "file": "C30__ppo_C30_selected__bridge_locked_test_steady_v1.json.gz",
+      "policy_id": "ppo_C30_selected",
+      "model": "C30",
+      "window_id": "bridge_locked_test_steady_v1",
+      "feasible": true,
+      "cost": 1.6362672326737802,
+      "offline_on_time": 120,
+      "online_on_time": 944
+    },
+    {
+      "file": "C30__ppo_C_r2__bridge_locked_test_recovery_v1.json.gz",
+      "policy_id": "ppo_C_r2",
+      "model": "C30",
+      "window_id": "bridge_locked_test_recovery_v1",
+      "feasible": true,
+      "cost": 1.4054053954448584,
+      "offline_on_time": 120,
+      "online_on_time": 358
+    },
+    {
+      "file": "C30__ppo_C_r2__bridge_locked_test_steady_v1.json.gz",
+      "policy_id": "ppo_C_r2",
+      "model": "C30",
+      "window_id": "bridge_locked_test_steady_v1",
+      "feasible": true,
+      "cost": 1.632129868939785,
+      "offline_on_time": 120,
+      "online_on_time": 944
+    },
+    {
+      "file": "C30__ppo_C_s101__bridge_locked_test_recovery_v1.json.gz",
+      "policy_id": "ppo_C_s101",
+      "model": "C30",
+      "window_id": "bridge_locked_test_recovery_v1",
+      "feasible": true,
+      "cost": 2.1695994000031797,
+      "offline_on_time": 120,
+      "online_on_time": 358
+    },
+    {
+      "file": "C30__ppo_C_s101__bridge_locked_test_steady_v1.json.gz",
+      "policy_id": "ppo_C_s101",
+      "model": "C30",
+      "window_id": "bridge_locked_test_steady_v1",
+      "feasible": true,
+      "cost": 2.2966062770085913,
+      "offline_on_time": 120,
+      "online_on_time": 944
+    },
+    {
+      "file": "C__all2__bridge_locked_test_recovery_v1.json.gz",
+      "policy_id": "all2",
+      "model": "C",
+      "window_id": "bridge_locked_test_recovery_v1",
+      "feasible": true,
+      "cost": 4.2,
+      "offline_on_time": 120,
+      "online_on_time": 358
+    },
+    {
+      "file": "C__all2__bridge_locked_test_steady_v1.json.gz",
+      "policy_id": "all2",
+      "model": "C",
+      "window_id": "bridge_locked_test_steady_v1",
+      "feasible": true,
+      "cost": 4.2,
+      "offline_on_time": 120,
+      "online_on_time": 944
+    },
+    {
+      "file": "C__ppo_C30_r2__bridge_locked_test_recovery_v1.json.gz",
+      "policy_id": "ppo_C30_r2",
+      "model": "C",
+      "window_id": "bridge_locked_test_recovery_v1",
+      "feasible": true,
+      "cost": 2.13117746001094,
+      "offline_on_time": 120,
+      "online_on_time": 358
+    },
+    {
+      "file": "C__ppo_C30_r2__bridge_locked_test_steady_v1.json.gz",
+      "policy_id": "ppo_C30_r2",
+      "model": "C",
+      "window_id": "bridge_locked_test_steady_v1",
+      "feasible": true,
+      "cost": 2.157517863740099,
+      "offline_on_time": 120,
+      "online_on_time": 944
+    },
+    {
+      "file": "C__ppo_C30_s103__bridge_locked_test_recovery_v1.json.gz",
+      "policy_id": "ppo_C30_s103",
+      "model": "C",
+      "window_id": "bridge_locked_test_recovery_v1",
+      "feasible": true,
+      "cost": 1.8125316268604004,
+      "offline_on_time": 116,
+      "online_on_time": 358
+    },
+    {
+      "file": "C__ppo_C30_s103__bridge_locked_test_steady_v1.json.gz",
+      "policy_id": "ppo_C30_s103",
+      "model": "C",
+      "window_id": "bridge_locked_test_steady_v1",
+      "feasible": false,
+      "cost": 2.116908038737342,
+      "offline_on_time": 111,
+      "online_on_time": 944
+    },
+    {
+      "file": "C__ppo_C30_selected__bridge_locked_test_recovery_v1.json.gz",
+      "policy_id": "ppo_C30_selected",
+      "model": "C",
+      "window_id": "bridge_locked_test_recovery_v1",
+      "feasible": true,
+      "cost": 2.13117746001094,
+      "offline_on_time": 120,
+      "online_on_time": 358
+    },
+    {
+      "file": "C__ppo_C30_selected__bridge_locked_test_steady_v1.json.gz",
+      "policy_id": "ppo_C30_selected",
+      "model": "C",
+      "window_id": "bridge_locked_test_steady_v1",
+      "feasible": true,
+      "cost": 2.1565130170153353,
+      "offline_on_time": 120,
+      "online_on_time": 944
+    },
+    {
+      "file": "C__ppo_C_r2__bridge_locked_test_recovery_v1.json.gz",
+      "policy_id": "ppo_C_r2",
+      "model": "C",
+      "window_id": "bridge_locked_test_recovery_v1",
+      "feasible": false,
+      "cost": 2.699404017023638,
+      "offline_on_time": 4,
+      "online_on_time": 358
+    },
+    {
+      "file": "C__ppo_C_r2__bridge_locked_test_steady_v1.json.gz",
+      "policy_id": "ppo_C_r2",
+      "model": "C",
+      "window_id": "bridge_locked_test_steady_v1",
+      "feasible": false,
+      "cost": 3.027044320308403,
+      "offline_on_time": 4,
+      "online_on_time": 944
+    },
+    {
+      "file": "C__ppo_C_s101__bridge_locked_test_recovery_v1.json.gz",
+      "policy_id": "ppo_C_s101",
+      "model": "C",
+      "window_id": "bridge_locked_test_recovery_v1",
+      "feasible": true,
+      "cost": 2.14505156924819,
+      "offline_on_time": 120,
+      "online_on_time": 358
+    },
+    {
+      "file": "C__ppo_C_s101__bridge_locked_test_steady_v1.json.gz",
+      "policy_id": "ppo_C_s101",
+      "model": "C",
+      "window_id": "bridge_locked_test_steady_v1",
+      "feasible": true,
+      "cost": 2.2972383317044947,
+      "offline_on_time": 120,
+      "online_on_time": 944
+    }
+  ],
+  "scope": "Aggregated evidence only; raw execution remains in immutable handoff archive.",
+  "caveat": "scenario_USD_not_real_bill; no API quality or provider billing measured."
+}

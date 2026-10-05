@@ -1,0 +1,206 @@
+{
+  "schema": "maxopt-bridge-contract-v1",
+  "version": 1,
+  "status": "DRAFT_AWAITING_S01_INDEPENDENT_REVIEW",
+  "date": "2026-09-30",
+  "baseline_commit": "d55cb94d01dd7dcd7affe1ebcaf518019e533aa3",
+  "authorization": "Execute authorized CPU preparation and bounded conditional PPO work, stop at first necessary GPU migration; no local GPU execution or publication",
+  "route": "F4",
+  "questions": {
+    "primary": "Do lifecycle prediction changes alter candidate feasibility assessment and the deployment consequences of the fixed historical selection?",
+    "guard": "Whole-guard comparisons at fixed threshold; threshold comparisons at fixed guard; preserve historical tie sensitivity",
+    "conditional_PPO": "Same algorithm, mixed workload, paired seeds, only training startup endpoint differs; no requirement to beat rules"
+  },
+  "f4_members": [
+    {
+      "id": "hysteresis_u8_d0_c60",
+      "policy": {
+        "cooldown_seconds": 60,
+        "down_threshold": 0,
+        "min_devices": 0,
+        "name": "hysteresis",
+        "up_threshold": 8
+      },
+      "reservation": false,
+      "scale": false,
+      "guard_model": "E"
+    },
+    {
+      "id": "hysteresis_u8_d0_c60__guard",
+      "policy": {
+        "cooldown_seconds": 60,
+        "down_threshold": 0,
+        "min_devices": 0,
+        "name": "hysteresis",
+        "up_threshold": 8
+      },
+      "reservation": true,
+      "scale": true,
+      "guard_model": "E"
+    },
+    {
+      "id": "hysteresis_u8_d1_c60",
+      "policy": {
+        "cooldown_seconds": 60,
+        "down_threshold": 1,
+        "min_devices": 0,
+        "name": "hysteresis",
+        "up_threshold": 8
+      },
+      "reservation": false,
+      "scale": false,
+      "guard_model": "E"
+    },
+    {
+      "id": "hysteresis_u8_d1_c60__guard",
+      "policy": {
+        "cooldown_seconds": 60,
+        "down_threshold": 1,
+        "min_devices": 0,
+        "name": "hysteresis",
+        "up_threshold": 8
+      },
+      "reservation": true,
+      "scale": true,
+      "guard_model": "E"
+    }
+  ],
+  "capacity_policy": {
+    "id": "all2",
+    "policy": {
+      "name": "all2"
+    },
+    "scale": false,
+    "reservation": false
+  },
+  "prediction_models": [
+    "C",
+    "C30"
+  ],
+  "guard_model": "E",
+  "allowed_prediction_difference": [
+    "startup_seconds"
+  ],
+  "guard_service_equality_verified_for_C_C30_E": true,
+  "initial_state": "two active ready instances, empty queues; target state 2; non-preemptive drain",
+  "timing": {
+    "window_seconds": 1800,
+    "drain_seconds": 300,
+    "decision_seconds": 1,
+    "cooldown_seconds": 60
+  },
+  "feasibility": {
+    "primary": "P1plus",
+    "P1plus": "every online and offline arrival completes by its own deadline; no unfinished; online>0 and offline=120",
+    "historical_P1": "online on_time>=0.99*arrivals; offline on_time=120 and arrivals=120; no unfinished",
+    "legacy_summary_feasible": "retain unchanged but never substitute its 95% offline gate for study P1/P1plus"
+  },
+  "costs": {
+    "source": "inputs/simulator_contract.json accounting",
+    "units": "scenario_USD, not a real bill",
+    "components": [
+      "occupied_GPU",
+      "startup",
+      "shutdown",
+      "synthetic_API",
+      "offline_deadline_miss"
+    ],
+    "operating_and_penalty_reported_separately": true,
+    "failed_tasks_never_removed": true
+  },
+  "data": {
+    "development": "six known historical C2 windows: three train, three validation",
+    "final": "two newly generated windows only after current GPU preflight disposition and final policy freeze; no generation in this initial CPU phase",
+    "test_roles": [
+      "recovery",
+      "steady"
+    ],
+    "generation_order": [
+      "recovery",
+      "steady"
+    ],
+    "candidate_selection": "deterministic source-arrival criteria and SHA order; no policy-outcome filtering",
+    "positive_results_required": false
+  },
+  "matrix": {
+    "route_label": "F4_not_original_AplusB",
+    "windows": 2,
+    "repeats_per_policy_window": 3,
+    "comparisons": 24,
+    "capacity_checks": 2,
+    "total_runs": 26,
+    "conditional_with_raw_PPO": {
+      "route_label": "F4_plus_raw_PPO_not_original_AplusBplusG",
+      "comparisons": 36,
+      "capacity_checks": 2,
+      "total_runs": 38
+    },
+    "PPO_G_included": false,
+    "planned_and_executed_members_kept_separately": true
+  },
+  "environment": {
+    "current_GPU_match_status": "NEEDS_GPU_DEVELOPMENT_PREFLIGHT",
+    "required_before_final_training_or_test_generation": true,
+    "first_GPU_task": "development-only runtime and launch-to-ready preflight",
+    "startup_reference_seconds": 30,
+    "startup_median_tolerance_seconds": 6,
+    "cycles": 6,
+    "cycles_per_device": 3,
+    "mismatch": "HOLD_ENV_MISMATCH before final inputs; no automatic budget reset; documented A historical-transfer or new development contract only",
+    "status_basis": "Recent E1 v3 setup ready and ready_during_stopping do not measure ordinary window launch-to-ready; current endpoint has not yet been measured, not an observed mismatch or PPO failure.",
+    "runtime_lineage": "E1 v3 lifecycle-corrected physical runtime; exact source closure and SHA must be locked and independently reviewed in the development preflight package before GPU execution."
+  },
+  "PPO": {
+    "status": "conditional_readiness_assessment_only_until_S04_gate",
+    "training_guard": false,
+    "pure_online_training": false,
+    "pilot_seeds": [
+      0,
+      1,
+      2
+    ],
+    "formal_seeds": [
+      101,
+      102,
+      103,
+      104,
+      105
+    ],
+    "pilot_steps_per_run_cap": 42000,
+    "formal_steps_per_run_cap": 210000,
+    "pilot_wall_hours_cap": 6,
+    "formal_wall_hours_cap": 24,
+    "device": "cpu",
+    "selection_evaluator": "C30 under shared contract, guard off",
+    "selection_gate": "P1plus in every validation window",
+    "selection_order": [
+      "equal_window_mean_total_cost",
+      "checkpoint_index",
+      "seed_id"
+    ],
+    "any_group_without_eligible_checkpoint": "both PPO physical arms NOT_RUN_TRAINING_GATE; F4 may continue",
+    "no_test_feedback_selection": true
+  },
+  "stop_rules": {
+    "GPU": "do not run CUDA workers or GPU probes on this host; package the first required preflight then stop",
+    "scientific_failures": "preserve; never retry to improve outcome",
+    "technical_retries_per_cell": 1,
+    "technical_retries_study_total": 3,
+    "capacity_failure": "NOT_RUN_GATE_STOP; no window replacement",
+    "paper": "frozen sources/PDF/materials untouched before scientific evidence",
+    "public_actions": "no push, release, external messages or Claude package"
+  },
+  "budget": {
+    "F4_preparation_workday_cap": 2,
+    "PPO_adapter_workday_cap": 2,
+    "development_replay_cells": 48,
+    "development_replay_wall_hours_cap": 1,
+    "development_compressed_output_GiB_cap": 2,
+    "GPU_reservation_hours_planning_only": 26
+  },
+  "priority_documents": [
+    "current user execution request",
+    "FALLBACK_VALUE_AND_SCHEDULE_ZH.md",
+    "EXECUTION_PLAN_ZH.md"
+  ]
+}

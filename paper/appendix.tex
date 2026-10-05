@@ -1,0 +1,210 @@
+\appendix
+\section{Reproduction and claim--evidence map}
+The artifact provides a CPU-only verifier and table generator. From the repository
+root, run \path{scripts/maxopt_v3_closeout/reverify.py} with Python to rebuild
+the 36 independent acceptance reports; then run
+\path{scripts/maxopt_v3_closeout/analyze.py} and the closeout test file with pytest.
+The verifier writes outside the immutable physical run directories. The original
+archive lacks root-level convenience material, including the original checksum
+sidecar; per-run source and environment snapshots support the independent replay.
+We do not reconstruct a sidecar and claim it as original evidence.
+
+\begin{itemize}[leftmargin=*]
+\item Full-capacity feasibility: nine all2 reports and G-F in \path{decisions.json}.
+\item Model accuracy: \path{prediction_groups.csv}, \path{common_support.csv},
+      and \path{route_confusion.csv}; M1, M1b, and M2 in \path{decisions.json}.
+\item H's negative result: 15 records in \path{misses.csv}; guard risk-active
+      ticks and IDs in \path{guard_events.csv}.
+\item Guard feasibility and cost: nine guard runs in \path{run_metrics.csv},
+      with repeat-block comparisons in \path{paired_costs.csv}.
+\item Production quality, physical energy, and provider billing: unsupported
+      by this dataset and excluded from the claims.
+\end{itemize}
+
+\subsection{Per-repeat latency record}
+Table~\ref{tab:tail} preserves all three online tail statistics for every formal
+run, from the same \texttt{run\_metrics.csv} records used in the main-text summary.
+
+\begin{table}[h]
+\centering
+\fontsize{8.5}{10}\selectfont
+\caption{Per-repeat online p95, p99, and maximum latency in seconds.}
+\label{tab:tail}
+\setlength{\tabcolsep}{2pt}
+\par\vspace{4pt}
+\begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}lllrrr@{}}
+\toprule
+Policy & window & repeat & p95 & p99 & max\\
+\midrule
+\input{generated/latency_all_rows.tex}
+\end{tabular*}
+\end{table}
+
+\subsection{Evidence provenance and scope}
+The workload table is generated from \texttt{workload\_manifest.json}, whose source chain
+records the 1,404,294-row BurstGPT-derived input, the parent manifest, the forward
+pool selection, and the fixed thinning threshold. The selected windows have exact
+prompt overlap counts of 60, 34, and 30 with their old parent windows in
+steady, recovery, and burst-offline, respectively; this is disclosed as an
+identity limitation rather than treated as session independence. The source has
+no session field, and the offline stream is fixed synthetic pressure.
+
+The price table is a revaluation of the same event streams over 27 price cells;
+it introduces no new rollout or physical run. The guard table counts recorded
+risk-active ticks, distinguishing target raises from ticks that merely maintain a
+latched reservation. Two operator-aborted attempts remain in the raw history and
+are excluded from the 36 formal runs; the 15 H recovery misses remain in the
+formal evidence and are not replaced by guarded outcomes.
+
+\subsection{Bridge campaign and guard audit}
+The separate Bridge campaign contains 38 locked cells: an all2 capacity anchor,
+two hysteresis down-threshold settings with and without the guard, and two frozen
+PPO policies, each evaluated on recovery and steady windows. It is historical
+evidence from a different runtime group, not an extension of the E2 pool. The
+compact policy summary is shown below before the raw-event audit.
+
+\begin{table}[t]
+\centering
+\small
+\caption{Separate 38-cell Bridge campaign. Entries show recovery/steady P1+
+counts, followed by operating cost in the same order.}
+\label{tab:bridgepolicy}
+\setlength{\tabcolsep}{2pt}
+\par\vspace{4pt}
+\begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}lrrrr@{}}
+\toprule
+Policy & P1+ R & P1+ S & occupied R/S & cost R/S\\
+\midrule
+\input{generated/bridge_rows.tex}
+\end{tabular*}
+\end{table}
+
+The Bridge guard audit joins each recorded risk ID to its request terminal and
+absolute deadline; it does not rerun the policy or form a counterfactual. Each
+cell below aggregates three guarded repeats. A risk-active run has at least one
+nonempty risk-ID set; target raises are averaged over risk-active runs; deadline
+misses count late or unfinished offline requests across the three repeats.
+
+\begin{table}[t]
+\centering
+\small
+\caption{Raw-event guard audit for the 12 guarded cells in the separate Bridge
+campaign.}
+\label{tab:bridgeguard}
+\setlength{\tabcolsep}{2pt}
+\par\vspace{4pt}
+\begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}llrrrr@{}}
+\toprule
+Down & window & risk runs & raises/run & misses/360 & $P1+$ pass\\
+\midrule
+\input{generated/bridge_guard_audit_rows.tex}
+\end{tabular*}
+\end{table}
+
+\section{V3 accounting and gate details}
+Completed requests have a completion terminal by the observation cutoff.
+On-time completion includes equality with the deadline; late completion is
+strictly after it. Unfinished requests lack a completed terminal at cutoff,
+and missing or censored requests are not removed from the arrival denominator.
+$G_F$ requires every all2 online and offline arrival on time. P1 requires
+120/120 offline arrivals on time, at least 99\% of online arrivals on time,
+and no unfinished request. P1+ additionally requires every online arrival
+on time. These definitions follow \path{scripts/maxopt_v3/acceptance.py};
+the extension's strict qualification uses the same timely/unfinished distinction.
+
+\subsection{Guard implementation map}
+The frozen \path{scripts/maxopt_v3/policy.py} implements the following
+causal projection and state update. The lookup is a conservative estimate, not a
+proved upper bound, and infeasible work is still reported rather than guaranteed.
+\begin{itemize}[leftmargin=*]
+\item \texttt{validate\_observation} (lines 20--47) accepts only released queues,
+device states, state ages, and running-job dispatch times. Future arrivals,
+true readiness, and completion times are not policy inputs.
+\item \texttt{duration/remaining/delay} (70--90) uses concurrency four. A running
+job receives its estimated residual if positive, otherwise a full-service
+fallback. Active/draining devices have zero added delay; an off device needs
+the frozen safe startup time. A starting device uses the remaining safe-start
+interval, then the maximum-start interval (both floored at one second), then
+restarts the positive safe-start estimate if both are exceeded. A stopping
+device adds remaining shutdown, or a full shutdown fallback, before startup.
+\item \texttt{projected} (92--126) chooses the $k$ devices with least lifecycle
+delay, with device-ID ties, and builds four slots each. Offline jobs are sorted
+by deadline and ID. Without reservation, current online backlog precedes offline
+work. With reservation and online backlog, offline jobs are serialized from the
+earliest running offline slot, or the earliest slot if none is running. Without
+online backlog they use all slots. No future arrivals are projected.
+\item \texttt{decide} (128--158) first obtains H's target $b$ and intersects
+latched risk IDs with pending offline IDs. It adds IDs with projected finish
+$F_j(\max(1,b),r)+m+1\geq d_j$, where $m=5$ s. With active risk and scaling
+enabled, it tests $k\in\{1,2\}$ using $F_j(k,r)+m\leq d_j$ for \emph{every}
+pending offline job. The target is $\max(b,\min k)$ when feasible; otherwise
+it is two and \texttt{infeasible} is set. A raise bypasses cooldown and updates
+H's target and last-change time. Safe re-estimation alone does not clear a
+latched ID; dispatch or removal from the pending queue does. Reservation is
+enabled only while risk is latched and the reservation option is enabled.
+\item \texttt{dispatch\_kind} (160--172) never preempts running work. With both
+queues nonempty and a reservation active, an already-running offline job leaves
+free slots online-first. Otherwise online takes the next slot only when its
+head request's estimated slack is at most $m$ and no larger than the offline
+head's slack. With no online queue, offline dispatch is unrestricted by the
+single-slot reservation; without an active reservation, online has priority.
+\end{itemize}
+
+\begin{figure*}[t]
+\centering
+\includegraphics[width=\linewidth]{figures/fig2_model_error.pdf}
+\caption{Occupied prediction error on fixed H. C30, E, and V have lower
+error than O on all three windows; the main-text table also includes C.}
+\end{figure*}
+\begin{figure*}[t]
+\centering
+\includegraphics[width=0.96\linewidth]{figures/fig3_completion_cost.pdf}
+\caption{Window cost and offline deadline misses, averaged over three repeats per
+arm/window. H averages five recovery misses (15 total); all other bars are zero.
+The guarded arm has no misses while reducing scenario cost relative to all1.}
+\end{figure*}
+\begin{table}[h]
+\centering
+\small
+\caption{Accepted V3 cost ledger. Costs are means over three repeats;
+the final two columns are savings percentages.}
+\label{tab:costledger}
+\setlength{\tabcolsep}{2pt}
+\par\vspace{4pt}
+\begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}lrrrr@{}}
+\toprule
+Window & all1 & H+guard & window & deployment\\
+\midrule
+\input{generated/cost_rows.tex}
+\end{tabular*}
+\end{table}
+
+\begin{table}[h]
+\centering
+\small
+\caption{Gate interpretation for the locked V3 route; M3 is diagnostic.}
+\label{tab:gates}
+\setlength{\tabcolsep}{2pt}
+\par\vspace{4pt}
+\begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}lll@{}}
+\toprule
+Gate & observed result & interpretation\\
+\midrule
+G-F & all2: 9/9 & full-capacity feasibility\\
+M1 & E: 87.50\% reduction & occupied-resource gate\\
+M1b & V: 34.24\% $L$ reduction & environment caveat\\
+M2 & O fail; C/C30/E/V pass & matched-service fidelity\\
+M3 & E: 26.77\% & diagnostic, no veto\\
+P1+ & H+guard: 9/9 & online/offline feasibility\\
+P2 & mean: 42.74\% & window-cost gate\\
+\bottomrule
+\end{tabular*}
+\end{table}
+
+\input{appendix_v4}
+\input{appendix_e1}
+\input{appendix_e2}
+\input{appendix_e2_policy}
+\input{appendix_v5_mechanism}
+
+\input{external_validity}

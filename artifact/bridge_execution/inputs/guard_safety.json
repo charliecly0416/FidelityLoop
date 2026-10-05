@@ -1,0 +1,76 @@
+{
+  "cache_identified": false,
+  "joint_cleanup_seconds": 2.531739046,
+  "sampling": "run-balanced median; p95 generation quantile is safety heuristic, not coverage guarantee",
+  "schema": "maxopt-v3-lifecycle-v1",
+  "setup_seconds": 46.909136023,
+  "shutdown": {
+    "exploratory_run_bootstrap95": [
+      1.916203757,
+      1.952798831
+    ],
+    "generation": {
+      "maximum": 2.341891779,
+      "median": 1.95085191,
+      "minimum": 1.855599467,
+      "n": 121,
+      "p90": 1.981431106,
+      "p95": 1.991882598
+    },
+    "run_count": 18,
+    "run_medians": [
+      1.896847933,
+      1.916203757,
+      1.923976575,
+      1.938252392,
+      1.900359218,
+      1.901832337,
+      1.936536385,
+      1.909369293,
+      1.897627014,
+      1.9549370769999999,
+      1.9589677185,
+      1.956302456,
+      1.946267195,
+      1.9621894955,
+      1.954021008,
+      1.935838758,
+      1.948223014,
+      1.952798831
+    ],
+    "value": 1.9373943885
+  },
+  "shutdown_min_seconds": 1.855599467,
+  "shutdown_seconds": 1.9373943885,
+  "startup": {
+    "exploratory_run_bootstrap95": [
+      25.113103109,
+      25.270873313
+    ],
+    "generation": {
+      "maximum": 68.553800524,
+      "median": 25.1941184935,
+      "minimum": 24.966682917,
+      "n": 94,
+      "p90": 42.2200271852,
+      "p95": 49.10920536269999
+    },
+    "run_count": 9,
+    "run_medians": [
+      26.5364110575,
+      25.10557416,
+      25.1549373215,
+      25.2006597595,
+      25.5065847525,
+      25.196195059,
+      25.270873313,
+      25.113103109,
+      25.153061434
+    ],
+    "value": 25.196195059
+  },
+  "startup_max_seconds": 68.553800524,
+  "startup_min_seconds": 24.966682917,
+  "startup_safe_seconds": 49.10920536269999,
+  "startup_seconds": 25.196195059
+}

@@ -1,0 +1,21 @@
+{
+  "schema": "fidelityloop-public-source-manifest-v1",
+  "files": {
+    "artifact/bridge_execution/inputs/models.json": {
+      "sha256": "2741b92460de865cf54f5d00c3a506d57eee026aada6a2d19914db249649fb65",
+      "role": "registered public protocol input"
+    },
+    "artifact/bridge_execution/inputs/candidates.json": {
+      "sha256": "4e66e8b9a0f0b90115b30c385d3cab175b141c5d3e5f70e3610db8298e5754cb",
+      "role": "registered public protocol input"
+    },
+    "artifact/bridge_execution/inputs/guard_safety.json": {
+      "sha256": "a95b0611065900f7a5cbda6fe24afba2f11c17ab2c9e7c955504da3f71517634",
+      "role": "registered public protocol input"
+    },
+    "artifact/bridge_execution/inputs/simulator_contract.json": {
+      "sha256": "1862df57e7109dc0242dccab0b7dc6531f319258605710a8ee4573ef2c97cfa3",
+      "role": "registered public protocol input"
+    }
+  }
+}

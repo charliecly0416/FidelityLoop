@@ -1,0 +1,20 @@
+Elastic LLM-serving policies depend on when capacity becomes available, not just
+on request service times. FidelityLoop evaluates these policies by connecting
+replay predictions to physical lifecycle execution and deadline-aware resource
+accounting. We ask whether a policy selected in replay still meets its deadlines
+when deployed. In a preregistered study of
+36 Qwen2.5-7B-Instruct runs on two A100 GPUs, service calibration improves
+matched-request timing while worsening occupied-resource prediction; trajectory
+analysis explains why aggregate error is insufficient for closed-loop evaluation.
+We then execute five frozen PPO checkpoints and an all2 capacity anchor in a
+continuous 32-run campaign on the same registered serving stack, using a
+separately re-provisioned runtime lock. Twenty runs meet every online and offline
+deadline: three checkpoints pass all six runs and two fail all six. Both training
+environments produce passing and failing checkpoints. The service-calibrated
+replay with the original startup endpoint (C) predicts feasibility correctly on
+32/32 runs, with 0.0804 scenario-USD cost MAE. Changing startup to 30 seconds
+(C30) improves the earlier resource metric but yields only 20/32 correct
+feasibility predictions and 0.4657 cost MAE. These frozen predictions show why
+policy evaluation must check deadline feasibility alongside resource accuracy.
+The artifact retains every attempt and negative result under the studied
+workloads, hardware, and synthetic-API cost assumptions.

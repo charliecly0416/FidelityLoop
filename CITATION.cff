@@ -1,0 +1,13 @@
+cff-version: 1.2.0
+title: "FidelityLoop: Closed-Loop Validation of Elastic LLM-Serving Policies"
+version: 0.1.0
+date-released: 2026-10-05
+type: software
+abstract: >-
+  A reproducibility artifact connecting replay predictions, scheduling policy
+  decisions, physical lifecycle events, and deadline-aware cost accounting.
+  The repository includes a bounded CPU facade and the compact ledger for the
+  reported physical campaign.
+license: MIT
+repository-code: "https://github.com/charliecly0416/FidelityLoop"
+url: "https://github.com/charliecly0416/FidelityLoop"

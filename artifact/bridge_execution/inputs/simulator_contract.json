@@ -1,0 +1,179 @@
+{
+  "schema": "maxopt-feasibility-design-contract-v1",
+  "identity": "maxopt-v2-feasibility-first-20260916",
+  "status": "registered_design_pending_GPU_environment_and_calibration",
+  "executable_simulator_config": false,
+  "parent_pilot_contract": {
+    "path": "docs/max_optimization_v2_20260915/N1_CONTRACT.json",
+    "sha256": "15e70cb37b99d1dc3529db0660ac2aaa34af30650a30495efbf615b4c0c3aff6",
+    "workload": "n1_public_v4",
+    "manifest_sha256": "4973bfe1738e4b5aac0eec0386571c7d97263e0e592f7ba4879bd2e25e60d4a9",
+    "immutable_historical_pilot": true,
+    "eligible_for_new_mixed_workload_gate": false
+  },
+  "review_basis": {
+    "proposal_sha256": "fa0ee423928061f342586055cf72c4d7d1ce4c9b562a69635428eda1d2bd27c5",
+    "claude_review_sha256": "9318eb29923a2db20763a6ed36abc104856e385967a438e247ee7fa14427e903",
+    "adopted_required_conditions": ["M1", "M2", "M3"],
+    "user_authorization": "execute reviewed adjustment until GPU migration boundary"
+  },
+  "scientific_scope": {
+    "primary": "real_local_prediction_error_and_SLO_attaining_hybrid_cost_comparison",
+    "all_open": "two_identical_TP1_local_instances_plus_fixed_synthetic_API_contract",
+    "claim_local_independent_capacity": false,
+    "claim_real_API_SLO": false,
+    "claim_reliability_guarantee": false,
+    "negative_results_preserved": true
+  },
+  "feasibility": {
+    "online_e2e_sla_seconds": 60,
+    "max_online_violation_rate": 0.01,
+    "min_offline_deadline_completion_rate": 0.95,
+    "denominator": "all_arrivals_in_each_window_including_censored_or_rejected",
+    "comparison": "each_window_and_each_physical_repeat_must_pass_both_SLOs",
+    "scope_disclosure": "Workload selection rules use development all-open feasibility; claims are limited to that range and tested on all frozen held-out windows."
+  },
+  "workload_revision": {
+    "window_seconds": 1800,
+    "drain_seconds": 300,
+    "regimes": ["steady", "recovery", "burst_offline"],
+    "splits": ["train", "validation", "locked_test"],
+    "offline": {
+      "all_regimes": true,
+      "arrival_start_seconds": 0,
+      "arrival_stop_exclusive_seconds": 1800,
+      "arrival_interval_seconds": 15,
+      "requests_per_window": 120,
+      "input_tokens": 256,
+      "output_tokens": 256,
+      "deadline_after_arrival_seconds": 300,
+      "minimum_on_time_requests_per_window": 114,
+      "maximum_not_on_time_requests_per_window": 6,
+      "synthetic_API_routing": false
+    },
+    "online_prompt_output_token_rules": "inherit_parent_pilot_until_explicitly_versioned; no outcome-driven token changes",
+    "max_capacity_matched_regenerations_from_parent": 1,
+    "max_preregistered_load_candidates_in_single_revision": 3,
+    "counter_scope": "includes_offline_expansion_and_all_arrival_scaling_or_sampling_changes_across_all_splits",
+    "freeze_candidates_before_any_new_candidate_performance": true,
+    "candidate_rule_requires_accepted_GPU_development_evidence": true,
+    "selection_uses": "train_and_validation_only; all-open constraints; never_dynamic_policy_wins",
+    "keep_all_candidates_and_failures": true,
+    "locked_test": "generate_once_from_selected_frozen_recipe_without_performance_screening; never_replace_failed_test_windows",
+    "stop_after_failed_single_revision": "stop_savings_axis_if_no_three_regime_development_set_passes; preserve_negative_result",
+    "byte_identical_reproduction": "not_new_scientific_revision; semantic_changes_consume_limit_and_cannot_reset_it"
+  },
+  "arrival_transformation_disclosure": {
+    "prefer_original_timestamps": true,
+    "method_and_candidate_values": null,
+    "reason_pending": "must_follow_GPU_capacity_measurements_and_be_frozen_before_candidate_runs",
+    "required_if_transformed": ["raw_to_derived_row_time_mapping", "new_workload_identity", "original_and_derived_burst_statistics"],
+    "bin_width_seconds": [1, 60],
+    "statistics": ["arrival_count", "mean_count_per_bin", "population_standard_deviation_divided_by_mean", "peak_count_divided_by_mean", "lag1_autocorrelation"],
+    "undefined_values": "null_with_reason_for_zero_mean_or_zero_variance; never_drop_empty_bins",
+    "comparison_horizon": "report_original_and_derived_durations_and_use_all_bins_in_each_declared_horizon"
+  },
+  "synthetic_api": {
+    "capacity": 8,
+    "latency_seconds": 5,
+    "route_online_after_wait_seconds": 10,
+    "offline_route": false,
+    "cost_on_accept": true,
+    "completion_requires_elapsed_delay": true,
+    "virtual_settlement_counts_as_completion": false
+  },
+  "accounting": {
+    "unit": "scenario_USD",
+    "gpu_second": 0.001,
+    "startup_event": 0.002,
+    "shutdown_event": 0.001,
+    "api_input_token": 0.000001,
+    "api_output_token": 0.000003,
+    "offline_deadline_miss": 0.01,
+    "occupied_states": ["starting", "active", "draining"],
+    "setup_costs": "record_separately_and_identically; not_free_total_deployment_cost",
+    "all1_initial_scale_down_cost": "charged_in_window_using_shared_actuator",
+    "report_operating_cost_and_penalties_separately": true,
+    "claims": "resource_occupation_and_scenario_cost; no_actual_bill_or_energy_savings_without_measurement"
+  },
+  "initial_state": {
+    "primary": "two_ready_instances_empty_queues",
+    "shared_by_all_policies": true,
+    "capacity_probe": "all2_ready",
+    "off_sensitivity": "all2_off_once_per_development_regime; separate_from_ranking",
+    "implementation_status": "pending_real_backend_contract; current_pilot_engine_still_starts_off"
+  },
+  "development_gate": {
+    "policy": "all2",
+    "main_resource_mode": "hybrid",
+    "critical_windows": 3,
+    "physical_repeats_per_window": 3,
+    "pass": "all_nine_runs_complete_with_both_SLOs_met_and_independently_verified_bindings",
+    "margins": {
+      "online_per_repeat": "0.01 - online_violation_rate",
+      "offline_per_repeat": "offline_deadline_completion_rate - 0.95",
+      "window_margin": "minimum_margin_over_all_three_repeats_for_each_metric",
+      "repeat_fluctuation": "max_rate_minus_min_rate_over_all_three_repeats_for_each_metric",
+      "near_boundary": "any_window_margin < 2 * corresponding_repeat_fluctuation OR any_window_margin == 0",
+      "negative_margin_or_missing_repeat": "not_passed; never_classified_as_passed_near_boundary"
+    },
+    "utilization": {
+      "device_occupied_fraction": "sum_starting_active_draining_seconds / (2 * observation_seconds)",
+      "service_busy_fraction": "sum_ready_device_seconds_with_at_least_one_in_service_request / sum_ready_device_seconds",
+      "zero_denominator": "null_with_reason",
+      "not_hardware_compute_utilization": true
+    },
+    "gate_evidence": ["input_contract_code_model_hashes", "GPU_UUID_backend_identity", "initial_state", "raw_request_completion_records", "each_repeat_SLO_counts", "margins_and_utilization", "ledger_and_review"],
+    "local_only_diagnostic": {
+      "policy": "all2",
+      "windows": 3,
+      "physical_repeats_per_window": 1,
+      "scope": "selected_development_candidate_only; attribution_not_main_gate",
+      "sink_events_required": 0,
+      "all_offload_permitted": false,
+      "not_hardware_feasibility_guarantee": true
+    }
+  },
+  "N4b": {
+    "requires": ["accepted_real_service_model", "accepted_new_workload", "accepted_hybrid_development_gate", "frozen_shared_initial_state_and_admission"],
+    "configurations_per_family_per_model": 12,
+    "families": ["hpa", "hysteresis"],
+    "fixed_comparators": ["all1", "all2"],
+    "selection": "SLO_feasibility_then_mean_scenario_cost_then_fixed_tie_break",
+    "no_feasible_dynamic_policy": "selected_dynamic_null; default_fixed_policy_framework_error_branch",
+    "diagnostic_candidate_cannot_be_promoted": true
+  },
+  "N5": {
+    "held_out_windows": 3,
+    "physical_repeats_per_policy_window": 3,
+    "dynamic_feasible": {"policies": 3, "runs": 27},
+    "dynamic_infeasible_but_all_open_gate_passes": {"policies": ["all1", "all2"], "runs": 18, "scope": "fixed_policy_framework_error_and_negative_dynamic_result"},
+    "all_open_gate_fails": "no_automatic_savings_matrix; negative_capacity_result_and_separately_scoped_framework_measurement",
+    "all_planned_test_cells_reported": true,
+    "failed_test_windows_cannot_be_replaced_or_relabelled_as_preregistered_overload": true,
+    "prediction_locked_before_real_observation": true
+  },
+  "planned_replay_budget": {
+    "selected_candidate_hybrid_gate_runs": 9,
+    "all_three_candidates_hybrid_gate_runs_upper_bound": 27,
+    "local_only_diagnostic_runs": 3,
+    "off_initial_state_sensitivity_runs": 3,
+    "fixed_branch_total_one_candidate": 33,
+    "dynamic_branch_total_one_candidate": 42,
+    "fixed_branch_total_three_candidates": 51,
+    "dynamic_branch_total_three_candidates": 60,
+    "excludes": ["environment_and_transport_canary", "real_inference_canary", "component_calibration", "technical_retries", "CPU_search"],
+    "resource_authorization": "planning_only; exact_argv_identity_and_resource_limits_require_GPU_profile_and_new_work_order"
+  },
+  "execution_state_at_registration": {
+    "capacity_matched_regenerations_used": 0,
+    "new_workload_generated": false,
+    "GPU_environment_accepted": false,
+    "real_backend_accepted": false,
+    "hardware_model_accepted": false,
+    "development_gate_accepted": false,
+    "N4b_selection_accepted": false,
+    "locked_test_performance_opened": false,
+    "only_current_executable_work_order": "N4_environment_and_transport_only"
+  }
+}

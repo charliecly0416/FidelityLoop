@@ -1,0 +1,20 @@
+{
+  "schema": "maxopt-bridge-metric-contract-v1",
+  "primary": "P1plus: positive online arrivals, exactly120 offline; all on-time; no unfinished",
+  "historical": "P1: online ontime>=99%, offline120/120, no unfinished",
+  "legacy_summary_feasible": "kept only for historical reproduction; never study acceptance",
+  "terminal_categories": [
+    "completed=on_time+late",
+    "arrivals=completed+unfinished",
+    "not_on_time=late+unfinished"
+  ],
+  "deadline_equality": "on_time iff completed_at<=deadline_s",
+  "observation_horizon_seconds": 2100,
+  "post_horizon_completion": "unfinished within observation; separately counted post_horizon_completions",
+  "missing_terminal_record": "data-integrity error, not silent omission or fabricated unfinished",
+  "costs": "scenario USD, not actual API invoice; operating and offline penalty separate; setup/cleanup outside main window separately disclosed",
+  "price_source_sha256": "1862df57e7109dc0242dccab0b7dc6531f319258605710a8ee4573ef2c97cfa3",
+  "api": "synthetic only; charge accepted requests including later failures; no offline API",
+  "selection_evaluator": "C30 raw, per-windowP1plus then equal-window mean total cost, checkpoint index, seed ID",
+  "aggregation": "retain repeat-level rows; equal weight across windows; never treat requests as independent training seeds"
+}
