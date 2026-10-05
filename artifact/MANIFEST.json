@@ -5,8 +5,8 @@
   "files": [
     {
       "path": ".gitignore",
-      "bytes": 149,
-      "sha256": "4f0af3a182aaead78fa3720347797790e816b7395ed28979d76054eb1f8e31d4"
+      "bytes": 228,
+      "sha256": "00a318f70ef9b721cf60d715df2eaf3fb358595f7b964be0a8a17522bfc923b2"
     },
     {
       "path": ".pytest_cache/.gitignore",
@@ -130,8 +130,8 @@
     },
     {
       "path": "evidence/E2_RESULTS_32.csv",
-      "bytes": 14238,
-      "sha256": "dacc8b2572751c674adf182e1b4299a1dbf18b57a66d16cbeee0b96b3b8b6a41"
+      "bytes": 14205,
+      "sha256": "f93a47d1b5a81793fc94c4bb1cf2e4b7310fe8fc2f7dab5d7038516a419377ad"
     },
     {
       "path": "evidence/E2_RESULTS_MANIFEST.json",
@@ -490,8 +490,8 @@
     },
     {
       "path": "src/fidelityloop/__init__.py",
-      "bytes": 0,
-      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      "bytes": 1,
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
     },
     {
       "path": "src/fidelityloop/bridge/__init__.py",
@@ -560,8 +560,8 @@
     },
     {
       "path": "src/fidelityloop/legacy/__init__.py",
-      "bytes": 0,
-      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      "bytes": 1,
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
     },
     {
       "path": "src/fidelityloop/legacy/maxopt_v2/__init__.py",
@@ -710,8 +710,8 @@
     },
     {
       "path": "src/fidelityloop/legacy/maxopt_v3/audit.py",
-      "bytes": 9847,
-      "sha256": "2c0b80dd9f89e46a33dcc486e5189a8902e02d97c88765086e7e7e7da66ed39a"
+      "bytes": 9846,
+      "sha256": "3054c2ca8afd1560302a97189e902f862acc0c3d1778fce936a78143ea7f0201"
     },
     {
       "path": "src/fidelityloop/legacy/maxopt_v3/calibrate.py",
@@ -755,8 +755,8 @@
     },
     {
       "path": "src/fidelityloop/legacy/maxopt_v3/physical_ledger.py",
-      "bytes": 18863,
-      "sha256": "d06d6f59c9da1e999804ed601b131b84908b613cebad48aee91461b8b1d3ab05"
+      "bytes": 18861,
+      "sha256": "52612eed73917f964076cd012932ddafdda8671bf02a934536792f676dcf9b7a"
     },
     {
       "path": "src/fidelityloop/legacy/maxopt_v3/policy.py",
