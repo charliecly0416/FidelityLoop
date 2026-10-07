@@ -1,13 +1,19 @@
 \appendix
 \section{Reproduction and claim--evidence map}
-The artifact provides a CPU-only verifier and table generator. From the repository
-root, run \path{scripts/maxopt_v3_closeout/reverify.py} with Python to rebuild
-the 36 independent acceptance reports; then run
-\path{scripts/maxopt_v3_closeout/analyze.py} and the closeout test file with pytest.
-The verifier writes outside the immutable physical run directories. The original
-archive lacks root-level convenience material, including the original checksum
-sidecar; per-run source and environment snapshots support the independent replay.
-We do not reconstruct a sidecar and claim it as original evidence.
+The source release includes synthetic interface checks, historical facade
+compatibility checks, and a standalone E1 accounting verifier.
+\path{REPRODUCING.md} gives the commands and expected outputs. In the E1 package,
+\texttt{python -B verify.py} checks the manifest and recomputes 169 resource/cost
+values from reduced records. Its ten tests run with
+\texttt{python -B -m unittest}; physical-run acceptance is inherited.
+
+The remaining \path{scripts/}, \path{docs/}, and \path{artifacts/} paths in this
+supplement identify the separately retained full experiment archive. Its
+\path{scripts/maxopt_v3_closeout/reverify.py} rebuilds the 36 acceptance reports,
+and \path{scripts/maxopt_v3_closeout/analyze.py} generates their tables; both
+require archived runs outside the compact source release. The original archive
+lacks its root checksum sidecar; per-run snapshots support independent replay
+without reconstructing that sidecar as original evidence.
 
 \begin{itemize}[leftmargin=*]
 \item Full-capacity feasibility: nine all2 reports and G-F in \path{decisions.json}.

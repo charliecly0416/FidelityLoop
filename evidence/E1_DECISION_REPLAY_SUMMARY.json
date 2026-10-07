@@ -1,0 +1,756 @@
+{
+  "schema": "maxopt-v4-r3-e2-recovery-v1",
+  "status": "PASS_COMPLETE_REAL_STATE_REPLAY_PENDING_REVIEW",
+  "runs": [
+    {
+      "run_id": "E1__smoke__B-HPA__a2",
+      "policy_id": "B-HPA",
+      "kind": "smoke",
+      "window_id": "locked_test_steady_v3",
+      "matched_ticks": 90,
+      "all_tick_full_replay_sha256": "084fbf65d766a8d02767b9ab0e4ddfe188fbe74cd296c0a7dae5a27dcac58127",
+      "queue_maximum": 23,
+      "layers": [
+        {
+          "layer": "empty",
+          "cadence": "update",
+          "eligible_tick_count": 0,
+          "selected_tick": null
+        },
+        {
+          "layer": "empty",
+          "cadence": "hold",
+          "eligible_tick_count": 0,
+          "selected_tick": null
+        },
+        {
+          "layer": "normal",
+          "cadence": "update",
+          "eligible_tick_count": 2,
+          "selected_tick": 0
+        },
+        {
+          "layer": "normal",
+          "cadence": "hold",
+          "eligible_tick_count": 86,
+          "selected_tick": 1
+        },
+        {
+          "layer": "peak",
+          "cadence": "update",
+          "eligible_tick_count": 0,
+          "selected_tick": null
+        },
+        {
+          "layer": "peak",
+          "cadence": "hold",
+          "eligible_tick_count": 2,
+          "selected_tick": 55
+        }
+      ],
+      "complete_recovery": true,
+      "source_relative_path": "attempts/E1__smoke__B-HPA__a2",
+      "source_sha256": {
+        "run_plan.json": "c270ea7cd8fd5e91a503e5aa8c671f4c1da57ddb569a3a15fd98b4d35d8ad9e3",
+        "expected_requests.json": "7fa28289e7416334ec4cc409dea367a380d54cdf06f7f7e917745b26a6c7dfcb",
+        "controller_events.jsonl": "3e78ccfacaf0278211525be9e6f07888fc0c7ff1875b6e6ac3a340348ff19a69"
+      },
+      "e1_analysis_sha256": "d999db0fa5868e273dd792948a111721e67337292d940017564e55d9efee4ef6",
+      "raw_scientific_gate": false
+    },
+    {
+      "run_id": "E1__smoke__hysteresis_u8_d0_c60__guard__a1",
+      "policy_id": "hysteresis_u8_d0_c60__guard",
+      "kind": "smoke",
+      "window_id": "locked_test_steady_v3",
+      "matched_ticks": 90,
+      "all_tick_full_replay_sha256": "cb330ec1b5ec75f05b45a70f895a849120204c60504a3350f91723c605429549",
+      "queue_maximum": 4,
+      "layers": [
+        {
+          "layer": "empty",
+          "cadence": "all",
+          "eligible_tick_count": 43,
+          "selected_tick": 2
+        },
+        {
+          "layer": "normal",
+          "cadence": "all",
+          "eligible_tick_count": 46,
+          "selected_tick": 0
+        },
+        {
+          "layer": "peak",
+          "cadence": "all",
+          "eligible_tick_count": 1,
+          "selected_tick": 55
+        }
+      ],
+      "complete_recovery": true,
+      "source_relative_path": "attempts/E1__smoke__hysteresis_u8_d0_c60__guard__a1",
+      "source_sha256": {
+        "run_plan.json": "19cb526bcd31c5aeff54580f8661c98a521119c0114c2dda8bdae5c92e9288d5",
+        "expected_requests.json": "7fa28289e7416334ec4cc409dea367a380d54cdf06f7f7e917745b26a6c7dfcb",
+        "controller_events.jsonl": "70f7b5a51a037aacfaa6c6c62da8bdbade8d64edb5f6683179744e931966080c"
+      },
+      "e1_analysis_sha256": "9a4cd8cc160df7c246e89cc459c82f60a2e2595f77c60734be2ff7ade1369dd9",
+      "raw_scientific_gate": true
+    },
+    {
+      "run_id": "E1__capacity__all2__locked_test_steady_v3__r0__a1",
+      "policy_id": "all2",
+      "kind": "capacity",
+      "window_id": "locked_test_steady_v3",
+      "matched_ticks": 2100,
+      "all_tick_full_replay_sha256": "f1e40176115d4ec1fe88a5ce93f5830163c1bfa17c6cc3ee54702cc6ef7ed94f",
+      "queue_maximum": 5,
+      "layers": [
+        {
+          "layer": "empty",
+          "cadence": "all",
+          "eligible_tick_count": 1041,
+          "selected_tick": 2
+        },
+        {
+          "layer": "normal",
+          "cadence": "all",
+          "eligible_tick_count": 1058,
+          "selected_tick": 0
+        },
+        {
+          "layer": "peak",
+          "cadence": "all",
+          "eligible_tick_count": 1,
+          "selected_tick": 138
+        }
+      ],
+      "complete_recovery": true,
+      "source_relative_path": "attempts/E1__capacity__all2__locked_test_steady_v3__r0__a1",
+      "source_sha256": {
+        "run_plan.json": "2a53f34904896f720277806229450762845f1fedb505f65e8f148f3765727b14",
+        "expected_requests.json": "bf5892fbbeadda48ae3f488fbad3f5439a099687e380fed4e8f497c0f31497fc",
+        "controller_events.jsonl": "5b77aa176792d668fd80748131bc5b54a0b7dba474fecbb78c3ecc2870a2e4c0"
+      },
+      "e1_analysis_sha256": "77c178395406c3e670d53f988beb5d1e19c3a8d0eda364d89a6a98b6aede37b3",
+      "raw_scientific_gate": true
+    },
+    {
+      "run_id": "E1__capacity__all2__locked_test_recovery_v3__r0__a1",
+      "policy_id": "all2",
+      "kind": "capacity",
+      "window_id": "locked_test_recovery_v3",
+      "matched_ticks": 2100,
+      "all_tick_full_replay_sha256": "b1a0de94860b5a524b11ac7a39fd3208f2889a247e227ac0eafb2f7a0a1a511d",
+      "queue_maximum": 3,
+      "layers": [
+        {
+          "layer": "empty",
+          "cadence": "all",
+          "eligible_tick_count": 1713,
+          "selected_tick": 2
+        },
+        {
+          "layer": "normal",
+          "cadence": "all",
+          "eligible_tick_count": 383,
+          "selected_tick": 0
+        },
+        {
+          "layer": "peak",
+          "cadence": "all",
+          "eligible_tick_count": 4,
+          "selected_tick": 150
+        }
+      ],
+      "complete_recovery": true,
+      "source_relative_path": "attempts/E1__capacity__all2__locked_test_recovery_v3__r0__a1",
+      "source_sha256": {
+        "run_plan.json": "8d21006e8d89d3762243817519016c707c78c860a042dda0076377da054ccd78",
+        "expected_requests.json": "7cc322cfd61eccbdabc9f0cafb1d3b9be230118ec16f82d3134f6155641342d9",
+        "controller_events.jsonl": "bed9fd74109ace4f20eeb76d042c22f99b1d0ff99c7affcc56ba508aa639f844"
+      },
+      "e1_analysis_sha256": "d1fb72d5dfbe4746c56b5b3102d885602aa6bea6ff679f3eb278fb72bca4c7de",
+      "raw_scientific_gate": true
+    },
+    {
+      "run_id": "E1__comparison__hysteresis_u8_d0_c60__guard__locked_test_steady_v3__r1__a1",
+      "policy_id": "hysteresis_u8_d0_c60__guard",
+      "kind": "comparison",
+      "window_id": "locked_test_steady_v3",
+      "matched_ticks": 2100,
+      "all_tick_full_replay_sha256": "1b969495d6cd51340f4a7069cf7b1c5102647957d3dcf16afcc38ff968fab153",
+      "queue_maximum": 29,
+      "layers": [
+        {
+          "layer": "empty",
+          "cadence": "all",
+          "eligible_tick_count": 462,
+          "selected_tick": 2
+        },
+        {
+          "layer": "normal",
+          "cadence": "all",
+          "eligible_tick_count": 1637,
+          "selected_tick": 0
+        },
+        {
+          "layer": "peak",
+          "cadence": "all",
+          "eligible_tick_count": 1,
+          "selected_tick": 190
+        }
+      ],
+      "complete_recovery": true,
+      "source_relative_path": "attempts/E1__comparison__hysteresis_u8_d0_c60__guard__locked_test_steady_v3__r1__a1",
+      "source_sha256": {
+        "run_plan.json": "94f6b69ea4cde005ec847f785748db3ca4860abfc974fc224990a515cfaf409c",
+        "expected_requests.json": "bf5892fbbeadda48ae3f488fbad3f5439a099687e380fed4e8f497c0f31497fc",
+        "controller_events.jsonl": "1f0f2f09e87f955e898de908ffb40df323ffe1e31bbab9286112b439af52e773"
+      },
+      "e1_analysis_sha256": "05acd16cf4552484c3030ebf78fd6826c05ed2de0caa4a8e0a5263af16b734cf",
+      "raw_scientific_gate": true
+    },
+    {
+      "run_id": "E1__comparison__B-HPA__locked_test_steady_v3__r1__a1",
+      "policy_id": "B-HPA",
+      "kind": "comparison",
+      "window_id": "locked_test_steady_v3",
+      "matched_ticks": 2100,
+      "all_tick_full_replay_sha256": "150aa6f4c36d459964954015340cfee02735c1bc6670706b93b2d1523816ac0b",
+      "queue_maximum": 31,
+      "layers": [
+        {
+          "layer": "empty",
+          "cadence": "update",
+          "eligible_tick_count": 5,
+          "selected_tick": 1800
+        },
+        {
+          "layer": "empty",
+          "cadence": "hold",
+          "eligible_tick_count": 999,
+          "selected_tick": 102
+        },
+        {
+          "layer": "normal",
+          "cadence": "update",
+          "eligible_tick_count": 30,
+          "selected_tick": 0
+        },
+        {
+          "layer": "normal",
+          "cadence": "hold",
+          "eligible_tick_count": 1065,
+          "selected_tick": 1
+        },
+        {
+          "layer": "peak",
+          "cadence": "update",
+          "eligible_tick_count": 0,
+          "selected_tick": null
+        },
+        {
+          "layer": "peak",
+          "cadence": "hold",
+          "eligible_tick_count": 1,
+          "selected_tick": 85
+        }
+      ],
+      "complete_recovery": true,
+      "source_relative_path": "attempts/E1__comparison__B-HPA__locked_test_steady_v3__r1__a1",
+      "source_sha256": {
+        "run_plan.json": "ecf86558f8b2003ea0f4164cac89f82d41ec912bd9f269c5701a5851c4d7be82",
+        "expected_requests.json": "bf5892fbbeadda48ae3f488fbad3f5439a099687e380fed4e8f497c0f31497fc",
+        "controller_events.jsonl": "134389c6e692421d860706c9982e3887802f99cf51daf8a8441296eb93ba39ac"
+      },
+      "e1_analysis_sha256": "ff874228c8bc8ece8890b327c9134db67d65a6b99c23f55bfa09e55eaa28bc41",
+      "raw_scientific_gate": true
+    },
+    {
+      "run_id": "E1__comparison__B-HPA__locked_test_recovery_v3__r1__a1",
+      "policy_id": "B-HPA",
+      "kind": "comparison",
+      "window_id": "locked_test_recovery_v3",
+      "matched_ticks": 2100,
+      "all_tick_full_replay_sha256": "2b1d33284d5bcad47b8c602480f7c1e460364e1781c77a77d2af5c7eebb82b24",
+      "queue_maximum": 14,
+      "layers": [
+        {
+          "layer": "empty",
+          "cadence": "update",
+          "eligible_tick_count": 5,
+          "selected_tick": 1800
+        },
+        {
+          "layer": "empty",
+          "cadence": "hold",
+          "eligible_tick_count": 1656,
+          "selected_tick": 106
+        },
+        {
+          "layer": "normal",
+          "cadence": "update",
+          "eligible_tick_count": 30,
+          "selected_tick": 0
+        },
+        {
+          "layer": "normal",
+          "cadence": "hold",
+          "eligible_tick_count": 406,
+          "selected_tick": 1
+        },
+        {
+          "layer": "peak",
+          "cadence": "update",
+          "eligible_tick_count": 0,
+          "selected_tick": null
+        },
+        {
+          "layer": "peak",
+          "cadence": "hold",
+          "eligible_tick_count": 3,
+          "selected_tick": 80
+        }
+      ],
+      "complete_recovery": true,
+      "source_relative_path": "attempts/E1__comparison__B-HPA__locked_test_recovery_v3__r1__a1",
+      "source_sha256": {
+        "run_plan.json": "4e41ec8164e2b7a72da125ac23c14ec3d03f9877e4f5ebac0a8f698ea923b13f",
+        "expected_requests.json": "7cc322cfd61eccbdabc9f0cafb1d3b9be230118ec16f82d3134f6155641342d9",
+        "controller_events.jsonl": "a6d316fed7808f1cb00420a93ed3900683a0a8ea64b4bd51153e1ac93cb17050"
+      },
+      "e1_analysis_sha256": "9cad2ccd7eedd39089878aa895322425ca789d6478db3eaae12dcd09c979275e",
+      "raw_scientific_gate": true
+    },
+    {
+      "run_id": "E1__comparison__hysteresis_u8_d0_c60__guard__locked_test_recovery_v3__r1__a1",
+      "policy_id": "hysteresis_u8_d0_c60__guard",
+      "kind": "comparison",
+      "window_id": "locked_test_recovery_v3",
+      "matched_ticks": 2100,
+      "all_tick_full_replay_sha256": "f3e1a1bd52d0adf13104cb1ff89a3c29e8ff01eb3790225c0ee6e0b32d1d8879",
+      "queue_maximum": 16,
+      "layers": [
+        {
+          "layer": "empty",
+          "cadence": "all",
+          "eligible_tick_count": 414,
+          "selected_tick": 2
+        },
+        {
+          "layer": "normal",
+          "cadence": "all",
+          "eligible_tick_count": 1679,
+          "selected_tick": 0
+        },
+        {
+          "layer": "peak",
+          "cadence": "all",
+          "eligible_tick_count": 7,
+          "selected_tick": 249
+        }
+      ],
+      "complete_recovery": true,
+      "source_relative_path": "attempts/E1__comparison__hysteresis_u8_d0_c60__guard__locked_test_recovery_v3__r1__a1",
+      "source_sha256": {
+        "run_plan.json": "efc8d3b94f14a518b676dadbaae5da373eedf5a13014a79317b92bd7922c1efa",
+        "expected_requests.json": "7cc322cfd61eccbdabc9f0cafb1d3b9be230118ec16f82d3134f6155641342d9",
+        "controller_events.jsonl": "105f2152d16a812206f89f4979d23ceb863b859b09725088918463a81868f51a"
+      },
+      "e1_analysis_sha256": "3918b0f0abc0aa6ac9d11bd38500ec7d39e72bc112dd83adfaeba9de1910b8ad",
+      "raw_scientific_gate": true
+    },
+    {
+      "run_id": "E1__comparison__hysteresis_u8_d0_c60__guard__locked_test_recovery_v3__r2__a1",
+      "policy_id": "hysteresis_u8_d0_c60__guard",
+      "kind": "comparison",
+      "window_id": "locked_test_recovery_v3",
+      "matched_ticks": 2100,
+      "all_tick_full_replay_sha256": "fe7aaae6f932a09761cac7382aba163774978fd31b397ef6090569785123a8bb",
+      "queue_maximum": 16,
+      "layers": [
+        {
+          "layer": "empty",
+          "cadence": "all",
+          "eligible_tick_count": 400,
+          "selected_tick": 2
+        },
+        {
+          "layer": "normal",
+          "cadence": "all",
+          "eligible_tick_count": 1693,
+          "selected_tick": 0
+        },
+        {
+          "layer": "peak",
+          "cadence": "all",
+          "eligible_tick_count": 7,
+          "selected_tick": 249
+        }
+      ],
+      "complete_recovery": true,
+      "source_relative_path": "attempts/E1__comparison__hysteresis_u8_d0_c60__guard__locked_test_recovery_v3__r2__a1",
+      "source_sha256": {
+        "run_plan.json": "3e8d4b85d97fffc7e7d661aac0b2c0c79aa0166c94c9bf755d312d64638398e3",
+        "expected_requests.json": "7cc322cfd61eccbdabc9f0cafb1d3b9be230118ec16f82d3134f6155641342d9",
+        "controller_events.jsonl": "3362bb8c53e71c93b9a20ffd508a4c06f1d0e2c87dcdef465d6de2e69f416518"
+      },
+      "e1_analysis_sha256": "2a5cc3c04e92d800e161bdb617f1f4d8ecfe7dfa0ea1222f1146c38b725accbf",
+      "raw_scientific_gate": true
+    },
+    {
+      "run_id": "E1__comparison__B-HPA__locked_test_recovery_v3__r2__a1",
+      "policy_id": "B-HPA",
+      "kind": "comparison",
+      "window_id": "locked_test_recovery_v3",
+      "matched_ticks": 2100,
+      "all_tick_full_replay_sha256": "c1da186887a9b6d6ff27321ae7e24ba33eb8fa221faff6760aceb267b7949bff",
+      "queue_maximum": 14,
+      "layers": [
+        {
+          "layer": "empty",
+          "cadence": "update",
+          "eligible_tick_count": 5,
+          "selected_tick": 1800
+        },
+        {
+          "layer": "empty",
+          "cadence": "hold",
+          "eligible_tick_count": 1656,
+          "selected_tick": 106
+        },
+        {
+          "layer": "normal",
+          "cadence": "update",
+          "eligible_tick_count": 30,
+          "selected_tick": 0
+        },
+        {
+          "layer": "normal",
+          "cadence": "hold",
+          "eligible_tick_count": 406,
+          "selected_tick": 1
+        },
+        {
+          "layer": "peak",
+          "cadence": "update",
+          "eligible_tick_count": 0,
+          "selected_tick": null
+        },
+        {
+          "layer": "peak",
+          "cadence": "hold",
+          "eligible_tick_count": 3,
+          "selected_tick": 80
+        }
+      ],
+      "complete_recovery": true,
+      "source_relative_path": "attempts/E1__comparison__B-HPA__locked_test_recovery_v3__r2__a1",
+      "source_sha256": {
+        "run_plan.json": "a620a77ff577131d272ce177f440516d94b2b5af15b1d3cbc91f2ebf712766e3",
+        "expected_requests.json": "7cc322cfd61eccbdabc9f0cafb1d3b9be230118ec16f82d3134f6155641342d9",
+        "controller_events.jsonl": "05e65abe85a5520a70f20674865323714114adbac89aa75a84c8cfb5d9096b98"
+      },
+      "e1_analysis_sha256": "ed7910569392b066d216461e96833f1ace26aca075314b1d5df0c18b9ed024c4",
+      "raw_scientific_gate": true
+    },
+    {
+      "run_id": "E1__comparison__B-HPA__locked_test_steady_v3__r2__a1",
+      "policy_id": "B-HPA",
+      "kind": "comparison",
+      "window_id": "locked_test_steady_v3",
+      "matched_ticks": 2100,
+      "all_tick_full_replay_sha256": "29a5914b887ee04e71927aaf2ba97805aaef0eee3685a1c3051bd844baa63e65",
+      "queue_maximum": 31,
+      "layers": [
+        {
+          "layer": "empty",
+          "cadence": "update",
+          "eligible_tick_count": 5,
+          "selected_tick": 1800
+        },
+        {
+          "layer": "empty",
+          "cadence": "hold",
+          "eligible_tick_count": 998,
+          "selected_tick": 108
+        },
+        {
+          "layer": "normal",
+          "cadence": "update",
+          "eligible_tick_count": 30,
+          "selected_tick": 0
+        },
+        {
+          "layer": "normal",
+          "cadence": "hold",
+          "eligible_tick_count": 1066,
+          "selected_tick": 1
+        },
+        {
+          "layer": "peak",
+          "cadence": "update",
+          "eligible_tick_count": 0,
+          "selected_tick": null
+        },
+        {
+          "layer": "peak",
+          "cadence": "hold",
+          "eligible_tick_count": 1,
+          "selected_tick": 85
+        }
+      ],
+      "complete_recovery": true,
+      "source_relative_path": "attempts/E1__comparison__B-HPA__locked_test_steady_v3__r2__a1",
+      "source_sha256": {
+        "run_plan.json": "a0fbe9a26dfbcf94a0bbab27fccd85fc8733105b0cec782cb73406e517a18f26",
+        "expected_requests.json": "bf5892fbbeadda48ae3f488fbad3f5439a099687e380fed4e8f497c0f31497fc",
+        "controller_events.jsonl": "9594987c109c053e39d1ef6db53200d06ec5f9ab007a76aa3dda2e4b0a98f2b0"
+      },
+      "e1_analysis_sha256": "100443a1fc7414722cd4835e47eba8f2a1a122fa981daf24e95253306646f28c",
+      "raw_scientific_gate": true
+    },
+    {
+      "run_id": "E1__comparison__hysteresis_u8_d0_c60__guard__locked_test_steady_v3__r2__a1",
+      "policy_id": "hysteresis_u8_d0_c60__guard",
+      "kind": "comparison",
+      "window_id": "locked_test_steady_v3",
+      "matched_ticks": 2100,
+      "all_tick_full_replay_sha256": "a0f35e999b01dbe161f6a009c615e81331db7e941912a351b74f4f2d614fa541",
+      "queue_maximum": 29,
+      "layers": [
+        {
+          "layer": "empty",
+          "cadence": "all",
+          "eligible_tick_count": 458,
+          "selected_tick": 2
+        },
+        {
+          "layer": "normal",
+          "cadence": "all",
+          "eligible_tick_count": 1641,
+          "selected_tick": 0
+        },
+        {
+          "layer": "peak",
+          "cadence": "all",
+          "eligible_tick_count": 1,
+          "selected_tick": 190
+        }
+      ],
+      "complete_recovery": true,
+      "source_relative_path": "attempts/E1__comparison__hysteresis_u8_d0_c60__guard__locked_test_steady_v3__r2__a1",
+      "source_sha256": {
+        "run_plan.json": "b9452513bd795f7cc8e051f6cca2232c8f622163c41c564ddf3b5bf5351bae3b",
+        "expected_requests.json": "bf5892fbbeadda48ae3f488fbad3f5439a099687e380fed4e8f497c0f31497fc",
+        "controller_events.jsonl": "62b8ab1fea0d36e4ca93181cfbaa3747e28813a24f1088b68dfdbeee90e82f43"
+      },
+      "e1_analysis_sha256": "403845fad7edf8270cf422ae676dc69b8aa9904f33a10c1e9104c7f32dfe702e",
+      "raw_scientific_gate": true
+    },
+    {
+      "run_id": "E1__comparison__hysteresis_u8_d0_c60__guard__locked_test_steady_v3__r3__a1",
+      "policy_id": "hysteresis_u8_d0_c60__guard",
+      "kind": "comparison",
+      "window_id": "locked_test_steady_v3",
+      "matched_ticks": 2100,
+      "all_tick_full_replay_sha256": "9d5b712cec99819c3fed6abdbe96615c81a6b4db95cc62cf95bd2958a1baff82",
+      "queue_maximum": 29,
+      "layers": [
+        {
+          "layer": "empty",
+          "cadence": "all",
+          "eligible_tick_count": 457,
+          "selected_tick": 2
+        },
+        {
+          "layer": "normal",
+          "cadence": "all",
+          "eligible_tick_count": 1642,
+          "selected_tick": 0
+        },
+        {
+          "layer": "peak",
+          "cadence": "all",
+          "eligible_tick_count": 1,
+          "selected_tick": 190
+        }
+      ],
+      "complete_recovery": true,
+      "source_relative_path": "attempts/E1__comparison__hysteresis_u8_d0_c60__guard__locked_test_steady_v3__r3__a1",
+      "source_sha256": {
+        "run_plan.json": "4f1647bce11972735a381ad0fc5df525c580e14b4f9609264d50857577880281",
+        "expected_requests.json": "bf5892fbbeadda48ae3f488fbad3f5439a099687e380fed4e8f497c0f31497fc",
+        "controller_events.jsonl": "27b0f2b08294645ae590cd9a3320e377a297f4bee5a9d0f9817fc26684fdff0e"
+      },
+      "e1_analysis_sha256": "a38d154706e737fde2958e811ff4924c82f9b2efc49de8c6f1494ce73aa6ec63",
+      "raw_scientific_gate": true
+    },
+    {
+      "run_id": "E1__comparison__B-HPA__locked_test_steady_v3__r3__a1",
+      "policy_id": "B-HPA",
+      "kind": "comparison",
+      "window_id": "locked_test_steady_v3",
+      "matched_ticks": 2100,
+      "all_tick_full_replay_sha256": "0a6e764873cbaad51ecbf9ef499f046d0e557ea431adcffcf382eb1189808953",
+      "queue_maximum": 31,
+      "layers": [
+        {
+          "layer": "empty",
+          "cadence": "update",
+          "eligible_tick_count": 5,
+          "selected_tick": 1800
+        },
+        {
+          "layer": "empty",
+          "cadence": "hold",
+          "eligible_tick_count": 999,
+          "selected_tick": 102
+        },
+        {
+          "layer": "normal",
+          "cadence": "update",
+          "eligible_tick_count": 30,
+          "selected_tick": 0
+        },
+        {
+          "layer": "normal",
+          "cadence": "hold",
+          "eligible_tick_count": 1065,
+          "selected_tick": 1
+        },
+        {
+          "layer": "peak",
+          "cadence": "update",
+          "eligible_tick_count": 0,
+          "selected_tick": null
+        },
+        {
+          "layer": "peak",
+          "cadence": "hold",
+          "eligible_tick_count": 1,
+          "selected_tick": 85
+        }
+      ],
+      "complete_recovery": true,
+      "source_relative_path": "attempts/E1__comparison__B-HPA__locked_test_steady_v3__r3__a1",
+      "source_sha256": {
+        "run_plan.json": "39c2da7d79bba847dd475c45e5aa948618a144ea028abb45b73e99bc1741d931",
+        "expected_requests.json": "bf5892fbbeadda48ae3f488fbad3f5439a099687e380fed4e8f497c0f31497fc",
+        "controller_events.jsonl": "1d0f8c31a2cbe89c72cea4e9fc578113a05153173b745e027fbe7496a754e91d"
+      },
+      "e1_analysis_sha256": "be436199785de01f732567d990f32eabb1104f66fec1d8b970b28c23c006a626",
+      "raw_scientific_gate": true
+    },
+    {
+      "run_id": "E1__comparison__B-HPA__locked_test_recovery_v3__r3__a1",
+      "policy_id": "B-HPA",
+      "kind": "comparison",
+      "window_id": "locked_test_recovery_v3",
+      "matched_ticks": 2100,
+      "all_tick_full_replay_sha256": "40031fc77886e59f86179dac5f3c898b2d012ff9154f9a762210c6014d25cf08",
+      "queue_maximum": 14,
+      "layers": [
+        {
+          "layer": "empty",
+          "cadence": "update",
+          "eligible_tick_count": 5,
+          "selected_tick": 1800
+        },
+        {
+          "layer": "empty",
+          "cadence": "hold",
+          "eligible_tick_count": 1656,
+          "selected_tick": 106
+        },
+        {
+          "layer": "normal",
+          "cadence": "update",
+          "eligible_tick_count": 30,
+          "selected_tick": 0
+        },
+        {
+          "layer": "normal",
+          "cadence": "hold",
+          "eligible_tick_count": 406,
+          "selected_tick": 1
+        },
+        {
+          "layer": "peak",
+          "cadence": "update",
+          "eligible_tick_count": 0,
+          "selected_tick": null
+        },
+        {
+          "layer": "peak",
+          "cadence": "hold",
+          "eligible_tick_count": 3,
+          "selected_tick": 80
+        }
+      ],
+      "complete_recovery": true,
+      "source_relative_path": "attempts/E1__comparison__B-HPA__locked_test_recovery_v3__r3__a1",
+      "source_sha256": {
+        "run_plan.json": "370becb0c38c22986b491b0bd6dda84bc3ab5786cfbcc8b1be857074def81516",
+        "expected_requests.json": "7cc322cfd61eccbdabc9f0cafb1d3b9be230118ec16f82d3134f6155641342d9",
+        "controller_events.jsonl": "93f06176bd930837d4681b8c3ea2aa10a125ec058e9f5acf31c29f44e84b86c5"
+      },
+      "e1_analysis_sha256": "7e1e9558579795a9f82d9fb187b361bd4b47d5057ece3ae895abe59e7f695497",
+      "raw_scientific_gate": true
+    },
+    {
+      "run_id": "E1__comparison__hysteresis_u8_d0_c60__guard__locked_test_recovery_v3__r3__a1",
+      "policy_id": "hysteresis_u8_d0_c60__guard",
+      "kind": "comparison",
+      "window_id": "locked_test_recovery_v3",
+      "matched_ticks": 2100,
+      "all_tick_full_replay_sha256": "1332fe98fc4e3e21101e7f6e464360ce6e249337289ecfcd1b5794ca6b8e2fc0",
+      "queue_maximum": 16,
+      "layers": [
+        {
+          "layer": "empty",
+          "cadence": "all",
+          "eligible_tick_count": 391,
+          "selected_tick": 2
+        },
+        {
+          "layer": "normal",
+          "cadence": "all",
+          "eligible_tick_count": 1702,
+          "selected_tick": 0
+        },
+        {
+          "layer": "peak",
+          "cadence": "all",
+          "eligible_tick_count": 7,
+          "selected_tick": 249
+        }
+      ],
+      "complete_recovery": true,
+      "source_relative_path": "attempts/E1__comparison__hysteresis_u8_d0_c60__guard__locked_test_recovery_v3__r3__a1",
+      "source_sha256": {
+        "run_plan.json": "5b2abc97731a510bbd25df18396759c3fe0b52086673954cfdfe1e77e73b4e52",
+        "expected_requests.json": "7cc322cfd61eccbdabc9f0cafb1d3b9be230118ec16f82d3134f6155641342d9",
+        "controller_events.jsonl": "b6aee6bca10bb8bb04b7884ab9b8338514df63ecc1b44357dc69e82c97ab6647"
+      },
+      "e1_analysis_sha256": "b11149731774543e97b9a8f6c5025e37b5f30e56c314c9db5b2e2311f2614edf",
+      "raw_scientific_gate": true
+    }
+  ],
+  "excluded_attempts": [
+    {
+      "run_id": "E1__smoke__B-HPA__a1",
+      "reason": "P5 technical invalid retained; not an eligible E2 physical run"
+    }
+  ],
+  "included_runs": 16,
+  "matched_ticks": 29580,
+  "snapshots": 60,
+  "source_package_sha256": "046aa07c7658c37d2f67a49bd793c28c8ed2ed3fcce70cb23fb1bc50c8e27a2a",
+  "sampling_contract_sha256": "4e9b57e2488ecebd46f95a9f2747871b3fa1d4f4f5f37ee106fa7e26ab8dffe2",
+  "replay_script_sha256": "467c41f40df0fbc154a87445fdad3ecfdc8f361e88f6b62eb5752f6cd345e23a",
+  "full_input_recovery_required": true,
+  "decision_equality_alone_is_not_input_completeness": true,
+  "no_gpu_runs": true,
+  "no_timing_yet": true
+}

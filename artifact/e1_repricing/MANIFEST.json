@@ -1,0 +1,45 @@
+{
+  "schema": "e1-anonymous-repricing-files-v1",
+  "files": {
+    "LICENSE": {
+      "sha256": "78375abfbe8af8a2144f6912a2fd0b1abd0bb64d84085c6aef598b27d9e7b0f9",
+      "bytes": 1077
+    },
+    "README.md": {
+      "sha256": "2ec53aec6251e581355281b114707d114cc6a762dafa0f3837e17d7656c02826",
+      "bytes": 6412
+    },
+    "analysis.py": {
+      "sha256": "d5e0528421091646d9a3788866abc6f99644468cdcf845fa4222ddab3723b3e6",
+      "bytes": 9952
+    },
+    "data/ledger.csv": {
+      "sha256": "452eedfcf93e5bb435aa2fe4ab225970b21749356d1529409da1c5ab0096e2e0",
+      "bytes": 8879
+    },
+    "data/prices.json": {
+      "sha256": "b2253826ac0709a19e14040d6ece50f2bc71260c7b544bec03c5eb634f46eeda",
+      "bytes": 169
+    },
+    "data/requests.json": {
+      "sha256": "e7d5ee3bd5076c9c85d8dcb8a46971916d1842d2000f7bf15798b67dcc044cce",
+      "bytes": 258592
+    },
+    "data/runs.json": {
+      "sha256": "4b79d801a6ccaf71ec5e953bd852db1cc22542ed08322fab01d923471b9444c6",
+      "bytes": 719958
+    },
+    "reference_results.json": {
+      "sha256": "49160cfb601e446fd7f66beb1881a65a42bccde753c813d337914cae07a12775",
+      "bytes": 8905
+    },
+    "test_analysis.py": {
+      "sha256": "0c266f5e13910d7e646ca6026f4f9dd46dc659ce4deb293abda1a5a5cdbbb028",
+      "bytes": 5529
+    },
+    "verify.py": {
+      "sha256": "90860fb791211e6a0034d723a9daaaf92cd8885d091667490ffc9ddcb6dd00b9",
+      "bytes": 2851
+    }
+  }
+}

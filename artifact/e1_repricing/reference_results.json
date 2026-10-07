@@ -1,0 +1,249 @@
+{
+  "schema": "e1-reduced-fixed-event-repricing-v1",
+  "formal_count": 14,
+  "comparison_count": 12,
+  "excluded_capacity_count": 2,
+  "formula": "Delta C(x,y) = x*Delta C_G + y*Delta C_A + Delta C_E; deltas are guard minus B-HPA arm means",
+  "coefficient_units": "scenario USD at registered base prices; occupied_seconds is local GPU seconds",
+  "aggregation": "three-run arm means separately within each window; equal-weight window summary, not pooled run costs",
+  "results": [
+    {
+      "window": "steady",
+      "phase": "window",
+      "n_per_arm": 3,
+      "arm_means": {
+        "B-HPA": {
+          "occupied_seconds": 2407.08224116,
+          "cost_gpu": 2.40708224116,
+          "cost_synthetic_api": 0.05438833333333333,
+          "cost_startup": 0.004,
+          "cost_shutdown": 0.003,
+          "total_cost": 2.4684705744933337,
+          "startup_events": 2.0,
+          "shutdown_events": 3.0,
+          "api_accepted": 93.0
+        },
+        "H+guard": {
+          "occupied_seconds": 1182.2640648076667,
+          "cost_gpu": 1.1822640648076668,
+          "cost_synthetic_api": 0.44054733333333335,
+          "cost_startup": 0.026000000000000002,
+          "cost_shutdown": 0.015,
+          "total_cost": 1.663811398141,
+          "startup_events": 13.0,
+          "shutdown_events": 15.0,
+          "api_accepted": 745.6666666666666
+        }
+      },
+      "guard_minus_B_HPA": {
+        "occupied_seconds": -1224.8181763523335,
+        "cost_gpu": -1.2248181763523331,
+        "cost_synthetic_api": 0.38615900000000003,
+        "cost_startup": 0.022000000000000002,
+        "cost_shutdown": 0.012,
+        "total_cost": -0.8046591763523336,
+        "startup_events": 11.0,
+        "shutdown_events": 12.0,
+        "api_accepted": 652.6666666666666
+      },
+      "coefficients_USD": {
+        "delta_gpu_cost": -1.2248181763523331,
+        "delta_api_cost": 0.38615900000000003,
+        "delta_lifecycle_cost": 0.034
+      },
+      "a_star_at_g_1": 3.083750932523476,
+      "g_star_at_a_1": 0.3430378550155811,
+      "reference_saving_fraction": 0.3259747896802432,
+      "root_side_delta_cost_USD": {
+        "api_below": -3.861590000012183e-05,
+        "api_above": 3.861590000006632e-05,
+        "gpu_below": 0.00012248181763516164,
+        "gpu_above": -0.00012248181763527266
+      },
+      "online_api_share_means": {
+        "B-HPA": 0.06440443213296398,
+        "H+guard": 0.5163896583564174
+      },
+      "local_occupation_reduction_fraction": 0.5088393555519232
+    },
+    {
+      "window": "steady",
+      "phase": "full_deployment",
+      "n_per_arm": 3,
+      "arm_means": {
+        "B-HPA": {
+          "occupied_seconds": 2472.631329919,
+          "cost_gpu": 2.472631329919,
+          "cost_synthetic_api": 0.05438833333333333,
+          "cost_startup": 0.008,
+          "cost_shutdown": 0.004,
+          "total_cost": 2.5390196632523336,
+          "startup_events": 4.0,
+          "shutdown_events": 4.0,
+          "api_accepted": 93.0
+        },
+        "H+guard": {
+          "occupied_seconds": 1246.9517629893332,
+          "cost_gpu": 1.2469517629893334,
+          "cost_synthetic_api": 0.44054733333333335,
+          "cost_startup": 0.03,
+          "cost_shutdown": 0.015,
+          "total_cost": 1.7324990963226667,
+          "startup_events": 15.0,
+          "shutdown_events": 15.0,
+          "api_accepted": 745.6666666666666
+        }
+      },
+      "guard_minus_B_HPA": {
+        "occupied_seconds": -1225.6795669296669,
+        "cost_gpu": -1.2256795669296665,
+        "cost_synthetic_api": 0.38615900000000003,
+        "cost_startup": 0.022,
+        "cost_shutdown": 0.011,
+        "total_cost": -0.8065205669296669,
+        "startup_events": 11.0,
+        "shutdown_events": 11.0,
+        "api_accepted": 652.6666666666666
+      },
+      "coefficients_USD": {
+        "delta_gpu_cost": -1.2256795669296665,
+        "delta_api_cost": 0.38615900000000003,
+        "delta_lifecycle_cost": 0.033
+      },
+      "a_star_at_g_1": 3.0885712023536067,
+      "g_star_at_a_1": 0.3419808988494403,
+      "reference_saving_fraction": 0.3176503823907224,
+      "root_side_delta_cost_USD": {
+        "api_below": -3.8615900000010805e-05,
+        "api_above": 3.861590000017734e-05,
+        "gpu_below": 0.00012256795669293719,
+        "gpu_above": -0.00012256795669293719
+      },
+      "online_api_share_means": {
+        "B-HPA": 0.06440443213296398,
+        "H+guard": 0.5163896583564174
+      },
+      "local_occupation_reduction_fraction": 0.49569846992508115
+    },
+    {
+      "window": "recovery",
+      "phase": "window",
+      "n_per_arm": 3,
+      "arm_means": {
+        "B-HPA": {
+          "occupied_seconds": 2044.4796190223333,
+          "cost_gpu": 2.0444796190223333,
+          "cost_synthetic_api": 0.022872,
+          "cost_startup": 0.002,
+          "cost_shutdown": 0.002,
+          "total_cost": 2.0713516190223333,
+          "startup_events": 1.0,
+          "shutdown_events": 2.0,
+          "api_accepted": 39.0
+        },
+        "H+guard": {
+          "occupied_seconds": 897.036717591,
+          "cost_gpu": 0.897036717591,
+          "cost_synthetic_api": 0.11590066666666667,
+          "cost_startup": 0.022666666666666665,
+          "cost_shutdown": 0.013333333333333334,
+          "total_cost": 1.0489373842576666,
+          "startup_events": 11.333333333333334,
+          "shutdown_events": 13.333333333333334,
+          "api_accepted": 198.33333333333334
+        }
+      },
+      "guard_minus_B_HPA": {
+        "occupied_seconds": -1147.4429014313332,
+        "cost_gpu": -1.1474429014313334,
+        "cost_synthetic_api": 0.09302866666666666,
+        "cost_startup": 0.020666666666666667,
+        "cost_shutdown": 0.011333333333333334,
+        "total_cost": -1.0224142347646668,
+        "startup_events": 10.333333333333334,
+        "shutdown_events": 11.333333333333334,
+        "api_accepted": 159.33333333333334
+      },
+      "coefficients_USD": {
+        "delta_gpu_cost": -1.1474429014313334,
+        "delta_api_cost": 0.09302866666666666,
+        "delta_lifecycle_cost": 0.032
+      },
+      "a_star_at_g_1": 11.990313753803488,
+      "g_star_at_a_1": 0.10896286561248886,
+      "reference_saving_fraction": 0.49359762262248874,
+      "root_side_delta_cost_USD": {
+        "api_below": -9.302866666810461e-06,
+        "api_above": 9.302866666532905e-06,
+        "gpu_below": 0.00011474429014311782,
+        "gpu_above": -0.00011474429014314558
+      },
+      "online_api_share_means": {
+        "B-HPA": 0.11676646706586827,
+        "H+guard": 0.593812375249501
+      },
+      "local_occupation_reduction_fraction": 0.5612395891625658
+    },
+    {
+      "window": "recovery",
+      "phase": "full_deployment",
+      "n_per_arm": 3,
+      "arm_means": {
+        "B-HPA": {
+          "occupied_seconds": 2109.4433398816664,
+          "cost_gpu": 2.1094433398816665,
+          "cost_synthetic_api": 0.022872,
+          "cost_startup": 0.006,
+          "cost_shutdown": 0.003,
+          "total_cost": 2.1413153398816664,
+          "startup_events": 3.0,
+          "shutdown_events": 3.0,
+          "api_accepted": 39.0
+        },
+        "H+guard": {
+          "occupied_seconds": 960.5197302186666,
+          "cost_gpu": 0.9605197302186667,
+          "cost_synthetic_api": 0.11590066666666667,
+          "cost_startup": 0.02666666666666667,
+          "cost_shutdown": 0.013333333333333334,
+          "total_cost": 1.1164203968853332,
+          "startup_events": 13.333333333333334,
+          "shutdown_events": 13.333333333333334,
+          "api_accepted": 198.33333333333334
+        }
+      },
+      "guard_minus_B_HPA": {
+        "occupied_seconds": -1148.9236096629998,
+        "cost_gpu": -1.148923609663,
+        "cost_synthetic_api": 0.09302866666666666,
+        "cost_startup": 0.020666666666666667,
+        "cost_shutdown": 0.010333333333333333,
+        "total_cost": -1.0248949429963332,
+        "startup_events": 10.333333333333334,
+        "shutdown_events": 10.333333333333334,
+        "api_accepted": 159.33333333333334
+      },
+      "coefficients_USD": {
+        "delta_gpu_cost": -1.148923609663,
+        "delta_api_cost": 0.09302866666666666,
+        "delta_lifecycle_cost": 0.031
+      },
+      "a_star_at_g_1": 12.016979816217942,
+      "g_star_at_a_1": 0.107952056710756,
+      "reference_saving_fraction": 0.4786286839251668,
+      "root_side_delta_cost_USD": {
+        "api_below": -9.302866666477394e-06,
+        "api_above": 9.302866666865972e-06,
+        "gpu_below": 0.00011489236096630384,
+        "gpu_above": -0.00011489236096630384
+      },
+      "online_api_share_means": {
+        "B-HPA": 0.11676646706586827,
+        "H+guard": 0.593812375249501
+      },
+      "local_occupation_reduction_fraction": 0.5446572505367464
+    }
+  ],
+  "equal_window_mean_window_cost_saving_fraction": 0.40978620615136585,
+  "equal_window_mean_window_local_occupation_reduction_fraction": 0.5350394723572445
+}

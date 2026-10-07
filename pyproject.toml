@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "fidelityloop"
-version = "0.1.0"
+version = "0.1.1"
 description = "Closed-loop validation components for elastic LLM-serving policies"
 requires-python = ">=3.10"
 license = {file = "LICENSE"}
@@ -12,3 +12,6 @@ dependencies = []
 
 [tool.setuptools.packages.find]
 where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

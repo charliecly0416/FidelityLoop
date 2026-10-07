@@ -1,0 +1,130 @@
+{
+  "verdict": "PASS_INDEPENDENT_E2_INPUT_RECOVERY_ONLY",
+  "runs": [
+    {
+      "run_id": "E1__smoke__B-HPA__a2",
+      "independent_full_input_ticks": 90,
+      "sample_full_inputs_checked": 3,
+      "all_tick_input_and_logged_state_digest": "084fbf65d766a8d02767b9ab0e4ddfe188fbe74cd296c0a7dae5a27dcac58127",
+      "recovery_json_sha256": "d9d3d0b66a98254cd3b2479c13fb5a6ce5a60a91b38834eaac94643c9cfa167e"
+    },
+    {
+      "run_id": "E1__smoke__hysteresis_u8_d0_c60__guard__a1",
+      "independent_full_input_ticks": 90,
+      "sample_full_inputs_checked": 3,
+      "all_tick_input_and_logged_state_digest": "cb330ec1b5ec75f05b45a70f895a849120204c60504a3350f91723c605429549",
+      "recovery_json_sha256": "e9fd69198078a9a41a2ab4bff67c17d8612850bce53d2dbd22501296f3555c86"
+    },
+    {
+      "run_id": "E1__capacity__all2__locked_test_steady_v3__r0__a1",
+      "independent_full_input_ticks": 2100,
+      "sample_full_inputs_checked": 3,
+      "all_tick_input_and_logged_state_digest": "f1e40176115d4ec1fe88a5ce93f5830163c1bfa17c6cc3ee54702cc6ef7ed94f",
+      "recovery_json_sha256": "4e03cd2bc8a8bdaafe5bba94d8ebf44da50ff903753b6ac86f878c732af462c4"
+    },
+    {
+      "run_id": "E1__capacity__all2__locked_test_recovery_v3__r0__a1",
+      "independent_full_input_ticks": 2100,
+      "sample_full_inputs_checked": 3,
+      "all_tick_input_and_logged_state_digest": "b1a0de94860b5a524b11ac7a39fd3208f2889a247e227ac0eafb2f7a0a1a511d",
+      "recovery_json_sha256": "60d6a9478e8aad2f9bf867b41fc7fd9ee5d26543850017344b2eb046fc321f55"
+    },
+    {
+      "run_id": "E1__comparison__hysteresis_u8_d0_c60__guard__locked_test_steady_v3__r1__a1",
+      "independent_full_input_ticks": 2100,
+      "sample_full_inputs_checked": 3,
+      "all_tick_input_and_logged_state_digest": "1b969495d6cd51340f4a7069cf7b1c5102647957d3dcf16afcc38ff968fab153",
+      "recovery_json_sha256": "97e1e5471cc1f86a308581977537079e737f49b3bd0a4cd09e70ee69af9a2d0e"
+    },
+    {
+      "run_id": "E1__comparison__B-HPA__locked_test_steady_v3__r1__a1",
+      "independent_full_input_ticks": 2100,
+      "sample_full_inputs_checked": 5,
+      "all_tick_input_and_logged_state_digest": "150aa6f4c36d459964954015340cfee02735c1bc6670706b93b2d1523816ac0b",
+      "recovery_json_sha256": "5efb55d0ee81f9881929553030ccbed96fac0fa9bc5233d58697331ac99086ff"
+    },
+    {
+      "run_id": "E1__comparison__B-HPA__locked_test_recovery_v3__r1__a1",
+      "independent_full_input_ticks": 2100,
+      "sample_full_inputs_checked": 5,
+      "all_tick_input_and_logged_state_digest": "2b1d33284d5bcad47b8c602480f7c1e460364e1781c77a77d2af5c7eebb82b24",
+      "recovery_json_sha256": "8cb41bbfd7c838d9e235b698b593d81dc0b0bfd6e822587c45cf3740dd6e62ac"
+    },
+    {
+      "run_id": "E1__comparison__hysteresis_u8_d0_c60__guard__locked_test_recovery_v3__r1__a1",
+      "independent_full_input_ticks": 2100,
+      "sample_full_inputs_checked": 3,
+      "all_tick_input_and_logged_state_digest": "f3e1a1bd52d0adf13104cb1ff89a3c29e8ff01eb3790225c0ee6e0b32d1d8879",
+      "recovery_json_sha256": "39cdfd632b85daec1f11cfc85a36244199b3dd3da00d90927bacdfdc29b0d7ec"
+    },
+    {
+      "run_id": "E1__comparison__hysteresis_u8_d0_c60__guard__locked_test_recovery_v3__r2__a1",
+      "independent_full_input_ticks": 2100,
+      "sample_full_inputs_checked": 3,
+      "all_tick_input_and_logged_state_digest": "fe7aaae6f932a09761cac7382aba163774978fd31b397ef6090569785123a8bb",
+      "recovery_json_sha256": "0a6b404e58032c40ab85f2dbf77ab03ec5dea75a52ec9a2192c5ae8f61b8f62d"
+    },
+    {
+      "run_id": "E1__comparison__B-HPA__locked_test_recovery_v3__r2__a1",
+      "independent_full_input_ticks": 2100,
+      "sample_full_inputs_checked": 5,
+      "all_tick_input_and_logged_state_digest": "c1da186887a9b6d6ff27321ae7e24ba33eb8fa221faff6760aceb267b7949bff",
+      "recovery_json_sha256": "206d3d9d15884cb83dbccf8ee2bbc48b78503b22b39705e30aa5fc35a83572f3"
+    },
+    {
+      "run_id": "E1__comparison__B-HPA__locked_test_steady_v3__r2__a1",
+      "independent_full_input_ticks": 2100,
+      "sample_full_inputs_checked": 5,
+      "all_tick_input_and_logged_state_digest": "29a5914b887ee04e71927aaf2ba97805aaef0eee3685a1c3051bd844baa63e65",
+      "recovery_json_sha256": "77d765255db053068f790fa0f054a24e1b8a9636ac6f63986cf68e404d5ae7c2"
+    },
+    {
+      "run_id": "E1__comparison__hysteresis_u8_d0_c60__guard__locked_test_steady_v3__r2__a1",
+      "independent_full_input_ticks": 2100,
+      "sample_full_inputs_checked": 3,
+      "all_tick_input_and_logged_state_digest": "a0f35e999b01dbe161f6a009c615e81331db7e941912a351b74f4f2d614fa541",
+      "recovery_json_sha256": "d86789843bb40f7899144b3ff6d1739058d76115a444ec445db63d45b9509fca"
+    },
+    {
+      "run_id": "E1__comparison__hysteresis_u8_d0_c60__guard__locked_test_steady_v3__r3__a1",
+      "independent_full_input_ticks": 2100,
+      "sample_full_inputs_checked": 3,
+      "all_tick_input_and_logged_state_digest": "9d5b712cec99819c3fed6abdbe96615c81a6b4db95cc62cf95bd2958a1baff82",
+      "recovery_json_sha256": "953f96782c86f869008e42641bb56262156a6ef59f8cdd584c20c8cd9f9d2a8a"
+    },
+    {
+      "run_id": "E1__comparison__B-HPA__locked_test_steady_v3__r3__a1",
+      "independent_full_input_ticks": 2100,
+      "sample_full_inputs_checked": 5,
+      "all_tick_input_and_logged_state_digest": "0a6e764873cbaad51ecbf9ef499f046d0e557ea431adcffcf382eb1189808953",
+      "recovery_json_sha256": "be492ceca4123048b710ac919325ae64f35b9a1ed1e2ef1a7763dc5f7338b07c"
+    },
+    {
+      "run_id": "E1__comparison__B-HPA__locked_test_recovery_v3__r3__a1",
+      "independent_full_input_ticks": 2100,
+      "sample_full_inputs_checked": 5,
+      "all_tick_input_and_logged_state_digest": "40031fc77886e59f86179dac5f3c898b2d012ff9154f9a762210c6014d25cf08",
+      "recovery_json_sha256": "70ee24f5f635486770b5c3013a800ffbb7f961b580de4140c178daedad6f901d"
+    },
+    {
+      "run_id": "E1__comparison__hysteresis_u8_d0_c60__guard__locked_test_recovery_v3__r3__a1",
+      "independent_full_input_ticks": 2100,
+      "sample_full_inputs_checked": 3,
+      "all_tick_input_and_logged_state_digest": "1332fe98fc4e3e21101e7f6e464360ce6e249337289ecfcd1b5794ca6b8e2fc0",
+      "recovery_json_sha256": "c7d1be667d6c980a196200e5903a97b49fe16f22e0f2b488318c1ad3b75aba5d"
+    }
+  ],
+  "complete_input_ticks": 29580,
+  "snapshots_independently_reexecuted": 60,
+  "recovery_summary_sha256": "c0e69ca2b5cce55ef030c51b613f3e53f0e08d0f956bb44e353b9c71aa0eed02",
+  "sampling_contract_sha256": "4e9b57e2488ecebd46f95a9f2747871b3fa1d4f4f5f37ee106fa7e26ab8dffe2",
+  "input_provenance_sha256": "478a4fdadef5ed7e3ceb28d505c779f577eba3280c3f5eda7157ee59836ceb01",
+  "script_sha256": "688f5db424043b0aefc791984d1244c7048c279837411ff762f71c6afd8326ff",
+  "all_intake_files_unchanged": true,
+  "timing_acceptance": "NOT_REVIEWED",
+  "boundaries": [
+    "No GPU replay; original adapter only.",
+    "All inputs derive from causal raw events or frozen policy parameters; remaining is policy surrogate, not physical GPU progress.",
+    "Timing must exclude restore/copy/assertion and remain decide-only, excluding dispatch_kind and controller loop."
+  ]
+}

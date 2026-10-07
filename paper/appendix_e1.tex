@@ -144,5 +144,6 @@ the qualified estimands. \path{COMPARABILITY.json} binds plans, runtime,
 and permitted policy differences. In the parent documentation directory,
 \path{REVIEW_B.json} and \path{REVIEW_B_V2.json} bind accepted output hashes;
 \path{P6_GENERATE_E1_TABLES.py} and \path{P6_TABLE_MANIFEST.json} reproduce
-and bind the displayed rows. Price-boundary recomputation is provided in
-\path{docs/maxopt_v5_e1_boundary_20260930/analysis.py}.
+and bind the displayed rows. The standalone E1 package reproduces the resource
+and price-boundary calculations from portable reduced records; its
+\path{verify.py} checks the manifest and full-precision reference results.

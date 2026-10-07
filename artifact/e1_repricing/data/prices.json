@@ -1,0 +1,8 @@
+{
+  "gpu_second": 0.001,
+  "api_input_token": 1e-06,
+  "api_output_token": 3e-06,
+  "startup_event": 0.002,
+  "shutdown_event": 0.001,
+  "offline_deadline_miss": 0.01
+}

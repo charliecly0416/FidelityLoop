@@ -39,7 +39,7 @@ def _model():
 
 
 def _contract(root):
-    p=root/"docs/max_optimization_v2_20260915/N1_FEASIBILITY_CONTRACT.json"
+    p=root/"artifact/bridge_execution/inputs/simulator_contract.json"
     c=json.loads(p.read_text(encoding="utf-8")); c["workload_revision"].update(window_seconds=20, drain_seconds=10)
     return c
 
@@ -89,6 +89,6 @@ def build(root, output):
     return out
 
 if __name__ == "__main__":
-    parser=argparse.ArgumentParser(); parser.add_argument("--root",type=Path,default=Path(__file__).resolve().parents[2]); parser.add_argument("--output",type=Path,default=None)
-    args=parser.parse_args(); out=args.output or args.root/"docs/maxopt_framework_validation_20261002"
+    parser=argparse.ArgumentParser(); parser.add_argument("--root",type=Path,default=Path(__file__).resolve().parents[3]); parser.add_argument("--output",type=Path,default=None)
+    args=parser.parse_args(); out=args.output or args.root/"results/facade"
     print(json.dumps(build(args.root,out),ensure_ascii=False,indent=2))

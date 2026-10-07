@@ -1,20 +1,20 @@
 {
   "schema": "fidelityloop-release-manifest-v1",
-  "version": "0.1.0",
-  "paper_revision": "v7r7",
-  "paper_freeze_tag": "paper-v7r7-20261007",
+  "version": "0.1.1",
+  "paper_revision": "v7r8",
+  "paper_freeze_tag": "paper-v7r8-20261007",
   "paper_title": "FidelityLoop: Closed-Loop Validation of Elastic LLM-Serving Policies",
   "scope": "tracked release files, excluding this manifest and ignored build/cache files",
   "files": [
     {
       "path": ".gitignore",
-      "bytes": 228,
-      "sha256": "00a318f70ef9b721cf60d715df2eaf3fb358595f7b964be0a8a17522bfc923b2"
+      "bytes": 244,
+      "sha256": "de083040df0f369bf28fbfa4152ed25d8d930687de0f70891837b767e8536f9b"
     },
     {
       "path": "CITATION.cff",
       "bytes": 561,
-      "sha256": "124c6cd609307bf36a51804dafa7c213b783f0010ee2e98d6b732f3462a3a59c"
+      "sha256": "b4d5d632cd7d145c8e0aa2135d7215c6fdbb3d3186e53e3515dbb461b108f4ff"
     },
     {
       "path": "LICENSE",
@@ -23,13 +23,18 @@
     },
     {
       "path": "README.md",
-      "bytes": 3322,
-      "sha256": "5ad0d4c458e9f62b6d904e64fbc328532cb51d484d7bdc8349cafa4ca06025f5"
+      "bytes": 3784,
+      "sha256": "4eaa85fca432192601bfcfe62fdb3e94456a1d715e68c7c5a732143c1705d910"
+    },
+    {
+      "path": "REPRODUCING.md",
+      "bytes": 5665,
+      "sha256": "5a9fd38ea824b9193644ef6871b897aee9bd016cc3c6a02faea539218076249d"
     },
     {
       "path": "artifact/README.md",
-      "bytes": 377,
-      "sha256": "081cff788ee74a83547ca01037e97b99af11221841ef47e686389a5cf2a24ead"
+      "bytes": 921,
+      "sha256": "0b4b12273d14bc7e47093217f914b76b19e6f1a8891fb7c5c68a56d0b761b280"
     },
     {
       "path": "artifact/bridge_execution/A_POLICY_MANIFEST.json",
@@ -39,7 +44,7 @@
     {
       "path": "artifact/bridge_execution/BASELINE_MANIFEST.json",
       "bytes": 522,
-      "sha256": "275c9fc6bc05699aa6b9f8ebd47bbc661408698216c7d40d343fe91560eecf5f"
+      "sha256": "f877310c50c79fa0ddb79cbd766e783485cf8c954893bfe093e650545eb48485"
     },
     {
       "path": "artifact/bridge_execution/CONTRACT.json",
@@ -87,9 +92,79 @@
       "sha256": "882fd5199725c1ca6dd698b2dec6f53822f1a11dad744cadb4e16275a08ba709"
     },
     {
+      "path": "artifact/e1_repricing/LICENSE",
+      "bytes": 1077,
+      "sha256": "78375abfbe8af8a2144f6912a2fd0b1abd0bb64d84085c6aef598b27d9e7b0f9"
+    },
+    {
+      "path": "artifact/e1_repricing/MANIFEST.json",
+      "bytes": 1417,
+      "sha256": "cadca720ddcf516992bcda3df47c559c60e4e92bd57ae5e7cd607a88fb87864d"
+    },
+    {
+      "path": "artifact/e1_repricing/README.md",
+      "bytes": 6412,
+      "sha256": "2ec53aec6251e581355281b114707d114cc6a762dafa0f3837e17d7656c02826"
+    },
+    {
+      "path": "artifact/e1_repricing/analysis.py",
+      "bytes": 9952,
+      "sha256": "d5e0528421091646d9a3788866abc6f99644468cdcf845fa4222ddab3723b3e6"
+    },
+    {
+      "path": "artifact/e1_repricing/data/ledger.csv",
+      "bytes": 8879,
+      "sha256": "452eedfcf93e5bb435aa2fe4ab225970b21749356d1529409da1c5ab0096e2e0"
+    },
+    {
+      "path": "artifact/e1_repricing/data/prices.json",
+      "bytes": 169,
+      "sha256": "b2253826ac0709a19e14040d6ece50f2bc71260c7b544bec03c5eb634f46eeda"
+    },
+    {
+      "path": "artifact/e1_repricing/data/requests.json",
+      "bytes": 258592,
+      "sha256": "e7d5ee3bd5076c9c85d8dcb8a46971916d1842d2000f7bf15798b67dcc044cce"
+    },
+    {
+      "path": "artifact/e1_repricing/data/runs.json",
+      "bytes": 719958,
+      "sha256": "4b79d801a6ccaf71ec5e953bd852db1cc22542ed08322fab01d923471b9444c6"
+    },
+    {
+      "path": "artifact/e1_repricing/reference_results.json",
+      "bytes": 8905,
+      "sha256": "49160cfb601e446fd7f66beb1881a65a42bccde753c813d337914cae07a12775"
+    },
+    {
+      "path": "artifact/e1_repricing/test_analysis.py",
+      "bytes": 5529,
+      "sha256": "0c266f5e13910d7e646ca6026f4f9dd46dc659ce4deb293abda1a5a5cdbbb028"
+    },
+    {
+      "path": "artifact/e1_repricing/verify.py",
+      "bytes": 2851,
+      "sha256": "90860fb791211e6a0034d723a9daaaf92cd8885d091667490ffc9ddcb6dd00b9"
+    },
+    {
+      "path": "docs/paper-integration-20261007.md",
+      "bytes": 3635,
+      "sha256": "14cbcdc11e471d453c3f8973bd289f9a0318e87f401402519fa62373d8ffb8de"
+    },
+    {
       "path": "docs/paper-release-20261007.md",
       "bytes": 3205,
       "sha256": "d1d4a14830ddce15da5e4bf8f22b346f41b9dd935d022e67aa15a8c339cd5a13"
+    },
+    {
+      "path": "evidence/E1_DECISION_REPLAY_AUDIT.json",
+      "bytes": 7119,
+      "sha256": "965498dad61b4f1225e3732fccfe9840497b2e2718b816721c1b61e29b25d98a"
+    },
+    {
+      "path": "evidence/E1_DECISION_REPLAY_SUMMARY.json",
+      "bytes": 26552,
+      "sha256": "c0e69ca2b5cce55ef030c51b613f3e53f0e08d0f956bb44e353b9c71aa0eed02"
     },
     {
       "path": "evidence/E2_CONTINUOUS_32_RESULTS.json",
@@ -133,8 +208,8 @@
     },
     {
       "path": "evidence/README.md",
-      "bytes": 975,
-      "sha256": "4c6731e8a6d7c1ea6692714f70a9f1ea115aec9021e9dff2302ee786beba20e1"
+      "bytes": 1477,
+      "sha256": "e03e15ab57d8a7a959c75009c124dacfc8c4463c1225fe843ed1bf214266f955"
     },
     {
       "path": "evidence/V7_CLAIM_LOCK.json",
@@ -143,8 +218,8 @@
     },
     {
       "path": "experiments/README.md",
-      "bytes": 736,
-      "sha256": "807b143e673ee4dacc2a281269d0f04915ac1247b391057c3e63c950e99a17a3"
+      "bytes": 1211,
+      "sha256": "32f4b4afd3874b89cb3035dc4ef5f52612781be41b262d6420ec3c469b82ddee"
     },
     {
       "path": "experiments/configs/smoke.json",
@@ -158,23 +233,23 @@
     },
     {
       "path": "paper/README.md",
-      "bytes": 1213,
-      "sha256": "29674d2cd170737ceaf879c8e2cef47b00bf677218bbc8d7dd09241036787b52"
+      "bytes": 1252,
+      "sha256": "546eab5fd660f5c58d9ab3d095ab1aae57454ad486aa8e6d4bc16e9d7cddb547"
     },
     {
       "path": "paper/abstract.tex",
-      "bytes": 1545,
-      "sha256": "c5c00d8745417a606ebe21967c9d8f7eb305b5269a8ed6da028be3b6732481d6"
+      "bytes": 1550,
+      "sha256": "ef6c1f0ff898ccd5317cf45ac18a5bd91472ce85c8b07652dac57ea11f7ba0d3"
     },
     {
       "path": "paper/appendix.tex",
-      "bytes": 9914,
-      "sha256": "87a335dbd865affa7352d94d589958a64a3c4981d8fc285e53e5b9c536c4b7f7"
+      "bytes": 10263,
+      "sha256": "a2a3fb2ee5585d991b833ed90836e45cc2eede337f4c52d111d28d1a5500e484"
     },
     {
       "path": "paper/appendix_e1.tex",
-      "bytes": 7559,
-      "sha256": "3f7b79d588cc3de0189e5ee846704bd25f978b38a4ade74bd45b363f0a1c9227"
+      "bytes": 7651,
+      "sha256": "348d3805686b97943da3e47440bab69abe7c065dc50ad02d65bc903d2341fadb"
     },
     {
       "path": "paper/appendix_e2.tex",
@@ -198,8 +273,8 @@
     },
     {
       "path": "paper/body.tex",
-      "bytes": 40304,
-      "sha256": "c41eaa117ac589ef778ac47847c929062c94440b54ce0b4495f4dd924b00571a"
+      "bytes": 40287,
+      "sha256": "8c65b3bcb5d1f9aee9b8361b9768ec4ce4af5ab1d812c2594e6d8e8525e9f427"
     },
     {
       "path": "paper/cpu_model_evidence.tex",
@@ -428,8 +503,8 @@
     },
     {
       "path": "paper/main.pdf",
-      "bytes": 278706,
-      "sha256": "0d2ed58bd86f054d59cfea5bb97e32fc0dc2ab7814d32ac192ca684ef38a3886"
+      "bytes": 277833,
+      "sha256": "f2971662a5ac3b5c138aed465db9e2d87a3a5bda581687c5df851e8734ad0821"
     },
     {
       "path": "paper/main.tex",
@@ -453,8 +528,8 @@
     },
     {
       "path": "paper/supplement.pdf",
-      "bytes": 304332,
-      "sha256": "356996cbf4308520e3be9cc4af8804a46557f252bf7ae7d954e6d02fb1de4554"
+      "bytes": 305095,
+      "sha256": "2641827f37d00266457686bbb59266868da6ffd2a3a56e5707adfe26871bdd28"
     },
     {
       "path": "paper/supplement.tex",
@@ -463,13 +538,13 @@
     },
     {
       "path": "pyproject.toml",
-      "bytes": 342,
-      "sha256": "55626c7f5f5ff89d06be86f95cae9e8032fddc8f4cb6d78e01acefaa5e7a1fac"
+      "bytes": 391,
+      "sha256": "19d68a9818b8ccc60bd5d766070cf836832b1cd004c61196a1c3955a48d95f1e"
     },
     {
       "path": "results/PAPER_VALIDATION.json",
-      "bytes": 2187,
-      "sha256": "1c5aaf9bac9706c3d5acf5b439f298b03f220dc7b964ebbae5f36f06cf5ca6d3"
+      "bytes": 3862,
+      "sha256": "8453173df3f19c5e48c4b19027ce69e74c35643f389fcf23d249de2600150f52"
     },
     {
       "path": "results/VALIDATION.json",
@@ -543,8 +618,8 @@
     },
     {
       "path": "src/fidelityloop/framework/validate.py",
-      "bytes": 6063,
-      "sha256": "4c7ea2e6877f76f872bfabbcc70d7352f96def162acd5739ec78c5961d9c3808"
+      "bytes": 6030,
+      "sha256": "d213352fb2c1259dfccc76bb28677a6d00f1b5e9cf838b5d4a05d3a281c66da5"
     },
     {
       "path": "src/fidelityloop/legacy/__init__.py",
@@ -780,6 +855,11 @@
       "path": "tests/test_public_framework.py",
       "bytes": 1241,
       "sha256": "1b39bbc27eef96838a1a82f7a0b00c2aad9c137f76dbb5b81511bed208d0c582"
+    },
+    {
+      "path": "tests/test_reproduction.py",
+      "bytes": 1510,
+      "sha256": "67d9c8b8ea18069188488a59f4287ddd351192284b6b0360730698785b88549d"
     }
   ]
 }
