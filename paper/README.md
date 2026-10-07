@@ -6,6 +6,6 @@ The paper reports a physical campaign on two A100 GPUs. The public repository pr
 
 ## Overleaf
 
-The source bundle for paper revision v7r8 is `FidelityLoop_Overleaf_v7r8_20261007.zip`, available from the GitHub release tagged `paper-v7r8-20261007`. Import the ZIP as a new Overleaf project, select `main.tex` as the main document, and use pdfLaTeX. Select `supplement.tex` to build the separate supplement. Both entry points are at the ZIP root; no external files or shell escape are required.
+The source bundle for paper revision v7r9 is `FidelityLoop_Overleaf_v7r9_20261007.zip`, available from the GitHub release tagged `paper-v7r9-20261007`. Import the ZIP as a new Overleaf project, select `main.tex` as the main document, and use pdfLaTeX. Select `supplement.tex` to build the separate supplement. Both entry points are at the ZIP root; no external files or shell escape are required.
 
-This revision integrates the existing decision-replay audit into the method and aligns the reproduction instructions with the portable CPU checks and E1 accounting artifact. Experimental evidence is unchanged. The source remains anonymous. Importing as a new project preserves any manual edits in an existing Overleaf project.
+This revision makes the replay-training-to-physical-evaluation path explicit, distinguishes the predictive replay from the CPU accounting verifier, and defines the first-use workload and cost terms without adding experiments. Experimental evidence is unchanged. The source remains anonymous. Importing as a new project preserves any manual edits in an existing Overleaf project.

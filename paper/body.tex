@@ -8,14 +8,14 @@ requests take or how many GPU seconds a run consumes.
 FidelityLoop studies these requirements as a closed loop from prediction to policy
 decision to physical lifecycle execution. In 36 preregistered runs, service
 calibration improves matched-request timing yet worsens occupied-resource
-prediction under the same hysteresis rule. A startup-endpoint contrast locates
+prediction under the same hysteresis rule (H). A startup-endpoint contrast locates
 one feedback path at the controller's cooldown boundary, while trajectory
 analysis shows that equal total occupation error can hide different control
-inputs. A final 32-cell campaign executes five frozen PPO checkpoints and an
-all2 capacity anchor on the same registered Qwen/A100 serving stack, but under
-a separately re-provisioned runtime lock. It exposes which predicted
-feasible policies remain feasible when real lifecycle and deadline accounting
-are applied.
+inputs. We then train PPO policies in replay under two startup-time assumptions,
+freeze five checkpoints, and evaluate them against an always-on two-GPU reference.
+This 32-cell campaign uses the same registered Qwen/A100 serving stack under a
+separately re-provisioned runtime lock to test whether predicted feasibility
+survives physical execution.
 
 The paper makes three contributions:
 \begin{enumerate}[leftmargin=*]
@@ -28,7 +28,7 @@ failed requests retained in the denominator.
 local-service, aggregate-resource, and trajectory fidelity. Event-level
 comparisons explain a startup-related divergence and show why aggregate resource
 error is insufficient for a closed-loop evaluator.
-\item \textbf{A reproducible policy evaluation.} A deadline guard quantifies the
+\item \textbf{A reproducible policy evaluation.} A guard for pending offline deadlines quantifies the
 resource--latency trade-off, and the continuous E2 campaign tests five frozen
 PPO checkpoints under two arrival regimes. The resulting negative cases define
 the boundary of the framework: lower scenario cost is not a saving when
@@ -93,8 +93,9 @@ lifecycle backend and deadline ledger are applied.
 
 \section{Problem and metrics}
 The system has two accelerators, online arrivals with a 60 s deadline, and 120
-offline jobs per 2,100 s observation window with a 300 s deadline. Requests may be
-served locally or accepted by a synthetic API sink. The primary window cost is
+offline jobs per 2,100 s observation window with a 300 s deadline. Online requests
+run locally or use a delay-only synthetic API sink; offline jobs run locally.
+The primary window cost, in scenario USD, is
 \begin{equation}
  C = .001 G + .002 S + .001 D + 10^{-6} I + 3\!\times\!10^{-6} B + .01 M,
 \end{equation}
@@ -110,7 +111,7 @@ Unfinished or censored work is retained in the arrival denominator. The capacity
 gate $G_F$ requires all2 (two GPUs throughout) to complete every online and offline
 request on time. P1 requires 120/120 offline requests on time, at least 99\%
 online requests on time, and no unfinished request; P1+ additionally requires
-every online request on time. P2 is a ratio-of-means saving against all1 computed
+every online request on time. P2 is a ratio-of-means saving against all1 (one GPU throughout) computed
 within each window and then averaged equally across the three windows.
 
 \section{Workload construction}
@@ -124,7 +125,8 @@ not the original users' prompts or semantic tasks.
 
 The three held-out windows are selected once from the forward pool after the old
 windows plus a 30-minute protection band. A 60 s morphology filter defines the
-steady, recovery, and burst-offline candidate classes; a fixed SHA ordering takes
+steady, recovery, and burst-offline classes (even, declining, and bursty online
+arrivals); a fixed SHA ordering takes
 the first eligible candidate in steady--recovery--burst order, subject to the
 registered separation constraint. Online rows are thinned with the inherited C2
 integer threshold, while the 120 offline jobs are constructed at fixed 15 s
@@ -194,14 +196,14 @@ search or a claim of universal PPO superiority. The earlier 38-cell Bridge
 replay is retained as historical supplementary evidence and is not pooled with E2.
 
 \section{Method}
-The physical controller separates policy decisions from lifecycle execution and
-request accounting. Fixed adapters read observable queues and device states and
+Predictive replay and physical execution share a policy contract. Adapters read
+observable queues and device states and
 return capacity targets; the guard may also select dispatch priority. The backend
 handles readiness, draining, and verified release, while request identities align
 predictions, decisions, lifecycle states, resources, and costs. The resulting data
 flow is \emph{workload rows $\rightarrow$ causal observation $\rightarrow$ policy
-adapter $\rightarrow$ lifecycle backend $\rightarrow$ identity ledger}; a CPU
-replay recomputes feasibility and cost from raw records.
+adapter $\rightarrow$ lifecycle backend $\rightarrow$ identity ledger}. A separate
+CPU verifier recomputes feasibility and cost from raw records.
 
 The bounded CPU facade exposes estimator and policy interfaces. On small synthetic
 workloads, four historical policy configurations preserve requests, events, and
@@ -213,8 +215,8 @@ recorded events; prediction fidelity is evaluated separately below.
 
 \subsection{Calibrated models}
 The model family predicts service time, startup, shutdown, active and occupied
-resource use. O is the original model; C retains the calibrated service model
-but its old startup endpoint; C30 changes that endpoint to 30 s; E combines the
+resource use. O is the original model; C calibrates service times
+but retains the original startup endpoint; C30 changes that endpoint to 30 s; E combines the
 calibrated service model with deployment-adapted lifecycle parameters; V performs
 one bounded closed-loop calibration around E. The lock fixes model bytes, tokenizer,
 workload identities, and candidate grid before held-out execution. The symbols
@@ -313,9 +315,8 @@ The development search considered the registered hysteresis family and its guard
 variants, including 26 candidate controller configurations. Selection used the
 development contract and feasibility gates before the held-out inputs were read.
 The selected guarded configuration was identical to the preregistered H+guard arm,
-so a separate $P_{\mathrm{selected}}$ arm would have duplicated the same policy and
-was correctly merged into the four-arm formal matrix. This deduplication preserves
-the planned evidence while avoiding pseudo-replication.
+so the duplicate $P_{\mathrm{selected}}$ arm was merged into the four-arm formal
+matrix to avoid pseudo-replication.
 
 \subsection{Evidence protocol}
 The held-out study evaluates all1, all2, H, and H+guard on steady, recovery,
