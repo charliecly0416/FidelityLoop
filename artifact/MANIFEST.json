@@ -1,37 +1,15 @@
 {
   "schema": "fidelityloop-release-manifest-v1",
   "version": "0.1.0",
+  "paper_revision": "v7r7",
+  "paper_freeze_tag": "paper-v7r7-20261007",
   "paper_title": "FidelityLoop: Closed-Loop Validation of Elastic LLM-Serving Policies",
+  "scope": "tracked release files, excluding this manifest and ignored build/cache files",
   "files": [
     {
       "path": ".gitignore",
       "bytes": 228,
       "sha256": "00a318f70ef9b721cf60d715df2eaf3fb358595f7b964be0a8a17522bfc923b2"
-    },
-    {
-      "path": ".pytest_cache/.gitignore",
-      "bytes": 37,
-      "sha256": "3ed731b65d06150c138e2dadb0be0697550888a6b47eb8c45ecc9adba8b8e9bd"
-    },
-    {
-      "path": ".pytest_cache/CACHEDIR.TAG",
-      "bytes": 191,
-      "sha256": "37dc88ef9a0abeddbe81053a6dd8fdfb13afb613045ea1eb4a5c815a74a3bde4"
-    },
-    {
-      "path": ".pytest_cache/README.md",
-      "bytes": 302,
-      "sha256": "73fd6fccdd802c419a6b2d983d6c3173b7da97558ac4b589edec2dfe443db9ad"
-    },
-    {
-      "path": ".pytest_cache/v/cache/lastfailed",
-      "bytes": 2,
-      "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
-    },
-    {
-      "path": ".pytest_cache/v/cache/nodeids",
-      "bytes": 218,
-      "sha256": "6cdeeda7bd86462f2a5ce7724e02564022ce9a3c92b9b1f377fb97be8f4f3744"
     },
     {
       "path": "CITATION.cff",
@@ -60,8 +38,8 @@
     },
     {
       "path": "artifact/bridge_execution/BASELINE_MANIFEST.json",
-      "bytes": 449,
-      "sha256": "e17971cd6e7969e0998626d1e8c9e1b229e998b4efb785f5db13dbc377dfb9de"
+      "bytes": 522,
+      "sha256": "275c9fc6bc05699aa6b9f8ebd47bbc661408698216c7d40d343fe91560eecf5f"
     },
     {
       "path": "artifact/bridge_execution/CONTRACT.json",
@@ -107,6 +85,11 @@
       "path": "artifact/data/validation_steady_sample.jsonl",
       "bytes": 66560,
       "sha256": "882fd5199725c1ca6dd698b2dec6f53822f1a11dad744cadb4e16275a08ba709"
+    },
+    {
+      "path": "docs/paper-release-20261007.md",
+      "bytes": 3205,
+      "sha256": "d1d4a14830ddce15da5e4bf8f22b346f41b9dd935d022e67aa15a8c339cd5a13"
     },
     {
       "path": "evidence/E2_CONTINUOUS_32_RESULTS.json",
@@ -175,13 +158,13 @@
     },
     {
       "path": "paper/README.md",
-      "bytes": 513,
-      "sha256": "d94ddc7b7dec861b28b987a935e573f9a82c25dd1037ea7e9b0681274e506cd3"
+      "bytes": 1213,
+      "sha256": "29674d2cd170737ceaf879c8e2cef47b00bf677218bbc8d7dd09241036787b52"
     },
     {
       "path": "paper/abstract.tex",
-      "bytes": 1509,
-      "sha256": "a4aa63e8579628db9456a9a45adaeae23a2cdae96f04f56f870deea477219c4c"
+      "bytes": 1545,
+      "sha256": "c5c00d8745417a606ebe21967c9d8f7eb305b5269a8ed6da028be3b6732481d6"
     },
     {
       "path": "paper/appendix.tex",
@@ -215,8 +198,8 @@
     },
     {
       "path": "paper/body.tex",
-      "bytes": 40101,
-      "sha256": "93d79209ce1180defc4f940666a96821b73f20010afcfe6304bd88e9365de2cc"
+      "bytes": 40304,
+      "sha256": "c41eaa117ac589ef778ac47847c929062c94440b54ce0b4495f4dd924b00571a"
     },
     {
       "path": "paper/cpu_model_evidence.tex",
@@ -445,8 +428,8 @@
     },
     {
       "path": "paper/main.pdf",
-      "bytes": 278804,
-      "sha256": "7d95e1213928ae369e3869fcf469d31b41c8dfeca76270303da2d2554019d534"
+      "bytes": 278706,
+      "sha256": "0d2ed58bd86f054d59cfea5bb97e32fc0dc2ab7814d32ac192ca684ef38a3886"
     },
     {
       "path": "paper/main.tex",
@@ -482,6 +465,11 @@
       "path": "pyproject.toml",
       "bytes": 342,
       "sha256": "55626c7f5f5ff89d06be86f95cae9e8032fddc8f4cb6d78e01acefaa5e7a1fac"
+    },
+    {
+      "path": "results/PAPER_VALIDATION.json",
+      "bytes": 2187,
+      "sha256": "1c5aaf9bac9706c3d5acf5b439f298b03f220dc7b964ebbae5f36f06cf5ca6d3"
     },
     {
       "path": "results/VALIDATION.json",

@@ -64,11 +64,13 @@ ledger events. Collapsing these contexts into one endpoint can alter closed-loop
 \end{figure}
 
 \section{Related work}
-Serving predictors support validation and configuration choice: Vidur simulates
-LLM inference, Charon models operator-level execution, and Clockwork studies
-predictable request timing \citep{vidur2024,charon2026,gujarati2020clockwork_arxiv}.
-We ask a narrower validation question: can better matched-service fit coexist
-with worse launch-to-verified-release prediction under a fixed controller?
+Vidur and Charon use performance simulation to guide LLM configuration choices;
+Clockwork studies predictable request timing
+\citep{vidur2024,charon2026,gujarati2020clockwork_arxiv}.
+FidelityLoop complements these efforts with a shared policy interface for replay
+and physical execution, aligning request identities, lifecycle trajectories, and
+deadline-aware resource ledgers. This lets us test whether better service-time
+fit also improves resource prediction and policy feasibility.
 
 Physical serving systems change how capacity becomes available: cold-start
 characterization and systems such as ServerlessLLM expose this lifecycle cost
@@ -636,12 +638,14 @@ Window & GPU & API .5 & API 1 & API 2 & break-even\\
 \end{tabular*}
 \end{table}
 
-Separate external checks bound the rule-control results. The same-runtime baseline comparison
-found lower guard cost on two known Qwen windows while increasing API share and
-queue exposure; the Llama and load-boundary studies retained failures rather than
-turning them into savings. We use these studies as scope evidence for the guard,
-not as additional E2 cells or pooled policy samples. Their full tables and raw
-identities are in the supplementary appendix.
+External checks evaluate three implemented rule baselines: queue-target scaling
+(B-HPA), Holt queue prediction (B-PRED), and queueing-based capacity selection
+(B-MMC). Each meets all deadlines in its nine formal runs. A separate same-runtime
+comparison finds lower H+guard cost than B-HPA on two known Qwen windows, with
+higher API share and queue exposure. These results and the Llama and load-boundary
+studies bound the guard's scope; they are not additional E2 samples. Full results
+and baseline definitions appear in the supplement's External-validity evidence
+section.
 
 \section{Discussion}
 Lower resource error did not imply better feasibility prediction. The C30

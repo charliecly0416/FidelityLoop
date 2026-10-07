@@ -1,7 +1,8 @@
 Elastic LLM-serving policies depend on when capacity becomes available, not just
-on request service times. FidelityLoop evaluates these policies by connecting
-replay predictions to physical lifecycle execution and deadline-aware resource
-accounting. We ask whether a policy selected in replay still meets its deadlines
+on request service times. We present and implement FidelityLoop, a closed-loop
+validation framework that connects replay predictions to physical lifecycle
+execution and deadline-aware resource accounting. We ask whether a policy
+selected in replay still meets its deadlines
 when deployed. In a preregistered study of
 36 Qwen2.5-7B-Instruct runs on two A100 GPUs, service calibration improves
 matched-request timing while worsening occupied-resource prediction; trajectory

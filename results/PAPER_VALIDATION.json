@@ -1,0 +1,62 @@
+{
+  "schema": "fidelityloop-paper-validation-v1",
+  "date": "2026-10-07",
+  "paper_revision": "v7r7",
+  "freeze_tag": "paper-v7r7-20261007",
+  "baseline_commit": "87deeb1",
+  "status": "PASS",
+  "scope": "framework attribution, related-work positioning, existing rule-baseline visibility",
+  "paper_sha256": {
+    "abstract.tex": "c5c00d8745417a606ebe21967c9d8f7eb305b5269a8ed6da028be3b6732481d6",
+    "body.tex": "c41eaa117ac589ef778ac47847c929062c94440b54ce0b4495f4dd924b00571a",
+    "main.pdf": "0d2ed58bd86f054d59cfea5bb97e32fc0dc2ab7814d32ac192ca684ef38a3886",
+    "supplement.pdf": "356996cbf4308520e3be9cc4af8804a46557f252bf7ae7d954e6d02fb1de4554"
+  },
+  "overleaf": {
+    "zip": "FidelityLoop_Overleaf_v7r7_20261007.zip",
+    "sha256": "e825f3fd8162335abe729019862a8820f9817b949d26dff8c2cd27a91be1ab22",
+    "bytes": 349626,
+    "members": 60,
+    "source_hashes": "PASS",
+    "root_entrypoints": "PASS",
+    "clean_build": "PASS"
+  },
+  "standalone_builds": {
+    "main": {
+      "pages": 10,
+      "text_matches_release_pdf": true,
+      "unresolved_citations_or_references": false,
+      "overfull_boxes": false
+    },
+    "supplement": {
+      "pages": 14,
+      "text_matches_release_pdf": true,
+      "unresolved_citations_or_references": false,
+      "overfull_boxes": false
+    }
+  },
+  "visual_review": {
+    "main_pages_reviewed": 10,
+    "affected_pages_checked_at_full_size": [
+      2,
+      8
+    ],
+    "new_overlap_or_clipping": false,
+    "supplement_all_14_pages_pixel_identical_to_baseline": true
+  },
+  "source_checks": {
+    "citations_labels_and_table_inputs_unchanged": true,
+    "experimental_data_and_code_unchanged": true,
+    "supplement_pdf_bytes_unchanged": true
+  },
+  "tests": {
+    "command": "python -m pytest -q",
+    "passed": 3,
+    "failed": 0
+  },
+  "notes": [
+    "The first test run detected the expected stale public paper PDF hash; the public baseline manifest was refreshed before all three tests passed.",
+    "Existing style/font and underfull-box warnings remain; no overfull boxes or unresolved citations/references.",
+    "The public release manifest inventories tracked deliverables only; local pytest caches are excluded."
+  ]
+}
