@@ -1,0 +1,1473 @@
+{
+  "definition": "Per campaign/model, arithmetic mean of absolute window-total scenario-cost prediction error across ALL accepted physical cells, including deadline failures. Repeats are repeated comparisons, not independent predictions.",
+  "scope": "Existing record arithmetic only; no new experiment or simulator execution.",
+  "old_bridge_metric": {
+    "population": "both replay and physical P1+ only",
+    "C_n": 18,
+    "C30_n": 15,
+    "relative_error_pct_C": 4.064645528723823,
+    "relative_error_pct_C30": 30.287427999019805
+  },
+  "summary": [
+    {
+      "campaign": "Bridge",
+      "model": "C",
+      "cells": 38,
+      "agreement": 36,
+      "cost_mae_scenario_USD": 0.09685612097751363
+    },
+    {
+      "campaign": "Bridge",
+      "model": "C30",
+      "cells": 38,
+      "agreement": 21,
+      "cost_mae_scenario_USD": 0.699787174953185
+    },
+    {
+      "campaign": "E2",
+      "model": "C",
+      "cells": 32,
+      "agreement": 32,
+      "cost_mae_scenario_USD": 0.08044134430566018
+    },
+    {
+      "campaign": "E2",
+      "model": "C30",
+      "cells": 32,
+      "agreement": 20,
+      "cost_mae_scenario_USD": 0.465746067467529
+    }
+  ],
+  "rows": [
+    {
+      "campaign": "Bridge",
+      "model": "C",
+      "cell": "all2__bridge_locked_test_recovery_v1__r1",
+      "actual": 4.2,
+      "predicted": 4.2,
+      "absolute_error": 0.0,
+      "observed_pass": true,
+      "predicted_pass": true
+    },
+    {
+      "campaign": "Bridge",
+      "model": "C30",
+      "cell": "all2__bridge_locked_test_recovery_v1__r1",
+      "actual": 4.2,
+      "predicted": 4.2,
+      "absolute_error": 0.0,
+      "observed_pass": true,
+      "predicted_pass": true
+    },
+    {
+      "campaign": "Bridge",
+      "model": "C",
+      "cell": "all2__bridge_locked_test_steady_v1__r1",
+      "actual": 4.2,
+      "predicted": 4.2,
+      "absolute_error": 0.0,
+      "observed_pass": true,
+      "predicted_pass": true
+    },
+    {
+      "campaign": "Bridge",
+      "model": "C30",
+      "cell": "all2__bridge_locked_test_steady_v1__r1",
+      "actual": 4.2,
+      "predicted": 4.2,
+      "absolute_error": 0.0,
+      "observed_pass": true,
+      "predicted_pass": true
+    },
+    {
+      "campaign": "Bridge",
+      "model": "C",
+      "cell": "hysteresis_u8_d0_c60__bridge_locked_test_recovery_v1__r1",
+      "actual": 1.7696200236209998,
+      "predicted": 1.8006977555580288,
+      "absolute_error": 0.031077731937029007,
+      "observed_pass": true,
+      "predicted_pass": true
+    },
+    {
+      "campaign": "Bridge",
+      "model": "C30",
+      "cell": "hysteresis_u8_d0_c60__bridge_locked_test_recovery_v1__r1",
+      "actual": 1.7696200236209998,
+      "predicted": 1.021494344446741,
+      "absolute_error": 0.7481256791742588,
+      "observed_pass": true,
+      "predicted_pass": true
+    },
+    {
+      "campaign": "Bridge",
+      "model": "C",
+      "cell": "hysteresis_u8_d0_c60__bridge_locked_test_recovery_v1__r2",
+      "actual": 1.7439518762550001,
+      "predicted": 1.8006977555580288,
+      "absolute_error": 0.05674587930302866,
+      "observed_pass": true,
+      "predicted_pass": true
+    },
+    {
+      "campaign": "Bridge",
+      "model": "C30",
+      "cell": "hysteresis_u8_d0_c60__bridge_locked_test_recovery_v1__r2",
+      "actual": 1.7439518762550001,
+      "predicted": 1.021494344446741,
+      "absolute_error": 0.7224575318082591,
+      "observed_pass": true,
+      "predicted_pass": true
+    },
+    {
+      "campaign": "Bridge",
+      "model": "C",
+      "cell": "hysteresis_u8_d0_c60__bridge_locked_test_recovery_v1__r3",
+      "actual": 1.7433577856000002,
+      "predicted": 1.8006977555580288,
+      "absolute_error": 0.05733996995802859,
+      "observed_pass": true,
+      "predicted_pass": true
+    },
+    {
+      "campaign": "Bridge",
+      "model": "C30",
+      "cell": "hysteresis_u8_d0_c60__bridge_locked_test_recovery_v1__r3",
+      "actual": 1.7433577856000002,
+      "predicted": 1.021494344446741,
+      "absolute_error": 0.7218634411532592,
+      "observed_pass": true,
+      "predicted_pass": true
+    },
+    {
+      "campaign": "Bridge",
+      "model": "C",
+      "cell": "hysteresis_u8_d0_c60__bridge_locked_test_steady_v1__r1",
+      "actual": 2.12093021792,
+      "predicted": 2.1623947555580285,
+      "absolute_error": 0.04146453763802871,
+      "observed_pass": false,
+      "predicted_pass": false
+    },
+    {
+      "campaign": "Bridge",
+      "model": "C30",
+      "cell": "hysteresis_u8_d0_c60__bridge_locked_test_steady_v1__r1",
+      "actual": 2.12093021792,
+      "predicted": 1.3655427555580288,
+      "absolute_error": 0.755387462361971,
+      "observed_pass": false,
+      "predicted_pass": false
+    },
+    {
+      "campaign": "Bridge",
+      "model": "C",
+      "cell": "hysteresis_u8_d0_c60__bridge_locked_test_steady_v1__r2",
+      "actual": 2.1547702017829997,
+      "predicted": 2.1623947555580285,
+      "absolute_error": 0.007624553775028797,
+      "observed_pass": false,
+      "predicted_pass": false
+    },
+    {
+      "campaign": "Bridge",
+      "model": "C30",
+      "cell": "hysteresis_u8_d0_c60__bridge_locked_test_steady_v1__r2",
+      "actual": 2.1547702017829997,
+      "predicted": 1.3655427555580288,
+      "absolute_error": 0.7892274462249709,
+      "observed_pass": false,
+      "predicted_pass": false
+    },
+    {
+      "campaign": "Bridge",
+      "model": "C",
+      "cell": "hysteresis_u8_d0_c60__bridge_locked_test_steady_v1__r3",
+      "actual": 2.129734050014,
+      "predicted": 2.1623947555580285,
+      "absolute_error": 0.032660705544028446,
+      "observed_pass": false,
+      "predicted_pass": false
+    },
+    {
+      "campaign": "Bridge",
+      "model": "C30",
+      "cell": "hysteresis_u8_d0_c60__bridge_locked_test_steady_v1__r3",
+      "actual": 2.129734050014,
+      "predicted": 1.3655427555580288,
+      "absolute_error": 0.7641912944559712,
+      "observed_pass": false,
+      "predicted_pass": false
+    },
+    {
+      "campaign": "Bridge",
+      "model": "C",
+      "cell": "hysteresis_u8_d0_c60__guard__bridge_locked_test_recovery_v1__r1",
+      "actual": 1.754166696047,
+      "predicted": 1.8006977555580288,
+      "absolute_error": 0.04653105951102887,
+      "observed_pass": true,
+      "predicted_pass": true
+    },
+    {
+      "campaign": "Bridge",
+      "model": "C30",
+      "cell": "hysteresis_u8_d0_c60__guard__bridge_locked_test_recovery_v1__r1",
+      "actual": 1.754166696047,
+      "predicted": 1.021494344446741,
+      "absolute_error": 0.7326723516002589,
+      "observed_pass": true,
+      "predicted_pass": true
+    },
+    {
+      "campaign": "Bridge",
+      "model": "C",
+      "cell": "hysteresis_u8_d0_c60__guard__bridge_locked_test_recovery_v1__r2",
+      "actual": 1.756211873737,
+      "predicted": 1.8006977555580288,
+      "absolute_error": 0.04448588182102875,
+      "observed_pass": true,
+      "predicted_pass": true
+    },
+    {
+      "campaign": "Bridge",
+      "model": "C30",
+      "cell": "hysteresis_u8_d0_c60__guard__bridge_locked_test_recovery_v1__r2",
+      "actual": 1.756211873737,
+      "predicted": 1.021494344446741,
+      "absolute_error": 0.734717529290259,
+      "observed_pass": true,
+      "predicted_pass": true
+    },
+    {
+      "campaign": "Bridge",
+      "model": "C",
+      "cell": "hysteresis_u8_d0_c60__guard__bridge_locked_test_recovery_v1__r3",
+      "actual": 1.744896572327,
+      "predicted": 1.8006977555580288,
+      "absolute_error": 0.055801183231028784,
+      "observed_pass": true,
+      "predicted_pass": true
+    },
+    {
+      "campaign": "Bridge",
+      "model": "C30",
+      "cell": "hysteresis_u8_d0_c60__guard__bridge_locked_test_recovery_v1__r3",
+      "actual": 1.744896572327,
+      "predicted": 1.021494344446741,
+      "absolute_error": 0.723402227880259,
+      "observed_pass": true,
+      "predicted_pass": true
+    },
+    {
+      "campaign": "Bridge",
+      "model": "C",
+      "cell": "hysteresis_u8_d0_c60__guard__bridge_locked_test_steady_v1__r1",
+      "actual": 2.274147097217,
+      "predicted": 2.3374541666693167,
+      "absolute_error": 0.06330706945231679,
+      "observed_pass": false,
+      "predicted_pass": false
+    },
+    {
+      "campaign": "Bridge",
+      "model": "C30",
+      "cell": "hysteresis_u8_d0_c60__guard__bridge_locked_test_steady_v1__r1",
+      "actual": 2.274147097217,
+      "predicted": 1.4256021666693168,
+      "absolute_error": 0.8485449305476831,
+      "observed_pass": false,
+      "predicted_pass": true
+    },
+    {
+      "campaign": "Bridge",
+      "model": "C",
+      "cell": "hysteresis_u8_d0_c60__guard__bridge_locked_test_steady_v1__r2",
+      "actual": 2.3376543783350003,
+      "predicted": 2.3374541666693167,
+      "absolute_error": 0.00020021166568362503,
+      "observed_pass": false,
+      "predicted_pass": false
+    },
+    {
+      "campaign": "Bridge",
+      "model": "C30",
+      "cell": "hysteresis_u8_d0_c60__guard__bridge_locked_test_steady_v1__r2",
+      "actual": 2.3376543783350003,
+      "predicted": 1.4256021666693168,
+      "absolute_error": 0.9120522116656835,
+      "observed_pass": false,
+      "predicted_pass": true
+    },
+    {
+      "campaign": "Bridge",
+      "model": "C",
+      "cell": "hysteresis_u8_d0_c60__guard__bridge_locked_test_steady_v1__r3",
+      "actual": 2.3315955850330004,
+      "predicted": 2.3374541666693167,
+      "absolute_error": 0.005858581636316362,
+      "observed_pass": false,
+      "predicted_pass": false
+    },
+    {
+      "campaign": "Bridge",
+      "model": "C30",
+      "cell": "hysteresis_u8_d0_c60__guard__bridge_locked_test_steady_v1__r3",
+      "actual": 2.3315955850330004,
+      "predicted": 1.4256021666693168,
+      "absolute_error": 0.9059934183636835,
+      "observed_pass": false,
+      "predicted_pass": true
+    },
+    {
+      "campaign": "Bridge",
+      "model": "C",
+      "cell": "hysteresis_u8_d1_c60__bridge_locked_test_recovery_v1__r1",
+      "actual": 1.7178808996869999,
+      "predicted": 1.7707556248690064,
+      "absolute_error": 0.05287472518200653,
+      "observed_pass": false,
+      "predicted_pass": false
+    },
+    {
+      "campaign": "Bridge",
+      "model": "C30",
+      "cell": "hysteresis_u8_d1_c60__bridge_locked_test_recovery_v1__r1",
+      "actual": 1.7178808996869999,
+      "predicted": 1.0214984016402646,
+      "absolute_error": 0.6963824980467352,
+      "observed_pass": false,
+      "predicted_pass": false
+    },
+    {
+      "campaign": "Bridge",
+      "model": "C",
+      "cell": "hysteresis_u8_d1_c60__bridge_locked_test_recovery_v1__r2",
+      "actual": 1.7006057985360001,
+      "predicted": 1.7707556248690064,
+      "absolute_error": 0.07014982633300626,
+      "observed_pass": false,
+      "predicted_pass": false
+    },
+    {
+      "campaign": "Bridge",
+      "model": "C30",
+      "cell": "hysteresis_u8_d1_c60__bridge_locked_test_recovery_v1__r2",
+      "actual": 1.7006057985360001,
+      "predicted": 1.0214984016402646,
+      "absolute_error": 0.6791073968957355,
+      "observed_pass": false,
+      "predicted_pass": false
+    },
+    {
+      "campaign": "Bridge",
+      "model": "C",
+      "cell": "hysteresis_u8_d1_c60__bridge_locked_test_recovery_v1__r3",
+      "actual": 1.707286301039,
+      "predicted": 1.7707556248690064,
+      "absolute_error": 0.06346932383000636,
+      "observed_pass": false,
+      "predicted_pass": false
+    },
+    {
+      "campaign": "Bridge",
+      "model": "C30",
+      "cell": "hysteresis_u8_d1_c60__bridge_locked_test_recovery_v1__r3",
+      "actual": 1.707286301039,
+      "predicted": 1.0214984016402646,
+      "absolute_error": 0.6857878993987354,
+      "observed_pass": false,
+      "predicted_pass": false
+    },
+    {
+      "campaign": "Bridge",
+      "model": "C",
+      "cell": "hysteresis_u8_d1_c60__bridge_locked_test_steady_v1__r1",
+      "actual": 2.171900986103,
+      "predicted": 2.21468166237971,
+      "absolute_error": 0.042780676276709784,
+      "observed_pass": true,
+      "predicted_pass": true
+    },
+    {
+      "campaign": "Bridge",
+      "model": "C30",
+      "cell": "hysteresis_u8_d1_c60__bridge_locked_test_steady_v1__r1",
+      "actual": 2.171900986103,
+      "predicted": 1.3780429911083585,
+      "absolute_error": 0.7938579949946416,
+      "observed_pass": true,
+      "predicted_pass": false
+    },
+    {
+      "campaign": "Bridge",
+      "model": "C",
+      "cell": "hysteresis_u8_d1_c60__bridge_locked_test_steady_v1__r2",
+      "actual": 2.183623440217,
+      "predicted": 2.21468166237971,
+      "absolute_error": 0.031058222162709814,
+      "observed_pass": true,
+      "predicted_pass": true
+    },
+    {
+      "campaign": "Bridge",
+      "model": "C30",
+      "cell": "hysteresis_u8_d1_c60__bridge_locked_test_steady_v1__r2",
+      "actual": 2.183623440217,
+      "predicted": 1.3780429911083585,
+      "absolute_error": 0.8055804491086416,
+      "observed_pass": true,
+      "predicted_pass": false
+    },
+    {
+      "campaign": "Bridge",
+      "model": "C",
+      "cell": "hysteresis_u8_d1_c60__bridge_locked_test_steady_v1__r3",
+      "actual": 2.268323356592,
+      "predicted": 2.21468166237971,
+      "absolute_error": 0.05364169421229015,
+      "observed_pass": true,
+      "predicted_pass": true
+    },
+    {
+      "campaign": "Bridge",
+      "model": "C30",
+      "cell": "hysteresis_u8_d1_c60__bridge_locked_test_steady_v1__r3",
+      "actual": 2.268323356592,
+      "predicted": 1.3780429911083585,
+      "absolute_error": 0.8902803654836415,
+      "observed_pass": true,
+      "predicted_pass": false
+    },
+    {
+      "campaign": "Bridge",
+      "model": "C",
+      "cell": "hysteresis_u8_d1_c60__guard__bridge_locked_test_recovery_v1__r1",
+      "actual": 1.8953421556740002,
+      "predicted": 1.9217556248690064,
+      "absolute_error": 0.0264134691950062,
+      "observed_pass": false,
+      "predicted_pass": false
+    },
+    {
+      "campaign": "Bridge",
+      "model": "C30",
+      "cell": "hysteresis_u8_d1_c60__guard__bridge_locked_test_recovery_v1__r1",
+      "actual": 1.8953421556740002,
+      "predicted": 1.0615578127515526,
+      "absolute_error": 0.8337843429224476,
+      "observed_pass": false,
+      "predicted_pass": true
+    },
+    {
+      "campaign": "Bridge",
+      "model": "C",
+      "cell": "hysteresis_u8_d1_c60__guard__bridge_locked_test_recovery_v1__r2",
+      "actual": 1.862730059367,
+      "predicted": 1.9217556248690064,
+      "absolute_error": 0.05902556550200644,
+      "observed_pass": false,
+      "predicted_pass": false
+    },
+    {
+      "campaign": "Bridge",
+      "model": "C30",
+      "cell": "hysteresis_u8_d1_c60__guard__bridge_locked_test_recovery_v1__r2",
+      "actual": 1.862730059367,
+      "predicted": 1.0615578127515526,
+      "absolute_error": 0.8011722466154474,
+      "observed_pass": false,
+      "predicted_pass": true
+    },
+    {
+      "campaign": "Bridge",
+      "model": "C",
+      "cell": "hysteresis_u8_d1_c60__guard__bridge_locked_test_recovery_v1__r3",
+      "actual": 1.8523670897850002,
+      "predicted": 1.9217556248690064,
+      "absolute_error": 0.06938853508400622,
+      "observed_pass": false,
+      "predicted_pass": false
+    },
+    {
+      "campaign": "Bridge",
+      "model": "C30",
+      "cell": "hysteresis_u8_d1_c60__guard__bridge_locked_test_recovery_v1__r3",
+      "actual": 1.8523670897850002,
+      "predicted": 1.0615578127515526,
+      "absolute_error": 0.7908092770334476,
+      "observed_pass": false,
+      "predicted_pass": true
+    },
+    {
+      "campaign": "Bridge",
+      "model": "C",
+      "cell": "hysteresis_u8_d1_c60__guard__bridge_locked_test_steady_v1__r1",
+      "actual": 2.191484292803,
+      "predicted": 2.21468166237971,
+      "absolute_error": 0.023197369576709814,
+      "observed_pass": true,
+      "predicted_pass": true
+    },
+    {
+      "campaign": "Bridge",
+      "model": "C30",
+      "cell": "hysteresis_u8_d1_c60__guard__bridge_locked_test_steady_v1__r1",
+      "actual": 2.191484292803,
+      "predicted": 1.3781024022196462,
+      "absolute_error": 0.8133818905833539,
+      "observed_pass": true,
+      "predicted_pass": true
+    },
+    {
+      "campaign": "Bridge",
+      "model": "C",
+      "cell": "hysteresis_u8_d1_c60__guard__bridge_locked_test_steady_v1__r2",
+      "actual": 2.261982499813,
+      "predicted": 2.21468166237971,
+      "absolute_error": 0.047300837433290166,
+      "observed_pass": true,
+      "predicted_pass": true
+    },
+    {
+      "campaign": "Bridge",
+      "model": "C30",
+      "cell": "hysteresis_u8_d1_c60__guard__bridge_locked_test_steady_v1__r2",
+      "actual": 2.261982499813,
+      "predicted": 1.3781024022196462,
+      "absolute_error": 0.8838800975933538,
+      "observed_pass": true,
+      "predicted_pass": true
+    },
+    {
+      "campaign": "Bridge",
+      "model": "C",
+      "cell": "hysteresis_u8_d1_c60__guard__bridge_locked_test_steady_v1__r3",
+      "actual": 2.224426250562,
+      "predicted": 2.21468166237971,
+      "absolute_error": 0.00974458818228996,
+      "observed_pass": true,
+      "predicted_pass": true
+    },
+    {
+      "campaign": "Bridge",
+      "model": "C30",
+      "cell": "hysteresis_u8_d1_c60__guard__bridge_locked_test_steady_v1__r3",
+      "actual": 2.224426250562,
+      "predicted": 1.3781024022196462,
+      "absolute_error": 0.8463238483423536,
+      "observed_pass": true,
+      "predicted_pass": true
+    },
+    {
+      "campaign": "Bridge",
+      "model": "C",
+      "cell": "ppo_C30_raw__bridge_locked_test_recovery_v1__r1",
+      "actual": 1.57395888194,
+      "predicted": 2.13117746001094,
+      "absolute_error": 0.55721857807094,
+      "observed_pass": true,
+      "predicted_pass": true
+    },
+    {
+      "campaign": "Bridge",
+      "model": "C30",
+      "cell": "ppo_C30_raw__bridge_locked_test_recovery_v1__r1",
+      "actual": 1.57395888194,
+      "predicted": 1.990010583870755,
+      "absolute_error": 0.4160517019307548,
+      "observed_pass": true,
+      "predicted_pass": true
+    },
+    {
+      "campaign": "Bridge",
+      "model": "C",
+      "cell": "ppo_C30_raw__bridge_locked_test_recovery_v1__r2",
+      "actual": 1.6085858568440001,
+      "predicted": 2.13117746001094,
+      "absolute_error": 0.52259160316694,
+      "observed_pass": false,
+      "predicted_pass": true
+    },
+    {
+      "campaign": "Bridge",
+      "model": "C30",
+      "cell": "ppo_C30_raw__bridge_locked_test_recovery_v1__r2",
+      "actual": 1.6085858568440001,
+      "predicted": 1.990010583870755,
+      "absolute_error": 0.3814247270267548,
+      "observed_pass": false,
+      "predicted_pass": true
+    },
+    {
+      "campaign": "Bridge",
+      "model": "C",
+      "cell": "ppo_C30_raw__bridge_locked_test_recovery_v1__r3",
+      "actual": 1.696690512767,
+      "predicted": 2.13117746001094,
+      "absolute_error": 0.4344869472439401,
+      "observed_pass": false,
+      "predicted_pass": true
+    },
+    {
+      "campaign": "Bridge",
+      "model": "C30",
+      "cell": "ppo_C30_raw__bridge_locked_test_recovery_v1__r3",
+      "actual": 1.696690512767,
+      "predicted": 1.990010583870755,
+      "absolute_error": 0.2933200711037549,
+      "observed_pass": false,
+      "predicted_pass": true
+    },
+    {
+      "campaign": "Bridge",
+      "model": "C",
+      "cell": "ppo_C30_raw__bridge_locked_test_steady_v1__r1",
+      "actual": 2.0520422179880002,
+      "predicted": 2.1565130170153353,
+      "absolute_error": 0.10447079902733503,
+      "observed_pass": true,
+      "predicted_pass": true
+    },
+    {
+      "campaign": "Bridge",
+      "model": "C30",
+      "cell": "ppo_C30_raw__bridge_locked_test_steady_v1__r1",
+      "actual": 2.0520422179880002,
+      "predicted": 1.6362672326737802,
+      "absolute_error": 0.4157749853142201,
+      "observed_pass": true,
+      "predicted_pass": true
+    },
+    {
+      "campaign": "Bridge",
+      "model": "C",
+      "cell": "ppo_C30_raw__bridge_locked_test_steady_v1__r2",
+      "actual": 2.090149393501,
+      "predicted": 2.1565130170153353,
+      "absolute_error": 0.06636362351433522,
+      "observed_pass": true,
+      "predicted_pass": true
+    },
+    {
+      "campaign": "Bridge",
+      "model": "C30",
+      "cell": "ppo_C30_raw__bridge_locked_test_steady_v1__r2",
+      "actual": 2.090149393501,
+      "predicted": 1.6362672326737802,
+      "absolute_error": 0.4538821608272199,
+      "observed_pass": true,
+      "predicted_pass": true
+    },
+    {
+      "campaign": "Bridge",
+      "model": "C",
+      "cell": "ppo_C30_raw__bridge_locked_test_steady_v1__r3",
+      "actual": 2.084235737675,
+      "predicted": 2.1565130170153353,
+      "absolute_error": 0.07227727934033545,
+      "observed_pass": true,
+      "predicted_pass": true
+    },
+    {
+      "campaign": "Bridge",
+      "model": "C30",
+      "cell": "ppo_C30_raw__bridge_locked_test_steady_v1__r3",
+      "actual": 2.084235737675,
+      "predicted": 1.6362672326737802,
+      "absolute_error": 0.44796850500121965,
+      "observed_pass": true,
+      "predicted_pass": true
+    },
+    {
+      "campaign": "Bridge",
+      "model": "C",
+      "cell": "ppo_C_raw__bridge_locked_test_recovery_v1__r1",
+      "actual": 2.574500244078,
+      "predicted": 2.72858140000318,
+      "absolute_error": 0.15408115592518,
+      "observed_pass": false,
+      "predicted_pass": false
+    },
+    {
+      "campaign": "Bridge",
+      "model": "C30",
+      "cell": "ppo_C_raw__bridge_locked_test_recovery_v1__r1",
+      "actual": 2.574500244078,
+      "predicted": 1.7542547754810796,
+      "absolute_error": 0.8202454685969205,
+      "observed_pass": false,
+      "predicted_pass": true
+    },
+    {
+      "campaign": "Bridge",
+      "model": "C",
+      "cell": "ppo_C_raw__bridge_locked_test_recovery_v1__r2",
+      "actual": 2.589400338024,
+      "predicted": 2.72858140000318,
+      "absolute_error": 0.13918106197918023,
+      "observed_pass": false,
+      "predicted_pass": false
+    },
+    {
+      "campaign": "Bridge",
+      "model": "C30",
+      "cell": "ppo_C_raw__bridge_locked_test_recovery_v1__r2",
+      "actual": 2.589400338024,
+      "predicted": 1.7542547754810796,
+      "absolute_error": 0.8351455625429203,
+      "observed_pass": false,
+      "predicted_pass": true
+    },
+    {
+      "campaign": "Bridge",
+      "model": "C",
+      "cell": "ppo_C_raw__bridge_locked_test_recovery_v1__r3",
+      "actual": 2.47835908509,
+      "predicted": 2.72858140000318,
+      "absolute_error": 0.2502223149131799,
+      "observed_pass": false,
+      "predicted_pass": false
+    },
+    {
+      "campaign": "Bridge",
+      "model": "C30",
+      "cell": "ppo_C_raw__bridge_locked_test_recovery_v1__r3",
+      "actual": 2.47835908509,
+      "predicted": 1.7542547754810796,
+      "absolute_error": 0.7241043096089206,
+      "observed_pass": false,
+      "predicted_pass": true
+    },
+    {
+      "campaign": "Bridge",
+      "model": "C",
+      "cell": "ppo_C_raw__bridge_locked_test_steady_v1__r1",
+      "actual": 2.953254673789,
+      "predicted": 3.06431740000318,
+      "absolute_error": 0.1110627262141799,
+      "observed_pass": false,
+      "predicted_pass": false
+    },
+    {
+      "campaign": "Bridge",
+      "model": "C30",
+      "cell": "ppo_C_raw__bridge_locked_test_steady_v1__r1",
+      "actual": 2.953254673789,
+      "predicted": 1.9601479465882365,
+      "absolute_error": 0.9931067272007634,
+      "observed_pass": false,
+      "predicted_pass": true
+    },
+    {
+      "campaign": "Bridge",
+      "model": "C",
+      "cell": "ppo_C_raw__bridge_locked_test_steady_v1__r2",
+      "actual": 3.0077597361330004,
+      "predicted": 3.06431740000318,
+      "absolute_error": 0.056557663870179464,
+      "observed_pass": false,
+      "predicted_pass": false
+    },
+    {
+      "campaign": "Bridge",
+      "model": "C30",
+      "cell": "ppo_C_raw__bridge_locked_test_steady_v1__r2",
+      "actual": 3.0077597361330004,
+      "predicted": 1.9601479465882365,
+      "absolute_error": 1.0476117895447639,
+      "observed_pass": false,
+      "predicted_pass": true
+    },
+    {
+      "campaign": "Bridge",
+      "model": "C",
+      "cell": "ppo_C_raw__bridge_locked_test_steady_v1__r3",
+      "actual": 2.8444407545660004,
+      "predicted": 3.06431740000318,
+      "absolute_error": 0.21987664543717944,
+      "observed_pass": false,
+      "predicted_pass": false
+    },
+    {
+      "campaign": "Bridge",
+      "model": "C30",
+      "cell": "ppo_C_raw__bridge_locked_test_steady_v1__r3",
+      "actual": 2.8444407545660004,
+      "predicted": 1.9601479465882365,
+      "absolute_error": 0.8842928079777639,
+      "observed_pass": false,
+      "predicted_pass": true
+    },
+    {
+      "campaign": "E2",
+      "model": "C",
+      "cell": "all2__bridge_locked_test_recovery_v1__r1",
+      "actual": 4.2,
+      "predicted": 4.2,
+      "absolute_error": 0.0,
+      "observed_pass": true,
+      "predicted_pass": true
+    },
+    {
+      "campaign": "E2",
+      "model": "C30",
+      "cell": "all2__bridge_locked_test_recovery_v1__r1",
+      "actual": 4.2,
+      "predicted": 4.2,
+      "absolute_error": 0.0,
+      "observed_pass": true,
+      "predicted_pass": true
+    },
+    {
+      "campaign": "E2",
+      "model": "C",
+      "cell": "ppo_C_r2__bridge_locked_test_recovery_v1__r1",
+      "actual": 2.726537907809,
+      "predicted": 2.699404017023638,
+      "absolute_error": 0.02713389078536199,
+      "observed_pass": false,
+      "predicted_pass": false
+    },
+    {
+      "campaign": "E2",
+      "model": "C30",
+      "cell": "ppo_C_r2__bridge_locked_test_recovery_v1__r1",
+      "actual": 2.726537907809,
+      "predicted": 1.4054053954448584,
+      "absolute_error": 1.3211325123641415,
+      "observed_pass": false,
+      "predicted_pass": true
+    },
+    {
+      "campaign": "E2",
+      "model": "C",
+      "cell": "ppo_C_s101__bridge_locked_test_recovery_v1__r1",
+      "actual": 2.297622177928,
+      "predicted": 2.14505156924819,
+      "absolute_error": 0.15257060867980998,
+      "observed_pass": true,
+      "predicted_pass": true
+    },
+    {
+      "campaign": "E2",
+      "model": "C30",
+      "cell": "ppo_C_s101__bridge_locked_test_recovery_v1__r1",
+      "actual": 2.297622177928,
+      "predicted": 2.1695994000031797,
+      "absolute_error": 0.1280227779248202,
+      "observed_pass": true,
+      "predicted_pass": true
+    },
+    {
+      "campaign": "E2",
+      "model": "C",
+      "cell": "ppo_C30_r2__bridge_locked_test_recovery_v1__r1",
+      "actual": 2.1177837318600004,
+      "predicted": 2.13117746001094,
+      "absolute_error": 0.013393728150939754,
+      "observed_pass": true,
+      "predicted_pass": true
+    },
+    {
+      "campaign": "E2",
+      "model": "C30",
+      "cell": "ppo_C30_r2__bridge_locked_test_recovery_v1__r1",
+      "actual": 2.1177837318600004,
+      "predicted": 1.4308854850277226,
+      "absolute_error": 0.6868982468322777,
+      "observed_pass": true,
+      "predicted_pass": true
+    },
+    {
+      "campaign": "E2",
+      "model": "C",
+      "cell": "ppo_C30_s103__bridge_locked_test_recovery_v1__r1",
+      "actual": 1.9201247241280002,
+      "predicted": 1.8125316268604006,
+      "absolute_error": 0.10759309726759958,
+      "observed_pass": false,
+      "predicted_pass": false
+    },
+    {
+      "campaign": "E2",
+      "model": "C30",
+      "cell": "ppo_C30_s103__bridge_locked_test_recovery_v1__r1",
+      "actual": 1.9201247241280002,
+      "predicted": 1.7967252028520682,
+      "absolute_error": 0.12339952127593201,
+      "observed_pass": false,
+      "predicted_pass": true
+    },
+    {
+      "campaign": "E2",
+      "model": "C",
+      "cell": "ppo_C30_raw__bridge_locked_test_recovery_v1__r1",
+      "actual": 2.050814844288,
+      "predicted": 2.13117746001094,
+      "absolute_error": 0.08036261572294023,
+      "observed_pass": true,
+      "predicted_pass": true
+    },
+    {
+      "campaign": "E2",
+      "model": "C30",
+      "cell": "ppo_C30_raw__bridge_locked_test_recovery_v1__r1",
+      "actual": 2.050814844288,
+      "predicted": 1.990010583870755,
+      "absolute_error": 0.06080426041724496,
+      "observed_pass": true,
+      "predicted_pass": true
+    },
+    {
+      "campaign": "E2",
+      "model": "C",
+      "cell": "ppo_C_s101__bridge_locked_test_recovery_v1__r2",
+      "actual": 2.320177989285,
+      "predicted": 2.14505156924819,
+      "absolute_error": 0.1751264200368099,
+      "observed_pass": true,
+      "predicted_pass": true
+    },
+    {
+      "campaign": "E2",
+      "model": "C30",
+      "cell": "ppo_C_s101__bridge_locked_test_recovery_v1__r2",
+      "actual": 2.320177989285,
+      "predicted": 2.1695994000031797,
+      "absolute_error": 0.1505785892818201,
+      "observed_pass": true,
+      "predicted_pass": true
+    },
+    {
+      "campaign": "E2",
+      "model": "C",
+      "cell": "ppo_C30_r2__bridge_locked_test_recovery_v1__r2",
+      "actual": 2.051574726138,
+      "predicted": 2.13117746001094,
+      "absolute_error": 0.07960273387294015,
+      "observed_pass": true,
+      "predicted_pass": true
+    },
+    {
+      "campaign": "E2",
+      "model": "C30",
+      "cell": "ppo_C30_r2__bridge_locked_test_recovery_v1__r2",
+      "actual": 2.051574726138,
+      "predicted": 1.4308854850277226,
+      "absolute_error": 0.6206892411102773,
+      "observed_pass": true,
+      "predicted_pass": true
+    },
+    {
+      "campaign": "E2",
+      "model": "C",
+      "cell": "ppo_C30_s103__bridge_locked_test_recovery_v1__r2",
+      "actual": 1.9658973423089998,
+      "predicted": 1.8125316268604006,
+      "absolute_error": 0.15336571544859923,
+      "observed_pass": false,
+      "predicted_pass": false
+    },
+    {
+      "campaign": "E2",
+      "model": "C30",
+      "cell": "ppo_C30_s103__bridge_locked_test_recovery_v1__r2",
+      "actual": 1.9658973423089998,
+      "predicted": 1.7967252028520682,
+      "absolute_error": 0.16917213945693166,
+      "observed_pass": false,
+      "predicted_pass": true
+    },
+    {
+      "campaign": "E2",
+      "model": "C",
+      "cell": "ppo_C30_raw__bridge_locked_test_recovery_v1__r2",
+      "actual": 2.051008304671,
+      "predicted": 2.13117746001094,
+      "absolute_error": 0.08016915533994018,
+      "observed_pass": true,
+      "predicted_pass": true
+    },
+    {
+      "campaign": "E2",
+      "model": "C30",
+      "cell": "ppo_C30_raw__bridge_locked_test_recovery_v1__r2",
+      "actual": 2.051008304671,
+      "predicted": 1.990010583870755,
+      "absolute_error": 0.060997720800245014,
+      "observed_pass": true,
+      "predicted_pass": true
+    },
+    {
+      "campaign": "E2",
+      "model": "C",
+      "cell": "ppo_C_r2__bridge_locked_test_recovery_v1__r2",
+      "actual": 2.7323842874229998,
+      "predicted": 2.699404017023638,
+      "absolute_error": 0.0329802703993618,
+      "observed_pass": false,
+      "predicted_pass": false
+    },
+    {
+      "campaign": "E2",
+      "model": "C30",
+      "cell": "ppo_C_r2__bridge_locked_test_recovery_v1__r2",
+      "actual": 2.7323842874229998,
+      "predicted": 1.4054053954448584,
+      "absolute_error": 1.3269788919781413,
+      "observed_pass": false,
+      "predicted_pass": true
+    },
+    {
+      "campaign": "E2",
+      "model": "C",
+      "cell": "ppo_C30_r2__bridge_locked_test_recovery_v1__r3",
+      "actual": 2.050927656707,
+      "predicted": 2.13117746001094,
+      "absolute_error": 0.08024980330394005,
+      "observed_pass": true,
+      "predicted_pass": true
+    },
+    {
+      "campaign": "E2",
+      "model": "C30",
+      "cell": "ppo_C30_r2__bridge_locked_test_recovery_v1__r3",
+      "actual": 2.050927656707,
+      "predicted": 1.4308854850277226,
+      "absolute_error": 0.6200421716792774,
+      "observed_pass": true,
+      "predicted_pass": true
+    },
+    {
+      "campaign": "E2",
+      "model": "C",
+      "cell": "ppo_C30_s103__bridge_locked_test_recovery_v1__r3",
+      "actual": 1.8105008505660003,
+      "predicted": 1.8125316268604006,
+      "absolute_error": 0.002030776294400294,
+      "observed_pass": false,
+      "predicted_pass": false
+    },
+    {
+      "campaign": "E2",
+      "model": "C30",
+      "cell": "ppo_C30_s103__bridge_locked_test_recovery_v1__r3",
+      "actual": 1.8105008505660003,
+      "predicted": 1.7967252028520682,
+      "absolute_error": 0.013775647713932138,
+      "observed_pass": false,
+      "predicted_pass": true
+    },
+    {
+      "campaign": "E2",
+      "model": "C",
+      "cell": "ppo_C30_raw__bridge_locked_test_recovery_v1__r3",
+      "actual": 2.051435373629,
+      "predicted": 2.13117746001094,
+      "absolute_error": 0.07974208638194025,
+      "observed_pass": true,
+      "predicted_pass": true
+    },
+    {
+      "campaign": "E2",
+      "model": "C30",
+      "cell": "ppo_C30_raw__bridge_locked_test_recovery_v1__r3",
+      "actual": 2.051435373629,
+      "predicted": 1.990010583870755,
+      "absolute_error": 0.061424789758244946,
+      "observed_pass": true,
+      "predicted_pass": true
+    },
+    {
+      "campaign": "E2",
+      "model": "C",
+      "cell": "ppo_C_r2__bridge_locked_test_recovery_v1__r3",
+      "actual": 2.729732220683,
+      "predicted": 2.699404017023638,
+      "absolute_error": 0.030328203659362174,
+      "observed_pass": false,
+      "predicted_pass": false
+    },
+    {
+      "campaign": "E2",
+      "model": "C30",
+      "cell": "ppo_C_r2__bridge_locked_test_recovery_v1__r3",
+      "actual": 2.729732220683,
+      "predicted": 1.4054053954448584,
+      "absolute_error": 1.3243268252381417,
+      "observed_pass": false,
+      "predicted_pass": true
+    },
+    {
+      "campaign": "E2",
+      "model": "C",
+      "cell": "ppo_C_s101__bridge_locked_test_recovery_v1__r3",
+      "actual": 2.454271672657,
+      "predicted": 2.14505156924819,
+      "absolute_error": 0.30922010340881023,
+      "observed_pass": true,
+      "predicted_pass": true
+    },
+    {
+      "campaign": "E2",
+      "model": "C30",
+      "cell": "ppo_C_s101__bridge_locked_test_recovery_v1__r3",
+      "actual": 2.454271672657,
+      "predicted": 2.1695994000031797,
+      "absolute_error": 0.28467227265382045,
+      "observed_pass": true,
+      "predicted_pass": true
+    },
+    {
+      "campaign": "E2",
+      "model": "C",
+      "cell": "all2__bridge_locked_test_steady_v1__r1",
+      "actual": 4.2,
+      "predicted": 4.2,
+      "absolute_error": 0.0,
+      "observed_pass": true,
+      "predicted_pass": true
+    },
+    {
+      "campaign": "E2",
+      "model": "C30",
+      "cell": "all2__bridge_locked_test_steady_v1__r1",
+      "actual": 4.2,
+      "predicted": 4.2,
+      "absolute_error": 0.0,
+      "observed_pass": true,
+      "predicted_pass": true
+    },
+    {
+      "campaign": "E2",
+      "model": "C",
+      "cell": "ppo_C_r2__bridge_locked_test_steady_v1__r1",
+      "actual": 2.967909035041,
+      "predicted": 3.027044320308403,
+      "absolute_error": 0.05913528526740297,
+      "observed_pass": false,
+      "predicted_pass": false
+    },
+    {
+      "campaign": "E2",
+      "model": "C30",
+      "cell": "ppo_C_r2__bridge_locked_test_steady_v1__r1",
+      "actual": 2.967909035041,
+      "predicted": 1.632129868939785,
+      "absolute_error": 1.335779166101215,
+      "observed_pass": false,
+      "predicted_pass": true
+    },
+    {
+      "campaign": "E2",
+      "model": "C",
+      "cell": "ppo_C_s101__bridge_locked_test_steady_v1__r1",
+      "actual": 2.5845962087250003,
+      "predicted": 2.2972383317044947,
+      "absolute_error": 0.28735787702050564,
+      "observed_pass": true,
+      "predicted_pass": true
+    },
+    {
+      "campaign": "E2",
+      "model": "C30",
+      "cell": "ppo_C_s101__bridge_locked_test_steady_v1__r1",
+      "actual": 2.5845962087250003,
+      "predicted": 2.2966062770085918,
+      "absolute_error": 0.2879899317164085,
+      "observed_pass": true,
+      "predicted_pass": true
+    },
+    {
+      "campaign": "E2",
+      "model": "C",
+      "cell": "ppo_C30_r2__bridge_locked_test_steady_v1__r1",
+      "actual": 2.0897836645270003,
+      "predicted": 2.157517863740099,
+      "absolute_error": 0.06773419921309864,
+      "observed_pass": true,
+      "predicted_pass": true
+    },
+    {
+      "campaign": "E2",
+      "model": "C30",
+      "cell": "ppo_C30_r2__bridge_locked_test_steady_v1__r1",
+      "actual": 2.0897836645270003,
+      "predicted": 1.6412189152732894,
+      "absolute_error": 0.4485647492537108,
+      "observed_pass": true,
+      "predicted_pass": true
+    },
+    {
+      "campaign": "E2",
+      "model": "C",
+      "cell": "ppo_C30_s103__bridge_locked_test_steady_v1__r1",
+      "actual": 2.043139428423,
+      "predicted": 2.116908038737342,
+      "absolute_error": 0.07376861031434201,
+      "observed_pass": false,
+      "predicted_pass": false
+    },
+    {
+      "campaign": "E2",
+      "model": "C30",
+      "cell": "ppo_C30_s103__bridge_locked_test_steady_v1__r1",
+      "actual": 2.043139428423,
+      "predicted": 1.8199969871463277,
+      "absolute_error": 0.22314244127667204,
+      "observed_pass": false,
+      "predicted_pass": true
+    },
+    {
+      "campaign": "E2",
+      "model": "C",
+      "cell": "ppo_C30_raw__bridge_locked_test_steady_v1__r1",
+      "actual": 2.081868426647,
+      "predicted": 2.1565130170153353,
+      "absolute_error": 0.07464459036833526,
+      "observed_pass": true,
+      "predicted_pass": true
+    },
+    {
+      "campaign": "E2",
+      "model": "C30",
+      "cell": "ppo_C30_raw__bridge_locked_test_steady_v1__r1",
+      "actual": 2.081868426647,
+      "predicted": 1.6362672326737802,
+      "absolute_error": 0.44560119397321984,
+      "observed_pass": true,
+      "predicted_pass": true
+    },
+    {
+      "campaign": "E2",
+      "model": "C",
+      "cell": "ppo_C_s101__bridge_locked_test_steady_v1__r2",
+      "actual": 2.350628008505,
+      "predicted": 2.2972383317044947,
+      "absolute_error": 0.05338967680050555,
+      "observed_pass": true,
+      "predicted_pass": true
+    },
+    {
+      "campaign": "E2",
+      "model": "C30",
+      "cell": "ppo_C_s101__bridge_locked_test_steady_v1__r2",
+      "actual": 2.350628008505,
+      "predicted": 2.2966062770085918,
+      "absolute_error": 0.05402173149640843,
+      "observed_pass": true,
+      "predicted_pass": true
+    },
+    {
+      "campaign": "E2",
+      "model": "C",
+      "cell": "ppo_C30_r2__bridge_locked_test_steady_v1__r2",
+      "actual": 2.0806949836250004,
+      "predicted": 2.157517863740099,
+      "absolute_error": 0.07682288011509852,
+      "observed_pass": true,
+      "predicted_pass": true
+    },
+    {
+      "campaign": "E2",
+      "model": "C30",
+      "cell": "ppo_C30_r2__bridge_locked_test_steady_v1__r2",
+      "actual": 2.0806949836250004,
+      "predicted": 1.6412189152732894,
+      "absolute_error": 0.43947606835171094,
+      "observed_pass": true,
+      "predicted_pass": true
+    },
+    {
+      "campaign": "E2",
+      "model": "C",
+      "cell": "ppo_C30_s103__bridge_locked_test_steady_v1__r2",
+      "actual": 2.099366236704,
+      "predicted": 2.116908038737342,
+      "absolute_error": 0.01754180203334199,
+      "observed_pass": false,
+      "predicted_pass": false
+    },
+    {
+      "campaign": "E2",
+      "model": "C30",
+      "cell": "ppo_C30_s103__bridge_locked_test_steady_v1__r2",
+      "actual": 2.099366236704,
+      "predicted": 1.8199969871463277,
+      "absolute_error": 0.27936924955767206,
+      "observed_pass": false,
+      "predicted_pass": true
+    },
+    {
+      "campaign": "E2",
+      "model": "C",
+      "cell": "ppo_C30_raw__bridge_locked_test_steady_v1__r2",
+      "actual": 2.082155921431,
+      "predicted": 2.1565130170153353,
+      "absolute_error": 0.07435709558433512,
+      "observed_pass": true,
+      "predicted_pass": true
+    },
+    {
+      "campaign": "E2",
+      "model": "C30",
+      "cell": "ppo_C30_raw__bridge_locked_test_steady_v1__r2",
+      "actual": 2.082155921431,
+      "predicted": 1.6362672326737802,
+      "absolute_error": 0.44588868875722,
+      "observed_pass": true,
+      "predicted_pass": true
+    },
+    {
+      "campaign": "E2",
+      "model": "C",
+      "cell": "ppo_C_r2__bridge_locked_test_steady_v1__r2",
+      "actual": 2.874654868484,
+      "predicted": 3.027044320308403,
+      "absolute_error": 0.1523894518244031,
+      "observed_pass": false,
+      "predicted_pass": false
+    },
+    {
+      "campaign": "E2",
+      "model": "C30",
+      "cell": "ppo_C_r2__bridge_locked_test_steady_v1__r2",
+      "actual": 2.874654868484,
+      "predicted": 1.632129868939785,
+      "absolute_error": 1.242524999544215,
+      "observed_pass": false,
+      "predicted_pass": true
+    },
+    {
+      "campaign": "E2",
+      "model": "C",
+      "cell": "ppo_C30_r2__bridge_locked_test_steady_v1__r3",
+      "actual": 2.082482050292,
+      "predicted": 2.157517863740099,
+      "absolute_error": 0.07503581344809884,
+      "observed_pass": true,
+      "predicted_pass": true
+    },
+    {
+      "campaign": "E2",
+      "model": "C30",
+      "cell": "ppo_C30_r2__bridge_locked_test_steady_v1__r3",
+      "actual": 2.082482050292,
+      "predicted": 1.6412189152732894,
+      "absolute_error": 0.4412631350187106,
+      "observed_pass": true,
+      "predicted_pass": true
+    },
+    {
+      "campaign": "E2",
+      "model": "C",
+      "cell": "ppo_C30_s103__bridge_locked_test_steady_v1__r3",
+      "actual": 2.128686356869,
+      "predicted": 2.116908038737342,
+      "absolute_error": 0.011778318131658416,
+      "observed_pass": false,
+      "predicted_pass": false
+    },
+    {
+      "campaign": "E2",
+      "model": "C30",
+      "cell": "ppo_C30_s103__bridge_locked_test_steady_v1__r3",
+      "actual": 2.128686356869,
+      "predicted": 1.8199969871463277,
+      "absolute_error": 0.30868936972267247,
+      "observed_pass": false,
+      "predicted_pass": true
+    },
+    {
+      "campaign": "E2",
+      "model": "C",
+      "cell": "ppo_C30_raw__bridge_locked_test_steady_v1__r3",
+      "actual": 2.144304127647,
+      "predicted": 2.1565130170153353,
+      "absolute_error": 0.012208889368335196,
+      "observed_pass": true,
+      "predicted_pass": true
+    },
+    {
+      "campaign": "E2",
+      "model": "C30",
+      "cell": "ppo_C30_raw__bridge_locked_test_steady_v1__r3",
+      "actual": 2.144304127647,
+      "predicted": 1.6362672326737802,
+      "absolute_error": 0.5080368949732199,
+      "observed_pass": true,
+      "predicted_pass": true
+    },
+    {
+      "campaign": "E2",
+      "model": "C",
+      "cell": "ppo_C_r2__bridge_locked_test_steady_v1__r3",
+      "actual": 3.007531872873,
+      "predicted": 3.027044320308403,
+      "absolute_error": 0.019512447435403146,
+      "observed_pass": false,
+      "predicted_pass": false
+    },
+    {
+      "campaign": "E2",
+      "model": "C30",
+      "cell": "ppo_C_r2__bridge_locked_test_steady_v1__r3",
+      "actual": 3.007531872873,
+      "predicted": 1.632129868939785,
+      "absolute_error": 1.3754020039332149,
+      "observed_pass": false,
+      "predicted_pass": true
+    },
+    {
+      "campaign": "E2",
+      "model": "C",
+      "cell": "ppo_C_s101__bridge_locked_test_steady_v1__r3",
+      "actual": 2.411815203808,
+      "predicted": 2.2972383317044947,
+      "absolute_error": 0.11457687210350542,
+      "observed_pass": true,
+      "predicted_pass": true
+    },
+    {
+      "campaign": "E2",
+      "model": "C30",
+      "cell": "ppo_C_s101__bridge_locked_test_steady_v1__r3",
+      "actual": 2.411815203808,
+      "predicted": 2.2966062770085918,
+      "absolute_error": 0.1152089267994083,
+      "observed_pass": true,
+      "predicted_pass": true
+    }
+  ],
+  "source_sha256": {
+    "E1_ANALYSIS_LOCK.json": "50c5cd6d4b7fbbec21d352efe157e629433c2a7e803e9aaefc4b56e54284750d",
+    "FORMAL_V4_SCIENTIFIC_SUMMARY.json": "7c2cff80551bb76db477b7b1f4ce4511a45afa70e31ebbd816ea3e1cbe449d66",
+    "0261_PREDICTION_SUMMARY.json": "850958634e6170110ba550044d31347458c24cc7e80428cf635d9726861f7117",
+    "E2zip:CONTINUOUS_32_RESULTS.json": "51e3055e5493cab80bd404ac220bb291a0c10372ceba03ea8eeb249de8dcde31",
+    "E2zip:predictions/cells/C__all2__bridge_locked_test_recovery_v1.json.gz": "4931592cfc3624e3de1400f7ae8186b0cb0e4708d645f18fce3425007df62a2a",
+    "E2zip:predictions/cells/C30__all2__bridge_locked_test_recovery_v1.json.gz": "beb25bebcefc2916b5fc5240b8117ba64632b592db3d4f795ce7f49484e78773",
+    "E2zip:predictions/cells/C__ppo_C_r2__bridge_locked_test_recovery_v1.json.gz": "3a45c8563d4c9331ebe0c721e4a5c915b2bbf50d262fafb0ccf2b5c6d4e7dc85",
+    "E2zip:predictions/cells/C30__ppo_C_r2__bridge_locked_test_recovery_v1.json.gz": "19992c13979af16b257d793cc15dfbe70b60b6c6d4879f806fed7ada40c48b7b",
+    "E2zip:predictions/cells/C__ppo_C_s101__bridge_locked_test_recovery_v1.json.gz": "e59e7bc08c32fb27bce092eadcc927264d59ae944c037dd06f44c8b87c1869e9",
+    "E2zip:predictions/cells/C30__ppo_C_s101__bridge_locked_test_recovery_v1.json.gz": "cac0205934a39704b25f9a84c5c4adb317fc0ae39c278b03973525d1dea8806d",
+    "E2zip:predictions/cells/C__ppo_C30_r2__bridge_locked_test_recovery_v1.json.gz": "c81baf22b38e06e6302208bb356d3ded3fd0a96515c9118b767710f8508e29a8",
+    "E2zip:predictions/cells/C30__ppo_C30_r2__bridge_locked_test_recovery_v1.json.gz": "36f1a7c04b98b4586c7e20ef1381a861c084effa0be612284d52e4ae87d6c9dc",
+    "E2zip:predictions/cells/C__ppo_C30_s103__bridge_locked_test_recovery_v1.json.gz": "ec7ebae9c81ffe659344ea3da6f25e806ad5888a08779df745d0a31a79481d28",
+    "E2zip:predictions/cells/C30__ppo_C30_s103__bridge_locked_test_recovery_v1.json.gz": "e2aa31ded0387d39f27d3e178cdef74f3279b2f8aed87d71e5892ee710945699",
+    "E2zip:predictions/cells/C__ppo_C30_selected__bridge_locked_test_recovery_v1.json.gz": "a7324f414644c3985e9217b558a694084eda1178b2ce231eda27dc20daa0f336",
+    "E2zip:predictions/cells/C30__ppo_C30_selected__bridge_locked_test_recovery_v1.json.gz": "54aee4159dd9c39efbeb55b70a98b284565f5c031efd7a247c41c5d82a5a16be",
+    "E2zip:predictions/cells/C__all2__bridge_locked_test_steady_v1.json.gz": "9af064833565c8c03f0891476b6da649de5cef87b159865d0a862bb64fb3f7c4",
+    "E2zip:predictions/cells/C30__all2__bridge_locked_test_steady_v1.json.gz": "6ffa30a7cea678bb5eded0583c98b00fab68f0cbd36584ca41488eca402137c1",
+    "E2zip:predictions/cells/C__ppo_C_r2__bridge_locked_test_steady_v1.json.gz": "a468edca199a35c64db3d5ebefd1a0334398a00a3dfd101ea4faf264c25e9035",
+    "E2zip:predictions/cells/C30__ppo_C_r2__bridge_locked_test_steady_v1.json.gz": "c6debcf6cf25fbb0ba1e874dcd7d79ff8f731471a2f341dc638c867bb0462b77",
+    "E2zip:predictions/cells/C__ppo_C_s101__bridge_locked_test_steady_v1.json.gz": "c005cf3d5e1a6e89c453dc22bc1c5e26c03e5ce01b6310a901806574296cd332",
+    "E2zip:predictions/cells/C30__ppo_C_s101__bridge_locked_test_steady_v1.json.gz": "6e347e2362ad48194915642df3ab0962aa49516967590333763c2ec3b993b051",
+    "E2zip:predictions/cells/C__ppo_C30_r2__bridge_locked_test_steady_v1.json.gz": "a1e626c8259c49c7ddc06faf4db4d71db04f21e3d456f7e4778c84db38982aab",
+    "E2zip:predictions/cells/C30__ppo_C30_r2__bridge_locked_test_steady_v1.json.gz": "371147f85d5166325a05a501d92d73346bfb84af3870a16cadd03c0fcbb4533e",
+    "E2zip:predictions/cells/C__ppo_C30_s103__bridge_locked_test_steady_v1.json.gz": "902a9ecd51d7ee3fe0cc9dcfafabd6d35189c4d54d1a9bbe13a44e549369c87d",
+    "E2zip:predictions/cells/C30__ppo_C30_s103__bridge_locked_test_steady_v1.json.gz": "8ea7f9cf4fb6ea8e0178d9006409fd4f52dfbd826345e016eaf8ff38833bb4a3",
+    "E2zip:predictions/cells/C__ppo_C30_selected__bridge_locked_test_steady_v1.json.gz": "7523d0652d3e39e2e02e9e547633e20276746c473e54435e28ebab5f27384af2",
+    "E2zip:predictions/cells/C30__ppo_C30_selected__bridge_locked_test_steady_v1.json.gz": "f4facfb79c43454c69fc76e10aeaa29725635802b042ae2b4f489d9dd6f7f9f9"
+  }
+}

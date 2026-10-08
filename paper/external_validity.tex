@@ -169,11 +169,10 @@ saving against all2, 81.96\% occurs in the final 600 seconds.}
 \label{fig:w4lsegments}
 \end{figure}
 
-The result is explicitly load-conditioned. Thinning replays previously observed
-source windows at a new intensity; it is not a new held-out trace, and the intensity
-was selected by registered all2 feasibility rather than outcome-independent
-sampling. The 2,100-second horizon also is not a uniform drain interval: offline
-arrivals continue during $[1500,1800)$, and the back window retains an online
-arrival at the closed 1500-second endpoint. Source-window timing and ledger
-segments are therefore reported separately. The evidence does not estimate
-Azure's production QoS, required fleet size, model quality, energy use, or bills.
+Thinning reuses observed source windows; intensity was selected by the
+registered all2 feasibility gate, not outcome-independent sampling. The result
+is therefore load-conditioned, not a new held-out trace. Offline arrivals
+continue during $[1500,1800)$, and the back window retains an online arrival
+at the closed 1500-second endpoint, so source-window timing and ledger segments
+are reported separately. These results do not estimate Azure's production QoS,
+required fleet size, model quality, energy use, or bills.

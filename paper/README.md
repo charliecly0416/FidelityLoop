@@ -1,11 +1,7 @@
-# Paper files
+# Paper
 
-`main.tex` is the anonymous 10-page submission entry point. `supplement.tex` builds the independent 14-page supplement. All figures, generated table rows, style files, and bibliography required by these entry points are in this directory. `main.pdf` and `supplement.pdf` are the checked-in builds.
+`main.tex` builds the anonymous paper: 11 PDF pages, with the body ending on page 10 and references continuing on page 11. `supplement.tex` builds the 16-page supplement. The corresponding PDFs are included here.
 
-The paper reports a physical campaign on two A100 GPUs. The public repository provides the CPU framework and compact evidence ledger; it does not pretend that a CPU smoke test reproduces GPU timing.
+Download the checked [Overleaf source bundle](https://github.com/charliecly0416/FidelityLoop/releases/download/paper-v7r9-20261008/FidelityLoop_Overleaf_v7r9_Checked_20261008.zip). Import it into Overleaf and compile each entry point with pdfLaTeX/BibTeX.
 
-## Overleaf
-
-The source bundle for paper revision v7r9 is `FidelityLoop_Overleaf_v7r9_20261007.zip`, available from the GitHub release tagged `paper-v7r9-20261007`. Import the ZIP as a new Overleaf project, select `main.tex` as the main document, and use pdfLaTeX. Select `supplement.tex` to build the separate supplement. Both entry points are at the ZIP root; no external files or shell escape are required.
-
-This revision makes the replay-training-to-physical-evaluation path explicit, distinguishes the predictive replay from the CPU accounting verifier, and defines the first-use workload and cost terms without adding experiments. Experimental evidence is unchanged. The source remains anonymous. Importing as a new project preserves any manual edits in an existing Overleaf project.
+The bundle preserves the approved manuscript exactly; this repository README provides the current download link. `SHA256SUMS.txt` covers the source files in this directory.

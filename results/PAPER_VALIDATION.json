@@ -1,130 +1,49 @@
 {
   "schema": "fidelityloop-paper-validation-v1",
-  "date": "2026-10-07",
+  "date": "2026-10-08",
   "paper_revision": "v7r9",
-  "freeze_tag": "paper-v7r9-20261007",
-  "baseline_commit": "e0a4fd826f5900a359a7c97eb32cecd28746e103",
+  "freeze_tag": "paper-v7r9-20261008",
   "status": "PASS",
-  "scope": "targeted paper readability and narrative-closure revision; no new scientific experiments",
+  "scope": "Final author-reviewed manuscript and compact CPU API-delay diagnostic; no new GPU runs or framework-code changes.",
+  "baseline_commit": "5329a1b95f0facc9981d7c8153bd5ac48badfbb8",
   "paper_sha256": {
-    "abstract.tex": "571877dd7b03538910a32aa344f1976ecfb441e5b5f6553b0dc3b8e11d880457",
-    "body.tex": "87f32a875a8ec94158fcb7a5a5a0f9363a304c83c35ea7f0a9180fafbb9784f4",
-    "appendix.tex": "a2a3fb2ee5585d991b833ed90836e45cc2eede337f4c52d111d28d1a5500e484",
-    "appendix_e1.tex": "348d3805686b97943da3e47440bab69abe7c065dc50ad02d65bc903d2341fadb",
-    "main.pdf": "535d2ce9108129dbc494c110ab8ab06d04e54df9cc3a779bf8b46f5f304b941d",
-    "supplement.pdf": "2641827f37d00266457686bbb59266868da6ffd2a3a56e5707adfe26871bdd28"
+    "abstract.tex": "aba16d1b308dc6e1e70b4acc4511a3165e9314c733d71a1d32e54781555d3d9a",
+    "body.tex": "750305506dd2761d084920966097930c171627b2deb5510a50613099b0f2fab4",
+    "appendix.tex": "fd0c4305c3bbff524c74eb2677a2567f73ce30d2df46f415371b47be197ef6e3",
+    "main.pdf": "2e734be144fa0cdebda231a20e41016e4e9a02fed9486fe24d9275ed2bd2f08e",
+    "supplement.pdf": "199221b20d9fb73734b8fa4ea246f6050be0b32553d54ba2bde41b5d8e346b35"
   },
   "packages": {
-    "FidelityLoop_Overleaf_v7r9_20261007.zip": {
-      "sha256": "63763623a4381c975d483724cf9d4556f55fad268bf1bb81021727c9fa197ce1",
-      "bytes": 349899,
-      "members": 60
-    },
-    "FidelityLoop_E1_CPU_Artifact_v7r8_20261007.zip": {
-      "sha256": "d79fa83c0a9ae3bee5ce0176b15404b8fe2be742a9a3c170f630ee1367713b79",
-      "bytes": 62914,
-      "members": 11
+    "FidelityLoop_Overleaf_v7r9_Checked_20261008.zip": {
+      "sha256": "9469a11c75a3744d0b2d319939f8f4eeb608da4d240a516fe1bfec6d573dcc7a",
+      "bytes": 395276,
+      "members": 66
     }
   },
-  "standalone_builds": {
-    "main": {
-      "pages": 10,
-      "text_matches_release_pdf": true,
-      "unresolved_citations_or_references": false,
-      "overfull_boxes": false
-    },
-    "supplement": {
-      "pages": 14,
-      "text_matches_release_pdf": true,
-      "unresolved_citations_or_references": false,
-      "overfull_boxes": false
-    }
+  "checked_builds": {
+    "main_pdf_pages": 11,
+    "main_body_ends_on_page": 10,
+    "supplement_pdf_pages": 16,
+    "unresolved_references": false,
+    "overfull_boxes": false,
+    "pdfs_identical_to_checked_author_delivery": true
   },
   "visual_review": {
-    "main_pages_reviewed": 10,
-    "supplement_pages_reviewed": 14,
-    "method_main_page_full_size": 3,
-    "reproduction_supplement_page_full_size": 1,
-    "all_final_supplement_pages_rechecked_after_reflow": true,
+    "pages": 27,
     "new_overlap_or_clipping": false
   },
   "source_checks": {
-    "status": "PASS",
-    "unchanged_e1_scientific_files": [
-      "analysis.py",
-      "test_analysis.py",
-      "reference_results.json",
-      "data/ledger.csv",
-      "data/prices.json",
-      "data/requests.json",
-      "data/runs.json"
+    "exact_approved_source_files": 64,
+    "repository_metadata_differences": [
+      "README.md",
+      "SHA256SUMS.txt"
     ],
-    "unchanged_figure_table_bibliography_protocol_files": 48,
-    "recovery_summary_hash_bound": true,
-    "recovery_runs": 16,
-    "recovery_ticks": 29580,
-    "citations_labels_and_inputs_unchanged": true,
-    "e1_author_identifier_scan_hits": 0,
-    "changed_manuscript_files": [
-      "paper/abstract.tex",
-      "paper/body.tex"
-    ]
-  },
-  "isolated_execution": {
-    "status": "PASS",
-    "source_import_verified_local": true,
-    "offline_editable_install": true,
-    "checks": [
-      {
-        "name": "install",
-        "exit_code": 0
-      },
-      {
-        "name": "module-location",
-        "exit_code": 0
-      },
-      {
-        "name": "smoke",
-        "exit_code": 0
-      },
-      {
-        "name": "facade",
-        "exit_code": 0
-      },
-      {
-        "name": "e1-verify",
-        "exit_code": 0
-      },
-      {
-        "name": "pytest",
-        "exit_code": 0
-      },
-      {
-        "name": "zip-verify",
-        "exit_code": 0
-      },
-      {
-        "name": "zip-tests",
-        "exit_code": 0
-      },
-      {
-        "name": "zip-analysis",
-        "exit_code": 0
-      }
-    ],
-    "facade_receipt_exact_match": true
+    "framework_code_unchanged": true
   },
   "tests": {
-    "command": "python -m pytest -q",
     "passed": 5,
     "failed": 0,
     "nested_e1_unittest_cases_passed": 10,
     "e1_reference_values_checked": 169
-  },
-  "notes": [
-    "The revision makes replay training, checkpoint freezing, and physical evaluation explicit without changing the study evidence.",
-    "The decision-reconstruction evidence is inherited; its bound audit and summary were checked, not the full raw-event replay rerun.",
-    "Existing template/font and underfull-box warnings remain; no overfull boxes or unresolved citations/references.",
-    "The E1 artifact is retained as the byte-identical v7r8 release asset; the new Overleaf bundle contains the v7r9 manuscript sources."
-  ]
+  }
 }

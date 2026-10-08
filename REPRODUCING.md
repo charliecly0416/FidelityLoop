@@ -59,6 +59,10 @@ Only fixed-event arithmetic is recomputed. The accepted completion counts, route
 
 This evidence is distinct from the 32-cell E2 PPO campaign. Replaying decisions under recorded events checks implementation consistency, not prediction accuracy of an unconstrained rollout.
 
+## API-delay diagnostic receipt
+
+`evidence/API_DELAY_SENSITIVITY.json` reports the frozen-rule CPU sweep in supplement B.3. The tested delays are 1, 2, 5, 10, 20, 40, and 60 seconds; all other settings are fixed. The full replay inputs and runner are retained separately, so the public file supports result inspection rather than a standalone rerun.
+
 ## Historical archive paths in the supplement
 
 The supplement's `scripts/`, `docs/`, and `artifacts/` paths identify the full historical experiment archive. They are provenance locations, not commands available in this compact source release.

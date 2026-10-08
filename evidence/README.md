@@ -8,6 +8,7 @@ The JSON and CSV files here are compact, reviewable records extracted from the l
 - `E2_PACKAGE_MANIFEST.json`: file-level manifest for the execution package.
 - `HISTORICAL_FACADE_VALIDATION.json`: CPU exact-replay and conservation validation receipt.
 - `E1_DECISION_REPLAY_SUMMARY.json` and `E1_DECISION_REPLAY_AUDIT.json`: unchanged historical recovery records for 29,580 decision ticks across 16 E1 runs, including two smoke runs and two all2 capacity anchors. The audit binds the summary hash and reports the independent review outcome. These are audit receipts; the underlying raw logs are outside the compact release. Their historical schema names mention the earlier E2 microbenchmark, which is distinct from the later 32-cell E2 policy campaign.
+- `API_DELAY_SENSITIVITY.json`: finite CPU delay sweep for the four frozen rule policies under model E (84 scenarios; 12 original-baseline matches). This is a compact result receipt, not a new physical campaign or an empirical API calibration.
 - `V7_CLAIM_LOCK.json`: paper-claim strings checked against the evidence.
 
 The original 220 MB handoff archive and raw GPU journals remain outside this Git repository. Their hash is recorded so a privately retained copy can be compared without making redistribution claims.

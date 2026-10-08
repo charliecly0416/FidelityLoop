@@ -11,9 +11,10 @@ The remaining \path{scripts/}, \path{docs/}, and \path{artifacts/} paths in this
 supplement identify the separately retained full experiment archive. Its
 \path{scripts/maxopt_v3_closeout/reverify.py} rebuilds the 36 acceptance reports,
 and \path{scripts/maxopt_v3_closeout/analyze.py} generates their tables; both
-require archived runs outside the compact source release. The original archive
-lacks its root checksum sidecar; per-run snapshots support independent replay
-without reconstructing that sidecar as original evidence.
+require archived runs outside the compact source release. A recovery addendum restores the root environment snapshot from
+identical, hash-bound per-run copies and provides a newly generated
+archive integrity index. The original checksum sidecar remains
+unavailable; the new index is not presented as the historical original.
 
 \begin{itemize}[leftmargin=*]
 \item Full-capacity feasibility: nine all2 reports and G-F in \path{decisions.json}.
@@ -118,6 +119,8 @@ and no unfinished request. P1+ additionally requires every online arrival
 on time. These definitions follow \path{scripts/maxopt_v3/acceptance.py};
 the extension's strict qualification uses the same timely/unfinished distinction.
 
+\input{replay_model_specification}
+
 \subsection{Guard implementation map}
 The frozen \path{scripts/maxopt_v3/policy.py} implements the following
 causal projection and state update. The lookup is a conservative estimate, not a
@@ -206,6 +209,27 @@ P2 & mean: 42.74\% & window-cost gate\\
 \bottomrule
 \end{tabular*}
 \end{table}
+
+\subsection{API-delay sensitivity in CPU replay}
+\label{sec:api-delay-sensitivity}
+
+We replay the four frozen rule policies (all1, all2, H, and H+guard)
+on the three original windows under model E, varying only the fixed
+API service delay over $\{1,2,5,10,20,40,60\}$\,s. API capacity remains
+eight concurrent requests, with the same 10\,s routing wait, prices,
+and policy parameters. All 12 five-second baselines reproduce the
+frozen predictions, yielding 84 deterministic CPU scenarios in total.
+
+At the tested delays of 1, 2, 5, and 10\,s, both H+guard and all1
+satisfy P1+ in all three windows. Their equal-window cost savings
+are 45.07\%, 45.07\%, 45.08\%, and 43.76\%, respectively.
+At 20\,s, H+guard misses online deadlines in recovery and steady;
+at 40 and 60\,s, online misses occur in all three guarded windows.
+Longer API service occupies the finite API slots and changes
+subsequent queueing, routing, and GPU control. These results test
+sensitivity to the timer assumption; they are CPU predictions,
+not additional physical runs or an empirical calibration of a
+commercial API.
 
 \input{appendix_v4}
 \input{appendix_e1}

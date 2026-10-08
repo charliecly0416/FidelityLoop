@@ -1,0 +1,46 @@
+\subsection{Replay model specification}
+\label{app:replay-model-specification}
+The main text lists the frozen O/C/C30/E/V parameters and controlled contrasts.
+This section gives their construction and provenance. E2 reuses the frozen
+C/C30 pair.
+
+\paragraph{Service construction.}
+For input length $i$, output budget $o$, and local concurrency $c$,
+O assigns service duration $c(i/1024+o/128)$ seconds, using assumed rates
+of 1024 input and 128 output tokens/s. C replaces this formula with the
+median measured wall time per homogeneous input/output/concurrency cell.
+The replay interpolates linearly in input length between 128, 512, and
+2048 tokens, and in concurrency between one and four, with output budgets
+restricted to 32, 128, or 256 tokens. A dedicated 256-input/256-output,
+concurrency-four measurement gives 3.098\,s. Each running request accumulates
+progress at the reciprocal of its current-concurrency service estimate;
+this is a mixed-workload approximation, not token-level vLLM simulation.
+C30, E, and V share this lookup unchanged.
+
+\paragraph{Lifecycle construction.}
+O's 30\,s startup is the original assumed constant. C's 69.219\,s proxy is
+the median of 18 launch-to-ready observations collected during two-instance
+initialization in nine development runs. The shared historical 7.059\,s shutdown
+proxy comes from nine joint-cleanup durations; the 69.363\,s setup proxy is
+the median of nine setup-barrier durations. C30 restores the 30\,s assumption
+while holding C's other fields fixed; it is not a new fitted startup estimate.
+
+The earlier empirical lifecycle model separated window restarts from setup
+and normal scale-in from terminal cleanup. Medians within each run, followed
+by a median across runs, gave startup/shutdown values of 25.196/1.937\,s.
+V searched the nine combinations of startup multipliers
+$\{0.9,1.0,1.1\}$ and shutdown multipliers $\{0.8,1.0,1.2\}$ around that
+center, clipped below by the corresponding observed minima. It minimized
+equal-window $L$ on the earlier development runs; leave-one-window-out and
+leave-one-repeat-out checks preceded the final fit. The frozen V uses
+25.196/2.325\,s and is distinct from the later $V'$ refit.
+
+Before the held-out study, E alone was adapted to the A100 deployment:
+medians from six development restarts gave 33.497/2.224\,s, followed by six
+confirmation restarts. The service lookup, other models, and selected policy
+were unchanged; no held-out outcomes entered this adaptation. Thus V--E
+compares the historical refit with the deployment-adapted model, rather than
+isolating a fitting-method effect. Windows begin with both instances ready;
+the inherited setup proxy is not fitted through the window loss.
+The accompanying \texttt{REPLAY\_MODEL\_SPECIFICATION.json} retains the full
+lookup, unrounded parameters, and source hashes.
