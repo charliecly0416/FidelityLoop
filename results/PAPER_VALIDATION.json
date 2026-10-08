@@ -1,60 +1,53 @@
 {
   "schema": "fidelityloop-paper-validation-v1",
   "date": "2026-10-08",
-  "paper_revision": "v7r9",
-  "freeze_tag": "paper-v7r9-final-20261008",
+  "paper_revision": "v7r10",
+  "freeze_tag": "paper-v7r10-20261008",
   "status": "PASS",
-  "scope": "Verified conference references, removed unused table source, and refreshed manuscript claim checks; scientific text, figures, data, and framework code unchanged.",
-  "baseline_commit": "11cec816ba3e31a8ad473800076cd63a3679f9b1",
+  "scope": "Implementation footprint: one Method paragraph and one supplementary table, with hash-bound source snapshots and an offline counter. Existing experiments, figures, claims, and framework behavior unchanged.",
+  "baseline_commit": "8d6981b6f0036f70e208f4e8f2f862a745d8cf83",
   "paper_sha256": {
     "abstract.tex": "aba16d1b308dc6e1e70b4acc4511a3165e9314c733d71a1d32e54781555d3d9a",
-    "body.tex": "750305506dd2761d084920966097930c171627b2deb5510a50613099b0f2fab4",
-    "appendix.tex": "fd0c4305c3bbff524c74eb2677a2567f73ce30d2df46f415371b47be197ef6e3",
+    "body.tex": "dfd4e58aae5ed3222f1d07518b1e1a7552553ead51c08d17ca89f78ad8cd7ed7",
+    "appendix.tex": "f30c2387e4d4282e9877f95651ff2bfc4c17d0fd8902cf1cabca3fb14ba54108",
     "references.bib": "4339b4791c5bd0516bd7697095a37142076f37da70e29bd59149f2f42feafb8b",
-    "main.pdf": "c897d60ae230c6f35178dbdec839dac3e3d96e42c43f7a5f4b85524bcda5bdce",
-    "supplement.pdf": "c52b0bba1c1f3f6eca7a97d50c731101b461b7bfe86bd90057a134ec4e7ec00d"
+    "main.pdf": "13f41fb929ac5bea8319aea509f4089c182256601b51b12e7b7001fa6fc1c063",
+    "supplement.pdf": "2c9d1f161d352c6b267cd8c535fa94410f6c5ccb4a8d4ee882767fa014bde548",
+    "IMPLEMENTATION_FOOTPRINT.json": "ab28d74097ed68cc0ff732b1cefb10cf449ed0329fd0f02956f494dbf77914f4"
   },
   "packages": {
-    "FidelityLoop_Overleaf_v7r9_Final_20261008.zip": {
-      "sha256": "6ab2a5eae9a5a878125b261b62a5febd35af6d292b65d723c8ba60203f4ef749",
-      "bytes": 394114,
-      "members": 65
+    "FidelityLoop_Overleaf_v7r10_20261008.zip": {
+      "sha256": "2faae9516c4d6574ead581f9ef8d1c6c8684a040e3a1ced10212c74cb569931b",
+      "bytes": 400204,
+      "members": 66
     }
   },
   "checked_builds": {
     "main_pdf_pages": 11,
     "main_body_ends_on_page": 10,
-    "supplement_pdf_pages": 16,
+    "supplement_pdf_pages": 17,
     "unresolved_references": false,
-    "overfull_boxes": false
+    "overfull_boxes": false,
+    "isolated_overleaf_builds": "PASS"
   },
   "visual_review": {
-    "changed_pages_inspected": {
-      "main": [
-        2,
-        3,
-        10,
-        11
-      ],
-      "supplement": [
-        15,
-        16
-      ]
-    },
-    "other_pages_pixel_identical_at_72_dpi": true,
+    "main_pages_inspected": 11,
+    "supplement_pages_inspected": 17,
     "new_overlap_or_clipping": false
   },
   "source_checks": {
-    "scientific_text_and_figures_byte_identical_to_approved_zip": true,
-    "all_15_citation_keys_resolved": true,
-    "source_manifest": "PASS",
     "claim_lock": "PASS",
+    "footprint_counter_byte_exact": true,
+    "original_snapshot_entries_verified": 31,
     "framework_code_unchanged": true
   },
+  "independent_review": {
+    "status": "PASS",
+    "scope": "footprint artifact and manuscript insertions"
+  },
   "tests": {
-    "passed": 5,
-    "failed": 0,
-    "nested_e1_unittest_cases_passed": 10,
-    "e1_reference_values_checked": 169
+    "public_passed": 5,
+    "counter_passed": 4,
+    "failed": 0
   }
 }

@@ -63,6 +63,10 @@ This evidence is distinct from the 32-cell E2 PPO campaign. Replaying decisions 
 
 `evidence/API_DELAY_SENSITIVITY.json` reports the frozen-rule CPU sweep in supplement B.3. The tested delays are 1, 2, 5, 10, 20, 40, and 60 seconds; all other settings are fixed. The full replay inputs and runner are retained separately, so the public file supports result inspection rather than a standalone rerun.
 
+## Implementation footprint
+
+`python -B artifact/implementation_footprint/count_footprint.py` verifies the frozen source hashes and reproduces its `IMPLEMENTATION_FOOTPRINT.json`. Run `python -B -m unittest discover -s artifact/implementation_footprint -p "test_*.py"` for counting checks. This measures selected implementation components, not historical porting effort or the total framework size.
+
 ## Historical archive paths in the supplement
 
 The supplement's `scripts/`, `docs/`, and `artifacts/` paths identify the full historical experiment archive. They are provenance locations, not commands available in this compact source release.

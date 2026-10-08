@@ -1,0 +1,194 @@
+{
+  "schema": "fidelityloop-implementation-footprint-source-v1",
+  "archive_sha256": "079e2b7e146b1706c2500ac9a3c4a5ff0c4310885cc013907e9b86c754399aa3",
+  "files": [
+    {
+      "path": "source/scripts/maxopt_bridge/ppo_deployment.py",
+      "archive_member": "source/executor/workspace/scripts/maxopt_bridge/ppo_deployment.py",
+      "sha256": "1aac6d89423c482081e924f22907ba0aff5b9b49c913735f56d703267a137c54",
+      "role": "partitioned"
+    },
+    {
+      "path": "source/scripts/maxopt_bridge/e2_deployment.py",
+      "archive_member": "source/executor/workspace/scripts/maxopt_bridge/e2_deployment.py",
+      "sha256": "16208db89eef2c18520d4f0d945e826e24fa2548767e3b47fb49856539ae9467",
+      "role": "partitioned"
+    },
+    {
+      "path": "source/scripts/maxopt_bridge/ppo_env.py",
+      "archive_member": "source/executor/workspace/scripts/maxopt_bridge/ppo_env.py",
+      "sha256": "7f4f633154096264842ccd3c70f63261a1323b8c4d8d41335db5035b32083186",
+      "role": "partitioned"
+    },
+    {
+      "path": "source/scripts/maxopt_bridge/ppo_capacity.py",
+      "archive_member": "source/executor/workspace/scripts/maxopt_bridge/ppo_capacity.py",
+      "sha256": "b8a135d79105b3dafe0e5b26298499cc0829b29f8d040d527141f1843e51833f",
+      "role": "partitioned"
+    },
+    {
+      "path": "source/scripts/maxopt_bridge/runtime_vendor/workspace/scripts/maxopt_v4/formal_v2/baselines.py",
+      "archive_member": "source/executor/workspace/scripts/maxopt_bridge/runtime_vendor/workspace/scripts/maxopt_v4/formal_v2/baselines.py",
+      "sha256": "a466d0baca77051133e277e9064f1d872fdb513772ac2de435d11ecdb7926932",
+      "role": "partitioned"
+    },
+    {
+      "path": "source/scripts/maxopt_bridge/runtime_vendor/workspace/scripts/maxopt_v4/formal_v2/runtime.py",
+      "archive_member": "source/executor/workspace/scripts/maxopt_bridge/runtime_vendor/workspace/scripts/maxopt_v4/formal_v2/runtime.py",
+      "sha256": "38df387c062588cf8b248a72e6532219d0a4a99a23a76a784129ff1439622724",
+      "role": "partitioned"
+    },
+    {
+      "path": "source/scripts/maxopt_bridge/runtime_vendor/workspace/scripts/maxopt_v3/policy.py",
+      "archive_member": "source/executor/workspace/scripts/maxopt_bridge/runtime_vendor/workspace/scripts/maxopt_v3/policy.py",
+      "sha256": "2095025bf5620892b69b1124ee9038d1c5faab315eedfca6e8901bfb7e4113c8",
+      "role": "partitioned"
+    },
+    {
+      "path": "source/scripts/maxopt_bridge/ppo_training.py",
+      "archive_member": "source/executor/workspace/scripts/maxopt_bridge/ppo_training.py",
+      "sha256": "0876fdba91e2f0db2059b3bc21750000364ff142bccd739bad15e9676704e095",
+      "role": "support_context"
+    },
+    {
+      "path": "source/scripts/maxopt_bridge/formal_runtime.py",
+      "archive_member": "source/executor/workspace/scripts/maxopt_bridge/formal_runtime.py",
+      "sha256": "b4414c4947cf4e86e7e1b64bf0d520a186a29051ccb9e3105c555cde336b051b",
+      "role": "support_context"
+    },
+    {
+      "path": "source/scripts/maxopt_bridge/preflight_runtime.py",
+      "archive_member": "source/executor/workspace/scripts/maxopt_bridge/preflight_runtime.py",
+      "sha256": "acd3e8ceef37fefb554689d15d368fc0ec3cc6ada91a9f12ba28fdb7634c5bc6",
+      "role": "support_context"
+    },
+    {
+      "path": "source/scripts/maxopt_bridge/final_inputs.py",
+      "archive_member": "source/executor/workspace/scripts/maxopt_bridge/final_inputs.py",
+      "sha256": "8036fd9958648789e8c9305fe0b41269eeea5dac060c68ee71d64ee3442070b6",
+      "role": "support_context"
+    },
+    {
+      "path": "source/scripts/maxopt_bridge/protocol.py",
+      "archive_member": "source/executor/workspace/scripts/maxopt_bridge/protocol.py",
+      "sha256": "6264095f90faca21c41790236c8331209925ea27628b68fe04806d22d075242a",
+      "role": "support_context"
+    },
+    {
+      "path": "source/scripts/maxopt_bridge/e2_runtime.py",
+      "archive_member": "source/executor/workspace/scripts/maxopt_bridge/e2_runtime.py",
+      "sha256": "55644aac7695a686dda6fa840af0307dc7a34cb3a1bc23f5d0082e50da778cad",
+      "role": "support_context"
+    },
+    {
+      "path": "source/scripts/maxopt_bridge/metrics.py",
+      "archive_member": "source/executor/workspace/scripts/maxopt_bridge/metrics.py",
+      "sha256": "2b0289f465875f5346c9fa63dd53f002b2dd2dfffff7ddc745e1085f37379f88",
+      "role": "support_context"
+    },
+    {
+      "path": "source/scripts/mock-schedule/training/ppo_network.py",
+      "archive_member": "source/executor/workspace/scripts/mock-schedule/training/ppo_network.py",
+      "sha256": "bd3dda64a1c2a8e4a51dedf05683aba6e7906923422bf2e621ae0f3af9dc14dd",
+      "role": "support_context"
+    },
+    {
+      "path": "source/scripts/mock-schedule/training/ppo_trainer.py",
+      "archive_member": "source/executor/workspace/scripts/mock-schedule/training/ppo_trainer.py",
+      "sha256": "40523ac01b59d2ea80e20163fedb32b3ab66f8f570a8539e8429a4151106079c",
+      "role": "support_context"
+    },
+    {
+      "path": "source/scripts/maxopt_bridge/runtime_vendor/workspace/scripts/maxopt_v2/engine.py",
+      "archive_member": "source/executor/workspace/scripts/maxopt_bridge/runtime_vendor/workspace/scripts/maxopt_v2/engine.py",
+      "sha256": "4358e1f261d014c671462e9e96100850f89ce404746595ebef2c6d5d657c7171",
+      "role": "support_context"
+    },
+    {
+      "path": "source/scripts/maxopt_bridge/runtime_vendor/workspace/scripts/maxopt_v2/calibrated.py",
+      "archive_member": "source/executor/workspace/scripts/maxopt_bridge/runtime_vendor/workspace/scripts/maxopt_v2/calibrated.py",
+      "sha256": "517258d04b3f8497c4678201110c56074a07f466d6860624f4b3a245f3abb206",
+      "role": "support_context"
+    },
+    {
+      "path": "source/scripts/maxopt_bridge/runtime_vendor/workspace/scripts/maxopt_v2/workload.py",
+      "archive_member": "source/executor/workspace/scripts/maxopt_bridge/runtime_vendor/workspace/scripts/maxopt_v2/workload.py",
+      "sha256": "7875dfb879d9264fc0c40e250861355d514e8f880501b794715cdffdc2cdb0c1",
+      "role": "support_context"
+    },
+    {
+      "path": "source/scripts/maxopt_bridge/runtime_vendor/workspace/scripts/maxopt_v4/formal_v2/backend.py",
+      "archive_member": "source/executor/workspace/scripts/maxopt_bridge/runtime_vendor/workspace/scripts/maxopt_v4/formal_v2/backend.py",
+      "sha256": "3941eb5f6d7b99eb53f5694d578dfe90285f3f5f8a969bc1bde411875f796c04",
+      "role": "support_context"
+    },
+    {
+      "path": "source/scripts/maxopt_bridge/runtime_vendor/workspace/scripts/maxopt_v4/formal_v2/accounting.py",
+      "archive_member": "source/executor/workspace/scripts/maxopt_bridge/runtime_vendor/workspace/scripts/maxopt_v4/formal_v2/accounting.py",
+      "sha256": "8e1f64be3ebd752ce223a2f4e79e2a2fbe69c96fc638aec889f3773c52973c38",
+      "role": "support_context"
+    },
+    {
+      "path": "source/scripts/maxopt_bridge/runtime_vendor/workspace/scripts/maxopt_v4/formal_v2/worker.py",
+      "archive_member": "source/executor/workspace/scripts/maxopt_bridge/runtime_vendor/workspace/scripts/maxopt_v4/formal_v2/worker.py",
+      "sha256": "75984e22385d9fba02c9d718518d54e6cef29a9dc3b7661c6fb8b9049f732bc3",
+      "role": "support_context"
+    },
+    {
+      "path": "source/scripts/maxopt_bridge/runtime_vendor/workspace/scripts/maxopt_v4/w2_gpu_all2/actuator.py",
+      "archive_member": "source/executor/workspace/scripts/maxopt_bridge/runtime_vendor/workspace/scripts/maxopt_v4/w2_gpu_all2/actuator.py",
+      "sha256": "1bf9335e12728a95a491d67d83ab93dcc6fd62d20f494e40ed3fd58927dcca32",
+      "role": "support_context"
+    },
+    {
+      "path": "source/scripts/maxopt_bridge/runtime_vendor/workspace/scripts/maxopt_v4/w2_gpu_all2/gpu_runner.py",
+      "archive_member": "source/executor/workspace/scripts/maxopt_bridge/runtime_vendor/workspace/scripts/maxopt_v4/w2_gpu_all2/gpu_runner.py",
+      "sha256": "7c0527f32ed3f56042e80a4920f5cb79888fc356ba0a1f8163cb168ca1688cda",
+      "role": "hash_only_context",
+      "note": "Inherited controller; full file contains deployment-local model path, so no source payload or line count is published."
+    },
+    {
+      "path": "source/scripts/maxopt_bridge/runtime_vendor/workspace/scripts/maxopt_v4/w2_gpu_all2/backend.py",
+      "archive_member": "source/executor/workspace/scripts/maxopt_bridge/runtime_vendor/workspace/scripts/maxopt_v4/w2_gpu_all2/backend.py",
+      "sha256": "961a04955493dfaa7c0c32c7f83e58733411b645a517490780d3b38d0b2af15b",
+      "role": "support_context"
+    },
+    {
+      "path": "source/scripts/maxopt_bridge/runtime_vendor/workspace/scripts/maxopt_v4/w2_gpu_all2/journal.py",
+      "archive_member": "source/executor/workspace/scripts/maxopt_bridge/runtime_vendor/workspace/scripts/maxopt_v4/w2_gpu_all2/journal.py",
+      "sha256": "a654be81e7003da4820fc05a4392f2c2c3a589539627136c8be816f9db23d520",
+      "role": "support_context"
+    },
+    {
+      "path": "source/scripts/maxopt_bridge/runtime_vendor/workspace/scripts/maxopt_v4/w2_gpu_all2/evidence.py",
+      "archive_member": "source/executor/workspace/scripts/maxopt_bridge/runtime_vendor/workspace/scripts/maxopt_v4/w2_gpu_all2/evidence.py",
+      "sha256": "909da2a570b067a1d52887a179dc0f67b136150901efcc5a84edea7ae0787351",
+      "role": "support_context"
+    },
+    {
+      "path": "source/scripts/maxopt_bridge/runtime_vendor/workspace/scripts/maxopt_v4/w2_gpu_all2/llama_tp1_worker.py",
+      "archive_member": "source/executor/workspace/scripts/maxopt_bridge/runtime_vendor/workspace/scripts/maxopt_v4/w2_gpu_all2/llama_tp1_worker.py",
+      "sha256": "e65a85d8fe0f55ceef47d3d11a1e38e9f8eb25e2248a6b0d2359e7aaa17b177c",
+      "role": "support_context"
+    },
+    {
+      "path": "source/scripts/maxopt_bridge/runtime_vendor/workspace/scripts/maxopt_v4/w1_baselines.py",
+      "archive_member": "source/executor/workspace/scripts/maxopt_bridge/runtime_vendor/workspace/scripts/maxopt_v4/w1_baselines.py",
+      "sha256": "e614d68afc2a39dd5f638f30e74bdf5567b314c62276ba157c9197e5e3ff3acd",
+      "role": "support_context"
+    },
+    {
+      "path": "source/scripts/maxopt_bridge/runtime_vendor/workspace/scripts/maxopt_v4_w1_baselines.py",
+      "archive_member": "source/executor/workspace/scripts/maxopt_bridge/runtime_vendor/workspace/scripts/maxopt_v4_w1_baselines.py",
+      "sha256": "de6c23ed5dc102c1b00804dd044b1be207a9e387e3e8ac2c6fc272c6f7527fcb",
+      "role": "support_context"
+    },
+    {
+      "path": "source/scripts/maxopt_bridge/ppo_common.json",
+      "archive_member": "source/executor/workspace/scripts/maxopt_bridge/ppo_common.json",
+      "sha256": "871a2f7fb896f2afa86e00210752e49b41dec611a684ac853c5b673f7c607853",
+      "role": "configuration"
+    }
+  ],
+  "archive_name": "E2_CONTINUOUS_32_CPU_HANDOFF_20261004.zip"
+}

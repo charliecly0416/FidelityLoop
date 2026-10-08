@@ -225,6 +225,12 @@ sink, which admits up to eight concurrent requests and completes each on a
 5 s timer. The guard can prioritize at-risk offline jobs; PPO changes capacity
 while retaining the default dispatch and API rules.
 
+In the frozen physical stack, the queue-target, predictive, and
+queueing-capacity baselines each use 23--38 policy-specific code lines
+and share a 73-line adapter and support layer. The supplement separates
+policy logic, integration code, and reused dependencies for these
+baselines, the guard, and PPO.
+
 The CPU framework exposes interfaces for replacing performance
 estimators and policies. On small synthetic
 workloads, four historical policy configurations preserve requests, events, and

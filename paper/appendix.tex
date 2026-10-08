@@ -28,6 +28,44 @@ unavailable; the new index is not presented as the historical original.
       by this dataset and excluded from the claims.
 \end{itemize}
 
+\subsection{Implementation footprint}
+Table~\ref{tab:implementation-footprint} separates policy logic from
+integration code in the frozen execution sources. We count physical Python
+lines carrying code, excluding blank lines, comments, and docstrings;
+shared components are counted once. The audit records file hashes,
+symbol ranges, and supporting modules, including the inherited PPO
+training code. These counts describe implementation size, not historical porting effort.
+
+\begin{table}[t]
+\centering
+\small
+\caption{Implementation footprint in code lines. PPO policy code includes
+136 lines of reused network implementation. Shared rows are separate
+from the per-policy counts; backend and training dependencies are
+itemized in the audit.}
+\label{tab:implementation-footprint}
+\setlength{\tabcolsep}{3pt}
+\par\vspace{4pt}
+\begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}lrr@{}}
+\toprule
+Component & Policy & Integration\\
+\midrule
+B-HPA & 38 & shared\\
+B-PRED & 23 & shared\\
+B-MMC & 29 & shared\\
+Deadline guard & 142 & 19\\
+PPO & 247 & 382\\
+\midrule
+Shared baseline support & --- & 73\\
+Shared runtime control & --- & 197\\
+\bottomrule
+\end{tabular*}
+\end{table}
+
+\path{IMPLEMENTATION_FOOTPRINT.json} binds these counts to the frozen
+sources. The source release provides the counting script and audited
+source snapshots in \path{artifact/implementation_footprint/}.
+
 \subsection{Per-repeat latency record}
 Table~\ref{tab:tail} preserves all three online tail statistics for every formal
 run, from the same \texttt{run\_metrics.csv} records used in the main-text summary.

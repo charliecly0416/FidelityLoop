@@ -1,8 +1,8 @@
 {
   "schema": "fidelityloop-release-manifest-v1",
   "version": "0.1.1",
-  "paper_revision": "v7r9",
-  "paper_freeze_tag": "paper-v7r9-final-20261008",
+  "paper_revision": "v7r10",
+  "paper_freeze_tag": "paper-v7r10-20261008",
   "paper_title": "FidelityLoop: Closed-Loop Validation of Elastic LLM-Serving Policies",
   "scope": "tracked release files, excluding this manifest and ignored build/cache files",
   "files": [
@@ -23,13 +23,13 @@
     },
     {
       "path": "README.md",
-      "bytes": 4032,
-      "sha256": "03cfce879286531a5d67f218b9ad89a1e6c1aaeebbcfee559fc8be27092a103d"
+      "bytes": 4057,
+      "sha256": "1b472403e68067d17cea55f8e51280d49be46e9bd87f5630a63c70a25de8ac1c"
     },
     {
       "path": "REPRODUCING.md",
-      "bytes": 6016,
-      "sha256": "5d67701785d3dd28c84b5e53444ad377effbda8cff1a1d21970558ddc51865fc"
+      "bytes": 6416,
+      "sha256": "ce80238e7423e485771031ca3e535b4fbfc4f47789ed3d1aaebe14542e4ae213"
     },
     {
       "path": "artifact/README.md",
@@ -43,8 +43,8 @@
     },
     {
       "path": "artifact/bridge_execution/BASELINE_MANIFEST.json",
-      "bytes": 528,
-      "sha256": "c87ac65fb1d2d977d3ceee07f1f8e68abe8d5c1829fe51bb2558cc79f359ed2b"
+      "bytes": 524,
+      "sha256": "b4f9c0380cb1270e6363f41fc71e7cb27012394e5e86878d916c4832cddba274"
     },
     {
       "path": "artifact/bridge_execution/CONTRACT.json",
@@ -147,6 +147,186 @@
       "sha256": "90860fb791211e6a0034d723a9daaaf92cd8885d091667490ffc9ddcb6dd00b9"
     },
     {
+      "path": "artifact/implementation_footprint/IMPLEMENTATION_FOOTPRINT.json",
+      "bytes": 33375,
+      "sha256": "ab28d74097ed68cc0ff732b1cefb10cf449ed0329fd0f02956f494dbf77914f4"
+    },
+    {
+      "path": "artifact/implementation_footprint/README.md",
+      "bytes": 1710,
+      "sha256": "9caeb45b9fc006db4b4df2bb9a7dabc4b547fd5669834fd8af1327bac007b571"
+    },
+    {
+      "path": "artifact/implementation_footprint/SHA256SUMS.txt",
+      "bytes": 4519,
+      "sha256": "cf5a885fdc353a8fbbca9b963ad06b9e6578ed293b460d1ee53f156fdad4884a"
+    },
+    {
+      "path": "artifact/implementation_footprint/SOURCE_MANIFEST.json",
+      "bytes": 10700,
+      "sha256": "cf04711020a30f8612d964f408e9bd96750a47704a9956f195662d5d80b4dbf5"
+    },
+    {
+      "path": "artifact/implementation_footprint/count_footprint.py",
+      "bytes": 7680,
+      "sha256": "dd1eae27ee607da6f18f17cd1a213a24fcc9d3876ca5db67ad27e12017ab9323"
+    },
+    {
+      "path": "artifact/implementation_footprint/source/scripts/maxopt_bridge/e2_deployment.py",
+      "bytes": 5370,
+      "sha256": "16208db89eef2c18520d4f0d945e826e24fa2548767e3b47fb49856539ae9467"
+    },
+    {
+      "path": "artifact/implementation_footprint/source/scripts/maxopt_bridge/e2_runtime.py",
+      "bytes": 21956,
+      "sha256": "55644aac7695a686dda6fa840af0307dc7a34cb3a1bc23f5d0082e50da778cad"
+    },
+    {
+      "path": "artifact/implementation_footprint/source/scripts/maxopt_bridge/final_inputs.py",
+      "bytes": 27585,
+      "sha256": "8036fd9958648789e8c9305fe0b41269eeea5dac060c68ee71d64ee3442070b6"
+    },
+    {
+      "path": "artifact/implementation_footprint/source/scripts/maxopt_bridge/formal_runtime.py",
+      "bytes": 42896,
+      "sha256": "b4414c4947cf4e86e7e1b64bf0d520a186a29051ccb9e3105c555cde336b051b"
+    },
+    {
+      "path": "artifact/implementation_footprint/source/scripts/maxopt_bridge/metrics.py",
+      "bytes": 4371,
+      "sha256": "2b0289f465875f5346c9fa63dd53f002b2dd2dfffff7ddc745e1085f37379f88"
+    },
+    {
+      "path": "artifact/implementation_footprint/source/scripts/maxopt_bridge/ppo_capacity.py",
+      "bytes": 8648,
+      "sha256": "b8a135d79105b3dafe0e5b26298499cc0829b29f8d040d527141f1843e51833f"
+    },
+    {
+      "path": "artifact/implementation_footprint/source/scripts/maxopt_bridge/ppo_common.json",
+      "bytes": 1344,
+      "sha256": "871a2f7fb896f2afa86e00210752e49b41dec611a684ac853c5b673f7c607853"
+    },
+    {
+      "path": "artifact/implementation_footprint/source/scripts/maxopt_bridge/ppo_deployment.py",
+      "bytes": 21431,
+      "sha256": "1aac6d89423c482081e924f22907ba0aff5b9b49c913735f56d703267a137c54"
+    },
+    {
+      "path": "artifact/implementation_footprint/source/scripts/maxopt_bridge/ppo_env.py",
+      "bytes": 11354,
+      "sha256": "7f4f633154096264842ccd3c70f63261a1323b8c4d8d41335db5035b32083186"
+    },
+    {
+      "path": "artifact/implementation_footprint/source/scripts/maxopt_bridge/ppo_training.py",
+      "bytes": 45777,
+      "sha256": "0876fdba91e2f0db2059b3bc21750000364ff142bccd739bad15e9676704e095"
+    },
+    {
+      "path": "artifact/implementation_footprint/source/scripts/maxopt_bridge/preflight_runtime.py",
+      "bytes": 2168,
+      "sha256": "acd3e8ceef37fefb554689d15d368fc0ec3cc6ada91a9f12ba28fdb7634c5bc6"
+    },
+    {
+      "path": "artifact/implementation_footprint/source/scripts/maxopt_bridge/protocol.py",
+      "bytes": 5073,
+      "sha256": "6264095f90faca21c41790236c8331209925ea27628b68fe04806d22d075242a"
+    },
+    {
+      "path": "artifact/implementation_footprint/source/scripts/maxopt_bridge/runtime_vendor/workspace/scripts/maxopt_v2/calibrated.py",
+      "bytes": 14219,
+      "sha256": "517258d04b3f8497c4678201110c56074a07f466d6860624f4b3a245f3abb206"
+    },
+    {
+      "path": "artifact/implementation_footprint/source/scripts/maxopt_bridge/runtime_vendor/workspace/scripts/maxopt_v2/engine.py",
+      "bytes": 34702,
+      "sha256": "4358e1f261d014c671462e9e96100850f89ce404746595ebef2c6d5d657c7171"
+    },
+    {
+      "path": "artifact/implementation_footprint/source/scripts/maxopt_bridge/runtime_vendor/workspace/scripts/maxopt_v2/workload.py",
+      "bytes": 20810,
+      "sha256": "7875dfb879d9264fc0c40e250861355d514e8f880501b794715cdffdc2cdb0c1"
+    },
+    {
+      "path": "artifact/implementation_footprint/source/scripts/maxopt_bridge/runtime_vendor/workspace/scripts/maxopt_v3/policy.py",
+      "bytes": 8408,
+      "sha256": "2095025bf5620892b69b1124ee9038d1c5faab315eedfca6e8901bfb7e4113c8"
+    },
+    {
+      "path": "artifact/implementation_footprint/source/scripts/maxopt_bridge/runtime_vendor/workspace/scripts/maxopt_v4/formal_v2/accounting.py",
+      "bytes": 25840,
+      "sha256": "8e1f64be3ebd752ce223a2f4e79e2a2fbe69c96fc638aec889f3773c52973c38"
+    },
+    {
+      "path": "artifact/implementation_footprint/source/scripts/maxopt_bridge/runtime_vendor/workspace/scripts/maxopt_v4/formal_v2/backend.py",
+      "bytes": 6851,
+      "sha256": "3941eb5f6d7b99eb53f5694d578dfe90285f3f5f8a969bc1bde411875f796c04"
+    },
+    {
+      "path": "artifact/implementation_footprint/source/scripts/maxopt_bridge/runtime_vendor/workspace/scripts/maxopt_v4/formal_v2/baselines.py",
+      "bytes": 8722,
+      "sha256": "a466d0baca77051133e277e9064f1d872fdb513772ac2de435d11ecdb7926932"
+    },
+    {
+      "path": "artifact/implementation_footprint/source/scripts/maxopt_bridge/runtime_vendor/workspace/scripts/maxopt_v4/formal_v2/runtime.py",
+      "bytes": 12614,
+      "sha256": "38df387c062588cf8b248a72e6532219d0a4a99a23a76a784129ff1439622724"
+    },
+    {
+      "path": "artifact/implementation_footprint/source/scripts/maxopt_bridge/runtime_vendor/workspace/scripts/maxopt_v4/formal_v2/worker.py",
+      "bytes": 11226,
+      "sha256": "75984e22385d9fba02c9d718518d54e6cef29a9dc3b7661c6fb8b9049f732bc3"
+    },
+    {
+      "path": "artifact/implementation_footprint/source/scripts/maxopt_bridge/runtime_vendor/workspace/scripts/maxopt_v4/w1_baselines.py",
+      "bytes": 755,
+      "sha256": "e614d68afc2a39dd5f638f30e74bdf5567b314c62276ba157c9197e5e3ff3acd"
+    },
+    {
+      "path": "artifact/implementation_footprint/source/scripts/maxopt_bridge/runtime_vendor/workspace/scripts/maxopt_v4/w2_gpu_all2/actuator.py",
+      "bytes": 6417,
+      "sha256": "1bf9335e12728a95a491d67d83ab93dcc6fd62d20f494e40ed3fd58927dcca32"
+    },
+    {
+      "path": "artifact/implementation_footprint/source/scripts/maxopt_bridge/runtime_vendor/workspace/scripts/maxopt_v4/w2_gpu_all2/backend.py",
+      "bytes": 25115,
+      "sha256": "961a04955493dfaa7c0c32c7f83e58733411b645a517490780d3b38d0b2af15b"
+    },
+    {
+      "path": "artifact/implementation_footprint/source/scripts/maxopt_bridge/runtime_vendor/workspace/scripts/maxopt_v4/w2_gpu_all2/evidence.py",
+      "bytes": 12019,
+      "sha256": "909da2a570b067a1d52887a179dc0f67b136150901efcc5a84edea7ae0787351"
+    },
+    {
+      "path": "artifact/implementation_footprint/source/scripts/maxopt_bridge/runtime_vendor/workspace/scripts/maxopt_v4/w2_gpu_all2/journal.py",
+      "bytes": 2469,
+      "sha256": "a654be81e7003da4820fc05a4392f2c2c3a589539627136c8be816f9db23d520"
+    },
+    {
+      "path": "artifact/implementation_footprint/source/scripts/maxopt_bridge/runtime_vendor/workspace/scripts/maxopt_v4/w2_gpu_all2/llama_tp1_worker.py",
+      "bytes": 19804,
+      "sha256": "e65a85d8fe0f55ceef47d3d11a1e38e9f8eb25e2248a6b0d2359e7aaa17b177c"
+    },
+    {
+      "path": "artifact/implementation_footprint/source/scripts/maxopt_bridge/runtime_vendor/workspace/scripts/maxopt_v4_w1_baselines.py",
+      "bytes": 10097,
+      "sha256": "de6c23ed5dc102c1b00804dd044b1be207a9e387e3e8ac2c6fc272c6f7527fcb"
+    },
+    {
+      "path": "artifact/implementation_footprint/source/scripts/mock-schedule/training/ppo_network.py",
+      "bytes": 9535,
+      "sha256": "bd3dda64a1c2a8e4a51dedf05683aba6e7906923422bf2e621ae0f3af9dc14dd"
+    },
+    {
+      "path": "artifact/implementation_footprint/source/scripts/mock-schedule/training/ppo_trainer.py",
+      "bytes": 28483,
+      "sha256": "40523ac01b59d2ea80e20163fedb32b3ab66f8f570a8539e8429a4151106079c"
+    },
+    {
+      "path": "artifact/implementation_footprint/test_count_footprint.py",
+      "bytes": 968,
+      "sha256": "1785393d948bc04e67dc25fed3ae8aaeb33a7a819ae87f76532af37fc72d7694"
+    },
+    {
       "path": "docs/paper-integration-20261007.md",
       "bytes": 3635,
       "sha256": "14cbcdc11e471d453c3f8973bd289f9a0318e87f401402519fa62373d8ffb8de"
@@ -228,8 +408,8 @@
     },
     {
       "path": "evidence/V7_CLAIM_LOCK.json",
-      "bytes": 2923,
-      "sha256": "f8927bc56a619157d483eeac1a484ef0fe41f1bd7a8abd935fb6481d20919b7e"
+      "bytes": 3337,
+      "sha256": "3b7949255ee2084399fd7ff1e44b5fe17925344d8dd8494a7edc10e04f5117bd"
     },
     {
       "path": "experiments/README.md",
@@ -252,14 +432,19 @@
       "sha256": "976c94d93d9f564ad3edf68cd529632c6e2191267b1afc00ccd27a91b62d519f"
     },
     {
+      "path": "paper/IMPLEMENTATION_FOOTPRINT.json",
+      "bytes": 33375,
+      "sha256": "ab28d74097ed68cc0ff732b1cefb10cf449ed0329fd0f02956f494dbf77914f4"
+    },
+    {
       "path": "paper/PPO_TRAINING_CONTRACT.json",
       "bytes": 7659,
       "sha256": "0740e936d20faec690822c88f664c3cf2c11ca6931e513d21dedf5c1ca41c4e2"
     },
     {
       "path": "paper/README.md",
-      "bytes": 940,
-      "sha256": "47317a7e093fa68d5705effbce677acaff62e172b9239e79aedbf826a3a6844e"
+      "bytes": 1028,
+      "sha256": "9cb6a0dfb744782138948e9ae7516e09c253c919c79193e4ab238920cb57a109"
     },
     {
       "path": "paper/REPLAY_MODEL_SPECIFICATION.json",
@@ -268,8 +453,8 @@
     },
     {
       "path": "paper/SHA256SUMS.txt",
-      "bytes": 5920,
-      "sha256": "4ba67f43abc4886e16eda482da9231ac155410a679d8fce213fec71dd683f16e"
+      "bytes": 6016,
+      "sha256": "df6d3e6e804265a892927a4dc2d936a5fd848136234af8bcc774564bfad16fa1"
     },
     {
       "path": "paper/abstract.tex",
@@ -278,8 +463,8 @@
     },
     {
       "path": "paper/appendix.tex",
-      "bytes": 11500,
-      "sha256": "fd0c4305c3bbff524c74eb2677a2567f73ce30d2df46f415371b47be197ef6e3"
+      "bytes": 12877,
+      "sha256": "f30c2387e4d4282e9877f95651ff2bfc4c17d0fd8902cf1cabca3fb14ba54108"
     },
     {
       "path": "paper/appendix_e1.tex",
@@ -308,8 +493,8 @@
     },
     {
       "path": "paper/body.tex",
-      "bytes": 43208,
-      "sha256": "750305506dd2761d084920966097930c171627b2deb5510a50613099b0f2fab4"
+      "bytes": 43513,
+      "sha256": "dfd4e58aae5ed3222f1d07518b1e1a7552553ead51c08d17ca89f78ad8cd7ed7"
     },
     {
       "path": "paper/cpu_model_evidence.tex",
@@ -538,8 +723,8 @@
     },
     {
       "path": "paper/main.pdf",
-      "bytes": 274696,
-      "sha256": "c897d60ae230c6f35178dbdec839dac3e3d96e42c43f7a5f4b85524bcda5bdce"
+      "bytes": 274907,
+      "sha256": "13f41fb929ac5bea8319aea509f4089c182256601b51b12e7b7001fa6fc1c063"
     },
     {
       "path": "paper/main.tex",
@@ -573,8 +758,8 @@
     },
     {
       "path": "paper/supplement.pdf",
-      "bytes": 346912,
-      "sha256": "c52b0bba1c1f3f6eca7a97d50c731101b461b7bfe86bd90057a134ec4e7ec00d"
+      "bytes": 348217,
+      "sha256": "2c9d1f161d352c6b267cd8c535fa94410f6c5ccb4a8d4ee882767fa014bde548"
     },
     {
       "path": "paper/supplement.tex",
@@ -588,8 +773,8 @@
     },
     {
       "path": "results/PAPER_VALIDATION.json",
-      "bytes": 1995,
-      "sha256": "333a272e5cb571197624ae289b465e3030d2cb6a614dade39178bdb5b2637b51"
+      "bytes": 2035,
+      "sha256": "044959c6f6a961de9143156c4e7ba59ddfd97ba33cc397e02589f765106959e7"
     },
     {
       "path": "results/VALIDATION.json",

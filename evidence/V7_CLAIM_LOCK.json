@@ -84,7 +84,9 @@
       "0.0804 and 0.4657",
       "not pooled",
       "not a saving",
-      "no row overlap"
+      "no row overlap",
+      "23--38 policy-specific code lines",
+      "73-line adapter"
     ],
     "paper/e2_final_addition.tex": [
       "196 of 218",
@@ -92,8 +94,18 @@
       "87.92"
     ],
     "paper/appendix.tex": [
+      "B-HPA & 38",
+      "B-PRED & 23",
+      "B-MMC & 29",
+      "Deadline guard & 142 & 19",
+      "PPO & 247 & 382",
+      "Shared baseline support & --- & 73",
+      "Shared runtime control & --- & 197",
       "45.07\\%, 45.07\\%, 45.08\\%, and 43.76\\%",
       "CPU predictions, not additional physical runs"
     ]
+  },
+  "bound_evidence": {
+    "paper/IMPLEMENTATION_FOOTPRINT.json": "ab28d74097ed68cc0ff732b1cefb10cf449ed0329fd0f02956f494dbf77914f4"
   }
 }
