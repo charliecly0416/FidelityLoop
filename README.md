@@ -4,7 +4,7 @@
 
 FidelityLoop is the research artifact accompanying the paper *FidelityLoop: Closed-Loop Validation of Elastic LLM-Serving Policies*. It connects replay predictions, policy decisions, lifecycle events, request identities, and deadline-aware cost accounting. The public CPU package is designed for inspection and deterministic interface checks; the physical campaign reported in the paper was run separately on two NVIDIA A100 GPUs.
 
-Current paper: [main PDF](paper/main.pdf) · [supplement](paper/supplement.pdf) · [Overleaf ZIP](https://github.com/charliecly0416/FidelityLoop/releases/download/paper-v7r9-20261008/FidelityLoop_Overleaf_v7r9_Checked_20261008.zip).
+Current paper: [main PDF](paper/main.pdf) · [supplement](paper/supplement.pdf) · [Overleaf ZIP](https://github.com/charliecly0416/FidelityLoop/releases/download/paper-v7r9-final-20261008/FidelityLoop_Overleaf_v7r9_Final_20261008.zip).
 
 ## What is included
 
@@ -12,7 +12,7 @@ Current paper: [main PDF](paper/main.pdf) · [supplement](paper/supplement.pdf) 
 - `src/fidelityloop/bridge/`: protocol, metric, and artifact-integrity helpers used by the registered evaluation contract.
 - `src/fidelityloop/legacy/`: the small historical replay core required for exact two-device compatibility.
 - `experiments/`: a self-contained CPU validation and its configuration; `python -m fidelityloop.framework.validate` also reproduces the historical facade compatibility checks.
-- `evidence/`: compact E2 result ledger, prediction recheck, source hashes, and the registered claim lock. These files contain the paper's reported 32-cell results without shipping multi-gigabyte runtime logs.
+- `evidence/`: compact E2 result ledger, prediction recheck, source hashes, and the current manuscript claim checks. These files contain the paper's reported 32-cell results without shipping multi-gigabyte runtime logs.
 - `artifact/`: protocol/configuration evidence, a small derived workload sample, and the standalone `e1_repricing/` verifier for the paper's fixed-event resource and cost analysis. Full production traces, model weights, and GPU event journals are not redistributed here.
 - `paper/`: anonymous paper source, figures, bibliography, and the compiled main paper and supplement.
 

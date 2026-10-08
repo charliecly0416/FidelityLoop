@@ -1,7 +1,9 @@
 # Paper
 
-`main.tex` builds the anonymous paper: 11 PDF pages, with the body ending on page 10 and references continuing on page 11. `supplement.tex` builds the 16-page supplement. The corresponding PDFs are included here.
+`main.tex` builds the anonymous paper with pdfLaTeX and BibTeX; `supplement.tex` builds the independent supplement. All required source, figures, tables, and style files are included. No external files or shell escape are required.
 
-Download the checked [Overleaf source bundle](https://github.com/charliecly0416/FidelityLoop/releases/download/paper-v7r9-20261008/FidelityLoop_Overleaf_v7r9_Checked_20261008.zip). Import it into Overleaf and compile each entry point with pdfLaTeX/BibTeX.
+Import this complete ZIP into Overleaf and select the desired entry point. The current build has 11 main PDF pages (body through page 10; references continue on page 11) and a 16-page supplement. `SHA256SUMS.txt` covers the source files.
 
-The bundle preserves the approved manuscript exactly; this repository README provides the current download link. `SHA256SUMS.txt` covers the source files in this directory.
+This bundle preserves the author-reviewed text and experimental evidence. Six bibliography entries use their verified conference publications. Checkpoint provenance and the unified cost metric remain documented in `PPO_TRAINING_CONTRACT.json` and `COMMON_COST_METRIC.json`.
+
+The 2026 MLSys CFP allowed 10 body pages excluding references. The 2027 CFP was not yet posted when checked on 2026-10-08; verify the target-year rules and template before submission.

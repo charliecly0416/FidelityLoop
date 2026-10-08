@@ -1,16 +1,46 @@
 {
-  "schema": "maxopt-v7-claim-lock-v1",
+  "schema": "fidelityloop-paper-claim-lock-v2",
   "scope": [
-    "manuscript/abstract.tex",
-    "manuscript/body.tex",
-    "manuscript/appendix.tex",
-    "manuscript/appendix_e1.tex",
-    "manuscript/appendix_e2.tex",
-    "manuscript/appendix_e2_policy.tex",
-    "manuscript/appendix_v4.tex",
-    "manuscript/appendix_v5_mechanism.tex",
-    "manuscript/cpu_model_evidence.tex",
-    "manuscript/external_validity.tex"
+    "paper/abstract.tex",
+    "paper/appendix.tex",
+    "paper/appendix_e1.tex",
+    "paper/appendix_e2.tex",
+    "paper/appendix_e2_policy.tex",
+    "paper/appendix_v4.tex",
+    "paper/appendix_v5_mechanism.tex",
+    "paper/body.tex",
+    "paper/cpu_model_evidence.tex",
+    "paper/e2_final_addition.tex",
+    "paper/external_validity.tex",
+    "paper/generated/bridge_fidelity_rows.tex",
+    "paper/generated/bridge_guard_audit_rows.tex",
+    "paper/generated/bridge_rows.tex",
+    "paper/generated/cost_rows.tex",
+    "paper/generated/e2_policy_rows.tex",
+    "paper/generated/guard_rows.tex",
+    "paper/generated/latency_all_rows.tex",
+    "paper/generated/model_rows.tex",
+    "paper/generated/price_rows.tex",
+    "paper/generated/v4_coverage_rows.tex",
+    "paper/generated/v4_gate_rows.tex",
+    "paper/generated/v4_segments_rows.tex",
+    "paper/generated/v4_w1_latency_rows.tex",
+    "paper/generated/v4_w1_rows.tex",
+    "paper/generated/v4_w2_rows.tex",
+    "paper/generated/v4_w4l_rows.tex",
+    "paper/generated/v4r3_e1_phase_rows.tex",
+    "paper/generated/v4r3_e1_runs_rows.tex",
+    "paper/generated/v4r3_e1_tradeoff_rows.tex",
+    "paper/generated/v4r3_e1_window_rows.tex",
+    "paper/generated/v4r3_e2_rows.tex",
+    "paper/generated/v5_endpoint_rows.tex",
+    "paper/generated/v5_pairs_rows.tex",
+    "paper/generated/v5_steady_focus_rows.tex",
+    "paper/generated/v5_trajectory_rows.tex",
+    "paper/generated/workload_rows.tex",
+    "paper/main.tex",
+    "paper/replay_model_specification.tex",
+    "paper/supplement.tex"
   ],
   "required_substrings": [
     "20/32",
@@ -19,8 +49,6 @@
     "0.4657",
     "36/38",
     "21/38",
-    "4.06\\%",
-    "30.3\\%",
     "76.19",
     "891.98",
     "42.74\\%",
@@ -29,11 +57,43 @@
     "synthetic API",
     "separately re-provisioned runtime lock",
     "P1+",
-    "no row overlap"
+    "no row overlap",
+    "0.0969",
+    "0.6998",
+    "196 of 218",
+    "72 of 73",
+    "87.92",
+    "45.07\\%",
+    "45.08\\%",
+    "43.76\\%"
   ],
   "forbidden_regex": [
     "(?i)\\bsame runtime\\b",
     "(?i)\\bP arm\\b",
     "(?i)\\buniversal PPO superiority\\s+(?:is|holds|is demonstrated)"
-  ]
+  ],
+  "description": "Current manuscript regression checks with whitespace normalized; historical claim locks remain in earlier Git tags. This is not independent scientific validation.",
+  "required_by_file": {
+    "paper/generated/bridge_fidelity_rows.tex": [
+      "Bridge & C & 36/38 & 0.0969",
+      "Bridge & C30 & 21/38 & 0.6998"
+    ],
+    "paper/body.tex": [
+      "196 of 218",
+      "72 of 73",
+      "0.0804 and 0.4657",
+      "not pooled",
+      "not a saving",
+      "no row overlap"
+    ],
+    "paper/e2_final_addition.tex": [
+      "196 of 218",
+      "72 of 73",
+      "87.92"
+    ],
+    "paper/appendix.tex": [
+      "45.07\\%, 45.07\\%, 45.08\\%, and 43.76\\%",
+      "CPU predictions, not additional physical runs"
+    ]
+  }
 }
