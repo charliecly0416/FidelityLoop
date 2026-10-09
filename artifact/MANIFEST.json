@@ -1,8 +1,8 @@
 {
   "schema": "fidelityloop-release-manifest-v1",
   "version": "0.1.1",
-  "paper_revision": "v7r12",
-  "paper_freeze_tag": "paper-v7r12-20261009",
+  "paper_revision": "v7r12a",
+  "paper_freeze_tag": "paper-v7r12a-20261009",
   "paper_title": "FidelityLoop: Closed-Loop Validation of Elastic LLM-Serving Policies",
   "scope": "tracked release files, excluding this manifest and ignored build/cache files",
   "files": [
@@ -23,8 +23,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 5326,
-      "sha256": "a64b5e1176c3b1b225b0808ed1182a9deb867e51a518aca62123086eaa6e10ae"
+      "bytes": 5328,
+      "sha256": "b3ce96e158f5247c11836122e43cee4ed46e2ed0988773beba52c547f9c640f1"
     },
     {
       "path": "REPRODUCING.md",
@@ -43,8 +43,8 @@
     },
     {
       "path": "artifact/bridge_execution/BASELINE_MANIFEST.json",
-      "bytes": 524,
-      "sha256": "a62d3cfeddd9909092b5f351434e592054f3d503a1dceb68e3e393a30d0c812e"
+      "bytes": 526,
+      "sha256": "9edcdcac341e32071a0c4cc5b78f8557394a8bf4cc10cd258eafac44bb2f8a0a"
     },
     {
       "path": "artifact/bridge_execution/CONTRACT.json",
@@ -413,8 +413,8 @@
     },
     {
       "path": "evidence/V7_CLAIM_LOCK.json",
-      "bytes": 4972,
-      "sha256": "b49193622b90727909cbc8398a5a93e1513c97083907286d171f878e7812a44a"
+      "bytes": 5096,
+      "sha256": "22c00d4ae2967f3cd4b716073547289f27219767f5b90baadfd264dda34eba1d"
     },
     {
       "path": "experiments/README.md",
@@ -448,8 +448,8 @@
     },
     {
       "path": "paper/README.md",
-      "bytes": 1445,
-      "sha256": "e508383943ba5af7a6afdb889d421cf0d43e3407ac7f37737ec740c2f00f1bed"
+      "bytes": 1629,
+      "sha256": "e73ec51be7a287588365e1f24662f74a1913e41da6571f0af2cdefba118c01ea"
     },
     {
       "path": "paper/REPLAY_MODEL_SPECIFICATION.json",
@@ -459,7 +459,7 @@
     {
       "path": "paper/SHA256SUMS.txt",
       "bytes": 6186,
-      "sha256": "f3d22cdb78a66481cf549880676ee4fb1cea07cb327786a9016cea39ac81c21b"
+      "sha256": "84d4c27af062fcc8e4176852ad06e50b06d2c5dae8e3e91122b25affdfec76db"
     },
     {
       "path": "paper/abstract.tex",
@@ -468,8 +468,8 @@
     },
     {
       "path": "paper/appendix.tex",
-      "bytes": 13894,
-      "sha256": "8af4b62fbc0287a0db639c901ac833f38b0ab7d576528eb8dce36f9436844851"
+      "bytes": 13963,
+      "sha256": "4088a94e5c7ed0c39975e251f9d599aa0dc42b9cc41179b96575e0abb205129f"
     },
     {
       "path": "paper/appendix_e1.tex",
@@ -503,8 +503,8 @@
     },
     {
       "path": "paper/body.tex",
-      "bytes": 45704,
-      "sha256": "ad3ae48b86e41077440ddfd347c0591d7cfc24cec23c7f71b37c87b847e7307f"
+      "bytes": 45773,
+      "sha256": "0d5aa0461fba2f38c8cd8421225071ab8f41fb755aa3305094b5a3a60159fe00"
     },
     {
       "path": "paper/cpu_model_evidence.tex",
@@ -738,8 +738,8 @@
     },
     {
       "path": "paper/main.pdf",
-      "bytes": 276675,
-      "sha256": "2693b1ab720a8e070eff23a5ca20ba7d7c3026cd8bf067907252f3eea95659da"
+      "bytes": 277547,
+      "sha256": "f38dfe9e7b57a9a33ade8e31a6fa7955f339807ac210fe1290af93d6b140cd15"
     },
     {
       "path": "paper/main.tex",
@@ -773,8 +773,8 @@
     },
     {
       "path": "paper/supplement.pdf",
-      "bytes": 354864,
-      "sha256": "37288f52cebd7987a62d546e6c9b34cc45affaa49b92d928d6e84e313cb4ba37"
+      "bytes": 355264,
+      "sha256": "657f129ca3b02c936de646f86888d0374b15949f895eec4acdc8d7d2893e7390"
     },
     {
       "path": "paper/supplement.tex",
@@ -787,9 +787,14 @@
       "sha256": "19d68a9818b8ccc60bd5d766070cf836832b1cd004c61196a1c3955a48d95f1e"
     },
     {
+      "path": "results/ANONYMOUS_ACCESS.json",
+      "bytes": 642,
+      "sha256": "0eb27af5ebac6eef52419a51d8fc03e70e3a1150511816da9d6102f40ba15ffb"
+    },
+    {
       "path": "results/PAPER_VALIDATION.json",
-      "bytes": 2962,
-      "sha256": "07ab762b25c06919642b1f08972ab923131299ec088f5cfdd2faff997c60569a"
+      "bytes": 3504,
+      "sha256": "143f7d7ea10459111f8ce7a8104f76444dc2e7c6767c8b4680b69d96e89a7a9d"
     },
     {
       "path": "results/VALIDATION.json",

@@ -1,0 +1,18 @@
+{
+  "anonymous_url": "https://anonymous.4open.science/r/FidelityLoop-144B/",
+  "no_login_used": true,
+  "public_directory_and_download": "PASS",
+  "file_count": 282,
+  "all_files_match_review_branch": true,
+  "review_commit": "43fffaa79140fe0e05e7e28e1dc5ad7f56b18323",
+  "identity_pattern_hits": [],
+  "archive_sha256": "3f67336da2c2d4aae56554664f231c510f0ea93c42fdb0984b4b726cb70c8982",
+  "expiration_date": "2027-04-09T17:01:46.628Z",
+  "settings_not_visible_publicly": [
+    "auto-update toggle",
+    "expiration action"
+  ],
+  "verifier": "PASS_PAIRED_TRACE_CORPUS",
+  "unit_tests_passed": 5,
+  "current_public_access_verdict": "PASS"
+}

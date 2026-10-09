@@ -98,7 +98,8 @@
       "E2 exhibits this interaction",
       "Practical validation.",
       "condition savings on deadline feasibility, retaining failures",
-      "An evaluator must therefore be checked on the deployment it is meant to screen."
+      "An evaluator must therefore be checked on the deployment it is meant to screen.",
+      "https://anonymous.4open.science/r/FidelityLoop-144B/"
     ],
     "paper/e2_final_addition.tex": [
       "196 of 218",
@@ -119,7 +120,8 @@
       "35 strict P1+ failures",
       "140 unique frozen predictions form 372 model/run pairs",
       "six excluded technical or aborted attempts",
-      "not unseen-workload validation or rerunning model inference"
+      "not unseen-workload validation or rerunning model inference",
+      "https://anonymous.4open.science/r/FidelityLoop-144B/"
     ],
     "paper/appendix_e3.tex": [
       "90 previously undeployed",

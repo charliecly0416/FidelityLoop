@@ -1,11 +1,11 @@
 {
   "schema": "fidelityloop-public-baseline-v1",
   "protected_files": {
-    "paper/main.pdf": "2693b1ab720a8e070eff23a5ca20ba7d7c3026cd8bf067907252f3eea95659da",
-    "paper/supplement.pdf": "37288f52cebd7987a62d546e6c9b34cc45affaa49b92d928d6e84e313cb4ba37",
+    "paper/main.pdf": "f38dfe9e7b57a9a33ade8e31a6fa7955f339807ac210fe1290af93d6b140cd15",
+    "paper/supplement.pdf": "657f129ca3b02c936de646f86888d0374b15949f895eec4acdc8d7d2893e7390",
     "paper/main.tex": "689145357b6fbfa4d479b1025e588567bc7f11c5fa0183a79625656f81d65894",
     "paper/supplement.tex": "c9fa7bfbac29baf6ca94ffb5e821f302f0d8b4a77a4e35bfdf2c4fc1967c2286"
   },
-  "paper_revision": "v7r12",
-  "paper_freeze_tag": "paper-v7r12-20261009"
+  "paper_revision": "v7r12a",
+  "paper_freeze_tag": "paper-v7r12a-20261009"
 }
