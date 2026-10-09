@@ -4,7 +4,7 @@
 
 FidelityLoop is the research artifact accompanying the paper *FidelityLoop: Closed-Loop Validation of Elastic LLM-Serving Policies*. It connects replay predictions, policy decisions, lifecycle events, request identities, and deadline-aware cost accounting. The public CPU package is designed for inspection and deterministic interface checks; the physical campaign reported in the paper was run separately on two NVIDIA A100 GPUs.
 
-Current paper: [main PDF](paper/main.pdf) · [supplement](paper/supplement.pdf) · [Overleaf ZIP](https://github.com/charliecly0416/FidelityLoop/releases/download/paper-v7r11-20261009/FidelityLoop_Overleaf_v7r11_20261009.zip).
+Current paper: [main PDF](paper/main.pdf) · [supplement](paper/supplement.pdf) · [Overleaf ZIP](https://github.com/charliecly0416/FidelityLoop/releases/download/paper-v7r12-20261009/FidelityLoop_Overleaf_v7r12_20261009.zip).
 
 ## What is included
 

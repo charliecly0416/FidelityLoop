@@ -36,9 +36,10 @@ PPO checkpoints under two arrival regimes. A follow-up screening study exposes
 false rejections of feasible new checkpoints. These cases test both policies
 and their evaluator:
 lower scenario cost is not a saving when deadlines are missed.
+We release request-aligned prediction and execution traces with CPU analysis tools.
 \end{enumerate}
-The source release provides CPU interface checks and a standalone fixed-event
-cost verifier; the supplement maps these checks to their evidence.
+The release provides CPU interface checks, a fixed-event cost verifier, and
+a paired trace corpus; the supplement documents their reproduction scopes.
 
 \section{Background and motivation}
 We consider mixed online and offline LLM workloads served by a limited GPU
@@ -732,22 +733,21 @@ and baseline definitions appear in the supplement's External-validity evidence
 section.
 
 \section{Discussion}
-FidelityLoop aims to assess whether a scheduling policy will meet deadlines
-in physical execution and, if so, what resource use and cost it will incur.
-This requires validating request timing, capacity availability, and resource
-accounting together; improving one metric alone is insufficient.
-For example, C30's startup correction reduced resource-prediction error
-under fixed H, yet C predicted feasibility more accurately in Bridge and E2.
-E3 then reverses the comparison: C rejects three feasible new checkpoints.
-An evaluator must therefore be checked on the deployment it is meant to screen.
+FidelityLoop evaluates whether policies meet deadlines and what resources
+feasible executions consume. C30 reduces fixed-H resource error, whereas C
+matches feasibility better in Bridge and E2; E3 then exposes C's false
+rejections. An evaluator must therefore be checked on the deployment it is
+meant to screen.
 
 \subsection{Validating predictions across levels}
-Better local-service fit can accompany worse closed-loop resource prediction.
-The startup-endpoint comparison identifies one source of this gap, while the
-trajectory analysis shows that aggregate occupied-resource errors can hide
-temporal misalignment. Validation should therefore distinguish setup from
-window scale-out and check states, actions, and occupied resources alongside
-matched-service error.
+Lifecycle validation should follow the controller's clock. For controllers
+that block scale-down until a target-change cooldown expires, readiness after
+expiry may permit immediate scale-down even when replay predicts a service
+interval protected from scale-down. E2 exhibits this interaction. Comparing deployment startup
+timing with controller boundaries is therefore a useful diagnostic; setup
+and window scale-out should be measured separately. State and action
+trajectories also need inspection because aggregate resource error can
+hide temporal misalignment.
 
 The guard shows how a controller can act on deadline risk from observed queues
 and frozen safety estimates. It repairs H's held-out recovery failure, but H
@@ -771,6 +771,14 @@ most savings occur in the final 600 seconds.
 The supplementary CPU microbenchmark times \texttt{adapter.decide} on
 reconstructed states outside live serving. It measures decision-call latency,
 not full-controller or end-to-end overhead.
+
+\paragraph{Practical validation.}
+Before relying on predicted savings, check service timing, resource use,
+and control trajectories separately; freeze predictions before physical runs
+and condition savings on deadline feasibility, retaining failures; and
+recheck the evaluator in the intended deployment context. The paired traces
+make these checks inspectable on the recorded deployments, without assuming
+that earlier agreement will transfer.
 
 \section{Limitations and negative results}
 The synthetic API uses a five-second timer and a routing wait; it does not generate

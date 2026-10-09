@@ -1,25 +1,26 @@
 {
   "schema": "fidelityloop-paper-validation-v1",
   "date": "2026-10-09",
-  "paper_revision": "v7r11",
-  "freeze_tag": "paper-v7r11-20261009",
+  "paper_revision": "v7r12",
+  "freeze_tag": "paper-v7r12-20261009",
   "status": "PASS",
-  "scope": "Integrate six-checkpoint E3 screening counterexample without pooling campaigns. Historical evidence, code, figures, and bibliography preserved.",
-  "baseline_commit": "749e8d938d7a51fa9598af4f4be9e751f860408d",
+  "scope": "Release request-aligned traces and concise bounded controller/validation guidance. No new experiments; previous experimental results, figures and bibliography preserved.",
+  "baseline_commit": "e8ac73b",
   "paper_sha256": {
-    "abstract.tex": "266ef134872bb30dbb12f1275c434cc0306a601a91988053daf1f0ce09c855a0",
-    "body.tex": "ed1028f3d18172137460c890c561bf4bbc948ecc4da0570e3041aa57eee974af",
-    "appendix.tex": "b494439c3466173e1f3e65cd79d89106f837bf4ab93df55863887d0b6b6ae38f",
+    "abstract.tex": "c7c623366d8dc7d044659c744902ce274ce6a6404fa8ea87e37f53d78b09ac2d",
+    "body.tex": "ad3ae48b86e41077440ddfd347c0591d7cfc24cec23c7f71b37c87b847e7307f",
+    "appendix.tex": "8af4b62fbc0287a0db639c901ac833f38b0ab7d576528eb8dce36f9436844851",
     "appendix_e3.tex": "66f31010c0d1bfbe59174920263a88eadef7a0fb4be2978ca1430688a1e7b61f",
     "COMMON_COST_METRIC.json": "e5bdc1033c9a32519222fcbc4e6aade4b643eaff71eace5a6a58957b1418db65",
     "references.bib": "4339b4791c5bd0516bd7697095a37142076f37da70e29bd59149f2f42feafb8b",
-    "main.pdf": "8897186c2d4cef9800c933dc6be1432df9e5080fecca5696feaad22480fbf2f2",
-    "supplement.pdf": "781876e4937acfe98d422bc89d66b9d706a1f248681f3b799543599d45e1c820"
+    "main.pdf": "2693b1ab720a8e070eff23a5ca20ba7d7c3026cd8bf067907252f3eea95659da",
+    "supplement.pdf": "37288f52cebd7987a62d546e6c9b34cc45affaa49b92d928d6e84e313cb4ba37"
   },
   "packages": {
-    "FidelityLoop_Overleaf_v7r11_20261009.zip": {
-      "sha256": "b215df42a9e999fedcf33657989ec4958134317b1ba1aab11a475ab625af38ec",
-      "bytes": 405112,
+    "FidelityLoop_Overleaf_v7r12_20261009.zip": {
+      "name": "FidelityLoop_Overleaf_v7r12_20261009.zip",
+      "sha256": "abc903bcc4faa73f11780497a106720835cdb788cff993b1d2d99685d0a0e64a",
+      "bytes": 404882,
       "members": 68,
       "crc": "PASS",
       "isolated_builds": "PASS: main and supplement compile; PDF text equals reviewed builds"
@@ -40,17 +41,28 @@
   },
   "source_checks": {
     "claim_lock": "PASS",
-    "all_188_comparison_arithmetic": "PASS",
+    "all_188_comparison_arithmetic": "Inherited PASS; numeric result tables unchanged",
     "old_140_comparisons_preserved": true,
     "old_figures_bibliography_and_generated_results_preserved": true
   },
   "independent_review": {
-    "scientific_raw_accounting": "PASS: 26 cells, 20046 requests",
-    "protocol": "PASS with disclosed split-host amendment and timing limitation",
-    "paper_content": "PASS_CONTENT_REVIEW_AFTER_MINIMAL_SCOPE_FIX"
+    "v7r12_content_and_trace_corpus": "PASS: independent reviewer, all bound source identities match",
+    "historical_e3_validation": "Inherited from paper-v7r11-20261009; no scientific result changed"
   },
   "tests": {
     "public_passed": 5,
+    "trace_tests_passed": 5,
     "failed": 0
+  },
+  "paired_traces": {
+    "release_tag": "paired-traces-v1-20261009",
+    "archive_sha256": "a6f18143e03be1cbc6d5da340dfd2077166da2ba1a868b14b061b8c1a83765c1",
+    "physical_runs": 132,
+    "unique_predictions": 140,
+    "model_run_pairs": 372,
+    "P1plus_failures_retained": 35,
+    "excluded_attempts_inventoried": 6,
+    "isolated_recomputation": "PASS: standard library only; no original workspace reads, network or subprocesses",
+    "independent_review": "PASS: all projected arithmetic and schemas, plus raw source sampling"
   }
 }

@@ -7,6 +7,21 @@ compatibility checks, and a standalone E1 accounting verifier.
 values from reduced records. Its ten tests run with
 \texttt{python -B -m unittest}; physical-run acceptance is inherited.
 
+The paired trace corpus covers the 36-run held-out study, Bridge, E2, and E3:
+132 technically accepted physical runs (including 35 strict P1+ failures)
+and 140 unique frozen predictions form 372 model/run pairs. Predictions are
+reused across physical repeats. The index separately lists six excluded
+technical or aborted attempts; it does not provide full traces for them.
+Each released record contains aligned request timing and terminal status,
+control targets, lifecycle events, and resource/cost primitives, with prompts
+and machine identifiers removed. The standard-library loader and examples
+recompute feasibility-direction agreement and scenario-cost MAE;
+\texttt{python -B verify.py} checks the complete corpus after extraction.
+This release supports analysis of the recorded deployments, not unseen-workload
+validation or rerunning model inference. It does not include the other
+supplementary campaigns. The corpus's \path{SCHEMA.md} specifies the projection
+and accounting boundaries.
+
 The remaining \path{scripts/}, \path{docs/}, and \path{artifacts/} paths in this
 supplement identify the separately retained full experiment archive. Its
 \path{scripts/maxopt_v3_closeout/reverify.py} rebuilds the 36 acceptance reports,

@@ -92,7 +92,13 @@
       "23--38 policy-specific code lines",
       "73-line adapter",
       "The five E2 checkpoints",
-      "falsely rejects three feasible candidates"
+      "falsely rejects three feasible candidates",
+      "request-aligned prediction and execution traces",
+      "that block scale-down until a target-change cooldown expires",
+      "E2 exhibits this interaction",
+      "Practical validation.",
+      "condition savings on deadline feasibility, retaining failures",
+      "An evaluator must therefore be checked on the deployment it is meant to screen."
     ],
     "paper/e2_final_addition.tex": [
       "196 of 218",
@@ -108,7 +114,12 @@
       "Shared baseline support & --- & 73",
       "Shared runtime control & --- & 197",
       "45.07\\%, 45.07\\%, 45.08\\%, and 43.76\\%",
-      "CPU predictions, not additional physical runs"
+      "CPU predictions, not additional physical runs",
+      "132 technically accepted physical runs",
+      "35 strict P1+ failures",
+      "140 unique frozen predictions form 372 model/run pairs",
+      "six excluded technical or aborted attempts",
+      "not unseen-workload validation or rerunning model inference"
     ],
     "paper/appendix_e3.tex": [
       "90 previously undeployed",
@@ -121,10 +132,16 @@
       "median 34.78",
       "range 32.52--93.01",
       "Two additional late launches"
+    ],
+    "paper/abstract.tex": [
+      "releases paired traces for reproducible analysis"
     ]
   },
   "bound_evidence": {
     "paper/IMPLEMENTATION_FOOTPRINT.json": "ab28d74097ed68cc0ff732b1cefb10cf449ed0329fd0f02956f494dbf77914f4",
-    "evidence/E3_SCREENING_EVIDENCE.json": "0e8b77359d51a61a272a391b8931875e8e217909328ba57b92d6793962c69115"
+    "evidence/E3_SCREENING_EVIDENCE.json": "0e8b77359d51a61a272a391b8931875e8e217909328ba57b92d6793962c69115",
+    "traces/INDEX.json": "c690cf0ab3e2ebabf538a03b2adc0359b6c42de158d649ba41dc885fcf9f7468",
+    "traces/SUMMARY.json": "fe93c8062a8e60d3753869d56cadbac92ff1293c3ac2f704aa03cac8eae7e55d",
+    "traces/MANIFEST.json": "4b2e232ee710dd61da04c75c5e7e4b8221d4ca8dfd00367f87aba7b97a283c91"
   }
 }
