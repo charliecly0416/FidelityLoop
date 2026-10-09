@@ -1,6 +1,6 @@
 # Reproducing the portable checks
 
-The source release and the standalone E1 artifact serve different purposes. Neither needs a GPU, API key, model weights, or the original production prompts. The full GPU campaigns remain separately archived.
+The source release and the standalone E1 artifact serve different purposes. Neither needs a GPU, API key, model weights, or the original production prompts. Full machine journals remain separately archived; the paired contract-level traces described below are now included.
 
 ## Framework checks (source release)
 
@@ -73,6 +73,12 @@ This evidence is distinct from the 32-cell E2 PPO campaign. Replaying decisions 
 
 The full return archive was independently recomputed from request terminals and lifecycle events. This compact release supports inspection and summary arithmetic, not a raw-event rerun. All six selected candidates are feasible; there is no physical failure cohort from which to infer failure-detection performance. The two windows ran on separate matched hosts, and the external Git anchor followed execution start. Internal launch records bind the scientific files, but this is not an externally preregistered campaign.
 
+## Paired trace corpus
+
+The `traces/` directory is a self-contained standard-library package. From there, run `python -B verify.py`, `python -B -m unittest -v test_trace`, and `python -B evaluate.py`. Verification checks 132 physical runs, 140 unique predictions and 372 mappings; the five tests cover deadline/cutoff semantics, resource clipping and malformed inputs. The standalone ZIP can be moved to an unrelated directory and used without this repository.
+
+The corpus preserves all 35 strict-deadline negative physical runs from the four campaigns. Six technical/aborted attempts appear only in its exclusion inventory. V3's old replay feasibility flag used a different threshold; the tools recompute strict outcomes from requests. E3's comparison excludes its two anchors. See `traces/SCHEMA.md` for exact time, event, accounting and redaction semantics. These checks reproduce projected measurements, not OS-level GPU release verification or model answers.
+
 ## Historical archive paths in the supplement
 
 The supplement's `scripts/`, `docs/`, and `artifacts/` paths identify the full historical experiment archive. They are provenance locations, not commands available in this compact source release.
@@ -83,7 +89,7 @@ The supplement's `scripts/`, `docs/`, and `artifacts/` paths identify the full h
 | `tests/maxopt_framework/test_facade.py` / historical facade report | `python -m fidelityloop.framework.validate`, its regression test, and the historical receipt | The four-plus-two synthetic compatibility/conservation results can be reproduced locally |
 | `docs/maxopt_v5_e1_boundary_20260930/analysis.py` | `artifact/e1_repricing/analysis.py` and `verify.py` | The same fixed-event resource/cost calculation in a portable reduced format |
 | Earlier E1 decision-recovery script and logs | `evidence/E1_DECISION_REPLAY_*.json` | Unchanged audit receipts; full raw replay is not included |
-| E2 physical runtime/checkpoints/raw journals | Compact E2 ledgers and prediction recheck in `evidence/` | Reported outcomes and source identities can be inspected; no claim of a turnkey GPU rerun |
+| E2 physical runtime/checkpoints/raw journals | Ledgers in `evidence/` and contract-level pairs in `traces/` | Window feasibility/cost can be recomputed from projected primitives; full runtime journals and weights remain separate |
 
 ## Paper builds
 

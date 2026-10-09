@@ -14,6 +14,7 @@ Current paper: [main PDF](paper/main.pdf) · [supplement](paper/supplement.pdf) 
 - `experiments/`: a self-contained CPU validation and its configuration; `python -m fidelityloop.framework.validate` also reproduces the historical facade compatibility checks.
 - `evidence/`: compact E2/E3 result ledgers, prediction recheck, source hashes, and the current manuscript claim checks. These files contain the paper's reported deployment outcomes without shipping multi-gigabyte runtime logs.
 - `artifact/`: protocol/configuration evidence, a small derived workload sample, an implementation-footprint audit, and the standalone `e1_repricing/` verifier for the paper's fixed-event resource and cost analysis. Full production traces, model weights, and GPU event journals are not redistributed here.
+- `traces/`: standalone paired prediction/execution corpus: 132 accepted physical runs, 140 unique predictions, 372 explicit pairs, and standard-library loaders and metric examples. Prompts and machine identifiers are omitted; scientific failures remain included.
 - `paper/`: anonymous paper source, figures, bibliography, and the compiled main paper and supplement.
 
 ## Quick start
@@ -28,6 +29,10 @@ python -B artifact/e1_repricing/verify.py
 ```
 
 The two framework checks should report `status: PASS`; the E1 verifier should report `PASS_REDUCED_LEDGER_REPRICING` and 169 checked numerical values. These commands use CPU execution without an API, GPU worker, or PPO training. See [REPRODUCING.md](REPRODUCING.md) for tests, expected results, and the distinction between portable checks and the full historical archive.
+
+## Paired deployment traces
+
+From `traces/`, run `python -B verify.py` to check the complete corpus and recompute its window ledgers. `python -B evaluate.py --metric feasibility` and `--metric cost` give per-campaign examples. The [standalone ZIP](https://github.com/charliecly0416/FidelityLoop/releases/download/paired-traces-v1-20261009/FidelityLoop_Paired_Traces_v1_20261009.zip) has author-neutral contents for independent use. See [schema and scope](traces/SCHEMA.md); repeated pairs are not independent experiments, and the data cannot rerun model inference or establish unseen-workload generalization.
 
 ## Rebuilding the paper
 
