@@ -1,0 +1,104 @@
+{
+  "scope": "Per-campaign descriptive paired comparisons. All accepted physical cells except E3 anchors. Repeats reuse predictions; these are not independent prediction counts or population screening accuracy. V3 covers all released policies; the paper's fixed-H fidelity analyses use a subset.",
+  "groups": [
+    {
+      "campaign": "V3",
+      "replay_model": "C",
+      "comparison_cells": 36,
+      "feasibility_agreement": 33,
+      "false_acceptance_cells": 3,
+      "false_rejection_cells": 0,
+      "cost_mae_scenario_USD": 0.42179774060782105
+    },
+    {
+      "campaign": "V3",
+      "replay_model": "C30",
+      "comparison_cells": 36,
+      "feasibility_agreement": 36,
+      "false_acceptance_cells": 0,
+      "false_rejection_cells": 0,
+      "cost_mae_scenario_USD": 0.046015135826735415
+    },
+    {
+      "campaign": "V3",
+      "replay_model": "E",
+      "comparison_cells": 36,
+      "feasibility_agreement": 36,
+      "false_acceptance_cells": 0,
+      "false_rejection_cells": 0,
+      "cost_mae_scenario_USD": 0.04121975107783327
+    },
+    {
+      "campaign": "V3",
+      "replay_model": "O",
+      "comparison_cells": 36,
+      "feasibility_agreement": 30,
+      "false_acceptance_cells": 0,
+      "false_rejection_cells": 6,
+      "cost_mae_scenario_USD": 0.2640869840473812
+    },
+    {
+      "campaign": "V3",
+      "replay_model": "V",
+      "comparison_cells": 36,
+      "feasibility_agreement": 36,
+      "false_acceptance_cells": 0,
+      "false_rejection_cells": 0,
+      "cost_mae_scenario_USD": 0.037388340233622266
+    },
+    {
+      "campaign": "Bridge",
+      "replay_model": "C",
+      "comparison_cells": 38,
+      "feasibility_agreement": 36,
+      "false_acceptance_cells": 2,
+      "false_rejection_cells": 0,
+      "cost_mae_scenario_USD": 0.09685612097751366
+    },
+    {
+      "campaign": "Bridge",
+      "replay_model": "C30",
+      "comparison_cells": 38,
+      "feasibility_agreement": 21,
+      "false_acceptance_cells": 14,
+      "false_rejection_cells": 3,
+      "cost_mae_scenario_USD": 0.6997871749531849
+    },
+    {
+      "campaign": "E2",
+      "replay_model": "C",
+      "comparison_cells": 32,
+      "feasibility_agreement": 32,
+      "false_acceptance_cells": 0,
+      "false_rejection_cells": 0,
+      "cost_mae_scenario_USD": 0.0804413443056601
+    },
+    {
+      "campaign": "E2",
+      "replay_model": "C30",
+      "comparison_cells": 32,
+      "feasibility_agreement": 20,
+      "false_acceptance_cells": 12,
+      "false_rejection_cells": 0,
+      "cost_mae_scenario_USD": 0.4657460674675289
+    },
+    {
+      "campaign": "E3",
+      "replay_model": "C",
+      "comparison_cells": 24,
+      "feasibility_agreement": 18,
+      "false_acceptance_cells": 0,
+      "false_rejection_cells": 6,
+      "cost_mae_scenario_USD": 0.3112121046639826
+    },
+    {
+      "campaign": "E3",
+      "replay_model": "C30",
+      "comparison_cells": 24,
+      "feasibility_agreement": 24,
+      "false_acceptance_cells": 0,
+      "false_rejection_cells": 0,
+      "cost_mae_scenario_USD": 0.01633545729374476
+    }
+  ]
+}
