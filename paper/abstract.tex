@@ -5,17 +5,16 @@ and deadline-aware resource accounting. In a preregistered study of 36
 Qwen2.5-7B-Instruct runs on two A100 GPUs, the calibrated replay improves
 matched-request timing while worsening occupied-resource prediction; trajectory
 analysis explains why aggregate error is insufficient for closed-loop evaluation.
-To test whether replay-selected policies remain feasible when deployed, we train
-PPO scheduling policies in the framework's replay environment under two startup-time
-assumptions. We select and freeze five checkpoints and evaluate them alongside an always-on
-two-GPU reference in a continuous 32-run campaign on the same registered serving
-stack, using a separately re-provisioned runtime lock. Three checkpoints meet
-every online and offline deadline in all six runs; two fail all six. Both training
-environments produce passing and failing checkpoints. Replay with calibrated
-service times and the historical startup proxy (C) predicts feasibility correctly
-on 32/32 runs, with 0.0804 scenario-USD cost MAE. Changing startup to 30 seconds
-(C30) improves the earlier resource metric but yields only 20/32 correct
-feasibility predictions and 0.4657 cost MAE. Thus lower resource prediction error
-does not guarantee better deployment-feasibility prediction. The study preserves
-all attempts and negative results under its workload, hardware, and synthetic-API
-cost assumptions.
+We then train PPO scheduling policies in replay under two startup-time
+assumptions and freeze five checkpoints for a 32-run deployment campaign (E2).
+Three checkpoints meet every deadline in all six runs; two fail all six.
+Both training environments produce passing and failing checkpoints.
+Replay with calibrated service times and the historical startup proxy (C)
+predicts feasibility correctly on 32/32 runs, versus 20/32 after changing
+startup to 30 seconds (C30). Their cost MAEs are 0.0804 and 0.4657 scenario USD.
+A follow-up on six new checkpoints instead finds all six feasible, including
+three rejected by C. These cases show why both policies and their replay
+models need deployment validation: aggregate resource error and past feasibility
+agreement can each obscure wrong decisions. FidelityLoop exposes these failures
+under a shared policy contract, retaining negative results within the studied
+workload, hardware, and synthetic-API setting.

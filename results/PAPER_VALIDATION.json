@@ -1,53 +1,56 @@
 {
   "schema": "fidelityloop-paper-validation-v1",
-  "date": "2026-10-08",
-  "paper_revision": "v7r10",
-  "freeze_tag": "paper-v7r10-20261008",
+  "date": "2026-10-09",
+  "paper_revision": "v7r11",
+  "freeze_tag": "paper-v7r11-20261009",
   "status": "PASS",
-  "scope": "Implementation footprint: one Method paragraph and one supplementary table, with hash-bound source snapshots and an offline counter. Existing experiments, figures, claims, and framework behavior unchanged.",
-  "baseline_commit": "8d6981b6f0036f70e208f4e8f2f862a745d8cf83",
+  "scope": "Integrate six-checkpoint E3 screening counterexample without pooling campaigns. Historical evidence, code, figures, and bibliography preserved.",
+  "baseline_commit": "749e8d938d7a51fa9598af4f4be9e751f860408d",
   "paper_sha256": {
-    "abstract.tex": "aba16d1b308dc6e1e70b4acc4511a3165e9314c733d71a1d32e54781555d3d9a",
-    "body.tex": "dfd4e58aae5ed3222f1d07518b1e1a7552553ead51c08d17ca89f78ad8cd7ed7",
-    "appendix.tex": "f30c2387e4d4282e9877f95651ff2bfc4c17d0fd8902cf1cabca3fb14ba54108",
+    "abstract.tex": "266ef134872bb30dbb12f1275c434cc0306a601a91988053daf1f0ce09c855a0",
+    "body.tex": "ed1028f3d18172137460c890c561bf4bbc948ecc4da0570e3041aa57eee974af",
+    "appendix.tex": "b494439c3466173e1f3e65cd79d89106f837bf4ab93df55863887d0b6b6ae38f",
+    "appendix_e3.tex": "66f31010c0d1bfbe59174920263a88eadef7a0fb4be2978ca1430688a1e7b61f",
+    "COMMON_COST_METRIC.json": "e5bdc1033c9a32519222fcbc4e6aade4b643eaff71eace5a6a58957b1418db65",
     "references.bib": "4339b4791c5bd0516bd7697095a37142076f37da70e29bd59149f2f42feafb8b",
-    "main.pdf": "13f41fb929ac5bea8319aea509f4089c182256601b51b12e7b7001fa6fc1c063",
-    "supplement.pdf": "2c9d1f161d352c6b267cd8c535fa94410f6c5ccb4a8d4ee882767fa014bde548",
-    "IMPLEMENTATION_FOOTPRINT.json": "ab28d74097ed68cc0ff732b1cefb10cf449ed0329fd0f02956f494dbf77914f4"
+    "main.pdf": "8897186c2d4cef9800c933dc6be1432df9e5080fecca5696feaad22480fbf2f2",
+    "supplement.pdf": "781876e4937acfe98d422bc89d66b9d706a1f248681f3b799543599d45e1c820"
   },
   "packages": {
-    "FidelityLoop_Overleaf_v7r10_20261008.zip": {
-      "sha256": "2faae9516c4d6574ead581f9ef8d1c6c8684a040e3a1ced10212c74cb569931b",
-      "bytes": 400204,
-      "members": 66
+    "FidelityLoop_Overleaf_v7r11_20261009.zip": {
+      "sha256": "b215df42a9e999fedcf33657989ec4958134317b1ba1aab11a475ab625af38ec",
+      "bytes": 405112,
+      "members": 68,
+      "crc": "PASS",
+      "isolated_builds": "PASS: main and supplement compile; PDF text equals reviewed builds"
     }
   },
   "checked_builds": {
     "main_pdf_pages": 11,
     "main_body_ends_on_page": 10,
-    "supplement_pdf_pages": 17,
+    "supplement_pdf_pages": 18,
     "unresolved_references": false,
     "overfull_boxes": false,
     "isolated_overleaf_builds": "PASS"
   },
   "visual_review": {
     "main_pages_inspected": 11,
-    "supplement_pages_inspected": 17,
+    "supplement_pages_inspected": 18,
     "new_overlap_or_clipping": false
   },
   "source_checks": {
     "claim_lock": "PASS",
-    "footprint_counter_byte_exact": true,
-    "original_snapshot_entries_verified": 31,
-    "framework_code_unchanged": true
+    "all_188_comparison_arithmetic": "PASS",
+    "old_140_comparisons_preserved": true,
+    "old_figures_bibliography_and_generated_results_preserved": true
   },
   "independent_review": {
-    "status": "PASS",
-    "scope": "footprint artifact and manuscript insertions"
+    "scientific_raw_accounting": "PASS: 26 cells, 20046 requests",
+    "protocol": "PASS with disclosed split-host amendment and timing limitation",
+    "paper_content": "PASS_CONTENT_REVIEW_AFTER_MINIMAL_SCOPE_FIX"
   },
   "tests": {
     "public_passed": 5,
-    "counter_passed": 4,
     "failed": 0
   }
 }

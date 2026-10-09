@@ -67,6 +67,12 @@ This evidence is distinct from the 32-cell E2 PPO campaign. Replaying decisions 
 
 `python -B artifact/implementation_footprint/count_footprint.py` verifies the frozen source hashes and reproduces its `IMPLEMENTATION_FOOTPRINT.json`. Run `python -B -m unittest discover -s artifact/implementation_footprint -p "test_*.py"` for counting checks. This measures selected implementation components, not historical porting effort or the total framework size.
 
+## E3 screening evidence
+
+`evidence/E3_SCREENING_EVIDENCE.json` contains the six checkpoint identities, 26 reduced physical ledgers (24 policy runs and two anchors), frozen replay predictions, and the resulting confusion counts and cost MAEs. `paper/COMMON_COST_METRIC.json` records the per-comparison arithmetic used by the main cross-campaign table. E3's MAE and cell agreement exclude anchors; candidate decisions require both windows, so candidate counts and repeated-cell counts are distinct.
+
+The full return archive was independently recomputed from request terminals and lifecycle events. This compact release supports inspection and summary arithmetic, not a raw-event rerun. All six selected candidates are feasible; there is no physical failure cohort from which to infer failure-detection performance. The two windows ran on separate matched hosts, and the external Git anchor followed execution start. Internal launch records bind the scientific files, but this is not an externally preregistered campaign.
+
 ## Historical archive paths in the supplement
 
 The supplement's `scripts/`, `docs/`, and `artifacts/` paths identify the full historical experiment archive. They are provenance locations, not commands available in this compact source release.

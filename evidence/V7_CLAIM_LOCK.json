@@ -40,7 +40,9 @@
     "paper/generated/workload_rows.tex",
     "paper/main.tex",
     "paper/replay_model_specification.tex",
-    "paper/supplement.tex"
+    "paper/supplement.tex",
+    "paper/appendix_e3.tex",
+    "paper/generated/e3_rows.tex"
   ],
   "required_substrings": [
     "20/32",
@@ -76,7 +78,9 @@
   "required_by_file": {
     "paper/generated/bridge_fidelity_rows.tex": [
       "Bridge & C & 36/38 & 0.0969",
-      "Bridge & C30 & 21/38 & 0.6998"
+      "Bridge & C30 & 21/38 & 0.6998",
+      "E3 & C & 18/24 & 0.3112",
+      "E3 & C30 & 24/24 & 0.0163"
     ],
     "paper/body.tex": [
       "196 of 218",
@@ -86,7 +90,9 @@
       "not a saving",
       "no row overlap",
       "23--38 policy-specific code lines",
-      "73-line adapter"
+      "73-line adapter",
+      "The five E2 checkpoints",
+      "falsely rejects three feasible candidates"
     ],
     "paper/e2_final_addition.tex": [
       "196 of 218",
@@ -103,9 +109,18 @@
       "Shared runtime control & --- & 197",
       "45.07\\%, 45.07\\%, 45.08\\%, and 43.76\\%",
       "CPU predictions, not additional physical runs"
+    ],
+    "paper/appendix_e3.tex": [
+      "90 previously undeployed",
+      "C accepts 67",
+      "23; C30 accepts 89",
+      "external Git",
+      "24 policy runs",
+      "right-censored"
     ]
   },
   "bound_evidence": {
-    "paper/IMPLEMENTATION_FOOTPRINT.json": "ab28d74097ed68cc0ff732b1cefb10cf449ed0329fd0f02956f494dbf77914f4"
+    "paper/IMPLEMENTATION_FOOTPRINT.json": "ab28d74097ed68cc0ff732b1cefb10cf449ed0329fd0f02956f494dbf77914f4",
+    "evidence/E3_SCREENING_EVIDENCE.json": "0e8b77359d51a61a272a391b8931875e8e217909328ba57b92d6793962c69115"
   }
 }

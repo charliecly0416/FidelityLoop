@@ -15,7 +15,9 @@ inputs. We then train PPO policies in replay under two startup-time assumptions,
 freeze five checkpoints, and evaluate them against an always-on two-GPU reference.
 This 32-cell campaign uses the same registered Qwen/A100 serving stack under a
 separately re-provisioned runtime lock to test whether predicted feasibility
-survives physical execution.
+survives physical execution. A further six-checkpoint screening study tests
+whether the better-performing replay model remains useful for new candidates;
+its false rejections expose a limit that aggregate agreement alone misses.
 
 The paper makes three contributions:
 \begin{enumerate}[leftmargin=*]
@@ -30,7 +32,9 @@ comparisons explain a startup-related divergence and show why aggregate resource
 error is insufficient for a closed-loop evaluator.
 \item \textbf{A reproducible policy evaluation.} A guard for pending offline deadlines quantifies the
 resource--latency trade-off, and the continuous E2 campaign tests five frozen
-PPO checkpoints under two arrival regimes. These negative cases expose policy-feasibility limits:
+PPO checkpoints under two arrival regimes. A follow-up screening study exposes
+false rejections of feasible new checkpoints. These cases test both policies
+and their evaluator:
 lower scenario cost is not a saving when deadlines are missed.
 \end{enumerate}
 The source release provides CPU interface checks and a standalone fixed-event
@@ -209,6 +213,10 @@ into the result package. It is a policy-execution test, not a model-selection
 search or a claim of universal PPO superiority. An earlier 38-run campaign, termed Bridge, evaluated rule-based,
 guarded, and PPO policies under a separate runtime lock; its results
 are retained as supplementary evidence and are not pooled with E2.
+The follow-up screening study (E3) uses six previously undeployed checkpoints
+on the same two windows. Each window runs on a separate dual-A100 allocation
+with the registered serving stack: one all2 anchor and two repeats per arm,
+26 cells in total. E3 is analyzed separately from E2 and Bridge.
 
 \section{Method}
 Predictive replay and physical execution share a policy contract. Adapters read
@@ -310,7 +318,7 @@ scenario-ledger cost, so training trades occupied resources, lifecycle events,
 API use, and deadline misses under the declared contract.
 
 Training uses the three development arrival regimes and paired seeds from the
-locked CPU PPO contract. Checkpoints are selected mechanically with C30 replay,
+locked CPU PPO contract. The five E2 checkpoints are selected mechanically with C30 replay,
 guard disabled, P1+ required in every validation window, and sorting by equal-window
 mean cost, checkpoint index, then seed. We label the frozen checkpoints
 C-1/C-2 and C30-1/C30-2/C30-3 by training environment, numbering them
@@ -488,7 +496,7 @@ one burst-offline repeat (22 predicted, 24 observed). These diagnostics define t
 next test: freeze the replay prediction, let a learned checkpoint drive the same
 physical lifecycle, and compare terminal feasibility and cost from the shared ledger.
 
-\subsection{E2 policy execution: feasibility is part of the result}
+\subsection{Policy execution and screening: feasibility is part of the result}
 E2 tests whether checkpoints selected in replay remain feasible in physical
 execution. In its re-provisioned runtime, 196 of 218 window restarts
 that reached readiness across the 30 PPO runs took over 60 s.
@@ -567,19 +575,18 @@ C30 & 20/32 & 12/12 & 0.4657\\
 \end{tabular*}
 \end{table}
 
-The earlier locked 38-cell Bridge campaign contains rule, guard, and PPO
-arms on a separate runtime. Table~\ref{tab:crosscampaign} applies the same
-all-cell comparison to both campaigns: C matches physical feasibility on
-36/38 Bridge cells and 32/32 E2 cells, versus 21/38 and 20/32 for C30.
-Its cost MAE is also lower in both campaigns. The agreement pattern recurs
-across the two locked campaigns; their cells are not pooled.
+The earlier 38-cell Bridge campaign contains rule, guard, and PPO
+arms on a separate runtime. C also has higher feasibility agreement and
+lower cost MAE there (Table~\ref{tab:crosscampaign}); the campaigns are not pooled.
+This repeated agreement motivates testing C as a screening rule on new checkpoints.
 
 \begin{table}[t]
 \centering
 \small
 \caption{Replay-to-deployment agreement and window-cost MAE.
-Both metrics include every accepted physical cell, including deadline
-failures. Cost MAE is in scenario USD for both campaigns.}
+Bridge and E2 include all technically valid cells, including anchors and
+deadline failures; E3 includes its 24 policy cells. Agreement compares each
+window prediction with repeated physical outcomes. Cost MAE is in scenario USD.}
 \label{tab:crosscampaign}
 \setlength{\tabcolsep}{3pt}
 \par\vspace{4pt}
@@ -591,10 +598,18 @@ Campaign & Replay & Agreement & Cost MAE\\
 \end{tabular*}
 \end{table}
 
-Both training environments yield passing and failing checkpoints.
-Agreement on this C30-selected set supports validating individual
-policies through deployment, not a general ranking of replay models
-or training environments.
+Both training environments yield passing and failing E2 checkpoints.
+E3 tests whether C's agreement transfers to six previously undeployed
+checkpoints. From 90 eligible candidates, C predicts 67 feasible on both known
+windows and rejects 23. A fixed ordering selects three distinct trajectories
+from each group; C30 does not enter selection. All six pass every physical
+run (two windows, two repeats), as do both all2 anchors. C therefore falsely
+rejects three feasible candidates, while C30 accepts all six. Across the 24
+policy cells, C30 also has lower cost MAE (Table~\ref{tab:crosscampaign}),
+reversing the E2 ordering. These selected cases show that earlier agreement
+does not establish reliable screening of new checkpoints and execution
+conditions; they do not estimate population screening accuracy. The supplement
+records candidate selection, predictions, and the separate window allocations.
 
 \subsection{Control case study: feasibility and cost}
 The earlier rule-based guard remains the control case for the same contract; E2
@@ -722,8 +737,9 @@ in physical execution and, if so, what resource use and cost it will incur.
 This requires validating request timing, capacity availability, and resource
 accounting together; improving one metric alone is insufficient.
 For example, C30's startup correction reduced resource-prediction error
-under fixed H, yet C predicted deadline feasibility more accurately
-in both subsequent policy campaigns.
+under fixed H, yet C predicted feasibility more accurately in Bridge and E2.
+E3 then reverses the comparison: C rejects three feasible new checkpoints.
+An evaluator must therefore be checked on the deployment it is meant to screen.
 
 \subsection{Validating predictions across levels}
 Better local-service fit can accompany worse closed-loop resource prediction.
@@ -774,6 +790,10 @@ E2 covers two A100 devices, one Qwen model, two windows, and five frozen
 checkpoints. It establishes neither heterogeneous-device scalability nor a
 general ranking of PPO training environments or PPO versus the guard. The
 38-cell Bridge campaign uses a separate runtime and is not pooled with E2.
+E3 adds six nonrandom checkpoints from two training seeds on known windows,
+with one allocation per window; checkpoint and execution-condition effects
+are not isolated. Its all-feasible cohort cannot measure detection of
+infeasible deployments or establish a generally superior replay model.
 Llama adds one similarly sized family and two repeats, including a guarded
 deadline failure; broader model scales, quantization, and engines remain untested.
 The same-runtime baseline compares two complete policies on known Qwen inputs,
@@ -796,6 +816,7 @@ states, control decisions, and resource use should therefore be validated togeth
 The guard case study quantifies deadline protection and its resource, routing,
 and cost trade-offs. E2 extends the same contract to frozen PPO checkpoints: some
 checkpoints reduce scenario cost while preserving every deadline, whereas the
-negative checkpoints reveal why cost must be conditioned on feasibility. Under
-the studied synthetic-API setting, the practical lesson is to verify deadline
-feasibility before comparing resource cost.
+negative checkpoints reveal why cost must be conditioned on feasibility.
+E3 also exposes false rejections by the replay model that best matched E2.
+Under the studied synthetic-API setting, both the candidate policy and its
+screening model need deployment validation before predicted savings guide decisions.

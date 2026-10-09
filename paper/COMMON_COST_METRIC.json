@@ -1,6 +1,6 @@
 {
-  "definition": "Per campaign/model, arithmetic mean of absolute window-total scenario-cost prediction error across ALL accepted physical cells, including deadline failures. Repeats are repeated comparisons, not independent predictions.",
-  "scope": "Existing record arithmetic only; no new experiment or simulator execution.",
+  "definition": "Per campaign/model, arithmetic mean of absolute window-total scenario-cost prediction error. Bridge/E2 include all technically accepted cells including deadline failures and anchors; E3 includes all 24 policy cells and excludes the two anchors. Repeats are repeated comparisons, not independent predictions.",
+  "scope": "Fixed-record arithmetic for separately analyzed campaigns; no pooling.",
   "old_bridge_metric": {
     "population": "both replay and physical P1+ only",
     "C_n": 18,
@@ -36,6 +36,20 @@
       "cells": 32,
       "agreement": 20,
       "cost_mae_scenario_USD": 0.465746067467529
+    },
+    {
+      "campaign": "E3",
+      "model": "C",
+      "cells": 24,
+      "agreement": 18,
+      "cost_mae_scenario_USD": 0.3112121046639825
+    },
+    {
+      "campaign": "E3",
+      "model": "C30",
+      "cells": 24,
+      "agreement": 24,
+      "cost_mae_scenario_USD": 0.016335457293744516
     }
   ],
   "rows": [
@@ -1436,6 +1450,486 @@
       "actual": 2.411815203808,
       "predicted": 2.2966062770085918,
       "absolute_error": 0.1152089267994083,
+      "observed_pass": true,
+      "predicted_pass": true
+    },
+    {
+      "campaign": "E3",
+      "model": "C",
+      "cell": "C30_s102_e0005__bridge_locked_test_recovery_v1__r1",
+      "actual": 1.931548403485,
+      "predicted": 1.9719597873829429,
+      "absolute_error": 0.040411383897942965,
+      "observed_pass": true,
+      "predicted_pass": true
+    },
+    {
+      "campaign": "E3",
+      "model": "C",
+      "cell": "C30_s102_e0005__bridge_locked_test_recovery_v1__r2",
+      "actual": 1.932237427058,
+      "predicted": 1.9719597873829429,
+      "absolute_error": 0.03972236032494281,
+      "observed_pass": true,
+      "predicted_pass": true
+    },
+    {
+      "campaign": "E3",
+      "model": "C",
+      "cell": "C30_s102_e0005__bridge_locked_test_steady_v1__r1",
+      "actual": 1.9616711598690002,
+      "predicted": 2.0323409941977317,
+      "absolute_error": 0.07066983432873153,
+      "observed_pass": true,
+      "predicted_pass": true
+    },
+    {
+      "campaign": "E3",
+      "model": "C",
+      "cell": "C30_s102_e0005__bridge_locked_test_steady_v1__r2",
+      "actual": 1.961761984822,
+      "predicted": 2.0323409941977317,
+      "absolute_error": 0.0705790093757317,
+      "observed_pass": true,
+      "predicted_pass": true
+    },
+    {
+      "campaign": "E3",
+      "model": "C",
+      "cell": "C30_s102_e0080__bridge_locked_test_recovery_v1__r1",
+      "actual": 1.9523358512570002,
+      "predicted": 1.9650078222225755,
+      "absolute_error": 0.012671970965575374,
+      "observed_pass": true,
+      "predicted_pass": true
+    },
+    {
+      "campaign": "E3",
+      "model": "C",
+      "cell": "C30_s102_e0080__bridge_locked_test_recovery_v1__r2",
+      "actual": 1.9523555785879998,
+      "predicted": 1.9650078222225755,
+      "absolute_error": 0.012652243634575733,
+      "observed_pass": true,
+      "predicted_pass": true
+    },
+    {
+      "campaign": "E3",
+      "model": "C",
+      "cell": "C30_s102_e0080__bridge_locked_test_steady_v1__r1",
+      "actual": 2.017135453534,
+      "predicted": 2.0688602333338633,
+      "absolute_error": 0.05172477979986345,
+      "observed_pass": true,
+      "predicted_pass": false
+    },
+    {
+      "campaign": "E3",
+      "model": "C",
+      "cell": "C30_s102_e0080__bridge_locked_test_steady_v1__r2",
+      "actual": 2.017207458201,
+      "predicted": 2.0688602333338633,
+      "absolute_error": 0.05165277513286348,
+      "observed_pass": true,
+      "predicted_pass": false
+    },
+    {
+      "campaign": "E3",
+      "model": "C",
+      "cell": "C30_s105_e0035__bridge_locked_test_recovery_v1__r1",
+      "actual": 1.869781900757,
+      "predicted": 1.9101728777790143,
+      "absolute_error": 0.04039097702201433,
+      "observed_pass": true,
+      "predicted_pass": true
+    },
+    {
+      "campaign": "E3",
+      "model": "C",
+      "cell": "C30_s105_e0035__bridge_locked_test_recovery_v1__r2",
+      "actual": 1.844460359614,
+      "predicted": 1.9101728777790143,
+      "absolute_error": 0.06571251816501444,
+      "observed_pass": true,
+      "predicted_pass": true
+    },
+    {
+      "campaign": "E3",
+      "model": "C",
+      "cell": "C30_s105_e0035__bridge_locked_test_steady_v1__r1",
+      "actual": 1.9235940168730001,
+      "predicted": 2.0170918777790146,
+      "absolute_error": 0.09349786090601442,
+      "observed_pass": true,
+      "predicted_pass": true
+    },
+    {
+      "campaign": "E3",
+      "model": "C",
+      "cell": "C30_s105_e0035__bridge_locked_test_steady_v1__r2",
+      "actual": 1.927463713412,
+      "predicted": 2.0170918777790146,
+      "absolute_error": 0.08962816436701448,
+      "observed_pass": true,
+      "predicted_pass": true
+    },
+    {
+      "campaign": "E3",
+      "model": "C",
+      "cell": "C30_s105_e0065__bridge_locked_test_recovery_v1__r1",
+      "actual": 1.926887756252,
+      "predicted": 1.9351188222225757,
+      "absolute_error": 0.008231065970575768,
+      "observed_pass": true,
+      "predicted_pass": true
+    },
+    {
+      "campaign": "E3",
+      "model": "C",
+      "cell": "C30_s105_e0065__bridge_locked_test_recovery_v1__r2",
+      "actual": 1.927032461929,
+      "predicted": 1.9351188222225757,
+      "absolute_error": 0.008086360293575678,
+      "observed_pass": true,
+      "predicted_pass": true
+    },
+    {
+      "campaign": "E3",
+      "model": "C",
+      "cell": "C30_s105_e0065__bridge_locked_test_steady_v1__r1",
+      "actual": 1.9575157743030003,
+      "predicted": 1.9766818222225755,
+      "absolute_error": 0.019166047919575213,
+      "observed_pass": true,
+      "predicted_pass": true
+    },
+    {
+      "campaign": "E3",
+      "model": "C",
+      "cell": "C30_s105_e0065__bridge_locked_test_steady_v1__r2",
+      "actual": 1.957863733501,
+      "predicted": 1.9766818222225755,
+      "absolute_error": 0.01881808872157542,
+      "observed_pass": true,
+      "predicted_pass": true
+    },
+    {
+      "campaign": "E3",
+      "model": "C",
+      "cell": "C_s105_e0070__bridge_locked_test_recovery_v1__r1",
+      "actual": 3.766027366021,
+      "predicted": 2.8257458668459283,
+      "absolute_error": 0.9402814991750716,
+      "observed_pass": true,
+      "predicted_pass": true
+    },
+    {
+      "campaign": "E3",
+      "model": "C",
+      "cell": "C_s105_e0070__bridge_locked_test_recovery_v1__r2",
+      "actual": 3.758045742058,
+      "predicted": 2.8257458668459283,
+      "absolute_error": 0.9322998752120717,
+      "observed_pass": true,
+      "predicted_pass": true
+    },
+    {
+      "campaign": "E3",
+      "model": "C",
+      "cell": "C_s105_e0070__bridge_locked_test_steady_v1__r1",
+      "actual": 3.8757726022140004,
+      "predicted": 3.060270843444855,
+      "absolute_error": 0.8155017587691455,
+      "observed_pass": true,
+      "predicted_pass": false
+    },
+    {
+      "campaign": "E3",
+      "model": "C",
+      "cell": "C_s105_e0070__bridge_locked_test_steady_v1__r2",
+      "actual": 3.8769038960140003,
+      "predicted": 3.060270843444855,
+      "absolute_error": 0.8166330525691454,
+      "observed_pass": true,
+      "predicted_pass": false
+    },
+    {
+      "campaign": "E3",
+      "model": "C",
+      "cell": "C_s105_e0080__bridge_locked_test_recovery_v1__r1",
+      "actual": 3.666420102101,
+      "predicted": 2.6432879888918923,
+      "absolute_error": 1.0231321132091078,
+      "observed_pass": true,
+      "predicted_pass": true
+    },
+    {
+      "campaign": "E3",
+      "model": "C",
+      "cell": "C_s105_e0080__bridge_locked_test_recovery_v1__r2",
+      "actual": 3.6666967477440005,
+      "predicted": 2.6432879888918923,
+      "absolute_error": 1.0234087588521081,
+      "observed_pass": true,
+      "predicted_pass": true
+    },
+    {
+      "campaign": "E3",
+      "model": "C",
+      "cell": "C_s105_e0080__bridge_locked_test_steady_v1__r1",
+      "actual": 3.624232936802,
+      "predicted": 3.0121358311183286,
+      "absolute_error": 0.6120971056836715,
+      "observed_pass": true,
+      "predicted_pass": false
+    },
+    {
+      "campaign": "E3",
+      "model": "C",
+      "cell": "C_s105_e0080__bridge_locked_test_steady_v1__r2",
+      "actual": 3.624256738758,
+      "predicted": 3.0121358311183286,
+      "absolute_error": 0.6121209076396714,
+      "observed_pass": true,
+      "predicted_pass": false
+    },
+    {
+      "campaign": "E3",
+      "model": "C30",
+      "cell": "C30_s102_e0005__bridge_locked_test_recovery_v1__r1",
+      "actual": 1.931548403485,
+      "predicted": 1.9468438260713006,
+      "absolute_error": 0.015295422586300678,
+      "observed_pass": true,
+      "predicted_pass": true
+    },
+    {
+      "campaign": "E3",
+      "model": "C30",
+      "cell": "C30_s102_e0005__bridge_locked_test_recovery_v1__r2",
+      "actual": 1.932237427058,
+      "predicted": 1.9468438260713006,
+      "absolute_error": 0.01460639901330052,
+      "observed_pass": true,
+      "predicted_pass": true
+    },
+    {
+      "campaign": "E3",
+      "model": "C30",
+      "cell": "C30_s102_e0005__bridge_locked_test_steady_v1__r1",
+      "actual": 1.9616711598690002,
+      "predicted": 1.9759624234735376,
+      "absolute_error": 0.014291263604537363,
+      "observed_pass": true,
+      "predicted_pass": true
+    },
+    {
+      "campaign": "E3",
+      "model": "C30",
+      "cell": "C30_s102_e0005__bridge_locked_test_steady_v1__r2",
+      "actual": 1.961761984822,
+      "predicted": 1.9759624234735376,
+      "absolute_error": 0.014200438651537528,
+      "observed_pass": true,
+      "predicted_pass": true
+    },
+    {
+      "campaign": "E3",
+      "model": "C30",
+      "cell": "C30_s102_e0080__bridge_locked_test_recovery_v1__r1",
+      "actual": 1.9523358512570002,
+      "predicted": 1.9621188222225756,
+      "absolute_error": 0.009782970965575455,
+      "observed_pass": true,
+      "predicted_pass": true
+    },
+    {
+      "campaign": "E3",
+      "model": "C30",
+      "cell": "C30_s102_e0080__bridge_locked_test_recovery_v1__r2",
+      "actual": 1.9523555785879998,
+      "predicted": 1.9621188222225756,
+      "absolute_error": 0.009763243634575813,
+      "observed_pass": true,
+      "predicted_pass": true
+    },
+    {
+      "campaign": "E3",
+      "model": "C30",
+      "cell": "C30_s102_e0080__bridge_locked_test_steady_v1__r1",
+      "actual": 2.017135453534,
+      "predicted": 2.0180388222225756,
+      "absolute_error": 0.0009033686885757675,
+      "observed_pass": true,
+      "predicted_pass": true
+    },
+    {
+      "campaign": "E3",
+      "model": "C30",
+      "cell": "C30_s102_e0080__bridge_locked_test_steady_v1__r2",
+      "actual": 2.017207458201,
+      "predicted": 2.0180388222225756,
+      "absolute_error": 0.0008313640215757978,
+      "observed_pass": true,
+      "predicted_pass": true
+    },
+    {
+      "campaign": "E3",
+      "model": "C30",
+      "cell": "C30_s105_e0035__bridge_locked_test_recovery_v1__r1",
+      "actual": 1.869781900757,
+      "predicted": 1.8709358777790144,
+      "absolute_error": 0.001153977022014363,
+      "observed_pass": true,
+      "predicted_pass": true
+    },
+    {
+      "campaign": "E3",
+      "model": "C30",
+      "cell": "C30_s105_e0035__bridge_locked_test_recovery_v1__r2",
+      "actual": 1.844460359614,
+      "predicted": 1.8709358777790144,
+      "absolute_error": 0.026475518165014478,
+      "observed_pass": true,
+      "predicted_pass": true
+    },
+    {
+      "campaign": "E3",
+      "model": "C30",
+      "cell": "C30_s105_e0035__bridge_locked_test_steady_v1__r1",
+      "actual": 1.9235940168730001,
+      "predicted": 1.9516588777790145,
+      "absolute_error": 0.028064860906014344,
+      "observed_pass": true,
+      "predicted_pass": true
+    },
+    {
+      "campaign": "E3",
+      "model": "C30",
+      "cell": "C30_s105_e0035__bridge_locked_test_steady_v1__r2",
+      "actual": 1.927463713412,
+      "predicted": 1.9516588777790145,
+      "absolute_error": 0.02419516436701441,
+      "observed_pass": true,
+      "predicted_pass": true
+    },
+    {
+      "campaign": "E3",
+      "model": "C30",
+      "cell": "C30_s105_e0065__bridge_locked_test_recovery_v1__r1",
+      "actual": 1.926887756252,
+      "predicted": 1.9351188222225757,
+      "absolute_error": 0.008231065970575768,
+      "observed_pass": true,
+      "predicted_pass": true
+    },
+    {
+      "campaign": "E3",
+      "model": "C30",
+      "cell": "C30_s105_e0065__bridge_locked_test_recovery_v1__r2",
+      "actual": 1.927032461929,
+      "predicted": 1.9351188222225757,
+      "absolute_error": 0.008086360293575678,
+      "observed_pass": true,
+      "predicted_pass": true
+    },
+    {
+      "campaign": "E3",
+      "model": "C30",
+      "cell": "C30_s105_e0065__bridge_locked_test_steady_v1__r1",
+      "actual": 1.9575157743030003,
+      "predicted": 1.9667918222225755,
+      "absolute_error": 0.009276047919575259,
+      "observed_pass": true,
+      "predicted_pass": true
+    },
+    {
+      "campaign": "E3",
+      "model": "C30",
+      "cell": "C30_s105_e0065__bridge_locked_test_steady_v1__r2",
+      "actual": 1.957863733501,
+      "predicted": 1.9667918222225755,
+      "absolute_error": 0.008928088721575467,
+      "observed_pass": true,
+      "predicted_pass": true
+    },
+    {
+      "campaign": "E3",
+      "model": "C30",
+      "cell": "C_s105_e0070__bridge_locked_test_recovery_v1__r1",
+      "actual": 3.766027366021,
+      "predicted": 3.780237644445151,
+      "absolute_error": 0.014210278424151124,
+      "observed_pass": true,
+      "predicted_pass": true
+    },
+    {
+      "campaign": "E3",
+      "model": "C30",
+      "cell": "C_s105_e0070__bridge_locked_test_recovery_v1__r2",
+      "actual": 3.758045742058,
+      "predicted": 3.780237644445151,
+      "absolute_error": 0.022191902387151075,
+      "observed_pass": true,
+      "predicted_pass": true
+    },
+    {
+      "campaign": "E3",
+      "model": "C30",
+      "cell": "C_s105_e0070__bridge_locked_test_steady_v1__r1",
+      "actual": 3.8757726022140004,
+      "predicted": 3.9022970555564385,
+      "absolute_error": 0.026524453342438026,
+      "observed_pass": true,
+      "predicted_pass": true
+    },
+    {
+      "campaign": "E3",
+      "model": "C30",
+      "cell": "C_s105_e0070__bridge_locked_test_steady_v1__r2",
+      "actual": 3.8769038960140003,
+      "predicted": 3.9022970555564385,
+      "absolute_error": 0.02539315954243815,
+      "observed_pass": true,
+      "predicted_pass": true
+    },
+    {
+      "campaign": "E3",
+      "model": "C30",
+      "cell": "C_s105_e0080__bridge_locked_test_recovery_v1__r1",
+      "actual": 3.666420102101,
+      "predicted": 3.6908238515347596,
+      "absolute_error": 0.024403749433759447,
+      "observed_pass": true,
+      "predicted_pass": true
+    },
+    {
+      "campaign": "E3",
+      "model": "C30",
+      "cell": "C_s105_e0080__bridge_locked_test_recovery_v1__r2",
+      "actual": 3.6666967477440005,
+      "predicted": 3.6908238515347596,
+      "absolute_error": 0.024127103790759108,
+      "observed_pass": true,
+      "predicted_pass": true
+    },
+    {
+      "campaign": "E3",
+      "model": "C30",
+      "cell": "C_s105_e0080__bridge_locked_test_steady_v1__r1",
+      "actual": 3.624232936802,
+      "predicted": 3.6548022245789165,
+      "absolute_error": 0.030569287776916365,
+      "observed_pass": true,
+      "predicted_pass": true
+    },
+    {
+      "campaign": "E3",
+      "model": "C30",
+      "cell": "C_s105_e0080__bridge_locked_test_steady_v1__r2",
+      "actual": 3.624256738758,
+      "predicted": 3.6548022245789165,
+      "absolute_error": 0.03054548582091643,
       "observed_pass": true,
       "predicted_pass": true
     }

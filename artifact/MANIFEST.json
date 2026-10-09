@@ -1,8 +1,8 @@
 {
   "schema": "fidelityloop-release-manifest-v1",
   "version": "0.1.1",
-  "paper_revision": "v7r10",
-  "paper_freeze_tag": "paper-v7r10-20261008",
+  "paper_revision": "v7r11",
+  "paper_freeze_tag": "paper-v7r11-20261009",
   "paper_title": "FidelityLoop: Closed-Loop Validation of Elastic LLM-Serving Policies",
   "scope": "tracked release files, excluding this manifest and ignored build/cache files",
   "files": [
@@ -23,13 +23,13 @@
     },
     {
       "path": "README.md",
-      "bytes": 4057,
-      "sha256": "1b472403e68067d17cea55f8e51280d49be46e9bd87f5630a63c70a25de8ac1c"
+      "bytes": 4452,
+      "sha256": "6fc29647e3de9631cf515372215104dc413f26bc87ffee409185247db869ff70"
     },
     {
       "path": "REPRODUCING.md",
-      "bytes": 6416,
-      "sha256": "ce80238e7423e485771031ca3e535b4fbfc4f47789ed3d1aaebe14542e4ae213"
+      "bytes": 7437,
+      "sha256": "2d0e0871c0a5550ab5e6a90bdaffc23343cacf9eb518431aa629c1c85612d48c"
     },
     {
       "path": "artifact/README.md",
@@ -44,7 +44,7 @@
     {
       "path": "artifact/bridge_execution/BASELINE_MANIFEST.json",
       "bytes": 524,
-      "sha256": "b4f9c0380cb1270e6363f41fc71e7cb27012394e5e86878d916c4832cddba274"
+      "sha256": "d4942246d5efd3ca1bc0ed951c4411602fe1beace09916a605e3f941713b1146"
     },
     {
       "path": "artifact/bridge_execution/CONTRACT.json",
@@ -392,6 +392,11 @@
       "sha256": "d59501753f127a54c8339d4d5462d54dbf44c6639e36c389ba64ac0e1e71c550"
     },
     {
+      "path": "evidence/E3_SCREENING_EVIDENCE.json",
+      "bytes": 63220,
+      "sha256": "0e8b77359d51a61a272a391b8931875e8e217909328ba57b92d6793962c69115"
+    },
+    {
       "path": "evidence/HISTORICAL_FACADE_VALIDATION.json",
       "bytes": 2845,
       "sha256": "ab4e01bbf514386927676b2e40129ac4e4ad543ce61618ad9cf60b3a13203ee9"
@@ -408,8 +413,8 @@
     },
     {
       "path": "evidence/V7_CLAIM_LOCK.json",
-      "bytes": 3337,
-      "sha256": "3b7949255ee2084399fd7ff1e44b5fe17925344d8dd8494a7edc10e04f5117bd"
+      "bytes": 3855,
+      "sha256": "ecffa41b3779e2ac72193864694b859422aaf3131e1498e19e91a101b9508036"
     },
     {
       "path": "experiments/README.md",
@@ -428,8 +433,8 @@
     },
     {
       "path": "paper/COMMON_COST_METRIC.json",
-      "bytes": 47327,
-      "sha256": "976c94d93d9f564ad3edf68cd529632c6e2191267b1afc00ccd27a91b62d519f"
+      "bytes": 62118,
+      "sha256": "e5bdc1033c9a32519222fcbc4e6aade4b643eaff71eace5a6a58957b1418db65"
     },
     {
       "path": "paper/IMPLEMENTATION_FOOTPRINT.json",
@@ -443,8 +448,8 @@
     },
     {
       "path": "paper/README.md",
-      "bytes": 1028,
-      "sha256": "9cb6a0dfb744782138948e9ae7516e09c253c919c79193e4ab238920cb57a109"
+      "bytes": 1216,
+      "sha256": "461a4ebfad1a4c8dc11794fd0bf00b9f8160dae18d9a9a47a8179be6ba59216c"
     },
     {
       "path": "paper/REPLAY_MODEL_SPECIFICATION.json",
@@ -453,18 +458,18 @@
     },
     {
       "path": "paper/SHA256SUMS.txt",
-      "bytes": 6016,
-      "sha256": "df6d3e6e804265a892927a4dc2d936a5fd848136234af8bcc774564bfad16fa1"
+      "bytes": 6186,
+      "sha256": "d4762b90dc7b62fee5acae93e736a6f6aa7b5a4926536b53897c662d940ff875"
     },
     {
       "path": "paper/abstract.tex",
-      "bytes": 1625,
-      "sha256": "aba16d1b308dc6e1e70b4acc4511a3165e9314c733d71a1d32e54781555d3d9a"
+      "bytes": 1505,
+      "sha256": "266ef134872bb30dbb12f1275c434cc0306a601a91988053daf1f0ce09c855a0"
     },
     {
       "path": "paper/appendix.tex",
-      "bytes": 12877,
-      "sha256": "f30c2387e4d4282e9877f95651ff2bfc4c17d0fd8902cf1cabca3fb14ba54108"
+      "bytes": 12897,
+      "sha256": "b494439c3466173e1f3e65cd79d89106f837bf4ab93df55863887d0b6b6ae38f"
     },
     {
       "path": "paper/appendix_e1.tex",
@@ -482,6 +487,11 @@
       "sha256": "66bd1918bbc33717b9c3c9b5a6e82ef8b0cfe885889f358dd0c957224f5707c6"
     },
     {
+      "path": "paper/appendix_e3.tex",
+      "bytes": 5156,
+      "sha256": "66f31010c0d1bfbe59174920263a88eadef7a0fb4be2978ca1430688a1e7b61f"
+    },
+    {
       "path": "paper/appendix_v4.tex",
       "bytes": 15532,
       "sha256": "1c3e7f300fa193a2f6723d97aa346e361691540dc20dfa2574c9a72c73989b2c"
@@ -493,8 +503,8 @@
     },
     {
       "path": "paper/body.tex",
-      "bytes": 43513,
-      "sha256": "dfd4e58aae5ed3222f1d07518b1e1a7552553ead51c08d17ca89f78ad8cd7ed7"
+      "bytes": 45293,
+      "sha256": "ed1028f3d18172137460c890c561bf4bbc948ecc4da0570e3041aa57eee974af"
     },
     {
       "path": "paper/cpu_model_evidence.tex",
@@ -588,8 +598,8 @@
     },
     {
       "path": "paper/generated/bridge_fidelity_rows.tex",
-      "bytes": 217,
-      "sha256": "9958ceb1d2f6f44f9bb0e141859ece8cf0e4d225b9fc19431e900052732d026d"
+      "bytes": 282,
+      "sha256": "ad0fb7ccd00fc0805bd3b18d90696a00b0864f7080f724cdd559582925bafc6e"
     },
     {
       "path": "paper/generated/bridge_guard_audit_rows.tex",
@@ -610,6 +620,11 @@
       "path": "paper/generated/e2_policy_rows.tex",
       "bytes": 301,
       "sha256": "33c46fbe38f054a8f9ec95808424d39064634a801f4dff8a825fa2ea1184f3df"
+    },
+    {
+      "path": "paper/generated/e3_rows.tex",
+      "bytes": 624,
+      "sha256": "a9ecbe159f51fae160484bde670b4bf8551d8aea74e8d345a4545d970148edbc"
     },
     {
       "path": "paper/generated/guard_rows.tex",
@@ -723,8 +738,8 @@
     },
     {
       "path": "paper/main.pdf",
-      "bytes": 274907,
-      "sha256": "13f41fb929ac5bea8319aea509f4089c182256601b51b12e7b7001fa6fc1c063"
+      "bytes": 276479,
+      "sha256": "8897186c2d4cef9800c933dc6be1432df9e5080fecca5696feaad22480fbf2f2"
     },
     {
       "path": "paper/main.tex",
@@ -758,8 +773,8 @@
     },
     {
       "path": "paper/supplement.pdf",
-      "bytes": 348217,
-      "sha256": "2c9d1f161d352c6b267cd8c535fa94410f6c5ccb4a8d4ee882767fa014bde548"
+      "bytes": 353910,
+      "sha256": "781876e4937acfe98d422bc89d66b9d706a1f248681f3b799543599d45e1c820"
     },
     {
       "path": "paper/supplement.tex",
@@ -773,8 +788,8 @@
     },
     {
       "path": "results/PAPER_VALIDATION.json",
-      "bytes": 2035,
-      "sha256": "044959c6f6a961de9143156c4e7ba59ddfd97ba33cc397e02589f765106959e7"
+      "bytes": 2315,
+      "sha256": "febff578fe2503e6d91bdec705706ed2152f24d3aaa8b39b210ac7185173be07"
     },
     {
       "path": "results/VALIDATION.json",

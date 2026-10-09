@@ -1,0 +1,104 @@
+\section{E3: screening additional checkpoints}
+\label{app:e3}
+E3 tests whether the replay model that agreed with E2 can screen additional
+checkpoints before deployment. From the existing training archive, we replay
+90 previously undeployed candidates under C and C30 on both locked windows
+(360 CPU scenarios), without retraining. C accepts 67 candidates and rejects
+23; C30 accepts 89. Acceptance requires P1+ on both windows. These are replay
+judgments, not measured success rates.
+
+\paragraph{Selection and execution.}
+The selection rule uses C alone. Accepted candidates are ordered by mean
+window cost; rejected candidates by total offline and then online deadline
+misses, with checkpoint identity breaking ties. Within each group, identical
+complete target trajectories are represented once, and the first three
+representatives are selected. The resulting six C trajectories differ from
+the previously deployed policies. Table~\ref{tab:e3identities} maps the new
+labels to archived checkpoints; the selected set spans two training seeds.
+C30 accepts all six but does not determine their selection.
+
+\begin{table}[t]
+\centering
+\small
+\caption{E3 checkpoint identities. Names encode training model, seed, and
+checkpoint index. C rejects N4--N6 because it predicts respectively 3, 6,
+and 7 offline misses in steady; all six pass recovery in replay.}
+\label{tab:e3identities}
+\setlength{\tabcolsep}{3pt}
+\par\vspace{4pt}
+\begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}lll@{}}
+\toprule
+Arm & Archived checkpoint & C decision\\
+\midrule
+N1 & \texttt{C30\_s105\_e0065} & accept\\
+N2 & \texttt{C30\_s105\_e0035} & accept\\
+N3 & \texttt{C30\_s102\_e0005} & accept\\
+N4 & \texttt{C30\_s102\_e0080} & reject\\
+N5 & \texttt{C\_s105\_e0080} & reject\\
+N6 & \texttt{C\_s105\_e0070} & reject\\
+\bottomrule
+\end{tabular*}
+\end{table}
+
+Each checkpoint executes twice per window, with one all2 reference per
+window: 24 policy runs and two references. A checkpoint is physically
+feasible only if all four executions satisfy P1+. Recovery and steady
+execute on separate matched dual-A100 hosts with the same model weights,
+vLLM 0.9.0 software stack, and accounting specifications. The recorded
+execution amendment changes work allocation, retaining the six checkpoints,
+inputs, predictions, and within-window run order. Window and host are
+therefore confounded; differences between the windows cannot be attributed
+solely to workload. E3 remains separate from the E2 runtime group.
+
+The launch records bind the frozen scientific files and CPU predictions;
+actions and replay outcomes match the CPU references. The external Git
+record was created after physical execution began, so this is a fixed-cohort
+confirmation, not an externally preregistered study. All 26 executions are
+technically valid, with no retries or replacement candidates.
+
+\paragraph{Results and interpretation.}
+All 26 runs satisfy P1+. Thus C correctly accepts three checkpoints but
+falsely rejects the other three; C30 accepts all six correctly on this
+cohort. There are no physically infeasible checkpoints, and C30 has no
+rejected candidates, so neither failure-detection performance nor C30's
+rejection accuracy can be estimated. The selected cohort and repeated runs
+also do not provide a population screening-accuracy estimate.
+
+\begin{table*}[t]
+\centering
+\small
+\caption{E3 window costs in scenario USD, with both physical repeats shown.
+R and S denote recovery and steady. Predictions include any modeled deadline
+penalty; no physical run incurs one. Each all2 reference satisfies P1+ with
+cost 4.2000. Costs cover the 2100\,s observation window; setup and subsequent
+cleanup are recorded separately.}
+\label{tab:e3costs}
+\setlength{\tabcolsep}{4pt}
+\par\vspace{4pt}
+\begin{tabular*}{0.94\linewidth}{@{\extracolsep{\fill}}llrrrrr@{}}
+\toprule
+Arm & Window & C prediction & C30 prediction & Physical 1 & Physical 2 & P1+\\
+\midrule
+\input{generated/e3_rows.tex}
+\end{tabular*}
+\end{table*}
+
+Across the 24 policy runs, feasibility agreement is 18/24 for C and
+24/24 for C30: C predicts failure only in the steady cells of N4--N6.
+Cost MAE is 0.3112 for C and 0.0163 for C30
+(Table~\ref{tab:e3costs}); the two all2 references are excluded from this
+comparison. These are scenario costs, including the declared synthetic-API
+route, rather than measured provider charges. The outcome reverses the
+model ordering observed in E2 on a different cohort and execution context;
+it does not establish that either fixed model is generally preferable.
+
+In this execution context, the 76 completed in-window launch-to-ready
+intervals have median 34.78\,s
+(range 32.52--93.01\,s), closer to C30's 30\,s assumption than C's historical
+69.219\,s value. Two additional late launches are terminated at the
+observation cutoff before readiness and are excluded from this duration
+summary as right-censored observations; their window occupancy is charged.
+These observations do not isolate startup time as the cause of the gate
+errors. E3 shows why a screening decision itself requires physical
+validation: a model successful on an earlier cohort can reject feasible
+policies in a later deployment context.
