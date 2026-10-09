@@ -116,7 +116,11 @@
       "23; C30 accepts 89",
       "external Git",
       "24 policy runs",
-      "right-censored"
+      "right-censored",
+      "76 completed in-window",
+      "median 34.78",
+      "range 32.52--93.01",
+      "Two additional late launches"
     ]
   },
   "bound_evidence": {

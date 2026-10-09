@@ -413,8 +413,8 @@
     },
     {
       "path": "evidence/V7_CLAIM_LOCK.json",
-      "bytes": 3855,
-      "sha256": "ecffa41b3779e2ac72193864694b859422aaf3131e1498e19e91a101b9508036"
+      "bytes": 3975,
+      "sha256": "a9526185a422be09635623048f33c0af7492a862ec23b97e723c88cf71f5ea96"
     },
     {
       "path": "experiments/README.md",
