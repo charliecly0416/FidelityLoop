@@ -25,7 +25,7 @@ python -B evaluate.py --metric feasibility
 python -B evaluate.py --metric cost
 ```
 
-`verify.py` checks file hashes, the published field schema, every record's deadline/resource/cost arithmetic, pair mappings, and the saved example summary. Expected result: `PASS_PAIRED_TRACE_CORPUS`, 132 physical runs, 140 unique predictions, 450 pairs. `load_trace.py RECORD_ID` inspects one record; IDs are listed in `INDEX.json`. `--root PATH` supports relocating the complete corpus. Use `-B` to avoid bytecode caches; verification treats only listed files as release contents.
+`verify.py` checks file hashes, the published field schema, every record's deadline/resource/cost arithmetic, pair mappings, and the saved example summary. Expected result: `PASS_PAIRED_TRACE_CORPUS`, 158 physical runs, 182 unique predictions, 450 pairs. `load_trace.py RECORD_ID` inspects one record; IDs are listed in `INDEX.json`. `--root PATH` supports relocating the complete corpus. Use `-B` to avoid bytecode caches; verification treats only listed files as release contents.
 
 The examples report P1+ direction agreement and cost MAE separately per campaign and replay model. They use all accepted physical cells except E3/E4's two anchors per campaign, matching each frozen 24-cell comparison. Bridge/E2 include anchors. V3 examples cover all four policies, whereas the main paper's fixed-H fidelity analysis uses nine H runs. V3's original replay `feasible` flag used a different offline threshold; it is not reused as the strict P1/P1+ outcome here. In E3, six rejected *cells* under C correspond to three rejected *candidates* on steady; candidate acceptance requires both windows and physical feasibility all four repeats.
 
