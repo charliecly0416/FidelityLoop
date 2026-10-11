@@ -1,5 +1,5 @@
 {
-  "scope": "Per-campaign descriptive paired comparisons. All accepted physical cells except E3 anchors. Repeats reuse predictions; these are not independent prediction counts or population screening accuracy. V3 covers all released policies; the paper's fixed-H fidelity analyses use a subset.",
+  "scope": "Per-campaign descriptive paired comparisons. All accepted physical cells except E3/E4 anchors. Repeats reuse predictions; these are not independent prediction counts or population screening accuracy. V3 covers all released policies; the paper's fixed-H fidelity analyses use a subset.",
   "groups": [
     {
       "campaign": "V3",
@@ -99,6 +99,33 @@
       "false_acceptance_cells": 0,
       "false_rejection_cells": 0,
       "cost_mae_scenario_USD": 0.01633545729374476
+    },
+    {
+      "campaign": "E4",
+      "replay_model": "C",
+      "comparison_cells": 24,
+      "feasibility_agreement": 16,
+      "false_acceptance_cells": 0,
+      "false_rejection_cells": 8,
+      "cost_mae_scenario_USD": 0.541972817379133
+    },
+    {
+      "campaign": "E4",
+      "replay_model": "C30",
+      "comparison_cells": 24,
+      "feasibility_agreement": 24,
+      "false_acceptance_cells": 0,
+      "false_rejection_cells": 0,
+      "cost_mae_scenario_USD": 0.04681661860206576
+    },
+    {
+      "campaign": "E4",
+      "replay_model": "C_sg",
+      "comparison_cells": 24,
+      "feasibility_agreement": 24,
+      "false_acceptance_cells": 0,
+      "false_rejection_cells": 0,
+      "cost_mae_scenario_USD": 0.042742775084879614
     }
   ]
 }

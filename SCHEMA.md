@@ -44,4 +44,8 @@ The event stream retains relevant observed/simulated events rather than inventin
 
 ## Scientific scope
 
-Do not pool the campaigns or interpret 372 reused pairs as independent predictions. Technical exclusions and scientifically failed valid runs have different roles. The corpus measures these existing deployments; it is neither an unseen-workload benchmark nor a claim that arbitrary hardware, engines, output quality or real API performance are covered.
+Do not pool the campaigns or interpret 450 reused pairs as independent predictions. Technical exclusions and scientifically failed valid runs have different roles. The corpus measures these existing deployments; it is neither an unseen-workload benchmark nor a claim that arbitrary hardware, engines, output quality or real API performance are covered.
+
+## E4 extension
+
+The record schema remains version 1. The E4 index adds anonymous `replacement_physical_id` and `root_cause` fields to its two excluded-attempt inventory entries. They link an unusable attempt to its replacement run without inserting the failed attempt into a physical or prediction denominator. E4 records include the `unfinished` terminal-event category already allowed as a request status. `E4_MODELS.json` is a separate metadata document, not a new trace field. It records replay model numbers and named software/hardware versions, without source paths or machine identities. E4 has 26 physical records and 42 unique predictions (including anchors), 78 explicit pairs, and 24 scored physical comparisons per replay model (excluding anchors).
