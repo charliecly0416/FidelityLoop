@@ -6576,8 +6576,1715 @@
         "Model metadata documents the replay parameters; only startup_seconds differs among C, C30, and C_sg. The guard estimator is unchanged.",
         "Relative timing and token budgets are preserved; source identities, prompt/response text, absolute clocks, paths, hosts, and device UUIDs are not exported."
       ]
+    },
+    {
+      "campaign": "E5",
+      "excluded_attempts": [],
+      "pairs": [
+        {
+          "physical_id": "E5_physical_all2_late_burst_1",
+          "prediction_id": "E5_prediction_all2_late_burst_C"
+        },
+        {
+          "physical_id": "E5_physical_all2_late_burst_1",
+          "prediction_id": "E5_prediction_all2_late_burst_C30"
+        },
+        {
+          "physical_id": "E5_physical_all2_late_burst_1",
+          "prediction_id": "E5_prediction_all2_late_burst_C_sg"
+        },
+        {
+          "physical_id": "E5_physical_hysteresis_u8_d0_c60_late_burst_1",
+          "prediction_id": "E5_prediction_hysteresis_u8_d0_c60_late_burst_C"
+        },
+        {
+          "physical_id": "E5_physical_hysteresis_u8_d0_c60_late_burst_1",
+          "prediction_id": "E5_prediction_hysteresis_u8_d0_c60_late_burst_C30"
+        },
+        {
+          "physical_id": "E5_physical_hysteresis_u8_d0_c60_late_burst_1",
+          "prediction_id": "E5_prediction_hysteresis_u8_d0_c60_late_burst_C_sg"
+        },
+        {
+          "physical_id": "E5_physical_hysteresis_u8_d0_c60__guard_late_burst_1",
+          "prediction_id": "E5_prediction_hysteresis_u8_d0_c60__guard_late_burst_C"
+        },
+        {
+          "physical_id": "E5_physical_hysteresis_u8_d0_c60__guard_late_burst_1",
+          "prediction_id": "E5_prediction_hysteresis_u8_d0_c60__guard_late_burst_C30"
+        },
+        {
+          "physical_id": "E5_physical_hysteresis_u8_d0_c60__guard_late_burst_1",
+          "prediction_id": "E5_prediction_hysteresis_u8_d0_c60__guard_late_burst_C_sg"
+        },
+        {
+          "physical_id": "E5_physical_ppo_C_s101_late_burst_1",
+          "prediction_id": "E5_prediction_ppo_C_s101_late_burst_C"
+        },
+        {
+          "physical_id": "E5_physical_ppo_C_s101_late_burst_1",
+          "prediction_id": "E5_prediction_ppo_C_s101_late_burst_C30"
+        },
+        {
+          "physical_id": "E5_physical_ppo_C_s101_late_burst_1",
+          "prediction_id": "E5_prediction_ppo_C_s101_late_burst_C_sg"
+        },
+        {
+          "physical_id": "E5_physical_ppo_C_r2_late_burst_1",
+          "prediction_id": "E5_prediction_ppo_C_r2_late_burst_C"
+        },
+        {
+          "physical_id": "E5_physical_ppo_C_r2_late_burst_1",
+          "prediction_id": "E5_prediction_ppo_C_r2_late_burst_C30"
+        },
+        {
+          "physical_id": "E5_physical_ppo_C_r2_late_burst_1",
+          "prediction_id": "E5_prediction_ppo_C_r2_late_burst_C_sg"
+        },
+        {
+          "physical_id": "E5_physical_hysteresis_u8_d0_c60__guard_late_burst_2",
+          "prediction_id": "E5_prediction_hysteresis_u8_d0_c60__guard_late_burst_C"
+        },
+        {
+          "physical_id": "E5_physical_hysteresis_u8_d0_c60__guard_late_burst_2",
+          "prediction_id": "E5_prediction_hysteresis_u8_d0_c60__guard_late_burst_C30"
+        },
+        {
+          "physical_id": "E5_physical_hysteresis_u8_d0_c60__guard_late_burst_2",
+          "prediction_id": "E5_prediction_hysteresis_u8_d0_c60__guard_late_burst_C_sg"
+        },
+        {
+          "physical_id": "E5_physical_ppo_C_s101_late_burst_2",
+          "prediction_id": "E5_prediction_ppo_C_s101_late_burst_C"
+        },
+        {
+          "physical_id": "E5_physical_ppo_C_s101_late_burst_2",
+          "prediction_id": "E5_prediction_ppo_C_s101_late_burst_C30"
+        },
+        {
+          "physical_id": "E5_physical_ppo_C_s101_late_burst_2",
+          "prediction_id": "E5_prediction_ppo_C_s101_late_burst_C_sg"
+        },
+        {
+          "physical_id": "E5_physical_ppo_C_r2_late_burst_2",
+          "prediction_id": "E5_prediction_ppo_C_r2_late_burst_C"
+        },
+        {
+          "physical_id": "E5_physical_ppo_C_r2_late_burst_2",
+          "prediction_id": "E5_prediction_ppo_C_r2_late_burst_C30"
+        },
+        {
+          "physical_id": "E5_physical_ppo_C_r2_late_burst_2",
+          "prediction_id": "E5_prediction_ppo_C_r2_late_burst_C_sg"
+        },
+        {
+          "physical_id": "E5_physical_hysteresis_u8_d0_c60_late_burst_2",
+          "prediction_id": "E5_prediction_hysteresis_u8_d0_c60_late_burst_C"
+        },
+        {
+          "physical_id": "E5_physical_hysteresis_u8_d0_c60_late_burst_2",
+          "prediction_id": "E5_prediction_hysteresis_u8_d0_c60_late_burst_C30"
+        },
+        {
+          "physical_id": "E5_physical_hysteresis_u8_d0_c60_late_burst_2",
+          "prediction_id": "E5_prediction_hysteresis_u8_d0_c60_late_burst_C_sg"
+        },
+        {
+          "physical_id": "E5_physical_all2_middle_burst_1",
+          "prediction_id": "E5_prediction_all2_middle_burst_C"
+        },
+        {
+          "physical_id": "E5_physical_all2_middle_burst_1",
+          "prediction_id": "E5_prediction_all2_middle_burst_C30"
+        },
+        {
+          "physical_id": "E5_physical_all2_middle_burst_1",
+          "prediction_id": "E5_prediction_all2_middle_burst_C_sg"
+        },
+        {
+          "physical_id": "E5_physical_hysteresis_u8_d0_c60__guard_middle_burst_1",
+          "prediction_id": "E5_prediction_hysteresis_u8_d0_c60__guard_middle_burst_C"
+        },
+        {
+          "physical_id": "E5_physical_hysteresis_u8_d0_c60__guard_middle_burst_1",
+          "prediction_id": "E5_prediction_hysteresis_u8_d0_c60__guard_middle_burst_C30"
+        },
+        {
+          "physical_id": "E5_physical_hysteresis_u8_d0_c60__guard_middle_burst_1",
+          "prediction_id": "E5_prediction_hysteresis_u8_d0_c60__guard_middle_burst_C_sg"
+        },
+        {
+          "physical_id": "E5_physical_ppo_C_s101_middle_burst_1",
+          "prediction_id": "E5_prediction_ppo_C_s101_middle_burst_C"
+        },
+        {
+          "physical_id": "E5_physical_ppo_C_s101_middle_burst_1",
+          "prediction_id": "E5_prediction_ppo_C_s101_middle_burst_C30"
+        },
+        {
+          "physical_id": "E5_physical_ppo_C_s101_middle_burst_1",
+          "prediction_id": "E5_prediction_ppo_C_s101_middle_burst_C_sg"
+        },
+        {
+          "physical_id": "E5_physical_ppo_C_r2_middle_burst_1",
+          "prediction_id": "E5_prediction_ppo_C_r2_middle_burst_C"
+        },
+        {
+          "physical_id": "E5_physical_ppo_C_r2_middle_burst_1",
+          "prediction_id": "E5_prediction_ppo_C_r2_middle_burst_C30"
+        },
+        {
+          "physical_id": "E5_physical_ppo_C_r2_middle_burst_1",
+          "prediction_id": "E5_prediction_ppo_C_r2_middle_burst_C_sg"
+        },
+        {
+          "physical_id": "E5_physical_hysteresis_u8_d0_c60_middle_burst_1",
+          "prediction_id": "E5_prediction_hysteresis_u8_d0_c60_middle_burst_C"
+        },
+        {
+          "physical_id": "E5_physical_hysteresis_u8_d0_c60_middle_burst_1",
+          "prediction_id": "E5_prediction_hysteresis_u8_d0_c60_middle_burst_C30"
+        },
+        {
+          "physical_id": "E5_physical_hysteresis_u8_d0_c60_middle_burst_1",
+          "prediction_id": "E5_prediction_hysteresis_u8_d0_c60_middle_burst_C_sg"
+        },
+        {
+          "physical_id": "E5_physical_ppo_C_s101_middle_burst_2",
+          "prediction_id": "E5_prediction_ppo_C_s101_middle_burst_C"
+        },
+        {
+          "physical_id": "E5_physical_ppo_C_s101_middle_burst_2",
+          "prediction_id": "E5_prediction_ppo_C_s101_middle_burst_C30"
+        },
+        {
+          "physical_id": "E5_physical_ppo_C_s101_middle_burst_2",
+          "prediction_id": "E5_prediction_ppo_C_s101_middle_burst_C_sg"
+        },
+        {
+          "physical_id": "E5_physical_ppo_C_r2_middle_burst_2",
+          "prediction_id": "E5_prediction_ppo_C_r2_middle_burst_C"
+        },
+        {
+          "physical_id": "E5_physical_ppo_C_r2_middle_burst_2",
+          "prediction_id": "E5_prediction_ppo_C_r2_middle_burst_C30"
+        },
+        {
+          "physical_id": "E5_physical_ppo_C_r2_middle_burst_2",
+          "prediction_id": "E5_prediction_ppo_C_r2_middle_burst_C_sg"
+        },
+        {
+          "physical_id": "E5_physical_hysteresis_u8_d0_c60_middle_burst_2",
+          "prediction_id": "E5_prediction_hysteresis_u8_d0_c60_middle_burst_C"
+        },
+        {
+          "physical_id": "E5_physical_hysteresis_u8_d0_c60_middle_burst_2",
+          "prediction_id": "E5_prediction_hysteresis_u8_d0_c60_middle_burst_C30"
+        },
+        {
+          "physical_id": "E5_physical_hysteresis_u8_d0_c60_middle_burst_2",
+          "prediction_id": "E5_prediction_hysteresis_u8_d0_c60_middle_burst_C_sg"
+        },
+        {
+          "physical_id": "E5_physical_hysteresis_u8_d0_c60__guard_middle_burst_2",
+          "prediction_id": "E5_prediction_hysteresis_u8_d0_c60__guard_middle_burst_C"
+        },
+        {
+          "physical_id": "E5_physical_hysteresis_u8_d0_c60__guard_middle_burst_2",
+          "prediction_id": "E5_prediction_hysteresis_u8_d0_c60__guard_middle_burst_C30"
+        },
+        {
+          "physical_id": "E5_physical_hysteresis_u8_d0_c60__guard_middle_burst_2",
+          "prediction_id": "E5_prediction_hysteresis_u8_d0_c60__guard_middle_burst_C_sg"
+        },
+        {
+          "physical_id": "E5_physical_all2_steady_1",
+          "prediction_id": "E5_prediction_all2_steady_C"
+        },
+        {
+          "physical_id": "E5_physical_all2_steady_1",
+          "prediction_id": "E5_prediction_all2_steady_C30"
+        },
+        {
+          "physical_id": "E5_physical_all2_steady_1",
+          "prediction_id": "E5_prediction_all2_steady_C_sg"
+        },
+        {
+          "physical_id": "E5_physical_ppo_C_s101_steady_1",
+          "prediction_id": "E5_prediction_ppo_C_s101_steady_C"
+        },
+        {
+          "physical_id": "E5_physical_ppo_C_s101_steady_1",
+          "prediction_id": "E5_prediction_ppo_C_s101_steady_C30"
+        },
+        {
+          "physical_id": "E5_physical_ppo_C_s101_steady_1",
+          "prediction_id": "E5_prediction_ppo_C_s101_steady_C_sg"
+        },
+        {
+          "physical_id": "E5_physical_ppo_C_r2_steady_1",
+          "prediction_id": "E5_prediction_ppo_C_r2_steady_C"
+        },
+        {
+          "physical_id": "E5_physical_ppo_C_r2_steady_1",
+          "prediction_id": "E5_prediction_ppo_C_r2_steady_C30"
+        },
+        {
+          "physical_id": "E5_physical_ppo_C_r2_steady_1",
+          "prediction_id": "E5_prediction_ppo_C_r2_steady_C_sg"
+        },
+        {
+          "physical_id": "E5_physical_hysteresis_u8_d0_c60_steady_1",
+          "prediction_id": "E5_prediction_hysteresis_u8_d0_c60_steady_C"
+        },
+        {
+          "physical_id": "E5_physical_hysteresis_u8_d0_c60_steady_1",
+          "prediction_id": "E5_prediction_hysteresis_u8_d0_c60_steady_C30"
+        },
+        {
+          "physical_id": "E5_physical_hysteresis_u8_d0_c60_steady_1",
+          "prediction_id": "E5_prediction_hysteresis_u8_d0_c60_steady_C_sg"
+        },
+        {
+          "physical_id": "E5_physical_hysteresis_u8_d0_c60__guard_steady_1",
+          "prediction_id": "E5_prediction_hysteresis_u8_d0_c60__guard_steady_C"
+        },
+        {
+          "physical_id": "E5_physical_hysteresis_u8_d0_c60__guard_steady_1",
+          "prediction_id": "E5_prediction_hysteresis_u8_d0_c60__guard_steady_C30"
+        },
+        {
+          "physical_id": "E5_physical_hysteresis_u8_d0_c60__guard_steady_1",
+          "prediction_id": "E5_prediction_hysteresis_u8_d0_c60__guard_steady_C_sg"
+        },
+        {
+          "physical_id": "E5_physical_ppo_C_r2_steady_2",
+          "prediction_id": "E5_prediction_ppo_C_r2_steady_C"
+        },
+        {
+          "physical_id": "E5_physical_ppo_C_r2_steady_2",
+          "prediction_id": "E5_prediction_ppo_C_r2_steady_C30"
+        },
+        {
+          "physical_id": "E5_physical_ppo_C_r2_steady_2",
+          "prediction_id": "E5_prediction_ppo_C_r2_steady_C_sg"
+        },
+        {
+          "physical_id": "E5_physical_hysteresis_u8_d0_c60_steady_2",
+          "prediction_id": "E5_prediction_hysteresis_u8_d0_c60_steady_C"
+        },
+        {
+          "physical_id": "E5_physical_hysteresis_u8_d0_c60_steady_2",
+          "prediction_id": "E5_prediction_hysteresis_u8_d0_c60_steady_C30"
+        },
+        {
+          "physical_id": "E5_physical_hysteresis_u8_d0_c60_steady_2",
+          "prediction_id": "E5_prediction_hysteresis_u8_d0_c60_steady_C_sg"
+        },
+        {
+          "physical_id": "E5_physical_hysteresis_u8_d0_c60__guard_steady_2",
+          "prediction_id": "E5_prediction_hysteresis_u8_d0_c60__guard_steady_C"
+        },
+        {
+          "physical_id": "E5_physical_hysteresis_u8_d0_c60__guard_steady_2",
+          "prediction_id": "E5_prediction_hysteresis_u8_d0_c60__guard_steady_C30"
+        },
+        {
+          "physical_id": "E5_physical_hysteresis_u8_d0_c60__guard_steady_2",
+          "prediction_id": "E5_prediction_hysteresis_u8_d0_c60__guard_steady_C_sg"
+        },
+        {
+          "physical_id": "E5_physical_ppo_C_s101_steady_2",
+          "prediction_id": "E5_prediction_ppo_C_s101_steady_C"
+        },
+        {
+          "physical_id": "E5_physical_ppo_C_s101_steady_2",
+          "prediction_id": "E5_prediction_ppo_C_s101_steady_C30"
+        },
+        {
+          "physical_id": "E5_physical_ppo_C_s101_steady_2",
+          "prediction_id": "E5_prediction_ppo_C_s101_steady_C_sg"
+        }
+      ],
+      "physical": [
+        {
+          "path": "records/E5/physical/E5_physical_all2_late_burst_1.json.gz",
+          "policy": "all2",
+          "record_id": "E5_physical_all2_late_burst_1",
+          "repeat": 1,
+          "sha256": "04cb37940d933767faa21c325ea389b8447de42626f53572214d353769c178bc",
+          "source_sha256": {
+            "CELL_RESULT.json": "bd6eb56e0710981e294a2e3c1e19862ae13ef08d1e53fd54ce97d2a11317c914",
+            "controller_events.jsonl": "83b8c9d4c976fbd5e4c1fdef37d8eb01b8d7a1f7c6d4fb3a17a91a17e67641f1",
+            "expected_requests.json": "f1b5cb195e3a6393ca10c228b358ac0fe413e801808aebe7b09959b769ba60f2",
+            "request_events.jsonl": "61dd507ca3a3c53e6de66c6d37a67d4e471f96e0c4e21eca5a9af14a068ae4fe",
+            "request_terminals.json": "548c0116d335ffdc39759392a3b29dc264c9bb92edf733dc7748553fe7679197",
+            "run_plan.json": "21314c318445f585bc335440d88691b1ee491a9c6fca80a7c87c032111d7d841"
+          },
+          "window": "late_burst"
+        },
+        {
+          "path": "records/E5/physical/E5_physical_hysteresis_u8_d0_c60_late_burst_1.json.gz",
+          "policy": "hysteresis_u8_d0_c60",
+          "record_id": "E5_physical_hysteresis_u8_d0_c60_late_burst_1",
+          "repeat": 1,
+          "sha256": "e652749b6b416d0da9ebd88880b582ac457723fa06725394b58bae75310045c3",
+          "source_sha256": {
+            "CELL_RESULT.json": "e1c24edc9b1b7618de6d8de71f3931673fca5329af240f2f5c73ba6ef01932af",
+            "controller_events.jsonl": "ac9afa413a09e4fb586698b893902fdbf4d94c261f2d76d2163f3c41bf2f00d7",
+            "expected_requests.json": "f1b5cb195e3a6393ca10c228b358ac0fe413e801808aebe7b09959b769ba60f2",
+            "request_events.jsonl": "64f122320e5fde8888bf07a787096adeedad9b72c369b152a241b65f65044d57",
+            "request_terminals.json": "1631789b0f87a4731a2b71376b42d7313b0929b3a8f56cb161e493810d54b935",
+            "run_plan.json": "eae2506c5f7082e63751ec500e0865058e23febc1328b0e708c91810c94d0e61"
+          },
+          "window": "late_burst"
+        },
+        {
+          "path": "records/E5/physical/E5_physical_hysteresis_u8_d0_c60__guard_late_burst_1.json.gz",
+          "policy": "hysteresis_u8_d0_c60__guard",
+          "record_id": "E5_physical_hysteresis_u8_d0_c60__guard_late_burst_1",
+          "repeat": 1,
+          "sha256": "2fdc84df16789aa918048c58ce1a8cb05515890b773907e1464f92dab903b059",
+          "source_sha256": {
+            "CELL_RESULT.json": "0b084c83fa2d1a5658ac44ee8241c60e7ea9b70e28bf5f7d5452bf3830fc09ba",
+            "controller_events.jsonl": "aa2c15c1bc07ff68e026a97c18d1e4413d0b64910d58c601f2b8636a40af43de",
+            "expected_requests.json": "f1b5cb195e3a6393ca10c228b358ac0fe413e801808aebe7b09959b769ba60f2",
+            "request_events.jsonl": "e58b0ecfeb886ec9111ce4578d7add7a98b1bf206d70c12036a163aba1bb729a",
+            "request_terminals.json": "8783583888428541b46f6d71d76579fca3638638bb92eba88c556afe9791c107",
+            "run_plan.json": "f68254b6902d6c0da46938f9ace347fca01ae279694f26fcf47c831ba129925a"
+          },
+          "window": "late_burst"
+        },
+        {
+          "path": "records/E5/physical/E5_physical_ppo_C_s101_late_burst_1.json.gz",
+          "policy": "ppo_C_s101",
+          "record_id": "E5_physical_ppo_C_s101_late_burst_1",
+          "repeat": 1,
+          "sha256": "0a05bfe6778ba83278f920d23df495f8d78809775221327adcc59fae5354ec4e",
+          "source_sha256": {
+            "CELL_RESULT.json": "a966af07836153061049875dbc92d49af860e11b5ddf1ddcb3be3d72a1308805",
+            "controller_events.jsonl": "d5dc6bd1336a72e25afd13957dd66179091afb21ac9dce47aaa68a960dd2b75f",
+            "expected_requests.json": "f1b5cb195e3a6393ca10c228b358ac0fe413e801808aebe7b09959b769ba60f2",
+            "request_events.jsonl": "4f2956a0e64ff32ebad60a8814bee0ab47fa54ca1a8a48be6b5987c16a726347",
+            "request_terminals.json": "e99e5b52d25fa3facbf36ba95782045f89d5078288a15ddf7ac4d283ddafa5e5",
+            "run_plan.json": "ab1c1f275e2bb7f25ff05d059e83fae01939a7f943e69f79c71a24659709297a"
+          },
+          "window": "late_burst"
+        },
+        {
+          "path": "records/E5/physical/E5_physical_ppo_C_r2_late_burst_1.json.gz",
+          "policy": "ppo_C_r2",
+          "record_id": "E5_physical_ppo_C_r2_late_burst_1",
+          "repeat": 1,
+          "sha256": "0bc32a278dc8d5dd6c550b9a891251700d3cb2cbd5f4283d8754bf7b26cb3aad",
+          "source_sha256": {
+            "CELL_RESULT.json": "32fd24bf7634b83cb3366173c6ce78803c5695870545ef7c83c00163c97c1926",
+            "controller_events.jsonl": "444c5596f452756a88860c2127e56b8c60da101736122935d3f204e5599f7195",
+            "expected_requests.json": "f1b5cb195e3a6393ca10c228b358ac0fe413e801808aebe7b09959b769ba60f2",
+            "request_events.jsonl": "f80d2c1d6db3d4f90ea38d4ce4490c6a66b587c68b895c75482a38cf2ab5493f",
+            "request_terminals.json": "306b31c83901c7d442bf653faa974ff96e7d2f237cd9af3aae9f2b83baf04772",
+            "run_plan.json": "36728d027bae38b024255cbb39728dbbc3fd5b1b8b9d48f310b208dd3516951b"
+          },
+          "window": "late_burst"
+        },
+        {
+          "path": "records/E5/physical/E5_physical_hysteresis_u8_d0_c60__guard_late_burst_2.json.gz",
+          "policy": "hysteresis_u8_d0_c60__guard",
+          "record_id": "E5_physical_hysteresis_u8_d0_c60__guard_late_burst_2",
+          "repeat": 2,
+          "sha256": "d776a0025cfabf645b32bfc087f623211012251e0390e6241312d5d470fef600",
+          "source_sha256": {
+            "CELL_RESULT.json": "96b1ef88afd16857d7780f63df6a7a4f424d6081cf029b8756970410bc12e92b",
+            "controller_events.jsonl": "23e3494adf2efd002598c08595edfa633bc7b2cc6554088f738a7edfc22cf20c",
+            "expected_requests.json": "f1b5cb195e3a6393ca10c228b358ac0fe413e801808aebe7b09959b769ba60f2",
+            "request_events.jsonl": "1e6db48f796f02181d19717c2015b7168cb3e7685a596e68c43447471e0931dc",
+            "request_terminals.json": "85d09861207d44a50c1141bdf839001a4694543acc8f9fcf794a2c867cff0af7",
+            "run_plan.json": "d0f08da37ba80c03e502d1059fdb4291c484b76b620e274ecb43e2e1e20c02c0"
+          },
+          "window": "late_burst"
+        },
+        {
+          "path": "records/E5/physical/E5_physical_ppo_C_s101_late_burst_2.json.gz",
+          "policy": "ppo_C_s101",
+          "record_id": "E5_physical_ppo_C_s101_late_burst_2",
+          "repeat": 2,
+          "sha256": "148b3cbd5abfc77da4e6e96ca1da9d7dc36c9f010495500df3979285b29fe6f9",
+          "source_sha256": {
+            "CELL_RESULT.json": "14d44414fa8b72746a58adcb06207018816f3079bfb50d66ccd61430ffe7c66a",
+            "controller_events.jsonl": "fe3e5392a93971e979ed0597358fe30cc51707ff5ee2d8305c6eb6fa212bea2f",
+            "expected_requests.json": "f1b5cb195e3a6393ca10c228b358ac0fe413e801808aebe7b09959b769ba60f2",
+            "request_events.jsonl": "e311888e4ae7330ba3195ff966b82d2c6ea6ab0750c0b2ae8011f50959fae61b",
+            "request_terminals.json": "6f89e7e551ff87bf20edc30b0d3b479b08b6afa5ffb4d405d3801dd94cfd7f99",
+            "run_plan.json": "c7fa9ed65ba5e3a981c7baded56e52c82eace07470d1f7e9d8e76d3873a51928"
+          },
+          "window": "late_burst"
+        },
+        {
+          "path": "records/E5/physical/E5_physical_ppo_C_r2_late_burst_2.json.gz",
+          "policy": "ppo_C_r2",
+          "record_id": "E5_physical_ppo_C_r2_late_burst_2",
+          "repeat": 2,
+          "sha256": "f5e2ca4785dbfcfc35577fab0ce2052d827f96ea92a0633a2390031f00976e46",
+          "source_sha256": {
+            "CELL_RESULT.json": "98d1872c617875c967eac55be7330a98cef07486c5ec385322b5814da8593fe4",
+            "controller_events.jsonl": "b91c7fa127072d79d9c8fe8248152da60b87dd872b9ccf212a66d130482d8ecb",
+            "expected_requests.json": "f1b5cb195e3a6393ca10c228b358ac0fe413e801808aebe7b09959b769ba60f2",
+            "request_events.jsonl": "389b5eed1f8c31d05e985486c65551506eab41379940a79c92d4fc2205ad37e1",
+            "request_terminals.json": "55b6fe551e5afc1be32c0fecafb4b28d56526780dff04c5463f361b7dcdb0b5e",
+            "run_plan.json": "d31c00d7f35978d536e2e690be4914970d17fa89244be2f1e919320d4571189c"
+          },
+          "window": "late_burst"
+        },
+        {
+          "path": "records/E5/physical/E5_physical_hysteresis_u8_d0_c60_late_burst_2.json.gz",
+          "policy": "hysteresis_u8_d0_c60",
+          "record_id": "E5_physical_hysteresis_u8_d0_c60_late_burst_2",
+          "repeat": 2,
+          "sha256": "ae4a1fe1342c1f775e6f8d061401a1e4a97b1315665ea75179f06928112f8b2d",
+          "source_sha256": {
+            "CELL_RESULT.json": "70d3bfa83f0b7500ad2769c40b1d84a65eec4eca8c15b3cb6e872d052a677e43",
+            "controller_events.jsonl": "827ea86c419a86e4a09e5b9388554a7a3c5b05981d40ab0c003cc2a68f4362a6",
+            "expected_requests.json": "f1b5cb195e3a6393ca10c228b358ac0fe413e801808aebe7b09959b769ba60f2",
+            "request_events.jsonl": "39426bbb217cf278be65d7bd6e6669790fe85f0ed1f8bb9a2e9c798ce1ac2704",
+            "request_terminals.json": "1ac014e08ab153818f7193d42f50a7bff6de4483dc1ec10bdab4601351da1755",
+            "run_plan.json": "2ec463156abaa333805f06d62662dbd18e0856f398d21c8e7c39d43262ffe32d"
+          },
+          "window": "late_burst"
+        },
+        {
+          "path": "records/E5/physical/E5_physical_all2_middle_burst_1.json.gz",
+          "policy": "all2",
+          "record_id": "E5_physical_all2_middle_burst_1",
+          "repeat": 1,
+          "sha256": "24d1dff038d8c66fa55651d5f7bce8ce597f01baf2552eb7e11d060608143018",
+          "source_sha256": {
+            "CELL_RESULT.json": "5d368a560c5d82aed1c277353c52362d9b35e2c918be1d0f9f15da2107d0e952",
+            "controller_events.jsonl": "ad0570eb86d25fbc20fab154b108788aa163a644884dc04231650c2d5febd0cf",
+            "expected_requests.json": "53b09b53e7a456ed671185a68fa2df5a8ad9a04d3d23d6c92bcb76484faebc37",
+            "request_events.jsonl": "43ca3ffdf91e7f46161eeaf28963de7b296e224185627eb19fc251ce4b56f414",
+            "request_terminals.json": "abedef6908a179ec36ea7a96f79f779f83c495d3e4f66d59150e745c655cc2a0",
+            "run_plan.json": "ebc78b83574c368e09bc53779df2ca4fddc723ef6cdcfba09d6f483c9504bee3"
+          },
+          "window": "middle_burst"
+        },
+        {
+          "path": "records/E5/physical/E5_physical_hysteresis_u8_d0_c60__guard_middle_burst_1.json.gz",
+          "policy": "hysteresis_u8_d0_c60__guard",
+          "record_id": "E5_physical_hysteresis_u8_d0_c60__guard_middle_burst_1",
+          "repeat": 1,
+          "sha256": "f426a0f75b7d75894bad37844ae186cb733034e153e5bb45d5f4249162e073a9",
+          "source_sha256": {
+            "CELL_RESULT.json": "e73a255844e8ca447a5bc9415774bed54e2e16a2a4c756c2aa591ad5b927056e",
+            "controller_events.jsonl": "17160f89f7a0f631bcac9bc7d1f650d763341278e88212a6e8ee1e1fd8fe096f",
+            "expected_requests.json": "53b09b53e7a456ed671185a68fa2df5a8ad9a04d3d23d6c92bcb76484faebc37",
+            "request_events.jsonl": "caf43c37bd6bf508749a1207e32ef279565d104a3c46be65264375cccb6df4d7",
+            "request_terminals.json": "d5664ca3923e0b982a5862ac71a93a9a3b97b4777dc1aa216ba93b2fe59132c7",
+            "run_plan.json": "e806fa2d4843090a4c96ed5e6b3dab7368d72f13272060dcfec6029786a73700"
+          },
+          "window": "middle_burst"
+        },
+        {
+          "path": "records/E5/physical/E5_physical_ppo_C_s101_middle_burst_1.json.gz",
+          "policy": "ppo_C_s101",
+          "record_id": "E5_physical_ppo_C_s101_middle_burst_1",
+          "repeat": 1,
+          "sha256": "127dd406b31205ae58dc59de8ed331cb57f4540d4f6f0bbd5eafa14b326c3fa4",
+          "source_sha256": {
+            "CELL_RESULT.json": "2ac919605784ebf67cabd96aee6811e1587fb0b054472f8c73c651801ef4dd04",
+            "controller_events.jsonl": "9243b46f0f5c5db626738042ac1aab8f0473384e0a1f17f31c2c0225cd98fd19",
+            "expected_requests.json": "53b09b53e7a456ed671185a68fa2df5a8ad9a04d3d23d6c92bcb76484faebc37",
+            "request_events.jsonl": "90943e2d986943995374882bc8ef7aa240dc842d036e17f1b9ee103f1393879c",
+            "request_terminals.json": "032b19d26899313d89a873e4c17e691cf7e4c4a908fd5728bc96551673b07525",
+            "run_plan.json": "0cf95f7dfc6f1418877c47bcf0a825432a3e9454029ee5dd4801218f4a224720"
+          },
+          "window": "middle_burst"
+        },
+        {
+          "path": "records/E5/physical/E5_physical_ppo_C_r2_middle_burst_1.json.gz",
+          "policy": "ppo_C_r2",
+          "record_id": "E5_physical_ppo_C_r2_middle_burst_1",
+          "repeat": 1,
+          "sha256": "8a398090023cb29f87f253fbee5bdfe31741232af4b1a5bf55f9d2f695a8fbac",
+          "source_sha256": {
+            "CELL_RESULT.json": "bd919a62ef868eea02b62f5e3547155af941e2c0eddf23404c8fb84ba4eb5ad3",
+            "controller_events.jsonl": "ed524b08f7a5de0e0519a75d32811695eee1900f216fc6e1f7f7d5a000d03382",
+            "expected_requests.json": "53b09b53e7a456ed671185a68fa2df5a8ad9a04d3d23d6c92bcb76484faebc37",
+            "request_events.jsonl": "cae9ca4601904610c2319d28fbe7a2e29cc8ae823507a5d3d7db571fc3e1bee1",
+            "request_terminals.json": "bb2e573e1d10ef919a9099739e1fad91707ac01b8397defc10db57391d5c2a98",
+            "run_plan.json": "9bf9215a810be86a3456b4d3478110bce6292a9aa2f8c3225192e63c8a14ed50"
+          },
+          "window": "middle_burst"
+        },
+        {
+          "path": "records/E5/physical/E5_physical_hysteresis_u8_d0_c60_middle_burst_1.json.gz",
+          "policy": "hysteresis_u8_d0_c60",
+          "record_id": "E5_physical_hysteresis_u8_d0_c60_middle_burst_1",
+          "repeat": 1,
+          "sha256": "1ed06701239e8db6b3fa7d7bb492774378ae92acc1be4f0fb5d4393d4fa43db1",
+          "source_sha256": {
+            "CELL_RESULT.json": "f14ce2a7068eb909352b538b34c5156071b189cfc060e7e2c3e69d4cb9169daa",
+            "controller_events.jsonl": "b2aa355ad4d29300a67f7ef6bddbff139a62cd45d69e067854ae507968ac7782",
+            "expected_requests.json": "53b09b53e7a456ed671185a68fa2df5a8ad9a04d3d23d6c92bcb76484faebc37",
+            "request_events.jsonl": "5340046b6692d420caa81977c04c49285f417c2ac4fd5c19d77aeed67004d85f",
+            "request_terminals.json": "df2212376122cbdfc90a883d8d19c74a305e2c54464fe6fb8471d43c8d9648d5",
+            "run_plan.json": "e7c3a14ff624f3d9b031ac00c51c112228258e114528d3c7de245acf644d432a"
+          },
+          "window": "middle_burst"
+        },
+        {
+          "path": "records/E5/physical/E5_physical_ppo_C_s101_middle_burst_2.json.gz",
+          "policy": "ppo_C_s101",
+          "record_id": "E5_physical_ppo_C_s101_middle_burst_2",
+          "repeat": 2,
+          "sha256": "4bba9a6e5705e514d2827a980ab7aeadf0342c1d137ee8589f4570d1776f5031",
+          "source_sha256": {
+            "CELL_RESULT.json": "5cbff54a7cfcb76becd96eb618fa89fbd6007f096f145776e06aba604eb4c1cd",
+            "controller_events.jsonl": "d13af70783393d9fa4bd6d4e10513d1a2e8b1303311a5671e47d8a0d5a1e627a",
+            "expected_requests.json": "53b09b53e7a456ed671185a68fa2df5a8ad9a04d3d23d6c92bcb76484faebc37",
+            "request_events.jsonl": "7cc348d653dd95efe7db0ba5cff23d4f16a77589af14d2bb407cd14b156c6c62",
+            "request_terminals.json": "acee05b2c1e90c740063aeca2ba90f7c2d437497a8efdc02be7fbe610f9cea39",
+            "run_plan.json": "6e41a540036317d541915b27ea142d68f5bc4c062a5bd3955744d7c36434c1f0"
+          },
+          "window": "middle_burst"
+        },
+        {
+          "path": "records/E5/physical/E5_physical_ppo_C_r2_middle_burst_2.json.gz",
+          "policy": "ppo_C_r2",
+          "record_id": "E5_physical_ppo_C_r2_middle_burst_2",
+          "repeat": 2,
+          "sha256": "de12e93c365fa6f65400d1b8f17e79d87bd92a7cb21c150736a5dd7ff6cbd717",
+          "source_sha256": {
+            "CELL_RESULT.json": "0444989c4fcc0dca08347d9c448bdb67f8293a8bb4bb943fd30391a2a0287e72",
+            "controller_events.jsonl": "f990098f41f1897c18a15e04d6ca1d8d18dee3a94414c9ff2a120e4fcf81dc69",
+            "expected_requests.json": "53b09b53e7a456ed671185a68fa2df5a8ad9a04d3d23d6c92bcb76484faebc37",
+            "request_events.jsonl": "090140c792898f805b9d3daba60b92e27f93c6036daadf19b103112a4f5ef2d6",
+            "request_terminals.json": "7daf89aeb98b293c404f510a7ff03d65b156fe87f1e75c17573c4c3abf781e1b",
+            "run_plan.json": "dbab663d1ab2b645c1444c740705418a000a27d542aae40b1cef7b19db326d85"
+          },
+          "window": "middle_burst"
+        },
+        {
+          "path": "records/E5/physical/E5_physical_hysteresis_u8_d0_c60_middle_burst_2.json.gz",
+          "policy": "hysteresis_u8_d0_c60",
+          "record_id": "E5_physical_hysteresis_u8_d0_c60_middle_burst_2",
+          "repeat": 2,
+          "sha256": "f00551c6a0597455ede8787cfe6a49729e16d66410e8df51f4e91b99cb034e9d",
+          "source_sha256": {
+            "CELL_RESULT.json": "ba611b747460a99a530580d28215e887ba59adf94f7b126caca78f9f6319c922",
+            "controller_events.jsonl": "4a5a218a413318f6d6684b2a06aa98d7e0d2d3fa2b949d9b90879676da08fd36",
+            "expected_requests.json": "53b09b53e7a456ed671185a68fa2df5a8ad9a04d3d23d6c92bcb76484faebc37",
+            "request_events.jsonl": "0a348d0bb357c2f8f2255d44877d420f89d0cc553167385140b4f9fd04c10ac2",
+            "request_terminals.json": "8798540bdabe32ae8b45f8ca284715917712983d79059b6c30a1dcad8b8f1ad9",
+            "run_plan.json": "0916fc9f84deeffdfff022bedf9ba5c210064f73777aa522ef49e33d2af326c2"
+          },
+          "window": "middle_burst"
+        },
+        {
+          "path": "records/E5/physical/E5_physical_hysteresis_u8_d0_c60__guard_middle_burst_2.json.gz",
+          "policy": "hysteresis_u8_d0_c60__guard",
+          "record_id": "E5_physical_hysteresis_u8_d0_c60__guard_middle_burst_2",
+          "repeat": 2,
+          "sha256": "4c090d8575fd6f46c173d48b8a1d1a6085906bbe181854a7a18d7ab6e5f9cd63",
+          "source_sha256": {
+            "CELL_RESULT.json": "7f5f4b1a7f1c18b9bb85383c65d99a514839d9f08715ce81844a7cba552ed92d",
+            "controller_events.jsonl": "7e4ec3e12ad68ec3d72d33d891f45ea05b0fedbf217971f38d870d58dc95ad34",
+            "expected_requests.json": "53b09b53e7a456ed671185a68fa2df5a8ad9a04d3d23d6c92bcb76484faebc37",
+            "request_events.jsonl": "96459dd32424149d07a12c610e8dc449a8596242523763183fffdde998107d18",
+            "request_terminals.json": "a911ceeb7db0b4d645f7b205cd2a76afb90e41bb63f70fb48c4c923ece835227",
+            "run_plan.json": "075e716ac31616642a2b85bd08420318166fdb4b3cb87ead21f4ece40c04c015"
+          },
+          "window": "middle_burst"
+        },
+        {
+          "path": "records/E5/physical/E5_physical_all2_steady_1.json.gz",
+          "policy": "all2",
+          "record_id": "E5_physical_all2_steady_1",
+          "repeat": 1,
+          "sha256": "e63025643f30c672122b3f60443c140f087778cbc2f6a6cdda7c7cd13bc1e8ed",
+          "source_sha256": {
+            "CELL_RESULT.json": "d6fcbaf5cff62846faa1441c9fab13cac5289763f654c11899d9be2d2650eed4",
+            "controller_events.jsonl": "4a7f1ed63e7a8b8d95ac3cfd82948e9a70d57e34290af7aa1c9905040569cb39",
+            "expected_requests.json": "9566352ae02e35b4263ac73e5f195dc8548e5e8fd0243270f67e13497698d2eb",
+            "request_events.jsonl": "01b68fdd76ba20611be88c8194c957ffec36d5cefd1368def3ffeae53811d7b6",
+            "request_terminals.json": "1739f1b9048aceee16da7d4d8433395d3a9a07b64b1fdedd394fd1eb4bfd32d3",
+            "run_plan.json": "a74d5418e023170c98e83a4ba02001b35b3206d4de26c69d91221e8225e87d76"
+          },
+          "window": "steady"
+        },
+        {
+          "path": "records/E5/physical/E5_physical_ppo_C_s101_steady_1.json.gz",
+          "policy": "ppo_C_s101",
+          "record_id": "E5_physical_ppo_C_s101_steady_1",
+          "repeat": 1,
+          "sha256": "e5b75309aab1b9e210c2dfe0a0e3aafc8411bdbbbc9ce1fb65f7f92f8968443f",
+          "source_sha256": {
+            "CELL_RESULT.json": "07e585c993310653a4ba88e1d6c382087f33dde5c6270542657e3249724c1367",
+            "controller_events.jsonl": "869ead1bdbf0a6a8da0d8279eb989fae05a9435b2f5c5ccc1bf5af5f1f7dffc0",
+            "expected_requests.json": "9566352ae02e35b4263ac73e5f195dc8548e5e8fd0243270f67e13497698d2eb",
+            "request_events.jsonl": "14a3cf3231a5b21198810754e2afa14a3bed80d136aadbbed0b099944ab99da4",
+            "request_terminals.json": "8ef754c0bd64a61fcbc6686a15e3809c6910f4e18f36351ddbd3fd35bae8a0d0",
+            "run_plan.json": "afdc9e1d16e866cef6f8a4e1d48ef4d00dadb7b77bec902499e39ee784737226"
+          },
+          "window": "steady"
+        },
+        {
+          "path": "records/E5/physical/E5_physical_ppo_C_r2_steady_1.json.gz",
+          "policy": "ppo_C_r2",
+          "record_id": "E5_physical_ppo_C_r2_steady_1",
+          "repeat": 1,
+          "sha256": "771fbb2b2d87d953d27de4da148964a149b988ce6de45991f569c3d09b4a2f26",
+          "source_sha256": {
+            "CELL_RESULT.json": "ac555b8b34aeef387c9690edf42d5c5945f323cbf974507fe37e7791eb6ee4d7",
+            "controller_events.jsonl": "c56874ebd98ec6fbba10f0b97648e22cba05ea2fe36a86d59030b3af8596224b",
+            "expected_requests.json": "9566352ae02e35b4263ac73e5f195dc8548e5e8fd0243270f67e13497698d2eb",
+            "request_events.jsonl": "0f2d737afb98bcb8eca912e0e074385c94f3c590e77e950c26e875577e6fbc13",
+            "request_terminals.json": "f300ffe10db33e76fe8a9aa317a89f29dfc94c107f72d101317ff9c3240b2c89",
+            "run_plan.json": "2ea96673365cc3722d6ee2de2d018d3754fd15fc4e4c922ad896d65ddb1972c0"
+          },
+          "window": "steady"
+        },
+        {
+          "path": "records/E5/physical/E5_physical_hysteresis_u8_d0_c60_steady_1.json.gz",
+          "policy": "hysteresis_u8_d0_c60",
+          "record_id": "E5_physical_hysteresis_u8_d0_c60_steady_1",
+          "repeat": 1,
+          "sha256": "8c2b2180403872e335cdbd879b5c26e2aff8bef757ad707d3dd314d23dab9ef4",
+          "source_sha256": {
+            "CELL_RESULT.json": "7a175f0dadbfc1fa980efd9edd7c599c5d9630563574f103dc332c1b3f9cdd08",
+            "controller_events.jsonl": "0b42ed64ba9930648bdab6d550a9b065c6b9f79df12f5514fb5c4b34c86271ad",
+            "expected_requests.json": "9566352ae02e35b4263ac73e5f195dc8548e5e8fd0243270f67e13497698d2eb",
+            "request_events.jsonl": "9451798747d6b7e571cdfe731cf16bb44052621a67dde481e95c986409ff2c53",
+            "request_terminals.json": "2ca9d8812f5c9d522025c1de886e85445a7d84575771eaf2a443b1aa0cc29208",
+            "run_plan.json": "3827c536a1d3395e3bbaf90dbed6ec33dc61187359e619bf72bcf5e296ec2838"
+          },
+          "window": "steady"
+        },
+        {
+          "path": "records/E5/physical/E5_physical_hysteresis_u8_d0_c60__guard_steady_1.json.gz",
+          "policy": "hysteresis_u8_d0_c60__guard",
+          "record_id": "E5_physical_hysteresis_u8_d0_c60__guard_steady_1",
+          "repeat": 1,
+          "sha256": "6fc1b2e6f571e1d64bc853a8b5ec89a44c3d847b50e44c7f7eb4bc6b49f4f298",
+          "source_sha256": {
+            "CELL_RESULT.json": "8bd8576b9c6578922a62ebc34b54bceb97d1b0bec9c109cbc4b307ef243d82c2",
+            "controller_events.jsonl": "685a92bd5739b91923f5050d0c36e9457d6667d8231e673b213dc5dd6c09dd52",
+            "expected_requests.json": "9566352ae02e35b4263ac73e5f195dc8548e5e8fd0243270f67e13497698d2eb",
+            "request_events.jsonl": "759c87c5abb4f8c0ad1398377ed3c442ce7674889c55a51f8404770e15e6dfed",
+            "request_terminals.json": "9f2e9d91a185c342618d3e6763dec7a6c7e2b5dcc2785d566fc94a03dba7c174",
+            "run_plan.json": "5297f87813143f91c0ec9f96b020006cf94c073fff8a9f560ca896b6bfc20341"
+          },
+          "window": "steady"
+        },
+        {
+          "path": "records/E5/physical/E5_physical_ppo_C_r2_steady_2.json.gz",
+          "policy": "ppo_C_r2",
+          "record_id": "E5_physical_ppo_C_r2_steady_2",
+          "repeat": 2,
+          "sha256": "caadd219fb195048b3c60aca6f52cb58102148f82bc4cafc105e3fb558bbd0f5",
+          "source_sha256": {
+            "CELL_RESULT.json": "ba92aefff77f98f5a9781ec35b6fbb9cbb283c26dfc06c75bdcdbbe845566a3f",
+            "controller_events.jsonl": "ee9ef88afee3e953889f4efeac9b031242bff47eaa52ca2c823f4b4226f67d81",
+            "expected_requests.json": "9566352ae02e35b4263ac73e5f195dc8548e5e8fd0243270f67e13497698d2eb",
+            "request_events.jsonl": "d65ac1ea497423795fafac71319607374b0534ce186ab28be6c811fbc6f1729f",
+            "request_terminals.json": "9d5f5bc571c3285a62408adfa4bcf4f6bc2f1dd28ab3fd320500edf2a8cf54af",
+            "run_plan.json": "dfd473ca86b6524def0fb94c7dec83e09de254d6f2269f687211a2f9cb389acc"
+          },
+          "window": "steady"
+        },
+        {
+          "path": "records/E5/physical/E5_physical_hysteresis_u8_d0_c60_steady_2.json.gz",
+          "policy": "hysteresis_u8_d0_c60",
+          "record_id": "E5_physical_hysteresis_u8_d0_c60_steady_2",
+          "repeat": 2,
+          "sha256": "ef3b2abc983c2dee9bc67aa4449796a03c73f6ca6b7a11aa79e41c60514f65e8",
+          "source_sha256": {
+            "CELL_RESULT.json": "e3e0d61e7c54749336bf3a826c51dd1907df3b79bf2d232bf0c29aa2aaa81358",
+            "controller_events.jsonl": "876375084ca061b3dbac650e6699e60967431da407d4e35da84b1ff1e1768d35",
+            "expected_requests.json": "9566352ae02e35b4263ac73e5f195dc8548e5e8fd0243270f67e13497698d2eb",
+            "request_events.jsonl": "c6d009af383cb1cc2a1dbc340abeafbb429ea775cab13f35d05730b704d07fab",
+            "request_terminals.json": "65989c24aae568f8a399f21b0fd87c5cac28d9bfe37954d9ce1df02d3982f173",
+            "run_plan.json": "99929634ebd182feab7c2ad2d26cb5f32a899c1c0df3d5109f094740d262bae9"
+          },
+          "window": "steady"
+        },
+        {
+          "path": "records/E5/physical/E5_physical_hysteresis_u8_d0_c60__guard_steady_2.json.gz",
+          "policy": "hysteresis_u8_d0_c60__guard",
+          "record_id": "E5_physical_hysteresis_u8_d0_c60__guard_steady_2",
+          "repeat": 2,
+          "sha256": "1801bbf89b79aec77ecc21460c883d4be7f6d80979a84bab5b89f9a7642e0468",
+          "source_sha256": {
+            "CELL_RESULT.json": "4a15add95e401c40168e39f9d54e41d44ce852e2aa7158659954943ac4349222",
+            "controller_events.jsonl": "3eb8be8c00dc812a6e97f548bf92dd1a9e73eac6ab37537a46452bdb9368e5ea",
+            "expected_requests.json": "9566352ae02e35b4263ac73e5f195dc8548e5e8fd0243270f67e13497698d2eb",
+            "request_events.jsonl": "82a7873541098ccfd43577f4417f564b088fa545cec45f455e61c0f5fc9cb233",
+            "request_terminals.json": "345b9d304b95a389b14474e920b95910ed6c80325485a36aa6748812858ba601",
+            "run_plan.json": "513cbd49cdaa91d55057a8ad255a7f4aa260e7149eaa5878cf45405039ab41ca"
+          },
+          "window": "steady"
+        },
+        {
+          "path": "records/E5/physical/E5_physical_ppo_C_s101_steady_2.json.gz",
+          "policy": "ppo_C_s101",
+          "record_id": "E5_physical_ppo_C_s101_steady_2",
+          "repeat": 2,
+          "sha256": "98924f6687537d48040022387c080828a1a96e74937dd59800da1fea32bdab5c",
+          "source_sha256": {
+            "CELL_RESULT.json": "3347254d4d5d50135ec5d8a2a28bbc19867e6ba46d510c8f816274f68291924c",
+            "controller_events.jsonl": "34694d49aea8bc7b57126ad5d59b24df3d54b7f12f803c3723f9f813aa18c06f",
+            "expected_requests.json": "9566352ae02e35b4263ac73e5f195dc8548e5e8fd0243270f67e13497698d2eb",
+            "request_events.jsonl": "8c43bd5c40f19253d9121b6872c8443df2a457718c5227a701c07d7a325e6a6c",
+            "request_terminals.json": "7c253ed33e0b44b61c4446ac03ce0cba76e4c280b812422ef9e502dd6b3bd0e4",
+            "run_plan.json": "287001323cb9fc0c9597101d01233d4e451bfec9b8031cf542eb8f2148dba617"
+          },
+          "window": "steady"
+        }
+      ],
+      "predictions": [
+        {
+          "path": "records/E5/prediction/E5_prediction_hysteresis_u8_d0_c60_late_burst_C.json.gz",
+          "policy": "hysteresis_u8_d0_c60",
+          "record_id": "E5_prediction_hysteresis_u8_d0_c60_late_burst_C",
+          "replay_model": "C",
+          "sha256": "402f2d885e4a1ad3b686ae22c6593eea99e4ff846453d07d86e609490e96fcb7",
+          "source_sha256": {
+            "prediction": "d49a38eb5df72da882f4ef53f253459d0c3bff07544ba8bf8c866e91eddeeede"
+          },
+          "window": "late_burst"
+        },
+        {
+          "path": "records/E5/prediction/E5_prediction_hysteresis_u8_d0_c60__guard_late_burst_C.json.gz",
+          "policy": "hysteresis_u8_d0_c60__guard",
+          "record_id": "E5_prediction_hysteresis_u8_d0_c60__guard_late_burst_C",
+          "replay_model": "C",
+          "sha256": "d97f88a7518adb4801f6be4cd549d95ea07372a09f20bb63edbeead762f093ef",
+          "source_sha256": {
+            "prediction": "309d0bb7d23aa05b3b112e9cbf9a8d051f22596d65f7978df9352642d49a77e6"
+          },
+          "window": "late_burst"
+        },
+        {
+          "path": "records/E5/prediction/E5_prediction_ppo_C_s101_late_burst_C.json.gz",
+          "policy": "ppo_C_s101",
+          "record_id": "E5_prediction_ppo_C_s101_late_burst_C",
+          "replay_model": "C",
+          "sha256": "822a4a2ededd365ec704360a23d8d77f5b2d86c853ca6d477fc98256bc0ee601",
+          "source_sha256": {
+            "prediction": "5d1d0522a5506be7f3b68d75d1e62bef888260cb1e96f3b39c4d51ccf6b5a970"
+          },
+          "window": "late_burst"
+        },
+        {
+          "path": "records/E5/prediction/E5_prediction_ppo_C_r2_late_burst_C.json.gz",
+          "policy": "ppo_C_r2",
+          "record_id": "E5_prediction_ppo_C_r2_late_burst_C",
+          "replay_model": "C",
+          "sha256": "fc74488c12cb5ec175eea7f487d0bc5be3dea10f18049c4404d2b5bc45d42323",
+          "source_sha256": {
+            "prediction": "7bf2c7baad22da077d843eba3d46a790d1329618bdddc2d428174ae4e1aaa82b"
+          },
+          "window": "late_burst"
+        },
+        {
+          "path": "records/E5/prediction/E5_prediction_all2_late_burst_C.json.gz",
+          "policy": "all2",
+          "record_id": "E5_prediction_all2_late_burst_C",
+          "replay_model": "C",
+          "sha256": "aeff82f973f03319b9086f7854e2dac0af4dcf0ac94d61c2ffd4fb8b76994657",
+          "source_sha256": {
+            "prediction": "fbbeb7e5313171529b430e40e38c26bf7753f576a43479c642782200d0717eb6"
+          },
+          "window": "late_burst"
+        },
+        {
+          "path": "records/E5/prediction/E5_prediction_hysteresis_u8_d0_c60_late_burst_C30.json.gz",
+          "policy": "hysteresis_u8_d0_c60",
+          "record_id": "E5_prediction_hysteresis_u8_d0_c60_late_burst_C30",
+          "replay_model": "C30",
+          "sha256": "f7587ffa811e1e0ade844993ef52f2653eaebeca58f915bb9bf7f09ca2902593",
+          "source_sha256": {
+            "prediction": "c7692c18fc12df08e0f9ece423bf5f0d067d110c8bd6284824f9dce2473b0118"
+          },
+          "window": "late_burst"
+        },
+        {
+          "path": "records/E5/prediction/E5_prediction_hysteresis_u8_d0_c60__guard_late_burst_C30.json.gz",
+          "policy": "hysteresis_u8_d0_c60__guard",
+          "record_id": "E5_prediction_hysteresis_u8_d0_c60__guard_late_burst_C30",
+          "replay_model": "C30",
+          "sha256": "d3b25cf99f7648c1f043a1152ecb43b67b8379d21ac33738134c85fb94e5052c",
+          "source_sha256": {
+            "prediction": "c9e5b9d5f708c4f8072f7b5e7079285c9675528cd1978892f8809c091b4d93f6"
+          },
+          "window": "late_burst"
+        },
+        {
+          "path": "records/E5/prediction/E5_prediction_ppo_C_s101_late_burst_C30.json.gz",
+          "policy": "ppo_C_s101",
+          "record_id": "E5_prediction_ppo_C_s101_late_burst_C30",
+          "replay_model": "C30",
+          "sha256": "e8ca5cf1a1aac17f088182e43bcd9e44df86d1fd87b9ae367450031516b295f9",
+          "source_sha256": {
+            "prediction": "909d1410b4b882bc233db7b2d5166c5a801d09dd3987f3a0915d2f0b9f4e4cae"
+          },
+          "window": "late_burst"
+        },
+        {
+          "path": "records/E5/prediction/E5_prediction_ppo_C_r2_late_burst_C30.json.gz",
+          "policy": "ppo_C_r2",
+          "record_id": "E5_prediction_ppo_C_r2_late_burst_C30",
+          "replay_model": "C30",
+          "sha256": "549a334adfa7e4fb9dc8ff4e746fdd1b4d5ff6553bb78d028a151f8bbcd2f977",
+          "source_sha256": {
+            "prediction": "7a766a44395225c6adb5f77cc20940b88aeaa01630cb76a4d546e2ef9c3e7128"
+          },
+          "window": "late_burst"
+        },
+        {
+          "path": "records/E5/prediction/E5_prediction_all2_late_burst_C30.json.gz",
+          "policy": "all2",
+          "record_id": "E5_prediction_all2_late_burst_C30",
+          "replay_model": "C30",
+          "sha256": "ea519fd690f90d6a8a679a2f0b944e1fe6d0e18d42326453816f8706a291908a",
+          "source_sha256": {
+            "prediction": "fbbeb7e5313171529b430e40e38c26bf7753f576a43479c642782200d0717eb6"
+          },
+          "window": "late_burst"
+        },
+        {
+          "path": "records/E5/prediction/E5_prediction_hysteresis_u8_d0_c60_late_burst_C_sg.json.gz",
+          "policy": "hysteresis_u8_d0_c60",
+          "record_id": "E5_prediction_hysteresis_u8_d0_c60_late_burst_C_sg",
+          "replay_model": "C_sg",
+          "sha256": "a5aa998a45b91f0756f98a80221cacc381cf8eb167608afa1c63d88e338845c9",
+          "source_sha256": {
+            "prediction": "50f88c3a7d3ba348d5290dce0178d621e6a9edb1c98c08aa6edcaedcf07f5ed1"
+          },
+          "window": "late_burst"
+        },
+        {
+          "path": "records/E5/prediction/E5_prediction_hysteresis_u8_d0_c60__guard_late_burst_C_sg.json.gz",
+          "policy": "hysteresis_u8_d0_c60__guard",
+          "record_id": "E5_prediction_hysteresis_u8_d0_c60__guard_late_burst_C_sg",
+          "replay_model": "C_sg",
+          "sha256": "12b3b1f238cfed992c791b9422dde2a645c6246cdc6ae06c6256739e43e5798d",
+          "source_sha256": {
+            "prediction": "505dd9944141139ef97b85373cbc53bed58b50c749528d1be4716756a3300c86"
+          },
+          "window": "late_burst"
+        },
+        {
+          "path": "records/E5/prediction/E5_prediction_ppo_C_s101_late_burst_C_sg.json.gz",
+          "policy": "ppo_C_s101",
+          "record_id": "E5_prediction_ppo_C_s101_late_burst_C_sg",
+          "replay_model": "C_sg",
+          "sha256": "1994579e19add2a050ffd10f5b25bbb604c502f929240d3c63e88581958f34dc",
+          "source_sha256": {
+            "prediction": "bacec42e03935822e921ea2c32fe6981d0f0e5af2a256d358324fd52b9c4b44f"
+          },
+          "window": "late_burst"
+        },
+        {
+          "path": "records/E5/prediction/E5_prediction_ppo_C_r2_late_burst_C_sg.json.gz",
+          "policy": "ppo_C_r2",
+          "record_id": "E5_prediction_ppo_C_r2_late_burst_C_sg",
+          "replay_model": "C_sg",
+          "sha256": "7dcaba24619365e9ee4befd279b5cadfb6743c7406d2be4537699b86d9c7114b",
+          "source_sha256": {
+            "prediction": "9fc9e09bc4e6a3fe960fcd8fdb1c57caa947d6a70c3b0ff4f54612e1c6314e8a"
+          },
+          "window": "late_burst"
+        },
+        {
+          "path": "records/E5/prediction/E5_prediction_all2_late_burst_C_sg.json.gz",
+          "policy": "all2",
+          "record_id": "E5_prediction_all2_late_burst_C_sg",
+          "replay_model": "C_sg",
+          "sha256": "0d42054fef2cbd49c08eb42c23bfc8ea1471a6d7175a95c04ba693d2c7a751ef",
+          "source_sha256": {
+            "prediction": "fbbeb7e5313171529b430e40e38c26bf7753f576a43479c642782200d0717eb6"
+          },
+          "window": "late_burst"
+        },
+        {
+          "path": "records/E5/prediction/E5_prediction_hysteresis_u8_d0_c60_middle_burst_C.json.gz",
+          "policy": "hysteresis_u8_d0_c60",
+          "record_id": "E5_prediction_hysteresis_u8_d0_c60_middle_burst_C",
+          "replay_model": "C",
+          "sha256": "5dfba41b631c39a397ec6e6197be4fad74ada2acaf492287ad98c590e6a5404b",
+          "source_sha256": {
+            "prediction": "5f353977427394a8f1faa47b44aec54f02dd7ef543017574cfe5694bbc516f02"
+          },
+          "window": "middle_burst"
+        },
+        {
+          "path": "records/E5/prediction/E5_prediction_hysteresis_u8_d0_c60__guard_middle_burst_C.json.gz",
+          "policy": "hysteresis_u8_d0_c60__guard",
+          "record_id": "E5_prediction_hysteresis_u8_d0_c60__guard_middle_burst_C",
+          "replay_model": "C",
+          "sha256": "0d4ff75c69b6823d3bde9bce160079c068097ea341f9e9257a8b3928ca26c82a",
+          "source_sha256": {
+            "prediction": "c734ecb9fe3d4c4a5911120a35ede5021256c91dafe96ceefa36b2188c507fcc"
+          },
+          "window": "middle_burst"
+        },
+        {
+          "path": "records/E5/prediction/E5_prediction_ppo_C_s101_middle_burst_C.json.gz",
+          "policy": "ppo_C_s101",
+          "record_id": "E5_prediction_ppo_C_s101_middle_burst_C",
+          "replay_model": "C",
+          "sha256": "a5fab427f7d6fcd1c90282469619277e2674b5874d514bfeff3fbfb59bd57110",
+          "source_sha256": {
+            "prediction": "5ccbbdfc4bf51b1ff8360ece25dd81b070e535a1f54c0890f0f8db05d2949840"
+          },
+          "window": "middle_burst"
+        },
+        {
+          "path": "records/E5/prediction/E5_prediction_ppo_C_r2_middle_burst_C.json.gz",
+          "policy": "ppo_C_r2",
+          "record_id": "E5_prediction_ppo_C_r2_middle_burst_C",
+          "replay_model": "C",
+          "sha256": "f854ba6f947f70a4fda1aed3c19bc286245b317b91226c3a94ce4f17844dd124",
+          "source_sha256": {
+            "prediction": "87caf4fbfcc7aeafe0700c0611a47711bd996417901c5f73c43f99ae24a4396d"
+          },
+          "window": "middle_burst"
+        },
+        {
+          "path": "records/E5/prediction/E5_prediction_all2_middle_burst_C.json.gz",
+          "policy": "all2",
+          "record_id": "E5_prediction_all2_middle_burst_C",
+          "replay_model": "C",
+          "sha256": "47ec693ac981b6a6b752d6590ab70f95751f81adaa6536df4075dd474a445199",
+          "source_sha256": {
+            "prediction": "e0dc2c6a0debb8997401463aa63028046b36a742065ee0773a4ce42a68ed5065"
+          },
+          "window": "middle_burst"
+        },
+        {
+          "path": "records/E5/prediction/E5_prediction_hysteresis_u8_d0_c60_middle_burst_C30.json.gz",
+          "policy": "hysteresis_u8_d0_c60",
+          "record_id": "E5_prediction_hysteresis_u8_d0_c60_middle_burst_C30",
+          "replay_model": "C30",
+          "sha256": "994a78b4d54641409ed898c8d625e01ea9bad054d98a683bfcab4b7a6b9b18b9",
+          "source_sha256": {
+            "prediction": "1fdf393ac672a8194e7b09e33fd43b2af2d03c4db1017bfd52e1d3d33472a226"
+          },
+          "window": "middle_burst"
+        },
+        {
+          "path": "records/E5/prediction/E5_prediction_hysteresis_u8_d0_c60__guard_middle_burst_C30.json.gz",
+          "policy": "hysteresis_u8_d0_c60__guard",
+          "record_id": "E5_prediction_hysteresis_u8_d0_c60__guard_middle_burst_C30",
+          "replay_model": "C30",
+          "sha256": "84c0e926df383620ec8ebb9e62f6e3b7d49498dbf4254d615ba1ab1570a5163f",
+          "source_sha256": {
+            "prediction": "cf67caf68c8b54c6ffc4d5d5b56c6b6c636aa8b95bbd760e2327136bfda5ff11"
+          },
+          "window": "middle_burst"
+        },
+        {
+          "path": "records/E5/prediction/E5_prediction_ppo_C_s101_middle_burst_C30.json.gz",
+          "policy": "ppo_C_s101",
+          "record_id": "E5_prediction_ppo_C_s101_middle_burst_C30",
+          "replay_model": "C30",
+          "sha256": "0bfceafaa574bdcceba9323ce670649900cfc60d9f8a59e221749cf4280cc531",
+          "source_sha256": {
+            "prediction": "2e8b4da9a8df9c67503b9c37d681e7d8a2c0f0096ed369a9bfdec19e0f83da9b"
+          },
+          "window": "middle_burst"
+        },
+        {
+          "path": "records/E5/prediction/E5_prediction_ppo_C_r2_middle_burst_C30.json.gz",
+          "policy": "ppo_C_r2",
+          "record_id": "E5_prediction_ppo_C_r2_middle_burst_C30",
+          "replay_model": "C30",
+          "sha256": "2633710d5047cbb531f2678f086857b81d94a8acaf370e16cdfa8c07bd8c98f4",
+          "source_sha256": {
+            "prediction": "a173b65259ab8f6cad79df2efc093ef2592f07173dd4975beab4557925eac5f0"
+          },
+          "window": "middle_burst"
+        },
+        {
+          "path": "records/E5/prediction/E5_prediction_all2_middle_burst_C30.json.gz",
+          "policy": "all2",
+          "record_id": "E5_prediction_all2_middle_burst_C30",
+          "replay_model": "C30",
+          "sha256": "09bfc23ef61f2d2f172795ab37e8cc8f0c6f29aef5adfe0da3cdc1d0ab87a312",
+          "source_sha256": {
+            "prediction": "e0dc2c6a0debb8997401463aa63028046b36a742065ee0773a4ce42a68ed5065"
+          },
+          "window": "middle_burst"
+        },
+        {
+          "path": "records/E5/prediction/E5_prediction_hysteresis_u8_d0_c60_middle_burst_C_sg.json.gz",
+          "policy": "hysteresis_u8_d0_c60",
+          "record_id": "E5_prediction_hysteresis_u8_d0_c60_middle_burst_C_sg",
+          "replay_model": "C_sg",
+          "sha256": "e2da15aaa0227b7091d223e1ef9c23bbd7b76d9566bdadbd350c79f9830ce8a9",
+          "source_sha256": {
+            "prediction": "8457d0995f29e8b5df24bc3e0ee4e4831147e5bed1ba13120b935a3943285dc8"
+          },
+          "window": "middle_burst"
+        },
+        {
+          "path": "records/E5/prediction/E5_prediction_hysteresis_u8_d0_c60__guard_middle_burst_C_sg.json.gz",
+          "policy": "hysteresis_u8_d0_c60__guard",
+          "record_id": "E5_prediction_hysteresis_u8_d0_c60__guard_middle_burst_C_sg",
+          "replay_model": "C_sg",
+          "sha256": "1ae0e96685ff15ac60cb79758fe7042fe1df278564e7525d273b4f44043e2dc3",
+          "source_sha256": {
+            "prediction": "452878214a8d3fae7e478b1096a428c0967c32496423bb7ffe39a0ae5a13c0e0"
+          },
+          "window": "middle_burst"
+        },
+        {
+          "path": "records/E5/prediction/E5_prediction_ppo_C_s101_middle_burst_C_sg.json.gz",
+          "policy": "ppo_C_s101",
+          "record_id": "E5_prediction_ppo_C_s101_middle_burst_C_sg",
+          "replay_model": "C_sg",
+          "sha256": "11abcb14c8e78504af7f2588dc8ced793d2bc77e3cc482f04a1e68ab35251c3a",
+          "source_sha256": {
+            "prediction": "0c0a9b5a3662679d1ceaf2ba1f6487b68c1bdedbd2fcb1d834ce43908a0ac9b8"
+          },
+          "window": "middle_burst"
+        },
+        {
+          "path": "records/E5/prediction/E5_prediction_ppo_C_r2_middle_burst_C_sg.json.gz",
+          "policy": "ppo_C_r2",
+          "record_id": "E5_prediction_ppo_C_r2_middle_burst_C_sg",
+          "replay_model": "C_sg",
+          "sha256": "b4983bab4ddee26c91062d2a46074c1f5370ffa1c181a535ef95b18a48e63b1e",
+          "source_sha256": {
+            "prediction": "e66ccde553434f3f12d8ce67cebb0d43ccc36c92f20e1834584e94f08683a86d"
+          },
+          "window": "middle_burst"
+        },
+        {
+          "path": "records/E5/prediction/E5_prediction_all2_middle_burst_C_sg.json.gz",
+          "policy": "all2",
+          "record_id": "E5_prediction_all2_middle_burst_C_sg",
+          "replay_model": "C_sg",
+          "sha256": "81df419b01aff048777ca19e3570f77b95205c4e01b9d842a30c84d66df0e0b6",
+          "source_sha256": {
+            "prediction": "e0dc2c6a0debb8997401463aa63028046b36a742065ee0773a4ce42a68ed5065"
+          },
+          "window": "middle_burst"
+        },
+        {
+          "path": "records/E5/prediction/E5_prediction_hysteresis_u8_d0_c60_steady_C.json.gz",
+          "policy": "hysteresis_u8_d0_c60",
+          "record_id": "E5_prediction_hysteresis_u8_d0_c60_steady_C",
+          "replay_model": "C",
+          "sha256": "6a853ff7075a27a60b55183906b265426017e25975d0f65116d336a5ea8ef81d",
+          "source_sha256": {
+            "prediction": "7f40de54dd155c29a3c9aa6de90fd4b3070d5c3a22d293843a2e0ea26c40bbb7"
+          },
+          "window": "steady"
+        },
+        {
+          "path": "records/E5/prediction/E5_prediction_hysteresis_u8_d0_c60__guard_steady_C.json.gz",
+          "policy": "hysteresis_u8_d0_c60__guard",
+          "record_id": "E5_prediction_hysteresis_u8_d0_c60__guard_steady_C",
+          "replay_model": "C",
+          "sha256": "8783d5292f308bb351da9cbc7e66a489654ec2f5f4348b09b7c5a2babe23d530",
+          "source_sha256": {
+            "prediction": "29d3b3da5484988381a5290b1c0df69084466a812a88c78a0f9db1b77ac0defb"
+          },
+          "window": "steady"
+        },
+        {
+          "path": "records/E5/prediction/E5_prediction_ppo_C_s101_steady_C.json.gz",
+          "policy": "ppo_C_s101",
+          "record_id": "E5_prediction_ppo_C_s101_steady_C",
+          "replay_model": "C",
+          "sha256": "430e2bf817098254de00e4995b83f105ca2c64a5922b2e67ff09da10eb650302",
+          "source_sha256": {
+            "prediction": "91aeab4a64eb9382f1d0bf66b100e691cfda765fbfe6f2d1e64fd12a4ff59a74"
+          },
+          "window": "steady"
+        },
+        {
+          "path": "records/E5/prediction/E5_prediction_ppo_C_r2_steady_C.json.gz",
+          "policy": "ppo_C_r2",
+          "record_id": "E5_prediction_ppo_C_r2_steady_C",
+          "replay_model": "C",
+          "sha256": "24e720b54b1b604f5d39984095313269d19bc793386c8770c5b3a643666b2c11",
+          "source_sha256": {
+            "prediction": "68c89d76819d6cfed0ee68e468ee51ba2d28ed2c634c0f81bcf183eb072ff74a"
+          },
+          "window": "steady"
+        },
+        {
+          "path": "records/E5/prediction/E5_prediction_all2_steady_C.json.gz",
+          "policy": "all2",
+          "record_id": "E5_prediction_all2_steady_C",
+          "replay_model": "C",
+          "sha256": "33cb0a7f661a39c3e54bafdfa493940cffb3bf3bfda4fad53a328a1ed075248b",
+          "source_sha256": {
+            "prediction": "9e2dce61221da8c29d6740f7434e83f53e12e9b642c3a0aec35d6d4c6985a7aa"
+          },
+          "window": "steady"
+        },
+        {
+          "path": "records/E5/prediction/E5_prediction_hysteresis_u8_d0_c60_steady_C30.json.gz",
+          "policy": "hysteresis_u8_d0_c60",
+          "record_id": "E5_prediction_hysteresis_u8_d0_c60_steady_C30",
+          "replay_model": "C30",
+          "sha256": "7c533eddc392f4921cca3e8fd22edcee8813a00ab580454610e0332382918750",
+          "source_sha256": {
+            "prediction": "e305de04d2e504d99757a99e2791b75fd2aa06961baa83aab612699bba641b85"
+          },
+          "window": "steady"
+        },
+        {
+          "path": "records/E5/prediction/E5_prediction_hysteresis_u8_d0_c60__guard_steady_C30.json.gz",
+          "policy": "hysteresis_u8_d0_c60__guard",
+          "record_id": "E5_prediction_hysteresis_u8_d0_c60__guard_steady_C30",
+          "replay_model": "C30",
+          "sha256": "732cdb961d8371efc6b32599a7bd44773a81302d9f70ed3557ee2013fd4b3c44",
+          "source_sha256": {
+            "prediction": "7de681dfd0c1e988441a8971864634ab83bae7fd211104abf93a47a3e9b1f67c"
+          },
+          "window": "steady"
+        },
+        {
+          "path": "records/E5/prediction/E5_prediction_ppo_C_s101_steady_C30.json.gz",
+          "policy": "ppo_C_s101",
+          "record_id": "E5_prediction_ppo_C_s101_steady_C30",
+          "replay_model": "C30",
+          "sha256": "d65ea6a32cfeb5215989ede3cfd0e9eb727e8de24317bdf06debd05f6037a3da",
+          "source_sha256": {
+            "prediction": "1c60b58455902e58f49d44f389805c27d24af505ac70df3ce347ee34b958323d"
+          },
+          "window": "steady"
+        },
+        {
+          "path": "records/E5/prediction/E5_prediction_ppo_C_r2_steady_C30.json.gz",
+          "policy": "ppo_C_r2",
+          "record_id": "E5_prediction_ppo_C_r2_steady_C30",
+          "replay_model": "C30",
+          "sha256": "51afce5a2d28b3a72ff3225a2d1b067db0888b9fb623d9175e3b21e4a9aa4424",
+          "source_sha256": {
+            "prediction": "efb655edc4588ac4923f301d9ed111538c4cbfcec60d8923e07e5d0fbf99d15b"
+          },
+          "window": "steady"
+        },
+        {
+          "path": "records/E5/prediction/E5_prediction_all2_steady_C30.json.gz",
+          "policy": "all2",
+          "record_id": "E5_prediction_all2_steady_C30",
+          "replay_model": "C30",
+          "sha256": "bb3fc1b43b15b6e0751940ea577709197bc52ec02a74c7ee5a0c1633e708461c",
+          "source_sha256": {
+            "prediction": "9e2dce61221da8c29d6740f7434e83f53e12e9b642c3a0aec35d6d4c6985a7aa"
+          },
+          "window": "steady"
+        },
+        {
+          "path": "records/E5/prediction/E5_prediction_hysteresis_u8_d0_c60_steady_C_sg.json.gz",
+          "policy": "hysteresis_u8_d0_c60",
+          "record_id": "E5_prediction_hysteresis_u8_d0_c60_steady_C_sg",
+          "replay_model": "C_sg",
+          "sha256": "fd3d8258e453569b29d67c8d820da3984e7ea7bc843e7d11e55b203e6a2161b9",
+          "source_sha256": {
+            "prediction": "7873be2cec42e29b0559dca4a42d6a6e440d6b1858f2038d7202ac9a979f10ee"
+          },
+          "window": "steady"
+        },
+        {
+          "path": "records/E5/prediction/E5_prediction_hysteresis_u8_d0_c60__guard_steady_C_sg.json.gz",
+          "policy": "hysteresis_u8_d0_c60__guard",
+          "record_id": "E5_prediction_hysteresis_u8_d0_c60__guard_steady_C_sg",
+          "replay_model": "C_sg",
+          "sha256": "e45451a74d854bbeb890af0a70c4b5a909e0ac65de45e2bd60a220b34efaf6b7",
+          "source_sha256": {
+            "prediction": "ec30e81f41176c149c3e924661f960860fe85c967a39d83c656fbb199540d171"
+          },
+          "window": "steady"
+        },
+        {
+          "path": "records/E5/prediction/E5_prediction_ppo_C_s101_steady_C_sg.json.gz",
+          "policy": "ppo_C_s101",
+          "record_id": "E5_prediction_ppo_C_s101_steady_C_sg",
+          "replay_model": "C_sg",
+          "sha256": "73ea1b90f1ec0f2f7aa9c433ccd60348e09ffbd0e1ef57b6821f4a1379d42125",
+          "source_sha256": {
+            "prediction": "454feab084155caa80364cb7006bf9a3dfb653ece4097832450aabb623b5a955"
+          },
+          "window": "steady"
+        },
+        {
+          "path": "records/E5/prediction/E5_prediction_ppo_C_r2_steady_C_sg.json.gz",
+          "policy": "ppo_C_r2",
+          "record_id": "E5_prediction_ppo_C_r2_steady_C_sg",
+          "replay_model": "C_sg",
+          "sha256": "dbdb8782b46d7f44ae9f1849acf85a647d3edcfd15d3ee6e1a106df3a475a61c",
+          "source_sha256": {
+            "prediction": "6f97c78a9e49a397db84366ff9901b23fd72ef82468c36a063b9f58a073fbb34"
+          },
+          "window": "steady"
+        },
+        {
+          "path": "records/E5/prediction/E5_prediction_all2_steady_C_sg.json.gz",
+          "policy": "all2",
+          "record_id": "E5_prediction_all2_steady_C_sg",
+          "replay_model": "C_sg",
+          "sha256": "42975e8e56bad7239e62d158bb12c201167958f2042e27541b4b3c75a7c7e5f9",
+          "source_sha256": {
+            "prediction": "9e2dce61221da8c29d6740f7434e83f53e12e9b642c3a0aec35d6d4c6985a7aa"
+          },
+          "window": "steady"
+        }
+      ],
+      "source_scope_notes": [
+        "All valid physical runs, including deadline failures and capacity anchors, are released.",
+        "Anchors are paired but excluded from the paper policy comparison.",
+        "These predictions were frozen before the physical campaign; later T30-14 analysis is not part of this frozen-prediction population.",
+        "Repeated runs share predictions. Counts of paired runs are not counts of independent predictions.",
+        "Source timing/budgets are retained; prompts, responses, token IDs, paths and machine identities are omitted.",
+        "E5 varies three constructed arrivals under fixed SGLang/7B calibration; all physical cells are feasible, so false-accept rates are undefined."
+      ]
+    },
+    {
+      "campaign": "E6",
+      "excluded_attempts": [],
+      "pairs": [
+        {
+          "physical_id": "E6_physical_all2_recovery_1",
+          "prediction_id": "E6_prediction_all2_recovery_L14"
+        },
+        {
+          "physical_id": "E6_physical_all2_recovery_1",
+          "prediction_id": "E6_prediction_all2_recovery_S14"
+        },
+        {
+          "physical_id": "E6_physical_hysteresis_u8_d0_c60_recovery_1",
+          "prediction_id": "E6_prediction_hysteresis_u8_d0_c60_recovery_L14"
+        },
+        {
+          "physical_id": "E6_physical_hysteresis_u8_d0_c60_recovery_1",
+          "prediction_id": "E6_prediction_hysteresis_u8_d0_c60_recovery_S14"
+        },
+        {
+          "physical_id": "E6_physical_hysteresis_u8_d0_c60__guard_recovery_1",
+          "prediction_id": "E6_prediction_hysteresis_u8_d0_c60__guard_recovery_L14"
+        },
+        {
+          "physical_id": "E6_physical_hysteresis_u8_d0_c60__guard_recovery_1",
+          "prediction_id": "E6_prediction_hysteresis_u8_d0_c60__guard_recovery_S14"
+        },
+        {
+          "physical_id": "E6_physical_all2_recovery_2",
+          "prediction_id": "E6_prediction_all2_recovery_L14"
+        },
+        {
+          "physical_id": "E6_physical_all2_recovery_2",
+          "prediction_id": "E6_prediction_all2_recovery_S14"
+        },
+        {
+          "physical_id": "E6_physical_hysteresis_u8_d0_c60__guard_recovery_2",
+          "prediction_id": "E6_prediction_hysteresis_u8_d0_c60__guard_recovery_L14"
+        },
+        {
+          "physical_id": "E6_physical_hysteresis_u8_d0_c60__guard_recovery_2",
+          "prediction_id": "E6_prediction_hysteresis_u8_d0_c60__guard_recovery_S14"
+        },
+        {
+          "physical_id": "E6_physical_hysteresis_u8_d0_c60_recovery_2",
+          "prediction_id": "E6_prediction_hysteresis_u8_d0_c60_recovery_L14"
+        },
+        {
+          "physical_id": "E6_physical_hysteresis_u8_d0_c60_recovery_2",
+          "prediction_id": "E6_prediction_hysteresis_u8_d0_c60_recovery_S14"
+        },
+        {
+          "physical_id": "E6_physical_all2_steady_1",
+          "prediction_id": "E6_prediction_all2_steady_L14"
+        },
+        {
+          "physical_id": "E6_physical_all2_steady_1",
+          "prediction_id": "E6_prediction_all2_steady_S14"
+        },
+        {
+          "physical_id": "E6_physical_hysteresis_u8_d0_c60__guard_steady_1",
+          "prediction_id": "E6_prediction_hysteresis_u8_d0_c60__guard_steady_L14"
+        },
+        {
+          "physical_id": "E6_physical_hysteresis_u8_d0_c60__guard_steady_1",
+          "prediction_id": "E6_prediction_hysteresis_u8_d0_c60__guard_steady_S14"
+        },
+        {
+          "physical_id": "E6_physical_hysteresis_u8_d0_c60_steady_1",
+          "prediction_id": "E6_prediction_hysteresis_u8_d0_c60_steady_L14"
+        },
+        {
+          "physical_id": "E6_physical_hysteresis_u8_d0_c60_steady_1",
+          "prediction_id": "E6_prediction_hysteresis_u8_d0_c60_steady_S14"
+        },
+        {
+          "physical_id": "E6_physical_all2_steady_2",
+          "prediction_id": "E6_prediction_all2_steady_L14"
+        },
+        {
+          "physical_id": "E6_physical_all2_steady_2",
+          "prediction_id": "E6_prediction_all2_steady_S14"
+        },
+        {
+          "physical_id": "E6_physical_hysteresis_u8_d0_c60_steady_2",
+          "prediction_id": "E6_prediction_hysteresis_u8_d0_c60_steady_L14"
+        },
+        {
+          "physical_id": "E6_physical_hysteresis_u8_d0_c60_steady_2",
+          "prediction_id": "E6_prediction_hysteresis_u8_d0_c60_steady_S14"
+        },
+        {
+          "physical_id": "E6_physical_hysteresis_u8_d0_c60__guard_steady_2",
+          "prediction_id": "E6_prediction_hysteresis_u8_d0_c60__guard_steady_L14"
+        },
+        {
+          "physical_id": "E6_physical_hysteresis_u8_d0_c60__guard_steady_2",
+          "prediction_id": "E6_prediction_hysteresis_u8_d0_c60__guard_steady_S14"
+        }
+      ],
+      "physical": [
+        {
+          "path": "records/E6/physical/E6_physical_all2_recovery_1.json.gz",
+          "policy": "all2",
+          "record_id": "E6_physical_all2_recovery_1",
+          "repeat": 1,
+          "sha256": "dff17e8f9719492e96019baa2a0dbc5baf543b698cb94f0db5ed8648005612dd",
+          "source_sha256": {
+            "CELL_RESULT.json": "af58ec44c0606582434a9f78fb5b6227f8b1a150d1d34184b19fed95daf07e48",
+            "controller_events.jsonl": "9696ab30eb1e6a25e35c4fa89c50c10fd70f13bcd1b6a27a78d18254908607a9",
+            "expected_requests.json": "48a9291975c4dc926180e6bd1c83e687f88c2c6d4a3de6730e2b97e022d0eec0",
+            "request_events.jsonl": "161efa0567611ce88fa4dfce7de68bf353ee5db011e1dbea8dd97ddae0aafa8a",
+            "request_terminals.json": "6520043e3a78d7dbd3a643804bf1c932c9a43b20559c6ba04e9fbb5f87db8a11",
+            "run_plan.json": "6c5bb657762548ab21079c66efb3c208ec1f9e613888545605ccbeecf313f2fd"
+          },
+          "window": "recovery"
+        },
+        {
+          "path": "records/E6/physical/E6_physical_hysteresis_u8_d0_c60_recovery_1.json.gz",
+          "policy": "hysteresis_u8_d0_c60",
+          "record_id": "E6_physical_hysteresis_u8_d0_c60_recovery_1",
+          "repeat": 1,
+          "sha256": "cf5a6bbf8f26080e13301b7d12d4964f2407df82bed2e61d900f8a06bbbb3dd2",
+          "source_sha256": {
+            "CELL_RESULT.json": "6e99d51ad07bdcaa860eed8b9974d5fee9049b1d832d537003fd974c313870ba",
+            "controller_events.jsonl": "74817c9e54d771391dc11a995a7fce8ee7fbb837708b3e912943c3c4eec5696d",
+            "expected_requests.json": "48a9291975c4dc926180e6bd1c83e687f88c2c6d4a3de6730e2b97e022d0eec0",
+            "request_events.jsonl": "20ef4c23a7356952256f123466e927ee635c0f9652901c25d3eb115470074880",
+            "request_terminals.json": "ec19bd7c98d31a4565f8c04cad126f7e24b0367fa5c70d904cc819ca3fffa8d6",
+            "run_plan.json": "5dce51a3682e4067c3cfd0838a67648d0539cb53f1ba78a5acd6feecd0074021"
+          },
+          "window": "recovery"
+        },
+        {
+          "path": "records/E6/physical/E6_physical_hysteresis_u8_d0_c60__guard_recovery_1.json.gz",
+          "policy": "hysteresis_u8_d0_c60__guard",
+          "record_id": "E6_physical_hysteresis_u8_d0_c60__guard_recovery_1",
+          "repeat": 1,
+          "sha256": "5f34a94bbefb23d026c245cbb7aa6104fb5e90e73c8f2a9317c40b35a76472d6",
+          "source_sha256": {
+            "CELL_RESULT.json": "9a9c7cb4120238e8196846f1e9da4da17b94b6a01a7905761f460e596edc58cf",
+            "controller_events.jsonl": "5be42ef7af05c8f4fe9ce1f3354a81a6fe21083611d3df49ba4f0327688f115e",
+            "expected_requests.json": "48a9291975c4dc926180e6bd1c83e687f88c2c6d4a3de6730e2b97e022d0eec0",
+            "request_events.jsonl": "51298a2f6c99af1d9551b7eab6351f287b72117fd6cdd10f9ff95f50d60e2ff6",
+            "request_terminals.json": "6324d6c73d41f293df248d88c7056b2d88d597ab6e9a8282bb702aa1f603bab6",
+            "run_plan.json": "5484ed7dd8e27868f6498ff946dac8baea1d980247d2aa563d70d75ffd9b4bc0"
+          },
+          "window": "recovery"
+        },
+        {
+          "path": "records/E6/physical/E6_physical_all2_recovery_2.json.gz",
+          "policy": "all2",
+          "record_id": "E6_physical_all2_recovery_2",
+          "repeat": 2,
+          "sha256": "4e32490e9236deabf3e7206de1a5195186485c38bb7bc7c77b1676dcdca91d78",
+          "source_sha256": {
+            "CELL_RESULT.json": "dbef67174d1af868f004ab15ec38934071401a6d27c2035ac2a9fa8c49323f9b",
+            "controller_events.jsonl": "9f4faf8756d1731768c5f3021cb254f494af48b1bcf4e969a252657f6b5144ab",
+            "expected_requests.json": "48a9291975c4dc926180e6bd1c83e687f88c2c6d4a3de6730e2b97e022d0eec0",
+            "request_events.jsonl": "f6d4cd49fca5526f43f2a7d4d15face78d5f4bd83f6a217d1a00f08b66c6d9d1",
+            "request_terminals.json": "2cafb8a6303b228f1c76fee47d68c431363f602c02832dc659814214fa0529d2",
+            "run_plan.json": "ba41ff9523ed45a0e9cb1ccba8772223b3f6d39a82f4b9f48c8a211dc3320a6a"
+          },
+          "window": "recovery"
+        },
+        {
+          "path": "records/E6/physical/E6_physical_hysteresis_u8_d0_c60__guard_recovery_2.json.gz",
+          "policy": "hysteresis_u8_d0_c60__guard",
+          "record_id": "E6_physical_hysteresis_u8_d0_c60__guard_recovery_2",
+          "repeat": 2,
+          "sha256": "12938c8ca59863c2c930bf7f9b39db180968803d3e6d90776885e7f079d3059e",
+          "source_sha256": {
+            "CELL_RESULT.json": "922d0ec3dbbec7df2134226495d636a2a91c1e505a2d592e64c3f85f3b3a6b2e",
+            "controller_events.jsonl": "400cadbf2c2bdeeab61723bd39f8d2c460c6e81e5bd3499e005eb04b9d09bd27",
+            "expected_requests.json": "48a9291975c4dc926180e6bd1c83e687f88c2c6d4a3de6730e2b97e022d0eec0",
+            "request_events.jsonl": "723a7167713a32d6e1313fcf2d05edfbd87d47d28efb73cd61d8f6c88584529e",
+            "request_terminals.json": "cf5db946e28e2876d321b430b58cf739bdb0710771f46a58d4fa5ab2de8e7608",
+            "run_plan.json": "7e789345a937002bf73ccc58a4d438a774867f49c4e7da4f1630d1b0992c7d22"
+          },
+          "window": "recovery"
+        },
+        {
+          "path": "records/E6/physical/E6_physical_hysteresis_u8_d0_c60_recovery_2.json.gz",
+          "policy": "hysteresis_u8_d0_c60",
+          "record_id": "E6_physical_hysteresis_u8_d0_c60_recovery_2",
+          "repeat": 2,
+          "sha256": "a77d579f26017439981bd982c7a904d9985456382fa727544ef209324386cd0e",
+          "source_sha256": {
+            "CELL_RESULT.json": "f654c4da7538ad478fa9f46174b0f75aea6b43aae112def8629ac7a6d22b6758",
+            "controller_events.jsonl": "7cd75179c798c7cbb478f7abea33faaf831fbba98a25e4c9542ae946d6ea2125",
+            "expected_requests.json": "48a9291975c4dc926180e6bd1c83e687f88c2c6d4a3de6730e2b97e022d0eec0",
+            "request_events.jsonl": "fd2b4a2b06bcc50fcb978524d482cfd8ad6bc42358a8864c4bea3846a98e2554",
+            "request_terminals.json": "331c6197f28361db095b6971e4ccb2bb510fae78e30711b8695f47d59d4280e3",
+            "run_plan.json": "040de026a3429be5c0e6fe3da251940aefc1e6898335566889cbd09d19b49a59"
+          },
+          "window": "recovery"
+        },
+        {
+          "path": "records/E6/physical/E6_physical_all2_steady_1.json.gz",
+          "policy": "all2",
+          "record_id": "E6_physical_all2_steady_1",
+          "repeat": 1,
+          "sha256": "3daba28e6644d32c89e50b55306633a5eb0f2daef3c7494f072783e76662c01b",
+          "source_sha256": {
+            "CELL_RESULT.json": "f52c682e0bb2e5c414b2805bbebf67a1449399fd5b245932f5dd51946c2bee96",
+            "controller_events.jsonl": "77e56f2955d743c5b5a62f8a8ce87caa44abbaa52a98fb421e1eeaf159eecefc",
+            "expected_requests.json": "2d37e0617b351632e6da2201926f6ccc07bff06589a397aacc3d944635f63f7b",
+            "request_events.jsonl": "89717b9a355d4032ea6a5e113b619e3eb3b33f48fa34ce4c6feacbb5d252ae7e",
+            "request_terminals.json": "4558ef74b4b4c1618e5bbbadb340bdb3f27752d631f86ae9b4e3dc7623a71723",
+            "run_plan.json": "c023e333e450d8b62fea938016c2f2236a4d4028b71b225222c4e61e0ef190f5"
+          },
+          "window": "steady"
+        },
+        {
+          "path": "records/E6/physical/E6_physical_hysteresis_u8_d0_c60__guard_steady_1.json.gz",
+          "policy": "hysteresis_u8_d0_c60__guard",
+          "record_id": "E6_physical_hysteresis_u8_d0_c60__guard_steady_1",
+          "repeat": 1,
+          "sha256": "58575465bcb8c23587ed7ed675ea0202ed1fe89df30aba280a51db79d529f86a",
+          "source_sha256": {
+            "CELL_RESULT.json": "c103bb7b10dadc58d5b37cbbbe540aef1d86186033d87f38d37f721add779422",
+            "controller_events.jsonl": "c1bbe57136deb552f1a9a747d8c9d11bfd9cff3c42423760a6698828292d4809",
+            "expected_requests.json": "2d37e0617b351632e6da2201926f6ccc07bff06589a397aacc3d944635f63f7b",
+            "request_events.jsonl": "a55e6a16c31738ea8d8f2980e5a2b54fae30eb578bda54377373e6b30d33b335",
+            "request_terminals.json": "ed23c9d318aac922cf9e83c52b5bf90f36dedcdf5b52f16132f1ad26ad00a837",
+            "run_plan.json": "15f97815b25f858afc3d1f0084a5ed349cb9c0b9bdddf4172878f39e29fbac97"
+          },
+          "window": "steady"
+        },
+        {
+          "path": "records/E6/physical/E6_physical_hysteresis_u8_d0_c60_steady_1.json.gz",
+          "policy": "hysteresis_u8_d0_c60",
+          "record_id": "E6_physical_hysteresis_u8_d0_c60_steady_1",
+          "repeat": 1,
+          "sha256": "63d578ca4d20ba3ccf2cfd90914d19640e339943f430d996c4c3b9facda192d6",
+          "source_sha256": {
+            "CELL_RESULT.json": "8bd07c5a3dd7102b33976aff77bb266a1c929bf541c66d588b2c110f15db76e3",
+            "controller_events.jsonl": "274797ee32926ea31dcef9cd02cbe9680bbe0754352540f108cbef7dfe676597",
+            "expected_requests.json": "2d37e0617b351632e6da2201926f6ccc07bff06589a397aacc3d944635f63f7b",
+            "request_events.jsonl": "373864d4764dfd4f5229c92a9629c599c04bf6d193bc35af4027b5b0b6e5d64c",
+            "request_terminals.json": "93fb8002c05fd1708d68781b938636cb26c5ce22134d16eccfaa16959dc98ab7",
+            "run_plan.json": "ec9969c91526e2172ff1390d808d5845bec0b26c3974e5f07fcc4edf72b12ac5"
+          },
+          "window": "steady"
+        },
+        {
+          "path": "records/E6/physical/E6_physical_all2_steady_2.json.gz",
+          "policy": "all2",
+          "record_id": "E6_physical_all2_steady_2",
+          "repeat": 2,
+          "sha256": "4ef618d6c4290881763ab48babd308a8cb5b14d6c113b49ffa5785f7654405a2",
+          "source_sha256": {
+            "CELL_RESULT.json": "bd2e6008f6efb19849e7f341dbbf3da0f6f0c7456d9f17180380f4f90d417799",
+            "controller_events.jsonl": "aab02cf6b422660248988e9772f9cf971eb3983c05b800dcda5fafbc719e80ee",
+            "expected_requests.json": "2d37e0617b351632e6da2201926f6ccc07bff06589a397aacc3d944635f63f7b",
+            "request_events.jsonl": "2e315e24cbd40cfcb3caf5d8892c4566472b13a06deeec8683dd48b1c3df777c",
+            "request_terminals.json": "b1253e58ec3943a144f42a38e4e0bb72f45f0cdb302e460b909bd5f18d8abe92",
+            "run_plan.json": "0f6256113b3bc5db7538d30fd6834a7be4d9605b3a85eca531c2fa26eba23541"
+          },
+          "window": "steady"
+        },
+        {
+          "path": "records/E6/physical/E6_physical_hysteresis_u8_d0_c60_steady_2.json.gz",
+          "policy": "hysteresis_u8_d0_c60",
+          "record_id": "E6_physical_hysteresis_u8_d0_c60_steady_2",
+          "repeat": 2,
+          "sha256": "43e4adbbe853b4b6b204e7eb53f863b224d2a72bf20a8152fdd20c2d9e7c0971",
+          "source_sha256": {
+            "CELL_RESULT.json": "f27284413589fc22c65a6de4409c25b6e3bb9b76d9462585462901991d194ca5",
+            "controller_events.jsonl": "0f02aaba31655c457578cc6186b142b028e807cc4f65cd32d436a45d057f70e8",
+            "expected_requests.json": "2d37e0617b351632e6da2201926f6ccc07bff06589a397aacc3d944635f63f7b",
+            "request_events.jsonl": "f2addae9f39aa43a0aaee3e0078ba2966687465895f8cba1c202fbc2cd79c8d6",
+            "request_terminals.json": "f12b145e4ccc6dbad6eae42d44331f58ea9114a064204fbc0fb3349c66e8f3ab",
+            "run_plan.json": "91b6b67a4ff0b3ad23fa8c3295cc321c5a7a46495e36eaff80a5dc218a43da69"
+          },
+          "window": "steady"
+        },
+        {
+          "path": "records/E6/physical/E6_physical_hysteresis_u8_d0_c60__guard_steady_2.json.gz",
+          "policy": "hysteresis_u8_d0_c60__guard",
+          "record_id": "E6_physical_hysteresis_u8_d0_c60__guard_steady_2",
+          "repeat": 2,
+          "sha256": "61d13ac057c40b26499ade8949268a5e760e8757210964ec9b4c35e71edbea02",
+          "source_sha256": {
+            "CELL_RESULT.json": "315db9e68c045922a01ead0e3cd4cb92dcd51bf06cd12a26f9208b67108c7b13",
+            "controller_events.jsonl": "a376ef1609718d31e6253d27276de352e7329650bcf97a3899ed01b0cef127dd",
+            "expected_requests.json": "2d37e0617b351632e6da2201926f6ccc07bff06589a397aacc3d944635f63f7b",
+            "request_events.jsonl": "f6b57f9ebaae9da9bb7c8553acb744f49de2cb379e972f9704348c52c7ed1da2",
+            "request_terminals.json": "2474650faf846a14c1cd313ee6ad9dedfadc21613b23d23caef183c8bd0ec4f6",
+            "run_plan.json": "d5682d6451a3ef764671d10f258920407eb44bca625a78d1007b07450de5ddd6"
+          },
+          "window": "steady"
+        }
+      ],
+      "predictions": [
+        {
+          "path": "records/E6/prediction/E6_prediction_hysteresis_u8_d0_c60_recovery_L14.json.gz",
+          "policy": "hysteresis_u8_d0_c60",
+          "record_id": "E6_prediction_hysteresis_u8_d0_c60_recovery_L14",
+          "replay_model": "L14",
+          "sha256": "d911de4a33ad54cd3daa748387ccc8d6accbddd0d234727d3a34986b0c7f66b6",
+          "source_sha256": {
+            "prediction": "7ef0c49e7ffe9a13c76c9029381c73e8d5601d1c0fd9bd1314620b58ee22907d"
+          },
+          "window": "recovery"
+        },
+        {
+          "path": "records/E6/prediction/E6_prediction_hysteresis_u8_d0_c60__guard_recovery_L14.json.gz",
+          "policy": "hysteresis_u8_d0_c60__guard",
+          "record_id": "E6_prediction_hysteresis_u8_d0_c60__guard_recovery_L14",
+          "replay_model": "L14",
+          "sha256": "76cb243a5d1d5e43dd6db0b5de52a2eb0960e0679a6e60432ddb99baeb1f80bc",
+          "source_sha256": {
+            "prediction": "e127cc4479f0f3a9e16a0423e5cb85d31b4a55b1076ac4284e13477f84759290"
+          },
+          "window": "recovery"
+        },
+        {
+          "path": "records/E6/prediction/E6_prediction_all2_recovery_L14.json.gz",
+          "policy": "all2",
+          "record_id": "E6_prediction_all2_recovery_L14",
+          "replay_model": "L14",
+          "sha256": "5f4ed3bd293f6c5c51c4f3ff80b80c8f635680c36b2dc4564d0d5f6370cc5c9d",
+          "source_sha256": {
+            "prediction": "8e1691d4c7412575b172f6a59b8d9005ce473478134c0201826559eae06951c3"
+          },
+          "window": "recovery"
+        },
+        {
+          "path": "records/E6/prediction/E6_prediction_hysteresis_u8_d0_c60_recovery_S14.json.gz",
+          "policy": "hysteresis_u8_d0_c60",
+          "record_id": "E6_prediction_hysteresis_u8_d0_c60_recovery_S14",
+          "replay_model": "S14",
+          "sha256": "d2107ea91c77330df270ac24f2af9b4fc1ea949ca903965160609c19e5eab75f",
+          "source_sha256": {
+            "prediction": "323567bf338c3bd00c77f649925e0c05a70d11b1e60fd8464479f9cf76c2697b"
+          },
+          "window": "recovery"
+        },
+        {
+          "path": "records/E6/prediction/E6_prediction_hysteresis_u8_d0_c60__guard_recovery_S14.json.gz",
+          "policy": "hysteresis_u8_d0_c60__guard",
+          "record_id": "E6_prediction_hysteresis_u8_d0_c60__guard_recovery_S14",
+          "replay_model": "S14",
+          "sha256": "8bf671ba051645b068bdfe2d28f9f55ce5f7a90a0051d258c3feae29f3ec7ddc",
+          "source_sha256": {
+            "prediction": "3092be308b30c0d67a5209f405a3aa3245b2f5ebd7e6d32017867d5ed1d8cc3d"
+          },
+          "window": "recovery"
+        },
+        {
+          "path": "records/E6/prediction/E6_prediction_all2_recovery_S14.json.gz",
+          "policy": "all2",
+          "record_id": "E6_prediction_all2_recovery_S14",
+          "replay_model": "S14",
+          "sha256": "26f5a93304ca0e973b6b5e73a224f5d876871a3e3471939abcae6df21037869a",
+          "source_sha256": {
+            "prediction": "8e1691d4c7412575b172f6a59b8d9005ce473478134c0201826559eae06951c3"
+          },
+          "window": "recovery"
+        },
+        {
+          "path": "records/E6/prediction/E6_prediction_hysteresis_u8_d0_c60_steady_L14.json.gz",
+          "policy": "hysteresis_u8_d0_c60",
+          "record_id": "E6_prediction_hysteresis_u8_d0_c60_steady_L14",
+          "replay_model": "L14",
+          "sha256": "7ba89cc6878f69891a86fa0290c66b69669be6b84684260ff2e1e2b870e18761",
+          "source_sha256": {
+            "prediction": "5e0e58ce931520f4f706df9ee0cda3973cd03250d4e92e025847e551ca48a47c"
+          },
+          "window": "steady"
+        },
+        {
+          "path": "records/E6/prediction/E6_prediction_hysteresis_u8_d0_c60__guard_steady_L14.json.gz",
+          "policy": "hysteresis_u8_d0_c60__guard",
+          "record_id": "E6_prediction_hysteresis_u8_d0_c60__guard_steady_L14",
+          "replay_model": "L14",
+          "sha256": "88f9e9cffe669bb5dd717ac187ac905c64ad00f2eece3b7e97900232f088ccbf",
+          "source_sha256": {
+            "prediction": "59cd959eecf3108f726a77c469ee07c07f2357af53a6554593758568f3fbc0a2"
+          },
+          "window": "steady"
+        },
+        {
+          "path": "records/E6/prediction/E6_prediction_all2_steady_L14.json.gz",
+          "policy": "all2",
+          "record_id": "E6_prediction_all2_steady_L14",
+          "replay_model": "L14",
+          "sha256": "7537600c3535d2af6d8f31d466b3950f47bf46ddc4a696b4f0761a9359e562e4",
+          "source_sha256": {
+            "prediction": "7ceb8a385e7b2c9b093ffb3ce1edb97038e25f1a7cd978f6684fbe524b105964"
+          },
+          "window": "steady"
+        },
+        {
+          "path": "records/E6/prediction/E6_prediction_hysteresis_u8_d0_c60_steady_S14.json.gz",
+          "policy": "hysteresis_u8_d0_c60",
+          "record_id": "E6_prediction_hysteresis_u8_d0_c60_steady_S14",
+          "replay_model": "S14",
+          "sha256": "40a9c7466029bb40ac15203c375464d7447674f87717dde22952c9d37357bea4",
+          "source_sha256": {
+            "prediction": "431f11300843cdc1e2f8129d329f7e11b53c45ace070cea3a87a7a0c240b575b"
+          },
+          "window": "steady"
+        },
+        {
+          "path": "records/E6/prediction/E6_prediction_hysteresis_u8_d0_c60__guard_steady_S14.json.gz",
+          "policy": "hysteresis_u8_d0_c60__guard",
+          "record_id": "E6_prediction_hysteresis_u8_d0_c60__guard_steady_S14",
+          "replay_model": "S14",
+          "sha256": "85b43f69d2fd60c09f3baa8e530957ed6621c10b4f6e0656a7e6077c4c3f5ca8",
+          "source_sha256": {
+            "prediction": "9d7e4e337b6340b0dae1102ae10c76efe117e9dc0e03457cbdfe891b772f05f7"
+          },
+          "window": "steady"
+        },
+        {
+          "path": "records/E6/prediction/E6_prediction_all2_steady_S14.json.gz",
+          "policy": "all2",
+          "record_id": "E6_prediction_all2_steady_S14",
+          "replay_model": "S14",
+          "sha256": "4c59eb239bceb55f344f43aa7a867401ac0bdd00f8c31aae7ae298b07ef3e33a",
+          "source_sha256": {
+            "prediction": "7ceb8a385e7b2c9b093ffb3ce1edb97038e25f1a7cd978f6684fbe524b105964"
+          },
+          "window": "steady"
+        }
+      ],
+      "source_scope_notes": [
+        "All valid physical runs, including deadline failures and capacity anchors, are released.",
+        "Anchors are paired but excluded from the paper policy comparison.",
+        "These predictions were frozen before the physical campaign; later T30-14 analysis is not part of this frozen-prediction population.",
+        "Repeated runs share predictions. Counts of paired runs are not counts of independent predictions.",
+        "Source timing/budgets are retained; prompts, responses, token IDs, paths and machine identities are omitted.",
+        "E6 holds measured 14B service/setup/shutdown/guard fields fixed and changes startup only; this does not isolate model-size or engine causality."
+      ]
     }
   ],
   "schema": "fidelityloop-paired-traces-v1",
-  "scope": "Contract-level paired traces from V3, Bridge, E2, E3, and E4; selected deployments with reused frozen predictions."
+  "scope": "Contract-level paired traces from seven campaigns; frozen predictions and selected physical deployments. No population-generalization claim."
 }

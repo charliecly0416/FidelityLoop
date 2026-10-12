@@ -1,6 +1,6 @@
 # FidelityLoop paired traces
 
-This corpus pairs frozen replay predictions with recorded physical deployments from five campaigns. It supports inspection and recomputation of request timing, deadline feasibility, control targets, and scenario resource/cost accounting. It is a release of existing experiments, not an additional experiment or a workload-generalization benchmark.
+This corpus pairs frozen replay predictions with recorded physical deployments from seven campaigns. It supports inspection and recomputation of request timing, deadline feasibility, control targets, and scenario resource/cost accounting. It is a release of existing experiments, not an additional experiment or a workload-generalization benchmark.
 
 | Campaign | Technically accepted physical runs | Unique replay predictions | Model/run pairs | Separate excluded attempts |
 |---|---:|---:|---:|---:|
@@ -9,9 +9,11 @@ This corpus pairs frozen replay predictions with recorded physical deployments f
 | E2 | 32 | 24 | 64 | 4 |
 | E3 | 26 | 28 | 52 | 0 |
 | E4 | 26 | 42 | 78 | 2 |
-| Total | 158 | 182 | 450 | 8 |
+| E5 | 27 | 45 | 81 | 0 |
+| E6 | 12 | 12 | 24 | 0 |
+| Total | 197 | 239 | 555 | 8 |
 
-Technically accepted does not mean deadline-feasible: all 37 physical runs that fail strict P1+ remain included (V3: 3; Bridge: 20; E2: 12; E4: 2). Repeats reuse predictions; 450 pairs are not independent experiments. The eight aborted/technically failed attempts have inventory entries, not full usable trace records, and do not enter scientific metrics. This release covers these five campaigns, not every supplementary experiment in the paper.
+Technically accepted does not mean deadline-feasible: all 41 physical runs that fail strict P1+ remain included (V3: 3; Bridge: 20; E2: 12; E4: 2; E6: 4). Repeats reuse predictions; 555 pairs are not independent experiments. The eight aborted/technically failed attempts have inventory entries, not full usable trace records, and do not enter scientific metrics. This release covers these seven campaigns, not every supplementary experiment in the paper.
 
 ## Run locally
 
@@ -19,15 +21,15 @@ Python 3.10 or newer and its standard library are sufficient. No packages, GPU, 
 
 ```text
 python -B verify.py
-python -B -m unittest -v test_trace test_e4
+python -B -m unittest -v test_trace test_e4 test_e5_e6
 python -B load_trace.py
 python -B evaluate.py --metric feasibility
 python -B evaluate.py --metric cost
 ```
 
-`verify.py` checks file hashes, the published field schema, every record's deadline/resource/cost arithmetic, pair mappings, and the saved example summary. Expected result: `PASS_PAIRED_TRACE_CORPUS`, 158 physical runs, 182 unique predictions, 450 pairs. `load_trace.py RECORD_ID` inspects one record; IDs are listed in `INDEX.json`. `--root PATH` supports relocating the complete corpus. Use `-B` to avoid bytecode caches; verification treats only listed files as release contents.
+`verify.py` checks file hashes, the published field schema, every record's deadline/resource/cost arithmetic, pair mappings, and the saved example summary. Expected result: `PASS_PAIRED_TRACE_CORPUS`, 197 physical runs, 239 unique predictions, 555 pairs. `load_trace.py RECORD_ID` inspects one record; IDs are listed in `INDEX.json`. `--root PATH` supports relocating the complete corpus. Use `-B` to avoid bytecode caches; verification treats only listed files as release contents.
 
-The examples report P1+ direction agreement and cost MAE separately per campaign and replay model. They use all accepted physical cells except E3/E4's two anchors per campaign, matching each frozen 24-cell comparison. Bridge/E2 include anchors. V3 examples cover all four policies, whereas the main paper's fixed-H fidelity analysis uses nine H runs. V3's original replay `feasible` flag used a different offline threshold; it is not reused as the strict P1/P1+ outcome here. In E3, six rejected *cells* under C correspond to three rejected *candidates* on steady; candidate acceptance requires both windows and physical feasibility all four repeats.
+The examples report P1+ direction agreement and cost MAE separately per campaign and replay model. They use all accepted physical cells except E3/E4/E5/E6 capacity anchors, matching the paper’s per-campaign policy comparisons. Bridge/E2 include anchors. V3 examples cover all four policies, whereas the main paper's fixed-H fidelity analysis uses nine H runs. V3's original replay `feasible` flag used a different offline threshold; it is not reused as the strict P1/P1+ outcome here. In E3, six rejected *cells* under C correspond to three rejected *candidates* on steady; candidate acceptance requires both windows and physical feasibility all four repeats.
 
 ## What can be reused
 
@@ -48,3 +50,11 @@ E4 adds 26 accepted SGLang executions and 42 unique predictions from C, C30, and
 Two C1 recovery attempts missed a controller policy-tick deadline and were repeated with the same configuration. Their anonymous inventory links to the two replacement executions. Root cause remains unresolved; excluded incomplete attempts are not scientific failures or extra comparison cells.
 
 `E4_MODELS.json` records the backend configuration and numerical replay models. Only startup duration differs among the three replay models; their service lookup, setup, shutdown, and the deployed guard estimator are unchanged. This release is compatible with the existing version-1 trace schema and preserves every earlier compressed trace byte-for-byte. E4 uses selected known windows and checkpoints; backend and dependency changes are not isolated causal interventions. C30 and C_sg tie on classification.
+
+## Worked screening example
+
+Run `python -B worked_example.py --campaign E6` to recompute screening decisions, equal-window resource/cost errors, and the missed request IDs behind false accepts. S14 agrees on 4/8 policy runs with four false accepts; L14 agrees on 8/8. Each model contributes four unique predictions reused across two repeats. The example excludes capacity anchors, validates paired request schedules/accounting contracts, and retains failed requests.
+
+`python -B worked_example.py --campaign E5` compares C/C30/C_sg on 24 policy runs each (12 unique predictions per model). All physical runs are feasible: false-accept rates are `null`, not zero-percent evidence of safe screening.
+
+E5 uses additional constructed arrivals with fixed SGLang/7B calibration; E6 uses the 14B/vLLM deployment with measured service timing and a startup-only predictor contrast. Their original frozen predictions are included. The later T30-14 diagnostic is retrospective and is supplied separately with the paper, outside these frozen-prediction counts. These tools re-evaluate recorded deployments; they do not run a new policy, train PPO, or reproduce language-model inference.
