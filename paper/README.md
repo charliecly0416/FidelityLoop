@@ -4,15 +4,15 @@ Build `main.tex` or `supplement.tex` with pdfLaTeX and BibTeX. Import this ZIP
 into Overleaf and select the entry point; all required figures, tables, styles,
 and references are included. No shell escape or external downloads are needed.
 
-This v8r13 source integrates the Vidur service model into the existing
+This v8r14 source integrates the Vidur service model into the existing
 closed-loop validation argument. Twelve retrospective CPU rollouts are
 compared with all 36 original physical runs; no new policy GPU runs are added.
 The main body remains 10 pages, references start on page 11, and the main PDF
 has 12 pages. The separate supplement has 25 pages.
 
-The abstract, contribution statements and conclusion emphasize the reusable
-framework, mechanisms of replay/deployment disagreement, and consequences for
-policy selection. Scientific results and experimental scope are unchanged.
+The opening and conclusion explain how developers can use the framework to
+diagnose replay/deployment disagreements. The background and PPO introduction
+are concise; scientific results and experimental scope are unchanged.
 
 The source includes lightweight, standard-library comparison artifacts:
 
