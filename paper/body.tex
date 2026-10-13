@@ -103,10 +103,10 @@ vLLM, SGLang, and Sarathi-Serve optimize request execution
 elastic policies across execution backends and replay service models.
 
 Provisioning and scheduling work connects workload estimates to SLOs
-\citep{crankshaw2018inferline,zhang2019mark,zhang2023shepherd}. We evaluate
-whether replay models preserve policy feasibility and resource outcomes after
-deployment. The guard serves as a rule-based case study; frozen PPO
-checkpoints extend the evaluation to learned policies.
+\citep{crankshaw2018inferline,zhang2019mark,zhang2023shepherd}. Our comparisons
+evaluate replay models as policy-screening tools: whether their feasibility
+and resource predictions support deployment choices. The guard and frozen
+PPO checkpoints provide rule-based and learned-policy cases, respectively.
 
 Policy design provides a complementary layer. Llumnix dynamically reschedules
 LLM requests \citep{sun2024llumnix}; AAPA predicts scaling needs for serverless
@@ -215,7 +215,8 @@ PPO arm (32 runs). Checkpoint and tensor hashes bind policy identity. An earlier
 38-run mixed-policy study covers rules, guards, and PPO under another runtime.
 The screening study evaluates six previously undeployed checkpoints on the
 same two windows, each on a separate dual-A100 allocation: one all2 anchor
-and two repeats per arm (26 runs). These runtime groups remain separate.
+and two repeats per arm (26 runs). These runtime groups remain separate even
+where checkpoints are shared.
 
 The engine study transfers six policy arms to SGLang 0.4.8, PyTorch 2.7.1,
 and Transformers 4.52.3 on two A100 80GB PCIe GPUs. It retains the Qwen
