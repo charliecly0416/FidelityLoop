@@ -1259,7 +1259,7 @@
     {
       "path": "paper/SHA256SUMS.txt",
       "bytes": 21175,
-      "sha256": "367a136cbb39990061a32ac86c3eca9b1ce50369d7ffc3071c0516dafbcfc361"
+      "sha256": "fb633a5d6225576091124ed612ba3a1bc8e63b89a5704bd5710c09874cac3ee4"
     },
     {
       "path": "paper/abstract.tex",
@@ -1903,8 +1903,8 @@
     },
     {
       "path": "paper/body.tex",
-      "bytes": 46563,
-      "sha256": "ebd23b0fa1fc373b279d0f6d379c4dc4d451b8e75e8e6e3d3fe8ef2a73ef7197"
+      "bytes": 46548,
+      "sha256": "bc7b6721aea29012aa9dd74dc0451c6ab84fd5c9a8a5461bba7559619f1460c6"
     },
     {
       "path": "paper/cpu_model_evidence.tex",
@@ -2208,8 +2208,8 @@
     },
     {
       "path": "paper/main.pdf",
-      "bytes": 299734,
-      "sha256": "a698684b8e66290e68877a1dcca31c455db95dfbb7722ec8a21521af9aa3dd44"
+      "bytes": 299781,
+      "sha256": "fa8bac4166ca0b38dc57f5033610b2b8b78f892d910acb883f2eab6c47c8973d"
     },
     {
       "path": "paper/main.tex",
@@ -2259,7 +2259,7 @@
     {
       "path": "paper/supplement.pdf",
       "bytes": 398592,
-      "sha256": "6ac3153f66fd5c84a6648fb6eebd33ddcf57d772cf6e4105c231260f4f1a94cf"
+      "sha256": "988c3535282da3ae158be097a357ec0cb1fc34e9e48b078049e18ec8202d2399"
     },
     {
       "path": "paper/supplement.tex",
