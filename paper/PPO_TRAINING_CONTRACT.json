@@ -1,0 +1,221 @@
+{
+  "schema": "fidelityloop-ppo-training-extract-v1",
+  "common_config": {
+    "schema": "maxopt-bridge-capacity-ppo-common-v1",
+    "observation_dim": 30,
+    "hidden_dim": 256,
+    "num_layers": 2,
+    "initialization": {
+      "hidden_relu_gain": 1.4142135623730951,
+      "actor_gain": 0.01,
+      "value_gain": 1.0,
+      "bias": 0.0
+    },
+    "step_seconds": 1,
+    "episode_seconds": 2100,
+    "rollout_steps": 2100,
+    "cooldown_seconds": 60,
+    "reward_scale": 1.0,
+    "trainer": {
+      "lr": 0.0003,
+      "gamma": 0.9995,
+      "gae_lambda": 0.999,
+      "epsilon_clip": 0.2,
+      "value_coef": 0.5,
+      "entropy_coef": 0.01,
+      "max_grad_norm": 0.5,
+      "K_epochs": 4,
+      "batch_size": 64,
+      "lr_schedule": "constant",
+      "target_kl": null,
+      "kl_coef": 0.0,
+      "normalize_advantages": true,
+      "clip_value_loss": true,
+      "cost_critic_loss_weight": 0.0,
+      "aux_shield_loss_weight": 0.0,
+      "aux_shield_loss_warmup_steps": 0
+    },
+    "pilot_paired_seeds": [
+      0,
+      1,
+      2
+    ],
+    "formal_paired_seeds": [
+      101,
+      102,
+      103,
+      104,
+      105
+    ],
+    "budget_and_evaluation_frequency": "S05 measured jointly then locked before six pilot runs",
+    "selection": "common C30 without guard; every validation window P1plus; mean cost, checkpoint, seed",
+    "training_guard": false,
+    "fixed_offline_mask": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "basis": "Frozen before any training result; preserve existing small PPO except authorized ReLU initialization and explicit seconds-scale discount/trace horizon."
+  },
+  "common_config_file_sha256": "871a2f7fb896f2afa86e00210752e49b41dec611a684ac853c5b673f7c607853",
+  "training_windows": [
+    "train_burst_offline_v2",
+    "train_recovery_v2",
+    "train_steady_v2"
+  ],
+  "selection_contract": {
+    "data_sha256": {
+      "validation_burst_offline_v2": "94e8c1c19b024571ec1e031f0b7117267a2fbae5828ac1241c6087a7d7581455",
+      "validation_recovery_v2": "a9188ab24b256561287050fc12117fa6d6e1df2a71b27548df4286e166fa12d7",
+      "validation_steady_v2": "554772d3a740245ab8ba891fd19e9dba80f363ecc9ef211d28dde2f3e6d25b0f"
+    },
+    "deterministic": true,
+    "diagnostic_order": [
+      "failed_windows",
+      "unfinished",
+      "late",
+      "equal_window_mean_total_cost",
+      "checkpoint_index",
+      "seed_id"
+    ],
+    "digest_encoding": "canonical JSON UTF-8",
+    "eligible_order": [
+      "equal_window_mean_total_cost",
+      "checkpoint_index",
+      "seed_id"
+    ],
+    "engineering_probe_is_candidate": false,
+    "environment_code_sha256": "7f4f633154096264842ccd3c70f63261a1323b8c4d8d41335db5035b32083186",
+    "evaluation_model": "C30",
+    "guard": false,
+    "initialization_is_candidate": false,
+    "metrics_code_sha256": "2b0289f465875f5346c9fa63dd53f002b2dd2dfffff7ddc745e1085f37379f88",
+    "model_sha256": "eaf1765cb3e83b48336a0e56c0816175e635c0de022f4211bba754eb791e684c",
+    "primary_gate": "P1plus separately in every validation window",
+    "schema": "maxopt-bridge-ppo-selection-v1",
+    "simulator_contract_sha256": "1862df57e7109dc0242dccab0b7dc6531f319258605710a8ee4573ef2c97cfa3",
+    "validation_windows": [
+      "validation_burst_offline_v2",
+      "validation_recovery_v2",
+      "validation_steady_v2"
+    ]
+  },
+  "E2_windows": {
+    "window_recovery": {
+      "path": "inputs/0255_bridge_locked_test_recovery_v1.json",
+      "sha256": "212fd6b4b2831eeac1826aa603f9a124e331f13e3a968b46ee097bc2325b074b"
+    },
+    "window_steady": {
+      "path": "inputs/0256_bridge_locked_test_steady_v1.json",
+      "sha256": "96477f29d5dadd8290803d3992249a7727e49a39452379e70bbd2a83cc0203cf"
+    }
+  },
+  "checkpoint_coordinates": [
+    {
+      "arm_id": "ppo_C_r2",
+      "training_environment": "C",
+      "selection_rule": "eligible rank 2 under full selection contract",
+      "seed": 103,
+      "episode": 100,
+      "actual_steps": 210000,
+      "checkpoint_sha256": "e1d2c1caa8786cd0d35b9d9dedd3a37a041bbd5cf76d83d281c1861e4a2ce981",
+      "tensor_sha256": "a042f1b897c2981694390ab84984449142969302c081877419824ee7f82facff"
+    },
+    {
+      "arm_id": "ppo_C_s101",
+      "training_environment": "C",
+      "selection_rule": "pre-registered matched-coordinate pair: C seed 101 / episode 40 / 84000 steps, matched to original C30 selected",
+      "seed": 101,
+      "episode": 40,
+      "actual_steps": 84000,
+      "checkpoint_sha256": "60f59f251227273e9926f5588e1ff2d8e443fec23766ffec99abbe348343f218",
+      "tensor_sha256": "d0d3916574bb2d710361c068fd9f2ff2f1b2f4b0ea6111665aa7442edbfe4238"
+    },
+    {
+      "arm_id": "ppo_C30_r2",
+      "training_environment": "C30",
+      "selection_rule": "eligible rank 2 under full selection contract",
+      "seed": 101,
+      "episode": 25,
+      "actual_steps": 52500,
+      "checkpoint_sha256": "b3079e6a36249ef9b49ba033460ab4b901b30cc3e209c227f2b844c9e520909f",
+      "tensor_sha256": "2b5117e17adc94c86fd980055fafdca5c47c1e2b1570a9b717c3bc0a9975b10e"
+    },
+    {
+      "arm_id": "ppo_C30_s103",
+      "training_environment": "C30",
+      "selection_rule": "best eligible checkpoint within seed 103 under full selection contract",
+      "seed": 103,
+      "episode": 75,
+      "actual_steps": 157500,
+      "checkpoint_sha256": "6d7b4a01816d495c56ea4e4bc28078d20bce0cc0833188543dbc4ddf91b867cb",
+      "tensor_sha256": "de0136e53a719317b6db126764d4a95ca20d3d498ec020ec821297e69ae67c60"
+    },
+    {
+      "arm_id": "ppo_C30_selected",
+      "training_environment": "C30",
+      "selection_rule": "original selected checkpoint from frozen 0201 selection; no reselection",
+      "seed": 101,
+      "episode": 40,
+      "actual_steps": 84000,
+      "checkpoint_sha256": "e03a5695275a67ccbe9ea1dde08792d007a0a6aaf0d8d51de30b921286584157",
+      "tensor_sha256": "9c6cd1c2af99293634c9bd25c7ce946683c3fe255cda8a647778603ec8d5bff4"
+    }
+  ],
+  "source_audit": {
+    "source/executor/workspace/scripts/maxopt_bridge/ppo_common.json": "871a2f7fb896f2afa86e00210752e49b41dec611a684ac853c5b673f7c607853",
+    "source/executor/workspace/scripts/maxopt_bridge/ppo_training.py": "0876fdba91e2f0db2059b3bc21750000364ff142bccd739bad15e9676704e095",
+    "source/executor/workspace/scripts/mock-schedule/training/ppo_network.py": "bd3dda64a1c2a8e4a51dedf05683aba6e7906923422bf2e621ae0f3af9dc14dd",
+    "source/executor/workspace/scripts/mock-schedule/training/ppo_trainer.py": "40523ac01b59d2ea80e20163fedb32b3ab66f8f570a8539e8429a4151106079c"
+  },
+  "selection_source_sha256": "151be798cb3768584587f60ecf8f0743b4606c46ec138e9425359e28021b7581",
+  "scope": "Extract of existing records; distinct window files do not assert row-disjointness. Absolute historical paths are omitted from checkpoint coordinates.",
+  "paper_display_labels": [
+    {
+      "label": "C-1",
+      "artifact": "C-s101",
+      "deployed": "ppo_C_s101",
+      "model": "C",
+      "seed": 101,
+      "episode": 40,
+      "steps": 84000
+    },
+    {
+      "label": "C-2",
+      "artifact": "C-r2",
+      "deployed": "ppo_C_r2",
+      "model": "C",
+      "seed": 103,
+      "episode": 100,
+      "steps": 210000
+    },
+    {
+      "label": "C30-1",
+      "artifact": "C30-r2",
+      "deployed": "ppo_C30_r2",
+      "model": "C30",
+      "seed": 101,
+      "episode": 25,
+      "steps": 52500
+    },
+    {
+      "label": "C30-2",
+      "artifact": "C30-ref",
+      "deployed": "ppo_C30_raw",
+      "model": "C30",
+      "seed": 101,
+      "episode": 40,
+      "steps": 84000
+    },
+    {
+      "label": "C30-3",
+      "artifact": "C30-s103",
+      "deployed": "ppo_C30_s103",
+      "model": "C30",
+      "seed": 103,
+      "episode": 75,
+      "steps": 157500
+    }
+  ]
+}

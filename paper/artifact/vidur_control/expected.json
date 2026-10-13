@@ -1,0 +1,1498 @@
+{
+  "scope": "Descriptive retrospective CPU diagnostic; no accuracy acceptance gate; not native Vidur lifecycle prediction",
+  "unique_cpu_predictions": 12,
+  "physical_runs": 36,
+  "no_outcome_fitting": true,
+  "cases": [
+    {
+      "case_id": "all1__locked_test_burst_offline_v3",
+      "policy": "all1",
+      "requests": 297,
+      "prediction": {
+        "occupied_seconds": 2102.224161176495,
+        "startup_events": 0,
+        "api_requests": 0,
+        "on_time": {
+          "online": 177,
+          "offline": 120
+        }
+      },
+      "physical_median": {
+        "occupied_seconds": 2101.908122281,
+        "startup_events": 0,
+        "api_requests": 0
+      },
+      "physical_on_time_counts": {
+        "online": [
+          177,
+          177,
+          177
+        ],
+        "offline": [
+          120,
+          120,
+          120
+        ]
+      },
+      "median_occupied_APE": 0.00015035809231843018,
+      "target_agreement_range": [
+        1.0,
+        1.0
+      ],
+      "ontime_disagreement_range": [
+        0,
+        0
+      ]
+    },
+    {
+      "case_id": "all1__locked_test_recovery_v3",
+      "policy": "all1",
+      "requests": 454,
+      "prediction": {
+        "occupied_seconds": 2102.2241611764875,
+        "startup_events": 0,
+        "api_requests": 0,
+        "on_time": {
+          "online": 334,
+          "offline": 120
+        }
+      },
+      "physical_median": {
+        "occupied_seconds": 2101.94198947,
+        "startup_events": 0,
+        "api_requests": 0
+      },
+      "physical_on_time_counts": {
+        "online": [
+          334,
+          334,
+          334
+        ],
+        "offline": [
+          120,
+          120,
+          120
+        ]
+      },
+      "median_occupied_APE": 0.0001342433368290708,
+      "target_agreement_range": [
+        1.0,
+        1.0
+      ],
+      "ontime_disagreement_range": [
+        0,
+        0
+      ]
+    },
+    {
+      "case_id": "all1__locked_test_steady_v3",
+      "policy": "all1",
+      "requests": 1564,
+      "prediction": {
+        "occupied_seconds": 2102.22416117649,
+        "startup_events": 0,
+        "api_requests": 0,
+        "on_time": {
+          "online": 1444,
+          "offline": 120
+        }
+      },
+      "physical_median": {
+        "occupied_seconds": 2101.906938188,
+        "startup_events": 0,
+        "api_requests": 0
+      },
+      "physical_on_time_counts": {
+        "online": [
+          1444,
+          1444,
+          1444
+        ],
+        "offline": [
+          120,
+          120,
+          120
+        ]
+      },
+      "median_occupied_APE": 0.00015092151927685832,
+      "target_agreement_range": [
+        1.0,
+        1.0
+      ],
+      "ontime_disagreement_range": [
+        0,
+        0
+      ]
+    },
+    {
+      "case_id": "all2__locked_test_burst_offline_v3",
+      "policy": "all2",
+      "requests": 297,
+      "prediction": {
+        "occupied_seconds": 4200.0,
+        "startup_events": 0,
+        "api_requests": 0,
+        "on_time": {
+          "online": 177,
+          "offline": 120
+        }
+      },
+      "physical_median": {
+        "occupied_seconds": 4200.0,
+        "startup_events": 0,
+        "api_requests": 0
+      },
+      "physical_on_time_counts": {
+        "online": [
+          177,
+          177,
+          177
+        ],
+        "offline": [
+          120,
+          120,
+          120
+        ]
+      },
+      "median_occupied_APE": 0.0,
+      "target_agreement_range": [
+        1.0,
+        1.0
+      ],
+      "ontime_disagreement_range": [
+        0,
+        0
+      ]
+    },
+    {
+      "case_id": "all2__locked_test_recovery_v3",
+      "policy": "all2",
+      "requests": 454,
+      "prediction": {
+        "occupied_seconds": 4200.0,
+        "startup_events": 0,
+        "api_requests": 0,
+        "on_time": {
+          "online": 334,
+          "offline": 120
+        }
+      },
+      "physical_median": {
+        "occupied_seconds": 4200.0,
+        "startup_events": 0,
+        "api_requests": 0
+      },
+      "physical_on_time_counts": {
+        "online": [
+          334,
+          334,
+          334
+        ],
+        "offline": [
+          120,
+          120,
+          120
+        ]
+      },
+      "median_occupied_APE": 0.0,
+      "target_agreement_range": [
+        1.0,
+        1.0
+      ],
+      "ontime_disagreement_range": [
+        0,
+        0
+      ]
+    },
+    {
+      "case_id": "all2__locked_test_steady_v3",
+      "policy": "all2",
+      "requests": 1564,
+      "prediction": {
+        "occupied_seconds": 4200.0,
+        "startup_events": 0,
+        "api_requests": 0,
+        "on_time": {
+          "online": 1444,
+          "offline": 120
+        }
+      },
+      "physical_median": {
+        "occupied_seconds": 4200.0,
+        "startup_events": 0,
+        "api_requests": 0
+      },
+      "physical_on_time_counts": {
+        "online": [
+          1444,
+          1444,
+          1444
+        ],
+        "offline": [
+          120,
+          120,
+          120
+        ]
+      },
+      "median_occupied_APE": 0.0,
+      "target_agreement_range": [
+        1.0,
+        1.0
+      ],
+      "ontime_disagreement_range": [
+        0,
+        0
+      ]
+    },
+    {
+      "case_id": "hysteresis_u8_d0_c60__guard__locked_test_burst_offline_v3",
+      "policy": "guard",
+      "requests": 297,
+      "prediction": {
+        "occupied_seconds": 729.6899341180017,
+        "startup_events": 10,
+        "api_requests": 94,
+        "on_time": {
+          "online": 177,
+          "offline": 120
+        }
+      },
+      "physical_median": {
+        "occupied_seconds": 735.338630724,
+        "startup_events": 10,
+        "api_requests": 92
+      },
+      "physical_on_time_counts": {
+        "online": [
+          177,
+          177,
+          177
+        ],
+        "offline": [
+          120,
+          120,
+          120
+        ]
+      },
+      "median_occupied_APE": 0.007681762347283105,
+      "target_agreement_range": [
+        0.6785714285714286,
+        0.9961904761904762
+      ],
+      "ontime_disagreement_range": [
+        0,
+        0
+      ]
+    },
+    {
+      "case_id": "hysteresis_u8_d0_c60__guard__locked_test_recovery_v3",
+      "policy": "guard",
+      "requests": 454,
+      "prediction": {
+        "occupied_seconds": 788.9140952945003,
+        "startup_events": 11,
+        "api_requests": 211,
+        "on_time": {
+          "online": 334,
+          "offline": 120
+        }
+      },
+      "physical_median": {
+        "occupied_seconds": 925.3146114409997,
+        "startup_events": 11,
+        "api_requests": 193
+      },
+      "physical_on_time_counts": {
+        "online": [
+          334,
+          334,
+          334
+        ],
+        "offline": [
+          120,
+          120,
+          120
+        ]
+      },
+      "median_occupied_APE": 0.14740988033689623,
+      "target_agreement_range": [
+        0.7214285714285714,
+        0.9928571428571429
+      ],
+      "ontime_disagreement_range": [
+        0,
+        0
+      ]
+    },
+    {
+      "case_id": "hysteresis_u8_d0_c60__guard__locked_test_steady_v3",
+      "policy": "guard",
+      "requests": 1564,
+      "prediction": {
+        "occupied_seconds": 1168.3624176475032,
+        "startup_events": 13,
+        "api_requests": 755,
+        "on_time": {
+          "online": 1444,
+          "offline": 120
+        }
+      },
+      "physical_median": {
+        "occupied_seconds": 1140.397012154,
+        "startup_events": 13,
+        "api_requests": 714
+      },
+      "physical_on_time_counts": {
+        "online": [
+          1444,
+          1444,
+          1444
+        ],
+        "offline": [
+          120,
+          120,
+          120
+        ]
+      },
+      "median_occupied_APE": 0.0247184211234349,
+      "target_agreement_range": [
+        0.33,
+        0.35523809523809524
+      ],
+      "ontime_disagreement_range": [
+        0,
+        0
+      ]
+    },
+    {
+      "case_id": "hysteresis_u8_d0_c60__locked_test_burst_offline_v3",
+      "policy": "H",
+      "requests": 297,
+      "prediction": {
+        "occupied_seconds": 729.6899341180017,
+        "startup_events": 10,
+        "api_requests": 94,
+        "on_time": {
+          "online": 177,
+          "offline": 120
+        }
+      },
+      "physical_median": {
+        "occupied_seconds": 736.4109410350001,
+        "startup_events": 10,
+        "api_requests": 88
+      },
+      "physical_on_time_counts": {
+        "online": [
+          177,
+          177,
+          177
+        ],
+        "offline": [
+          120,
+          120,
+          120
+        ]
+      },
+      "median_occupied_APE": 0.009126707036090774,
+      "target_agreement_range": [
+        0.6961904761904761,
+        0.9961904761904762
+      ],
+      "ontime_disagreement_range": [
+        0,
+        0
+      ]
+    },
+    {
+      "case_id": "hysteresis_u8_d0_c60__locked_test_recovery_v3",
+      "policy": "H",
+      "requests": 454,
+      "prediction": {
+        "occupied_seconds": 726.6899341180002,
+        "startup_events": 10,
+        "api_requests": 211,
+        "on_time": {
+          "online": 334,
+          "offline": 116
+        }
+      },
+      "physical_median": {
+        "occupied_seconds": 732.8592448040001,
+        "startup_events": 10,
+        "api_requests": 192
+      },
+      "physical_on_time_counts": {
+        "online": [
+          334,
+          334,
+          334
+        ],
+        "offline": [
+          116,
+          113,
+          116
+        ]
+      },
+      "median_occupied_APE": 0.008418138584920024,
+      "target_agreement_range": [
+        0.9085714285714286,
+        0.9928571428571429
+      ],
+      "ontime_disagreement_range": [
+        0,
+        3
+      ]
+    },
+    {
+      "case_id": "hysteresis_u8_d0_c60__locked_test_steady_v3",
+      "policy": "H",
+      "requests": 1564,
+      "prediction": {
+        "occupied_seconds": 1168.3624176475032,
+        "startup_events": 13,
+        "api_requests": 755,
+        "on_time": {
+          "online": 1444,
+          "offline": 120
+        }
+      },
+      "physical_median": {
+        "occupied_seconds": 1140.192562733,
+        "startup_events": 13,
+        "api_requests": 711
+      },
+      "physical_on_time_counts": {
+        "online": [
+          1444,
+          1444,
+          1444
+        ],
+        "offline": [
+          120,
+          120,
+          120
+        ]
+      },
+      "median_occupied_APE": 0.024711061578964428,
+      "target_agreement_range": [
+        0.35333333333333333,
+        0.35523809523809524
+      ],
+      "ontime_disagreement_range": [
+        0,
+        0
+      ]
+    }
+  ],
+  "pairs": [
+    {
+      "case_id": "all1__locked_test_burst_offline_v3",
+      "run_id": "all1__locked_test_burst_offline_v3__r1",
+      "predicted": {
+        "occupied_seconds": 2102.224161176495,
+        "startup_events": 0,
+        "api_requests": 0,
+        "on_time": {
+          "online": 177,
+          "offline": 120
+        }
+      },
+      "physical": {
+        "occupied_seconds": 2101.916518095,
+        "startup_events": 0,
+        "api_requests": 0,
+        "on_time": {
+          "online": 177,
+          "offline": 120
+        },
+        "verification_sha256": "7d191da588a2fe7d40636418c6fa17b5184fcd871dd77b7c94929e74ba98e22a"
+      },
+      "prediction_summary_sha256": "93c46e6a2ef07113ba5d2d4bb5247548c92dee076078d31a23de483466440a84",
+      "prediction_records_sha256": "4fa5549524550e1cb848f1b53564dc3105680384c8f27f98d3c2968c8c496afe",
+      "occupied_signed_relative_error": 0.00014636313043190605,
+      "target_tick_agreement": 1.0,
+      "ontime_label_disagreements": 0
+    },
+    {
+      "case_id": "all1__locked_test_burst_offline_v3",
+      "run_id": "all1__locked_test_burst_offline_v3__r2",
+      "predicted": {
+        "occupied_seconds": 2102.224161176495,
+        "startup_events": 0,
+        "api_requests": 0,
+        "on_time": {
+          "online": 177,
+          "offline": 120
+        }
+      },
+      "physical": {
+        "occupied_seconds": 2101.908122281,
+        "startup_events": 0,
+        "api_requests": 0,
+        "on_time": {
+          "online": 177,
+          "offline": 120
+        },
+        "verification_sha256": "cb8db5f62827a84dc3d5e70528b8d190e26a64a6818bdfb89feeef13cb2a218f"
+      },
+      "prediction_summary_sha256": "93c46e6a2ef07113ba5d2d4bb5247548c92dee076078d31a23de483466440a84",
+      "prediction_records_sha256": "4fa5549524550e1cb848f1b53564dc3105680384c8f27f98d3c2968c8c496afe",
+      "occupied_signed_relative_error": 0.00015035809231843018,
+      "target_tick_agreement": 1.0,
+      "ontime_label_disagreements": 0
+    },
+    {
+      "case_id": "all1__locked_test_burst_offline_v3",
+      "run_id": "all1__locked_test_burst_offline_v3__r3",
+      "predicted": {
+        "occupied_seconds": 2102.224161176495,
+        "startup_events": 0,
+        "api_requests": 0,
+        "on_time": {
+          "online": 177,
+          "offline": 120
+        }
+      },
+      "physical": {
+        "occupied_seconds": 2101.88927805,
+        "startup_events": 0,
+        "api_requests": 0,
+        "on_time": {
+          "online": 177,
+          "offline": 120
+        },
+        "verification_sha256": "726b396f7084247b9b487472bffd7e91f3dfd39b7495fb69cdf89daf63b4bfc7"
+      },
+      "prediction_summary_sha256": "93c46e6a2ef07113ba5d2d4bb5247548c92dee076078d31a23de483466440a84",
+      "prediction_records_sha256": "4fa5549524550e1cb848f1b53564dc3105680384c8f27f98d3c2968c8c496afe",
+      "occupied_signed_relative_error": 0.00015932481791118463,
+      "target_tick_agreement": 1.0,
+      "ontime_label_disagreements": 0
+    },
+    {
+      "case_id": "all1__locked_test_recovery_v3",
+      "run_id": "all1__locked_test_recovery_v3__r1",
+      "predicted": {
+        "occupied_seconds": 2102.2241611764875,
+        "startup_events": 0,
+        "api_requests": 0,
+        "on_time": {
+          "online": 334,
+          "offline": 120
+        }
+      },
+      "physical": {
+        "occupied_seconds": 2101.958867162,
+        "startup_events": 0,
+        "api_requests": 0,
+        "on_time": {
+          "online": 334,
+          "offline": 120
+        },
+        "verification_sha256": "ff4b4735f028b9c35b788a66069be2096bac4971eee1be48e15d167416525437"
+      },
+      "prediction_summary_sha256": "8ae5e4bea295fd58493eccc77da35059a5a4275c70b0202cd02f92a6a9c47f21",
+      "prediction_records_sha256": "5d1808039919736608d286023723030dbb8b07fb4984ee02774deb988d46c5e4",
+      "occupied_signed_relative_error": 0.00012621275260528775,
+      "target_tick_agreement": 1.0,
+      "ontime_label_disagreements": 0
+    },
+    {
+      "case_id": "all1__locked_test_recovery_v3",
+      "run_id": "all1__locked_test_recovery_v3__r2",
+      "predicted": {
+        "occupied_seconds": 2102.2241611764875,
+        "startup_events": 0,
+        "api_requests": 0,
+        "on_time": {
+          "online": 334,
+          "offline": 120
+        }
+      },
+      "physical": {
+        "occupied_seconds": 2101.94198947,
+        "startup_events": 0,
+        "api_requests": 0,
+        "on_time": {
+          "online": 334,
+          "offline": 120
+        },
+        "verification_sha256": "5d67364a018a812cde4ce44391dd421f672e9edc6b7493c70ed4c83b70ed095c"
+      },
+      "prediction_summary_sha256": "8ae5e4bea295fd58493eccc77da35059a5a4275c70b0202cd02f92a6a9c47f21",
+      "prediction_records_sha256": "5d1808039919736608d286023723030dbb8b07fb4984ee02774deb988d46c5e4",
+      "occupied_signed_relative_error": 0.0001342433368290708,
+      "target_tick_agreement": 1.0,
+      "ontime_label_disagreements": 0
+    },
+    {
+      "case_id": "all1__locked_test_recovery_v3",
+      "run_id": "all1__locked_test_recovery_v3__r3",
+      "predicted": {
+        "occupied_seconds": 2102.2241611764875,
+        "startup_events": 0,
+        "api_requests": 0,
+        "on_time": {
+          "online": 334,
+          "offline": 120
+        }
+      },
+      "physical": {
+        "occupied_seconds": 2101.929320049,
+        "startup_events": 0,
+        "api_requests": 0,
+        "on_time": {
+          "online": 334,
+          "offline": 120
+        },
+        "verification_sha256": "08e62636e2c927e79b2d8123a71f655912484e7183553a37523aa71ad03fa697"
+      },
+      "prediction_summary_sha256": "8ae5e4bea295fd58493eccc77da35059a5a4275c70b0202cd02f92a6a9c47f21",
+      "prediction_records_sha256": "5d1808039919736608d286023723030dbb8b07fb4984ee02774deb988d46c5e4",
+      "occupied_signed_relative_error": 0.00014027166597616267,
+      "target_tick_agreement": 1.0,
+      "ontime_label_disagreements": 0
+    },
+    {
+      "case_id": "all1__locked_test_steady_v3",
+      "run_id": "all1__locked_test_steady_v3__r1",
+      "predicted": {
+        "occupied_seconds": 2102.22416117649,
+        "startup_events": 0,
+        "api_requests": 0,
+        "on_time": {
+          "online": 1444,
+          "offline": 120
+        }
+      },
+      "physical": {
+        "occupied_seconds": 2101.924781281,
+        "startup_events": 0,
+        "api_requests": 0,
+        "on_time": {
+          "online": 1444,
+          "offline": 120
+        },
+        "verification_sha256": "e59f81bc3b1adb6caa4efb3ba359f482f5072bae4b3215ef47be59dc8acddacf"
+      },
+      "prediction_summary_sha256": "fa52f48d46e65c334a47518dc729b1595b707d0a2d3148578f7458fe0496766e",
+      "prediction_records_sha256": "17055cdaa9e7bbe55ede52989396e2bcc435edcb76a8a94d27ef7e2bccfd2e08",
+      "occupied_signed_relative_error": 0.00014243130779753097,
+      "target_tick_agreement": 1.0,
+      "ontime_label_disagreements": 0
+    },
+    {
+      "case_id": "all1__locked_test_steady_v3",
+      "run_id": "all1__locked_test_steady_v3__r2",
+      "predicted": {
+        "occupied_seconds": 2102.22416117649,
+        "startup_events": 0,
+        "api_requests": 0,
+        "on_time": {
+          "online": 1444,
+          "offline": 120
+        }
+      },
+      "physical": {
+        "occupied_seconds": 2101.896440586,
+        "startup_events": 0,
+        "api_requests": 0,
+        "on_time": {
+          "online": 1444,
+          "offline": 120
+        },
+        "verification_sha256": "4e2187842fa6c1e521a72fd23f279e1a90e607076e30b8a037cb1e88471387b0"
+      },
+      "prediction_summary_sha256": "fa52f48d46e65c334a47518dc729b1595b707d0a2d3148578f7458fe0496766e",
+      "prediction_records_sha256": "17055cdaa9e7bbe55ede52989396e2bcc435edcb76a8a94d27ef7e2bccfd2e08",
+      "occupied_signed_relative_error": 0.0001559166208960774,
+      "target_tick_agreement": 1.0,
+      "ontime_label_disagreements": 0
+    },
+    {
+      "case_id": "all1__locked_test_steady_v3",
+      "run_id": "all1__locked_test_steady_v3__r3",
+      "predicted": {
+        "occupied_seconds": 2102.22416117649,
+        "startup_events": 0,
+        "api_requests": 0,
+        "on_time": {
+          "online": 1444,
+          "offline": 120
+        }
+      },
+      "physical": {
+        "occupied_seconds": 2101.906938188,
+        "startup_events": 0,
+        "api_requests": 0,
+        "on_time": {
+          "online": 1444,
+          "offline": 120
+        },
+        "verification_sha256": "19aa2c8eef84ecbba30a39c6b12d36a326d86f55f7c51b64566e70b4f1f6c932"
+      },
+      "prediction_summary_sha256": "fa52f48d46e65c334a47518dc729b1595b707d0a2d3148578f7458fe0496766e",
+      "prediction_records_sha256": "17055cdaa9e7bbe55ede52989396e2bcc435edcb76a8a94d27ef7e2bccfd2e08",
+      "occupied_signed_relative_error": 0.00015092151927685832,
+      "target_tick_agreement": 1.0,
+      "ontime_label_disagreements": 0
+    },
+    {
+      "case_id": "all2__locked_test_burst_offline_v3",
+      "run_id": "all2__locked_test_burst_offline_v3__r1",
+      "predicted": {
+        "occupied_seconds": 4200.0,
+        "startup_events": 0,
+        "api_requests": 0,
+        "on_time": {
+          "online": 177,
+          "offline": 120
+        }
+      },
+      "physical": {
+        "occupied_seconds": 4200.0,
+        "startup_events": 0,
+        "api_requests": 0,
+        "on_time": {
+          "online": 177,
+          "offline": 120
+        },
+        "verification_sha256": "927546c15bceb0f3c1286e7b64cd0e0b0cd03baef43266ad45f76113c40565ed"
+      },
+      "prediction_summary_sha256": "9e2746dfaea76701d0b557ed1d05e8a070c9a30772810321019be9256d756ea1",
+      "prediction_records_sha256": "2c99fca246b67c3002e5f4133c402bdfec022aab29cddfe4e90ffa3a7dc88bba",
+      "occupied_signed_relative_error": 0.0,
+      "target_tick_agreement": 1.0,
+      "ontime_label_disagreements": 0
+    },
+    {
+      "case_id": "all2__locked_test_burst_offline_v3",
+      "run_id": "all2__locked_test_burst_offline_v3__r2",
+      "predicted": {
+        "occupied_seconds": 4200.0,
+        "startup_events": 0,
+        "api_requests": 0,
+        "on_time": {
+          "online": 177,
+          "offline": 120
+        }
+      },
+      "physical": {
+        "occupied_seconds": 4200.0,
+        "startup_events": 0,
+        "api_requests": 0,
+        "on_time": {
+          "online": 177,
+          "offline": 120
+        },
+        "verification_sha256": "ff5a5d5d502b42259e9249614e3f32eab8e7342c6b885c84bf8754ff67294218"
+      },
+      "prediction_summary_sha256": "9e2746dfaea76701d0b557ed1d05e8a070c9a30772810321019be9256d756ea1",
+      "prediction_records_sha256": "2c99fca246b67c3002e5f4133c402bdfec022aab29cddfe4e90ffa3a7dc88bba",
+      "occupied_signed_relative_error": 0.0,
+      "target_tick_agreement": 1.0,
+      "ontime_label_disagreements": 0
+    },
+    {
+      "case_id": "all2__locked_test_burst_offline_v3",
+      "run_id": "all2__locked_test_burst_offline_v3__r3",
+      "predicted": {
+        "occupied_seconds": 4200.0,
+        "startup_events": 0,
+        "api_requests": 0,
+        "on_time": {
+          "online": 177,
+          "offline": 120
+        }
+      },
+      "physical": {
+        "occupied_seconds": 4200.0,
+        "startup_events": 0,
+        "api_requests": 0,
+        "on_time": {
+          "online": 177,
+          "offline": 120
+        },
+        "verification_sha256": "965bf80e6fc81f0ae977d61812eba45d9a87155935a03c292190dc5797aae94b"
+      },
+      "prediction_summary_sha256": "9e2746dfaea76701d0b557ed1d05e8a070c9a30772810321019be9256d756ea1",
+      "prediction_records_sha256": "2c99fca246b67c3002e5f4133c402bdfec022aab29cddfe4e90ffa3a7dc88bba",
+      "occupied_signed_relative_error": 0.0,
+      "target_tick_agreement": 1.0,
+      "ontime_label_disagreements": 0
+    },
+    {
+      "case_id": "all2__locked_test_recovery_v3",
+      "run_id": "all2__locked_test_recovery_v3__r1",
+      "predicted": {
+        "occupied_seconds": 4200.0,
+        "startup_events": 0,
+        "api_requests": 0,
+        "on_time": {
+          "online": 334,
+          "offline": 120
+        }
+      },
+      "physical": {
+        "occupied_seconds": 4200.0,
+        "startup_events": 0,
+        "api_requests": 0,
+        "on_time": {
+          "online": 334,
+          "offline": 120
+        },
+        "verification_sha256": "bfa3b3c1b5dfcfe4fecf1535c2509690698cfa22351a76457ad87ffa72891ad2"
+      },
+      "prediction_summary_sha256": "6dba223e408f7a2f31c20b8827a2c5201d834db67d275ec0a8ab69b61037b90e",
+      "prediction_records_sha256": "0f446ef230eaa7709be376f83914ece4d00a764654d8dceca0c8b103e9e57401",
+      "occupied_signed_relative_error": 0.0,
+      "target_tick_agreement": 1.0,
+      "ontime_label_disagreements": 0
+    },
+    {
+      "case_id": "all2__locked_test_recovery_v3",
+      "run_id": "all2__locked_test_recovery_v3__r2",
+      "predicted": {
+        "occupied_seconds": 4200.0,
+        "startup_events": 0,
+        "api_requests": 0,
+        "on_time": {
+          "online": 334,
+          "offline": 120
+        }
+      },
+      "physical": {
+        "occupied_seconds": 4200.0,
+        "startup_events": 0,
+        "api_requests": 0,
+        "on_time": {
+          "online": 334,
+          "offline": 120
+        },
+        "verification_sha256": "fbd909686214c12a9a7706e54bb99127945cb23b0d8651024aecd30785e098b3"
+      },
+      "prediction_summary_sha256": "6dba223e408f7a2f31c20b8827a2c5201d834db67d275ec0a8ab69b61037b90e",
+      "prediction_records_sha256": "0f446ef230eaa7709be376f83914ece4d00a764654d8dceca0c8b103e9e57401",
+      "occupied_signed_relative_error": 0.0,
+      "target_tick_agreement": 1.0,
+      "ontime_label_disagreements": 0
+    },
+    {
+      "case_id": "all2__locked_test_recovery_v3",
+      "run_id": "all2__locked_test_recovery_v3__r3",
+      "predicted": {
+        "occupied_seconds": 4200.0,
+        "startup_events": 0,
+        "api_requests": 0,
+        "on_time": {
+          "online": 334,
+          "offline": 120
+        }
+      },
+      "physical": {
+        "occupied_seconds": 4200.0,
+        "startup_events": 0,
+        "api_requests": 0,
+        "on_time": {
+          "online": 334,
+          "offline": 120
+        },
+        "verification_sha256": "9f193b96cf87dceacb81b44fd1cab858b9fde5b6a52109e6db46eb4ddb96e36a"
+      },
+      "prediction_summary_sha256": "6dba223e408f7a2f31c20b8827a2c5201d834db67d275ec0a8ab69b61037b90e",
+      "prediction_records_sha256": "0f446ef230eaa7709be376f83914ece4d00a764654d8dceca0c8b103e9e57401",
+      "occupied_signed_relative_error": 0.0,
+      "target_tick_agreement": 1.0,
+      "ontime_label_disagreements": 0
+    },
+    {
+      "case_id": "all2__locked_test_steady_v3",
+      "run_id": "all2__locked_test_steady_v3__r1",
+      "predicted": {
+        "occupied_seconds": 4200.0,
+        "startup_events": 0,
+        "api_requests": 0,
+        "on_time": {
+          "online": 1444,
+          "offline": 120
+        }
+      },
+      "physical": {
+        "occupied_seconds": 4200.0,
+        "startup_events": 0,
+        "api_requests": 0,
+        "on_time": {
+          "online": 1444,
+          "offline": 120
+        },
+        "verification_sha256": "29100328173547d177d17db221d27392443bf0ab0e0030bf49853c13114550bb"
+      },
+      "prediction_summary_sha256": "33a17f409cd17c636b8bcdcbc6d4e88b5abdec461b1f1f710f1f56915f0d7cdc",
+      "prediction_records_sha256": "5a0121b9fa4322ce1f193d32e7d41fac6b442888480ed89b5edff5d5b2074076",
+      "occupied_signed_relative_error": 0.0,
+      "target_tick_agreement": 1.0,
+      "ontime_label_disagreements": 0
+    },
+    {
+      "case_id": "all2__locked_test_steady_v3",
+      "run_id": "all2__locked_test_steady_v3__r2",
+      "predicted": {
+        "occupied_seconds": 4200.0,
+        "startup_events": 0,
+        "api_requests": 0,
+        "on_time": {
+          "online": 1444,
+          "offline": 120
+        }
+      },
+      "physical": {
+        "occupied_seconds": 4200.0,
+        "startup_events": 0,
+        "api_requests": 0,
+        "on_time": {
+          "online": 1444,
+          "offline": 120
+        },
+        "verification_sha256": "520e2260b68650e0d147081f52a1f2a1eaf1e8dba1947a343ccae8ffc8c1e942"
+      },
+      "prediction_summary_sha256": "33a17f409cd17c636b8bcdcbc6d4e88b5abdec461b1f1f710f1f56915f0d7cdc",
+      "prediction_records_sha256": "5a0121b9fa4322ce1f193d32e7d41fac6b442888480ed89b5edff5d5b2074076",
+      "occupied_signed_relative_error": 0.0,
+      "target_tick_agreement": 1.0,
+      "ontime_label_disagreements": 0
+    },
+    {
+      "case_id": "all2__locked_test_steady_v3",
+      "run_id": "all2__locked_test_steady_v3__r3",
+      "predicted": {
+        "occupied_seconds": 4200.0,
+        "startup_events": 0,
+        "api_requests": 0,
+        "on_time": {
+          "online": 1444,
+          "offline": 120
+        }
+      },
+      "physical": {
+        "occupied_seconds": 4200.0,
+        "startup_events": 0,
+        "api_requests": 0,
+        "on_time": {
+          "online": 1444,
+          "offline": 120
+        },
+        "verification_sha256": "bccc4ce50ee7dde790fb3eaa5dbe590ff2a95cb4ed0ec6509a2b0cb7c4cb09dc"
+      },
+      "prediction_summary_sha256": "33a17f409cd17c636b8bcdcbc6d4e88b5abdec461b1f1f710f1f56915f0d7cdc",
+      "prediction_records_sha256": "5a0121b9fa4322ce1f193d32e7d41fac6b442888480ed89b5edff5d5b2074076",
+      "occupied_signed_relative_error": 0.0,
+      "target_tick_agreement": 1.0,
+      "ontime_label_disagreements": 0
+    },
+    {
+      "case_id": "hysteresis_u8_d0_c60__guard__locked_test_burst_offline_v3",
+      "run_id": "hysteresis_u8_d0_c60__guard__locked_test_burst_offline_v3__r1",
+      "predicted": {
+        "occupied_seconds": 729.6899341180017,
+        "startup_events": 10,
+        "api_requests": 94,
+        "on_time": {
+          "online": 177,
+          "offline": 120
+        }
+      },
+      "physical": {
+        "occupied_seconds": 735.338630724,
+        "startup_events": 10,
+        "api_requests": 92,
+        "on_time": {
+          "online": 177,
+          "offline": 120
+        },
+        "verification_sha256": "84ae6026c6271804a8faaab4c6fa523a8f4ff9ffae24fd62677c8be27b812581"
+      },
+      "prediction_summary_sha256": "dd2b2fb79382ccb9745a676bb83e3b1c5ee7b68b120708cc89829e9d06db62fe",
+      "prediction_records_sha256": "cf4708a719b59fe06740c12a147c0512891c934cfb02f6c10c0de734c9358113",
+      "occupied_signed_relative_error": -0.007681762347283105,
+      "target_tick_agreement": 0.9961904761904762,
+      "ontime_label_disagreements": 0
+    },
+    {
+      "case_id": "hysteresis_u8_d0_c60__guard__locked_test_burst_offline_v3",
+      "run_id": "hysteresis_u8_d0_c60__guard__locked_test_burst_offline_v3__r2",
+      "predicted": {
+        "occupied_seconds": 729.6899341180017,
+        "startup_events": 10,
+        "api_requests": 94,
+        "on_time": {
+          "online": 177,
+          "offline": 120
+        }
+      },
+      "physical": {
+        "occupied_seconds": 734.0867786690001,
+        "startup_events": 10,
+        "api_requests": 82,
+        "on_time": {
+          "online": 177,
+          "offline": 120
+        },
+        "verification_sha256": "6c7b1ba9c812c5da6698ffdb80ee093eef4fad47c84d42e939c9d5dc25a80ad5"
+      },
+      "prediction_summary_sha256": "dd2b2fb79382ccb9745a676bb83e3b1c5ee7b68b120708cc89829e9d06db62fe",
+      "prediction_records_sha256": "cf4708a719b59fe06740c12a147c0512891c934cfb02f6c10c0de734c9358113",
+      "occupied_signed_relative_error": -0.0059895433057253105,
+      "target_tick_agreement": 0.9961904761904762,
+      "ontime_label_disagreements": 0
+    },
+    {
+      "case_id": "hysteresis_u8_d0_c60__guard__locked_test_burst_offline_v3",
+      "run_id": "hysteresis_u8_d0_c60__guard__locked_test_burst_offline_v3__r3",
+      "predicted": {
+        "occupied_seconds": 729.6899341180017,
+        "startup_events": 10,
+        "api_requests": 94,
+        "on_time": {
+          "online": 177,
+          "offline": 120
+        }
+      },
+      "physical": {
+        "occupied_seconds": 900.3032001139999,
+        "startup_events": 11,
+        "api_requests": 117,
+        "on_time": {
+          "online": 177,
+          "offline": 120
+        },
+        "verification_sha256": "5e4044bb0b62bd252bb59d3f6d252ba558364af2b4bfd6017c9002e134938e03"
+      },
+      "prediction_summary_sha256": "dd2b2fb79382ccb9745a676bb83e3b1c5ee7b68b120708cc89829e9d06db62fe",
+      "prediction_records_sha256": "cf4708a719b59fe06740c12a147c0512891c934cfb02f6c10c0de734c9358113",
+      "occupied_signed_relative_error": -0.18950645290874726,
+      "target_tick_agreement": 0.6785714285714286,
+      "ontime_label_disagreements": 0
+    },
+    {
+      "case_id": "hysteresis_u8_d0_c60__guard__locked_test_recovery_v3",
+      "run_id": "hysteresis_u8_d0_c60__guard__locked_test_recovery_v3__r1",
+      "predicted": {
+        "occupied_seconds": 788.9140952945003,
+        "startup_events": 11,
+        "api_requests": 211,
+        "on_time": {
+          "online": 334,
+          "offline": 120
+        }
+      },
+      "physical": {
+        "occupied_seconds": 794.5352695470001,
+        "startup_events": 11,
+        "api_requests": 197,
+        "on_time": {
+          "online": 334,
+          "offline": 120
+        },
+        "verification_sha256": "c90617da5dfde077b39b4562dc53590956bde152a4693caa0ccc45b81c4e5545"
+      },
+      "prediction_summary_sha256": "8b9a25152ee5531c6ca7f59d31fcf58ef2064161e2ad922980aeacc48d8d06b1",
+      "prediction_records_sha256": "676bec698aa174590e5cbbff98266ba098cb911076f42dce88bf5e4e33fbc018",
+      "occupied_signed_relative_error": -0.007074795126092651,
+      "target_tick_agreement": 0.9928571428571429,
+      "ontime_label_disagreements": 0
+    },
+    {
+      "case_id": "hysteresis_u8_d0_c60__guard__locked_test_recovery_v3",
+      "run_id": "hysteresis_u8_d0_c60__guard__locked_test_recovery_v3__r2",
+      "predicted": {
+        "occupied_seconds": 788.9140952945003,
+        "startup_events": 11,
+        "api_requests": 211,
+        "on_time": {
+          "online": 334,
+          "offline": 120
+        }
+      },
+      "physical": {
+        "occupied_seconds": 925.3146114409997,
+        "startup_events": 11,
+        "api_requests": 191,
+        "on_time": {
+          "online": 334,
+          "offline": 120
+        },
+        "verification_sha256": "1e0469be87b0c7f0fdc971746fa1dd20fe80b12ad9d3ac96d5726df4964eaa5b"
+      },
+      "prediction_summary_sha256": "8b9a25152ee5531c6ca7f59d31fcf58ef2064161e2ad922980aeacc48d8d06b1",
+      "prediction_records_sha256": "676bec698aa174590e5cbbff98266ba098cb911076f42dce88bf5e4e33fbc018",
+      "occupied_signed_relative_error": -0.14740988033689623,
+      "target_tick_agreement": 0.9042857142857142,
+      "ontime_label_disagreements": 0
+    },
+    {
+      "case_id": "hysteresis_u8_d0_c60__guard__locked_test_recovery_v3",
+      "run_id": "hysteresis_u8_d0_c60__guard__locked_test_recovery_v3__r3",
+      "predicted": {
+        "occupied_seconds": 788.9140952945003,
+        "startup_events": 11,
+        "api_requests": 211,
+        "on_time": {
+          "online": 334,
+          "offline": 120
+        }
+      },
+      "physical": {
+        "occupied_seconds": 1101.0256263620001,
+        "startup_events": 12,
+        "api_requests": 193,
+        "on_time": {
+          "online": 334,
+          "offline": 120
+        },
+        "verification_sha256": "796afdc39309e13aea8b9d0199c6a13930296a75ccf2b138963e7dac97c84f46"
+      },
+      "prediction_summary_sha256": "8b9a25152ee5531c6ca7f59d31fcf58ef2064161e2ad922980aeacc48d8d06b1",
+      "prediction_records_sha256": "676bec698aa174590e5cbbff98266ba098cb911076f42dce88bf5e4e33fbc018",
+      "occupied_signed_relative_error": -0.2834734483871881,
+      "target_tick_agreement": 0.7214285714285714,
+      "ontime_label_disagreements": 0
+    },
+    {
+      "case_id": "hysteresis_u8_d0_c60__guard__locked_test_steady_v3",
+      "run_id": "hysteresis_u8_d0_c60__guard__locked_test_steady_v3__r1",
+      "predicted": {
+        "occupied_seconds": 1168.3624176475032,
+        "startup_events": 13,
+        "api_requests": 755,
+        "on_time": {
+          "online": 1444,
+          "offline": 120
+        }
+      },
+      "physical": {
+        "occupied_seconds": 1140.397012154,
+        "startup_events": 13,
+        "api_requests": 717,
+        "on_time": {
+          "online": 1444,
+          "offline": 120
+        },
+        "verification_sha256": "be9a14a4dd223abafb27104ce13245eea26a822b7b5b5b7327cb9488113f1cdd"
+      },
+      "prediction_summary_sha256": "20002976515718002b5e8cee387018791b38abd4c974287d016518aab9de5ca0",
+      "prediction_records_sha256": "49c534749116846a93a2e40cb9cdc759686ddd7f2f3f025c47b710aa4397937d",
+      "occupied_signed_relative_error": 0.02452251732989164,
+      "target_tick_agreement": 0.35523809523809524,
+      "ontime_label_disagreements": 0
+    },
+    {
+      "case_id": "hysteresis_u8_d0_c60__guard__locked_test_steady_v3",
+      "run_id": "hysteresis_u8_d0_c60__guard__locked_test_steady_v3__r2",
+      "predicted": {
+        "occupied_seconds": 1168.3624176475032,
+        "startup_events": 13,
+        "api_requests": 755,
+        "on_time": {
+          "online": 1444,
+          "offline": 120
+        }
+      },
+      "physical": {
+        "occupied_seconds": 1140.1789931389994,
+        "startup_events": 13,
+        "api_requests": 714,
+        "on_time": {
+          "online": 1444,
+          "offline": 120
+        },
+        "verification_sha256": "0726190a2e54a67b62a441186f2f64d6b701b263a48c12a993043fd1e4e1e772"
+      },
+      "prediction_summary_sha256": "20002976515718002b5e8cee387018791b38abd4c974287d016518aab9de5ca0",
+      "prediction_records_sha256": "49c534749116846a93a2e40cb9cdc759686ddd7f2f3f025c47b710aa4397937d",
+      "occupied_signed_relative_error": 0.0247184211234349,
+      "target_tick_agreement": 0.35523809523809524,
+      "ontime_label_disagreements": 0
+    },
+    {
+      "case_id": "hysteresis_u8_d0_c60__guard__locked_test_steady_v3",
+      "run_id": "hysteresis_u8_d0_c60__guard__locked_test_steady_v3__r3",
+      "predicted": {
+        "occupied_seconds": 1168.3624176475032,
+        "startup_events": 13,
+        "api_requests": 755,
+        "on_time": {
+          "online": 1444,
+          "offline": 120
+        }
+      },
+      "physical": {
+        "occupied_seconds": 1265.0224609940003,
+        "startup_events": 13,
+        "api_requests": 691,
+        "on_time": {
+          "online": 1444,
+          "offline": 120
+        },
+        "verification_sha256": "f309b289a86ceda776bd82dbc749b0b0ef02ea514a821ad88be1dc3311b6221a"
+      },
+      "prediction_summary_sha256": "20002976515718002b5e8cee387018791b38abd4c974287d016518aab9de5ca0",
+      "prediction_records_sha256": "49c534749116846a93a2e40cb9cdc759686ddd7f2f3f025c47b710aa4397937d",
+      "occupied_signed_relative_error": -0.07640974474915314,
+      "target_tick_agreement": 0.33,
+      "ontime_label_disagreements": 0
+    },
+    {
+      "case_id": "hysteresis_u8_d0_c60__locked_test_burst_offline_v3",
+      "run_id": "hysteresis_u8_d0_c60__locked_test_burst_offline_v3__r1",
+      "predicted": {
+        "occupied_seconds": 729.6899341180017,
+        "startup_events": 10,
+        "api_requests": 94,
+        "on_time": {
+          "online": 177,
+          "offline": 120
+        }
+      },
+      "physical": {
+        "occupied_seconds": 735.1728090319997,
+        "startup_events": 10,
+        "api_requests": 88,
+        "on_time": {
+          "online": 177,
+          "offline": 120
+        },
+        "verification_sha256": "7246024d6fa7afad19b8291edc8c0a3cd83fb21c79acb97806d4d96b53c73677"
+      },
+      "prediction_summary_sha256": "87ca7139872f0adf595bedbafe79986d9b8253845383ad9edea2ae815931443d",
+      "prediction_records_sha256": "cf4708a719b59fe06740c12a147c0512891c934cfb02f6c10c0de734c9358113",
+      "occupied_signed_relative_error": -0.007457940291912153,
+      "target_tick_agreement": 0.9961904761904762,
+      "ontime_label_disagreements": 0
+    },
+    {
+      "case_id": "hysteresis_u8_d0_c60__locked_test_burst_offline_v3",
+      "run_id": "hysteresis_u8_d0_c60__locked_test_burst_offline_v3__r2",
+      "predicted": {
+        "occupied_seconds": 729.6899341180017,
+        "startup_events": 10,
+        "api_requests": 94,
+        "on_time": {
+          "online": 177,
+          "offline": 120
+        }
+      },
+      "physical": {
+        "occupied_seconds": 932.1241393690001,
+        "startup_events": 11,
+        "api_requests": 128,
+        "on_time": {
+          "online": 177,
+          "offline": 120
+        },
+        "verification_sha256": "af3a42069fea9caefb0e56d62224ac047f449c3727eeec036085e177f79adfa9"
+      },
+      "prediction_summary_sha256": "87ca7139872f0adf595bedbafe79986d9b8253845383ad9edea2ae815931443d",
+      "prediction_records_sha256": "cf4708a719b59fe06740c12a147c0512891c934cfb02f6c10c0de734c9358113",
+      "occupied_signed_relative_error": -0.21717515586286168,
+      "target_tick_agreement": 0.6961904761904761,
+      "ontime_label_disagreements": 0
+    },
+    {
+      "case_id": "hysteresis_u8_d0_c60__locked_test_burst_offline_v3",
+      "run_id": "hysteresis_u8_d0_c60__locked_test_burst_offline_v3__r3",
+      "predicted": {
+        "occupied_seconds": 729.6899341180017,
+        "startup_events": 10,
+        "api_requests": 94,
+        "on_time": {
+          "online": 177,
+          "offline": 120
+        }
+      },
+      "physical": {
+        "occupied_seconds": 736.4109410350001,
+        "startup_events": 10,
+        "api_requests": 82,
+        "on_time": {
+          "online": 177,
+          "offline": 120
+        },
+        "verification_sha256": "136bac923602c872782ce89d7c8b1ce4eed8adf94dba6272dfbdadd27b85ef48"
+      },
+      "prediction_summary_sha256": "87ca7139872f0adf595bedbafe79986d9b8253845383ad9edea2ae815931443d",
+      "prediction_records_sha256": "cf4708a719b59fe06740c12a147c0512891c934cfb02f6c10c0de734c9358113",
+      "occupied_signed_relative_error": -0.009126707036090774,
+      "target_tick_agreement": 0.9961904761904762,
+      "ontime_label_disagreements": 0
+    },
+    {
+      "case_id": "hysteresis_u8_d0_c60__locked_test_recovery_v3",
+      "run_id": "hysteresis_u8_d0_c60__locked_test_recovery_v3__r1",
+      "predicted": {
+        "occupied_seconds": 726.6899341180002,
+        "startup_events": 10,
+        "api_requests": 211,
+        "on_time": {
+          "online": 334,
+          "offline": 116
+        }
+      },
+      "physical": {
+        "occupied_seconds": 732.4984107299997,
+        "startup_events": 10,
+        "api_requests": 191,
+        "on_time": {
+          "online": 334,
+          "offline": 116
+        },
+        "verification_sha256": "84a7ff48a3c7701e44c771b8a049a8679762bd59a806dcece520629123576f9a"
+      },
+      "prediction_summary_sha256": "8e5c3bcf77ef62589e9a816439956cd0ea562d4e92408511656865c81878d199",
+      "prediction_records_sha256": "586c378d7aa9c5c11506275eb34eb9712272dde6edc6cdc16d943c937f89ca37",
+      "occupied_signed_relative_error": -0.007929678108394555,
+      "target_tick_agreement": 0.9928571428571429,
+      "ontime_label_disagreements": 0
+    },
+    {
+      "case_id": "hysteresis_u8_d0_c60__locked_test_recovery_v3",
+      "run_id": "hysteresis_u8_d0_c60__locked_test_recovery_v3__r2",
+      "predicted": {
+        "occupied_seconds": 726.6899341180002,
+        "startup_events": 10,
+        "api_requests": 211,
+        "on_time": {
+          "online": 334,
+          "offline": 116
+        }
+      },
+      "physical": {
+        "occupied_seconds": 915.5497812320002,
+        "startup_events": 10,
+        "api_requests": 199,
+        "on_time": {
+          "online": 334,
+          "offline": 113
+        },
+        "verification_sha256": "3da94ddb77ec95bbecee856280a96989a200b7eaa02f9191531d56281b76a97e"
+      },
+      "prediction_summary_sha256": "8e5c3bcf77ef62589e9a816439956cd0ea562d4e92408511656865c81878d199",
+      "prediction_records_sha256": "586c378d7aa9c5c11506275eb34eb9712272dde6edc6cdc16d943c937f89ca37",
+      "occupied_signed_relative_error": -0.20628026021683132,
+      "target_tick_agreement": 0.9085714285714286,
+      "ontime_label_disagreements": 3
+    },
+    {
+      "case_id": "hysteresis_u8_d0_c60__locked_test_recovery_v3",
+      "run_id": "hysteresis_u8_d0_c60__locked_test_recovery_v3__r3",
+      "predicted": {
+        "occupied_seconds": 726.6899341180002,
+        "startup_events": 10,
+        "api_requests": 211,
+        "on_time": {
+          "online": 334,
+          "offline": 116
+        }
+      },
+      "physical": {
+        "occupied_seconds": 732.8592448040001,
+        "startup_events": 10,
+        "api_requests": 192,
+        "on_time": {
+          "online": 334,
+          "offline": 116
+        },
+        "verification_sha256": "7a3ad6bae017da78e84d8638f4dce3f0f1f08b94fd207d02920d38f035350fc6"
+      },
+      "prediction_summary_sha256": "8e5c3bcf77ef62589e9a816439956cd0ea562d4e92408511656865c81878d199",
+      "prediction_records_sha256": "586c378d7aa9c5c11506275eb34eb9712272dde6edc6cdc16d943c937f89ca37",
+      "occupied_signed_relative_error": -0.008418138584920024,
+      "target_tick_agreement": 0.9928571428571429,
+      "ontime_label_disagreements": 0
+    },
+    {
+      "case_id": "hysteresis_u8_d0_c60__locked_test_steady_v3",
+      "run_id": "hysteresis_u8_d0_c60__locked_test_steady_v3__r1",
+      "predicted": {
+        "occupied_seconds": 1168.3624176475032,
+        "startup_events": 13,
+        "api_requests": 755,
+        "on_time": {
+          "online": 1444,
+          "offline": 120
+        }
+      },
+      "physical": {
+        "occupied_seconds": 1140.187181982,
+        "startup_events": 13,
+        "api_requests": 711,
+        "on_time": {
+          "online": 1444,
+          "offline": 120
+        },
+        "verification_sha256": "6335e073e70bc19a0e3db844d829b6eb8426e5684c31645a0729ea5bd0e6beb2"
+      },
+      "prediction_summary_sha256": "15fb122a2c47df13e637b43a41fc41f0615f9e05a2edb2f8dc8cf8bd36ff457e",
+      "prediction_records_sha256": "49c534749116846a93a2e40cb9cdc759686ddd7f2f3f025c47b710aa4397937d",
+      "occupied_signed_relative_error": 0.024711061578964428,
+      "target_tick_agreement": 0.35523809523809524,
+      "ontime_label_disagreements": 0
+    },
+    {
+      "case_id": "hysteresis_u8_d0_c60__locked_test_steady_v3",
+      "run_id": "hysteresis_u8_d0_c60__locked_test_steady_v3__r2",
+      "predicted": {
+        "occupied_seconds": 1168.3624176475032,
+        "startup_events": 13,
+        "api_requests": 755,
+        "on_time": {
+          "online": 1444,
+          "offline": 120
+        }
+      },
+      "physical": {
+        "occupied_seconds": 1265.0376622770002,
+        "startup_events": 13,
+        "api_requests": 642,
+        "on_time": {
+          "online": 1444,
+          "offline": 120
+        },
+        "verification_sha256": "ba94033d6f1e008d63aa37cabf11b62bf00de32202bc8d73a1bac352d569d318"
+      },
+      "prediction_summary_sha256": "15fb122a2c47df13e637b43a41fc41f0615f9e05a2edb2f8dc8cf8bd36ff457e",
+      "prediction_records_sha256": "49c534749116846a93a2e40cb9cdc759686ddd7f2f3f025c47b710aa4397937d",
+      "occupied_signed_relative_error": -0.07642084304074136,
+      "target_tick_agreement": 0.35333333333333333,
+      "ontime_label_disagreements": 0
+    },
+    {
+      "case_id": "hysteresis_u8_d0_c60__locked_test_steady_v3",
+      "run_id": "hysteresis_u8_d0_c60__locked_test_steady_v3__r3",
+      "predicted": {
+        "occupied_seconds": 1168.3624176475032,
+        "startup_events": 13,
+        "api_requests": 755,
+        "on_time": {
+          "online": 1444,
+          "offline": 120
+        }
+      },
+      "physical": {
+        "occupied_seconds": 1140.192562733,
+        "startup_events": 13,
+        "api_requests": 714,
+        "on_time": {
+          "online": 1444,
+          "offline": 120
+        },
+        "verification_sha256": "ef6844e10d6e1a0e7f6752e25ba401404b861d7dec75fd592d68f1fec912d059"
+      },
+      "prediction_summary_sha256": "15fb122a2c47df13e637b43a41fc41f0615f9e05a2edb2f8dc8cf8bd36ff457e",
+      "prediction_records_sha256": "49c534749116846a93a2e40cb9cdc759686ddd7f2f3f025c47b710aa4397937d",
+      "occupied_signed_relative_error": 0.024706225803631944,
+      "target_tick_agreement": 0.35523809523809524,
+      "ontime_label_disagreements": 0
+    }
+  ]
+}

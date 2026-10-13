@@ -1,0 +1,53 @@
+\section{Offline decision-call microbenchmark}
+This microbenchmark reuses actual states from all 16 technically valid same-runtime comparison runs, including the
+B-HPA smoke with four unfinished offline jobs; the original technically invalid
+a1 is excluded with its failure retained. Independent recovery matches the full
+input and hidden pre/post-state of all 29,580 policy ticks, including guard
+latched IDs and B-HPA's complete queue history. Remaining work is the frozen
+policy's surrogate, not GPU progress inferred from future completions.
+
+Before timing, a fixed rule chooses the earliest available tick per run and
+queue stratum: empty, intermediate, or maximum observed queue size; B-HPA also
+separates update and hold ticks. Empty strata stay empty. The resulting 60
+snapshots are retrospective cases, not random production or held-out samples.
+Each receives 100 warmup and 1,000 timed calls of the original sealed
+\texttt{adapter.decide}, including its existing validation. Every call uses a
+newly restored adapter and is checked against the original decision; restoration,
+copying, and checks are outside \texttt{perf\_counter\_ns} timing. All 60,000
+timings, including slow values, are retained; they are repeated measurements of
+60 states, not 60,000 independent physical experiments.
+
+The host is an Intel Xeon E5-2682 v4 (2.50 GHz), eight logical CPUs, with CPython
+3.13.5, distinct from the GPU execution environment. CPU use is not exclusive;
+affinity is unchanged and frequency policy is unavailable. Table~\ref{tab:decidecall}
+reports all groups. Formal guard's largest single-snapshot p99 is 120.105
+$\mu$s in steady and 92.39661 $\mu$s in recovery; its largest individual observed
+times are 157.491 and 841.877 $\mu$s. The latter is retained rather than hidden
+by a quantile. These are neither pooled p99s nor production-run tail estimates.
+
+\begin{table*}[t]
+\centering
+\small
+\caption{Offline \texttt{adapter.decide} timings, in microseconds.
+Median range spans the per-snapshot medians; max p99 is the largest per-snapshot
+p99, and max sample is the largest individual timing. N counts snapshots.}
+\label{tab:decidecall}
+\setlength{\tabcolsep}{3pt}
+\par\vspace{4pt}
+\begin{tabular*}{0.92\linewidth}{@{\extracolsep{\fill}}lllrrrr@{}}
+\toprule
+Kind & Window & Policy & N & Median range & Max p99 & Max sample\\
+\midrule
+\input{generated/v4r3_e2_rows.tex}
+\end{tabular*}
+\end{table*}
+
+The interval excludes \texttt{dispatch\_kind}, admission, the full controller
+loop, replay/restoration, logging, I/O, worker and GPU execution. It measures
+offline decision-call cost on this CPU, not complete-controller or online
+end-to-end overhead, and cannot establish absence of online tail interference.
+The recovery and timing sources are \path{ANALYSIS/E2_RECOVERY_v1/} and
+\path{ANALYSIS/E2_BENCHMARK_v1/} under
+\path{docs/maxopt_v4_r3_p5_20260929/}; the latter preserves all raw samples.
+\path{REVIEW_E2.json} binds the independent audit, and
+\path{P6_E2_TABLE_MANIFEST.json} binds this presentation.

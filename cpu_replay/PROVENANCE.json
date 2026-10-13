@@ -1,0 +1,20 @@
+{
+  "upstream_vidur_commit": "abae7f63aa857300f5cdc6f5e0d27860cd24721b",
+  "upstream_url": "https://github.com/microsoft/vidur",
+  "native_patch": "vendor/vidur/native_export.patch (deterministic serialization only)",
+  "source_acceptance_sha256": "89f768a9e3620f394e7faf22c57b44de79a084af212aedd05295f0408e887434",
+  "input_archive_sha256": "b2e08087cc295f7179bf8975b831d83e088783920315f0a9740470d46393e4c3",
+  "source_files": {
+    "src/controlled_vidur.py": "05c29f0414671e85184b178dc9de48511b74f25901304b11d1caafcbf7c6a76d",
+    "src/qwen_registration.py": "85b24432e383185121437767768efa936ca8af452a4e7e59f4fc7acd43c9180d",
+    "src/profile_qwen.py": "7a20cc684c6f3a7631a3810479bcd86b49b790b417b8e89cd0c9c134526ab73d",
+    "src/service_predictor.py": "2e03cef51bffa04d2a14b0f130ce45af51c3edf5c27372044adc5ea4f8664a00",
+    "src/native_qwen.py": "989e3fb5f72ebb995df2fc1f64451155fe404e416a938828c3972b57f43f5575"
+  },
+  "changes": [
+    "Relocate native and FidelityLoop imports to bundled vendor directories",
+    "Relocate service regression fixtures to inputs/",
+    "Omit machine-local input provenance paths; preserve all 12 specs exactly"
+  ],
+  "new_scientific_experiments": 0
+}

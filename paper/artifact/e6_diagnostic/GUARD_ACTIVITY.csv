@@ -1,0 +1,11 @@
+window,source,risk_ticks,first_risk_tick,last_risk_tick,first_risky_ids,first_base_target,first_guard_target
+bridge_locked_test_recovery_v1,L14,48,1936,1983,"[""825d8f8e7ac600418318050bebb12043ab3df10e417f37b7fa1dae82095d8681""]",0,1
+bridge_locked_test_recovery_v1,S14,0,,,[],,
+bridge_locked_test_recovery_v1,T30-14,31,1951,1981,"[""0a5f0b4a949a847b7de85d293d388463288882801a97649225988ee5e69d64d2""]",0,1
+bridge_locked_test_steady_v1,L14,48,2026,2073,"[""9939c649010e10b85709a04d850f7432fca9b68cdf1445a7732a4d3270c2fb6b""]",0,1
+bridge_locked_test_steady_v1,S14,0,,,[],,
+bridge_locked_test_steady_v1,T30-14,0,,,[],,
+bridge_locked_test_recovery_v1,hysteresis_u8_d0_c60__guard__bridge_locked_test_recovery_v1__r1,47,1936,1982,"[""825d8f8e7ac600418318050bebb12043ab3df10e417f37b7fa1dae82095d8681""]",0,1
+bridge_locked_test_recovery_v1,hysteresis_u8_d0_c60__guard__bridge_locked_test_recovery_v1__r2,0,,,[],,
+bridge_locked_test_steady_v1,hysteresis_u8_d0_c60__guard__bridge_locked_test_steady_v1__r1,0,,,[],,
+bridge_locked_test_steady_v1,hysteresis_u8_d0_c60__guard__bridge_locked_test_steady_v1__r2,47,2026,2072,"[""9939c649010e10b85709a04d850f7432fca9b68cdf1445a7732a4d3270c2fb6b""]",0,1

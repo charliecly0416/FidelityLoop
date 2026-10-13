@@ -1,0 +1,176 @@
+{
+  "schema": "azure-retrospective-diagnostic-v1",
+  "prediction_provenance": "retrospective",
+  "prediction_date": "2026-10-12",
+  "physical_campaign_date": "2026-09-27",
+  "model_id": "Qwen/Qwen2.5-7B-Instruct",
+  "runtime": {
+    "context": 4096,
+    "dp": 1,
+    "dtype": "float16",
+    "eager": true,
+    "enable_chunked_prefill": true,
+    "gpu_memory_utilization": 0.8,
+    "local_slots": 4,
+    "max_num_batched_tokens": 16384,
+    "max_num_seqs": 1024,
+    "pp": 1,
+    "prefix_cache": false,
+    "tp": 1
+  },
+  "policies": {
+    "all1": {
+      "name": "all1"
+    },
+    "all2": {
+      "name": "all2"
+    },
+    "hysteresis_u8_d0_c60": {
+      "name": "hysteresis",
+      "up_threshold": 8,
+      "down_threshold": 0,
+      "cooldown_seconds": 60,
+      "min_devices": 0
+    },
+    "hysteresis_u8_d0_c60__guard": {
+      "base_policy": {
+        "name": "hysteresis",
+        "up_threshold": 8,
+        "down_threshold": 0,
+        "cooldown_seconds": 60,
+        "min_devices": 0
+      }
+    }
+  },
+  "physical_guard_service_model": {
+    "kind": "n4c_progress_lookup",
+    "lookup_wall_seconds": {
+      "core_i256_o256_c4": 3.0980031257495284,
+      "dual_i512_o128_c4": 1.6880037235096097,
+      "gpu1_control_i512_o128_c4": 1.6580502199940383,
+      "grid_i128_o128_c1": 1.498921531252563,
+      "grid_i128_o128_c4": 1.550237633753568,
+      "grid_i128_o128_c8": 1.6027569621801376,
+      "grid_i128_o256_c1": 2.9869518261402845,
+      "grid_i128_o256_c4": 3.0630521290004253,
+      "grid_i128_o256_c8": 3.14038655674085,
+      "grid_i128_o32_c1": 0.3773269490338862,
+      "grid_i128_o32_c4": 0.4188358914107084,
+      "grid_i128_o32_c8": 0.45504298713058233,
+      "grid_i2048_o128_c1": 1.6586666032671928,
+      "grid_i2048_o128_c4": 2.153193573001772,
+      "grid_i2048_o128_c8": 2.7591187772341073,
+      "grid_i2048_o256_c1": 3.185256856959313,
+      "grid_i2048_o256_c4": 3.735609294846654,
+      "grid_i2048_o256_c8": 4.395867718849331,
+      "grid_i2048_o32_c1": 0.5168273192830384,
+      "grid_i2048_o32_c4": 0.9684795001521707,
+      "grid_i2048_o32_c8": 1.5359948971308768,
+      "grid_i512_o128_c1": 1.5236538676545024,
+      "grid_i512_o128_c4": 1.6604069452732801,
+      "grid_i512_o128_c8": 1.844219976104796,
+      "grid_i512_o256_c1": 3.0237763789482415,
+      "grid_i512_o256_c4": 3.200832922011614,
+      "grid_i512_o256_c8": 3.42055684607476,
+      "grid_i512_o32_c1": 0.4038911466486752,
+      "grid_i512_o32_c4": 0.524125010240823,
+      "grid_i512_o32_c8": 0.6705598626285791
+    },
+    "setup_seconds": 69.36317851301283,
+    "shutdown_seconds": 1.9373943885,
+    "startup_seconds": 25.196195059
+  },
+  "physical_guard_safety": {
+    "cache_identified": false,
+    "joint_cleanup_seconds": 2.531739046,
+    "sampling": "run-balanced median; p95 generation quantile is safety heuristic, not coverage guarantee",
+    "schema": "maxopt-v3-lifecycle-v1",
+    "setup_seconds": 46.909136023,
+    "shutdown": {
+      "exploratory_run_bootstrap95": [
+        1.916203757,
+        1.952798831
+      ],
+      "generation": {
+        "maximum": 2.341891779,
+        "median": 1.95085191,
+        "minimum": 1.855599467,
+        "n": 121,
+        "p90": 1.981431106,
+        "p95": 1.991882598
+      },
+      "run_count": 18,
+      "run_medians": [
+        1.896847933,
+        1.916203757,
+        1.923976575,
+        1.938252392,
+        1.900359218,
+        1.901832337,
+        1.936536385,
+        1.909369293,
+        1.897627014,
+        1.9549370769999999,
+        1.9589677185,
+        1.956302456,
+        1.946267195,
+        1.9621894955,
+        1.954021008,
+        1.935838758,
+        1.948223014,
+        1.952798831
+      ],
+      "value": 1.9373943885
+    },
+    "shutdown_min_seconds": 1.855599467,
+    "shutdown_seconds": 1.9373943885,
+    "startup": {
+      "exploratory_run_bootstrap95": [
+        25.113103109,
+        25.270873313
+      ],
+      "generation": {
+        "maximum": 68.553800524,
+        "median": 25.1941184935,
+        "minimum": 24.966682917,
+        "n": 94,
+        "p90": 42.2200271852,
+        "p95": 49.10920536269999
+      },
+      "run_count": 9,
+      "run_medians": [
+        26.5364110575,
+        25.10557416,
+        25.1549373215,
+        25.2006597595,
+        25.5065847525,
+        25.196195059,
+        25.270873313,
+        25.113103109,
+        25.153061434
+      ],
+      "value": 25.196195059
+    },
+    "startup_max_seconds": 68.553800524,
+    "startup_min_seconds": 24.966682917,
+    "startup_safe_seconds": 49.10920536269999,
+    "startup_seconds": 25.196195059
+  },
+  "guard_margin_seconds": 5,
+  "fixed_guard_for_all_predictors": true,
+  "historical_predictor_bank": "HISTORICAL_MODELS.json",
+  "window_seconds": 1800,
+  "drain_seconds": 300,
+  "horizon_seconds": 2100,
+  "scenario_prices": {
+    "gpu_second": 0.001,
+    "startup_event": 0.002,
+    "shutdown_event": 0.001,
+    "api_input_token": 1e-06,
+    "api_output_token": 3e-06,
+    "offline_deadline_miss": 0.01
+  },
+  "p1_plus": "Every online and offline request completes at or before its row deadline.",
+  "historical_qualification": "Online timely rate >=99%, offline timely rate >=95%; retained separately as contract_feasible, not P1+.",
+  "scope": "Two previously observed Azure-arrival windows at fixed 0.50 load; inherited payload templates; not a prospective or new-prompt holdout."
+}

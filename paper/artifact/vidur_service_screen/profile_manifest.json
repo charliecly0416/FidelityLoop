@@ -1,0 +1,34 @@
+{
+  "schema": "fidelityloop-vidur-profile-v1",
+  "status": "COMPLETE",
+  "stage": "full",
+  "model": "Qwen/Qwen2.5-7B-Instruct",
+  "dtype": "float16",
+  "tensor_parallel_size": 1,
+  "pipeline_parallel_size": 1,
+  "protocol_sha256": "4ba480849a3378ef852df2b9cd8457bf504a80ba7d119697e0ed4be4949164db",
+  "audit": {
+    "mlp": {
+      "mlp": 323,
+      "prefill": 0,
+      "decode": 0
+    },
+    "attention": {
+      "mlp": 0,
+      "prefill": 537,
+      "decode": 224
+    }
+  },
+  "files": {
+    "mlp.csv": {
+      "sha256": "97b78bf77594793fa992323a30d7395e17eb6faf6c359e4d3f4423b9fac7017d"
+    },
+    "attention.csv": {
+      "sha256": "a61107dc564ae220748d299ad1e732463b6d4dd07d9190c0052fdc68ccec7b31"
+    }
+  },
+  "elapsed_s": 181.9095081849955,
+  "gpu_samples_fabricated": false,
+  "profiler_script_sha256": "7a20cc684c6f3a7631a3810479bcd86b49b790b417b8e89cd0c9c134526ab73d",
+  "source_lock_sha256": "f10de7af085b1383e8905e19c6d623c51f7e643a7df61cd613cda49c6ef0e08e"
+}

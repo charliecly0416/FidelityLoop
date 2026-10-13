@@ -1,0 +1,3 @@
+model,agreement,denominator,false_accepts,false_rejects,actual_feasible,actual_infeasible,occupied_absolute_error_gpu_seconds,scenario_cost_absolute_error,occupied_trajectory_l1_gpu_seconds,target_disagreement_fraction
+S14,4,8,4,0,4,4,423.35071462137466,0.41054433962137443,1049.5262395178747,0.36839285714285713
+L14,8,8,0,0,4,4,68.45908128612518,0.06679845628612519,338.1540493137498,0.12738095238095237

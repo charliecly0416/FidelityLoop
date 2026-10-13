@@ -1,0 +1,5 @@
+run_id,risk_active_ticks,target_raise_ticks,reservation_ticks,queued_offline_min_slack_seconds,offline_dispatches_while_reservation
+hysteresis_u8_d0_c60__guard__bridge_locked_test_recovery_v1__r1,47,1,47,13,4
+hysteresis_u8_d0_c60__guard__bridge_locked_test_recovery_v1__r2,0,0,0,126,0
+hysteresis_u8_d0_c60__guard__bridge_locked_test_steady_v1__r1,0,0,0,129,0
+hysteresis_u8_d0_c60__guard__bridge_locked_test_steady_v1__r2,47,1,47,13,1

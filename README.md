@@ -1,4 +1,9 @@
-# FidelityLoop paired traces
+# FidelityLoop research artifact
+
+The release includes the [paper](paper/main.pdf), [supplement](paper/supplement.pdf),
+lightweight [result checkers](paper/README.md), and an optional [CPU native replay](cpu_replay/README.md).
+The CPU entry point regenerates the existing 12 Vidur-backed policy predictions;
+these retrospective predictions remain separate from the original corpus below.
 
 This corpus pairs frozen replay predictions with recorded physical deployments from seven campaigns. It supports inspection and recomputation of request timing, deadline feasibility, control targets, and scenario resource/cost accounting. It is a release of existing experiments, not an additional experiment or a workload-generalization benchmark.
 
@@ -41,7 +46,7 @@ The projection deliberately removes prompt text/token IDs, generated answers, so
 
 Costs use the declared synthetic-API ledger, not provider bills or physical energy. Runtime verification is inherited from the accepted historical runs; the portable checker does not re-prove GPU release from OS monitors. E3's windows used separate matched hosts; its external Git anchor followed execution start. The corpus makes those deployments inspectable without isolating an environment-change causal effect.
 
-Code and accompanying documentation use the included MIT license. Model weights, original workloads, prompts, and third-party source text are not redistributed. Cite the FidelityLoop paper when using these measurements.
+Code and accompanying documentation use the included MIT license. The paired corpus omits model weights, original workloads and prompts. The optional CPU runner bundles pinned third-party source under its included licenses. Cite the FidelityLoop paper when using these measurements.
 
 ## SGLang transfer case study (E4)
 

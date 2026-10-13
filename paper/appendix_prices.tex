@@ -1,0 +1,25 @@
+\section{Price sensitivity details}
+We reprice H+guard and all1 over 27 window--GPU--API price combinations,
+keeping their event streams fixed. At the reference prices the
+three window savings are 21.96\%, 48.19\%, and 58.08\%; the sign can reverse when
+GPU capacity is cheap and API use is expensive. The only negative cell is steady
+at GPU multiplier 0.5 and API multiplier 2.0, where savings are $-39.59\%$. The
+steady break-even API multiplier at half-price GPUs is 1.004. Recovery and burst
+remain positive across the tested grid, but this is a finite sensitivity analysis,
+not a provider billing forecast.
+
+\begin{table}[t]
+\centering
+\small
+\caption{Price-grid savings (percent) for API multipliers 0.5/1.0/2.0. Rows are
+GPU multipliers 0.5/1.0/2.0; the final column is the break-even API multiplier.}
+\label{tab:prices}
+\par\vspace{4pt}
+\begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}llrrr r@{}}
+\toprule
+Window & GPU & API .5 & API 1 & API 2 & break-even\\
+\midrule
+\input{generated/price_rows.tex}
+\end{tabular*}
+\end{table}
+

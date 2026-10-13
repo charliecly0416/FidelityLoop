@@ -1,0 +1,130 @@
+\section{Retrospective lifecycle-trajectory diagnosis}
+\label{sec:v5-trajectories}
+This analysis reuses all nine accepted fixed-H physical runs and the twelve
+unique O/C/C30/E predictions from the frozen V3 evaluation: three windows,
+three physical repeats per window, and four model comparisons per run.
+The resulting 36 pairings are not new experiments or independent prediction
+samples. We neither refit a model nor replace the original M1 endpoint.
+The artifact binds the consumed records to their original acceptance hashes
+and rechecks all 44,100 decisions across the 21 unique traces.
+
+\subsection{Definitions and event alignment}
+Time is relative to each window start, on $[0,2100)$ seconds.
+Physical occupied capacity counts each generation from launch until verified
+release, clipped to that interval; simulated capacity includes every non-off
+state, including stopping. Let $n_m(t)$ and $n_r(t)$ be predicted and observed
+occupied GPU counts. For model $m$ and repeat $r$, we distinguish
+\begin{align}
+A_{m,r} &= \left|\int_0^{2100}(n_m(t)-n_r(t))\,dt\right|,\\
+T_{m,r} &= \int_0^{2100}|n_m(t)-n_r(t)|\,dt.
+\end{align}
+Both have units GPU\,$\cdot$\,s. The first is the existing total-occupation
+absolute error; the second measures trajectory discrepancy without signed
+temporal cancellation. We integrate the piecewise-constant records exactly,
+without substituting one-second samples for continuous occupation.
+Table~\ref{tab:v5-groups} reports equal-repeat means within each window;
+Table~\ref{tab:v5-pairs} preserves every pairing.
+
+Targets are compared at all 2,100 one-second decision ticks. The first
+state-count difference compares the decision-time counts of active, starting,
+draining/stopping, and off devices; it is not the first difference of all
+hidden system state. Queue and running observations precede each decision.
+Routes are compared over all arrival IDs as local, synthetic API, or
+undispatched. For a request whose final routes differ, the recorded first
+dispatch evidence is a retrospective locator, not a time when both eventual
+routes were already known. Route differences need not follow target differences.
+
+\subsection{An endpoint discrepancy at the cooldown boundary}
+The frozen C/C30 configurations differ only in the startup endpoint.
+Their first common starts and subsequent divergences are shown in
+Table~\ref{tab:v5-endpoints}. C30 becomes ready after 30 s, but targets stay
+equal until the 60 s cooldown expires. At that tick C remains starting;
+its queue-plus-running pressure exceeds the strict up-threshold of eight,
+and its target rises from one to two. C30 is ready with lower pressure and
+keeps target one. Both controllers have identical target/cooldown state
+before this decision; swapping the observed inputs swaps this one-step action.
+This diagnoses the frozen simulator contrast, not a new physical intervention
+or a replay of an alternative future trajectory. At the corresponding tick,
+each of the nine physical repeats has one active device, no starting device,
+and target one; that is an observational anchor.
+H does not read the predictor's startup parameter, and the guard's separately
+frozen safety-delay parameters are not intervened on here.
+
+\begin{table*}[t]
+\centering
+\small
+\caption{First C/C30 startup contrast in all three windows. Times are seconds
+from window start; pressure is queued plus locally running requests. The first
+target difference occurs at common start plus 60 s in each window.}
+\label{tab:v5-endpoints}
+\par\vspace{4pt}
+\begin{tabular*}{0.92\linewidth}{@{\extracolsep{\fill}}lrrrrr@{}}
+\toprule
+Window & Common start & C30 ready & C ready & First target difference & Pressure C/C30\\
+\midrule
+\input{generated/v5_endpoint_rows.tex}
+\end{tabular*}
+\end{table*}
+
+\subsection{Counterexamples and temporal cancellation}
+The six burst/recovery physical repeats first differ from all four models
+in target at $t=3$ s, before any window restart. At that tick the models
+observe no local running request while the physical controllers still do;
+completion observation has crossed a decision tick. These differences cannot
+be attributed to window-restart timing. Conversely, steady repeats 1 and 3 have exactly
+the same 2,100 targets as C30 despite 154 and 152 state-count difference
+ticks, 48 and 45 route differences, and nonzero occupied-resource errors.
+Readiness error therefore does not necessarily change a target.
+
+The steady E total MAE is 66.34 GPU\,$\cdot$\,s, close to C30's 67.18,
+but its mean trajectory error is 1,390.50 versus 114.32 GPU\,$\cdot$\,s.
+The same E trace disagrees on 66.73\% of target ticks on average.
+Accurate total occupation can thus hide substantial temporal mismatch;
+this diagnostic does not retroactively select a different model or alter M1.
+All C30 pairings retain nonzero occupation error. The largest C30 target
+residual is burst repeat 2 (637/2100 ticks); its longest mismatch spans
+$[1020,1144)$ s. This example is selected by an explicitly post-hoc maximum
+residual rule after the full audit, alongside all no-target-change cases.
+The artifact exports every window's first common-start segment for all models
+and repeats, as well as the complete startup and unmatched-pair counts.
+
+\begin{table*}[t]
+\centering
+\small
+\caption{All window/model means over three physical repeats. Total MAE is
+mean $A_{m,r}$; trajectory error is mean $T_{m,r}$, both in GPU\,$\cdot$\,s.
+Target disagreement uses 2,100 ticks per pair; route disagreement uses all
+arrival IDs in that window, including undispatched requests.}
+\label{tab:v5-groups}
+\par\vspace{4pt}
+\begin{tabular*}{0.92\linewidth}{@{\extracolsep{\fill}}llrrrr@{}}
+\toprule
+Window & Model & Total MAE & Trajectory error & Target diff. (\%) & Route diff. (\%)\\
+\midrule
+\input{generated/v5_trajectory_rows.tex}
+\end{tabular*}
+\end{table*}
+
+\begin{table*}[t]
+\centering
+\small
+\caption{All 36 model/physical-repeat pairings. Errors are GPU\,$\cdot$\,s;
+target differences are counts out of 2,100 ticks. A dash means targets never
+differ, not a missing record. Route counts retain the full arrival denominator.
+The twelve unique predictions are reused across the nine physical runs.}
+\label{tab:v5-pairs}
+\par\vspace{4pt}
+\begin{tabular*}{0.92\linewidth}{@{\extracolsep{\fill}}llrrrrrr@{}}
+\toprule
+Window & Model & Rep. & Total error $A$ & Trajectory $T$ & Target diff. & First diff. (s) & Route diff./arrivals\\
+\midrule
+\input{generated/v5_pairs_rows.tex}
+\end{tabular*}
+\end{table*}
+
+These observations support checking lifecycle states, actions, and resource
+trajectories alongside matched-service fit. Three controlled windows and nine
+repeats do not establish a universal startup/cooldown law, randomized physical
+causality, or a general guard guarantee. Software-observed readiness is not a
+GPU-kernel timestamp, and the synthetic API retains its original quality and
+billing limitations.

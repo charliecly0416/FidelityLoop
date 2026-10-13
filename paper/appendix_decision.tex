@@ -1,0 +1,92 @@
+\section{Consequences for deployment choices}
+\label{app:decision}
+The preceding comparisons measure classification and cost-prediction errors.
+Here we retrospectively apply the same deployment-choice rule to each
+campaign's recorded non-anchor candidate pool: require predicted P1+ in
+\emph{every} window, then select the policy with the lowest mean predicted
+window cost. Windows receive equal weight. Archived policy ID breaks exact
+cost ties at the released data precision; all tied minimizers remain in the
+artifact. Physical results do not enter this selection rule.
+
+For evaluation, a selected policy is feasible only if every recorded physical
+repeat passes P1+. Its observed cost first averages repeats within each window,
+then averages windows equally. Let $c_*$ be the lowest such observed mean
+among candidates feasible in all their runs. We report the cost gap
+$100(c_{\rm selected}/c_*-1)$ only for feasible selections. This is a
+comparison within the tested pool, not a global optimum; all2 capacity anchors
+are excluded. Each campaign retains its own workload, runtime and price contract.
+
+\begin{table*}[t]
+\centering
+\small
+\caption{Retrospective policy choices from the original frozen predictions.
+Costs are scenario USD; a dash excludes an infeasible selection from the
+feasible-cost comparison. P1+ counts repeated physical executions, not independent
+choices. $\dagger$ marks a prediction-cost tie between H and H+guard, resolved
+by archived ID to H. E5's two tied policies are physically feasible; E6's H
+fails whereas H+guard passes.}
+\label{tab:decisionutility}
+\par\vspace{4pt}
+\begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}llllrr@{}}
+\toprule
+Study & Replay & Selected policy & Physical P1+ & Observed cost & Feasible cost gap (\%)\\
+\midrule
+\input{artifact/decision_utility/table_rows.tex}
+\end{tabular*}
+\end{table*}
+
+Table~\ref{tab:decisionutility} makes the practical consequences explicit.
+E2's C30 has a unique cost-minimizing candidate that fails every physical
+repeat. In E4 and E5, C excludes H+guard, the lowest-cost feasible policy
+in those measured pools; its chosen policies cost 58.95\% and 94.13\% more,
+respectively. C30 selects H+guard in both. These are opportunity costs under
+the declared synthetic-API ledger, not commercial savings attributed to a
+new optimizer. E5's C$_{\rm sg}$ ties H and H+guard in prediction; their
+0.31\% observed cost difference is descriptive and does not establish a
+reliable ranking. E6's S14 also ties these policies, so a failing choice is
+possible under the stated rule rather than inevitable under every tie-break.
+
+The candidate pools contain five, six, six, four and two policies in E2--E6,
+respectively. E3 therefore compares its six physically evaluated checkpoints,
+not all 90 screened candidates. This reanalysis adds no physical run or
+prospective selection test and does not choose a universally preferred replay
+model. The source bundle's \path{artifact/decision_utility/} reconstructs the
+choices and table from reduced per-record metrics; the paired corpus provides
+the underlying request and accounting records.
+
+
+\subsection{Price robustness of deployment choices}
+We reprice the same recorded events at GPU and synthetic-API price
+multipliers in $\{0.5,1,2\}\times\{0.5,1,2\}$, keeping startup, shutdown,
+and deadline-miss charges unchanged. At each point, we repeat the prediction-only
+selection and recompute the lowest-cost physically feasible comparator within
+the same pool. Table~\ref{tab:decisionprice} summarizes all 108 choices; ranges
+are grid extrema, not confidence intervals or new executions.
+
+\begin{table*}[t]
+\centering
+\small
+\caption{Deployment-choice sensitivity over all nine price combinations.
+Feasible counts refer to price combinations whose selected policy passes all
+recorded physical repeats. $\dagger$ retains the H/H+guard prediction tie:
+ID order selects H, but H+guard is also a minimizer.}
+\label{tab:decisionprice}
+\par\vspace{4pt}
+\begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}llllr@{}}
+\toprule
+Study & Replay & Selected policies & Feasible price cells & Cost gap range (\%)\\
+\midrule
+\input{artifact/decision_price/table_rows.tex}
+\end{tabular*}
+\end{table*}
+
+E2's C30 uniquely selects the failing C-2 throughout the grid. E4 and E5's C
+selections remain feasible but costlier than the tested feasible minimum.
+E2's C and both E3 predictors change their choices with prices, confirming that
+the analysis reselects policies rather than simply repricing a fixed choice.
+The E5 and E6 ties persist throughout: E5's small H/guard cost difference does
+not establish a reliable ranking, and E6's failing choice depends on the
+tie-break. The source bundle's \path{artifact/decision_price/} retains every
+price point, source-bound cost component, and selection, and exactly recovers
+the nominal-price results above. Fixed-event repricing does not model policies
+retrained or redeployed under new prices.

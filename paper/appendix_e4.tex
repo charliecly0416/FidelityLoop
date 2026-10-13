@@ -1,0 +1,177 @@
+\section{Transfer to SGLang}
+\label{app:e4}
+E4 evaluates the shared policy and accounting contract on a second serving
+stack. It reuses H, H+guard, two E2 checkpoints, and two E3 checkpoints
+(Table~\ref{tab:e4identities}), with no retraining. Among E3's historically
+accepted and rejected candidates under C, the lowest mean physical-cost
+candidate in each group supplies the two representatives. This fixed,
+nonrandom cohort tests transfer of existing policies and predictions.
+
+\begin{table}[t]
+\centering
+\small
+\caption{Frozen PPO identities reused in E4. C-1/C-2 are the E2 labels;
+N2/N4 are the E3 labels. Rule parameters and guard safety estimates are unchanged.}
+\label{tab:e4identities}
+\setlength{\tabcolsep}{3pt}
+\par\vspace{4pt}
+\begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}lll@{}}
+\toprule
+Label & Training environment & Seed / checkpoint\\
+\midrule
+C-1 & C & 101 / 40\\
+C-2 & C & 103 / 100\\
+N2 & C30 & 105 / 35\\
+N4 & C30 & 102 / 80\\
+\bottomrule
+\end{tabular*}
+\end{table}
+
+\paragraph{Backend and execution.}
+The deployment uses Qwen2.5-7B-Instruct on two A100 80GB PCIe GPUs,
+one independent TP1/PP1 SGLang 0.4.8 instance per GPU, FP16, model length
+4096, static-memory fraction 0.8, chunked-prefill size and maximum prefill
+tokens 16,384, maximum running requests 1,024, and four local slots.
+CUDA graphs and radix caching are disabled. SGLang uses PyTorch 2.7.1 and
+Transformers 4.52.3; the CPU policy controller retains PyTorch 2.7.0.
+Native token-ID input avoids retokenizing the frozen workloads. A recorded
+compatibility fix supplies model EOS metadata when the tokenizer is not
+initialized, preserving minimum-output-token masking. The fix, input-token
+identities, output-budget checks, readiness probes, and verified process
+release are bound in the source and execution manifests.
+
+Recovery and steady reuse the E2 workloads: respectively 358 and 944
+online arrivals, plus 120 offline arrivals per window. Each of six arms
+runs twice per window, with one all2 anchor per window: 24 policy runs
+and two anchors. The observation interval remains 2100\,s, with the same
+deadline, routing, guard, and scenario-price definitions. Separate runtime
+identities are retained; the study is a transfer of the full serving stack,
+not an isolated engine-performance comparison.
+
+\paragraph{Startup measurement and frozen predictions.}
+Twenty calibration cycles launch the second instance while the first
+serves four concurrent 256-input/256-output-token background requests.
+Timing runs from launch request to parent-verified readiness. All 20 cycles
+complete, with median 27.5675401645\,s and range 26.713--29.165\,s;
+setup timing is recorded separately. C$_{\rm sg}$ substitutes that unrounded
+median for C's 69.219185665\,s startup proxy. C30 uses 30\,s.
+All three share the inherited service lookup, 7.059\,s shutdown proxy,
+policy identities, and accounting rules; the guard's safety estimates
+remain unchanged. This calibrates startup, not the full engine service model.
+
+Design and compatibility checks precede calibration; the GPU-side design
+check is local. The 42 predictions (three models, seven policies including
+all2, two windows) and measured startup parameter are frozen and independently
+accepted on CPU before the formal runs. Physical repeats reuse the same
+prediction, so the 24 comparisons per model represent 12 unique policy/window
+predictions rather than 24 independent samples.
+
+\paragraph{Results.}
+All 26 final runs are technically valid. Both all2 anchors meet every deadline,
+occupy 4200 GPU seconds, and cost 4.2000 scenario USD each. All online
+requests are timely. H leaves one offline job unfinished in each steady
+repeat; all other policy runs complete all work on time.
+Tables~\ref{tab:e4costs} and~\ref{tab:e4resources} retain both repeats of
+every policy/window pair. P1+ failures remain in the agreement and cost-error
+denominators. Mean absolute error uses total scenario cost, including the
+offline-miss penalty, consistently with the main paper.
+
+\begin{table*}[t]
+\centering
+\small
+\caption{E4 predicted and observed total window costs in scenario USD.
+R/S denote recovery/steady. A dagger marks predicted or observed P1+ failure;
+unmarked entries satisfy P1+. Both all2 anchors cost 4.2000 and satisfy P1+.}
+\label{tab:e4costs}
+\setlength{\tabcolsep}{4pt}
+\par\vspace{4pt}
+\begin{tabular*}{0.96\linewidth}{@{\extracolsep{\fill}}llrrrrr@{}}
+\toprule
+Arm & Window & C & C30 & C$_{\rm sg}$ & Physical 1 & Physical 2\\
+\midrule
+\input{generated/e4_cost_rows.tex}
+\end{tabular*}
+\end{table*}
+
+\begin{table*}[t]
+\centering
+\small
+\caption{E4 physical resource use and offline on-time counts, shown for both
+repeats. All online arrivals are on time; each offline denominator is 120.
+H's two misses are unfinished jobs at cutoff. Occupancy covers the registered
+window, including startup, draining, and stopping until verified release.}
+\label{tab:e4resources}
+\setlength{\tabcolsep}{4pt}
+\par\vspace{4pt}
+\begin{tabular*}{0.96\linewidth}{@{\extracolsep{\fill}}llrrrr@{}}
+\toprule
+Arm & Window & GPU seconds 1 & GPU seconds 2 & Offline 1 & Offline 2\\
+\midrule
+\input{generated/e4_resource_rows.tex}
+\end{tabular*}
+\end{table*}
+
+C falsely rejects eight feasible runs: both steady H+guard runs, all four
+C-2 runs, and both steady N4 runs. At arm level, requiring P1+ in all four
+executions, C accepts two feasible arms and rejects four, three of which
+are feasible. C30 and C$_{\rm sg}$ each accept the five feasible arms and
+reject H. Thus local startup calibration and C30 give identical feasibility
+judgments here. Their total-cost MAEs are 0.0427 and 0.0468, respectively,
+versus 0.5420 for C. Excluding deadline penalties from both prediction and
+observation gives operating-cost MAEs of 0.0427, 0.0468, and 0.3411 in
+the same order. The cost-error difference is therefore not solely a
+penalty effect.
+
+H+guard passes all four runs and averages 920.795 occupied GPU seconds,
+78.08\% below the all2 anchors; individual-run reductions span
+75.21--80.90\%. These are window resource savings under the synthetic-API
+contract. H's low occupancy alone would hide its two deadline failures.
+
+Across valid formal runs, 255 of 256 ordinary in-window launches reach
+readiness. Their median is 28.052\,s, p95 43.094\,s, and range
+26.112--94.872\,s. The remaining launch is stopped by H+guard after
+24.002\,s before readiness; its occupancy is charged, and it is excluded
+from completed-startup statistics. Initial setup and invalid attempts
+are excluded from this distribution. The calibration captures the typical
+startup scale, while the physical record preserves its variability.
+
+\paragraph{Retrospective startup sensitivity.}
+We vary only C$_{\rm sg}$'s startup proxy over 18 values from 20 to
+69.219\,s, keeping policies and all other replay parameters fixed.
+Against the same 24 physical outcomes, all nine sweep values from
+20 through 41\,s retain 24/24 agreement; the 42\,s test gives 22/24
+(Table~\ref{tab:e4sensitivity}). At C's original startup value, replay
+reproduces its eight false rejections. Exact agreement is therefore
+not specific to the measured median or the 30\,s setting.
+The source bundle includes the full grid and per-run comparisons.
+
+\begin{table}[t]
+\centering
+\small
+\caption{Selected values from the retrospective CPU sweep, plus the
+measured-median reference (marked $*$). Startup values are rounded for
+display. Each row reuses the same 24 E4 policy runs; the sweep tests
+discrete values, not a continuous tolerance interval.}
+\label{tab:e4sensitivity}
+\setlength{\tabcolsep}{3pt}
+\par\vspace{4pt}
+\begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}rrrr@{}}
+\toprule
+Startup (s) & Agreement & \shortstack{False\\accepts} & \shortstack{False\\rejects}\\
+\midrule
+\input{generated/e4_startup_sensitivity_rows.tex}
+\end{tabular*}
+\end{table}
+
+\paragraph{Technical attempts and verification.}
+There are 28 attempts for 26 cells. C-1's two recovery executions each
+encounter a control-loop timeout on their first attempt and are repeated
+once with unchanged configurations under recorded authorization. The
+historical causes remain unresolved; the failed attempts are retained.
+An additional environment-retry provision was recorded during execution
+but never used. H's two deadline-violating runs are not retried.
+The CPU receiver verifies all file manifests and recomputes request
+outcomes and resource/cost ledgers using the original frozen analyzer;
+all 26 ledgers agree with the GPU return. The supplement's
+\path{E4_RESULT_SPECIFICATION.json} records the source bindings, parameters,
+and result definitions.

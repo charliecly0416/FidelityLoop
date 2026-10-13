@@ -1,0 +1,155 @@
+\section{Validation across arrivals and model deployments}
+\label{app:e5e6}
+E5 holds the E4 calibration fixed while changing arrivals; E6 remeasures
+lifecycle timing for a 14B deployment. Both use the same 2100\,s window,
+deadlines, four local slots per GPU, and scenario ledger. The original predictions precede
+physical execution, and repeats share a prediction; the additional 30\,s
+contrast below is retrospective. Table~\ref{tab:e5e6}
+reports policy cells, excluding full-capacity anchors.
+
+\subsection{Fixed calibration on additional arrival windows}
+E5 retains Qwen2.5-7B-Instruct/SGLang 0.4.8 and E4's backend settings,
+including native token input. It reuses H, H+guard, C-1, and C-2
+without policy search or PPO retraining. Each arm runs twice on three
+constructed windows, plus one all2 anchor per window: 27 cells,
+24 of which are policy cells. C, C30, and C$_{\rm sg}$ retain startup
+values of 69.219, 30, and 27.568\,s and the inherited service lookup.
+There are 12 unique policy/window predictions per model.
+
+The windows are steady, middle-burst, and late-burst, with 1074, 389,
+and 351 online arrivals, respectively, plus 120 offline arrivals each.
+They use the existing BurstGPT-derived source and fixed thinning pipeline.
+Their source rows do not overlap the canonical physical-evaluation windows
+or the training/validation windows of these PPO checkpoints. Earlier
+full-stream CPU replay did include these source times, and the prompt
+corpus is reused: this tests additional constructed arrivals, not an
+independent data source or prompt holdout.
+
+All 27 cells pass P1+. C falsely rejects ten policy runs (five distinct
+policy/window predictions), C30 rejects two (the two steady H repeats),
+and C$_{\rm sg}$ rejects none. False-accept rates are undefined because
+there are no physically infeasible cells. The measured-startup model has
+slightly higher total-occupation MAE than C30 (96.92 versus 94.34 GPU seconds)
+but lower cost and trajectory errors overall. The trajectory improvement is
+concentrated in steady; the two burst windows have slightly higher trajectory
+errors than C30. Per-window and per-cell values accompany the source bundle.
+
+No E5 guard run has a risk-active tick, target raise, or reservation;
+minimum queued-offline slack is 152--153\,s. These runs test fixed-parameter
+prediction transfer, not an additional guard rescue.
+
+\subsection{Startup contrast in a 14B deployment}
+E6 uses Qwen2.5-14B-Instruct with vLLM 0.9.0, PyTorch 2.7.0+cu126,
+and Transformers 4.51.1 on two A100 80GB GPUs. Each GPU hosts an independent
+TP1 instance, using the main paper's FP16, eager execution, memory,
+model-length, batching, and four-slot settings. The recovery and steady
+input files are byte-identical to E4's locked inputs. H and H+guard each
+run twice per window, alongside two all2 anchors per window: 12 cells,
+with eight policy cells and four unique policy/window predictions per model.
+
+Calibration uses synthetic development requests before formal prediction
+or execution. The service grid crosses input lengths 128/512/2048,
+output lengths 32/128/256, and concurrency 1/4, plus the 256/256,
+concurrency-four offline shape. Each shape has three repeats per GPU;
+the lookup takes each GPU's median batch-maximum parent-clock duration,
+then the median across the two GPUs. The offline shape measures 5.844\,s.
+Twenty scale-out cycles (ten per GPU) launch one instance while the other
+has four admitted 256/256-token background requests. Launch-to-ready
+median is 46.067\,s, range 45.814--52.352\,s. Setup is separately 48.486\,s
+(maximum of two initial launches); median shutdown is 1.980\,s.
+
+S14 reuses the historical 69.219\,s startup proxy; L14 uses the new
+46.067\,s median. Their service, setup, shutdown, policy, and guard settings
+are identical. The guard uses the measured service lookup and a separately
+frozen 47.765\,s startup safety estimate (linear p95 of the 20 cycles),
+with the 52.352\,s maximum for overdue-start handling and the existing 5\,s
+margin. These sampling estimates carry no coverage guarantee. The source
+bundle records the unrounded parameters and complete service lookup.
+
+All 12 cells are technically valid and all four anchors pass P1+.
+H leaves seven offline requests unfinished in each recovery repeat and
+one in each steady repeat; all four H+guard runs satisfy P1+.
+S14 falsely accepts all four failed H runs. L14 correctly classifies both
+arms in every repeat, while lowering occupied-resource MAE from 423.35
+to 68.46 and trajectory L1 from 1049.53 to 338.15 GPU seconds.
+This single-field predictor contrast demonstrates the value of local startup
+measurement given the shared 14B service calibration. It does not compare
+reusing versus remeasuring the service curve, or isolate a causal effect of
+model size, engine, or hardware.
+
+Two guarded runs (one per window) contain 47 risk-active/reservation ticks
+and one target raise each; the other two have no guard activity. The active
+runs have minimum queued-offline slack of 13\,s and four/one reserved offline
+dispatches in recovery/steady; inactive runs have minimum slack of 126/129\,s.
+Thus the observed state trajectory, rather than the window label alone,
+determines activation.
+
+\paragraph{A fixed 30-second contrast.}
+To compare local measurement with the existing simple startup assumption,
+we retrospectively replay T30-14: the same 14B service, setup, shutdown,
+and guard parameters, with startup set to 30\,s. This adds four policy/window
+predictions reused across the eight existing physical runs, plus two separate
+all2 predictions; it adds no GPU run or parameter search. S14 and L14 reproduce
+their original frozen predictions. T30-14 agrees on 6/8 policy runs, with two
+false accepts (both steady H repeats) and no false rejects. Its occupied MAE,
+cost MAE, and trajectory L1 are 269.12 GPU seconds, 0.2609 scenario USD, and
+578.92 GPU seconds, between S14 and L14 in Table~\ref{tab:e5e6}. All2 is
+unchanged across the three models. This diagnoses the existing deployments;
+T30-14 was not frozen before those physical runs.
+
+\paragraph{From startup to tail deadlines.}
+All three H replays first restart at 195\,s in recovery and 138\,s in steady.
+At cooldown expiry (255/198\,s), S14 is still starting: its queue-plus-running
+pressure is 13/14, so H raises the target to two GPUs. L14 is already serving;
+pressure is 5/8 and the target remains one. T30-14 has pressure one in both
+windows. These decisions alter later expansion and shutdown timing.
+
+In recovery, physical H releases its last GPU near 1692\,s, leaving seven
+later offline arrivals (1695--1785\,s) below H's scale-out threshold of nine.
+They remain undispatched through the 2100\,s cutoff. In steady, the final
+1785\,s offline arrival is similarly stranded after scale-down near 1780\,s.
+L14 predicts the same failed request IDs in both repeats of each window.
+S14's later shutdown lets it finish those tail requests; T30-14 leaves six
+in recovery but finishes the last steady request, explaining its false accepts.
+
+L14's guarded replay restarts capacity for the stranded queues at 1936\,s
+in recovery and 2026\,s in steady. The two risk-active physical guard runs
+trigger at those same ticks and complete the tail work. The other two guarded
+runs finish without risk activation because their earlier trajectories differ.
+Some physical-state mismatches also precede the first restart, involving
+service or release timing. Thus the fixed-field replay contrast identifies
+a startup feedback path; it does not attribute every physical discrepancy
+to startup, or every guarded success to a guard raise. Exact event and request
+chains accompany the reduced diagnostic in \path{artifact/e6_diagnostic/}.
+
+\begin{table*}[t]
+\centering
+\small
+\caption{E5/E6 policy-cell results. FA/FR denote false accepts/rejects, divided
+by physically infeasible/feasible cells; a dash denotes an empty denominator.
+Resource errors are GPU seconds and total-cost MAE is scenario USD, including
+deadline penalties. Means weight windows equally. Repeats share predictions.}
+\label{tab:e5e6}
+\par\vspace{4pt}
+\begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}llrrrrrr@{}}
+\toprule
+Study & Replay & Agreement & FA & FR & Cost MAE & Occupied MAE & Trajectory L1\\
+\midrule
+\input{generated/e5e6_rows.tex}
+\end{tabular*}
+\end{table*}
+
+\paragraph{Verification and reduced evidence.}
+Both campaigns finish without skipped cells or technical retries. All four
+E6 deadline failures remain included. CPU reanalysis reproduces the sealed
+accounting and analysis files. E6 required a recorded identity-parser
+adaptation for distribution metadata \texttt{2.7.0} versus runtime
+\texttt{2.7.0+cu126}; CUDA and source identities remained checked. A prepared
+external clock-recovery extension was not triggered in either campaign.
+The source bundle's \path{artifact/e5_e6/} contains per-cell comparisons,
+per-window summaries, guard diagnostics, and E6 calibration parameters;
+\texttt{python verify.py} recomputes Table~\ref{tab:e5e6} from these reduced
+comparisons. This verifies summary aggregation, not raw GPU execution.
+The full machine archives remain separately retained. E5/E6 request and
+lifecycle projections are included in the expanded paired-trace corpus;
+the retrospective T30-14 diagnostic is separate from its frozen predictions.

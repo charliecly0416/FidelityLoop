@@ -1,0 +1,281 @@
+{
+  "summary": {
+    "view": {
+      "name": "cutoff_diagnostic",
+      "horizon": 2.0,
+      "relative_deadline_seconds": 60.0
+    },
+    "mapping": {
+      "all_native_requests": 32,
+      "included_arrivals": 20,
+      "excluded_at_or_after_cutoff": 12,
+      "future_completions_redacted": 3
+    },
+    "request_metrics": {
+      "populations": {
+        "online": {
+          "arrivals": 20,
+          "completed": 17,
+          "on_time": 17,
+          "late": 0,
+          "unfinished": 3,
+          "not_on_time": 3,
+          "on_time_rate": 0.85
+        },
+        "offline": {
+          "arrivals": 0,
+          "completed": 0,
+          "on_time": 0,
+          "late": 0,
+          "unfinished": 0,
+          "not_on_time": 0,
+          "on_time_rate": null
+        }
+      },
+      "unfinished": 3,
+      "completed": 17,
+      "late": 0,
+      "P1plus": false,
+      "historical_P1": false,
+      "post_horizon_completions": 0,
+      "horizon_seconds": 2.0
+    },
+    "P1plus_applicable": false,
+    "P1plus_note": "Original paper requires 120 offline requests; this online-only demo is ineligible. False is not a failed policy test.",
+    "independent_tally": {
+      "arrivals": 20,
+      "completed": 17,
+      "on_time": 17,
+      "late": 0,
+      "unfinished": 3
+    },
+    "agreement": true,
+    "scope": "simulated request-output interoperability only",
+    "lifecycle_occupied_seconds": null,
+    "scenario_cost": null
+  },
+  "rows": [
+    {
+      "request_id": "0",
+      "job_type": "online",
+      "arrival_s": 0.0,
+      "deadline_s": 60.0,
+      "input_tokens": 128,
+      "max_output_tokens": 32
+    },
+    {
+      "request_id": "1",
+      "job_type": "online",
+      "arrival_s": 0.1,
+      "deadline_s": 60.1,
+      "input_tokens": 128,
+      "max_output_tokens": 32
+    },
+    {
+      "request_id": "2",
+      "job_type": "online",
+      "arrival_s": 0.2,
+      "deadline_s": 60.2,
+      "input_tokens": 128,
+      "max_output_tokens": 32
+    },
+    {
+      "request_id": "3",
+      "job_type": "online",
+      "arrival_s": 0.3,
+      "deadline_s": 60.3,
+      "input_tokens": 128,
+      "max_output_tokens": 32
+    },
+    {
+      "request_id": "4",
+      "job_type": "online",
+      "arrival_s": 0.4,
+      "deadline_s": 60.4,
+      "input_tokens": 128,
+      "max_output_tokens": 32
+    },
+    {
+      "request_id": "5",
+      "job_type": "online",
+      "arrival_s": 0.5,
+      "deadline_s": 60.5,
+      "input_tokens": 128,
+      "max_output_tokens": 32
+    },
+    {
+      "request_id": "6",
+      "job_type": "online",
+      "arrival_s": 0.6,
+      "deadline_s": 60.6,
+      "input_tokens": 128,
+      "max_output_tokens": 32
+    },
+    {
+      "request_id": "7",
+      "job_type": "online",
+      "arrival_s": 0.7,
+      "deadline_s": 60.7,
+      "input_tokens": 128,
+      "max_output_tokens": 32
+    },
+    {
+      "request_id": "8",
+      "job_type": "online",
+      "arrival_s": 0.8,
+      "deadline_s": 60.8,
+      "input_tokens": 128,
+      "max_output_tokens": 32
+    },
+    {
+      "request_id": "9",
+      "job_type": "online",
+      "arrival_s": 0.9,
+      "deadline_s": 60.9,
+      "input_tokens": 128,
+      "max_output_tokens": 32
+    },
+    {
+      "request_id": "10",
+      "job_type": "online",
+      "arrival_s": 1.0,
+      "deadline_s": 61.0,
+      "input_tokens": 128,
+      "max_output_tokens": 32
+    },
+    {
+      "request_id": "11",
+      "job_type": "online",
+      "arrival_s": 1.1,
+      "deadline_s": 61.1,
+      "input_tokens": 128,
+      "max_output_tokens": 32
+    },
+    {
+      "request_id": "12",
+      "job_type": "online",
+      "arrival_s": 1.2,
+      "deadline_s": 61.2,
+      "input_tokens": 128,
+      "max_output_tokens": 32
+    },
+    {
+      "request_id": "13",
+      "job_type": "online",
+      "arrival_s": 1.3,
+      "deadline_s": 61.3,
+      "input_tokens": 128,
+      "max_output_tokens": 32
+    },
+    {
+      "request_id": "14",
+      "job_type": "online",
+      "arrival_s": 1.4,
+      "deadline_s": 61.4,
+      "input_tokens": 128,
+      "max_output_tokens": 32
+    },
+    {
+      "request_id": "15",
+      "job_type": "online",
+      "arrival_s": 1.5,
+      "deadline_s": 61.5,
+      "input_tokens": 128,
+      "max_output_tokens": 32
+    },
+    {
+      "request_id": "16",
+      "job_type": "online",
+      "arrival_s": 1.6,
+      "deadline_s": 61.6,
+      "input_tokens": 128,
+      "max_output_tokens": 32
+    },
+    {
+      "request_id": "17",
+      "job_type": "online",
+      "arrival_s": 1.7,
+      "deadline_s": 61.7,
+      "input_tokens": 128,
+      "max_output_tokens": 32
+    },
+    {
+      "request_id": "18",
+      "job_type": "online",
+      "arrival_s": 1.8,
+      "deadline_s": 61.8,
+      "input_tokens": 128,
+      "max_output_tokens": 32
+    },
+    {
+      "request_id": "19",
+      "job_type": "online",
+      "arrival_s": 1.9,
+      "deadline_s": 61.9,
+      "input_tokens": 128,
+      "max_output_tokens": 32
+    }
+  ],
+  "records": {
+    "0": {
+      "completed_at": 0.37147800951871807
+    },
+    "1": {
+      "completed_at": 0.4761503234043878
+    },
+    "2": {
+      "completed_at": 0.5808226372900575
+    },
+    "3": {
+      "completed_at": 0.6854953133617429
+    },
+    "4": {
+      "completed_at": 0.779406767255435
+    },
+    "5": {
+      "completed_at": 0.8840794433271204
+    },
+    "6": {
+      "completed_at": 0.9779908972208126
+    },
+    "7": {
+      "completed_at": 1.0826632111064816
+    },
+    "8": {
+      "completed_at": 1.1765746650001734
+    },
+    "9": {
+      "completed_at": 1.2812469788858427
+    },
+    "10": {
+      "completed_at": 1.3859196549575277
+    },
+    "11": {
+      "completed_at": 1.4798311088512195
+    },
+    "12": {
+      "completed_at": 1.5845037849229044
+    },
+    "13": {
+      "completed_at": 1.6784152388165963
+    },
+    "14": {
+      "completed_at": 1.7830875527022656
+    },
+    "15": {
+      "completed_at": 1.8769990065959574
+    },
+    "16": {
+      "completed_at": 1.9816713204816268
+    },
+    "17": {
+      "completed_at": null
+    },
+    "18": {
+      "completed_at": null
+    },
+    "19": {
+      "completed_at": null
+    }
+  }
+}

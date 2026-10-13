@@ -1,0 +1,1116 @@
+{
+  "schema": "fidelityloop-e4-paper-evidence-v1",
+  "source_archive_sha256": "3dfa88ec3e3e5c54c895cb1df3d3192cec61b5f9024ef1962add6894cb10ad2c",
+  "source_manifest_sha256": "0709d933d0f1f300797a9bbb93a6da0be8c9ef07cf25878e415e633f1c11a51f",
+  "independent_summary_sha256": "f92275a356f8b7fbc8baadfd8ec2aa49f34d03b0de9b83d9a978ad5de9cb8d00",
+  "labels": {
+    "hysteresis_u8_d0_c60": "H",
+    "hysteresis_u8_d0_c60__guard": "H+guard",
+    "ppo_C_s101": "C-1",
+    "ppo_C_r2": "C-2",
+    "C30_s105_e0035": "N2",
+    "C30_s102_e0080": "N4"
+  },
+  "cost": "total registered-window scenario USD, including offline deadline penalties; not a provider bill",
+  "agreement": "12 unique policy/window predictions per model compared with 24 physical repeats, anchors excluded",
+  "results": {
+    "source_summary_sha256": "f92275a356f8b7fbc8baadfd8ec2aa49f34d03b0de9b83d9a978ad5de9cb8d00",
+    "comparison_cells": 24,
+    "P1plus_pass": 22,
+    "false_accept_false_reject": {
+      "C": {
+        "accept_feasible": 14,
+        "false_pass": 0,
+        "block_infeasible": 2,
+        "false_block": 8,
+        "correct": 16,
+        "denominator": 24
+      },
+      "C30": {
+        "accept_feasible": 22,
+        "false_pass": 0,
+        "block_infeasible": 2,
+        "false_block": 0,
+        "correct": 24,
+        "denominator": 24
+      },
+      "C_sg": {
+        "accept_feasible": 22,
+        "false_pass": 0,
+        "block_infeasible": 2,
+        "false_block": 0,
+        "correct": 24,
+        "denominator": 24
+      }
+    },
+    "MAE_scenario_USD": {
+      "C": {
+        "operating": 0.34113948404579963,
+        "total": 0.5419728173791329
+      },
+      "C30": {
+        "operating": 0.046816618602065756,
+        "total": 0.046816618602065756
+      },
+      "C_sg": {
+        "operating": 0.042742775084879565,
+        "total": 0.042742775084879565
+      }
+    },
+    "arm_level": {
+      "C": {
+        "accept_feasible": 2,
+        "false_pass": 0,
+        "block_infeasible": 1,
+        "false_block": 3,
+        "accepted_denominator": 2,
+        "blocked_denominator": 4
+      },
+      "C30": {
+        "accept_feasible": 5,
+        "false_pass": 0,
+        "block_infeasible": 1,
+        "false_block": 0,
+        "accepted_denominator": 5,
+        "blocked_denominator": 1
+      },
+      "C_sg": {
+        "accept_feasible": 5,
+        "false_pass": 0,
+        "block_infeasible": 1,
+        "false_block": 0,
+        "accepted_denominator": 5,
+        "blocked_denominator": 1
+      }
+    },
+    "startup_seconds": {
+      "C": 69.219185665,
+      "C30": 30.0,
+      "C_sg": 27.5675401645
+    },
+    "original_frozen_analysis_used": true,
+    "arms": [
+      {
+        "policy": "hysteresis_u8_d0_c60",
+        "P1plus_pass": 2,
+        "denominator": 4,
+        "mean_occupied_seconds": 923.269586374,
+        "mean_resource_saving_percent": 78.01739080061904,
+        "min_resource_saving_percent": 76.42361870511904,
+        "max_resource_saving_percent": 80.6125065275238,
+        "mean_operating": 1.181246336374,
+        "mean_total": 1.1862463363740001,
+        "mean_operating_saving_percent": 71.87508722919048
+      },
+      {
+        "policy": "hysteresis_u8_d0_c60__guard",
+        "P1plus_pass": 4,
+        "denominator": 4,
+        "mean_occupied_seconds": 920.794946028,
+        "mean_resource_saving_percent": 78.07631080885714,
+        "min_resource_saving_percent": 75.21243225157143,
+        "max_resource_saving_percent": 80.90107045145238,
+        "mean_operating": 1.183621196028,
+        "mean_total": 1.183621196028,
+        "mean_operating_saving_percent": 71.81854295171429
+      },
+      {
+        "policy": "ppo_C_s101",
+        "P1plus_pass": 4,
+        "denominator": 4,
+        "mean_occupied_seconds": 2015.59925797175,
+        "mean_resource_saving_percent": 52.00954147686309,
+        "min_resource_saving_percent": 51.75785164192857,
+        "max_resource_saving_percent": 52.272260208214284,
+        "mean_operating": 2.17951650797175,
+        "mean_total": 2.17951650797175,
+        "mean_operating_saving_percent": 48.106749810196426
+      },
+      {
+        "policy": "ppo_C_r2",
+        "P1plus_pass": 4,
+        "denominator": 4,
+        "mean_occupied_seconds": 1140.88690995625,
+        "mean_resource_saving_percent": 72.83602595342262,
+        "min_resource_saving_percent": 72.60090570676189,
+        "max_resource_saving_percent": 73.11016008016666,
+        "mean_operating": 1.4453616599562502,
+        "mean_total": 1.4453616599562502,
+        "mean_operating_saving_percent": 65.58662714389881
+      },
+      {
+        "policy": "C30_s105_e0035",
+        "P1plus_pass": 4,
+        "denominator": 4,
+        "mean_occupied_seconds": 1759.386944437,
+        "mean_resource_saving_percent": 58.10983465626191,
+        "min_resource_saving_percent": 57.96864730364286,
+        "max_resource_saving_percent": 58.198188377523806,
+        "mean_operating": 1.881424444437,
+        "mean_total": 1.881424444437,
+        "mean_operating_saving_percent": 55.20417989435715
+      },
+      {
+        "policy": "C30_s102_e0080",
+        "P1plus_pass": 4,
+        "denominator": 4,
+        "mean_occupied_seconds": 1967.1761923295,
+        "mean_resource_saving_percent": 53.16247161120238,
+        "min_resource_saving_percent": 52.78664159035714,
+        "max_resource_saving_percent": 53.54529531759524,
+        "mean_operating": 1.9875506923295,
+        "mean_total": 1.9875506923295,
+        "mean_operating_saving_percent": 52.67736446834524
+      }
+    ],
+    "cells": [
+      {
+        "policy": "hysteresis_u8_d0_c60",
+        "window": "bridge_locked_test_recovery_v1",
+        "repeat": 1,
+        "P1plus": true,
+        "online_timely": 358,
+        "online_arrivals": 358,
+        "offline_timely": 120,
+        "offline_arrivals": 120,
+        "occupied_seconds": 814.274725844,
+        "operating": 0.9799197258440001,
+        "total": 0.9799197258440001,
+        "resource_saving_percent": 80.6125065275238,
+        "operating_saving_percent": 76.66857795609523
+      },
+      {
+        "policy": "hysteresis_u8_d0_c60__guard",
+        "window": "bridge_locked_test_recovery_v1",
+        "repeat": 1,
+        "P1plus": true,
+        "online_timely": 358,
+        "online_arrivals": 358,
+        "offline_timely": 120,
+        "offline_arrivals": 120,
+        "occupied_seconds": 836.2179516680001,
+        "operating": 1.026614951668,
+        "total": 1.026614951668,
+        "resource_saving_percent": 80.09004876980951,
+        "operating_saving_percent": 75.55678686504763
+      },
+      {
+        "policy": "ppo_C_s101",
+        "window": "bridge_locked_test_recovery_v1",
+        "repeat": 1,
+        "P1plus": true,
+        "online_timely": 358,
+        "online_arrivals": 358,
+        "offline_timely": 120,
+        "offline_arrivals": 120,
+        "occupied_seconds": 2004.565071255,
+        "operating": 2.111937071255,
+        "total": 2.111937071255,
+        "resource_saving_percent": 52.272260208214284,
+        "operating_saving_percent": 49.715784017738095
+      },
+      {
+        "policy": "ppo_C_r2",
+        "window": "bridge_locked_test_recovery_v1",
+        "repeat": 1,
+        "P1plus": true,
+        "online_timely": 358,
+        "online_arrivals": 358,
+        "offline_timely": 120,
+        "offline_arrivals": 120,
+        "occupied_seconds": 1149.450794157,
+        "operating": 1.341037794157,
+        "total": 1.341037794157,
+        "resource_saving_percent": 72.63212394864286,
+        "operating_saving_percent": 68.07052871054762
+      },
+      {
+        "policy": "C30_s105_e0035",
+        "window": "bridge_locked_test_recovery_v1",
+        "repeat": 1,
+        "P1plus": true,
+        "online_timely": 358,
+        "online_arrivals": 358,
+        "offline_timely": 120,
+        "offline_arrivals": 120,
+        "occupied_seconds": 1757.456467015,
+        "operating": 1.8397164670150001,
+        "total": 1.8397164670150001,
+        "resource_saving_percent": 58.15579840440477,
+        "operating_saving_percent": 56.19722697583334
+      },
+      {
+        "policy": "C30_s102_e0080",
+        "window": "bridge_locked_test_recovery_v1",
+        "repeat": 1,
+        "P1plus": true,
+        "online_timely": 358,
+        "online_arrivals": 358,
+        "offline_timely": 120,
+        "offline_arrivals": 120,
+        "occupied_seconds": 1951.7926604739998,
+        "operating": 1.955792660474,
+        "total": 1.955792660474,
+        "resource_saving_percent": 53.52874617919048,
+        "operating_saving_percent": 53.43350808395238
+      },
+      {
+        "policy": "hysteresis_u8_d0_c60__guard",
+        "window": "bridge_locked_test_recovery_v1",
+        "repeat": 2,
+        "P1plus": true,
+        "online_timely": 358,
+        "online_arrivals": 358,
+        "offline_timely": 120,
+        "offline_arrivals": 120,
+        "occupied_seconds": 802.155041039,
+        "operating": 0.9678000410390001,
+        "total": 0.9678000410390001,
+        "resource_saving_percent": 80.90107045145238,
+        "operating_saving_percent": 76.95714188002381
+      },
+      {
+        "policy": "ppo_C_s101",
+        "window": "bridge_locked_test_recovery_v1",
+        "repeat": 2,
+        "P1plus": true,
+        "online_timely": 358,
+        "online_arrivals": 358,
+        "offline_timely": 120,
+        "offline_arrivals": 120,
+        "occupied_seconds": 2026.170231039,
+        "operating": 2.137101231039,
+        "total": 2.137101231039,
+        "resource_saving_percent": 51.75785164192857,
+        "operating_saving_percent": 49.11663735621429
+      },
+      {
+        "policy": "ppo_C_r2",
+        "window": "bridge_locked_test_recovery_v1",
+        "repeat": 2,
+        "P1plus": true,
+        "online_timely": 358,
+        "online_arrivals": 358,
+        "offline_timely": 120,
+        "offline_arrivals": 120,
+        "occupied_seconds": 1150.761960316,
+        "operating": 1.3429429603160001,
+        "total": 1.3429429603160001,
+        "resource_saving_percent": 72.60090570676189,
+        "operating_saving_percent": 68.02516761152381
+      },
+      {
+        "policy": "C30_s105_e0035",
+        "window": "bridge_locked_test_recovery_v1",
+        "repeat": 2,
+        "P1plus": true,
+        "online_timely": 358,
+        "online_arrivals": 358,
+        "offline_timely": 120,
+        "offline_arrivals": 120,
+        "occupied_seconds": 1759.098409342,
+        "operating": 1.8390374093419999,
+        "total": 1.8390374093419999,
+        "resource_saving_percent": 58.116704539476196,
+        "operating_saving_percent": 56.21339501566667
+      },
+      {
+        "policy": "C30_s102_e0080",
+        "window": "bridge_locked_test_recovery_v1",
+        "repeat": 2,
+        "P1plus": true,
+        "online_timely": 358,
+        "online_arrivals": 358,
+        "offline_timely": 120,
+        "offline_arrivals": 120,
+        "occupied_seconds": 1951.0975966610001,
+        "operating": 1.9550975966610002,
+        "total": 1.9550975966610002,
+        "resource_saving_percent": 53.54529531759524,
+        "operating_saving_percent": 53.45005722235714
+      },
+      {
+        "policy": "hysteresis_u8_d0_c60",
+        "window": "bridge_locked_test_recovery_v1",
+        "repeat": 2,
+        "P1plus": true,
+        "online_timely": 358,
+        "online_arrivals": 358,
+        "offline_timely": 120,
+        "offline_arrivals": 120,
+        "occupied_seconds": 990.208014385,
+        "operating": 1.161753014385,
+        "total": 1.161753014385,
+        "resource_saving_percent": 76.42361870511904,
+        "operating_saving_percent": 72.33921394321429
+      },
+      {
+        "policy": "hysteresis_u8_d0_c60__guard",
+        "window": "bridge_locked_test_steady_v1",
+        "repeat": 1,
+        "P1plus": true,
+        "online_timely": 944,
+        "online_arrivals": 944,
+        "offline_timely": 120,
+        "offline_arrivals": 120,
+        "occupied_seconds": 1041.077845434,
+        "operating": 1.393021845434,
+        "total": 1.393021845434,
+        "resource_saving_percent": 75.21243225157143,
+        "operating_saving_percent": 66.83281320395238
+      },
+      {
+        "policy": "ppo_C_s101",
+        "window": "bridge_locked_test_steady_v1",
+        "repeat": 1,
+        "P1plus": true,
+        "online_timely": 944,
+        "online_arrivals": 944,
+        "offline_timely": 120,
+        "offline_arrivals": 120,
+        "occupied_seconds": 2015.445250703,
+        "operating": 2.230035250703,
+        "total": 2.230035250703,
+        "resource_saving_percent": 52.01320831659524,
+        "operating_saving_percent": 46.90392260230952
+      },
+      {
+        "policy": "ppo_C_r2",
+        "window": "bridge_locked_test_steady_v1",
+        "repeat": 1,
+        "P1plus": true,
+        "online_timely": 944,
+        "online_arrivals": 944,
+        "offline_timely": 120,
+        "offline_arrivals": 120,
+        "occupied_seconds": 1129.373276633,
+        "operating": 1.551995276633,
+        "total": 1.551995276633,
+        "resource_saving_percent": 73.11016008016666,
+        "operating_saving_percent": 63.0477315087381
+      },
+      {
+        "policy": "C30_s105_e0035",
+        "window": "bridge_locked_test_steady_v1",
+        "repeat": 1,
+        "P1plus": true,
+        "online_timely": 944,
+        "online_arrivals": 944,
+        "offline_timely": 120,
+        "offline_arrivals": 120,
+        "occupied_seconds": 1765.316813247,
+        "operating": 1.924784813247,
+        "total": 1.924784813247,
+        "resource_saving_percent": 57.96864730364286,
+        "operating_saving_percent": 54.17179016078572
+      },
+      {
+        "policy": "C30_s102_e0080",
+        "window": "bridge_locked_test_steady_v1",
+        "repeat": 1,
+        "P1plus": true,
+        "online_timely": 944,
+        "online_arrivals": 944,
+        "offline_timely": 120,
+        "offline_arrivals": 120,
+        "occupied_seconds": 1982.8534589780002,
+        "operating": 2.0201894589780003,
+        "total": 2.0201894589780003,
+        "resource_saving_percent": 52.78920335766666,
+        "operating_saving_percent": 51.90025097671428
+      },
+      {
+        "policy": "hysteresis_u8_d0_c60",
+        "window": "bridge_locked_test_steady_v1",
+        "repeat": 1,
+        "P1plus": false,
+        "online_timely": 944,
+        "online_arrivals": 944,
+        "offline_timely": 119,
+        "offline_arrivals": 120,
+        "occupied_seconds": 951.58677945,
+        "operating": 1.30071277945,
+        "total": 1.31071277945,
+        "resource_saving_percent": 77.34317191785715,
+        "operating_saving_percent": 69.03064810833334
+      },
+      {
+        "policy": "ppo_C_s101",
+        "window": "bridge_locked_test_steady_v1",
+        "repeat": 2,
+        "P1plus": true,
+        "online_timely": 944,
+        "online_arrivals": 944,
+        "offline_timely": 120,
+        "offline_arrivals": 120,
+        "occupied_seconds": 2016.21647889,
+        "operating": 2.23899247889,
+        "total": 2.23899247889,
+        "resource_saving_percent": 51.99484574071429,
+        "operating_saving_percent": 46.690655264523805
+      },
+      {
+        "policy": "ppo_C_r2",
+        "window": "bridge_locked_test_steady_v1",
+        "repeat": 2,
+        "P1plus": true,
+        "online_timely": 944,
+        "online_arrivals": 944,
+        "offline_timely": 120,
+        "offline_arrivals": 120,
+        "occupied_seconds": 1133.961608719,
+        "operating": 1.5454706087190002,
+        "total": 1.5454706087190002,
+        "resource_saving_percent": 73.00091407811905,
+        "operating_saving_percent": 63.20308074478571
+      },
+      {
+        "policy": "C30_s105_e0035",
+        "window": "bridge_locked_test_steady_v1",
+        "repeat": 2,
+        "P1plus": true,
+        "online_timely": 944,
+        "online_arrivals": 944,
+        "offline_timely": 120,
+        "offline_arrivals": 120,
+        "occupied_seconds": 1755.676088144,
+        "operating": 1.922159088144,
+        "total": 1.922159088144,
+        "resource_saving_percent": 58.198188377523806,
+        "operating_saving_percent": 54.23430742514286
+      },
+      {
+        "policy": "C30_s102_e0080",
+        "window": "bridge_locked_test_steady_v1",
+        "repeat": 2,
+        "P1plus": true,
+        "online_timely": 944,
+        "online_arrivals": 944,
+        "offline_timely": 120,
+        "offline_arrivals": 120,
+        "occupied_seconds": 1982.961053205,
+        "operating": 2.019123053205,
+        "total": 2.019123053205,
+        "resource_saving_percent": 52.78664159035714,
+        "operating_saving_percent": 51.92564159035715
+      },
+      {
+        "policy": "hysteresis_u8_d0_c60",
+        "window": "bridge_locked_test_steady_v1",
+        "repeat": 2,
+        "P1plus": false,
+        "online_timely": 944,
+        "online_arrivals": 944,
+        "offline_timely": 119,
+        "offline_arrivals": 120,
+        "occupied_seconds": 937.008825817,
+        "operating": 1.2825998258170002,
+        "total": 1.2925998258170002,
+        "resource_saving_percent": 77.69026605197618,
+        "operating_saving_percent": 69.46190890911905
+      },
+      {
+        "policy": "hysteresis_u8_d0_c60__guard",
+        "window": "bridge_locked_test_steady_v1",
+        "repeat": 2,
+        "P1plus": true,
+        "online_timely": 944,
+        "online_arrivals": 944,
+        "offline_timely": 120,
+        "offline_arrivals": 120,
+        "occupied_seconds": 1003.728945971,
+        "operating": 1.347047945971,
+        "total": 1.347047945971,
+        "resource_saving_percent": 76.10169176259524,
+        "operating_saving_percent": 67.92742985783333
+      }
+    ]
+  },
+  "startup_distributions": {
+    "calibration_startup_clock": "launch requested to parent verified native-ready receipt",
+    "calibration_startup": {
+      "count": 20,
+      "min": 26.712965511,
+      "median": 27.5675401645,
+      "max": 29.16504196,
+      "mean": 27.59922697105,
+      "p95": 28.3095202067
+    },
+    "formal_startup_clock": "controller-observed generation launch_issued to ready, ordinary launches inside registered observation window; initial setup and invalid attempts excluded",
+    "formal_ordinary_launch_count": 256,
+    "formal_ordinary_never_ready": [
+      {
+        "run_id": "hysteresis_u8_d0_c60__guard__bridge_locked_test_steady_v1__r1",
+        "gpu": 1,
+        "generation": 2,
+        "launch_to_shutdown_seconds": 24.001774269
+      }
+    ],
+    "formal_ordinary_startup": {
+      "count": 255,
+      "min": 26.111970507,
+      "median": 28.051851588,
+      "max": 94.872152857,
+      "mean": 30.212392525643136,
+      "p95": 43.093741506799994
+    },
+    "formal_initial_setup": {
+      "count": 52,
+      "min": 27.068066547,
+      "median": 31.933064649000002,
+      "max": 231.261214238,
+      "mean": 58.475038790346154,
+      "p95": 216.065603011
+    },
+    "formal_shutdown": {
+      "count": 290,
+      "min": 0.663631497,
+      "median": 3.4635904484999998,
+      "max": 9.872809415,
+      "mean": 3.2861054531586205,
+      "p95": 5.5103506719
+    },
+    "per_cell": [
+      {
+        "run_id": "all2__bridge_locked_test_recovery_v1__r1",
+        "policy": "all2",
+        "startup": {
+          "count": 0
+        }
+      },
+      {
+        "run_id": "hysteresis_u8_d0_c60__bridge_locked_test_recovery_v1__r1",
+        "policy": "hysteresis_u8_d0_c60",
+        "startup": {
+          "count": 11,
+          "min": 26.393138962,
+          "median": 27.222458173,
+          "max": 42.629850547,
+          "mean": 29.161883273727273,
+          "p95": 36.985008015
+        }
+      },
+      {
+        "run_id": "hysteresis_u8_d0_c60__guard__bridge_locked_test_recovery_v1__r1",
+        "policy": "hysteresis_u8_d0_c60__guard",
+        "startup": {
+          "count": 11,
+          "min": 26.666381159,
+          "median": 35.358411348,
+          "max": 50.736213434,
+          "mean": 36.90131982009091,
+          "p95": 49.741843298
+        }
+      },
+      {
+        "run_id": "ppo_C_s101__bridge_locked_test_recovery_v1__r1",
+        "policy": "ppo_C_s101",
+        "startup": {
+          "count": 16,
+          "min": 27.43480329,
+          "median": 28.111555930999998,
+          "max": 47.488493185,
+          "mean": 30.4471911878125,
+          "p95": 47.4496643365
+        }
+      },
+      {
+        "run_id": "ppo_C_r2__bridge_locked_test_recovery_v1__r1",
+        "policy": "ppo_C_r2",
+        "startup": {
+          "count": 17,
+          "min": 26.21684125,
+          "median": 26.560265371,
+          "max": 40.566161911,
+          "mean": 28.018936271,
+          "p95": 32.646780330999995
+        }
+      },
+      {
+        "run_id": "C30_s105_e0035__bridge_locked_test_recovery_v1__r1",
+        "policy": "C30_s105_e0035",
+        "startup": {
+          "count": 6,
+          "min": 26.204051314,
+          "median": 28.1096063405,
+          "max": 34.743048007,
+          "mean": 29.615407445666666,
+          "p95": 34.479285018
+        }
+      },
+      {
+        "run_id": "C30_s102_e0080__bridge_locked_test_recovery_v1__r1",
+        "policy": "C30_s102_e0080",
+        "startup": {
+          "count": 1,
+          "min": 26.111970507,
+          "median": 26.111970507,
+          "max": 26.111970507,
+          "mean": 26.111970507,
+          "p95": 26.111970507
+        }
+      },
+      {
+        "run_id": "hysteresis_u8_d0_c60__guard__bridge_locked_test_recovery_v1__r2",
+        "policy": "hysteresis_u8_d0_c60__guard",
+        "startup": {
+          "count": 11,
+          "min": 26.16280733,
+          "median": 26.422426401,
+          "max": 30.325875545,
+          "mean": 27.120065580363637,
+          "p95": 30.1910381495
+        }
+      },
+      {
+        "run_id": "ppo_C_s101__bridge_locked_test_recovery_v1__r2",
+        "policy": "ppo_C_s101",
+        "startup": {
+          "count": 16,
+          "min": 27.096959167,
+          "median": 28.178152750499997,
+          "max": 36.480341736,
+          "mean": 29.3918341238125,
+          "p95": 36.41484397875
+        }
+      },
+      {
+        "run_id": "ppo_C_r2__bridge_locked_test_recovery_v1__r2",
+        "policy": "ppo_C_r2",
+        "startup": {
+          "count": 17,
+          "min": 26.380756647,
+          "median": 26.883931536,
+          "max": 35.264735808,
+          "mean": 27.499209387411764,
+          "p95": 30.155484613599995
+        }
+      },
+      {
+        "run_id": "C30_s105_e0035__bridge_locked_test_recovery_v1__r2",
+        "policy": "C30_s105_e0035",
+        "startup": {
+          "count": 6,
+          "min": 26.43276687,
+          "median": 26.569796789,
+          "max": 29.688960224,
+          "mean": 27.189885796166667,
+          "p95": 29.106445374499998
+        }
+      },
+      {
+        "run_id": "C30_s102_e0080__bridge_locked_test_recovery_v1__r2",
+        "policy": "C30_s102_e0080",
+        "startup": {
+          "count": 1,
+          "min": 26.478231661,
+          "median": 26.478231661,
+          "max": 26.478231661,
+          "mean": 26.478231661,
+          "p95": 26.478231661
+        }
+      },
+      {
+        "run_id": "hysteresis_u8_d0_c60__bridge_locked_test_recovery_v1__r2",
+        "policy": "hysteresis_u8_d0_c60",
+        "startup": {
+          "count": 12,
+          "min": 26.919372486,
+          "median": 31.4415220925,
+          "max": 94.872152857,
+          "mean": 40.19253651383333,
+          "p95": 84.57554089124999
+        }
+      },
+      {
+        "run_id": "all2__bridge_locked_test_steady_v1__r1",
+        "policy": "all2",
+        "startup": {
+          "count": 0
+        }
+      },
+      {
+        "run_id": "hysteresis_u8_d0_c60__guard__bridge_locked_test_steady_v1__r1",
+        "policy": "hysteresis_u8_d0_c60__guard",
+        "startup": {
+          "count": 13,
+          "min": 27.284564411,
+          "median": 28.476029041,
+          "max": 52.283802305,
+          "mean": 30.37354591853846,
+          "p95": 39.59266306579997
+        }
+      },
+      {
+        "run_id": "ppo_C_s101__bridge_locked_test_steady_v1__r1",
+        "policy": "ppo_C_s101",
+        "startup": {
+          "count": 16,
+          "min": 28.089469758,
+          "median": 29.476007689,
+          "max": 35.894182759,
+          "mean": 30.1749854991875,
+          "p95": 35.893688563000005
+        }
+      },
+      {
+        "run_id": "ppo_C_r2__bridge_locked_test_steady_v1__r1",
+        "policy": "ppo_C_r2",
+        "startup": {
+          "count": 17,
+          "min": 26.705434916,
+          "median": 28.404351842,
+          "max": 43.366096713,
+          "mean": 30.599235815,
+          "p95": 42.394527553
+        }
+      },
+      {
+        "run_id": "C30_s105_e0035__bridge_locked_test_steady_v1__r1",
+        "policy": "C30_s105_e0035",
+        "startup": {
+          "count": 6,
+          "min": 27.833971841,
+          "median": 28.533070366,
+          "max": 37.068419819,
+          "mean": 29.928261049333333,
+          "p95": 35.1324900575
+        }
+      },
+      {
+        "run_id": "C30_s102_e0080__bridge_locked_test_steady_v1__r1",
+        "policy": "C30_s102_e0080",
+        "startup": {
+          "count": 1,
+          "min": 28.55216173,
+          "median": 28.55216173,
+          "max": 28.55216173,
+          "mean": 28.55216173,
+          "p95": 28.55216173
+        }
+      },
+      {
+        "run_id": "hysteresis_u8_d0_c60__bridge_locked_test_steady_v1__r1",
+        "policy": "hysteresis_u8_d0_c60",
+        "startup": {
+          "count": 12,
+          "min": 26.842689284,
+          "median": 27.6666890185,
+          "max": 34.225207283,
+          "mean": 28.586317862,
+          "p95": 33.1560723117
+        }
+      },
+      {
+        "run_id": "ppo_C_s101__bridge_locked_test_steady_v1__r2",
+        "policy": "ppo_C_s101",
+        "startup": {
+          "count": 16,
+          "min": 29.199932552,
+          "median": 32.8823215615,
+          "max": 46.025888363,
+          "mean": 34.6014013289375,
+          "p95": 45.984279613249996
+        }
+      },
+      {
+        "run_id": "ppo_C_r2__bridge_locked_test_steady_v1__r2",
+        "policy": "ppo_C_r2",
+        "startup": {
+          "count": 17,
+          "min": 26.789212588,
+          "median": 27.453657392,
+          "max": 30.739104921,
+          "mean": 28.358679903294117,
+          "p95": 30.7351476154
+        }
+      },
+      {
+        "run_id": "C30_s105_e0035__bridge_locked_test_steady_v1__r2",
+        "policy": "C30_s105_e0035",
+        "startup": {
+          "count": 6,
+          "min": 29.031103114,
+          "median": 29.7703552205,
+          "max": 50.714171807,
+          "mean": 33.621724222333334,
+          "p95": 46.3452921855
+        }
+      },
+      {
+        "run_id": "C30_s102_e0080__bridge_locked_test_steady_v1__r2",
+        "policy": "C30_s102_e0080",
+        "startup": {
+          "count": 1,
+          "min": 26.697297795,
+          "median": 26.697297795,
+          "max": 26.697297795,
+          "mean": 26.697297795,
+          "p95": 26.697297795
+        }
+      },
+      {
+        "run_id": "hysteresis_u8_d0_c60__bridge_locked_test_steady_v1__r2",
+        "policy": "hysteresis_u8_d0_c60",
+        "startup": {
+          "count": 12,
+          "min": 26.86093885,
+          "median": 27.238097873500003,
+          "max": 31.213602732,
+          "mean": 27.981051134916665,
+          "p95": 31.15249372745
+        }
+      },
+      {
+        "run_id": "hysteresis_u8_d0_c60__guard__bridge_locked_test_steady_v1__r2",
+        "policy": "hysteresis_u8_d0_c60__guard",
+        "startup": {
+          "count": 13,
+          "min": 26.767114789,
+          "median": 27.046317166,
+          "max": 29.427604744,
+          "mean": 27.173708087615385,
+          "p95": 28.174948657599998
+        }
+      }
+    ]
+  },
+  "per_policy_window": [
+    {
+      "policy": "hysteresis_u8_d0_c60",
+      "window": "bridge_locked_test_recovery_v1",
+      "measured_total_r1": 0.9799197258440001,
+      "measured_total_r2": 1.161753014385,
+      "occupied_seconds_r1": 814.274725844,
+      "occupied_seconds_r2": 990.208014385,
+      "offline_timely_r1": 120,
+      "offline_timely_r2": 120,
+      "offline_denominator": 120,
+      "P1plus_r1": true,
+      "P1plus_r2": true,
+      "C_P1plus": true,
+      "C_total": 1.8006977555580288,
+      "C30_P1plus": true,
+      "C30_total": 1.021494344446741,
+      "C_sg_P1plus": true,
+      "C_sg_total": 1.0185693444467412
+    },
+    {
+      "policy": "hysteresis_u8_d0_c60",
+      "window": "bridge_locked_test_steady_v1",
+      "measured_total_r1": 1.31071277945,
+      "measured_total_r2": 1.2925998258170002,
+      "occupied_seconds_r1": 951.58677945,
+      "occupied_seconds_r2": 937.008825817,
+      "offline_timely_r1": 119,
+      "offline_timely_r2": 119,
+      "offline_denominator": 120,
+      "P1plus_r1": false,
+      "P1plus_r2": false,
+      "C_P1plus": false,
+      "C_total": 2.1623947555580285,
+      "C30_P1plus": false,
+      "C30_total": 1.3655427555580288,
+      "C_sg_P1plus": false,
+      "C_sg_total": 1.3538507555580288
+    },
+    {
+      "policy": "hysteresis_u8_d0_c60__guard",
+      "window": "bridge_locked_test_recovery_v1",
+      "measured_total_r1": 1.026614951668,
+      "measured_total_r2": 0.9678000410390001,
+      "occupied_seconds_r1": 836.2179516680001,
+      "occupied_seconds_r2": 802.155041039,
+      "offline_timely_r1": 120,
+      "offline_timely_r2": 120,
+      "offline_denominator": 120,
+      "P1plus_r1": true,
+      "P1plus_r2": true,
+      "C_P1plus": true,
+      "C_total": 1.8006977555580288,
+      "C30_P1plus": true,
+      "C30_total": 1.021494344446741,
+      "C_sg_P1plus": true,
+      "C_sg_total": 1.0185693444467412
+    },
+    {
+      "policy": "hysteresis_u8_d0_c60__guard",
+      "window": "bridge_locked_test_steady_v1",
+      "measured_total_r1": 1.393021845434,
+      "measured_total_r2": 1.347047945971,
+      "occupied_seconds_r1": 1041.077845434,
+      "occupied_seconds_r2": 1003.728945971,
+      "offline_timely_r1": 120,
+      "offline_timely_r2": 120,
+      "offline_denominator": 120,
+      "P1plus_r1": true,
+      "P1plus_r2": true,
+      "C_P1plus": false,
+      "C_total": 2.3374541666693167,
+      "C30_P1plus": true,
+      "C30_total": 1.4256021666693168,
+      "C_sg_P1plus": true,
+      "C_sg_total": 1.4139101666693168
+    },
+    {
+      "policy": "ppo_C_s101",
+      "window": "bridge_locked_test_recovery_v1",
+      "measured_total_r1": 2.111937071255,
+      "measured_total_r2": 2.137101231039,
+      "occupied_seconds_r1": 2004.565071255,
+      "occupied_seconds_r2": 2026.170231039,
+      "offline_timely_r1": 120,
+      "offline_timely_r2": 120,
+      "offline_denominator": 120,
+      "P1plus_r1": true,
+      "P1plus_r2": true,
+      "C_P1plus": true,
+      "C_total": 2.14505156924819,
+      "C30_P1plus": true,
+      "C30_total": 2.1695994000031797,
+      "C_sg_P1plus": true,
+      "C_sg_total": 2.1674414000031796
+    },
+    {
+      "policy": "ppo_C_s101",
+      "window": "bridge_locked_test_steady_v1",
+      "measured_total_r1": 2.230035250703,
+      "measured_total_r2": 2.23899247889,
+      "occupied_seconds_r1": 2015.445250703,
+      "occupied_seconds_r2": 2016.21647889,
+      "offline_timely_r1": 120,
+      "offline_timely_r2": 120,
+      "offline_denominator": 120,
+      "P1plus_r1": true,
+      "P1plus_r2": true,
+      "C_P1plus": true,
+      "C_total": 2.2972383317044947,
+      "C30_P1plus": true,
+      "C30_total": 2.2966062770085918,
+      "C_sg_P1plus": true,
+      "C_sg_total": 2.2907542770085914
+    },
+    {
+      "policy": "ppo_C_r2",
+      "window": "bridge_locked_test_recovery_v1",
+      "measured_total_r1": 1.341037794157,
+      "measured_total_r2": 1.3429429603160001,
+      "occupied_seconds_r1": 1149.450794157,
+      "occupied_seconds_r2": 1150.761960316,
+      "offline_timely_r1": 120,
+      "offline_timely_r2": 120,
+      "offline_denominator": 120,
+      "P1plus_r1": true,
+      "P1plus_r2": true,
+      "C_P1plus": false,
+      "C_total": 2.699404017023638,
+      "C30_P1plus": true,
+      "C30_total": 1.4054053954448584,
+      "C_sg_P1plus": true,
+      "C_sg_total": 1.4024843954448585
+    },
+    {
+      "policy": "ppo_C_r2",
+      "window": "bridge_locked_test_steady_v1",
+      "measured_total_r1": 1.551995276633,
+      "measured_total_r2": 1.5454706087190002,
+      "occupied_seconds_r1": 1129.373276633,
+      "occupied_seconds_r2": 1133.961608719,
+      "offline_timely_r1": 120,
+      "offline_timely_r2": 120,
+      "offline_denominator": 120,
+      "P1plus_r1": true,
+      "P1plus_r2": true,
+      "C_P1plus": false,
+      "C_total": 3.027044320308403,
+      "C30_P1plus": true,
+      "C30_total": 1.632129868939785,
+      "C_sg_P1plus": true,
+      "C_sg_total": 1.6210797467335512
+    },
+    {
+      "policy": "C30_s105_e0035",
+      "window": "bridge_locked_test_recovery_v1",
+      "measured_total_r1": 1.8397164670150001,
+      "measured_total_r2": 1.8390374093419999,
+      "occupied_seconds_r1": 1757.456467015,
+      "occupied_seconds_r2": 1759.098409342,
+      "offline_timely_r1": 120,
+      "offline_timely_r2": 120,
+      "offline_denominator": 120,
+      "P1plus_r1": true,
+      "P1plus_r2": true,
+      "C_P1plus": true,
+      "C_total": 1.9101728777790143,
+      "C30_P1plus": true,
+      "C30_total": 1.8709358777790144,
+      "C_sg_P1plus": true,
+      "C_sg_total": 1.8703548777790144
+    },
+    {
+      "policy": "C30_s105_e0035",
+      "window": "bridge_locked_test_steady_v1",
+      "measured_total_r1": 1.924784813247,
+      "measured_total_r2": 1.922159088144,
+      "occupied_seconds_r1": 1765.316813247,
+      "occupied_seconds_r2": 1755.676088144,
+      "offline_timely_r1": 120,
+      "offline_timely_r2": 120,
+      "offline_denominator": 120,
+      "P1plus_r1": true,
+      "P1plus_r2": true,
+      "C_P1plus": true,
+      "C_total": 2.0170918777790146,
+      "C30_P1plus": true,
+      "C30_total": 1.9516588777790145,
+      "C_sg_P1plus": true,
+      "C_sg_total": 1.9487188777790145
+    },
+    {
+      "policy": "C30_s102_e0080",
+      "window": "bridge_locked_test_recovery_v1",
+      "measured_total_r1": 1.955792660474,
+      "measured_total_r2": 1.9550975966610002,
+      "occupied_seconds_r1": 1951.7926604739998,
+      "occupied_seconds_r2": 1951.0975966610001,
+      "offline_timely_r1": 120,
+      "offline_timely_r2": 120,
+      "offline_denominator": 120,
+      "P1plus_r1": true,
+      "P1plus_r2": true,
+      "C_P1plus": true,
+      "C_total": 1.9650078222225755,
+      "C30_P1plus": true,
+      "C30_total": 1.9621188222225756,
+      "C_sg_P1plus": true,
+      "C_sg_total": 1.9621188222225756
+    },
+    {
+      "policy": "C30_s102_e0080",
+      "window": "bridge_locked_test_steady_v1",
+      "measured_total_r1": 2.0201894589780003,
+      "measured_total_r2": 2.019123053205,
+      "occupied_seconds_r1": 1982.8534589780002,
+      "occupied_seconds_r2": 1982.961053205,
+      "offline_timely_r1": 120,
+      "offline_timely_r2": 120,
+      "offline_denominator": 120,
+      "P1plus_r1": true,
+      "P1plus_r2": true,
+      "C_P1plus": false,
+      "C_total": 2.0688602333338633,
+      "C30_P1plus": true,
+      "C30_total": 2.0180388222225756,
+      "C_sg_P1plus": true,
+      "C_sg_total": 2.0180388222225756
+    }
+  ],
+  "technical_attempts": {
+    "total": 28,
+    "completed_cells": 26,
+    "failed_attempts": 2,
+    "technical_retries_used": 2,
+    "environment_exempt_retries_used": 0,
+    "cause": "control-loop timeout, historical root cause unresolved"
+  }
+}

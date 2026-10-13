@@ -1,0 +1,8 @@
+numpy==2.4.3
+pandas==2.3.3
+scikit-learn==1.8.0
+wandb==0.30.0
+plotly==7.1.0
+plotly_express==0.4.1
+ddsketch==3.0.1
+fasteners==0.20

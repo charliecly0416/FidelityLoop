@@ -1,0 +1,107 @@
+{
+  "models": {
+    "L14": {
+      "kind": "n4c_progress_lookup",
+      "lookup_wall_seconds": {
+        "core_i256_o256_c4": 5.844107373,
+        "grid_i128_o128_c1": 2.7830676294999996,
+        "grid_i128_o128_c4": 2.9024754905,
+        "grid_i128_o256_c1": 5.5614793575,
+        "grid_i128_o256_c4": 5.7433749275,
+        "grid_i128_o32_c1": 0.703538966,
+        "grid_i128_o32_c4": 0.7833053135,
+        "grid_i2048_o128_c1": 3.102405431,
+        "grid_i2048_o128_c4": 4.0899511235,
+        "grid_i2048_o256_c1": 5.9462820445,
+        "grid_i2048_o256_c4": 7.0858322285,
+        "grid_i2048_o32_c1": 0.9712524665,
+        "grid_i2048_o32_c4": 1.85257121,
+        "grid_i512_o128_c1": 2.84164409,
+        "grid_i512_o128_c4": 3.1507407895,
+        "grid_i512_o256_c1": 5.6307463725,
+        "grid_i512_o256_c4": 6.035548391,
+        "grid_i512_o32_c1": 0.754465229,
+        "grid_i512_o32_c4": 0.995762101
+      },
+      "model_id": "Qwen/Qwen2.5-14B-Instruct",
+      "setup_seconds": 48.485561218,
+      "shutdown_seconds": 1.9803048185,
+      "startup_seconds": 46.067357474999994
+    },
+    "S14": {
+      "kind": "n4c_progress_lookup",
+      "lookup_wall_seconds": {
+        "core_i256_o256_c4": 5.844107373,
+        "grid_i128_o128_c1": 2.7830676294999996,
+        "grid_i128_o128_c4": 2.9024754905,
+        "grid_i128_o256_c1": 5.5614793575,
+        "grid_i128_o256_c4": 5.7433749275,
+        "grid_i128_o32_c1": 0.703538966,
+        "grid_i128_o32_c4": 0.7833053135,
+        "grid_i2048_o128_c1": 3.102405431,
+        "grid_i2048_o128_c4": 4.0899511235,
+        "grid_i2048_o256_c1": 5.9462820445,
+        "grid_i2048_o256_c4": 7.0858322285,
+        "grid_i2048_o32_c1": 0.9712524665,
+        "grid_i2048_o32_c4": 1.85257121,
+        "grid_i512_o128_c1": 2.84164409,
+        "grid_i512_o128_c4": 3.1507407895,
+        "grid_i512_o256_c1": 5.6307463725,
+        "grid_i512_o256_c4": 6.035548391,
+        "grid_i512_o32_c1": 0.754465229,
+        "grid_i512_o32_c4": 0.995762101
+      },
+      "model_id": "Qwen/Qwen2.5-14B-Instruct",
+      "setup_seconds": 48.485561218,
+      "shutdown_seconds": 1.9803048185,
+      "startup_seconds": 69.219185665
+    }
+  },
+  "guard_model": {
+    "kind": "n4c_progress_lookup",
+    "lookup_wall_seconds": {
+      "core_i256_o256_c4": 5.844107373,
+      "grid_i128_o128_c1": 2.7830676294999996,
+      "grid_i128_o128_c4": 2.9024754905,
+      "grid_i128_o256_c1": 5.5614793575,
+      "grid_i128_o256_c4": 5.7433749275,
+      "grid_i128_o32_c1": 0.703538966,
+      "grid_i128_o32_c4": 0.7833053135,
+      "grid_i2048_o128_c1": 3.102405431,
+      "grid_i2048_o128_c4": 4.0899511235,
+      "grid_i2048_o256_c1": 5.9462820445,
+      "grid_i2048_o256_c4": 7.0858322285,
+      "grid_i2048_o32_c1": 0.9712524665,
+      "grid_i2048_o32_c4": 1.85257121,
+      "grid_i512_o128_c1": 2.84164409,
+      "grid_i512_o128_c4": 3.1507407895,
+      "grid_i512_o256_c1": 5.6307463725,
+      "grid_i512_o256_c4": 6.035548391,
+      "grid_i512_o32_c1": 0.754465229,
+      "grid_i512_o32_c4": 0.995762101
+    },
+    "model_id": "Qwen/Qwen2.5-14B-Instruct",
+    "setup_seconds": 48.485561218,
+    "shutdown_seconds": 1.9803048185,
+    "startup_seconds": 46.067357474999994
+  },
+  "guard_safety": {
+    "sampling": "20 development cycles: 10 per GPU; linear p95 heuristic, no coverage guarantee",
+    "schema": "fidelityloop-e6-guard-lifecycle-v1",
+    "setup_seconds": 48.485561218,
+    "shutdown_seconds": 1.9803048185,
+    "startup_max_seconds": 52.351555437,
+    "startup_min_seconds": 45.813874206,
+    "startup_safe_seconds": 47.765365598550005,
+    "startup_seconds": 46.067357474999994
+  },
+  "bindings": {
+    "calibration_code_sha256": "c7ca16d23e93a86639e3d40e2c158e3cabc5006eab6eb8930bcf328bf8e4b34b",
+    "calibration_design_sha256": "ea884cde2ec41c4bef0870db9530eb3db2474383e7fd653ba5d1ec97dd1975ad",
+    "calibration_result_sha256": "113356bf14bb38fcd2f6c91c83338a7b43092cd3744d36b2027af025019d7d48",
+    "micro_code_sha256": "d34b8ce798d3f2e8d9975588487beab22b7dac7e8674dfa1c58c816b5ead1b47",
+    "micro_events_sha256": "ed20162059c5deb1f9ac586adaa0c288251ba8eb3a20cd7d1a657ba9521c2ee2",
+    "micro_plan_sha256": "db12faec59cdaed285feeaf6f592dbc40bed8ea0246eaed5cb427fd7f1e273df"
+  },
+  "scope": "Synthetic development-only measurements; S14 and L14 differ only in startup_seconds; no formal outcomes used"
+}

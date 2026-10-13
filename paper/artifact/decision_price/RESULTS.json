@@ -1,0 +1,2680 @@
+{
+  "scope": "Full 3x3 fixed-event GPU/API repricing; exact ties retained; physical feasibility is strict over all repeats.",
+  "rows": [
+    {
+      "gpu_multiplier": 0.5,
+      "api_multiplier": 0.5,
+      "campaign": "E2",
+      "model": "C",
+      "candidates": 5,
+      "windows": 2,
+      "predicted_cost_minimizers": [
+        "ppo_C30_raw"
+      ],
+      "tie_at_released_data_precision": false,
+      "minimizing_set_all_repeats_feasible": {
+        "ppo_C30_raw": true
+      },
+      "selected_policy": "ppo_C30_raw",
+      "best_observed_feasible_policy": "ppo_C30_raw",
+      "selected_all_repeats_feasible": true,
+      "cost_regret_scenario_usd": 0.0,
+      "physical_passes": 6,
+      "physical_runs": 6,
+      "selected_actual_cost": 1.0407155831927501,
+      "best_observed_feasible_cost": 1.0407155831927501
+    },
+    {
+      "gpu_multiplier": 0.5,
+      "api_multiplier": 0.5,
+      "campaign": "E2",
+      "model": "C30",
+      "candidates": 5,
+      "windows": 2,
+      "predicted_cost_minimizers": [
+        "ppo_C_r2"
+      ],
+      "tie_at_released_data_precision": false,
+      "minimizing_set_all_repeats_feasible": {
+        "ppo_C_r2": false
+      },
+      "selected_policy": "ppo_C_r2",
+      "best_observed_feasible_policy": "ppo_C30_raw",
+      "selected_all_repeats_feasible": false,
+      "cost_regret_scenario_usd": null,
+      "physical_passes": 0,
+      "physical_runs": 6,
+      "selected_actual_cost": 2.0141458493594167
+    },
+    {
+      "gpu_multiplier": 0.5,
+      "api_multiplier": 0.5,
+      "campaign": "E3",
+      "model": "C",
+      "candidates": 6,
+      "windows": 2,
+      "predicted_cost_minimizers": [
+        "C30_s105_e0065"
+      ],
+      "tie_at_released_data_precision": false,
+      "minimizing_set_all_repeats_feasible": {
+        "C30_s105_e0065": true
+      },
+      "selected_policy": "C30_s105_e0065",
+      "best_observed_feasible_policy": "C30_s105_e0035",
+      "selected_all_repeats_feasible": true,
+      "cost_regret_scenario_usd": 0.017999966916125043,
+      "physical_passes": 4,
+      "physical_runs": 4,
+      "selected_actual_cost": 0.973162465748125,
+      "best_observed_feasible_cost": 0.955162498832
+    },
+    {
+      "gpu_multiplier": 0.5,
+      "api_multiplier": 0.5,
+      "campaign": "E3",
+      "model": "C30",
+      "candidates": 6,
+      "windows": 2,
+      "predicted_cost_minimizers": [
+        "C30_s105_e0035"
+      ],
+      "tie_at_released_data_precision": false,
+      "minimizing_set_all_repeats_feasible": {
+        "C30_s105_e0035": true
+      },
+      "selected_policy": "C30_s105_e0035",
+      "best_observed_feasible_policy": "C30_s105_e0035",
+      "selected_all_repeats_feasible": true,
+      "cost_regret_scenario_usd": 0.0,
+      "physical_passes": 4,
+      "physical_runs": 4,
+      "selected_actual_cost": 0.955162498832,
+      "best_observed_feasible_cost": 0.955162498832
+    },
+    {
+      "gpu_multiplier": 0.5,
+      "api_multiplier": 0.5,
+      "campaign": "E4",
+      "model": "C",
+      "candidates": 6,
+      "windows": 2,
+      "predicted_cost_minimizers": [
+        "C30_s105_e0035"
+      ],
+      "tie_at_released_data_precision": false,
+      "minimizing_set_all_repeats_feasible": {
+        "C30_s105_e0035": true
+      },
+      "selected_policy": "C30_s105_e0035",
+      "best_observed_feasible_policy": "hysteresis_u8_d0_c60__guard",
+      "selected_all_repeats_feasible": true,
+      "cost_regret_scenario_usd": 0.3392766242045002,
+      "physical_passes": 4,
+      "physical_runs": 4,
+      "selected_actual_cost": 0.9502122222185001,
+      "best_observed_feasible_cost": 0.6109355980139999
+    },
+    {
+      "gpu_multiplier": 0.5,
+      "api_multiplier": 0.5,
+      "campaign": "E4",
+      "model": "C30",
+      "candidates": 6,
+      "windows": 2,
+      "predicted_cost_minimizers": [
+        "hysteresis_u8_d0_c60__guard"
+      ],
+      "tie_at_released_data_precision": false,
+      "minimizing_set_all_repeats_feasible": {
+        "hysteresis_u8_d0_c60__guard": true
+      },
+      "selected_policy": "hysteresis_u8_d0_c60__guard",
+      "best_observed_feasible_policy": "hysteresis_u8_d0_c60__guard",
+      "selected_all_repeats_feasible": true,
+      "cost_regret_scenario_usd": 0.0,
+      "physical_passes": 4,
+      "physical_runs": 4,
+      "selected_actual_cost": 0.6109355980139999,
+      "best_observed_feasible_cost": 0.6109355980139999
+    },
+    {
+      "gpu_multiplier": 0.5,
+      "api_multiplier": 0.5,
+      "campaign": "E4",
+      "model": "C_sg",
+      "candidates": 6,
+      "windows": 2,
+      "predicted_cost_minimizers": [
+        "hysteresis_u8_d0_c60__guard"
+      ],
+      "tie_at_released_data_precision": false,
+      "minimizing_set_all_repeats_feasible": {
+        "hysteresis_u8_d0_c60__guard": true
+      },
+      "selected_policy": "hysteresis_u8_d0_c60__guard",
+      "best_observed_feasible_policy": "hysteresis_u8_d0_c60__guard",
+      "selected_all_repeats_feasible": true,
+      "cost_regret_scenario_usd": 0.0,
+      "physical_passes": 4,
+      "physical_runs": 4,
+      "selected_actual_cost": 0.6109355980139999,
+      "best_observed_feasible_cost": 0.6109355980139999
+    },
+    {
+      "gpu_multiplier": 0.5,
+      "api_multiplier": 0.5,
+      "campaign": "E5",
+      "model": "C",
+      "candidates": 4,
+      "windows": 3,
+      "predicted_cost_minimizers": [
+        "ppo_C_s101"
+      ],
+      "tie_at_released_data_precision": false,
+      "minimizing_set_all_repeats_feasible": {
+        "ppo_C_s101": true
+      },
+      "selected_policy": "ppo_C_s101",
+      "best_observed_feasible_policy": "hysteresis_u8_d0_c60__guard",
+      "selected_all_repeats_feasible": true,
+      "cost_regret_scenario_usd": 0.5315165373649999,
+      "physical_passes": 6,
+      "physical_runs": 6,
+      "selected_actual_cost": 1.1077513862339166,
+      "best_observed_feasible_cost": 0.5762348488689166
+    },
+    {
+      "gpu_multiplier": 0.5,
+      "api_multiplier": 0.5,
+      "campaign": "E5",
+      "model": "C30",
+      "candidates": 4,
+      "windows": 3,
+      "predicted_cost_minimizers": [
+        "hysteresis_u8_d0_c60__guard"
+      ],
+      "tie_at_released_data_precision": false,
+      "minimizing_set_all_repeats_feasible": {
+        "hysteresis_u8_d0_c60__guard": true
+      },
+      "selected_policy": "hysteresis_u8_d0_c60__guard",
+      "best_observed_feasible_policy": "hysteresis_u8_d0_c60__guard",
+      "selected_all_repeats_feasible": true,
+      "cost_regret_scenario_usd": 0.0,
+      "physical_passes": 6,
+      "physical_runs": 6,
+      "selected_actual_cost": 0.5762348488689166,
+      "best_observed_feasible_cost": 0.5762348488689166
+    },
+    {
+      "gpu_multiplier": 0.5,
+      "api_multiplier": 0.5,
+      "campaign": "E5",
+      "model": "C_sg",
+      "candidates": 4,
+      "windows": 3,
+      "predicted_cost_minimizers": [
+        "hysteresis_u8_d0_c60",
+        "hysteresis_u8_d0_c60__guard"
+      ],
+      "tie_at_released_data_precision": true,
+      "minimizing_set_all_repeats_feasible": {
+        "hysteresis_u8_d0_c60": true,
+        "hysteresis_u8_d0_c60__guard": true
+      },
+      "selected_policy": "hysteresis_u8_d0_c60",
+      "best_observed_feasible_policy": "hysteresis_u8_d0_c60__guard",
+      "selected_all_repeats_feasible": true,
+      "cost_regret_scenario_usd": 0.0017277494341666477,
+      "physical_passes": 6,
+      "physical_runs": 6,
+      "selected_actual_cost": 0.5779625983030833,
+      "best_observed_feasible_cost": 0.5762348488689166
+    },
+    {
+      "gpu_multiplier": 0.5,
+      "api_multiplier": 0.5,
+      "campaign": "E6",
+      "model": "L14",
+      "candidates": 2,
+      "windows": 2,
+      "predicted_cost_minimizers": [
+        "hysteresis_u8_d0_c60__guard"
+      ],
+      "tie_at_released_data_precision": false,
+      "minimizing_set_all_repeats_feasible": {
+        "hysteresis_u8_d0_c60__guard": true
+      },
+      "selected_policy": "hysteresis_u8_d0_c60__guard",
+      "best_observed_feasible_policy": "hysteresis_u8_d0_c60__guard",
+      "selected_all_repeats_feasible": true,
+      "cost_regret_scenario_usd": 0.0,
+      "physical_passes": 4,
+      "physical_runs": 4,
+      "selected_actual_cost": 0.819190225526625,
+      "best_observed_feasible_cost": 0.819190225526625
+    },
+    {
+      "gpu_multiplier": 0.5,
+      "api_multiplier": 0.5,
+      "campaign": "E6",
+      "model": "S14",
+      "candidates": 2,
+      "windows": 2,
+      "predicted_cost_minimizers": [
+        "hysteresis_u8_d0_c60",
+        "hysteresis_u8_d0_c60__guard"
+      ],
+      "tie_at_released_data_precision": true,
+      "minimizing_set_all_repeats_feasible": {
+        "hysteresis_u8_d0_c60": false,
+        "hysteresis_u8_d0_c60__guard": true
+      },
+      "selected_policy": "hysteresis_u8_d0_c60",
+      "best_observed_feasible_policy": "hysteresis_u8_d0_c60__guard",
+      "selected_all_repeats_feasible": false,
+      "cost_regret_scenario_usd": null,
+      "physical_passes": 0,
+      "physical_runs": 4,
+      "selected_actual_cost": 0.7938087023109999
+    },
+    {
+      "gpu_multiplier": 0.5,
+      "api_multiplier": 1,
+      "campaign": "E2",
+      "model": "C",
+      "candidates": 5,
+      "windows": 2,
+      "predicted_cost_minimizers": [
+        "ppo_C30_raw"
+      ],
+      "tie_at_released_data_precision": false,
+      "minimizing_set_all_repeats_feasible": {
+        "ppo_C30_raw": true
+      },
+      "selected_policy": "ppo_C30_raw",
+      "best_observed_feasible_policy": "ppo_C30_raw",
+      "selected_all_repeats_feasible": true,
+      "cost_regret_scenario_usd": 0.0,
+      "physical_passes": 6,
+      "physical_runs": 6,
+      "selected_actual_cost": 1.0482244165260832,
+      "best_observed_feasible_cost": 1.0482244165260832
+    },
+    {
+      "gpu_multiplier": 0.5,
+      "api_multiplier": 1,
+      "campaign": "E2",
+      "model": "C30",
+      "candidates": 5,
+      "windows": 2,
+      "predicted_cost_minimizers": [
+        "ppo_C_r2"
+      ],
+      "tie_at_released_data_precision": false,
+      "minimizing_set_all_repeats_feasible": {
+        "ppo_C_r2": false
+      },
+      "selected_policy": "ppo_C_r2",
+      "best_observed_feasible_policy": "ppo_C30_raw",
+      "selected_all_repeats_feasible": false,
+      "cost_regret_scenario_usd": null,
+      "physical_passes": 0,
+      "physical_runs": 6,
+      "selected_actual_cost": 2.1978262660260834
+    },
+    {
+      "gpu_multiplier": 0.5,
+      "api_multiplier": 1,
+      "campaign": "E3",
+      "model": "C",
+      "candidates": 6,
+      "windows": 2,
+      "predicted_cost_minimizers": [
+        "C30_s105_e0065"
+      ],
+      "tie_at_released_data_precision": false,
+      "minimizing_set_all_repeats_feasible": {
+        "C30_s105_e0065": true
+      },
+      "selected_policy": "C30_s105_e0065",
+      "best_observed_feasible_policy": "C30_s105_e0065",
+      "selected_all_repeats_feasible": true,
+      "cost_regret_scenario_usd": 0.0,
+      "physical_passes": 4,
+      "physical_runs": 4,
+      "selected_actual_cost": 0.9839767157481251,
+      "best_observed_feasible_cost": 0.9839767157481251
+    },
+    {
+      "gpu_multiplier": 0.5,
+      "api_multiplier": 1,
+      "campaign": "E3",
+      "model": "C30",
+      "candidates": 6,
+      "windows": 2,
+      "predicted_cost_minimizers": [
+        "C30_s105_e0065"
+      ],
+      "tie_at_released_data_precision": false,
+      "minimizing_set_all_repeats_feasible": {
+        "C30_s105_e0065": true
+      },
+      "selected_policy": "C30_s105_e0065",
+      "best_observed_feasible_policy": "C30_s105_e0065",
+      "selected_all_repeats_feasible": true,
+      "cost_regret_scenario_usd": 0.0,
+      "physical_passes": 4,
+      "physical_runs": 4,
+      "selected_actual_cost": 0.9839767157481251,
+      "best_observed_feasible_cost": 0.9839767157481251
+    },
+    {
+      "gpu_multiplier": 0.5,
+      "api_multiplier": 1,
+      "campaign": "E4",
+      "model": "C",
+      "candidates": 6,
+      "windows": 2,
+      "predicted_cost_minimizers": [
+        "C30_s105_e0035"
+      ],
+      "tie_at_released_data_precision": false,
+      "minimizing_set_all_repeats_feasible": {
+        "C30_s105_e0035": true
+      },
+      "selected_policy": "C30_s105_e0035",
+      "best_observed_feasible_policy": "hysteresis_u8_d0_c60__guard",
+      "selected_all_repeats_feasible": true,
+      "cost_regret_scenario_usd": 0.2785072492045002,
+      "physical_passes": 4,
+      "physical_runs": 4,
+      "selected_actual_cost": 1.0017309722185002,
+      "best_observed_feasible_cost": 0.723223723014
+    },
+    {
+      "gpu_multiplier": 0.5,
+      "api_multiplier": 1,
+      "campaign": "E4",
+      "model": "C30",
+      "candidates": 6,
+      "windows": 2,
+      "predicted_cost_minimizers": [
+        "hysteresis_u8_d0_c60__guard"
+      ],
+      "tie_at_released_data_precision": false,
+      "minimizing_set_all_repeats_feasible": {
+        "hysteresis_u8_d0_c60__guard": true
+      },
+      "selected_policy": "hysteresis_u8_d0_c60__guard",
+      "best_observed_feasible_policy": "hysteresis_u8_d0_c60__guard",
+      "selected_all_repeats_feasible": true,
+      "cost_regret_scenario_usd": 0.0,
+      "physical_passes": 4,
+      "physical_runs": 4,
+      "selected_actual_cost": 0.723223723014,
+      "best_observed_feasible_cost": 0.723223723014
+    },
+    {
+      "gpu_multiplier": 0.5,
+      "api_multiplier": 1,
+      "campaign": "E4",
+      "model": "C_sg",
+      "candidates": 6,
+      "windows": 2,
+      "predicted_cost_minimizers": [
+        "hysteresis_u8_d0_c60__guard"
+      ],
+      "tie_at_released_data_precision": false,
+      "minimizing_set_all_repeats_feasible": {
+        "hysteresis_u8_d0_c60__guard": true
+      },
+      "selected_policy": "hysteresis_u8_d0_c60__guard",
+      "best_observed_feasible_policy": "hysteresis_u8_d0_c60__guard",
+      "selected_all_repeats_feasible": true,
+      "cost_regret_scenario_usd": 0.0,
+      "physical_passes": 4,
+      "physical_runs": 4,
+      "selected_actual_cost": 0.723223723014,
+      "best_observed_feasible_cost": 0.723223723014
+    },
+    {
+      "gpu_multiplier": 0.5,
+      "api_multiplier": 1,
+      "campaign": "E5",
+      "model": "C",
+      "candidates": 4,
+      "windows": 3,
+      "predicted_cost_minimizers": [
+        "ppo_C_s101"
+      ],
+      "tie_at_released_data_precision": false,
+      "minimizing_set_all_repeats_feasible": {
+        "ppo_C_s101": true
+      },
+      "selected_policy": "ppo_C_s101",
+      "best_observed_feasible_policy": "hysteresis_u8_d0_c60__guard",
+      "selected_all_repeats_feasible": true,
+      "cost_regret_scenario_usd": 0.4795167040316666,
+      "physical_passes": 6,
+      "physical_runs": 6,
+      "selected_actual_cost": 1.1621698029005834,
+      "best_observed_feasible_cost": 0.6826530988689168
+    },
+    {
+      "gpu_multiplier": 0.5,
+      "api_multiplier": 1,
+      "campaign": "E5",
+      "model": "C30",
+      "candidates": 4,
+      "windows": 3,
+      "predicted_cost_minimizers": [
+        "hysteresis_u8_d0_c60__guard"
+      ],
+      "tie_at_released_data_precision": false,
+      "minimizing_set_all_repeats_feasible": {
+        "hysteresis_u8_d0_c60__guard": true
+      },
+      "selected_policy": "hysteresis_u8_d0_c60__guard",
+      "best_observed_feasible_policy": "hysteresis_u8_d0_c60__guard",
+      "selected_all_repeats_feasible": true,
+      "cost_regret_scenario_usd": 0.0,
+      "physical_passes": 6,
+      "physical_runs": 6,
+      "selected_actual_cost": 0.6826530988689168,
+      "best_observed_feasible_cost": 0.6826530988689168
+    },
+    {
+      "gpu_multiplier": 0.5,
+      "api_multiplier": 1,
+      "campaign": "E5",
+      "model": "C_sg",
+      "candidates": 4,
+      "windows": 3,
+      "predicted_cost_minimizers": [
+        "hysteresis_u8_d0_c60",
+        "hysteresis_u8_d0_c60__guard"
+      ],
+      "tie_at_released_data_precision": true,
+      "minimizing_set_all_repeats_feasible": {
+        "hysteresis_u8_d0_c60": true,
+        "hysteresis_u8_d0_c60__guard": true
+      },
+      "selected_policy": "hysteresis_u8_d0_c60",
+      "best_observed_feasible_policy": "hysteresis_u8_d0_c60__guard",
+      "selected_all_repeats_feasible": true,
+      "cost_regret_scenario_usd": 0.0019723327674998625,
+      "physical_passes": 6,
+      "physical_runs": 6,
+      "selected_actual_cost": 0.6846254316364166,
+      "best_observed_feasible_cost": 0.6826530988689168
+    },
+    {
+      "gpu_multiplier": 0.5,
+      "api_multiplier": 1,
+      "campaign": "E6",
+      "model": "L14",
+      "candidates": 2,
+      "windows": 2,
+      "predicted_cost_minimizers": [
+        "hysteresis_u8_d0_c60__guard"
+      ],
+      "tie_at_released_data_precision": false,
+      "minimizing_set_all_repeats_feasible": {
+        "hysteresis_u8_d0_c60__guard": true
+      },
+      "selected_policy": "hysteresis_u8_d0_c60__guard",
+      "best_observed_feasible_policy": "hysteresis_u8_d0_c60__guard",
+      "selected_all_repeats_feasible": true,
+      "cost_regret_scenario_usd": 0.0,
+      "physical_passes": 4,
+      "physical_runs": 4,
+      "selected_actual_cost": 0.895707225526625,
+      "best_observed_feasible_cost": 0.895707225526625
+    },
+    {
+      "gpu_multiplier": 0.5,
+      "api_multiplier": 1,
+      "campaign": "E6",
+      "model": "S14",
+      "candidates": 2,
+      "windows": 2,
+      "predicted_cost_minimizers": [
+        "hysteresis_u8_d0_c60",
+        "hysteresis_u8_d0_c60__guard"
+      ],
+      "tie_at_released_data_precision": true,
+      "minimizing_set_all_repeats_feasible": {
+        "hysteresis_u8_d0_c60": false,
+        "hysteresis_u8_d0_c60__guard": true
+      },
+      "selected_policy": "hysteresis_u8_d0_c60",
+      "best_observed_feasible_policy": "hysteresis_u8_d0_c60__guard",
+      "selected_all_repeats_feasible": false,
+      "cost_regret_scenario_usd": null,
+      "physical_passes": 0,
+      "physical_runs": 4,
+      "selected_actual_cost": 0.8671670773109998
+    },
+    {
+      "gpu_multiplier": 0.5,
+      "api_multiplier": 2,
+      "campaign": "E2",
+      "model": "C",
+      "candidates": 5,
+      "windows": 2,
+      "predicted_cost_minimizers": [
+        "ppo_C30_raw"
+      ],
+      "tie_at_released_data_precision": false,
+      "minimizing_set_all_repeats_feasible": {
+        "ppo_C30_raw": true
+      },
+      "selected_policy": "ppo_C30_raw",
+      "best_observed_feasible_policy": "ppo_C30_raw",
+      "selected_all_repeats_feasible": true,
+      "cost_regret_scenario_usd": 0.0,
+      "physical_passes": 6,
+      "physical_runs": 6,
+      "selected_actual_cost": 1.06324208319275,
+      "best_observed_feasible_cost": 1.06324208319275
+    },
+    {
+      "gpu_multiplier": 0.5,
+      "api_multiplier": 2,
+      "campaign": "E2",
+      "model": "C30",
+      "candidates": 5,
+      "windows": 2,
+      "predicted_cost_minimizers": [
+        "ppo_C_r2"
+      ],
+      "tie_at_released_data_precision": false,
+      "minimizing_set_all_repeats_feasible": {
+        "ppo_C_r2": false
+      },
+      "selected_policy": "ppo_C_r2",
+      "best_observed_feasible_policy": "ppo_C30_raw",
+      "selected_all_repeats_feasible": false,
+      "cost_regret_scenario_usd": null,
+      "physical_passes": 0,
+      "physical_runs": 6,
+      "selected_actual_cost": 2.565187099359417
+    },
+    {
+      "gpu_multiplier": 0.5,
+      "api_multiplier": 2,
+      "campaign": "E3",
+      "model": "C",
+      "candidates": 6,
+      "windows": 2,
+      "predicted_cost_minimizers": [
+        "C30_s105_e0065"
+      ],
+      "tie_at_released_data_precision": false,
+      "minimizing_set_all_repeats_feasible": {
+        "C30_s105_e0065": true
+      },
+      "selected_policy": "C30_s105_e0065",
+      "best_observed_feasible_policy": "C30_s105_e0065",
+      "selected_all_repeats_feasible": true,
+      "cost_regret_scenario_usd": 0.0,
+      "physical_passes": 4,
+      "physical_runs": 4,
+      "selected_actual_cost": 1.005605215748125,
+      "best_observed_feasible_cost": 1.005605215748125
+    },
+    {
+      "gpu_multiplier": 0.5,
+      "api_multiplier": 2,
+      "campaign": "E3",
+      "model": "C30",
+      "candidates": 6,
+      "windows": 2,
+      "predicted_cost_minimizers": [
+        "C30_s105_e0065"
+      ],
+      "tie_at_released_data_precision": false,
+      "minimizing_set_all_repeats_feasible": {
+        "C30_s105_e0065": true
+      },
+      "selected_policy": "C30_s105_e0065",
+      "best_observed_feasible_policy": "C30_s105_e0065",
+      "selected_all_repeats_feasible": true,
+      "cost_regret_scenario_usd": 0.0,
+      "physical_passes": 4,
+      "physical_runs": 4,
+      "selected_actual_cost": 1.005605215748125,
+      "best_observed_feasible_cost": 1.005605215748125
+    },
+    {
+      "gpu_multiplier": 0.5,
+      "api_multiplier": 2,
+      "campaign": "E4",
+      "model": "C",
+      "candidates": 6,
+      "windows": 2,
+      "predicted_cost_minimizers": [
+        "C30_s105_e0035"
+      ],
+      "tie_at_released_data_precision": false,
+      "minimizing_set_all_repeats_feasible": {
+        "C30_s105_e0035": true
+      },
+      "selected_policy": "C30_s105_e0035",
+      "best_observed_feasible_policy": "hysteresis_u8_d0_c60__guard",
+      "selected_all_repeats_feasible": true,
+      "cost_regret_scenario_usd": 0.1569684992045003,
+      "physical_passes": 4,
+      "physical_runs": 4,
+      "selected_actual_cost": 1.1047684722185003,
+      "best_observed_feasible_cost": 0.947799973014
+    },
+    {
+      "gpu_multiplier": 0.5,
+      "api_multiplier": 2,
+      "campaign": "E4",
+      "model": "C30",
+      "candidates": 6,
+      "windows": 2,
+      "predicted_cost_minimizers": [
+        "hysteresis_u8_d0_c60__guard"
+      ],
+      "tie_at_released_data_precision": false,
+      "minimizing_set_all_repeats_feasible": {
+        "hysteresis_u8_d0_c60__guard": true
+      },
+      "selected_policy": "hysteresis_u8_d0_c60__guard",
+      "best_observed_feasible_policy": "hysteresis_u8_d0_c60__guard",
+      "selected_all_repeats_feasible": true,
+      "cost_regret_scenario_usd": 0.0,
+      "physical_passes": 4,
+      "physical_runs": 4,
+      "selected_actual_cost": 0.947799973014,
+      "best_observed_feasible_cost": 0.947799973014
+    },
+    {
+      "gpu_multiplier": 0.5,
+      "api_multiplier": 2,
+      "campaign": "E4",
+      "model": "C_sg",
+      "candidates": 6,
+      "windows": 2,
+      "predicted_cost_minimizers": [
+        "hysteresis_u8_d0_c60__guard"
+      ],
+      "tie_at_released_data_precision": false,
+      "minimizing_set_all_repeats_feasible": {
+        "hysteresis_u8_d0_c60__guard": true
+      },
+      "selected_policy": "hysteresis_u8_d0_c60__guard",
+      "best_observed_feasible_policy": "hysteresis_u8_d0_c60__guard",
+      "selected_all_repeats_feasible": true,
+      "cost_regret_scenario_usd": 0.0,
+      "physical_passes": 4,
+      "physical_runs": 4,
+      "selected_actual_cost": 0.947799973014,
+      "best_observed_feasible_cost": 0.947799973014
+    },
+    {
+      "gpu_multiplier": 0.5,
+      "api_multiplier": 2,
+      "campaign": "E5",
+      "model": "C",
+      "candidates": 4,
+      "windows": 3,
+      "predicted_cost_minimizers": [
+        "ppo_C_s101"
+      ],
+      "tie_at_released_data_precision": false,
+      "minimizing_set_all_repeats_feasible": {
+        "ppo_C_s101": true
+      },
+      "selected_policy": "ppo_C_s101",
+      "best_observed_feasible_policy": "hysteresis_u8_d0_c60__guard",
+      "selected_all_repeats_feasible": true,
+      "cost_regret_scenario_usd": 0.37551703736499986,
+      "physical_passes": 6,
+      "physical_runs": 6,
+      "selected_actual_cost": 1.2710066362339165,
+      "best_observed_feasible_cost": 0.8954895988689167
+    },
+    {
+      "gpu_multiplier": 0.5,
+      "api_multiplier": 2,
+      "campaign": "E5",
+      "model": "C30",
+      "candidates": 4,
+      "windows": 3,
+      "predicted_cost_minimizers": [
+        "hysteresis_u8_d0_c60__guard"
+      ],
+      "tie_at_released_data_precision": false,
+      "minimizing_set_all_repeats_feasible": {
+        "hysteresis_u8_d0_c60__guard": true
+      },
+      "selected_policy": "hysteresis_u8_d0_c60__guard",
+      "best_observed_feasible_policy": "hysteresis_u8_d0_c60__guard",
+      "selected_all_repeats_feasible": true,
+      "cost_regret_scenario_usd": 0.0,
+      "physical_passes": 6,
+      "physical_runs": 6,
+      "selected_actual_cost": 0.8954895988689167,
+      "best_observed_feasible_cost": 0.8954895988689167
+    },
+    {
+      "gpu_multiplier": 0.5,
+      "api_multiplier": 2,
+      "campaign": "E5",
+      "model": "C_sg",
+      "candidates": 4,
+      "windows": 3,
+      "predicted_cost_minimizers": [
+        "hysteresis_u8_d0_c60",
+        "hysteresis_u8_d0_c60__guard"
+      ],
+      "tie_at_released_data_precision": true,
+      "minimizing_set_all_repeats_feasible": {
+        "hysteresis_u8_d0_c60": true,
+        "hysteresis_u8_d0_c60__guard": true
+      },
+      "selected_policy": "hysteresis_u8_d0_c60",
+      "best_observed_feasible_policy": "hysteresis_u8_d0_c60__guard",
+      "selected_all_repeats_feasible": true,
+      "cost_regret_scenario_usd": 0.002461499434166625,
+      "physical_passes": 6,
+      "physical_runs": 6,
+      "selected_actual_cost": 0.8979510983030833,
+      "best_observed_feasible_cost": 0.8954895988689167
+    },
+    {
+      "gpu_multiplier": 0.5,
+      "api_multiplier": 2,
+      "campaign": "E6",
+      "model": "L14",
+      "candidates": 2,
+      "windows": 2,
+      "predicted_cost_minimizers": [
+        "hysteresis_u8_d0_c60__guard"
+      ],
+      "tie_at_released_data_precision": false,
+      "minimizing_set_all_repeats_feasible": {
+        "hysteresis_u8_d0_c60__guard": true
+      },
+      "selected_policy": "hysteresis_u8_d0_c60__guard",
+      "best_observed_feasible_policy": "hysteresis_u8_d0_c60__guard",
+      "selected_all_repeats_feasible": true,
+      "cost_regret_scenario_usd": 0.0,
+      "physical_passes": 4,
+      "physical_runs": 4,
+      "selected_actual_cost": 1.048741225526625,
+      "best_observed_feasible_cost": 1.048741225526625
+    },
+    {
+      "gpu_multiplier": 0.5,
+      "api_multiplier": 2,
+      "campaign": "E6",
+      "model": "S14",
+      "candidates": 2,
+      "windows": 2,
+      "predicted_cost_minimizers": [
+        "hysteresis_u8_d0_c60",
+        "hysteresis_u8_d0_c60__guard"
+      ],
+      "tie_at_released_data_precision": true,
+      "minimizing_set_all_repeats_feasible": {
+        "hysteresis_u8_d0_c60": false,
+        "hysteresis_u8_d0_c60__guard": true
+      },
+      "selected_policy": "hysteresis_u8_d0_c60",
+      "best_observed_feasible_policy": "hysteresis_u8_d0_c60__guard",
+      "selected_all_repeats_feasible": false,
+      "cost_regret_scenario_usd": null,
+      "physical_passes": 0,
+      "physical_runs": 4,
+      "selected_actual_cost": 1.013883827311
+    },
+    {
+      "gpu_multiplier": 1,
+      "api_multiplier": 0.5,
+      "campaign": "E2",
+      "model": "C",
+      "candidates": 5,
+      "windows": 2,
+      "predicted_cost_minimizers": [
+        "ppo_C30_raw"
+      ],
+      "tie_at_released_data_precision": false,
+      "minimizing_set_all_repeats_feasible": {
+        "ppo_C30_raw": true
+      },
+      "selected_policy": "ppo_C30_raw",
+      "best_observed_feasible_policy": "ppo_C30_raw",
+      "selected_all_repeats_feasible": true,
+      "cost_regret_scenario_usd": 0.0,
+      "physical_passes": 6,
+      "physical_runs": 6,
+      "selected_actual_cost": 2.0694223330521666,
+      "best_observed_feasible_cost": 2.0694223330521666
+    },
+    {
+      "gpu_multiplier": 1,
+      "api_multiplier": 0.5,
+      "campaign": "E2",
+      "model": "C30",
+      "candidates": 5,
+      "windows": 2,
+      "predicted_cost_minimizers": [
+        "ppo_C_r2"
+      ],
+      "tie_at_released_data_precision": false,
+      "minimizing_set_all_repeats_feasible": {
+        "ppo_C_r2": false
+      },
+      "selected_policy": "ppo_C_r2",
+      "best_observed_feasible_policy": "ppo_C30_raw",
+      "selected_all_repeats_feasible": false,
+      "cost_regret_scenario_usd": null,
+      "physical_passes": 0,
+      "physical_runs": 6,
+      "selected_actual_cost": 2.6561112820521666
+    },
+    {
+      "gpu_multiplier": 1,
+      "api_multiplier": 0.5,
+      "campaign": "E3",
+      "model": "C",
+      "candidates": 6,
+      "windows": 2,
+      "predicted_cost_minimizers": [
+        "C30_s105_e0035"
+      ],
+      "tie_at_released_data_precision": false,
+      "minimizing_set_all_repeats_feasible": {
+        "C30_s105_e0035": true
+      },
+      "selected_policy": "C30_s105_e0035",
+      "best_observed_feasible_policy": "C30_s105_e0035",
+      "selected_all_repeats_feasible": true,
+      "cost_regret_scenario_usd": 0.0,
+      "physical_passes": 4,
+      "physical_runs": 4,
+      "selected_actual_cost": 1.833803747664,
+      "best_observed_feasible_cost": 1.833803747664
+    },
+    {
+      "gpu_multiplier": 1,
+      "api_multiplier": 0.5,
+      "campaign": "E3",
+      "model": "C30",
+      "candidates": 6,
+      "windows": 2,
+      "predicted_cost_minimizers": [
+        "C30_s105_e0035"
+      ],
+      "tie_at_released_data_precision": false,
+      "minimizing_set_all_repeats_feasible": {
+        "C30_s105_e0035": true
+      },
+      "selected_policy": "C30_s105_e0035",
+      "best_observed_feasible_policy": "C30_s105_e0035",
+      "selected_all_repeats_feasible": true,
+      "cost_regret_scenario_usd": 0.0,
+      "physical_passes": 4,
+      "physical_runs": 4,
+      "selected_actual_cost": 1.833803747664,
+      "best_observed_feasible_cost": 1.833803747664
+    },
+    {
+      "gpu_multiplier": 1,
+      "api_multiplier": 0.5,
+      "campaign": "E4",
+      "model": "C",
+      "candidates": 6,
+      "windows": 2,
+      "predicted_cost_minimizers": [
+        "C30_s105_e0035"
+      ],
+      "tie_at_released_data_precision": false,
+      "minimizing_set_all_repeats_feasible": {
+        "C30_s105_e0035": true
+      },
+      "selected_policy": "C30_s105_e0035",
+      "best_observed_feasible_policy": "hysteresis_u8_d0_c60__guard",
+      "selected_all_repeats_feasible": true,
+      "cost_regret_scenario_usd": 0.7585726234090002,
+      "physical_passes": 4,
+      "physical_runs": 4,
+      "selected_actual_cost": 1.8299056944370002,
+      "best_observed_feasible_cost": 1.071333071028
+    },
+    {
+      "gpu_multiplier": 1,
+      "api_multiplier": 0.5,
+      "campaign": "E4",
+      "model": "C30",
+      "candidates": 6,
+      "windows": 2,
+      "predicted_cost_minimizers": [
+        "hysteresis_u8_d0_c60__guard"
+      ],
+      "tie_at_released_data_precision": false,
+      "minimizing_set_all_repeats_feasible": {
+        "hysteresis_u8_d0_c60__guard": true
+      },
+      "selected_policy": "hysteresis_u8_d0_c60__guard",
+      "best_observed_feasible_policy": "hysteresis_u8_d0_c60__guard",
+      "selected_all_repeats_feasible": true,
+      "cost_regret_scenario_usd": 0.0,
+      "physical_passes": 4,
+      "physical_runs": 4,
+      "selected_actual_cost": 1.071333071028,
+      "best_observed_feasible_cost": 1.071333071028
+    },
+    {
+      "gpu_multiplier": 1,
+      "api_multiplier": 0.5,
+      "campaign": "E4",
+      "model": "C_sg",
+      "candidates": 6,
+      "windows": 2,
+      "predicted_cost_minimizers": [
+        "hysteresis_u8_d0_c60__guard"
+      ],
+      "tie_at_released_data_precision": false,
+      "minimizing_set_all_repeats_feasible": {
+        "hysteresis_u8_d0_c60__guard": true
+      },
+      "selected_policy": "hysteresis_u8_d0_c60__guard",
+      "best_observed_feasible_policy": "hysteresis_u8_d0_c60__guard",
+      "selected_all_repeats_feasible": true,
+      "cost_regret_scenario_usd": 0.0,
+      "physical_passes": 4,
+      "physical_runs": 4,
+      "selected_actual_cost": 1.071333071028,
+      "best_observed_feasible_cost": 1.071333071028
+    },
+    {
+      "gpu_multiplier": 1,
+      "api_multiplier": 0.5,
+      "campaign": "E5",
+      "model": "C",
+      "candidates": 4,
+      "windows": 3,
+      "predicted_cost_minimizers": [
+        "ppo_C_s101"
+      ],
+      "tie_at_released_data_precision": false,
+      "minimizing_set_all_repeats_feasible": {
+        "ppo_C_s101": true
+      },
+      "selected_policy": "ppo_C_s101",
+      "best_observed_feasible_policy": "hysteresis_u8_d0_c60__guard",
+      "selected_all_repeats_feasible": true,
+      "cost_regret_scenario_usd": 1.1020329080633333,
+      "physical_passes": 6,
+      "physical_runs": 6,
+      "selected_actual_cost": 2.1110843558011667,
+      "best_observed_feasible_cost": 1.0090514477378334
+    },
+    {
+      "gpu_multiplier": 1,
+      "api_multiplier": 0.5,
+      "campaign": "E5",
+      "model": "C30",
+      "candidates": 4,
+      "windows": 3,
+      "predicted_cost_minimizers": [
+        "hysteresis_u8_d0_c60__guard"
+      ],
+      "tie_at_released_data_precision": false,
+      "minimizing_set_all_repeats_feasible": {
+        "hysteresis_u8_d0_c60__guard": true
+      },
+      "selected_policy": "hysteresis_u8_d0_c60__guard",
+      "best_observed_feasible_policy": "hysteresis_u8_d0_c60__guard",
+      "selected_all_repeats_feasible": true,
+      "cost_regret_scenario_usd": 0.0,
+      "physical_passes": 6,
+      "physical_runs": 6,
+      "selected_actual_cost": 1.0090514477378334,
+      "best_observed_feasible_cost": 1.0090514477378334
+    },
+    {
+      "gpu_multiplier": 1,
+      "api_multiplier": 0.5,
+      "campaign": "E5",
+      "model": "C_sg",
+      "candidates": 4,
+      "windows": 3,
+      "predicted_cost_minimizers": [
+        "hysteresis_u8_d0_c60",
+        "hysteresis_u8_d0_c60__guard"
+      ],
+      "tie_at_released_data_precision": true,
+      "minimizing_set_all_repeats_feasible": {
+        "hysteresis_u8_d0_c60": true,
+        "hysteresis_u8_d0_c60__guard": true
+      },
+      "selected_policy": "hysteresis_u8_d0_c60",
+      "best_observed_feasible_policy": "hysteresis_u8_d0_c60__guard",
+      "selected_all_repeats_feasible": true,
+      "cost_regret_scenario_usd": 0.0032109155349997476,
+      "physical_passes": 6,
+      "physical_runs": 6,
+      "selected_actual_cost": 1.0122623632728331,
+      "best_observed_feasible_cost": 1.0090514477378334
+    },
+    {
+      "gpu_multiplier": 1,
+      "api_multiplier": 0.5,
+      "campaign": "E6",
+      "model": "L14",
+      "candidates": 2,
+      "windows": 2,
+      "predicted_cost_minimizers": [
+        "hysteresis_u8_d0_c60__guard"
+      ],
+      "tie_at_released_data_precision": false,
+      "minimizing_set_all_repeats_feasible": {
+        "hysteresis_u8_d0_c60__guard": true
+      },
+      "selected_policy": "hysteresis_u8_d0_c60__guard",
+      "best_observed_feasible_policy": "hysteresis_u8_d0_c60__guard",
+      "selected_all_repeats_feasible": true,
+      "cost_regret_scenario_usd": 0.0,
+      "physical_passes": 4,
+      "physical_runs": 4,
+      "selected_actual_cost": 1.5253634510532499,
+      "best_observed_feasible_cost": 1.5253634510532499
+    },
+    {
+      "gpu_multiplier": 1,
+      "api_multiplier": 0.5,
+      "campaign": "E6",
+      "model": "S14",
+      "candidates": 2,
+      "windows": 2,
+      "predicted_cost_minimizers": [
+        "hysteresis_u8_d0_c60",
+        "hysteresis_u8_d0_c60__guard"
+      ],
+      "tie_at_released_data_precision": true,
+      "minimizing_set_all_repeats_feasible": {
+        "hysteresis_u8_d0_c60": false,
+        "hysteresis_u8_d0_c60__guard": true
+      },
+      "selected_policy": "hysteresis_u8_d0_c60",
+      "best_observed_feasible_policy": "hysteresis_u8_d0_c60__guard",
+      "selected_all_repeats_feasible": false,
+      "cost_regret_scenario_usd": null,
+      "physical_passes": 0,
+      "physical_runs": 4,
+      "selected_actual_cost": 1.441509029622
+    },
+    {
+      "gpu_multiplier": 1,
+      "api_multiplier": 1,
+      "campaign": "E2",
+      "model": "C",
+      "candidates": 5,
+      "windows": 2,
+      "predicted_cost_minimizers": [
+        "ppo_C30_raw"
+      ],
+      "tie_at_released_data_precision": false,
+      "minimizing_set_all_repeats_feasible": {
+        "ppo_C30_raw": true
+      },
+      "selected_policy": "ppo_C30_raw",
+      "best_observed_feasible_policy": "ppo_C30_raw",
+      "selected_all_repeats_feasible": true,
+      "cost_regret_scenario_usd": 0.0,
+      "physical_passes": 6,
+      "physical_runs": 6,
+      "selected_actual_cost": 2.0769311663855,
+      "best_observed_feasible_cost": 2.0769311663855
+    },
+    {
+      "gpu_multiplier": 1,
+      "api_multiplier": 1,
+      "campaign": "E2",
+      "model": "C30",
+      "candidates": 5,
+      "windows": 2,
+      "predicted_cost_minimizers": [
+        "ppo_C_r2"
+      ],
+      "tie_at_released_data_precision": false,
+      "minimizing_set_all_repeats_feasible": {
+        "ppo_C_r2": false
+      },
+      "selected_policy": "ppo_C_r2",
+      "best_observed_feasible_policy": "ppo_C30_raw",
+      "selected_all_repeats_feasible": false,
+      "cost_regret_scenario_usd": null,
+      "physical_passes": 0,
+      "physical_runs": 6,
+      "selected_actual_cost": 2.8397916987188334
+    },
+    {
+      "gpu_multiplier": 1,
+      "api_multiplier": 1,
+      "campaign": "E3",
+      "model": "C",
+      "candidates": 6,
+      "windows": 2,
+      "predicted_cost_minimizers": [
+        "C30_s105_e0065"
+      ],
+      "tie_at_released_data_precision": false,
+      "minimizing_set_all_repeats_feasible": {
+        "C30_s105_e0065": true
+      },
+      "selected_policy": "C30_s105_e0065",
+      "best_observed_feasible_policy": "C30_s105_e0035",
+      "selected_all_repeats_feasible": true,
+      "cost_regret_scenario_usd": 0.05099993383224999,
+      "physical_passes": 4,
+      "physical_runs": 4,
+      "selected_actual_cost": 1.94232493149625,
+      "best_observed_feasible_cost": 1.891324997664
+    },
+    {
+      "gpu_multiplier": 1,
+      "api_multiplier": 1,
+      "campaign": "E3",
+      "model": "C30",
+      "candidates": 6,
+      "windows": 2,
+      "predicted_cost_minimizers": [
+        "C30_s105_e0035"
+      ],
+      "tie_at_released_data_precision": false,
+      "minimizing_set_all_repeats_feasible": {
+        "C30_s105_e0035": true
+      },
+      "selected_policy": "C30_s105_e0035",
+      "best_observed_feasible_policy": "C30_s105_e0035",
+      "selected_all_repeats_feasible": true,
+      "cost_regret_scenario_usd": 0.0,
+      "physical_passes": 4,
+      "physical_runs": 4,
+      "selected_actual_cost": 1.891324997664,
+      "best_observed_feasible_cost": 1.891324997664
+    },
+    {
+      "gpu_multiplier": 1,
+      "api_multiplier": 1,
+      "campaign": "E4",
+      "model": "C",
+      "candidates": 6,
+      "windows": 2,
+      "predicted_cost_minimizers": [
+        "C30_s105_e0035"
+      ],
+      "tie_at_released_data_precision": false,
+      "minimizing_set_all_repeats_feasible": {
+        "C30_s105_e0035": true
+      },
+      "selected_policy": "C30_s105_e0035",
+      "best_observed_feasible_policy": "hysteresis_u8_d0_c60__guard",
+      "selected_all_repeats_feasible": true,
+      "cost_regret_scenario_usd": 0.6978032484090002,
+      "physical_passes": 4,
+      "physical_runs": 4,
+      "selected_actual_cost": 1.881424444437,
+      "best_observed_feasible_cost": 1.1836211960279999
+    },
+    {
+      "gpu_multiplier": 1,
+      "api_multiplier": 1,
+      "campaign": "E4",
+      "model": "C30",
+      "candidates": 6,
+      "windows": 2,
+      "predicted_cost_minimizers": [
+        "hysteresis_u8_d0_c60__guard"
+      ],
+      "tie_at_released_data_precision": false,
+      "minimizing_set_all_repeats_feasible": {
+        "hysteresis_u8_d0_c60__guard": true
+      },
+      "selected_policy": "hysteresis_u8_d0_c60__guard",
+      "best_observed_feasible_policy": "hysteresis_u8_d0_c60__guard",
+      "selected_all_repeats_feasible": true,
+      "cost_regret_scenario_usd": 0.0,
+      "physical_passes": 4,
+      "physical_runs": 4,
+      "selected_actual_cost": 1.1836211960279999,
+      "best_observed_feasible_cost": 1.1836211960279999
+    },
+    {
+      "gpu_multiplier": 1,
+      "api_multiplier": 1,
+      "campaign": "E4",
+      "model": "C_sg",
+      "candidates": 6,
+      "windows": 2,
+      "predicted_cost_minimizers": [
+        "hysteresis_u8_d0_c60__guard"
+      ],
+      "tie_at_released_data_precision": false,
+      "minimizing_set_all_repeats_feasible": {
+        "hysteresis_u8_d0_c60__guard": true
+      },
+      "selected_policy": "hysteresis_u8_d0_c60__guard",
+      "best_observed_feasible_policy": "hysteresis_u8_d0_c60__guard",
+      "selected_all_repeats_feasible": true,
+      "cost_regret_scenario_usd": 0.0,
+      "physical_passes": 4,
+      "physical_runs": 4,
+      "selected_actual_cost": 1.1836211960279999,
+      "best_observed_feasible_cost": 1.1836211960279999
+    },
+    {
+      "gpu_multiplier": 1,
+      "api_multiplier": 1,
+      "campaign": "E5",
+      "model": "C",
+      "candidates": 4,
+      "windows": 3,
+      "predicted_cost_minimizers": [
+        "ppo_C_s101"
+      ],
+      "tie_at_released_data_precision": false,
+      "minimizing_set_all_repeats_feasible": {
+        "ppo_C_s101": true
+      },
+      "selected_policy": "ppo_C_s101",
+      "best_observed_feasible_policy": "hysteresis_u8_d0_c60__guard",
+      "selected_all_repeats_feasible": true,
+      "cost_regret_scenario_usd": 1.05003307473,
+      "physical_passes": 6,
+      "physical_runs": 6,
+      "selected_actual_cost": 2.1655027724678333,
+      "best_observed_feasible_cost": 1.1154696977378333
+    },
+    {
+      "gpu_multiplier": 1,
+      "api_multiplier": 1,
+      "campaign": "E5",
+      "model": "C30",
+      "candidates": 4,
+      "windows": 3,
+      "predicted_cost_minimizers": [
+        "hysteresis_u8_d0_c60__guard"
+      ],
+      "tie_at_released_data_precision": false,
+      "minimizing_set_all_repeats_feasible": {
+        "hysteresis_u8_d0_c60__guard": true
+      },
+      "selected_policy": "hysteresis_u8_d0_c60__guard",
+      "best_observed_feasible_policy": "hysteresis_u8_d0_c60__guard",
+      "selected_all_repeats_feasible": true,
+      "cost_regret_scenario_usd": 0.0,
+      "physical_passes": 6,
+      "physical_runs": 6,
+      "selected_actual_cost": 1.1154696977378333,
+      "best_observed_feasible_cost": 1.1154696977378333
+    },
+    {
+      "gpu_multiplier": 1,
+      "api_multiplier": 1,
+      "campaign": "E5",
+      "model": "C_sg",
+      "candidates": 4,
+      "windows": 3,
+      "predicted_cost_minimizers": [
+        "hysteresis_u8_d0_c60",
+        "hysteresis_u8_d0_c60__guard"
+      ],
+      "tie_at_released_data_precision": true,
+      "minimizing_set_all_repeats_feasible": {
+        "hysteresis_u8_d0_c60": true,
+        "hysteresis_u8_d0_c60__guard": true
+      },
+      "selected_policy": "hysteresis_u8_d0_c60",
+      "best_observed_feasible_policy": "hysteresis_u8_d0_c60__guard",
+      "selected_all_repeats_feasible": true,
+      "cost_regret_scenario_usd": 0.0034554988683332954,
+      "physical_passes": 6,
+      "physical_runs": 6,
+      "selected_actual_cost": 1.1189251966061666,
+      "best_observed_feasible_cost": 1.1154696977378333
+    },
+    {
+      "gpu_multiplier": 1,
+      "api_multiplier": 1,
+      "campaign": "E6",
+      "model": "L14",
+      "candidates": 2,
+      "windows": 2,
+      "predicted_cost_minimizers": [
+        "hysteresis_u8_d0_c60__guard"
+      ],
+      "tie_at_released_data_precision": false,
+      "minimizing_set_all_repeats_feasible": {
+        "hysteresis_u8_d0_c60__guard": true
+      },
+      "selected_policy": "hysteresis_u8_d0_c60__guard",
+      "best_observed_feasible_policy": "hysteresis_u8_d0_c60__guard",
+      "selected_all_repeats_feasible": true,
+      "cost_regret_scenario_usd": 0.0,
+      "physical_passes": 4,
+      "physical_runs": 4,
+      "selected_actual_cost": 1.6018804510532498,
+      "best_observed_feasible_cost": 1.6018804510532498
+    },
+    {
+      "gpu_multiplier": 1,
+      "api_multiplier": 1,
+      "campaign": "E6",
+      "model": "S14",
+      "candidates": 2,
+      "windows": 2,
+      "predicted_cost_minimizers": [
+        "hysteresis_u8_d0_c60",
+        "hysteresis_u8_d0_c60__guard"
+      ],
+      "tie_at_released_data_precision": true,
+      "minimizing_set_all_repeats_feasible": {
+        "hysteresis_u8_d0_c60": false,
+        "hysteresis_u8_d0_c60__guard": true
+      },
+      "selected_policy": "hysteresis_u8_d0_c60",
+      "best_observed_feasible_policy": "hysteresis_u8_d0_c60__guard",
+      "selected_all_repeats_feasible": false,
+      "cost_regret_scenario_usd": null,
+      "physical_passes": 0,
+      "physical_runs": 4,
+      "selected_actual_cost": 1.5148674046219999
+    },
+    {
+      "gpu_multiplier": 1,
+      "api_multiplier": 2,
+      "campaign": "E2",
+      "model": "C",
+      "candidates": 5,
+      "windows": 2,
+      "predicted_cost_minimizers": [
+        "ppo_C30_raw"
+      ],
+      "tie_at_released_data_precision": false,
+      "minimizing_set_all_repeats_feasible": {
+        "ppo_C30_raw": true
+      },
+      "selected_policy": "ppo_C30_raw",
+      "best_observed_feasible_policy": "ppo_C30_raw",
+      "selected_all_repeats_feasible": true,
+      "cost_regret_scenario_usd": 0.0,
+      "physical_passes": 6,
+      "physical_runs": 6,
+      "selected_actual_cost": 2.0919488330521667,
+      "best_observed_feasible_cost": 2.0919488330521667
+    },
+    {
+      "gpu_multiplier": 1,
+      "api_multiplier": 2,
+      "campaign": "E2",
+      "model": "C30",
+      "candidates": 5,
+      "windows": 2,
+      "predicted_cost_minimizers": [
+        "ppo_C_r2"
+      ],
+      "tie_at_released_data_precision": false,
+      "minimizing_set_all_repeats_feasible": {
+        "ppo_C_r2": false
+      },
+      "selected_policy": "ppo_C_r2",
+      "best_observed_feasible_policy": "ppo_C30_raw",
+      "selected_all_repeats_feasible": false,
+      "cost_regret_scenario_usd": null,
+      "physical_passes": 0,
+      "physical_runs": 6,
+      "selected_actual_cost": 3.207152532052167
+    },
+    {
+      "gpu_multiplier": 1,
+      "api_multiplier": 2,
+      "campaign": "E3",
+      "model": "C",
+      "candidates": 6,
+      "windows": 2,
+      "predicted_cost_minimizers": [
+        "C30_s105_e0065"
+      ],
+      "tie_at_released_data_precision": false,
+      "minimizing_set_all_repeats_feasible": {
+        "C30_s105_e0065": true
+      },
+      "selected_policy": "C30_s105_e0065",
+      "best_observed_feasible_policy": "C30_s105_e0065",
+      "selected_all_repeats_feasible": true,
+      "cost_regret_scenario_usd": 0.0,
+      "physical_passes": 4,
+      "physical_runs": 4,
+      "selected_actual_cost": 1.9639534314962501,
+      "best_observed_feasible_cost": 1.9639534314962501
+    },
+    {
+      "gpu_multiplier": 1,
+      "api_multiplier": 2,
+      "campaign": "E3",
+      "model": "C30",
+      "candidates": 6,
+      "windows": 2,
+      "predicted_cost_minimizers": [
+        "C30_s105_e0065"
+      ],
+      "tie_at_released_data_precision": false,
+      "minimizing_set_all_repeats_feasible": {
+        "C30_s105_e0065": true
+      },
+      "selected_policy": "C30_s105_e0065",
+      "best_observed_feasible_policy": "C30_s105_e0065",
+      "selected_all_repeats_feasible": true,
+      "cost_regret_scenario_usd": 0.0,
+      "physical_passes": 4,
+      "physical_runs": 4,
+      "selected_actual_cost": 1.9639534314962501,
+      "best_observed_feasible_cost": 1.9639534314962501
+    },
+    {
+      "gpu_multiplier": 1,
+      "api_multiplier": 2,
+      "campaign": "E4",
+      "model": "C",
+      "candidates": 6,
+      "windows": 2,
+      "predicted_cost_minimizers": [
+        "C30_s105_e0035"
+      ],
+      "tie_at_released_data_precision": false,
+      "minimizing_set_all_repeats_feasible": {
+        "C30_s105_e0035": true
+      },
+      "selected_policy": "C30_s105_e0035",
+      "best_observed_feasible_policy": "hysteresis_u8_d0_c60__guard",
+      "selected_all_repeats_feasible": true,
+      "cost_regret_scenario_usd": 0.5762644984090004,
+      "physical_passes": 4,
+      "physical_runs": 4,
+      "selected_actual_cost": 1.9844619444370002,
+      "best_observed_feasible_cost": 1.4081974460279998
+    },
+    {
+      "gpu_multiplier": 1,
+      "api_multiplier": 2,
+      "campaign": "E4",
+      "model": "C30",
+      "candidates": 6,
+      "windows": 2,
+      "predicted_cost_minimizers": [
+        "hysteresis_u8_d0_c60__guard"
+      ],
+      "tie_at_released_data_precision": false,
+      "minimizing_set_all_repeats_feasible": {
+        "hysteresis_u8_d0_c60__guard": true
+      },
+      "selected_policy": "hysteresis_u8_d0_c60__guard",
+      "best_observed_feasible_policy": "hysteresis_u8_d0_c60__guard",
+      "selected_all_repeats_feasible": true,
+      "cost_regret_scenario_usd": 0.0,
+      "physical_passes": 4,
+      "physical_runs": 4,
+      "selected_actual_cost": 1.4081974460279998,
+      "best_observed_feasible_cost": 1.4081974460279998
+    },
+    {
+      "gpu_multiplier": 1,
+      "api_multiplier": 2,
+      "campaign": "E4",
+      "model": "C_sg",
+      "candidates": 6,
+      "windows": 2,
+      "predicted_cost_minimizers": [
+        "hysteresis_u8_d0_c60__guard"
+      ],
+      "tie_at_released_data_precision": false,
+      "minimizing_set_all_repeats_feasible": {
+        "hysteresis_u8_d0_c60__guard": true
+      },
+      "selected_policy": "hysteresis_u8_d0_c60__guard",
+      "best_observed_feasible_policy": "hysteresis_u8_d0_c60__guard",
+      "selected_all_repeats_feasible": true,
+      "cost_regret_scenario_usd": 0.0,
+      "physical_passes": 4,
+      "physical_runs": 4,
+      "selected_actual_cost": 1.4081974460279998,
+      "best_observed_feasible_cost": 1.4081974460279998
+    },
+    {
+      "gpu_multiplier": 1,
+      "api_multiplier": 2,
+      "campaign": "E5",
+      "model": "C",
+      "candidates": 4,
+      "windows": 3,
+      "predicted_cost_minimizers": [
+        "ppo_C_s101"
+      ],
+      "tie_at_released_data_precision": false,
+      "minimizing_set_all_repeats_feasible": {
+        "ppo_C_s101": true
+      },
+      "selected_policy": "ppo_C_s101",
+      "best_observed_feasible_policy": "hysteresis_u8_d0_c60__guard",
+      "selected_all_repeats_feasible": true,
+      "cost_regret_scenario_usd": 0.946033408063333,
+      "physical_passes": 6,
+      "physical_runs": 6,
+      "selected_actual_cost": 2.2743396058011665,
+      "best_observed_feasible_cost": 1.3283061977378334
+    },
+    {
+      "gpu_multiplier": 1,
+      "api_multiplier": 2,
+      "campaign": "E5",
+      "model": "C30",
+      "candidates": 4,
+      "windows": 3,
+      "predicted_cost_minimizers": [
+        "hysteresis_u8_d0_c60__guard"
+      ],
+      "tie_at_released_data_precision": false,
+      "minimizing_set_all_repeats_feasible": {
+        "hysteresis_u8_d0_c60__guard": true
+      },
+      "selected_policy": "hysteresis_u8_d0_c60__guard",
+      "best_observed_feasible_policy": "hysteresis_u8_d0_c60__guard",
+      "selected_all_repeats_feasible": true,
+      "cost_regret_scenario_usd": 0.0,
+      "physical_passes": 6,
+      "physical_runs": 6,
+      "selected_actual_cost": 1.3283061977378334,
+      "best_observed_feasible_cost": 1.3283061977378334
+    },
+    {
+      "gpu_multiplier": 1,
+      "api_multiplier": 2,
+      "campaign": "E5",
+      "model": "C_sg",
+      "candidates": 4,
+      "windows": 3,
+      "predicted_cost_minimizers": [
+        "hysteresis_u8_d0_c60",
+        "hysteresis_u8_d0_c60__guard"
+      ],
+      "tie_at_released_data_precision": true,
+      "minimizing_set_all_repeats_feasible": {
+        "hysteresis_u8_d0_c60": true,
+        "hysteresis_u8_d0_c60__guard": true
+      },
+      "selected_policy": "hysteresis_u8_d0_c60",
+      "best_observed_feasible_policy": "hysteresis_u8_d0_c60__guard",
+      "selected_all_repeats_feasible": true,
+      "cost_regret_scenario_usd": 0.003944665534999725,
+      "physical_passes": 6,
+      "physical_runs": 6,
+      "selected_actual_cost": 1.3322508632728332,
+      "best_observed_feasible_cost": 1.3283061977378334
+    },
+    {
+      "gpu_multiplier": 1,
+      "api_multiplier": 2,
+      "campaign": "E6",
+      "model": "L14",
+      "candidates": 2,
+      "windows": 2,
+      "predicted_cost_minimizers": [
+        "hysteresis_u8_d0_c60__guard"
+      ],
+      "tie_at_released_data_precision": false,
+      "minimizing_set_all_repeats_feasible": {
+        "hysteresis_u8_d0_c60__guard": true
+      },
+      "selected_policy": "hysteresis_u8_d0_c60__guard",
+      "best_observed_feasible_policy": "hysteresis_u8_d0_c60__guard",
+      "selected_all_repeats_feasible": true,
+      "cost_regret_scenario_usd": 0.0,
+      "physical_passes": 4,
+      "physical_runs": 4,
+      "selected_actual_cost": 1.75491445105325,
+      "best_observed_feasible_cost": 1.75491445105325
+    },
+    {
+      "gpu_multiplier": 1,
+      "api_multiplier": 2,
+      "campaign": "E6",
+      "model": "S14",
+      "candidates": 2,
+      "windows": 2,
+      "predicted_cost_minimizers": [
+        "hysteresis_u8_d0_c60",
+        "hysteresis_u8_d0_c60__guard"
+      ],
+      "tie_at_released_data_precision": true,
+      "minimizing_set_all_repeats_feasible": {
+        "hysteresis_u8_d0_c60": false,
+        "hysteresis_u8_d0_c60__guard": true
+      },
+      "selected_policy": "hysteresis_u8_d0_c60",
+      "best_observed_feasible_policy": "hysteresis_u8_d0_c60__guard",
+      "selected_all_repeats_feasible": false,
+      "cost_regret_scenario_usd": null,
+      "physical_passes": 0,
+      "physical_runs": 4,
+      "selected_actual_cost": 1.6615841546219998
+    },
+    {
+      "gpu_multiplier": 2,
+      "api_multiplier": 0.5,
+      "campaign": "E2",
+      "model": "C",
+      "candidates": 5,
+      "windows": 2,
+      "predicted_cost_minimizers": [
+        "ppo_C_s101"
+      ],
+      "tie_at_released_data_precision": false,
+      "minimizing_set_all_repeats_feasible": {
+        "ppo_C_s101": true
+      },
+      "selected_policy": "ppo_C_s101",
+      "best_observed_feasible_policy": "ppo_C30_raw",
+      "selected_all_repeats_feasible": true,
+      "cost_regret_scenario_usd": 0.37787708753166793,
+      "physical_passes": 6,
+      "physical_runs": 6,
+      "selected_actual_cost": 4.5047129203026675,
+      "best_observed_feasible_cost": 4.1268358327709995
+    },
+    {
+      "gpu_multiplier": 2,
+      "api_multiplier": 0.5,
+      "campaign": "E2",
+      "model": "C30",
+      "candidates": 5,
+      "windows": 2,
+      "predicted_cost_minimizers": [
+        "ppo_C_r2"
+      ],
+      "tie_at_released_data_precision": false,
+      "minimizing_set_all_repeats_feasible": {
+        "ppo_C_r2": false
+      },
+      "selected_policy": "ppo_C_r2",
+      "best_observed_feasible_policy": "ppo_C30_raw",
+      "selected_all_repeats_feasible": false,
+      "cost_regret_scenario_usd": null,
+      "physical_passes": 0,
+      "physical_runs": 6,
+      "selected_actual_cost": 3.9400421474376666
+    },
+    {
+      "gpu_multiplier": 2,
+      "api_multiplier": 0.5,
+      "campaign": "E3",
+      "model": "C",
+      "candidates": 6,
+      "windows": 2,
+      "predicted_cost_minimizers": [
+        "C30_s105_e0035"
+      ],
+      "tie_at_released_data_precision": false,
+      "minimizing_set_all_repeats_feasible": {
+        "C30_s105_e0035": true
+      },
+      "selected_policy": "C30_s105_e0035",
+      "best_observed_feasible_policy": "C30_s105_e0035",
+      "selected_all_repeats_feasible": true,
+      "cost_regret_scenario_usd": 0.0,
+      "physical_passes": 4,
+      "physical_runs": 4,
+      "selected_actual_cost": 3.5910862453280004,
+      "best_observed_feasible_cost": 3.5910862453280004
+    },
+    {
+      "gpu_multiplier": 2,
+      "api_multiplier": 0.5,
+      "campaign": "E3",
+      "model": "C30",
+      "candidates": 6,
+      "windows": 2,
+      "predicted_cost_minimizers": [
+        "C30_s105_e0035"
+      ],
+      "tie_at_released_data_precision": false,
+      "minimizing_set_all_repeats_feasible": {
+        "C30_s105_e0035": true
+      },
+      "selected_policy": "C30_s105_e0035",
+      "best_observed_feasible_policy": "C30_s105_e0035",
+      "selected_all_repeats_feasible": true,
+      "cost_regret_scenario_usd": 0.0,
+      "physical_passes": 4,
+      "physical_runs": 4,
+      "selected_actual_cost": 3.5910862453280004,
+      "best_observed_feasible_cost": 3.5910862453280004
+    },
+    {
+      "gpu_multiplier": 2,
+      "api_multiplier": 0.5,
+      "campaign": "E4",
+      "model": "C",
+      "candidates": 6,
+      "windows": 2,
+      "predicted_cost_minimizers": [
+        "C30_s105_e0035"
+      ],
+      "tie_at_released_data_precision": false,
+      "minimizing_set_all_repeats_feasible": {
+        "C30_s105_e0035": true
+      },
+      "selected_policy": "C30_s105_e0035",
+      "best_observed_feasible_policy": "hysteresis_u8_d0_c60__guard",
+      "selected_all_repeats_feasible": true,
+      "cost_regret_scenario_usd": 1.5971646218180005,
+      "physical_passes": 4,
+      "physical_runs": 4,
+      "selected_actual_cost": 3.5892926388740003,
+      "best_observed_feasible_cost": 1.9921280170559998
+    },
+    {
+      "gpu_multiplier": 2,
+      "api_multiplier": 0.5,
+      "campaign": "E4",
+      "model": "C30",
+      "candidates": 6,
+      "windows": 2,
+      "predicted_cost_minimizers": [
+        "hysteresis_u8_d0_c60__guard"
+      ],
+      "tie_at_released_data_precision": false,
+      "minimizing_set_all_repeats_feasible": {
+        "hysteresis_u8_d0_c60__guard": true
+      },
+      "selected_policy": "hysteresis_u8_d0_c60__guard",
+      "best_observed_feasible_policy": "hysteresis_u8_d0_c60__guard",
+      "selected_all_repeats_feasible": true,
+      "cost_regret_scenario_usd": 0.0,
+      "physical_passes": 4,
+      "physical_runs": 4,
+      "selected_actual_cost": 1.9921280170559998,
+      "best_observed_feasible_cost": 1.9921280170559998
+    },
+    {
+      "gpu_multiplier": 2,
+      "api_multiplier": 0.5,
+      "campaign": "E4",
+      "model": "C_sg",
+      "candidates": 6,
+      "windows": 2,
+      "predicted_cost_minimizers": [
+        "hysteresis_u8_d0_c60__guard"
+      ],
+      "tie_at_released_data_precision": false,
+      "minimizing_set_all_repeats_feasible": {
+        "hysteresis_u8_d0_c60__guard": true
+      },
+      "selected_policy": "hysteresis_u8_d0_c60__guard",
+      "best_observed_feasible_policy": "hysteresis_u8_d0_c60__guard",
+      "selected_all_repeats_feasible": true,
+      "cost_regret_scenario_usd": 0.0,
+      "physical_passes": 4,
+      "physical_runs": 4,
+      "selected_actual_cost": 1.9921280170559998,
+      "best_observed_feasible_cost": 1.9921280170559998
+    },
+    {
+      "gpu_multiplier": 2,
+      "api_multiplier": 0.5,
+      "campaign": "E5",
+      "model": "C",
+      "candidates": 4,
+      "windows": 3,
+      "predicted_cost_minimizers": [
+        "ppo_C_s101"
+      ],
+      "tie_at_released_data_precision": false,
+      "minimizing_set_all_repeats_feasible": {
+        "ppo_C_s101": true
+      },
+      "selected_policy": "ppo_C_s101",
+      "best_observed_feasible_policy": "hysteresis_u8_d0_c60__guard",
+      "selected_all_repeats_feasible": true,
+      "cost_regret_scenario_usd": 2.2430656494599996,
+      "physical_passes": 6,
+      "physical_runs": 6,
+      "selected_actual_cost": 4.117750294935666,
+      "best_observed_feasible_cost": 1.8746846454756665
+    },
+    {
+      "gpu_multiplier": 2,
+      "api_multiplier": 0.5,
+      "campaign": "E5",
+      "model": "C30",
+      "candidates": 4,
+      "windows": 3,
+      "predicted_cost_minimizers": [
+        "hysteresis_u8_d0_c60__guard"
+      ],
+      "tie_at_released_data_precision": false,
+      "minimizing_set_all_repeats_feasible": {
+        "hysteresis_u8_d0_c60__guard": true
+      },
+      "selected_policy": "hysteresis_u8_d0_c60__guard",
+      "best_observed_feasible_policy": "hysteresis_u8_d0_c60__guard",
+      "selected_all_repeats_feasible": true,
+      "cost_regret_scenario_usd": 0.0,
+      "physical_passes": 6,
+      "physical_runs": 6,
+      "selected_actual_cost": 1.8746846454756665,
+      "best_observed_feasible_cost": 1.8746846454756665
+    },
+    {
+      "gpu_multiplier": 2,
+      "api_multiplier": 0.5,
+      "campaign": "E5",
+      "model": "C_sg",
+      "candidates": 4,
+      "windows": 3,
+      "predicted_cost_minimizers": [
+        "hysteresis_u8_d0_c60",
+        "hysteresis_u8_d0_c60__guard"
+      ],
+      "tie_at_released_data_precision": true,
+      "minimizing_set_all_repeats_feasible": {
+        "hysteresis_u8_d0_c60": true,
+        "hysteresis_u8_d0_c60__guard": true
+      },
+      "selected_policy": "hysteresis_u8_d0_c60",
+      "best_observed_feasible_policy": "hysteresis_u8_d0_c60__guard",
+      "selected_all_repeats_feasible": true,
+      "cost_regret_scenario_usd": 0.006177247736666613,
+      "physical_passes": 6,
+      "physical_runs": 6,
+      "selected_actual_cost": 1.880861893212333,
+      "best_observed_feasible_cost": 1.8746846454756665
+    },
+    {
+      "gpu_multiplier": 2,
+      "api_multiplier": 0.5,
+      "campaign": "E6",
+      "model": "L14",
+      "candidates": 2,
+      "windows": 2,
+      "predicted_cost_minimizers": [
+        "hysteresis_u8_d0_c60__guard"
+      ],
+      "tie_at_released_data_precision": false,
+      "minimizing_set_all_repeats_feasible": {
+        "hysteresis_u8_d0_c60__guard": true
+      },
+      "selected_policy": "hysteresis_u8_d0_c60__guard",
+      "best_observed_feasible_policy": "hysteresis_u8_d0_c60__guard",
+      "selected_all_repeats_feasible": true,
+      "cost_regret_scenario_usd": 0.0,
+      "physical_passes": 4,
+      "physical_runs": 4,
+      "selected_actual_cost": 2.9377099021064996,
+      "best_observed_feasible_cost": 2.9377099021064996
+    },
+    {
+      "gpu_multiplier": 2,
+      "api_multiplier": 0.5,
+      "campaign": "E6",
+      "model": "S14",
+      "candidates": 2,
+      "windows": 2,
+      "predicted_cost_minimizers": [
+        "hysteresis_u8_d0_c60",
+        "hysteresis_u8_d0_c60__guard"
+      ],
+      "tie_at_released_data_precision": true,
+      "minimizing_set_all_repeats_feasible": {
+        "hysteresis_u8_d0_c60": false,
+        "hysteresis_u8_d0_c60__guard": true
+      },
+      "selected_policy": "hysteresis_u8_d0_c60",
+      "best_observed_feasible_policy": "hysteresis_u8_d0_c60__guard",
+      "selected_all_repeats_feasible": false,
+      "cost_regret_scenario_usd": null,
+      "physical_passes": 0,
+      "physical_runs": 4,
+      "selected_actual_cost": 2.7369096842439995
+    },
+    {
+      "gpu_multiplier": 2,
+      "api_multiplier": 1,
+      "campaign": "E2",
+      "model": "C",
+      "candidates": 5,
+      "windows": 2,
+      "predicted_cost_minimizers": [
+        "ppo_C_s101"
+      ],
+      "tie_at_released_data_precision": false,
+      "minimizing_set_all_repeats_feasible": {
+        "ppo_C_s101": true
+      },
+      "selected_policy": "ppo_C_s101",
+      "best_observed_feasible_policy": "ppo_C30_raw",
+      "selected_all_repeats_feasible": true,
+      "cost_regret_scenario_usd": 0.45625408753166674,
+      "physical_passes": 6,
+      "physical_runs": 6,
+      "selected_actual_cost": 4.590598753636,
+      "best_observed_feasible_cost": 4.134344666104333
+    },
+    {
+      "gpu_multiplier": 2,
+      "api_multiplier": 1,
+      "campaign": "E2",
+      "model": "C30",
+      "candidates": 5,
+      "windows": 2,
+      "predicted_cost_minimizers": [
+        "ppo_C_r2"
+      ],
+      "tie_at_released_data_precision": false,
+      "minimizing_set_all_repeats_feasible": {
+        "ppo_C_r2": false
+      },
+      "selected_policy": "ppo_C_r2",
+      "best_observed_feasible_policy": "ppo_C30_raw",
+      "selected_all_repeats_feasible": false,
+      "cost_regret_scenario_usd": null,
+      "physical_passes": 0,
+      "physical_runs": 6,
+      "selected_actual_cost": 4.123722564104334
+    },
+    {
+      "gpu_multiplier": 2,
+      "api_multiplier": 1,
+      "campaign": "E3",
+      "model": "C",
+      "candidates": 6,
+      "windows": 2,
+      "predicted_cost_minimizers": [
+        "C30_s105_e0035"
+      ],
+      "tie_at_released_data_precision": false,
+      "minimizing_set_all_repeats_feasible": {
+        "C30_s105_e0035": true
+      },
+      "selected_policy": "C30_s105_e0035",
+      "best_observed_feasible_policy": "C30_s105_e0035",
+      "selected_all_repeats_feasible": true,
+      "cost_regret_scenario_usd": 0.0,
+      "physical_passes": 4,
+      "physical_runs": 4,
+      "selected_actual_cost": 3.648607495328,
+      "best_observed_feasible_cost": 3.648607495328
+    },
+    {
+      "gpu_multiplier": 2,
+      "api_multiplier": 1,
+      "campaign": "E3",
+      "model": "C30",
+      "candidates": 6,
+      "windows": 2,
+      "predicted_cost_minimizers": [
+        "C30_s105_e0035"
+      ],
+      "tie_at_released_data_precision": false,
+      "minimizing_set_all_repeats_feasible": {
+        "C30_s105_e0035": true
+      },
+      "selected_policy": "C30_s105_e0035",
+      "best_observed_feasible_policy": "C30_s105_e0035",
+      "selected_all_repeats_feasible": true,
+      "cost_regret_scenario_usd": 0.0,
+      "physical_passes": 4,
+      "physical_runs": 4,
+      "selected_actual_cost": 3.648607495328,
+      "best_observed_feasible_cost": 3.648607495328
+    },
+    {
+      "gpu_multiplier": 2,
+      "api_multiplier": 1,
+      "campaign": "E4",
+      "model": "C",
+      "candidates": 6,
+      "windows": 2,
+      "predicted_cost_minimizers": [
+        "C30_s105_e0035"
+      ],
+      "tie_at_released_data_precision": false,
+      "minimizing_set_all_repeats_feasible": {
+        "C30_s105_e0035": true
+      },
+      "selected_policy": "C30_s105_e0035",
+      "best_observed_feasible_policy": "hysteresis_u8_d0_c60__guard",
+      "selected_all_repeats_feasible": true,
+      "cost_regret_scenario_usd": 1.5363952468180004,
+      "physical_passes": 4,
+      "physical_runs": 4,
+      "selected_actual_cost": 3.6408113888740004,
+      "best_observed_feasible_cost": 2.104416142056
+    },
+    {
+      "gpu_multiplier": 2,
+      "api_multiplier": 1,
+      "campaign": "E4",
+      "model": "C30",
+      "candidates": 6,
+      "windows": 2,
+      "predicted_cost_minimizers": [
+        "hysteresis_u8_d0_c60__guard"
+      ],
+      "tie_at_released_data_precision": false,
+      "minimizing_set_all_repeats_feasible": {
+        "hysteresis_u8_d0_c60__guard": true
+      },
+      "selected_policy": "hysteresis_u8_d0_c60__guard",
+      "best_observed_feasible_policy": "hysteresis_u8_d0_c60__guard",
+      "selected_all_repeats_feasible": true,
+      "cost_regret_scenario_usd": 0.0,
+      "physical_passes": 4,
+      "physical_runs": 4,
+      "selected_actual_cost": 2.104416142056,
+      "best_observed_feasible_cost": 2.104416142056
+    },
+    {
+      "gpu_multiplier": 2,
+      "api_multiplier": 1,
+      "campaign": "E4",
+      "model": "C_sg",
+      "candidates": 6,
+      "windows": 2,
+      "predicted_cost_minimizers": [
+        "hysteresis_u8_d0_c60__guard"
+      ],
+      "tie_at_released_data_precision": false,
+      "minimizing_set_all_repeats_feasible": {
+        "hysteresis_u8_d0_c60__guard": true
+      },
+      "selected_policy": "hysteresis_u8_d0_c60__guard",
+      "best_observed_feasible_policy": "hysteresis_u8_d0_c60__guard",
+      "selected_all_repeats_feasible": true,
+      "cost_regret_scenario_usd": 0.0,
+      "physical_passes": 4,
+      "physical_runs": 4,
+      "selected_actual_cost": 2.104416142056,
+      "best_observed_feasible_cost": 2.104416142056
+    },
+    {
+      "gpu_multiplier": 2,
+      "api_multiplier": 1,
+      "campaign": "E5",
+      "model": "C",
+      "candidates": 4,
+      "windows": 3,
+      "predicted_cost_minimizers": [
+        "ppo_C_s101"
+      ],
+      "tie_at_released_data_precision": false,
+      "minimizing_set_all_repeats_feasible": {
+        "ppo_C_s101": true
+      },
+      "selected_policy": "ppo_C_s101",
+      "best_observed_feasible_policy": "hysteresis_u8_d0_c60__guard",
+      "selected_all_repeats_feasible": true,
+      "cost_regret_scenario_usd": 2.191065816126666,
+      "physical_passes": 6,
+      "physical_runs": 6,
+      "selected_actual_cost": 4.172168711602333,
+      "best_observed_feasible_cost": 1.9811028954756669
+    },
+    {
+      "gpu_multiplier": 2,
+      "api_multiplier": 1,
+      "campaign": "E5",
+      "model": "C30",
+      "candidates": 4,
+      "windows": 3,
+      "predicted_cost_minimizers": [
+        "hysteresis_u8_d0_c60__guard"
+      ],
+      "tie_at_released_data_precision": false,
+      "minimizing_set_all_repeats_feasible": {
+        "hysteresis_u8_d0_c60__guard": true
+      },
+      "selected_policy": "hysteresis_u8_d0_c60__guard",
+      "best_observed_feasible_policy": "hysteresis_u8_d0_c60__guard",
+      "selected_all_repeats_feasible": true,
+      "cost_regret_scenario_usd": 0.0,
+      "physical_passes": 6,
+      "physical_runs": 6,
+      "selected_actual_cost": 1.9811028954756669,
+      "best_observed_feasible_cost": 1.9811028954756669
+    },
+    {
+      "gpu_multiplier": 2,
+      "api_multiplier": 1,
+      "campaign": "E5",
+      "model": "C_sg",
+      "candidates": 4,
+      "windows": 3,
+      "predicted_cost_minimizers": [
+        "hysteresis_u8_d0_c60",
+        "hysteresis_u8_d0_c60__guard"
+      ],
+      "tie_at_released_data_precision": true,
+      "minimizing_set_all_repeats_feasible": {
+        "hysteresis_u8_d0_c60": true,
+        "hysteresis_u8_d0_c60__guard": true
+      },
+      "selected_policy": "hysteresis_u8_d0_c60",
+      "best_observed_feasible_policy": "hysteresis_u8_d0_c60__guard",
+      "selected_all_repeats_feasible": true,
+      "cost_regret_scenario_usd": 0.006421831069999495,
+      "physical_passes": 6,
+      "physical_runs": 6,
+      "selected_actual_cost": 1.9875247265456664,
+      "best_observed_feasible_cost": 1.9811028954756669
+    },
+    {
+      "gpu_multiplier": 2,
+      "api_multiplier": 1,
+      "campaign": "E6",
+      "model": "L14",
+      "candidates": 2,
+      "windows": 2,
+      "predicted_cost_minimizers": [
+        "hysteresis_u8_d0_c60__guard"
+      ],
+      "tie_at_released_data_precision": false,
+      "minimizing_set_all_repeats_feasible": {
+        "hysteresis_u8_d0_c60__guard": true
+      },
+      "selected_policy": "hysteresis_u8_d0_c60__guard",
+      "best_observed_feasible_policy": "hysteresis_u8_d0_c60__guard",
+      "selected_all_repeats_feasible": true,
+      "cost_regret_scenario_usd": 0.0,
+      "physical_passes": 4,
+      "physical_runs": 4,
+      "selected_actual_cost": 3.0142269021064996,
+      "best_observed_feasible_cost": 3.0142269021064996
+    },
+    {
+      "gpu_multiplier": 2,
+      "api_multiplier": 1,
+      "campaign": "E6",
+      "model": "S14",
+      "candidates": 2,
+      "windows": 2,
+      "predicted_cost_minimizers": [
+        "hysteresis_u8_d0_c60",
+        "hysteresis_u8_d0_c60__guard"
+      ],
+      "tie_at_released_data_precision": true,
+      "minimizing_set_all_repeats_feasible": {
+        "hysteresis_u8_d0_c60": false,
+        "hysteresis_u8_d0_c60__guard": true
+      },
+      "selected_policy": "hysteresis_u8_d0_c60",
+      "best_observed_feasible_policy": "hysteresis_u8_d0_c60__guard",
+      "selected_all_repeats_feasible": false,
+      "cost_regret_scenario_usd": null,
+      "physical_passes": 0,
+      "physical_runs": 4,
+      "selected_actual_cost": 2.8102680592439997
+    },
+    {
+      "gpu_multiplier": 2,
+      "api_multiplier": 2,
+      "campaign": "E2",
+      "model": "C",
+      "candidates": 5,
+      "windows": 2,
+      "predicted_cost_minimizers": [
+        "ppo_C30_raw"
+      ],
+      "tie_at_released_data_precision": false,
+      "minimizing_set_all_repeats_feasible": {
+        "ppo_C30_raw": true
+      },
+      "selected_policy": "ppo_C30_raw",
+      "best_observed_feasible_policy": "ppo_C30_raw",
+      "selected_all_repeats_feasible": true,
+      "cost_regret_scenario_usd": 0.0,
+      "physical_passes": 6,
+      "physical_runs": 6,
+      "selected_actual_cost": 4.149362332771,
+      "best_observed_feasible_cost": 4.149362332771
+    },
+    {
+      "gpu_multiplier": 2,
+      "api_multiplier": 2,
+      "campaign": "E2",
+      "model": "C30",
+      "candidates": 5,
+      "windows": 2,
+      "predicted_cost_minimizers": [
+        "ppo_C_r2"
+      ],
+      "tie_at_released_data_precision": false,
+      "minimizing_set_all_repeats_feasible": {
+        "ppo_C_r2": false
+      },
+      "selected_policy": "ppo_C_r2",
+      "best_observed_feasible_policy": "ppo_C30_raw",
+      "selected_all_repeats_feasible": false,
+      "cost_regret_scenario_usd": null,
+      "physical_passes": 0,
+      "physical_runs": 6,
+      "selected_actual_cost": 4.4910833974376665
+    },
+    {
+      "gpu_multiplier": 2,
+      "api_multiplier": 2,
+      "campaign": "E3",
+      "model": "C",
+      "candidates": 6,
+      "windows": 2,
+      "predicted_cost_minimizers": [
+        "C30_s105_e0065"
+      ],
+      "tie_at_released_data_precision": false,
+      "minimizing_set_all_repeats_feasible": {
+        "C30_s105_e0065": true
+      },
+      "selected_policy": "C30_s105_e0065",
+      "best_observed_feasible_policy": "C30_s105_e0035",
+      "selected_all_repeats_feasible": true,
+      "cost_regret_scenario_usd": 0.1169998676645001,
+      "physical_passes": 4,
+      "physical_runs": 4,
+      "selected_actual_cost": 3.8806498629925,
+      "best_observed_feasible_cost": 3.763649995328
+    },
+    {
+      "gpu_multiplier": 2,
+      "api_multiplier": 2,
+      "campaign": "E3",
+      "model": "C30",
+      "candidates": 6,
+      "windows": 2,
+      "predicted_cost_minimizers": [
+        "C30_s105_e0035"
+      ],
+      "tie_at_released_data_precision": false,
+      "minimizing_set_all_repeats_feasible": {
+        "C30_s105_e0035": true
+      },
+      "selected_policy": "C30_s105_e0035",
+      "best_observed_feasible_policy": "C30_s105_e0035",
+      "selected_all_repeats_feasible": true,
+      "cost_regret_scenario_usd": 0.0,
+      "physical_passes": 4,
+      "physical_runs": 4,
+      "selected_actual_cost": 3.763649995328,
+      "best_observed_feasible_cost": 3.763649995328
+    },
+    {
+      "gpu_multiplier": 2,
+      "api_multiplier": 2,
+      "campaign": "E4",
+      "model": "C",
+      "candidates": 6,
+      "windows": 2,
+      "predicted_cost_minimizers": [
+        "C30_s105_e0035"
+      ],
+      "tie_at_released_data_precision": false,
+      "minimizing_set_all_repeats_feasible": {
+        "C30_s105_e0035": true
+      },
+      "selected_policy": "C30_s105_e0035",
+      "best_observed_feasible_policy": "hysteresis_u8_d0_c60__guard",
+      "selected_all_repeats_feasible": true,
+      "cost_regret_scenario_usd": 1.414856496818,
+      "physical_passes": 4,
+      "physical_runs": 4,
+      "selected_actual_cost": 3.743848888874,
+      "best_observed_feasible_cost": 2.328992392056
+    },
+    {
+      "gpu_multiplier": 2,
+      "api_multiplier": 2,
+      "campaign": "E4",
+      "model": "C30",
+      "candidates": 6,
+      "windows": 2,
+      "predicted_cost_minimizers": [
+        "hysteresis_u8_d0_c60__guard"
+      ],
+      "tie_at_released_data_precision": false,
+      "minimizing_set_all_repeats_feasible": {
+        "hysteresis_u8_d0_c60__guard": true
+      },
+      "selected_policy": "hysteresis_u8_d0_c60__guard",
+      "best_observed_feasible_policy": "hysteresis_u8_d0_c60__guard",
+      "selected_all_repeats_feasible": true,
+      "cost_regret_scenario_usd": 0.0,
+      "physical_passes": 4,
+      "physical_runs": 4,
+      "selected_actual_cost": 2.328992392056,
+      "best_observed_feasible_cost": 2.328992392056
+    },
+    {
+      "gpu_multiplier": 2,
+      "api_multiplier": 2,
+      "campaign": "E4",
+      "model": "C_sg",
+      "candidates": 6,
+      "windows": 2,
+      "predicted_cost_minimizers": [
+        "hysteresis_u8_d0_c60__guard"
+      ],
+      "tie_at_released_data_precision": false,
+      "minimizing_set_all_repeats_feasible": {
+        "hysteresis_u8_d0_c60__guard": true
+      },
+      "selected_policy": "hysteresis_u8_d0_c60__guard",
+      "best_observed_feasible_policy": "hysteresis_u8_d0_c60__guard",
+      "selected_all_repeats_feasible": true,
+      "cost_regret_scenario_usd": 0.0,
+      "physical_passes": 4,
+      "physical_runs": 4,
+      "selected_actual_cost": 2.328992392056,
+      "best_observed_feasible_cost": 2.328992392056
+    },
+    {
+      "gpu_multiplier": 2,
+      "api_multiplier": 2,
+      "campaign": "E5",
+      "model": "C",
+      "candidates": 4,
+      "windows": 3,
+      "predicted_cost_minimizers": [
+        "ppo_C_s101"
+      ],
+      "tie_at_released_data_precision": false,
+      "minimizing_set_all_repeats_feasible": {
+        "ppo_C_s101": true
+      },
+      "selected_policy": "ppo_C_s101",
+      "best_observed_feasible_policy": "hysteresis_u8_d0_c60__guard",
+      "selected_all_repeats_feasible": true,
+      "cost_regret_scenario_usd": 2.08706614946,
+      "physical_passes": 6,
+      "physical_runs": 6,
+      "selected_actual_cost": 4.281005544935667,
+      "best_observed_feasible_cost": 2.1939393954756667
+    },
+    {
+      "gpu_multiplier": 2,
+      "api_multiplier": 2,
+      "campaign": "E5",
+      "model": "C30",
+      "candidates": 4,
+      "windows": 3,
+      "predicted_cost_minimizers": [
+        "hysteresis_u8_d0_c60__guard"
+      ],
+      "tie_at_released_data_precision": false,
+      "minimizing_set_all_repeats_feasible": {
+        "hysteresis_u8_d0_c60__guard": true
+      },
+      "selected_policy": "hysteresis_u8_d0_c60__guard",
+      "best_observed_feasible_policy": "hysteresis_u8_d0_c60__guard",
+      "selected_all_repeats_feasible": true,
+      "cost_regret_scenario_usd": 0.0,
+      "physical_passes": 6,
+      "physical_runs": 6,
+      "selected_actual_cost": 2.1939393954756667,
+      "best_observed_feasible_cost": 2.1939393954756667
+    },
+    {
+      "gpu_multiplier": 2,
+      "api_multiplier": 2,
+      "campaign": "E5",
+      "model": "C_sg",
+      "candidates": 4,
+      "windows": 3,
+      "predicted_cost_minimizers": [
+        "hysteresis_u8_d0_c60",
+        "hysteresis_u8_d0_c60__guard"
+      ],
+      "tie_at_released_data_precision": true,
+      "minimizing_set_all_repeats_feasible": {
+        "hysteresis_u8_d0_c60": true,
+        "hysteresis_u8_d0_c60__guard": true
+      },
+      "selected_policy": "hysteresis_u8_d0_c60",
+      "best_observed_feasible_policy": "hysteresis_u8_d0_c60__guard",
+      "selected_all_repeats_feasible": true,
+      "cost_regret_scenario_usd": 0.006910997736666147,
+      "physical_passes": 6,
+      "physical_runs": 6,
+      "selected_actual_cost": 2.200850393212333,
+      "best_observed_feasible_cost": 2.1939393954756667
+    },
+    {
+      "gpu_multiplier": 2,
+      "api_multiplier": 2,
+      "campaign": "E6",
+      "model": "L14",
+      "candidates": 2,
+      "windows": 2,
+      "predicted_cost_minimizers": [
+        "hysteresis_u8_d0_c60__guard"
+      ],
+      "tie_at_released_data_precision": false,
+      "minimizing_set_all_repeats_feasible": {
+        "hysteresis_u8_d0_c60__guard": true
+      },
+      "selected_policy": "hysteresis_u8_d0_c60__guard",
+      "best_observed_feasible_policy": "hysteresis_u8_d0_c60__guard",
+      "selected_all_repeats_feasible": true,
+      "cost_regret_scenario_usd": 0.0,
+      "physical_passes": 4,
+      "physical_runs": 4,
+      "selected_actual_cost": 3.1672609021064995,
+      "best_observed_feasible_cost": 3.1672609021064995
+    },
+    {
+      "gpu_multiplier": 2,
+      "api_multiplier": 2,
+      "campaign": "E6",
+      "model": "S14",
+      "candidates": 2,
+      "windows": 2,
+      "predicted_cost_minimizers": [
+        "hysteresis_u8_d0_c60",
+        "hysteresis_u8_d0_c60__guard"
+      ],
+      "tie_at_released_data_precision": true,
+      "minimizing_set_all_repeats_feasible": {
+        "hysteresis_u8_d0_c60": false,
+        "hysteresis_u8_d0_c60__guard": true
+      },
+      "selected_policy": "hysteresis_u8_d0_c60",
+      "best_observed_feasible_policy": "hysteresis_u8_d0_c60__guard",
+      "selected_all_repeats_feasible": false,
+      "cost_regret_scenario_usd": null,
+      "physical_passes": 0,
+      "physical_runs": 4,
+      "selected_actual_cost": 2.9569848092439996
+    }
+  ],
+  "summary": [
+    {
+      "campaign": "E2",
+      "model": "C",
+      "price_cells": 9,
+      "selected_policies": [
+        "ppo_C30_raw",
+        "ppo_C_s101"
+      ],
+      "feasible_selected_cells": 9,
+      "failed_selected_cells": 0,
+      "no_selection_cells": 0,
+      "tied_minimizer_cells": 0,
+      "feasible_selected_gap_pct_min": 0.0,
+      "feasible_selected_gap_pct_max": 11.035705157150844
+    },
+    {
+      "campaign": "E2",
+      "model": "C30",
+      "price_cells": 9,
+      "selected_policies": [
+        "ppo_C_r2"
+      ],
+      "feasible_selected_cells": 0,
+      "failed_selected_cells": 9,
+      "no_selection_cells": 0,
+      "tied_minimizer_cells": 0,
+      "feasible_selected_gap_pct_min": null,
+      "feasible_selected_gap_pct_max": null
+    },
+    {
+      "campaign": "E3",
+      "model": "C",
+      "price_cells": 9,
+      "selected_policies": [
+        "C30_s105_e0035",
+        "C30_s105_e0065"
+      ],
+      "feasible_selected_cells": 9,
+      "failed_selected_cells": 0,
+      "no_selection_cells": 0,
+      "tied_minimizer_cells": 0,
+      "feasible_selected_gap_pct_min": 0.0,
+      "feasible_selected_gap_pct_max": 3.1086808765357477
+    },
+    {
+      "campaign": "E3",
+      "model": "C30",
+      "price_cells": 9,
+      "selected_policies": [
+        "C30_s105_e0035",
+        "C30_s105_e0065"
+      ],
+      "feasible_selected_cells": 9,
+      "failed_selected_cells": 0,
+      "no_selection_cells": 0,
+      "tied_minimizer_cells": 0,
+      "feasible_selected_gap_pct_min": 0.0,
+      "feasible_selected_gap_pct_max": 0.0
+    },
+    {
+      "campaign": "E4",
+      "model": "C",
+      "price_cells": 9,
+      "selected_policies": [
+        "C30_s105_e0035"
+      ],
+      "feasible_selected_cells": 9,
+      "failed_selected_cells": 0,
+      "no_selection_cells": 0,
+      "tied_minimizer_cells": 0,
+      "feasible_selected_gap_pct_min": 16.56135299364286,
+      "feasible_selected_gap_pct_max": 80.17379446218105
+    },
+    {
+      "campaign": "E4",
+      "model": "C30",
+      "price_cells": 9,
+      "selected_policies": [
+        "hysteresis_u8_d0_c60__guard"
+      ],
+      "feasible_selected_cells": 9,
+      "failed_selected_cells": 0,
+      "no_selection_cells": 0,
+      "tied_minimizer_cells": 0,
+      "feasible_selected_gap_pct_min": 0.0,
+      "feasible_selected_gap_pct_max": 0.0
+    },
+    {
+      "campaign": "E4",
+      "model": "C_sg",
+      "price_cells": 9,
+      "selected_policies": [
+        "hysteresis_u8_d0_c60__guard"
+      ],
+      "feasible_selected_cells": 9,
+      "failed_selected_cells": 0,
+      "no_selection_cells": 0,
+      "tied_minimizer_cells": 0,
+      "feasible_selected_gap_pct_min": 0.0,
+      "feasible_selected_gap_pct_max": 0.0
+    },
+    {
+      "campaign": "E5",
+      "model": "C",
+      "price_cells": 9,
+      "selected_policies": [
+        "ppo_C_s101"
+      ],
+      "feasible_selected_cells": 9,
+      "failed_selected_cells": 0,
+      "no_selection_cells": 0,
+      "tied_minimizer_cells": 0,
+      "feasible_selected_gap_pct_min": 41.934271245507645,
+      "feasible_selected_gap_pct_max": 119.65029184366436
+    },
+    {
+      "campaign": "E5",
+      "model": "C30",
+      "price_cells": 9,
+      "selected_policies": [
+        "hysteresis_u8_d0_c60__guard"
+      ],
+      "feasible_selected_cells": 9,
+      "failed_selected_cells": 0,
+      "no_selection_cells": 0,
+      "tied_minimizer_cells": 0,
+      "feasible_selected_gap_pct_min": 0.0,
+      "feasible_selected_gap_pct_max": 0.0
+    },
+    {
+      "campaign": "E5",
+      "model": "C_sg",
+      "price_cells": 9,
+      "selected_policies": [
+        "hysteresis_u8_d0_c60"
+      ],
+      "feasible_selected_cells": 9,
+      "failed_selected_cells": 0,
+      "no_selection_cells": 0,
+      "tied_minimizer_cells": 9,
+      "feasible_selected_gap_pct_min": 0.2748775013440378,
+      "feasible_selected_gap_pct_max": 0.3295086323758336
+    },
+    {
+      "campaign": "E6",
+      "model": "L14",
+      "price_cells": 9,
+      "selected_policies": [
+        "hysteresis_u8_d0_c60__guard"
+      ],
+      "feasible_selected_cells": 9,
+      "failed_selected_cells": 0,
+      "no_selection_cells": 0,
+      "tied_minimizer_cells": 0,
+      "feasible_selected_gap_pct_min": 0.0,
+      "feasible_selected_gap_pct_max": 0.0
+    },
+    {
+      "campaign": "E6",
+      "model": "S14",
+      "price_cells": 9,
+      "selected_policies": [
+        "hysteresis_u8_d0_c60"
+      ],
+      "feasible_selected_cells": 0,
+      "failed_selected_cells": 9,
+      "no_selection_cells": 0,
+      "tied_minimizer_cells": 9,
+      "feasible_selected_gap_pct_min": null,
+      "feasible_selected_gap_pct_max": null
+    }
+  ]
+}

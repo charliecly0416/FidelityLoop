@@ -1,0 +1,30 @@
+{
+  "purpose": "CPU external-output interoperability, not predictive accuracy or physical validation",
+  "model": "meta-llama/Meta-Llama-3-8B",
+  "profile": "official public A100 TP1",
+  "views": [
+    {
+      "name": "full_60s",
+      "horizon": 60.0,
+      "relative_deadline_seconds": 60.0
+    },
+    {
+      "name": "tight_deadline_diagnostic",
+      "horizon": 60.0,
+      "relative_deadline_seconds": 0.5
+    },
+    {
+      "name": "cutoff_diagnostic",
+      "horizon": 2.0,
+      "relative_deadline_seconds": 60.0
+    }
+  ],
+  "jobs": "all online; no artificial offline population to claim original P1plus",
+  "invariants": [
+    "full native output identity set equals pre-run input identity set",
+    "no future completion in cutoff record; arrivals at/after cutoff excluded explicitly",
+    "preserve original floats without integer rounding",
+    "no physical resource or scenario cost derived from batch trace"
+  ],
+  "result_selection": "all locked cases and views retained regardless of outcome"
+}
