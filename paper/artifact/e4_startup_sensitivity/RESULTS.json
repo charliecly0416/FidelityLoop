@@ -1,0 +1,708 @@
+{
+  "status": "PASS",
+  "scope": "Retrospective CPU sensitivity against fixed E4 physical outcomes; no new physical runs",
+  "physical_comparisons": 24,
+  "unique_policy_window_predictions_per_model": 12,
+  "baseline_startup_seconds": 27.5675401645,
+  "invariant_science_action_comparisons": 532,
+  "equal_parameter_science_action_comparisons": 28,
+  "points": [
+    {
+      "startup_seconds": 27.5675401645,
+      "models": {
+        "C": {
+          "agreement": 16,
+          "comparisons": 24,
+          "false_accepts": 0,
+          "false_rejects": 8,
+          "cost_mae": 0.5419728173791329,
+          "mismatched_arms": [
+            "C-2/recovery",
+            "C-2/steady",
+            "H+guard/steady",
+            "N4/steady"
+          ]
+        },
+        "C30": {
+          "agreement": 24,
+          "comparisons": 24,
+          "false_accepts": 0,
+          "false_rejects": 0,
+          "cost_mae": 0.046816618602065686,
+          "mismatched_arms": []
+        },
+        "C_sg": {
+          "agreement": 24,
+          "comparisons": 24,
+          "false_accepts": 0,
+          "false_rejects": 0,
+          "cost_mae": 0.0427427750848795,
+          "mismatched_arms": []
+        }
+      },
+      "receipt_sha256": "d54f4f418524d1c76c17a9e7c8f494bc8f885099344c0180bcd5489a0cce4224"
+    },
+    {
+      "startup_seconds": 20,
+      "models": {
+        "C": {
+          "agreement": 16,
+          "comparisons": 24,
+          "false_accepts": 0,
+          "false_rejects": 8,
+          "cost_mae": 0.5419728173791329,
+          "mismatched_arms": [
+            "C-2/recovery",
+            "C-2/steady",
+            "H+guard/steady",
+            "N4/steady"
+          ]
+        },
+        "C30": {
+          "agreement": 24,
+          "comparisons": 24,
+          "false_accepts": 0,
+          "false_rejects": 0,
+          "cost_mae": 0.046816618602065686,
+          "mismatched_arms": []
+        },
+        "C_sg": {
+          "agreement": 24,
+          "comparisons": 24,
+          "false_accepts": 0,
+          "false_rejects": 0,
+          "cost_mae": 0.029195811025145308,
+          "mismatched_arms": []
+        }
+      },
+      "receipt_sha256": "f37445522aeeea48226a9d85d08f62b63c1901973bf6b78075c7b2354abf9c62"
+    },
+    {
+      "startup_seconds": 24,
+      "models": {
+        "C": {
+          "agreement": 16,
+          "comparisons": 24,
+          "false_accepts": 0,
+          "false_rejects": 8,
+          "cost_mae": 0.5419728173791329,
+          "mismatched_arms": [
+            "C-2/recovery",
+            "C-2/steady",
+            "H+guard/steady",
+            "N4/steady"
+          ]
+        },
+        "C30": {
+          "agreement": 24,
+          "comparisons": 24,
+          "false_accepts": 0,
+          "false_rejects": 0,
+          "cost_mae": 0.046816618602065686,
+          "mismatched_arms": []
+        },
+        "C_sg": {
+          "agreement": 24,
+          "comparisons": 24,
+          "false_accepts": 0,
+          "false_rejects": 0,
+          "cost_mae": 0.03470383780121333,
+          "mismatched_arms": []
+        }
+      },
+      "receipt_sha256": "2ca74f06cace65065b7dd236ca1fdd79435970792961ada952b2cc91e6dca908"
+    },
+    {
+      "startup_seconds": 26,
+      "models": {
+        "C": {
+          "agreement": 16,
+          "comparisons": 24,
+          "false_accepts": 0,
+          "false_rejects": 8,
+          "cost_mae": 0.5419728173791329,
+          "mismatched_arms": [
+            "C-2/recovery",
+            "C-2/steady",
+            "H+guard/steady",
+            "N4/steady"
+          ]
+        },
+        "C30": {
+          "agreement": 24,
+          "comparisons": 24,
+          "false_accepts": 0,
+          "false_rejects": 0,
+          "cost_mae": 0.046816618602065686,
+          "mismatched_arms": []
+        },
+        "C_sg": {
+          "agreement": 24,
+          "comparisons": 24,
+          "false_accepts": 0,
+          "false_rejects": 0,
+          "cost_mae": 0.0389314120925869,
+          "mismatched_arms": []
+        }
+      },
+      "receipt_sha256": "cdf26f6f9162fa47f560f1eec7dad3a895a5056523fc1cfb00b7dda8cb537105"
+    },
+    {
+      "startup_seconds": 28,
+      "models": {
+        "C": {
+          "agreement": 16,
+          "comparisons": 24,
+          "false_accepts": 0,
+          "false_rejects": 8,
+          "cost_mae": 0.5419728173791329,
+          "mismatched_arms": [
+            "C-2/recovery",
+            "C-2/steady",
+            "H+guard/steady",
+            "N4/steady"
+          ]
+        },
+        "C30": {
+          "agreement": 24,
+          "comparisons": 24,
+          "false_accepts": 0,
+          "false_rejects": 0,
+          "cost_mae": 0.046816618602065686,
+          "mismatched_arms": []
+        },
+        "C_sg": {
+          "agreement": 24,
+          "comparisons": 24,
+          "false_accepts": 0,
+          "false_rejects": 0,
+          "cost_mae": 0.04282610841821283,
+          "mismatched_arms": []
+        }
+      },
+      "receipt_sha256": "7031a6c094736dbbda85350593ded1a21166c15d044efbb9871bcd0574153f55"
+    },
+    {
+      "startup_seconds": 30,
+      "models": {
+        "C": {
+          "agreement": 16,
+          "comparisons": 24,
+          "false_accepts": 0,
+          "false_rejects": 8,
+          "cost_mae": 0.5419728173791329,
+          "mismatched_arms": [
+            "C-2/recovery",
+            "C-2/steady",
+            "H+guard/steady",
+            "N4/steady"
+          ]
+        },
+        "C30": {
+          "agreement": 24,
+          "comparisons": 24,
+          "false_accepts": 0,
+          "false_rejects": 0,
+          "cost_mae": 0.046816618602065686,
+          "mismatched_arms": []
+        },
+        "C_sg": {
+          "agreement": 24,
+          "comparisons": 24,
+          "false_accepts": 0,
+          "false_rejects": 0,
+          "cost_mae": 0.046816618602065686,
+          "mismatched_arms": []
+        }
+      },
+      "receipt_sha256": "605f069091a0afef8a53fefd86793ece076b81f46d2993b37b35bddbac74f4ac"
+    },
+    {
+      "startup_seconds": 32,
+      "models": {
+        "C": {
+          "agreement": 16,
+          "comparisons": 24,
+          "false_accepts": 0,
+          "false_rejects": 8,
+          "cost_mae": 0.5419728173791329,
+          "mismatched_arms": [
+            "C-2/recovery",
+            "C-2/steady",
+            "H+guard/steady",
+            "N4/steady"
+          ]
+        },
+        "C30": {
+          "agreement": 24,
+          "comparisons": 24,
+          "false_accepts": 0,
+          "false_rejects": 0,
+          "cost_mae": 0.046816618602065686,
+          "mismatched_arms": []
+        },
+        "C_sg": {
+          "agreement": 24,
+          "comparisons": 24,
+          "false_accepts": 0,
+          "false_rejects": 0,
+          "cost_mae": 0.0503199799417837,
+          "mismatched_arms": []
+        }
+      },
+      "receipt_sha256": "6eb7dc2ebaf0ccfb38d62471e1f8d209cc9042a7fd2603c61a53bd8acfc9d619"
+    },
+    {
+      "startup_seconds": 35,
+      "models": {
+        "C": {
+          "agreement": 16,
+          "comparisons": 24,
+          "false_accepts": 0,
+          "false_rejects": 8,
+          "cost_mae": 0.5419728173791329,
+          "mismatched_arms": [
+            "C-2/recovery",
+            "C-2/steady",
+            "H+guard/steady",
+            "N4/steady"
+          ]
+        },
+        "C30": {
+          "agreement": 24,
+          "comparisons": 24,
+          "false_accepts": 0,
+          "false_rejects": 0,
+          "cost_mae": 0.046816618602065686,
+          "mismatched_arms": []
+        },
+        "C_sg": {
+          "agreement": 24,
+          "comparisons": 24,
+          "false_accepts": 0,
+          "false_rejects": 0,
+          "cost_mae": 0.06833095116722132,
+          "mismatched_arms": []
+        }
+      },
+      "receipt_sha256": "92ba61b3fd955ce48e68e2484cab5e6a7d8d601425b83c2b7574257a42a18d2e"
+    },
+    {
+      "startup_seconds": 40,
+      "models": {
+        "C": {
+          "agreement": 16,
+          "comparisons": 24,
+          "false_accepts": 0,
+          "false_rejects": 8,
+          "cost_mae": 0.5419728173791329,
+          "mismatched_arms": [
+            "C-2/recovery",
+            "C-2/steady",
+            "H+guard/steady",
+            "N4/steady"
+          ]
+        },
+        "C30": {
+          "agreement": 24,
+          "comparisons": 24,
+          "false_accepts": 0,
+          "false_rejects": 0,
+          "cost_mae": 0.046816618602065686,
+          "mismatched_arms": []
+        },
+        "C_sg": {
+          "agreement": 24,
+          "comparisons": 24,
+          "false_accepts": 0,
+          "false_rejects": 0,
+          "cost_mae": 0.07691844591943509,
+          "mismatched_arms": []
+        }
+      },
+      "receipt_sha256": "49e7cafd3beec8cddf9767d86f4045ac18a69dfbd3dfb212a3cb52e95809516a"
+    },
+    {
+      "startup_seconds": 41,
+      "models": {
+        "C": {
+          "agreement": 16,
+          "comparisons": 24,
+          "false_accepts": 0,
+          "false_rejects": 8,
+          "cost_mae": 0.5419728173791329,
+          "mismatched_arms": [
+            "C-2/recovery",
+            "C-2/steady",
+            "H+guard/steady",
+            "N4/steady"
+          ]
+        },
+        "C30": {
+          "agreement": 24,
+          "comparisons": 24,
+          "false_accepts": 0,
+          "false_rejects": 0,
+          "cost_mae": 0.046816618602065686,
+          "mismatched_arms": []
+        },
+        "C_sg": {
+          "agreement": 24,
+          "comparisons": 24,
+          "false_accepts": 0,
+          "false_rejects": 0,
+          "cost_mae": 0.07871570521921854,
+          "mismatched_arms": []
+        }
+      },
+      "receipt_sha256": "32bf034128e3254a801e0ebdc9c0e84a66590f9153336e4fc6fbd38118d23e89"
+    },
+    {
+      "startup_seconds": 42,
+      "models": {
+        "C": {
+          "agreement": 16,
+          "comparisons": 24,
+          "false_accepts": 0,
+          "false_rejects": 8,
+          "cost_mae": 0.5419728173791329,
+          "mismatched_arms": [
+            "C-2/recovery",
+            "C-2/steady",
+            "H+guard/steady",
+            "N4/steady"
+          ]
+        },
+        "C30": {
+          "agreement": 24,
+          "comparisons": 24,
+          "false_accepts": 0,
+          "false_rejects": 0,
+          "cost_mae": 0.046816618602065686,
+          "mismatched_arms": []
+        },
+        "C_sg": {
+          "agreement": 22,
+          "comparisons": 24,
+          "false_accepts": 0,
+          "false_rejects": 2,
+          "cost_mae": 0.08328219585532104,
+          "mismatched_arms": [
+            "H/recovery"
+          ]
+        }
+      },
+      "receipt_sha256": "1275d487000780df4738271aeba087433998b94bd7058b7acb7e5c04b98ccf0f"
+    },
+    {
+      "startup_seconds": 43,
+      "models": {
+        "C": {
+          "agreement": 16,
+          "comparisons": 24,
+          "false_accepts": 0,
+          "false_rejects": 8,
+          "cost_mae": 0.5419728173791329,
+          "mismatched_arms": [
+            "C-2/recovery",
+            "C-2/steady",
+            "H+guard/steady",
+            "N4/steady"
+          ]
+        },
+        "C30": {
+          "agreement": 24,
+          "comparisons": 24,
+          "false_accepts": 0,
+          "false_rejects": 0,
+          "cost_mae": 0.046816618602065686,
+          "mismatched_arms": []
+        },
+        "C_sg": {
+          "agreement": 22,
+          "comparisons": 24,
+          "false_accepts": 0,
+          "false_rejects": 2,
+          "cost_mae": 0.08563600729501492,
+          "mismatched_arms": [
+            "H/recovery"
+          ]
+        }
+      },
+      "receipt_sha256": "5aa2e566e85209be27751c082152cb3cdc533a962fd3f4cfa4e616132f7a8b01"
+    },
+    {
+      "startup_seconds": 44,
+      "models": {
+        "C": {
+          "agreement": 16,
+          "comparisons": 24,
+          "false_accepts": 0,
+          "false_rejects": 8,
+          "cost_mae": 0.5419728173791329,
+          "mismatched_arms": [
+            "C-2/recovery",
+            "C-2/steady",
+            "H+guard/steady",
+            "N4/steady"
+          ]
+        },
+        "C30": {
+          "agreement": 24,
+          "comparisons": 24,
+          "false_accepts": 0,
+          "false_rejects": 0,
+          "cost_mae": 0.046816618602065686,
+          "mismatched_arms": []
+        },
+        "C_sg": {
+          "agreement": 20,
+          "comparisons": 24,
+          "false_accepts": 0,
+          "false_rejects": 4,
+          "cost_mae": 0.09591155587459028,
+          "mismatched_arms": [
+            "C-2/steady",
+            "H/recovery"
+          ]
+        }
+      },
+      "receipt_sha256": "f071cdca609d7f979816a516f1e58dbca3b6b71ef050fe94ab7e5aa305cca535"
+    },
+    {
+      "startup_seconds": 45,
+      "models": {
+        "C": {
+          "agreement": 16,
+          "comparisons": 24,
+          "false_accepts": 0,
+          "false_rejects": 8,
+          "cost_mae": 0.5419728173791329,
+          "mismatched_arms": [
+            "C-2/recovery",
+            "C-2/steady",
+            "H+guard/steady",
+            "N4/steady"
+          ]
+        },
+        "C30": {
+          "agreement": 24,
+          "comparisons": 24,
+          "false_accepts": 0,
+          "false_rejects": 0,
+          "cost_mae": 0.046816618602065686,
+          "mismatched_arms": []
+        },
+        "C_sg": {
+          "agreement": 20,
+          "comparisons": 24,
+          "false_accepts": 0,
+          "false_rejects": 4,
+          "cost_mae": 0.09704377239340434,
+          "mismatched_arms": [
+            "C-2/steady",
+            "H/recovery"
+          ]
+        }
+      },
+      "receipt_sha256": "f033caedb0f6004fd7a32ce8b5ffdecfa4ebe8946c537c78225e629983f6035e"
+    },
+    {
+      "startup_seconds": 50,
+      "models": {
+        "C": {
+          "agreement": 16,
+          "comparisons": 24,
+          "false_accepts": 0,
+          "false_rejects": 8,
+          "cost_mae": 0.5419728173791329,
+          "mismatched_arms": [
+            "C-2/recovery",
+            "C-2/steady",
+            "H+guard/steady",
+            "N4/steady"
+          ]
+        },
+        "C30": {
+          "agreement": 24,
+          "comparisons": 24,
+          "false_accepts": 0,
+          "false_rejects": 0,
+          "cost_mae": 0.046816618602065686,
+          "mismatched_arms": []
+        },
+        "C_sg": {
+          "agreement": 18,
+          "comparisons": 24,
+          "false_accepts": 0,
+          "false_rejects": 6,
+          "cost_mae": 0.23308481119390378,
+          "mismatched_arms": [
+            "C-2/recovery",
+            "C-2/steady",
+            "H/recovery"
+          ]
+        }
+      },
+      "receipt_sha256": "76d0b471d72ab6be851a826ee33a542d63d956010c1e04652c221822cebaaa14"
+    },
+    {
+      "startup_seconds": 55,
+      "models": {
+        "C": {
+          "agreement": 16,
+          "comparisons": 24,
+          "false_accepts": 0,
+          "false_rejects": 8,
+          "cost_mae": 0.5419728173791329,
+          "mismatched_arms": [
+            "C-2/recovery",
+            "C-2/steady",
+            "H+guard/steady",
+            "N4/steady"
+          ]
+        },
+        "C30": {
+          "agreement": 24,
+          "comparisons": 24,
+          "false_accepts": 0,
+          "false_rejects": 0,
+          "cost_mae": 0.046816618602065686,
+          "mismatched_arms": []
+        },
+        "C_sg": {
+          "agreement": 18,
+          "comparisons": 24,
+          "false_accepts": 0,
+          "false_rejects": 6,
+          "cost_mae": 0.48576895468301795,
+          "mismatched_arms": [
+            "C-2/recovery",
+            "C-2/steady",
+            "H+guard/steady"
+          ]
+        }
+      },
+      "receipt_sha256": "168bf6c5be7382edd81b29d46c7c1e4376102708fd00741a83a352c4f9509afd"
+    },
+    {
+      "startup_seconds": 60,
+      "models": {
+        "C": {
+          "agreement": 16,
+          "comparisons": 24,
+          "false_accepts": 0,
+          "false_rejects": 8,
+          "cost_mae": 0.5419728173791329,
+          "mismatched_arms": [
+            "C-2/recovery",
+            "C-2/steady",
+            "H+guard/steady",
+            "N4/steady"
+          ]
+        },
+        "C30": {
+          "agreement": 24,
+          "comparisons": 24,
+          "false_accepts": 0,
+          "false_rejects": 0,
+          "cost_mae": 0.046816618602065686,
+          "mismatched_arms": []
+        },
+        "C_sg": {
+          "agreement": 18,
+          "comparisons": 24,
+          "false_accepts": 0,
+          "false_rejects": 6,
+          "cost_mae": 0.5332994601484984,
+          "mismatched_arms": [
+            "C-2/recovery",
+            "C-2/steady",
+            "H+guard/steady"
+          ]
+        }
+      },
+      "receipt_sha256": "3b710ddf8202097b8e6e9b8f5d6e4a8e97c23fe46b6e9148305284b89c27c09f"
+    },
+    {
+      "startup_seconds": 65,
+      "models": {
+        "C": {
+          "agreement": 16,
+          "comparisons": 24,
+          "false_accepts": 0,
+          "false_rejects": 8,
+          "cost_mae": 0.5419728173791329,
+          "mismatched_arms": [
+            "C-2/recovery",
+            "C-2/steady",
+            "H+guard/steady",
+            "N4/steady"
+          ]
+        },
+        "C30": {
+          "agreement": 24,
+          "comparisons": 24,
+          "false_accepts": 0,
+          "false_rejects": 0,
+          "cost_mae": 0.046816618602065686,
+          "mismatched_arms": []
+        },
+        "C_sg": {
+          "agreement": 16,
+          "comparisons": 24,
+          "false_accepts": 0,
+          "false_rejects": 8,
+          "cost_mae": 0.532185279120813,
+          "mismatched_arms": [
+            "C-2/recovery",
+            "C-2/steady",
+            "H+guard/steady",
+            "N4/steady"
+          ]
+        }
+      },
+      "receipt_sha256": "8e5e93abae024487babcbdc36f83dd9975fe5bd2f309e4565f0b00723252e985"
+    },
+    {
+      "startup_seconds": 69.219185665,
+      "models": {
+        "C": {
+          "agreement": 16,
+          "comparisons": 24,
+          "false_accepts": 0,
+          "false_rejects": 8,
+          "cost_mae": 0.5419728173791329,
+          "mismatched_arms": [
+            "C-2/recovery",
+            "C-2/steady",
+            "H+guard/steady",
+            "N4/steady"
+          ]
+        },
+        "C30": {
+          "agreement": 24,
+          "comparisons": 24,
+          "false_accepts": 0,
+          "false_rejects": 0,
+          "cost_mae": 0.046816618602065686,
+          "mismatched_arms": []
+        },
+        "C_sg": {
+          "agreement": 16,
+          "comparisons": 24,
+          "false_accepts": 0,
+          "false_rejects": 8,
+          "cost_mae": 0.5419728173791329,
+          "mismatched_arms": [
+            "C-2/recovery",
+            "C-2/steady",
+            "H+guard/steady",
+            "N4/steady"
+          ]
+        }
+      },
+      "receipt_sha256": "4f41934e4b8ca30d9c7efbd05f974abd91be5d34dd695afa0576e1fe4a56d585"
+    }
+  ]
+}

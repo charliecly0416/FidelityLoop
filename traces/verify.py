@@ -16,8 +16,8 @@ ROWS = {
     "events": set("time_s kind gpu generation request_id state target".split()),
     "decisions": set("time_s target".split()),
 }
-EVENT_KINDS = set("api_accept api_completed censored cleanup_complete complete decision dispatch end initial launch launch_issued lifecycle_state local_dispatch observation_end observation_start policy_tick ready release request_complete request_dispatch request_release request_terminal shutdown shutdown_issued state verified_release".split())
-SENSITIVE = re.compile(r"/home/|/lustre/|/tmp/|chuliyang|charliecly|prompt_token_ids|raw_timestamp|hostname|controller_monotonic_ns|@gmail\.com|@pku\.edu", re.I)
+EVENT_KINDS = set("api_accept api_completed censored cleanup_complete complete decision dispatch end failed unfinished initial launch launch_issued lifecycle_state local_dispatch observation_end observation_start policy_tick ready release request_complete request_dispatch request_release request_terminal shutdown shutdown_issued state verified_release".split())
+SENSITIVE = re.compile(r"/(?:home|lustre|tmp)/|prompt_token_ids|raw_timestamp|hostname|controller_monotonic_ns|[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}", re.I)
 
 
 def check_fields(record):
@@ -65,6 +65,42 @@ def close(a, b):
     return a == b
 
 
+def check_e4_inventory(campaign):
+    """Keep unusable attempts separate from unique runs and prediction pairs."""
+    physical = {x['record_id']: x for x in campaign['physical']}
+    excluded = campaign['excluded_attempts']
+    ids = [x['attempt_id'] for x in excluded]
+    if len(set(ids)) != len(ids) or set(ids) & set(physical):
+        raise ValueError('duplicate or scientific/excluded attempt identity')
+    for x in excluded:
+        if (set(x) != {'attempt_id', 'status', 'reason_category', 'source_sha256', 'replacement_physical_id', 'root_cause'}
+            or x['replacement_physical_id'] not in physical
+            or x['status'] != 'TECHNICAL_INVALID'
+            or x['reason_category'] != 'policy_tick_deadline_missed'
+            or x['root_cause'] != 'unresolved'):
+            raise ValueError('invalid technical-attempt inventory')
+    coords = [(x['policy'], x['window'], x['repeat']) for x in campaign['physical']]
+    pred_coords = [(x['policy'], x['window'], x['replay_model']) for x in campaign['predictions']]
+    if len(set(coords)) != len(coords) or len(set(pred_coords)) != len(pred_coords):
+        raise ValueError('duplicate run or frozen prediction coordinate')
+
+
+def check_extension_inventory(campaign):
+    expected = {'E5': (27, 45, 81), 'E6': (12, 12, 24)}[campaign['campaign']]
+    if tuple(len(campaign[k]) for k in ('physical', 'predictions', 'pairs')) != expected:
+        raise ValueError('incomplete extension population')
+    if campaign['excluded_attempts']:
+        raise ValueError('E5/E6 have no technical-retry exclusions')
+    for kind, fields in [('physical', ('policy', 'window', 'repeat')),
+                         ('predictions', ('policy', 'window', 'replay_model'))]:
+        coordinates = [tuple(e[k] for k in fields) for e in campaign[kind]]
+        if len(set(coordinates)) != len(coordinates):
+            raise ValueError('duplicate run/prediction coordinates')
+    models = {e['replay_model'] for e in campaign['predictions']}
+    if models != ({'C', 'C30', 'C_sg'} if campaign['campaign'] == 'E5' else {'S14', 'L14'}):
+        raise ValueError('unexpected original frozen predictor; post-hoc predictions belong separately')
+
+
 def verify(root=ROOT):
     root = Path(root).resolve()
     manifest = json.loads((root / "MANIFEST.json").read_text())
@@ -82,6 +118,10 @@ def verify(root=ROOT):
     counts = {"physical_runs": 0, "unique_predictions": 0, "pairs": 0, "excluded_attempts": 0}
     seen = set()
     for campaign in index["campaigns"]:
+        if campaign['campaign'] == 'E4':
+            check_e4_inventory(campaign)
+        if campaign['campaign'] in ('E5', 'E6'):
+            check_extension_inventory(campaign)
         counts["physical_runs"] += len(campaign["physical"])
         counts["unique_predictions"] += len(campaign["predictions"])
         counts["pairs"] += len(campaign["pairs"])
@@ -91,7 +131,7 @@ def verify(root=ROOT):
                 raise ValueError("duplicate record identity")
             seen.add(entry["record_id"])
             check_fields(load_trace(entry, root))
-    if counts != {"physical_runs": 132, "unique_predictions": 140, "pairs": 372, "excluded_attempts": 6}:
+    if counts != {"physical_runs": 197, "unique_predictions": 239, "pairs": 555, "excluded_attempts": 8}:
         raise ValueError("unexpected corpus population")
     if not close(evaluate(root), json.loads((root / "SUMMARY.json").read_text())):
         raise ValueError("example summary changed")

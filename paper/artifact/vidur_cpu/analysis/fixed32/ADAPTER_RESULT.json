@@ -1,0 +1,173 @@
+{
+  "status": "PASS",
+  "input_sha256": "61fba294e519f2857bbc02d1942092c184c227e35daba3f193baddd84a03c8f0",
+  "output_sha256": "8abdc2fdea5de1c27c504cc694a6e032d17a75b419a134e0625e2b4020d18aed",
+  "evaluator_sha256": "2b0289f465875f5346c9fa63dd53f002b2dd2dfffff7ddc745e1085f37379f88",
+  "views": [
+    {
+      "view": {
+        "name": "full_60s",
+        "horizon": 60.0,
+        "relative_deadline_seconds": 60.0
+      },
+      "mapping": {
+        "all_native_requests": 32,
+        "included_arrivals": 32,
+        "excluded_at_or_after_cutoff": 0,
+        "future_completions_redacted": 0
+      },
+      "request_metrics": {
+        "populations": {
+          "online": {
+            "arrivals": 32,
+            "completed": 32,
+            "on_time": 32,
+            "late": 0,
+            "unfinished": 0,
+            "not_on_time": 0,
+            "on_time_rate": 1.0
+          },
+          "offline": {
+            "arrivals": 0,
+            "completed": 0,
+            "on_time": 0,
+            "late": 0,
+            "unfinished": 0,
+            "not_on_time": 0,
+            "on_time_rate": null
+          }
+        },
+        "unfinished": 0,
+        "completed": 32,
+        "late": 0,
+        "P1plus": false,
+        "historical_P1": false,
+        "post_horizon_completions": 0,
+        "horizon_seconds": 60.0
+      },
+      "P1plus_applicable": false,
+      "P1plus_note": "Original paper requires 120 offline requests; this online-only demo is ineligible. False is not a failed policy test.",
+      "independent_tally": {
+        "arrivals": 32,
+        "completed": 32,
+        "on_time": 32,
+        "late": 0,
+        "unfinished": 0
+      },
+      "agreement": true,
+      "scope": "simulated request-output interoperability only",
+      "lifecycle_occupied_seconds": null,
+      "scenario_cost": null
+    },
+    {
+      "view": {
+        "name": "tight_deadline_diagnostic",
+        "horizon": 60.0,
+        "relative_deadline_seconds": 0.5
+      },
+      "mapping": {
+        "all_native_requests": 32,
+        "included_arrivals": 32,
+        "excluded_at_or_after_cutoff": 0,
+        "future_completions_redacted": 0
+      },
+      "request_metrics": {
+        "populations": {
+          "online": {
+            "arrivals": 32,
+            "completed": 32,
+            "on_time": 32,
+            "late": 0,
+            "unfinished": 0,
+            "not_on_time": 0,
+            "on_time_rate": 1.0
+          },
+          "offline": {
+            "arrivals": 0,
+            "completed": 0,
+            "on_time": 0,
+            "late": 0,
+            "unfinished": 0,
+            "not_on_time": 0,
+            "on_time_rate": null
+          }
+        },
+        "unfinished": 0,
+        "completed": 32,
+        "late": 0,
+        "P1plus": false,
+        "historical_P1": false,
+        "post_horizon_completions": 0,
+        "horizon_seconds": 60.0
+      },
+      "P1plus_applicable": false,
+      "P1plus_note": "Original paper requires 120 offline requests; this online-only demo is ineligible. False is not a failed policy test.",
+      "independent_tally": {
+        "arrivals": 32,
+        "completed": 32,
+        "on_time": 32,
+        "late": 0,
+        "unfinished": 0
+      },
+      "agreement": true,
+      "scope": "simulated request-output interoperability only",
+      "lifecycle_occupied_seconds": null,
+      "scenario_cost": null
+    },
+    {
+      "view": {
+        "name": "cutoff_diagnostic",
+        "horizon": 2.0,
+        "relative_deadline_seconds": 60.0
+      },
+      "mapping": {
+        "all_native_requests": 32,
+        "included_arrivals": 20,
+        "excluded_at_or_after_cutoff": 12,
+        "future_completions_redacted": 3
+      },
+      "request_metrics": {
+        "populations": {
+          "online": {
+            "arrivals": 20,
+            "completed": 17,
+            "on_time": 17,
+            "late": 0,
+            "unfinished": 3,
+            "not_on_time": 3,
+            "on_time_rate": 0.85
+          },
+          "offline": {
+            "arrivals": 0,
+            "completed": 0,
+            "on_time": 0,
+            "late": 0,
+            "unfinished": 0,
+            "not_on_time": 0,
+            "on_time_rate": null
+          }
+        },
+        "unfinished": 3,
+        "completed": 17,
+        "late": 0,
+        "P1plus": false,
+        "historical_P1": false,
+        "post_horizon_completions": 0,
+        "horizon_seconds": 2.0
+      },
+      "P1plus_applicable": false,
+      "P1plus_note": "Original paper requires 120 offline requests; this online-only demo is ineligible. False is not a failed policy test.",
+      "independent_tally": {
+        "arrivals": 20,
+        "completed": 17,
+        "on_time": 17,
+        "late": 0,
+        "unfinished": 3
+      },
+      "agreement": true,
+      "scope": "simulated request-output interoperability only",
+      "lifecycle_occupied_seconds": null,
+      "scenario_cost": null
+    }
+  ]
+}

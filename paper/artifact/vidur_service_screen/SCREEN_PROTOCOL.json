@@ -1,0 +1,40 @@
+{
+  "schema": "fidelityloop-vidur-service-screen-artifact-v1",
+  "scope": "fixed-admission finite-shape service screen; not policy/lifecycle/resource validation",
+  "model": "Qwen2.5-7B-Instruct",
+  "gpu": "NVIDIA A100 80GB",
+  "tensor_parallel": 1,
+  "pipeline_parallel": 1,
+  "target_runtime": {
+    "python": "3.12",
+    "vllm": "0.9.0",
+    "torch": "2.7.0+cu126",
+    "backend": "V1/Flash Attention",
+    "dtype": "float16"
+  },
+  "profile_runtime": {
+    "python": "3.10.15",
+    "torch": "2.3.0+cu121",
+    "flashinfer": "0.0.5+cu121torch2.3"
+  },
+  "groups": 36,
+  "requests": 90,
+  "warmup_groups": 2,
+  "gate": {
+    "purpose": "Engineering go/no-go for later retrospective replay, not universal accuracy or SLA guarantee",
+    "request_latency_median_ape_max": 0.2,
+    "request_latency_p90_ape_max": 0.35,
+    "batch_makespan_median_ape_max": 0.2,
+    "batch_makespan_p90_ape_max": 0.35,
+    "max_condition_median_ape": 0.5,
+    "repeat_makespan_max_min_ratio_warn": 1.5,
+    "quantile": "linear (n-1 interpolation)",
+    "on_metric_failure": "STOP_NOT_USEFUL_FOR_POLICY_VALIDATION",
+    "on_technical_failure": "HOLD; preserve partial evidence; no automatic rerun",
+    "on_jitter_only": "INCONCLUSIVE_STABILITY; no exclusion or automatic rerun"
+  },
+  "return_zip_sha256": "4e99478a682185174b5b4a10f2d353934e59f76123d5418b1bc1466eb9b867c6",
+  "profile_manifest_sha256": "8b0d25197d835ffa0f8b2907feaa5e572257df84c1ea2b2c604afaa405903d0f",
+  "measurements_sha256": "6a0b7d7ac9a5b255ebeba23b3132257b5442a6cab3d08f3d8b9676f294da0d51",
+  "note": "The full return archive is retained separately; this public compact artifact excludes absolute paths, prompts, token IDs, and profiler traces."
+}

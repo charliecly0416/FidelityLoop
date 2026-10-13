@@ -1,0 +1,309 @@
+{
+  "status": "PASS_SERVICE_SCREEN_ONLY",
+  "groups": [
+    {
+      "group_id": "i128_o128_c4_r1",
+      "request_median_ape": 0.26076382680587473,
+      "batch_makespan_ape": 0.2606711844489988,
+      "observed_makespan_s": 1.7433187620481476,
+      "predicted_makespan_s": 1.2888857954728947,
+      "signed_batch_relative_error": -0.2606711844489988
+    },
+    {
+      "group_id": "i1024_o128_c1_r1",
+      "request_median_ape": 0.17286419962783367,
+      "batch_makespan_ape": 0.17286419962783367,
+      "observed_makespan_s": 1.5939645339967683,
+      "predicted_makespan_s": 1.318425130592264,
+      "signed_batch_relative_error": -0.17286419962783367
+    },
+    {
+      "group_id": "i256_o128_c4_r1",
+      "request_median_ape": 0.18831848950375718,
+      "batch_makespan_ape": 0.18832093693233193,
+      "observed_makespan_s": 1.6375269150012173,
+      "predicted_makespan_s": 1.329146312116277,
+      "signed_batch_relative_error": -0.18832093693233193
+    },
+    {
+      "group_id": "i2048_o128_c1_r1",
+      "request_median_ape": 0.16223489294399882,
+      "batch_makespan_ape": 0.16223489294399882,
+      "observed_makespan_s": 1.67573994101258,
+      "predicted_makespan_s": 1.4038764510804211,
+      "signed_batch_relative_error": -0.16223489294399882
+    },
+    {
+      "group_id": "i512_o128_c1_r1",
+      "request_median_ape": 0.263966954840782,
+      "batch_makespan_ape": 0.263966954840782,
+      "observed_makespan_s": 1.7272273460403085,
+      "predicted_makespan_s": 1.2712964031883227,
+      "signed_batch_relative_error": -0.263966954840782
+    },
+    {
+      "group_id": "i512_o128_c4_r1",
+      "request_median_ape": 0.17810065373148246,
+      "batch_makespan_ape": 0.17811686400886004,
+      "observed_makespan_s": 1.7133081840001978,
+      "predicted_makespan_s": 1.4081391031853676,
+      "signed_batch_relative_error": -0.17811686400886004
+    },
+    {
+      "group_id": "i256_o128_c1_r1",
+      "request_median_ape": 0.18356632685639795,
+      "batch_makespan_ape": 0.18356632685639795,
+      "observed_makespan_s": 1.5341408599633723,
+      "predicted_makespan_s": 1.2525242574195805,
+      "signed_batch_relative_error": -0.18356632685639795
+    },
+    {
+      "group_id": "i1024_o128_c4_r1",
+      "request_median_ape": 0.15347953880733817,
+      "batch_makespan_ape": 0.1535268169792621,
+      "observed_makespan_s": 1.8777901849825867,
+      "predicted_makespan_s": 1.5894990349273104,
+      "signed_batch_relative_error": -0.1535268169792621
+    },
+    {
+      "group_id": "i2048_o128_c4_r1",
+      "request_median_ape": 0.10895495527488283,
+      "batch_makespan_ape": 0.10904644562061806,
+      "observed_makespan_s": 2.177116845967248,
+      "predicted_makespan_s": 1.939709992213749,
+      "signed_batch_relative_error": -0.10904644562061806
+    },
+    {
+      "group_id": "i256_o256_c1_r1",
+      "request_median_ape": 0.185973156645004,
+      "batch_makespan_ape": 0.185973156645004,
+      "observed_makespan_s": 3.0620271210209467,
+      "predicted_makespan_s": 2.4925722715920675,
+      "signed_batch_relative_error": -0.185973156645004
+    },
+    {
+      "group_id": "i128_o128_c1_r1",
+      "request_median_ape": 0.1833430295132842,
+      "batch_makespan_ape": 0.1833430295132842,
+      "observed_makespan_s": 1.5288652919698507,
+      "predicted_makespan_s": 1.2485584976223865,
+      "signed_batch_relative_error": -0.1833430295132842
+    },
+    {
+      "group_id": "i256_o256_c4_r1",
+      "request_median_ape": 0.1949201512931607,
+      "batch_makespan_ape": 0.19492632629255655,
+      "observed_makespan_s": 3.2062610419816338,
+      "predicted_makespan_s": 2.5812763559332095,
+      "signed_batch_relative_error": -0.19492632629255655
+    },
+    {
+      "group_id": "i256_o128_c1_r2",
+      "request_median_ape": 0.18411777169533738,
+      "batch_makespan_ape": 0.18411777169533738,
+      "observed_makespan_s": 1.5351777670439333,
+      "predicted_makespan_s": 1.2525242574195805,
+      "signed_batch_relative_error": -0.18411777169533738
+    },
+    {
+      "group_id": "i256_o256_c4_r2",
+      "request_median_ape": 0.19561100476832077,
+      "batch_makespan_ape": 0.195620858411652,
+      "observed_makespan_s": 3.2090294520021416,
+      "predicted_makespan_s": 2.5812763559332095,
+      "signed_batch_relative_error": -0.195620858411652
+    },
+    {
+      "group_id": "i512_o128_c1_r2",
+      "request_median_ape": 0.1835807732946623,
+      "batch_makespan_ape": 0.1835807732946623,
+      "observed_makespan_s": 1.5571612740168348,
+      "predicted_makespan_s": 1.2712964031883227,
+      "signed_batch_relative_error": -0.1835807732946623
+    },
+    {
+      "group_id": "i1024_o128_c1_r2",
+      "request_median_ape": 0.1741320646431469,
+      "batch_makespan_ape": 0.1741320646431469,
+      "observed_makespan_s": 1.5964115739916451,
+      "predicted_makespan_s": 1.318425130592264,
+      "signed_batch_relative_error": -0.1741320646431469
+    },
+    {
+      "group_id": "i2048_o128_c1_r2",
+      "request_median_ape": 0.1621334678789591,
+      "batch_makespan_ape": 0.1621334678789591,
+      "observed_makespan_s": 1.6755370900500566,
+      "predicted_makespan_s": 1.4038764510804211,
+      "signed_batch_relative_error": -0.1621334678789591
+    },
+    {
+      "group_id": "i128_o128_c4_r2",
+      "request_median_ape": 0.1972154261038887,
+      "batch_makespan_ape": 0.19720445018450447,
+      "observed_makespan_s": 1.6054969360120595,
+      "predicted_makespan_s": 1.2888857954728947,
+      "signed_batch_relative_error": -0.19720445018450447
+    },
+    {
+      "group_id": "i128_o128_c1_r2",
+      "request_median_ape": 0.18345395017124294,
+      "batch_makespan_ape": 0.18345395017124294,
+      "observed_makespan_s": 1.529072974983137,
+      "predicted_makespan_s": 1.2485584976223865,
+      "signed_batch_relative_error": -0.18345395017124294
+    },
+    {
+      "group_id": "i1024_o128_c4_r2",
+      "request_median_ape": 0.15211673631053083,
+      "batch_makespan_ape": 0.15215925732626112,
+      "observed_makespan_s": 1.8747613259474747,
+      "predicted_makespan_s": 1.5894990349273104,
+      "signed_batch_relative_error": -0.15215925732626112
+    },
+    {
+      "group_id": "i512_o128_c4_r2",
+      "request_median_ape": 0.17900435153371042,
+      "batch_makespan_ape": 0.17901722764392053,
+      "observed_makespan_s": 1.7151871520327404,
+      "predicted_makespan_s": 1.4081391031853676,
+      "signed_batch_relative_error": -0.17901722764392053
+    },
+    {
+      "group_id": "i256_o128_c4_r2",
+      "request_median_ape": 0.18843444882656651,
+      "batch_makespan_ape": 0.1884319903106449,
+      "observed_makespan_s": 1.6377509909798391,
+      "predicted_makespan_s": 1.329146312116277,
+      "signed_batch_relative_error": -0.1884319903106449
+    },
+    {
+      "group_id": "i256_o256_c1_r2",
+      "request_median_ape": 0.1861366723577536,
+      "batch_makespan_ape": 0.1861366723577536,
+      "observed_makespan_s": 3.0626423220383003,
+      "predicted_makespan_s": 2.4925722715920675,
+      "signed_batch_relative_error": -0.1861366723577536
+    },
+    {
+      "group_id": "i2048_o128_c4_r2",
+      "request_median_ape": 0.11043107975448335,
+      "batch_makespan_ape": 0.11051814737851039,
+      "observed_makespan_s": 2.1807190180406906,
+      "predicted_makespan_s": 1.939709992213749,
+      "signed_batch_relative_error": -0.11051814737851039
+    },
+    {
+      "group_id": "i2048_o128_c4_r3",
+      "request_median_ape": 0.10870926848205303,
+      "batch_makespan_ape": 0.10879856083183671,
+      "observed_makespan_s": 2.1765112879802473,
+      "predicted_makespan_s": 1.939709992213749,
+      "signed_batch_relative_error": -0.10879856083183671
+    },
+    {
+      "group_id": "i512_o128_c1_r3",
+      "request_median_ape": 0.18360266693492136,
+      "batch_makespan_ape": 0.18360266693492136,
+      "observed_makespan_s": 1.5572030330076814,
+      "predicted_makespan_s": 1.2712964031883227,
+      "signed_batch_relative_error": -0.18360266693492136
+    },
+    {
+      "group_id": "i256_o128_c1_r3",
+      "request_median_ape": 0.18575101211986103,
+      "batch_makespan_ape": 0.18575101211986103,
+      "observed_makespan_s": 1.5382570639485493,
+      "predicted_makespan_s": 1.2525242574195805,
+      "signed_batch_relative_error": -0.18575101211986103
+    },
+    {
+      "group_id": "i128_o128_c1_r3",
+      "request_median_ape": 0.18367130321451675,
+      "batch_makespan_ape": 0.18367130321451675,
+      "observed_makespan_s": 1.5294801010168158,
+      "predicted_makespan_s": 1.2485584976223865,
+      "signed_batch_relative_error": -0.18367130321451675
+    },
+    {
+      "group_id": "i256_o256_c4_r3",
+      "request_median_ape": 0.19606487458559366,
+      "batch_makespan_ape": 0.19607278887149615,
+      "observed_makespan_s": 3.210833418997936,
+      "predicted_makespan_s": 2.5812763559332095,
+      "signed_batch_relative_error": -0.19607278887149615
+    },
+    {
+      "group_id": "i128_o128_c4_r3",
+      "request_median_ape": 0.19796773059516554,
+      "batch_makespan_ape": 0.19795302395473233,
+      "observed_makespan_s": 1.6069953929982148,
+      "predicted_makespan_s": 1.2888857954728947,
+      "signed_batch_relative_error": -0.19795302395473233
+    },
+    {
+      "group_id": "i1024_o128_c1_r3",
+      "request_median_ape": 0.17449853675497176,
+      "batch_makespan_ape": 0.17449853675497176,
+      "observed_makespan_s": 1.5971202829969116,
+      "predicted_makespan_s": 1.318425130592264,
+      "signed_batch_relative_error": -0.17449853675497176
+    },
+    {
+      "group_id": "i1024_o128_c4_r3",
+      "request_median_ape": 0.15670085251767402,
+      "batch_makespan_ape": 0.15673686590863808,
+      "observed_makespan_s": 1.884938367002178,
+      "predicted_makespan_s": 1.5894990349273104,
+      "signed_batch_relative_error": -0.15673686590863808
+    },
+    {
+      "group_id": "i512_o128_c4_r3",
+      "request_median_ape": 0.17950921041595044,
+      "batch_makespan_ape": 0.1795157473215497,
+      "observed_makespan_s": 1.716229286044836,
+      "predicted_makespan_s": 1.4081391031853676,
+      "signed_batch_relative_error": -0.1795157473215497
+    },
+    {
+      "group_id": "i256_o256_c1_r3",
+      "request_median_ape": 0.18655008756637864,
+      "batch_makespan_ape": 0.18655008756637864,
+      "observed_makespan_s": 3.064198832027614,
+      "predicted_makespan_s": 2.4925722715920675,
+      "signed_batch_relative_error": -0.18655008756637864
+    },
+    {
+      "group_id": "i256_o128_c4_r3",
+      "request_median_ape": 0.1887919828372729,
+      "batch_makespan_ape": 0.18879299715435485,
+      "observed_makespan_s": 1.638479829998687,
+      "predicted_makespan_s": 1.329146312116277,
+      "signed_batch_relative_error": -0.18879299715435485
+    },
+    {
+      "group_id": "i2048_o128_c1_r3",
+      "request_median_ape": 0.1635541258550908,
+      "batch_makespan_ape": 0.1635541258550908,
+      "observed_makespan_s": 1.678382898971904,
+      "predicted_makespan_s": 1.4038764510804211,
+      "signed_batch_relative_error": -0.1635541258550908
+    }
+  ],
+  "metrics": {
+    "request_latency_median_ape": 0.1835735500755301,
+    "request_latency_p90_ape": 0.1973616535755335,
+    "batch_makespan_median_ape": 0.1835735500755301,
+    "batch_makespan_p90_ape": 0.19663861952800032,
+    "max_condition_median_ape": 0.19795302395473233
+  },
+  "failed_criteria": [],
+  "jitter_conditions": {},
+  "request_count": 90,
+  "group_count": 36,
+  "scope": "Fixed-admission finite-shape screen; PASS does not establish closed-loop policy validity or universal tail accuracy",
+  "predictions_sha256": "d3e9b8a09485a6977ece9e078d43038182aa0d258a451df51cfd5129a8526f17",
+  "protocol_sha256": "4ba480849a3378ef852df2b9cd8457bf504a80ba7d119697e0ed4be4949164db",
+  "measurements_sha256": "6a0b7d7ac9a5b255ebeba23b3132257b5442a6cab3d08f3d8b9676f294da0d51",
+  "profile_manifest_sha256": "8b0d25197d835ffa0f8b2907feaa5e572257df84c1ea2b2c604afaa405903d0f"
+}

@@ -1,0 +1,13 @@
+model,window,policy,run_id,physical_P1plus,predicted_P1plus,physical_occupied,predicted_occupied,physical_cost,predicted_cost,occupied_absolute_error_gpu_seconds,scenario_cost_absolute_error,occupied_trajectory_l1_gpu_seconds,target_disagreement_ticks,target_ticks,target_disagreement_fraction,first_target_disagreement_tick
+L14,bridge_locked_test_recovery_v1,all2,all2__bridge_locked_test_recovery_v1__r1,True,True,4200.0,4200.0,4.2,4.2,0.0,0.0,0.0,0,2100,0.0,
+S14,bridge_locked_test_recovery_v1,all2,all2__bridge_locked_test_recovery_v1__r1,True,True,4200.0,4200.0,4.2,4.2,0.0,0.0,0.0,0,2100,0.0,
+T30-14,bridge_locked_test_recovery_v1,all2,all2__bridge_locked_test_recovery_v1__r1,True,True,4200.0,4200.0,4.2,4.2,0.0,0.0,0.0,0,2100,0.0,
+L14,bridge_locked_test_recovery_v1,all2,all2__bridge_locked_test_recovery_v1__r2,True,True,4200.0,4200.0,4.2,4.2,0.0,0.0,0.0,0,2100,0.0,
+S14,bridge_locked_test_recovery_v1,all2,all2__bridge_locked_test_recovery_v1__r2,True,True,4200.0,4200.0,4.2,4.2,0.0,0.0,0.0,0,2100,0.0,
+T30-14,bridge_locked_test_recovery_v1,all2,all2__bridge_locked_test_recovery_v1__r2,True,True,4200.0,4200.0,4.2,4.2,0.0,0.0,0.0,0,2100,0.0,
+L14,bridge_locked_test_steady_v1,all2,all2__bridge_locked_test_steady_v1__r1,True,True,4200.0,4200.0,4.2,4.2,0.0,0.0,0.0,0,2100,0.0,
+S14,bridge_locked_test_steady_v1,all2,all2__bridge_locked_test_steady_v1__r1,True,True,4200.0,4200.0,4.2,4.2,0.0,0.0,0.0,0,2100,0.0,
+T30-14,bridge_locked_test_steady_v1,all2,all2__bridge_locked_test_steady_v1__r1,True,True,4200.0,4200.0,4.2,4.2,0.0,0.0,0.0,0,2100,0.0,
+L14,bridge_locked_test_steady_v1,all2,all2__bridge_locked_test_steady_v1__r2,True,True,4200.0,4200.0,4.2,4.2,0.0,0.0,0.0,0,2100,0.0,
+S14,bridge_locked_test_steady_v1,all2,all2__bridge_locked_test_steady_v1__r2,True,True,4200.0,4200.0,4.2,4.2,0.0,0.0,0.0,0,2100,0.0,
+T30-14,bridge_locked_test_steady_v1,all2,all2__bridge_locked_test_steady_v1__r2,True,True,4200.0,4200.0,4.2,4.2,0.0,0.0,0.0,0,2100,0.0,

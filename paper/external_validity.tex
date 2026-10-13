@@ -176,3 +176,24 @@ continue during $[1500,1800)$, and the back window retains an online arrival
 at the closed 1500-second endpoint, so source-window timing and ledger segments
 are reported separately. These results do not estimate Azure's production QoS,
 required fleet size, model quality, energy use, or bills.
+
+\paragraph{Retrospective predictor screening.}
+We replay the 24 fresh W4-L runs with the archived O/C/C30/E/V model bank,
+original policy code, and fixed guard estimates. Eight policy/window
+predictions per model are reused across three repeats, yielding 40 distinct
+predictions and 120 comparisons. Raw request and resource reconstruction
+matches the historical records; strict P1+ is recomputed from every request's
+deadline and observation cutoff. These predictions are generated after the
+physical study, without fitting its outcomes.
+
+Of the 24 physical runs, 15 satisfy P1+ and nine fail. C, C30, E, and V each
+agree on 21/24, but C falsely accepts three failures whereas C30/E/V reject
+three successes. O agrees on 9/24, rejecting all 15 successes. Their window-cost
+MAEs are 0.0909, 0.0419, 0.0536, 0.0523, and 1.6775 scenario USD for
+C, C30, E, V, and O, respectively. H succeeds in one front-window repeat and
+two back-window repeats. A fixed binary prediction cannot match every one of
+these mixed repeats; no majority outcome replaces the individual runs.
+This second arrival source illustrates why error direction and physical
+variation must accompany total agreement. The archived E model here uses
+25.196\,s startup, distinct from the deployment-adapted E in the main study;
+all original model fields are retained in \path{artifact/azure_diagnostic/}.

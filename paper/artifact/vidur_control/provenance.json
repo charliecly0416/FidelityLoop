@@ -1,0 +1,9 @@
+{
+  "source_acceptance_sha256": "89f768a9e3620f394e7faf22c57b44de79a084af212aedd05295f0408e887434",
+  "comparison_sha256": "af5f7e12315bb5f8fcdb2381f6db6ca7c06876e76aec42164155d86737e2b76c",
+  "scope": "Reduced records support CPU score recomputation; native simulation and raw GPU journals remain in full archive",
+  "native_source_commit": "abae7f63aa857300f5cdc6f5e0d27860cd24721b",
+  "predictors": 12,
+  "physical_runs": 36,
+  "corpus_counts_unchanged": true
+}

@@ -2,9 +2,9 @@
 
 **Closed-loop validation of elastic LLM-serving policies.**
 
-FidelityLoop is the research artifact accompanying the paper *FidelityLoop: Closed-Loop Validation of Elastic LLM-Serving Policies*. It connects replay predictions, policy decisions, lifecycle events, request identities, and deadline-aware cost accounting. The public CPU package is designed for inspection and deterministic interface checks; the physical campaign reported in the paper was run separately on two NVIDIA A100 GPUs.
+FidelityLoop is the research artifact accompanying the paper *FidelityLoop: Closed-Loop Validation of Elastic LLM-Serving Policies*. It connects replay predictions, policy decisions, lifecycle events, request identities, and deadline-aware cost accounting. The public CPU package supports interface checks, fixed-input replay, and result recomputation; the physical campaign reported in the paper was run separately on two NVIDIA A100 GPUs.
 
-Current paper: [main PDF](paper/main.pdf) · [supplement](paper/supplement.pdf) · [Overleaf ZIP](https://github.com/charliecly0416/FidelityLoop/releases/download/paper-v7r12a-20261009/FidelityLoop_Overleaf_v7r12a_20261009.zip).
+Current paper: [main PDF](paper/main.pdf) · [supplement](paper/supplement.pdf) · [Overleaf ZIP](https://github.com/charliecly0416/FidelityLoop/releases/download/paper-v8r12-20261013/FidelityLoop_Overleaf_v8r12_20261013.zip).
 
 ## What is included
 
@@ -14,7 +14,8 @@ Current paper: [main PDF](paper/main.pdf) · [supplement](paper/supplement.pdf) 
 - `experiments/`: a self-contained CPU validation and its configuration; `python -m fidelityloop.framework.validate` also reproduces the historical facade compatibility checks.
 - `evidence/`: compact E2/E3 result ledgers, prediction recheck, source hashes, and the current manuscript claim checks. These files contain the paper's reported deployment outcomes without shipping multi-gigabyte runtime logs.
 - `artifact/`: protocol/configuration evidence, a small derived workload sample, an implementation-footprint audit, and the standalone `e1_repricing/` verifier for the paper's fixed-event resource and cost analysis. Full production traces, model weights, and GPU event journals are not redistributed here.
-- `traces/`: standalone paired prediction/execution corpus: 132 accepted physical runs, 140 unique predictions, 372 explicit pairs, and standard-library loaders and metric examples. Prompts and machine identifiers are omitted; scientific failures remain included.
+- `traces/`: standalone paired prediction/execution corpus: 197 accepted physical runs, 239 unique predictions, 555 explicit pairs, and standard-library loaders and metric examples. Prompts and machine identifiers are omitted; scientific failures remain included.
+- `cpu_replay/`: optional native Vidur service backend with fixed Qwen profiles, all 12 retrospective policy inputs, and portable CPU replay checks.
 - `paper/`: anonymous paper source, figures, bibliography, and the compiled main paper and supplement.
 
 ## Quick start
@@ -32,7 +33,15 @@ The two framework checks should report `status: PASS`; the E1 verifier should re
 
 ## Paired deployment traces
 
-From `traces/`, run `python -B verify.py` to check the complete corpus and recompute its window ledgers. `python -B evaluate.py --metric feasibility` and `--metric cost` give per-campaign examples. The [standalone ZIP](https://github.com/charliecly0416/FidelityLoop/releases/download/paired-traces-v1-20261009/FidelityLoop_Paired_Traces_v1_20261009.zip) has author-neutral contents for independent use. See [schema and scope](traces/SCHEMA.md); repeated pairs are not independent experiments, and the data cannot rerun model inference or establish unseen-workload generalization.
+From `traces/`, run `python -B verify.py` to check the complete corpus and recompute its window ledgers. `python -B evaluate.py --metric feasibility` and `--metric cost` give per-campaign examples. The [standalone ZIP](https://github.com/charliecly0416/FidelityLoop/releases/download/paper-v8r12-20261013/FidelityLoop_Paired_Traces_20261013.zip) has author-neutral contents for independent use. See [schema and scope](traces/SCHEMA.md); repeated pairs are not independent experiments, and the data cannot rerun model inference or establish unseen-workload generalization.
+
+## External service model and result checks
+
+The paper includes service validation and closed-loop comparison with a Vidur
+backend. [CPU replay instructions](cpu_replay/README.md) regenerate the existing
+12 predictions; [paper artifact instructions](paper/README.md) provide fast
+standard-library checks against 36 recorded physical runs. These retrospective
+predictions do not increase the original 197/239/555 corpus counts.
 
 ## Rebuilding the paper
 

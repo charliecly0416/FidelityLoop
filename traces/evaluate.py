@@ -32,8 +32,8 @@ def evaluate(root=ROOT):
             paired.add((phy, pred))
             if requests[phy] != requests[pred]:
                 raise ValueError("paired request populations or budgets differ")
-            # E3's frozen comparison excludes its two capacity anchors.
-            if campaign["campaign"] == "E3" and entries[phy]["policy"] == "all2":
+            # E3/E4/E5/E6 release anchors but exclude them from their frozen comparisons.
+            if campaign["campaign"] in ("E3", "E4", "E5", "E6") and entries[phy]["policy"] == "all2":
                 continue
             by_model[entries[pred]["replay_model"]].append((results[phy], results[pred]))
         for model, pairs in sorted(by_model.items()):
@@ -44,7 +44,7 @@ def evaluate(root=ROOT):
                 "false_acceptance_cells": sum(not p["P1plus"] and q["P1plus"] for p, q in pairs),
                 "false_rejection_cells": sum(p["P1plus"] and not q["P1plus"] for p, q in pairs),
                 "cost_mae_scenario_USD": sum(abs(p["cost_total"] - q["cost_total"]) for p, q in pairs) / n})
-    return {"scope": "Per-campaign descriptive paired comparisons. All accepted physical cells except E3 anchors. Repeats reuse predictions; these are not independent prediction counts or population screening accuracy. V3 covers all released policies; the paper's fixed-H fidelity analyses use a subset.", "groups": groups}
+    return {"scope": "Per-campaign descriptive paired comparisons. All accepted physical cells except E3/E4/E5/E6 anchors. Repeats reuse predictions; these are not independent prediction counts or population screening accuracy. V3 covers all released policies; the paper's fixed-H fidelity analyses use a subset.", "groups": groups}
 
 
 def main():

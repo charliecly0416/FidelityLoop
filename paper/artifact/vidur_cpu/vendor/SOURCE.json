@@ -1,0 +1,7 @@
+{
+  "source": "src/fidelityloop/bridge/metrics.py",
+  "sha256": "2b0289f465875f5346c9fa63dd53f002b2dd2dfffff7ddc745e1085f37379f88",
+  "modification": "none; exact copy",
+  "entrypoint": "evaluate_requests(rows, records, horizon=...)",
+  "scope": "request identity, completion, deadline and cutoff; no lifecycle/cost supplied"
+}

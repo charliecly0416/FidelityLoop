@@ -1,0 +1,670 @@
+{
+  "groups": [
+    {
+      "group_id": "i128_o128_c4_r1",
+      "requests": [
+        {
+          "request_id": "i128_o128_c4_r1_q0",
+          "predicted_latency_s": 1.279133476362172,
+          "predicted_completion_s": 1.279133476362172
+        },
+        {
+          "request_id": "i128_o128_c4_r1_q1",
+          "predicted_latency_s": 1.28854862544337,
+          "predicted_completion_s": 1.2888857954728947
+        },
+        {
+          "request_id": "i128_o128_c4_r1_q2",
+          "predicted_latency_s": 1.28827686743695,
+          "predicted_completion_s": 1.2888857954728947
+        },
+        {
+          "request_id": "i128_o128_c4_r1_q3",
+          "predicted_latency_s": 1.288016747470253,
+          "predicted_completion_s": 1.2888857954728947
+        }
+      ],
+      "predicted_makespan_s": 1.2888857954728947
+    },
+    {
+      "group_id": "i1024_o128_c1_r1",
+      "requests": [
+        {
+          "request_id": "i1024_o128_c1_r1_q0",
+          "predicted_latency_s": 1.318425130592264,
+          "predicted_completion_s": 1.318425130592264
+        }
+      ],
+      "predicted_makespan_s": 1.318425130592264
+    },
+    {
+      "group_id": "i256_o128_c4_r1",
+      "requests": [
+        {
+          "request_id": "i256_o128_c4_r1_q0",
+          "predicted_latency_s": 1.319384040157691,
+          "predicted_completion_s": 1.319384040157691
+        },
+        {
+          "request_id": "i256_o128_c4_r1_q1",
+          "predicted_latency_s": 1.3287133400767153,
+          "predicted_completion_s": 1.329146312116277
+        },
+        {
+          "request_id": "i256_o128_c4_r1_q2",
+          "predicted_latency_s": 1.32840872308901,
+          "predicted_completion_s": 1.329146312116277
+        },
+        {
+          "request_id": "i256_o128_c4_r1_q3",
+          "predicted_latency_s": 1.3280863610884217,
+          "predicted_completion_s": 1.329146312116277
+        }
+      ],
+      "predicted_makespan_s": 1.329146312116277
+    },
+    {
+      "group_id": "i2048_o128_c1_r1",
+      "requests": [
+        {
+          "request_id": "i2048_o128_c1_r1_q0",
+          "predicted_latency_s": 1.4038764510804211,
+          "predicted_completion_s": 1.4038764510804211
+        }
+      ],
+      "predicted_makespan_s": 1.4038764510804211
+    },
+    {
+      "group_id": "i512_o128_c1_r1",
+      "requests": [
+        {
+          "request_id": "i512_o128_c1_r1_q0",
+          "predicted_latency_s": 1.2712964031883227,
+          "predicted_completion_s": 1.2712964031883227
+        }
+      ],
+      "predicted_makespan_s": 1.2712964031883227
+    },
+    {
+      "group_id": "i512_o128_c4_r1",
+      "requests": [
+        {
+          "request_id": "i512_o128_c4_r1_q0",
+          "predicted_latency_s": 1.3983565109079783,
+          "predicted_completion_s": 1.3983565109079783
+        },
+        {
+          "request_id": "i512_o128_c4_r1_q1",
+          "predicted_latency_s": 1.4076787821599104,
+          "predicted_completion_s": 1.4081391031853676
+        },
+        {
+          "request_id": "i512_o128_c4_r1_q2",
+          "predicted_latency_s": 1.407322027173341,
+          "predicted_completion_s": 1.4081391031853676
+        },
+        {
+          "request_id": "i512_o128_c4_r1_q3",
+          "predicted_latency_s": 1.4070008611655616,
+          "predicted_completion_s": 1.4081391031853676
+        }
+      ],
+      "predicted_makespan_s": 1.4081391031853676
+    },
+    {
+      "group_id": "i256_o128_c1_r1",
+      "requests": [
+        {
+          "request_id": "i256_o128_c1_r1_q0",
+          "predicted_latency_s": 1.2525242574195805,
+          "predicted_completion_s": 1.2525242574195805
+        }
+      ],
+      "predicted_makespan_s": 1.2525242574195805
+    },
+    {
+      "group_id": "i1024_o128_c4_r1",
+      "requests": [
+        {
+          "request_id": "i1024_o128_c4_r1_q0",
+          "predicted_latency_s": 1.579661803149921,
+          "predicted_completion_s": 1.579661803149921
+        },
+        {
+          "request_id": "i1024_o128_c4_r1_q1",
+          "predicted_latency_s": 1.5890133599253278,
+          "predicted_completion_s": 1.5894990349273104
+        },
+        {
+          "request_id": "i1024_o128_c4_r1_q2",
+          "predicted_latency_s": 1.5886398649393487,
+          "predicted_completion_s": 1.5894990349273104
+        },
+        {
+          "request_id": "i1024_o128_c4_r1_q3",
+          "predicted_latency_s": 1.588276220959695,
+          "predicted_completion_s": 1.5894990349273104
+        }
+      ],
+      "predicted_makespan_s": 1.5894990349273104
+    },
+    {
+      "group_id": "i2048_o128_c4_r1",
+      "requests": [
+        {
+          "request_id": "i2048_o128_c4_r1_q0",
+          "predicted_latency_s": 1.9298280491030264,
+          "predicted_completion_s": 1.9298280491030264
+        },
+        {
+          "request_id": "i2048_o128_c4_r1_q1",
+          "predicted_latency_s": 1.9391086652252048,
+          "predicted_completion_s": 1.939709992213749
+        },
+        {
+          "request_id": "i2048_o128_c4_r1_q2",
+          "predicted_latency_s": 1.9386059592437155,
+          "predicted_completion_s": 1.939709992213749
+        },
+        {
+          "request_id": "i2048_o128_c4_r1_q3",
+          "predicted_latency_s": 1.9381475802004493,
+          "predicted_completion_s": 1.939709992213749
+        }
+      ],
+      "predicted_makespan_s": 1.939709992213749
+    },
+    {
+      "group_id": "i256_o256_c1_r1",
+      "requests": [
+        {
+          "request_id": "i256_o256_c1_r1_q0",
+          "predicted_latency_s": 2.4925722715920675,
+          "predicted_completion_s": 2.4925722715920675
+        }
+      ],
+      "predicted_makespan_s": 2.4925722715920675
+    },
+    {
+      "group_id": "i128_o128_c1_r1",
+      "requests": [
+        {
+          "request_id": "i128_o128_c1_r1_q0",
+          "predicted_latency_s": 1.2485584976223865,
+          "predicted_completion_s": 1.2485584976223865
+        }
+      ],
+      "predicted_makespan_s": 1.2485584976223865
+    },
+    {
+      "group_id": "i256_o256_c4_r1",
+      "requests": [
+        {
+          "request_id": "i256_o256_c4_r1_q0",
+          "predicted_latency_s": 2.571509550730179,
+          "predicted_completion_s": 2.571509550730179
+        },
+        {
+          "request_id": "i256_o256_c4_r1_q1",
+          "predicted_latency_s": 2.5808541829281464,
+          "predicted_completion_s": 2.5812763559332095
+        },
+        {
+          "request_id": "i256_o256_c4_r1_q2",
+          "predicted_latency_s": 2.5805152839564696,
+          "predicted_completion_s": 2.5812763559332095
+        },
+        {
+          "request_id": "i256_o256_c4_r1_q3",
+          "predicted_latency_s": 2.5801194559715666,
+          "predicted_completion_s": 2.5812763559332095
+        }
+      ],
+      "predicted_makespan_s": 2.5812763559332095
+    },
+    {
+      "group_id": "i256_o128_c1_r2",
+      "requests": [
+        {
+          "request_id": "i256_o128_c1_r2_q0",
+          "predicted_latency_s": 1.2525242574195805,
+          "predicted_completion_s": 1.2525242574195805
+        }
+      ],
+      "predicted_makespan_s": 1.2525242574195805
+    },
+    {
+      "group_id": "i256_o256_c4_r2",
+      "requests": [
+        {
+          "request_id": "i256_o256_c4_r2_q0",
+          "predicted_latency_s": 2.571509550730179,
+          "predicted_completion_s": 2.571509550730179
+        },
+        {
+          "request_id": "i256_o256_c4_r2_q1",
+          "predicted_latency_s": 2.5809133169057756,
+          "predicted_completion_s": 2.5812763559332095
+        },
+        {
+          "request_id": "i256_o256_c4_r2_q2",
+          "predicted_latency_s": 2.58060216593351,
+          "predicted_completion_s": 2.5812763559332095
+        },
+        {
+          "request_id": "i256_o256_c4_r2_q3",
+          "predicted_latency_s": 2.5803126198987454,
+          "predicted_completion_s": 2.5812763559332095
+        }
+      ],
+      "predicted_makespan_s": 2.5812763559332095
+    },
+    {
+      "group_id": "i512_o128_c1_r2",
+      "requests": [
+        {
+          "request_id": "i512_o128_c1_r2_q0",
+          "predicted_latency_s": 1.2712964031883227,
+          "predicted_completion_s": 1.2712964031883227
+        }
+      ],
+      "predicted_makespan_s": 1.2712964031883227
+    },
+    {
+      "group_id": "i1024_o128_c1_r2",
+      "requests": [
+        {
+          "request_id": "i1024_o128_c1_r2_q0",
+          "predicted_latency_s": 1.318425130592264,
+          "predicted_completion_s": 1.318425130592264
+        }
+      ],
+      "predicted_makespan_s": 1.318425130592264
+    },
+    {
+      "group_id": "i2048_o128_c1_r2",
+      "requests": [
+        {
+          "request_id": "i2048_o128_c1_r2_q0",
+          "predicted_latency_s": 1.4038764510804211,
+          "predicted_completion_s": 1.4038764510804211
+        }
+      ],
+      "predicted_makespan_s": 1.4038764510804211
+    },
+    {
+      "group_id": "i128_o128_c4_r2",
+      "requests": [
+        {
+          "request_id": "i128_o128_c4_r2_q0",
+          "predicted_latency_s": 1.279133476362172,
+          "predicted_completion_s": 1.279133476362172
+        },
+        {
+          "request_id": "i128_o128_c4_r2_q1",
+          "predicted_latency_s": 1.2884619214653568,
+          "predicted_completion_s": 1.2888857954728947
+        },
+        {
+          "request_id": "i128_o128_c4_r2_q2",
+          "predicted_latency_s": 1.2881684134679445,
+          "predicted_completion_s": 1.2888857954728947
+        },
+        {
+          "request_id": "i128_o128_c4_r2_q3",
+          "predicted_latency_s": 1.2879150544956857,
+          "predicted_completion_s": 1.2888857954728947
+        }
+      ],
+      "predicted_makespan_s": 1.2888857954728947
+    },
+    {
+      "group_id": "i128_o128_c1_r2",
+      "requests": [
+        {
+          "request_id": "i128_o128_c1_r2_q0",
+          "predicted_latency_s": 1.2485584976223865,
+          "predicted_completion_s": 1.2485584976223865
+        }
+      ],
+      "predicted_makespan_s": 1.2485584976223865
+    },
+    {
+      "group_id": "i1024_o128_c4_r2",
+      "requests": [
+        {
+          "request_id": "i1024_o128_c4_r2_q0",
+          "predicted_latency_s": 1.579661803149921,
+          "predicted_completion_s": 1.579661803149921
+        },
+        {
+          "request_id": "i1024_o128_c4_r2_q1",
+          "predicted_latency_s": 1.589002103960691,
+          "predicted_completion_s": 1.5894990349273104
+        },
+        {
+          "request_id": "i1024_o128_c4_r2_q2",
+          "predicted_latency_s": 1.5885721819443535,
+          "predicted_completion_s": 1.5894990349273104
+        },
+        {
+          "request_id": "i1024_o128_c4_r2_q3",
+          "predicted_latency_s": 1.5881947459504846,
+          "predicted_completion_s": 1.5894990349273104
+        }
+      ],
+      "predicted_makespan_s": 1.5894990349273104
+    },
+    {
+      "group_id": "i512_o128_c4_r2",
+      "requests": [
+        {
+          "request_id": "i512_o128_c4_r2_q0",
+          "predicted_latency_s": 1.3983565109079783,
+          "predicted_completion_s": 1.3983565109079783
+        },
+        {
+          "request_id": "i512_o128_c4_r2_q1",
+          "predicted_latency_s": 1.4077252681948997,
+          "predicted_completion_s": 1.4081391031853676
+        },
+        {
+          "request_id": "i512_o128_c4_r2_q2",
+          "predicted_latency_s": 1.4073651301790782,
+          "predicted_completion_s": 1.4081391031853676
+        },
+        {
+          "request_id": "i512_o128_c4_r2_q3",
+          "predicted_latency_s": 1.4070394701906301,
+          "predicted_completion_s": 1.4081391031853676
+        }
+      ],
+      "predicted_makespan_s": 1.4081391031853676
+    },
+    {
+      "group_id": "i256_o128_c4_r2",
+      "requests": [
+        {
+          "request_id": "i256_o128_c4_r2_q0",
+          "predicted_latency_s": 1.319384040157691,
+          "predicted_completion_s": 1.319384040157691
+        },
+        {
+          "request_id": "i256_o128_c4_r2_q1",
+          "predicted_latency_s": 1.3287004811313046,
+          "predicted_completion_s": 1.329146312116277
+        },
+        {
+          "request_id": "i256_o128_c4_r2_q2",
+          "predicted_latency_s": 1.3283913451336367,
+          "predicted_completion_s": 1.329146312116277
+        },
+        {
+          "request_id": "i256_o128_c4_r2_q3",
+          "predicted_latency_s": 1.3280610031537754,
+          "predicted_completion_s": 1.329146312116277
+        }
+      ],
+      "predicted_makespan_s": 1.329146312116277
+    },
+    {
+      "group_id": "i256_o256_c1_r2",
+      "requests": [
+        {
+          "request_id": "i256_o256_c1_r2_q0",
+          "predicted_latency_s": 2.4925722715920675,
+          "predicted_completion_s": 2.4925722715920675
+        }
+      ],
+      "predicted_makespan_s": 2.4925722715920675
+    },
+    {
+      "group_id": "i2048_o128_c4_r2",
+      "requests": [
+        {
+          "request_id": "i2048_o128_c4_r2_q0",
+          "predicted_latency_s": 1.9298280491030264,
+          "predicted_completion_s": 1.9298280491030264
+        },
+        {
+          "request_id": "i2048_o128_c4_r2_q1",
+          "predicted_latency_s": 1.9391174381674423,
+          "predicted_completion_s": 1.939709992213749
+        },
+        {
+          "request_id": "i2048_o128_c4_r2_q2",
+          "predicted_latency_s": 1.9384931121679179,
+          "predicted_completion_s": 1.939709992213749
+        },
+        {
+          "request_id": "i2048_o128_c4_r2_q3",
+          "predicted_latency_s": 1.9380214432097196,
+          "predicted_completion_s": 1.939709992213749
+        }
+      ],
+      "predicted_makespan_s": 1.939709992213749
+    },
+    {
+      "group_id": "i2048_o128_c4_r3",
+      "requests": [
+        {
+          "request_id": "i2048_o128_c4_r3_q0",
+          "predicted_latency_s": 1.9298280491030264,
+          "predicted_completion_s": 1.9298280491030264
+        },
+        {
+          "request_id": "i2048_o128_c4_r3_q1",
+          "predicted_latency_s": 1.939082162229453,
+          "predicted_completion_s": 1.939709992213749
+        },
+        {
+          "request_id": "i2048_o128_c4_r3_q2",
+          "predicted_latency_s": 1.9385540062287978,
+          "predicted_completion_s": 1.939709992213749
+        },
+        {
+          "request_id": "i2048_o128_c4_r3_q3",
+          "predicted_latency_s": 1.9380908822134293,
+          "predicted_completion_s": 1.939709992213749
+        }
+      ],
+      "predicted_makespan_s": 1.939709992213749
+    },
+    {
+      "group_id": "i512_o128_c1_r3",
+      "requests": [
+        {
+          "request_id": "i512_o128_c1_r3_q0",
+          "predicted_latency_s": 1.2712964031883227,
+          "predicted_completion_s": 1.2712964031883227
+        }
+      ],
+      "predicted_makespan_s": 1.2712964031883227
+    },
+    {
+      "group_id": "i256_o128_c1_r3",
+      "requests": [
+        {
+          "request_id": "i256_o128_c1_r3_q0",
+          "predicted_latency_s": 1.2525242574195805,
+          "predicted_completion_s": 1.2525242574195805
+        }
+      ],
+      "predicted_makespan_s": 1.2525242574195805
+    },
+    {
+      "group_id": "i128_o128_c1_r3",
+      "requests": [
+        {
+          "request_id": "i128_o128_c1_r3_q0",
+          "predicted_latency_s": 1.2485584976223865,
+          "predicted_completion_s": 1.2485584976223865
+        }
+      ],
+      "predicted_makespan_s": 1.2485584976223865
+    },
+    {
+      "group_id": "i256_o256_c4_r3",
+      "requests": [
+        {
+          "request_id": "i256_o256_c4_r3_q0",
+          "predicted_latency_s": 2.571509550730179,
+          "predicted_completion_s": 2.571509550730179
+        },
+        {
+          "request_id": "i256_o256_c4_r3_q1",
+          "predicted_latency_s": 2.5808758719757177,
+          "predicted_completion_s": 2.5812763559332095
+        },
+        {
+          "request_id": "i256_o256_c4_r3_q2",
+          "predicted_latency_s": 2.580536283941751,
+          "predicted_completion_s": 2.5812763559332095
+        },
+        {
+          "request_id": "i256_o256_c4_r3_q3",
+          "predicted_latency_s": 2.580259194986706,
+          "predicted_completion_s": 2.5812763559332095
+        }
+      ],
+      "predicted_makespan_s": 2.5812763559332095
+    },
+    {
+      "group_id": "i128_o128_c4_r3",
+      "requests": [
+        {
+          "request_id": "i128_o128_c4_r3_q0",
+          "predicted_latency_s": 1.279133476362172,
+          "predicted_completion_s": 1.279133476362172
+        },
+        {
+          "request_id": "i128_o128_c4_r3_q1",
+          "predicted_latency_s": 1.2884520024724835,
+          "predicted_completion_s": 1.2888857954728947
+        },
+        {
+          "request_id": "i128_o128_c4_r3_q2",
+          "predicted_latency_s": 1.2881217814481416,
+          "predicted_completion_s": 1.2888857954728947
+        },
+        {
+          "request_id": "i128_o128_c4_r3_q3",
+          "predicted_latency_s": 1.2878678874310636,
+          "predicted_completion_s": 1.2888857954728947
+        }
+      ],
+      "predicted_makespan_s": 1.2888857954728947
+    },
+    {
+      "group_id": "i1024_o128_c1_r3",
+      "requests": [
+        {
+          "request_id": "i1024_o128_c1_r3_q0",
+          "predicted_latency_s": 1.318425130592264,
+          "predicted_completion_s": 1.318425130592264
+        }
+      ],
+      "predicted_makespan_s": 1.318425130592264
+    },
+    {
+      "group_id": "i1024_o128_c4_r3",
+      "requests": [
+        {
+          "request_id": "i1024_o128_c4_r3_q0",
+          "predicted_latency_s": 1.579661803149921,
+          "predicted_completion_s": 1.579661803149921
+        },
+        {
+          "request_id": "i1024_o128_c4_r3_q1",
+          "predicted_latency_s": 1.5889646939552295,
+          "predicted_completion_s": 1.5894990349273104
+        },
+        {
+          "request_id": "i1024_o128_c4_r3_q2",
+          "predicted_latency_s": 1.5885250139484088,
+          "predicted_completion_s": 1.5894990349273104
+        },
+        {
+          "request_id": "i1024_o128_c4_r3_q3",
+          "predicted_latency_s": 1.5881506279195565,
+          "predicted_completion_s": 1.5894990349273104
+        }
+      ],
+      "predicted_makespan_s": 1.5894990349273104
+    },
+    {
+      "group_id": "i512_o128_c4_r3",
+      "requests": [
+        {
+          "request_id": "i512_o128_c4_r3_q0",
+          "predicted_latency_s": 1.3983565109079783,
+          "predicted_completion_s": 1.3983565109079783
+        },
+        {
+          "request_id": "i512_o128_c4_r3_q1",
+          "predicted_latency_s": 1.4076424201833837,
+          "predicted_completion_s": 1.4081391031853676
+        },
+        {
+          "request_id": "i512_o128_c4_r3_q2",
+          "predicted_latency_s": 1.4072416211478234,
+          "predicted_completion_s": 1.4081391031853676
+        },
+        {
+          "request_id": "i512_o128_c4_r3_q3",
+          "predicted_latency_s": 1.4069428111892015,
+          "predicted_completion_s": 1.4081391031853676
+        }
+      ],
+      "predicted_makespan_s": 1.4081391031853676
+    },
+    {
+      "group_id": "i256_o256_c1_r3",
+      "requests": [
+        {
+          "request_id": "i256_o256_c1_r3_q0",
+          "predicted_latency_s": 2.4925722715920675,
+          "predicted_completion_s": 2.4925722715920675
+        }
+      ],
+      "predicted_makespan_s": 2.4925722715920675
+    },
+    {
+      "group_id": "i256_o128_c4_r3",
+      "requests": [
+        {
+          "request_id": "i256_o128_c4_r3_q0",
+          "predicted_latency_s": 1.319384040157691,
+          "predicted_completion_s": 1.319384040157691
+        },
+        {
+          "request_id": "i256_o128_c4_r3_q1",
+          "predicted_latency_s": 1.3286875431398903,
+          "predicted_completion_s": 1.329146312116277
+        },
+        {
+          "request_id": "i256_o128_c4_r3_q2",
+          "predicted_latency_s": 1.3283789161100095,
+          "predicted_completion_s": 1.329146312116277
+        },
+        {
+          "request_id": "i256_o128_c4_r3_q3",
+          "predicted_latency_s": 1.3280562390895603,
+          "predicted_completion_s": 1.329146312116277
+        }
+      ],
+      "predicted_makespan_s": 1.329146312116277
+    },
+    {
+      "group_id": "i2048_o128_c1_r3",
+      "requests": [
+        {
+          "request_id": "i2048_o128_c1_r3_q0",
+          "predicted_latency_s": 1.4038764510804211,
+          "predicted_completion_s": 1.4038764510804211
+        }
+      ],
+      "predicted_makespan_s": 1.4038764510804211
+    }
+  ]
+}

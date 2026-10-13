@@ -1,0 +1,7 @@
+run_id,risk_active_ticks,target_raise_ticks,reservation_ticks,reserved_dispatch,queued_min_slack
+hysteresis_u8_d0_c60__guard__e5_burst_late_v1__r1,0,0,0,0,153
+hysteresis_u8_d0_c60__guard__e5_burst_late_v1__r2,0,0,0,0,152
+hysteresis_u8_d0_c60__guard__e5_burst_middle_v1__r1,0,0,0,0,153
+hysteresis_u8_d0_c60__guard__e5_burst_middle_v1__r2,0,0,0,0,152
+hysteresis_u8_d0_c60__guard__e5_steady_v1__r1,0,0,0,0,152
+hysteresis_u8_d0_c60__guard__e5_steady_v1__r2,0,0,0,0,152

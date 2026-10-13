@@ -1,0 +1,363 @@
+{
+  "schema": "azure-reduced-source-bindings-v1",
+  "provenance": "retrospective",
+  "note": "Hashes bind author-verified originals; original raw records are not included or reverified by this reduced artifact. No private paths are stored.",
+  "model_bank_sha256": "2741b92460de865cf54f5d00c3a506d57eee026aada6a2d19914db249649fb65",
+  "historical_replay_source_sha256": {
+    "scripts/maxopt_v2/__init__.py": "2fe442c22ec63dcf15a6f75731451a57306285eae58a585bec036cc6402d4c4f",
+    "scripts/maxopt_v2/calibrated.py": "517258d04b3f8497c4678201110c56074a07f466d6860624f4b3a245f3abb206",
+    "scripts/maxopt_v2/engine.py": "4358e1f261d014c671462e9e96100850f89ce404746595ebef2c6d5d657c7171",
+    "scripts/maxopt_v2/workload.py": "7875dfb879d9264fc0c40e250861355d514e8f880501b794715cdffdc2cdb0c1",
+    "scripts/maxopt_v2/acquire.py": "1a9ff028d778bf3f77afc533e154571c72e33c1e9b45edfea03cd358b57a3081",
+    "scripts/maxopt_v3/__init__.py": "d95c605ae70d0034b8c8e15cc0235f835c8ae4a94f9cf2d380ef524c7fabc481",
+    "scripts/maxopt_v3/simulator.py": "a7c8c5b6cb7daf1582ecfb26f34f323e9ef2beff45e810b95c399ff00fd18fbd",
+    "scripts/maxopt_v3/policy.py": "2095025bf5620892b69b1124ee9038d1c5faab315eedfca6e8901bfb7e4113c8",
+    "scripts/maxopt_v4/formal_v2/accounting.py": "8e1f64be3ebd752ce223a2f4e79e2a2fbe69c96fc638aec889f3773c52973c38"
+  },
+  "cells": [
+    {
+      "run_id": "W4-L-R1__p050__MAIN__all1__azure_conv_back_1500s__r1",
+      "input_sha256": "73040eb91c6a28cadbfa2c7c6952fc883bf7ebfc62c269276020d9cdb02ea711",
+      "source_files_sha256": {
+        "run_plan.json": "548e3bdb118ea0da713fc113dfe51a05d0f7e0ce451d59ea63d0f03057216229",
+        "plan_manifest.json": "a080ac89b99e2f98b0ecc0e3fd24704775a437519427aa4d32359bb147102c96",
+        "expected_requests.json": "100381c301906d4a297d3f5b37284d7bd2e6b249793d0fdaa99af7584625446d",
+        "request_events.jsonl": "6269c81db3091994ec672464306c4ee97052d609f1f02f04806ed7de2f4f3504",
+        "controller_events.jsonl": "5e4f76603851ed7a7e0729260b4cd0e8664a2e4fc009a1d60197bc735ac8a8bb",
+        "derived_metrics_accounting.json": "91f877b99a2bccc5c294daf23252975e4b12ec058c6c28805dd5bb53d57e674c",
+        "formal_result.json": "721f872d9823effb270b7bca5eaf804f84f8592693d56bbcf2fb927975372f19",
+        "environment_model_snapshot.json": "e02295bc20791f511486d730d1942fea1737f567acf87a5a9aa33bad03f900cf"
+      }
+    },
+    {
+      "run_id": "W4-L-R1__p050__MAIN__all1__azure_conv_back_1500s__r2",
+      "input_sha256": "73040eb91c6a28cadbfa2c7c6952fc883bf7ebfc62c269276020d9cdb02ea711",
+      "source_files_sha256": {
+        "run_plan.json": "9b98ec3210e0d0941cf87f85ca454a5500edaf958ee8c2bfe1c08750c77b02b2",
+        "plan_manifest.json": "ded02fc87be40002efe4025f1ecd3c1cf3795bdf5beb535607828c1ce3bacae2",
+        "expected_requests.json": "100381c301906d4a297d3f5b37284d7bd2e6b249793d0fdaa99af7584625446d",
+        "request_events.jsonl": "f3b9105506b536e9bf4fd7ecdde00d9b73b81e83b02d3ebad617c0b7a79db547",
+        "controller_events.jsonl": "6367e794f006b4357bcf8203ab8e0fb05556e0e34992dd55325bbd43b38e08a6",
+        "derived_metrics_accounting.json": "6bb9f7bc2704f24f678f0255376097c6b0b1981470ac600291dea92cc18bb83b",
+        "formal_result.json": "d5f6310314c5e49ca26c40c79c347de423b06682d8df5ac1b3c5b28ab6f704d2",
+        "environment_model_snapshot.json": "e02295bc20791f511486d730d1942fea1737f567acf87a5a9aa33bad03f900cf"
+      }
+    },
+    {
+      "run_id": "W4-L-R1__p050__MAIN__all1__azure_conv_back_1500s__r3",
+      "input_sha256": "73040eb91c6a28cadbfa2c7c6952fc883bf7ebfc62c269276020d9cdb02ea711",
+      "source_files_sha256": {
+        "run_plan.json": "b2f7086466917cfd172306488cebf44b06fabb2118c6142b915ae09eb8bd4a0f",
+        "plan_manifest.json": "b50253dd32cf1ac26b5e37082d7698355196d97b12895f3bd263fa4a695a439a",
+        "expected_requests.json": "100381c301906d4a297d3f5b37284d7bd2e6b249793d0fdaa99af7584625446d",
+        "request_events.jsonl": "08221e3da7c81ebcb75cfdf5efdf2bf6b287ad63b1f41c2bfbbb448abcfdf053",
+        "controller_events.jsonl": "dd623580fd578acbc30c3f00d534efd72fcf7e5f67bfe768bd2f9fcceade9f06",
+        "derived_metrics_accounting.json": "fd63a6f8526c4aea6757558e92bca05b81984e17ba817ace86a3b514ab6176ee",
+        "formal_result.json": "37406a8589770331c270e487281ef8fd136830b8f3dbef09841c7e61b633cb3b",
+        "environment_model_snapshot.json": "e02295bc20791f511486d730d1942fea1737f567acf87a5a9aa33bad03f900cf"
+      }
+    },
+    {
+      "run_id": "W4-L-R1__p050__MAIN__all1__azure_conv_front_1500s__r1",
+      "input_sha256": "3c40cac56d8be6355262b8cd5aadcafe8a6a25bd9fe270aaa77c49889117cd5d",
+      "source_files_sha256": {
+        "run_plan.json": "6cd06f7c2425550bc9c3805815819975e4090bae01a045a5397f2645f050b6cf",
+        "plan_manifest.json": "cae97b7cc1f07cd90173d73b4d8bd57148583d4aa54bf9d670dc94bc6d940968",
+        "expected_requests.json": "eaefc183da5d9fb4c7a1b025a8b2951fcad9875f491911e68b67ea544af0fedb",
+        "request_events.jsonl": "d40c353a069b6a763c375c941172a016cb7b2a6f4a5225252bc39fd4d26ed23d",
+        "controller_events.jsonl": "49647267ec5b21797af211cf41e363d69e9cebb8b9a993a8a88d5bfce6ce8b25",
+        "derived_metrics_accounting.json": "dc36784bc4a0c1fe99c87492efe97479e34d8599e278e90d42392a0ef01a738d",
+        "formal_result.json": "b0a5be8854d766531bdd65509cd8feebe669ab60d345d6d40380b57936370024",
+        "environment_model_snapshot.json": "e02295bc20791f511486d730d1942fea1737f567acf87a5a9aa33bad03f900cf"
+      }
+    },
+    {
+      "run_id": "W4-L-R1__p050__MAIN__all1__azure_conv_front_1500s__r2",
+      "input_sha256": "3c40cac56d8be6355262b8cd5aadcafe8a6a25bd9fe270aaa77c49889117cd5d",
+      "source_files_sha256": {
+        "run_plan.json": "cb62a8d432c4c761fae9c191c894e37730904c44f800287830b5dcdfad7f2e32",
+        "plan_manifest.json": "39a9b4aea04035fbfb595edac123dc198d05556bce6e2bfc2b993fe3f63444f7",
+        "expected_requests.json": "eaefc183da5d9fb4c7a1b025a8b2951fcad9875f491911e68b67ea544af0fedb",
+        "request_events.jsonl": "4a8fcf59cbb6ebfbab16a8c54bb6696f7fcfed21c94191719f34f1093772c1a2",
+        "controller_events.jsonl": "18827b3e7bb0268f4e5c8f7c7a9f16ea90a75ab67b896dd55c17b4a797842488",
+        "derived_metrics_accounting.json": "7d65bf3dc9cb92c5dba84b303a29f2d03d8c80e849c74a539b2920cb651726a1",
+        "formal_result.json": "6ebfb7ee8e3dd3958ebec4164b4291616e0165af4e5cf8f36546aabb4a41bfe2",
+        "environment_model_snapshot.json": "e02295bc20791f511486d730d1942fea1737f567acf87a5a9aa33bad03f900cf"
+      }
+    },
+    {
+      "run_id": "W4-L-R1__p050__MAIN__all1__azure_conv_front_1500s__r3",
+      "input_sha256": "3c40cac56d8be6355262b8cd5aadcafe8a6a25bd9fe270aaa77c49889117cd5d",
+      "source_files_sha256": {
+        "run_plan.json": "e7ba72e1861095a538700f2dc241cdf6f673105d98cc408adda153a86c41c5d8",
+        "plan_manifest.json": "866827294f26d0b06aba8d7613c9196e64f141b89f022f8703893176e7b3dcd1",
+        "expected_requests.json": "eaefc183da5d9fb4c7a1b025a8b2951fcad9875f491911e68b67ea544af0fedb",
+        "request_events.jsonl": "5e4426a8bb714135dbe4c806dd34870202b26fba04e77b596628805bdc28f0c2",
+        "controller_events.jsonl": "d5d2896e6f6c8ce95aa3238a6663eee98aa4934e3448e988cbbaebbbbebc0ad6",
+        "derived_metrics_accounting.json": "f4e35022983480437d3c69b9ca8c0d897e17fc127d37d3095e27231f0d4d2c05",
+        "formal_result.json": "daa2397a2da266f3e1af7fd6a464805d9f61c98aa999ac5e509212f7c8068389",
+        "environment_model_snapshot.json": "e02295bc20791f511486d730d1942fea1737f567acf87a5a9aa33bad03f900cf"
+      }
+    },
+    {
+      "run_id": "W4-L-R1__p050__MAIN__all2__azure_conv_back_1500s__r1",
+      "input_sha256": "73040eb91c6a28cadbfa2c7c6952fc883bf7ebfc62c269276020d9cdb02ea711",
+      "source_files_sha256": {
+        "run_plan.json": "cfcd11c08f6312b36f4bca01027e4e73254b9da57d6819770ed58a90d3684b98",
+        "plan_manifest.json": "51a6dad2f911f73644360a83a0b5a937b12a1ff5d9c3cc99bd93c3d142e50810",
+        "expected_requests.json": "100381c301906d4a297d3f5b37284d7bd2e6b249793d0fdaa99af7584625446d",
+        "request_events.jsonl": "755a4a2625daed80f69a0db0378cdf696114f79c98c423586e0643d28db4620c",
+        "controller_events.jsonl": "a9b6c06270948eacaa54bf0b230625d2329b2600e1427400f323c7d4e32d9a7f",
+        "derived_metrics_accounting.json": "76e9f0325470a438ed23b2f81ad19c7acf9446f7caaa7e69deeeb1f3d888f5df",
+        "formal_result.json": "8d636e990feecb0dd2f4f1db64509acdc96250daeb36eeaf3751dbd70bcdd4d8",
+        "environment_model_snapshot.json": "e02295bc20791f511486d730d1942fea1737f567acf87a5a9aa33bad03f900cf"
+      }
+    },
+    {
+      "run_id": "W4-L-R1__p050__MAIN__all2__azure_conv_back_1500s__r2",
+      "input_sha256": "73040eb91c6a28cadbfa2c7c6952fc883bf7ebfc62c269276020d9cdb02ea711",
+      "source_files_sha256": {
+        "run_plan.json": "e0fb8644493268652832f0d0d11656d47832b31a50a1e30a9ed456975cfe8294",
+        "plan_manifest.json": "71bbe39c458b67c2f955f88cbc43aac6bb17a44b0b3466f487ed17c8a19bd630",
+        "expected_requests.json": "100381c301906d4a297d3f5b37284d7bd2e6b249793d0fdaa99af7584625446d",
+        "request_events.jsonl": "e02da775dd67cffcca398b605b2bdc75f90a036c57fd7aed7decda9e356d0b9e",
+        "controller_events.jsonl": "1281f9a79e42f41e0590db41fc943d50fddd52ffd6f83a5d647877470eb4e1cf",
+        "derived_metrics_accounting.json": "9cd23e0f6708bfb33e2a7be707472f354a263275e96af3143d9fc2910793d952",
+        "formal_result.json": "e8720da35f015f9127a1421641087420c8f301eec248ec5e000d053fab8c44b5",
+        "environment_model_snapshot.json": "e02295bc20791f511486d730d1942fea1737f567acf87a5a9aa33bad03f900cf"
+      }
+    },
+    {
+      "run_id": "W4-L-R1__p050__MAIN__all2__azure_conv_back_1500s__r3",
+      "input_sha256": "73040eb91c6a28cadbfa2c7c6952fc883bf7ebfc62c269276020d9cdb02ea711",
+      "source_files_sha256": {
+        "run_plan.json": "ea84f824bfbe311f0196836c8c5591e2073d5fb62c9cfe7944f66e95cd9f60a8",
+        "plan_manifest.json": "2c323b86441731a1aba672b98b019e27f4fef08b2d8d19e310d41a4a11dffa58",
+        "expected_requests.json": "100381c301906d4a297d3f5b37284d7bd2e6b249793d0fdaa99af7584625446d",
+        "request_events.jsonl": "d83006e887658b54968548a2b86e040ded5578ef27fc4001da0e60e9856320a3",
+        "controller_events.jsonl": "13d5671251883c17ea2d31688191716c84f24d72e80452df139c72fa8538e51b",
+        "derived_metrics_accounting.json": "b45d24e090ba6bca615fa6678980d8548bfedac162aba4306119d3aa8b1bae2b",
+        "formal_result.json": "056c11163fa1bb748a9a239d9892aebf476ca3e8ad39d6b3d6a510233b2e3da6",
+        "environment_model_snapshot.json": "e02295bc20791f511486d730d1942fea1737f567acf87a5a9aa33bad03f900cf"
+      }
+    },
+    {
+      "run_id": "W4-L-R1__p050__MAIN__all2__azure_conv_front_1500s__r1",
+      "input_sha256": "3c40cac56d8be6355262b8cd5aadcafe8a6a25bd9fe270aaa77c49889117cd5d",
+      "source_files_sha256": {
+        "run_plan.json": "0b61c4f4c1f7d8c4ef65de7bfe587540e8d2f5b0dd44e70884c985a1bdd7f609",
+        "plan_manifest.json": "b36cb316f4d01181c4e28069f05e94bbdd66039254b22ce201a45b3be9f00234",
+        "expected_requests.json": "eaefc183da5d9fb4c7a1b025a8b2951fcad9875f491911e68b67ea544af0fedb",
+        "request_events.jsonl": "17cef4695d4c28f9c6e837ed8ba5f9691b30ce5bc4cb4b7153cfa537db372bcb",
+        "controller_events.jsonl": "b32cc78c497562b9427cea3b700d374e9665b1ea083e348e1d6fef5991440557",
+        "derived_metrics_accounting.json": "004af4bf826e29e975f836cc5324b7410834f7d311e14a446171991526778bfb",
+        "formal_result.json": "92eae182566a95ed622b211afab5554f0e22f17331a5079a164d67ae64581c55",
+        "environment_model_snapshot.json": "e02295bc20791f511486d730d1942fea1737f567acf87a5a9aa33bad03f900cf"
+      }
+    },
+    {
+      "run_id": "W4-L-R1__p050__MAIN__all2__azure_conv_front_1500s__r2",
+      "input_sha256": "3c40cac56d8be6355262b8cd5aadcafe8a6a25bd9fe270aaa77c49889117cd5d",
+      "source_files_sha256": {
+        "run_plan.json": "da2ea2197dc1ad60e383d32ded8479319a2ec7ac48182ba88b59e5717660d084",
+        "plan_manifest.json": "655363ade5f846a07bbb0d84aac0a58a54669830d30690b104aa6b8987c5f8ef",
+        "expected_requests.json": "eaefc183da5d9fb4c7a1b025a8b2951fcad9875f491911e68b67ea544af0fedb",
+        "request_events.jsonl": "d7d4296d6c50bc578b535cb18f2c101a940f53c48dd29c8220d98c62a5a2ade5",
+        "controller_events.jsonl": "45b96edbe61d65231eb36d66877f79c844edcdfdce5001885ec6270ea23c8868",
+        "derived_metrics_accounting.json": "bd7c9b228d884611b7039a49b0911a6d5090451fdc26d009a060e9b2f9ba0411",
+        "formal_result.json": "85e40beb442ed8af248af7b55f2f94f356cc1c24308f669bf8aea258a0cbe624",
+        "environment_model_snapshot.json": "e02295bc20791f511486d730d1942fea1737f567acf87a5a9aa33bad03f900cf"
+      }
+    },
+    {
+      "run_id": "W4-L-R1__p050__MAIN__all2__azure_conv_front_1500s__r3",
+      "input_sha256": "3c40cac56d8be6355262b8cd5aadcafe8a6a25bd9fe270aaa77c49889117cd5d",
+      "source_files_sha256": {
+        "run_plan.json": "7d901bb5719a41841e54320628f3252df651c5779c30724aaf4b9f260ea8dc11",
+        "plan_manifest.json": "1b8f12e8a6994a619c6f0092b1e61796f3e63b183ad3d3057951136f64260005",
+        "expected_requests.json": "eaefc183da5d9fb4c7a1b025a8b2951fcad9875f491911e68b67ea544af0fedb",
+        "request_events.jsonl": "25d305163c000b5681e1e2004ff2ec13ce1c06998d9b6c7ee6110783f5a2757d",
+        "controller_events.jsonl": "40ce5b23605f6cc5ddf24b8623cb98575f3ce34d636c8ff99c599fcaa1eeb34a",
+        "derived_metrics_accounting.json": "7d73f2caa81ea5c63f2a6454021e5cfcf44a6c31007d26f3dbf4edc34a73b1ab",
+        "formal_result.json": "b099250d6f6c30c48efd8a30ff50b7438451d4aa1b65f70797340f296ba74314",
+        "environment_model_snapshot.json": "e02295bc20791f511486d730d1942fea1737f567acf87a5a9aa33bad03f900cf"
+      }
+    },
+    {
+      "run_id": "W4-L-R1__p050__MAIN__hysteresis_u8_d0_c60__azure_conv_back_1500s__r1",
+      "input_sha256": "73040eb91c6a28cadbfa2c7c6952fc883bf7ebfc62c269276020d9cdb02ea711",
+      "source_files_sha256": {
+        "run_plan.json": "ae6e297fbeb8892e8e4419e2f08213e29cf5303c6f9193adaa450f23898a8d02",
+        "plan_manifest.json": "31575d3ef03821c5d5232b4e225314357c68b7dff15972b32b2e16f795887b6f",
+        "expected_requests.json": "100381c301906d4a297d3f5b37284d7bd2e6b249793d0fdaa99af7584625446d",
+        "request_events.jsonl": "cdace484b9f379beb291e283f41914f1fb1ac16cd177edee23e07ef6f22cfbb0",
+        "controller_events.jsonl": "a5d260ed4a7c957b9466c113c9927eebec1610816199bd9905c105a094151bf8",
+        "derived_metrics_accounting.json": "445a84e7ca8a3af643658d98b53388f800d5fed8876c76cfdac4385b0a036d92",
+        "formal_result.json": "a23f45daa5f5667fbc16bc1f0ec849489dc9dbb54bafd3820611f57eaa174a0f",
+        "environment_model_snapshot.json": "e02295bc20791f511486d730d1942fea1737f567acf87a5a9aa33bad03f900cf"
+      }
+    },
+    {
+      "run_id": "W4-L-R1__p050__MAIN__hysteresis_u8_d0_c60__azure_conv_back_1500s__r2",
+      "input_sha256": "73040eb91c6a28cadbfa2c7c6952fc883bf7ebfc62c269276020d9cdb02ea711",
+      "source_files_sha256": {
+        "run_plan.json": "96b670dfc3b3195efad1cd234bbf00eca3500b91d50c9b6ea15d360662d64c75",
+        "plan_manifest.json": "ffe3038ed0ef368f7b726182a3d101d80922f36b9c341c07eaa40b1f63c64f42",
+        "expected_requests.json": "100381c301906d4a297d3f5b37284d7bd2e6b249793d0fdaa99af7584625446d",
+        "request_events.jsonl": "17880171316dc837421b65f36cb51493c34238cc97418ac7d50015dd59e43718",
+        "controller_events.jsonl": "4717ba73afddd4fdec016920db314958ea8ae080c511bba6c56679ed149fdefc",
+        "derived_metrics_accounting.json": "22948d156cd4e0410385e81c387ceea0382a4650a5cb862c4a80262043dc8d52",
+        "formal_result.json": "9b24666ddc8f2aaae4f6b9abb76a32e7012a65d4953c38c873159887d37f78eb",
+        "environment_model_snapshot.json": "e02295bc20791f511486d730d1942fea1737f567acf87a5a9aa33bad03f900cf"
+      }
+    },
+    {
+      "run_id": "W4-L-R1__p050__MAIN__hysteresis_u8_d0_c60__azure_conv_back_1500s__r3",
+      "input_sha256": "73040eb91c6a28cadbfa2c7c6952fc883bf7ebfc62c269276020d9cdb02ea711",
+      "source_files_sha256": {
+        "run_plan.json": "940b64c6cec210debcd09b890a7b7079fc6e16df92030aa704221baa10efb3f1",
+        "plan_manifest.json": "cae50deeeff4f8431b8bc5cc994d067ad38de1f42ba8da43ec418594064d8133",
+        "expected_requests.json": "100381c301906d4a297d3f5b37284d7bd2e6b249793d0fdaa99af7584625446d",
+        "request_events.jsonl": "cea91303b34e51ee777790f7c3d00f0125b4c99c7c366a2dc5fc982e1d517472",
+        "controller_events.jsonl": "bddcc1a5df700e8314a418d85b15e11f920db26b03b42c05882cb3e82c11adc7",
+        "derived_metrics_accounting.json": "906907d97d223f2479a2b1db8f25f5aa4065422d6a59e0f05e06456984137bd0",
+        "formal_result.json": "a3f8edf694329abcb1214ba9da39c47fc1ccde5c07bd15e4124b16b63f922e32",
+        "environment_model_snapshot.json": "e02295bc20791f511486d730d1942fea1737f567acf87a5a9aa33bad03f900cf"
+      }
+    },
+    {
+      "run_id": "W4-L-R1__p050__MAIN__hysteresis_u8_d0_c60__azure_conv_front_1500s__r1",
+      "input_sha256": "3c40cac56d8be6355262b8cd5aadcafe8a6a25bd9fe270aaa77c49889117cd5d",
+      "source_files_sha256": {
+        "run_plan.json": "e300866224d5eb78a04200789c78a63cddf459b1ff13af546c4dd8606ba68248",
+        "plan_manifest.json": "e43a6af26b58a11555aeede6478f959ad22b1aab6882cd6762f6bd61741a83e3",
+        "expected_requests.json": "eaefc183da5d9fb4c7a1b025a8b2951fcad9875f491911e68b67ea544af0fedb",
+        "request_events.jsonl": "c755401ced788a4b6e7bc877fe99d1404e1fa892d4e0831530d4309834dac988",
+        "controller_events.jsonl": "9de6ffd8a197cb116d45e74f9ccd806828097f22c26ab8ab98e387007d3834b2",
+        "derived_metrics_accounting.json": "30f4ada048ac6d87922a85181edbd43ffff1c8b2f55daa45569ce056a9d9a57c",
+        "formal_result.json": "da62617a86351f745062fa26a12163826e6be5c4d2681ec8fd8b20697d64c47d",
+        "environment_model_snapshot.json": "e02295bc20791f511486d730d1942fea1737f567acf87a5a9aa33bad03f900cf"
+      }
+    },
+    {
+      "run_id": "W4-L-R1__p050__MAIN__hysteresis_u8_d0_c60__azure_conv_front_1500s__r2",
+      "input_sha256": "3c40cac56d8be6355262b8cd5aadcafe8a6a25bd9fe270aaa77c49889117cd5d",
+      "source_files_sha256": {
+        "run_plan.json": "c6fa49d002bfed24b792a31c78be6e7648573226633de2f6168b9a6ad3f53c3b",
+        "plan_manifest.json": "6e138c7c9a5a7dec2ca55b8c4f279ed7d431d30ace2561f50daf975ef506d96f",
+        "expected_requests.json": "eaefc183da5d9fb4c7a1b025a8b2951fcad9875f491911e68b67ea544af0fedb",
+        "request_events.jsonl": "b7b9b73397333bdb936694a6c4d8676040654e478f554de00df6b8e2cfc9f9e8",
+        "controller_events.jsonl": "b1e5ada98b5c235c23d0e2ff9f6c60cb165ed86b54007d2877bb808128ac68bd",
+        "derived_metrics_accounting.json": "03a9d57fefbd90f54de75bd85b89583529a542ef7dcf84c3f5eda9510020a21c",
+        "formal_result.json": "f3537d628e3bba53fb2720c624cdc04ea42186e2be9097049bb345bde4edce0b",
+        "environment_model_snapshot.json": "e02295bc20791f511486d730d1942fea1737f567acf87a5a9aa33bad03f900cf"
+      }
+    },
+    {
+      "run_id": "W4-L-R1__p050__MAIN__hysteresis_u8_d0_c60__azure_conv_front_1500s__r3",
+      "input_sha256": "3c40cac56d8be6355262b8cd5aadcafe8a6a25bd9fe270aaa77c49889117cd5d",
+      "source_files_sha256": {
+        "run_plan.json": "a3f56e18abe17020adbff1c05be662d8c23bec63d6971f8d71f79abccfb233dc",
+        "plan_manifest.json": "bee8d9ba5c22f531265ff3e05d1bb44813efca6491d66fb9ed98a2972fdcbeda",
+        "expected_requests.json": "eaefc183da5d9fb4c7a1b025a8b2951fcad9875f491911e68b67ea544af0fedb",
+        "request_events.jsonl": "8e45a24796588c0da8acdf98dcbf044e7ea7343eb72d25dcdff7898852d676ad",
+        "controller_events.jsonl": "3f0cc3ba46af493b0ca7bf78739efa15d3a8345dba37d6aa7c047f13b1c33228",
+        "derived_metrics_accounting.json": "50b7dd2ad10e99884aed2ccfe724ce02feafb3c32d6e18e082320e0257ad85d7",
+        "formal_result.json": "c711a46653a5588825d1c5c97571d34aed85ec9bf17ac1e7c345b6f976430011",
+        "environment_model_snapshot.json": "e02295bc20791f511486d730d1942fea1737f567acf87a5a9aa33bad03f900cf"
+      }
+    },
+    {
+      "run_id": "W4-L-R1__p050__MAIN__hysteresis_u8_d0_c60__guard__azure_conv_back_1500s__r1",
+      "input_sha256": "73040eb91c6a28cadbfa2c7c6952fc883bf7ebfc62c269276020d9cdb02ea711",
+      "source_files_sha256": {
+        "run_plan.json": "97f0ab57b9a0a4c5d21dfc6864ae982e0ec689102b4aced2ced9e342686c5dfd",
+        "plan_manifest.json": "460846381f4bf3eb2b1ff4e194b15df3b2d3b03ca6a2a916d0b6f70fe53ad3a6",
+        "expected_requests.json": "100381c301906d4a297d3f5b37284d7bd2e6b249793d0fdaa99af7584625446d",
+        "request_events.jsonl": "fe2e4f7598bc6300802c580f2b8c8e38681086be1293d8692e32068e52d83cc3",
+        "controller_events.jsonl": "588df7204bbf5c1e4e585b84ca85cf818aefb6d4c40921b090c79912c27859af",
+        "derived_metrics_accounting.json": "3823f6f3e7d2b0e1fff89c0df004e156d18eac68040b5b3b1c8dab0c63e7d1a1",
+        "formal_result.json": "f9b55100566e62daf265345c62dde145d55aa7c6423acf0129bc3902fd892d30",
+        "environment_model_snapshot.json": "e02295bc20791f511486d730d1942fea1737f567acf87a5a9aa33bad03f900cf"
+      }
+    },
+    {
+      "run_id": "W4-L-R1__p050__MAIN__hysteresis_u8_d0_c60__guard__azure_conv_back_1500s__r2",
+      "input_sha256": "73040eb91c6a28cadbfa2c7c6952fc883bf7ebfc62c269276020d9cdb02ea711",
+      "source_files_sha256": {
+        "run_plan.json": "1f61b573c40ffd903b53d4b5e38a1e01de92c0ceae61b5dd0e19f926ec7c0133",
+        "plan_manifest.json": "b8e3080f1ba970f911506ef6508076db2f790e826d8ebb0f1d2d6fa19d42ec21",
+        "expected_requests.json": "100381c301906d4a297d3f5b37284d7bd2e6b249793d0fdaa99af7584625446d",
+        "request_events.jsonl": "8053e7c1478101ae2577612bd802bdc4eb81cbe4a84ad75db938faf3f5c930f3",
+        "controller_events.jsonl": "3ff4cd20d01d60d85156bfceca52d14233be3138f9fba44c1911a9fd9bdb6a3a",
+        "derived_metrics_accounting.json": "f5dadbddec8f3fed0800cf04dc5e511d7501ed7ef4802f98443741c4cf385a8c",
+        "formal_result.json": "7aa60529e8abf93f2b8b6bfcf3700c1b03a2bb8a6eac854217733d10d0b8aecf",
+        "environment_model_snapshot.json": "e02295bc20791f511486d730d1942fea1737f567acf87a5a9aa33bad03f900cf"
+      }
+    },
+    {
+      "run_id": "W4-L-R1__p050__MAIN__hysteresis_u8_d0_c60__guard__azure_conv_back_1500s__r3",
+      "input_sha256": "73040eb91c6a28cadbfa2c7c6952fc883bf7ebfc62c269276020d9cdb02ea711",
+      "source_files_sha256": {
+        "run_plan.json": "4a8674132796ba058eb1d39beeb05966f08e5cfe4d74e70d68090d98d12395d2",
+        "plan_manifest.json": "471a68520f3450e21422433696b2466f8c997542b2881bbe8b0e6946f6660d09",
+        "expected_requests.json": "100381c301906d4a297d3f5b37284d7bd2e6b249793d0fdaa99af7584625446d",
+        "request_events.jsonl": "60055ab1ca771146c68341448e8773bbd3a58c9d908417a2fe2ac51fd18da4e1",
+        "controller_events.jsonl": "1a053628da76dfa614a7ff76cf5bb7aa7556664dee8b5a99d8b6b55bfece25f0",
+        "derived_metrics_accounting.json": "ad225cac98aec82089956ee6b30af2f6562811c560ab783780dbef8ec95b98d4",
+        "formal_result.json": "fb2499ad304740999488f75de49da6ebc52ba459b5ca03e2306d61a0056a1028",
+        "environment_model_snapshot.json": "e02295bc20791f511486d730d1942fea1737f567acf87a5a9aa33bad03f900cf"
+      }
+    },
+    {
+      "run_id": "W4-L-R1__p050__MAIN__hysteresis_u8_d0_c60__guard__azure_conv_front_1500s__r1",
+      "input_sha256": "3c40cac56d8be6355262b8cd5aadcafe8a6a25bd9fe270aaa77c49889117cd5d",
+      "source_files_sha256": {
+        "run_plan.json": "8deca0fa07603f00c6fe9a4c290baa237b31581a8dceca032a6ca98514d3f38b",
+        "plan_manifest.json": "d0dbae7f90891e66b15c2c410eedcf8281b3fc3045a25656415e92b6e489e05e",
+        "expected_requests.json": "eaefc183da5d9fb4c7a1b025a8b2951fcad9875f491911e68b67ea544af0fedb",
+        "request_events.jsonl": "a752fef54a7ba3562dfe139e96f4552c34573b88967c6c0399163d3de25a2607",
+        "controller_events.jsonl": "d451f3709e5340f43b186ef225f178588c2d4ed4d1d0649e26a67bbc249cdea1",
+        "derived_metrics_accounting.json": "9b7fd224dd6d9faff8267e9ee0f7255d28341d1f3f49ca09ddbb75a5aa792b64",
+        "formal_result.json": "b545e3d096db4442e9158689ceaba44a345121586944bc2bcccd49ebc53fe282",
+        "environment_model_snapshot.json": "e02295bc20791f511486d730d1942fea1737f567acf87a5a9aa33bad03f900cf"
+      }
+    },
+    {
+      "run_id": "W4-L-R1__p050__MAIN__hysteresis_u8_d0_c60__guard__azure_conv_front_1500s__r2",
+      "input_sha256": "3c40cac56d8be6355262b8cd5aadcafe8a6a25bd9fe270aaa77c49889117cd5d",
+      "source_files_sha256": {
+        "run_plan.json": "b3a6f40468fdf78350814ce3a9bf9d10389c8281596fa059793b904290b66142",
+        "plan_manifest.json": "2c699a0c88dd9d7199e40ea1ae519f1758dd53c7d1a7de7ba0af726a1a86d7c9",
+        "expected_requests.json": "eaefc183da5d9fb4c7a1b025a8b2951fcad9875f491911e68b67ea544af0fedb",
+        "request_events.jsonl": "8407245eb6c45779e2d48e2fcfa14438cdfc9d45ceb6b7bb06bdbce10aaf5f8c",
+        "controller_events.jsonl": "5829aff5f635d5adcad836bd48199357848978fad693ca4cb175373ca6563f78",
+        "derived_metrics_accounting.json": "82f24d5ede400acc62a8397ccbd649acc6eca029831694b559ba428ab6703f64",
+        "formal_result.json": "c63433dcb8361f6c316dfaf18386d1286fa5181d54f92f9ad12dae77612af3b3",
+        "environment_model_snapshot.json": "e02295bc20791f511486d730d1942fea1737f567acf87a5a9aa33bad03f900cf"
+      }
+    },
+    {
+      "run_id": "W4-L-R1__p050__MAIN__hysteresis_u8_d0_c60__guard__azure_conv_front_1500s__r3",
+      "input_sha256": "3c40cac56d8be6355262b8cd5aadcafe8a6a25bd9fe270aaa77c49889117cd5d",
+      "source_files_sha256": {
+        "run_plan.json": "5a227e63f1a1fb54da9df4b00ab62d994f025d91dc38ffc0a45b380bc439d049",
+        "plan_manifest.json": "7473542f7697cbe82210c532eea5f82a751bacac685a2248bd8c65a861887097",
+        "expected_requests.json": "eaefc183da5d9fb4c7a1b025a8b2951fcad9875f491911e68b67ea544af0fedb",
+        "request_events.jsonl": "8a929068ac64bf4bfd18d9e563bba57179417631459e03b937a336d89c139d96",
+        "controller_events.jsonl": "ae569c6e40c872789d30d536d5e4a18b67276e5b0a8d23b5cd1a6b305aab9338",
+        "derived_metrics_accounting.json": "876dd2eb6f6a2be2ef2f87442dc98816366d7f6d6c0a22edbe9662bb00db3f50",
+        "formal_result.json": "0da059dc61a5a795b357f8a1cf1901b01dc1d412f0ae1a69ff330e579c4193d7",
+        "environment_model_snapshot.json": "e02295bc20791f511486d730d1942fea1737f567acf87a5a9aa33bad03f900cf"
+      }
+    }
+  ],
+  "reduced_files_sha256": {
+    "PHYSICAL_ROWS.csv": "7b81d24a4faa235c87071db16090687d42e8e29ed8472b100c68083ee450e173",
+    "PREDICTION_ROWS.csv": "d2a6754719c762a86182a4bc16a61783b997c710330d85c7710d0f5a2c5bc374",
+    "PAIRED_ROWS.csv": "db221279f4aeb9427ddd72fbfc36d2e9f06fc6b0dd360b1696a6fc3f1a0f0c7e",
+    "SUMMARY.csv": "22bcc6bb7723b15a31c44ee21d7dc11956730aa4c7fe790a8d0e70445d26e833",
+    "HISTORICAL_MODELS.json": "2741b92460de865cf54f5d00c3a506d57eee026aada6a2d19914db249649fb65",
+    "PARAMETERS.json": "62b42d6352539fe5211aebff42a3d5f99e782e2c105216b6908b24c1b305654c"
+  }
+}

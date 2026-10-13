@@ -1,0 +1,724 @@
+{
+  "groups": [
+    {
+      "group_id": "i128_o128_c4_r1",
+      "requests": [
+        {
+          "request_id": "i128_o128_c4_r1_q0",
+          "input_tokens": 128,
+          "output_tokens": 128,
+          "arrival_s": 0.0
+        },
+        {
+          "request_id": "i128_o128_c4_r1_q1",
+          "input_tokens": 128,
+          "output_tokens": 128,
+          "arrival_s": 0.00033717002952471375
+        },
+        {
+          "request_id": "i128_o128_c4_r1_q2",
+          "input_tokens": 128,
+          "output_tokens": 128,
+          "arrival_s": 0.0006089280359447002
+        },
+        {
+          "request_id": "i128_o128_c4_r1_q3",
+          "input_tokens": 128,
+          "output_tokens": 128,
+          "arrival_s": 0.000869048002641648
+        }
+      ]
+    },
+    {
+      "group_id": "i1024_o128_c1_r1",
+      "requests": [
+        {
+          "request_id": "i1024_o128_c1_r1_q0",
+          "input_tokens": 1024,
+          "output_tokens": 128,
+          "arrival_s": 0.0
+        }
+      ]
+    },
+    {
+      "group_id": "i256_o128_c4_r1",
+      "requests": [
+        {
+          "request_id": "i256_o128_c4_r1_q0",
+          "input_tokens": 256,
+          "output_tokens": 128,
+          "arrival_s": 0.0
+        },
+        {
+          "request_id": "i256_o128_c4_r1_q1",
+          "input_tokens": 256,
+          "output_tokens": 128,
+          "arrival_s": 0.0004329720395617187
+        },
+        {
+          "request_id": "i256_o128_c4_r1_q2",
+          "input_tokens": 256,
+          "output_tokens": 128,
+          "arrival_s": 0.0007375890272669494
+        },
+        {
+          "request_id": "i256_o128_c4_r1_q3",
+          "input_tokens": 256,
+          "output_tokens": 128,
+          "arrival_s": 0.001059951027855277
+        }
+      ]
+    },
+    {
+      "group_id": "i2048_o128_c1_r1",
+      "requests": [
+        {
+          "request_id": "i2048_o128_c1_r1_q0",
+          "input_tokens": 2048,
+          "output_tokens": 128,
+          "arrival_s": 0.0
+        }
+      ]
+    },
+    {
+      "group_id": "i512_o128_c1_r1",
+      "requests": [
+        {
+          "request_id": "i512_o128_c1_r1_q0",
+          "input_tokens": 512,
+          "output_tokens": 128,
+          "arrival_s": 0.0
+        }
+      ]
+    },
+    {
+      "group_id": "i512_o128_c4_r1",
+      "requests": [
+        {
+          "request_id": "i512_o128_c4_r1_q0",
+          "input_tokens": 512,
+          "output_tokens": 128,
+          "arrival_s": 0.0
+        },
+        {
+          "request_id": "i512_o128_c4_r1_q1",
+          "input_tokens": 512,
+          "output_tokens": 128,
+          "arrival_s": 0.0004603210254572332
+        },
+        {
+          "request_id": "i512_o128_c4_r1_q2",
+          "input_tokens": 512,
+          "output_tokens": 128,
+          "arrival_s": 0.0008170760120265186
+        },
+        {
+          "request_id": "i512_o128_c4_r1_q3",
+          "input_tokens": 512,
+          "output_tokens": 128,
+          "arrival_s": 0.0011382420198060572
+        }
+      ]
+    },
+    {
+      "group_id": "i256_o128_c1_r1",
+      "requests": [
+        {
+          "request_id": "i256_o128_c1_r1_q0",
+          "input_tokens": 256,
+          "output_tokens": 128,
+          "arrival_s": 0.0
+        }
+      ]
+    },
+    {
+      "group_id": "i1024_o128_c4_r1",
+      "requests": [
+        {
+          "request_id": "i1024_o128_c4_r1_q0",
+          "input_tokens": 1024,
+          "output_tokens": 128,
+          "arrival_s": 0.0
+        },
+        {
+          "request_id": "i1024_o128_c4_r1_q1",
+          "input_tokens": 1024,
+          "output_tokens": 128,
+          "arrival_s": 0.0004856750019825995
+        },
+        {
+          "request_id": "i1024_o128_c4_r1_q2",
+          "input_tokens": 1024,
+          "output_tokens": 128,
+          "arrival_s": 0.0008591699879616499
+        },
+        {
+          "request_id": "i1024_o128_c4_r1_q3",
+          "input_tokens": 1024,
+          "output_tokens": 128,
+          "arrival_s": 0.001222813967615366
+        }
+      ]
+    },
+    {
+      "group_id": "i2048_o128_c4_r1",
+      "requests": [
+        {
+          "request_id": "i2048_o128_c4_r1_q0",
+          "input_tokens": 2048,
+          "output_tokens": 128,
+          "arrival_s": 0.0
+        },
+        {
+          "request_id": "i2048_o128_c4_r1_q1",
+          "input_tokens": 2048,
+          "output_tokens": 128,
+          "arrival_s": 0.0006013269885443151
+        },
+        {
+          "request_id": "i2048_o128_c4_r1_q2",
+          "input_tokens": 2048,
+          "output_tokens": 128,
+          "arrival_s": 0.001104032970033586
+        },
+        {
+          "request_id": "i2048_o128_c4_r1_q3",
+          "input_tokens": 2048,
+          "output_tokens": 128,
+          "arrival_s": 0.0015624120132997632
+        }
+      ]
+    },
+    {
+      "group_id": "i256_o256_c1_r1",
+      "requests": [
+        {
+          "request_id": "i256_o256_c1_r1_q0",
+          "input_tokens": 256,
+          "output_tokens": 256,
+          "arrival_s": 0.0
+        }
+      ]
+    },
+    {
+      "group_id": "i128_o128_c1_r1",
+      "requests": [
+        {
+          "request_id": "i128_o128_c1_r1_q0",
+          "input_tokens": 128,
+          "output_tokens": 128,
+          "arrival_s": 0.0
+        }
+      ]
+    },
+    {
+      "group_id": "i256_o256_c4_r1",
+      "requests": [
+        {
+          "request_id": "i256_o256_c4_r1_q0",
+          "input_tokens": 256,
+          "output_tokens": 256,
+          "arrival_s": 0.0
+        },
+        {
+          "request_id": "i256_o256_c4_r1_q1",
+          "input_tokens": 256,
+          "output_tokens": 256,
+          "arrival_s": 0.00042217300506308675
+        },
+        {
+          "request_id": "i256_o256_c4_r1_q2",
+          "input_tokens": 256,
+          "output_tokens": 256,
+          "arrival_s": 0.0007610719767399132
+        },
+        {
+          "request_id": "i256_o256_c4_r1_q3",
+          "input_tokens": 256,
+          "output_tokens": 256,
+          "arrival_s": 0.001156899961642921
+        }
+      ]
+    },
+    {
+      "group_id": "i256_o128_c1_r2",
+      "requests": [
+        {
+          "request_id": "i256_o128_c1_r2_q0",
+          "input_tokens": 256,
+          "output_tokens": 128,
+          "arrival_s": 0.0
+        }
+      ]
+    },
+    {
+      "group_id": "i256_o256_c4_r2",
+      "requests": [
+        {
+          "request_id": "i256_o256_c4_r2_q0",
+          "input_tokens": 256,
+          "output_tokens": 256,
+          "arrival_s": 0.0
+        },
+        {
+          "request_id": "i256_o256_c4_r2_q1",
+          "input_tokens": 256,
+          "output_tokens": 256,
+          "arrival_s": 0.0003630390274338424
+        },
+        {
+          "request_id": "i256_o256_c4_r2_q2",
+          "input_tokens": 256,
+          "output_tokens": 256,
+          "arrival_s": 0.0006741899996995926
+        },
+        {
+          "request_id": "i256_o256_c4_r2_q3",
+          "input_tokens": 256,
+          "output_tokens": 256,
+          "arrival_s": 0.0009637360344640911
+        }
+      ]
+    },
+    {
+      "group_id": "i512_o128_c1_r2",
+      "requests": [
+        {
+          "request_id": "i512_o128_c1_r2_q0",
+          "input_tokens": 512,
+          "output_tokens": 128,
+          "arrival_s": 0.0
+        }
+      ]
+    },
+    {
+      "group_id": "i1024_o128_c1_r2",
+      "requests": [
+        {
+          "request_id": "i1024_o128_c1_r2_q0",
+          "input_tokens": 1024,
+          "output_tokens": 128,
+          "arrival_s": 0.0
+        }
+      ]
+    },
+    {
+      "group_id": "i2048_o128_c1_r2",
+      "requests": [
+        {
+          "request_id": "i2048_o128_c1_r2_q0",
+          "input_tokens": 2048,
+          "output_tokens": 128,
+          "arrival_s": 0.0
+        }
+      ]
+    },
+    {
+      "group_id": "i128_o128_c4_r2",
+      "requests": [
+        {
+          "request_id": "i128_o128_c4_r2_q0",
+          "input_tokens": 128,
+          "output_tokens": 128,
+          "arrival_s": 0.0
+        },
+        {
+          "request_id": "i128_o128_c4_r2_q1",
+          "input_tokens": 128,
+          "output_tokens": 128,
+          "arrival_s": 0.000423874007537961
+        },
+        {
+          "request_id": "i128_o128_c4_r2_q2",
+          "input_tokens": 128,
+          "output_tokens": 128,
+          "arrival_s": 0.0007173820049501956
+        },
+        {
+          "request_id": "i128_o128_c4_r2_q3",
+          "input_tokens": 128,
+          "output_tokens": 128,
+          "arrival_s": 0.0009707409772090614
+        }
+      ]
+    },
+    {
+      "group_id": "i128_o128_c1_r2",
+      "requests": [
+        {
+          "request_id": "i128_o128_c1_r2_q0",
+          "input_tokens": 128,
+          "output_tokens": 128,
+          "arrival_s": 0.0
+        }
+      ]
+    },
+    {
+      "group_id": "i1024_o128_c4_r2",
+      "requests": [
+        {
+          "request_id": "i1024_o128_c4_r2_q0",
+          "input_tokens": 1024,
+          "output_tokens": 128,
+          "arrival_s": 0.0
+        },
+        {
+          "request_id": "i1024_o128_c4_r2_q1",
+          "input_tokens": 1024,
+          "output_tokens": 128,
+          "arrival_s": 0.0004969309666194022
+        },
+        {
+          "request_id": "i1024_o128_c4_r2_q2",
+          "input_tokens": 1024,
+          "output_tokens": 128,
+          "arrival_s": 0.0009268529829569161
+        },
+        {
+          "request_id": "i1024_o128_c4_r2_q3",
+          "input_tokens": 1024,
+          "output_tokens": 128,
+          "arrival_s": 0.0013042889768257737
+        }
+      ]
+    },
+    {
+      "group_id": "i512_o128_c4_r2",
+      "requests": [
+        {
+          "request_id": "i512_o128_c4_r2_q0",
+          "input_tokens": 512,
+          "output_tokens": 128,
+          "arrival_s": 0.0
+        },
+        {
+          "request_id": "i512_o128_c4_r2_q1",
+          "input_tokens": 512,
+          "output_tokens": 128,
+          "arrival_s": 0.0004138349904678762
+        },
+        {
+          "request_id": "i512_o128_c4_r2_q2",
+          "input_tokens": 512,
+          "output_tokens": 128,
+          "arrival_s": 0.0007739730062894523
+        },
+        {
+          "request_id": "i512_o128_c4_r2_q3",
+          "input_tokens": 512,
+          "output_tokens": 128,
+          "arrival_s": 0.0010996329947374761
+        }
+      ]
+    },
+    {
+      "group_id": "i256_o128_c4_r2",
+      "requests": [
+        {
+          "request_id": "i256_o128_c4_r2_q0",
+          "input_tokens": 256,
+          "output_tokens": 128,
+          "arrival_s": 0.0
+        },
+        {
+          "request_id": "i256_o128_c4_r2_q1",
+          "input_tokens": 256,
+          "output_tokens": 128,
+          "arrival_s": 0.00044583098497241735
+        },
+        {
+          "request_id": "i256_o128_c4_r2_q2",
+          "input_tokens": 256,
+          "output_tokens": 128,
+          "arrival_s": 0.000754966982640326
+        },
+        {
+          "request_id": "i256_o128_c4_r2_q3",
+          "input_tokens": 256,
+          "output_tokens": 128,
+          "arrival_s": 0.0010853089625015855
+        }
+      ]
+    },
+    {
+      "group_id": "i256_o256_c1_r2",
+      "requests": [
+        {
+          "request_id": "i256_o256_c1_r2_q0",
+          "input_tokens": 256,
+          "output_tokens": 256,
+          "arrival_s": 0.0
+        }
+      ]
+    },
+    {
+      "group_id": "i2048_o128_c4_r2",
+      "requests": [
+        {
+          "request_id": "i2048_o128_c4_r2_q0",
+          "input_tokens": 2048,
+          "output_tokens": 128,
+          "arrival_s": 0.0
+        },
+        {
+          "request_id": "i2048_o128_c4_r2_q1",
+          "input_tokens": 2048,
+          "output_tokens": 128,
+          "arrival_s": 0.0005925540463067591
+        },
+        {
+          "request_id": "i2048_o128_c4_r2_q2",
+          "input_tokens": 2048,
+          "output_tokens": 128,
+          "arrival_s": 0.0012168800458312035
+        },
+        {
+          "request_id": "i2048_o128_c4_r2_q3",
+          "input_tokens": 2048,
+          "output_tokens": 128,
+          "arrival_s": 0.0016885490040294826
+        }
+      ]
+    },
+    {
+      "group_id": "i2048_o128_c4_r3",
+      "requests": [
+        {
+          "request_id": "i2048_o128_c4_r3_q0",
+          "input_tokens": 2048,
+          "output_tokens": 128,
+          "arrival_s": 0.0
+        },
+        {
+          "request_id": "i2048_o128_c4_r3_q1",
+          "input_tokens": 2048,
+          "output_tokens": 128,
+          "arrival_s": 0.0006278299842961133
+        },
+        {
+          "request_id": "i2048_o128_c4_r3_q2",
+          "input_tokens": 2048,
+          "output_tokens": 128,
+          "arrival_s": 0.0011559859849512577
+        },
+        {
+          "request_id": "i2048_o128_c4_r3_q3",
+          "input_tokens": 2048,
+          "output_tokens": 128,
+          "arrival_s": 0.001619110000319779
+        }
+      ]
+    },
+    {
+      "group_id": "i512_o128_c1_r3",
+      "requests": [
+        {
+          "request_id": "i512_o128_c1_r3_q0",
+          "input_tokens": 512,
+          "output_tokens": 128,
+          "arrival_s": 0.0
+        }
+      ]
+    },
+    {
+      "group_id": "i256_o128_c1_r3",
+      "requests": [
+        {
+          "request_id": "i256_o128_c1_r3_q0",
+          "input_tokens": 256,
+          "output_tokens": 128,
+          "arrival_s": 0.0
+        }
+      ]
+    },
+    {
+      "group_id": "i128_o128_c1_r3",
+      "requests": [
+        {
+          "request_id": "i128_o128_c1_r3_q0",
+          "input_tokens": 128,
+          "output_tokens": 128,
+          "arrival_s": 0.0
+        }
+      ]
+    },
+    {
+      "group_id": "i256_o256_c4_r3",
+      "requests": [
+        {
+          "request_id": "i256_o256_c4_r3_q0",
+          "input_tokens": 256,
+          "output_tokens": 256,
+          "arrival_s": 0.0
+        },
+        {
+          "request_id": "i256_o256_c4_r3_q1",
+          "input_tokens": 256,
+          "output_tokens": 256,
+          "arrival_s": 0.0004004839574918151
+        },
+        {
+          "request_id": "i256_o256_c4_r3_q2",
+          "input_tokens": 256,
+          "output_tokens": 256,
+          "arrival_s": 0.0007400719914585352
+        },
+        {
+          "request_id": "i256_o256_c4_r3_q3",
+          "input_tokens": 256,
+          "output_tokens": 256,
+          "arrival_s": 0.0010171609465032816
+        }
+      ]
+    },
+    {
+      "group_id": "i128_o128_c4_r3",
+      "requests": [
+        {
+          "request_id": "i128_o128_c4_r3_q0",
+          "input_tokens": 128,
+          "output_tokens": 128,
+          "arrival_s": 0.0
+        },
+        {
+          "request_id": "i128_o128_c4_r3_q1",
+          "input_tokens": 128,
+          "output_tokens": 128,
+          "arrival_s": 0.00043379300041124225
+        },
+        {
+          "request_id": "i128_o128_c4_r3_q2",
+          "input_tokens": 128,
+          "output_tokens": 128,
+          "arrival_s": 0.0007640140247531235
+        },
+        {
+          "request_id": "i128_o128_c4_r3_q3",
+          "input_tokens": 128,
+          "output_tokens": 128,
+          "arrival_s": 0.001017908041831106
+        }
+      ]
+    },
+    {
+      "group_id": "i1024_o128_c1_r3",
+      "requests": [
+        {
+          "request_id": "i1024_o128_c1_r3_q0",
+          "input_tokens": 1024,
+          "output_tokens": 128,
+          "arrival_s": 0.0
+        }
+      ]
+    },
+    {
+      "group_id": "i1024_o128_c4_r3",
+      "requests": [
+        {
+          "request_id": "i1024_o128_c4_r3_q0",
+          "input_tokens": 1024,
+          "output_tokens": 128,
+          "arrival_s": 0.0
+        },
+        {
+          "request_id": "i1024_o128_c4_r3_q1",
+          "input_tokens": 1024,
+          "output_tokens": 128,
+          "arrival_s": 0.0005343409720808268
+        },
+        {
+          "request_id": "i1024_o128_c4_r3_q2",
+          "input_tokens": 1024,
+          "output_tokens": 128,
+          "arrival_s": 0.0009740209789015353
+        },
+        {
+          "request_id": "i1024_o128_c4_r3_q3",
+          "input_tokens": 1024,
+          "output_tokens": 128,
+          "arrival_s": 0.001348407007753849
+        }
+      ]
+    },
+    {
+      "group_id": "i512_o128_c4_r3",
+      "requests": [
+        {
+          "request_id": "i512_o128_c4_r3_q0",
+          "input_tokens": 512,
+          "output_tokens": 128,
+          "arrival_s": 0.0
+        },
+        {
+          "request_id": "i512_o128_c4_r3_q1",
+          "input_tokens": 512,
+          "output_tokens": 128,
+          "arrival_s": 0.0004966830019839108
+        },
+        {
+          "request_id": "i512_o128_c4_r3_q2",
+          "input_tokens": 512,
+          "output_tokens": 128,
+          "arrival_s": 0.0008974820375442505
+        },
+        {
+          "request_id": "i512_o128_c4_r3_q3",
+          "input_tokens": 512,
+          "output_tokens": 128,
+          "arrival_s": 0.00119629199616611
+        }
+      ]
+    },
+    {
+      "group_id": "i256_o256_c1_r3",
+      "requests": [
+        {
+          "request_id": "i256_o256_c1_r3_q0",
+          "input_tokens": 256,
+          "output_tokens": 256,
+          "arrival_s": 0.0
+        }
+      ]
+    },
+    {
+      "group_id": "i256_o128_c4_r3",
+      "requests": [
+        {
+          "request_id": "i256_o128_c4_r3_q0",
+          "input_tokens": 256,
+          "output_tokens": 128,
+          "arrival_s": 0.0
+        },
+        {
+          "request_id": "i256_o128_c4_r3_q1",
+          "input_tokens": 256,
+          "output_tokens": 128,
+          "arrival_s": 0.0004587689763866365
+        },
+        {
+          "request_id": "i256_o128_c4_r3_q2",
+          "input_tokens": 256,
+          "output_tokens": 128,
+          "arrival_s": 0.0007673960062675178
+        },
+        {
+          "request_id": "i256_o128_c4_r3_q3",
+          "input_tokens": 256,
+          "output_tokens": 128,
+          "arrival_s": 0.0010900730267167091
+        }
+      ]
+    },
+    {
+      "group_id": "i2048_o128_c1_r3",
+      "requests": [
+        {
+          "request_id": "i2048_o128_c1_r3_q0",
+          "input_tokens": 2048,
+          "output_tokens": 128,
+          "arrival_s": 0.0
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "scope": "SHA256 bindings to archived full evidence, without host paths; reduced files do not contain raw inference logs or prompts.",
+  "sha256": {
+    "original_return_manifest": "a41c450188830116ebf0213ae76e808966335140f15b9a70d095f5dff2a5824c",
+    "original_model_lock": "51b28b5833ac5b2474efd792bad479d1e3b0cdbdaa906715011e5e83d7bb07f7",
+    "original_prediction_receipt": "456ebceea91d155e5cb20388855078eba523494546a9e49b6421612fb69a06ed",
+    "original_analysis_summary": "36868be9083d8285ff71a7a1632c9892a337bdf4452998e2882bf8e1ffdb493a",
+    "diagnostic_analysis_code": "f5e1139727b19ba3f0f1654e819300cb6860cceb3bda43a4e5f9fca0f665f685",
+    "diagnostic_summary": "34e6696d1efa7ff8c7b1d3e83964a17a48b5069891d24c0b0fc5228a8544c651"
+  }
+}

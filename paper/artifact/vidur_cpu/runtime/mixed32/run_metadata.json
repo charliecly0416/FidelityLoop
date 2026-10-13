@@ -1,0 +1,34 @@
+{
+  "official_commit": "abae7f63aa857300f5cdc6f5e0d27860cd24721b",
+  "case": "mixed32",
+  "request_count": 32,
+  "completed_count": 32,
+  "event_queue_empty": true,
+  "scheduler_empty": true,
+  "terminated_at_time_limit": false,
+  "final_simulation_time_s": 4.596427235849248,
+  "training_and_simulation_wall_time_s": 1.7079101083800197,
+  "simulation_wall_time_s": 0.48164429888129234,
+  "native_output_dir": "runtime/mixed32/native/2026-10-12_17-30-54-600362",
+  "python": "3.13.5 | packaged by Anaconda, Inc. | (main, Jun 12 2025, 16:09:02) [GCC 11.2.0]",
+  "packages": {
+    "numpy": "2.4.3",
+    "pandas": "2.3.3",
+    "scikit-learn": "1.8.0",
+    "wandb": "0.30.0",
+    "plotly": "7.1.0",
+    "ddsketch": "3.0.1",
+    "fasteners": "0.20"
+  },
+  "profile_sha256": {
+    "data/profiling/compute/a100/meta-llama/Meta-Llama-3-8B/mlp.csv": "98c26488298e324e89db7349e213f75c856ae83dc6b17548a68636d2cb5efff0",
+    "data/profiling/compute/a100/meta-llama/Meta-Llama-3-8B/attention.csv": "9d57142a293156a15e14fdf69a597fdaa7ff2b478baf4c431b20a9491a19a87a"
+  },
+  "cpu_only": true,
+  "official_source_patches": [
+    "runtime/native_export.patch"
+  ],
+  "torch_imported": false,
+  "workload_sha256": "487157c7a2c410e4d727b008b845f2a1f9ef5d5dfbd6c294c7e0974e4d0a3086",
+  "request_record_sha256": "ceb3772f77d7880c1f10fc0808ddb9ec329de097f4e9c5017f472e05e68cdbad"
+}

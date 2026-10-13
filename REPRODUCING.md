@@ -94,3 +94,13 @@ The supplement's `scripts/`, `docs/`, and `artifacts/` paths identify the full h
 ## Paper builds
 
 The Overleaf ZIP contains root-level `main.tex` and `supplement.tex`, figures, tables, bibliography, and styles. Use pdfLaTeX/BibTeX for each entry point. The paper remains anonymous; the public source repository is a separate, named distribution. The standalone E1 ZIP uses author-neutral contents and has no repository/account link in its files.
+
+## External Vidur service backend
+
+See [cpu_replay/README.md](cpu_replay/README.md) for a separate Python 3.13
+environment and the fixed-input native rerun. It includes operator profiles,
+source with licenses, and the accepted policy settings; no GPU or weights are
+needed. The 12 existing predictions and 25,200 decisions are checked against
+the accepted outputs. The lightweight result checkers in [paper/README.md](paper/README.md)
+remain standard-library-only. Original paired corpus counts: 197 physical runs,
+239 original predictions, 555 pairs, with all 41 strict failures retained.

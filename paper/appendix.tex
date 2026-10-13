@@ -8,19 +8,21 @@ values from reduced records. Its ten tests run with
 \texttt{python -B -m unittest}; physical-run acceptance is inherited.
 
 The paired trace corpus\footnote{\url{https://anonymous.4open.science/r/FidelityLoop-144B/}}
-covers the 36-run held-out study, Bridge, E2, and E3:
-132 technically accepted physical runs (including 35 strict P1+ failures)
-and 140 unique frozen predictions form 372 model/run pairs. Predictions are
-reused across physical repeats. The index separately lists six excluded
+covers the 36-run held-out study, Bridge, E2, E3, E4, E5, and E6:
+197 technically accepted physical runs (including 41 strict P1+ failures)
+and 239 unique frozen predictions form 555 model/run pairs. Predictions are
+reused across physical repeats. The index separately lists eight excluded
 technical or aborted attempts; it does not provide full traces for them.
 Each released record contains aligned request timing and terminal status,
 control targets, lifecycle events, and resource/cost primitives, with prompts
 and machine identifiers removed. The standard-library loader and examples
-recompute feasibility-direction agreement and scenario-cost MAE;
+recompute feasibility-direction agreement and scenario-cost MAE.
+The worked screening example also returns mismatched request IDs and reports
+false accepts/rejects with their physical denominators;
 \texttt{python -B verify.py} checks the complete corpus after extraction.
 This release supports analysis of the recorded deployments, not unseen-workload
-validation or rerunning model inference. It does not include the other
-supplementary campaigns. The corpus's \path{SCHEMA.md} specifies the projection
+validation or rerunning model inference. The later T30-14, Azure, and Vidur-backed retrospective predictions are
+supplied separately with the paper and are not included in these counts. The corpus's \path{SCHEMA.md} specifies the projection
 and accounting boundaries.
 
 The remaining \path{scripts/}, \path{docs/}, and \path{artifacts/} paths in this
@@ -81,6 +83,103 @@ Shared runtime control & --- & 197\\
 \path{IMPLEMENTATION_FOOTPRINT.json} binds these counts to the frozen
 sources. The source release provides the counting script and audited
 source snapshots in \path{artifact/implementation_footprint/}.
+
+\subsection{External service model in the validation loop}
+\label{app:vidur}
+The Vidur integration separates service prediction from the outer control
+loop. Vidur \citep{vidur2024} supplies its native Sarathi scheduler and token
+execution events; FidelityLoop supplies policy observations, tick-based
+admission, lifecycle transitions, and deadline/resource accounting. This
+allows the same policy and ledger to evaluate an independently profiled
+service model.
+
+\paragraph{Service validation.}
+New Qwen2.5-7B-Instruct/A100 80GB operator profiles are paired with physical
+vLLM 0.9.0 service measurements (FP16, TP=PP=1). Six input/output lengths---
+128/128, 256/128, 512/128, 1024/128, 2048/128, and 256/256---at concurrency
+one and four, with three repeats, yield 36 groups and 90 requests; two
+warmup groups are excluded. Historical prompts supply fixed-length prefixes,
+with one repeated prefix in the four-request 2048-token group. Output lengths
+are fixed and prefix caching is disabled.
+
+The profile contains 323 MLP and 761 attention measurements from pinned
+Sarathi/FlashInfer on PyTorch 2.3; physical service uses vLLM V1/Flash Attention
+on PyTorch 2.7. Operator profiling precedes service measurement. CPU prediction
+uses 100-tree, depth-eight random forests (seed 42), Sarathi batch cap four
+and chunk size 16,384. Inputs contain token budgets and admission offsets,
+not completion times. CPU overhead is not modeled and no correction is
+fitted to validation latencies.
+
+Request-latency APE is 18.36\% at the median and 19.74\% at P90; group
+makespan APE is 18.36\% and 19.66\%. The worst length-by-concurrency median
+makespan APE is 19.80\%. These meet the fixed engineering gates of
+20\%/35\% median/P90 for both metrics and 50\% worst-condition median.
+No condition exceeds the registered 1.5 maximum/minimum repeat-makespan ratio.
+All 36 groups underestimate makespan (10.88--26.40\%); the experiment does
+not isolate runtime-stack effects from omitted overhead.
+
+\paragraph{Policy and lifecycle evaluation.}
+The same profiled service model replaces E's lookup in 12 CPU rollouts:
+all1, all2, H, and H+guard on the original three windows. Each deterministic
+prediction is compared with all three existing physical repeats. This is a
+retrospective comparison without outcome fitting. E's startup/shutdown
+parameters (33.497/2.224\,s), the guard's original lookup and safety estimates,
+and the synthetic API rules stay fixed. Thus lifecycle timing comes from
+FidelityLoop's frozen deployment model, not from Vidur's operator profiles.
+
+Both instances begin ready. Completions advance in continuous time; each
+one-second tick releases arrivals, evaluates the policy, and fills free local
+slots (four per active instance). Draining instances finish accepted work
+before shutdown; no new work enters them. Occupation integrates all non-off
+states over [0,2100]\,s, excluding setup and cleanup. Unfinished requests
+remain in the deadline denominator. Intermediate input lengths and continuous
+mixed prefill/decode batches extend beyond the isolated service-screen cases.
+All 712,614 native batch queries remain within the measured operator domain,
+including 2,340 mixed batches; this domain check does not assert per-shape
+service accuracy.
+
+\begin{table}[t]
+\centering
+\small
+\caption{Vidur-backed dynamic-policy comparison. Offline on-time counts use
+120 arrivals; physical ranges span three repeats. Resource APE is the median
+over those repeats; target agreement is the percentage of decision ticks
+with equal target counts, reported as a range.}
+\label{tab:vidur-control}
+\setlength{\tabcolsep}{2pt}
+\par\vspace{4pt}
+\begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}llrrrr@{}}
+\toprule
+Policy & Window & \shortstack{CPU\\on time} & \shortstack{Physical\\on time} & \shortstack{Resource\\APE (\%)} & \shortstack{Target\\agree (\%)}\\
+\midrule
+\input{generated/vidur_control_rows.tex}
+\end{tabular*}
+\end{table}
+
+Table~\ref{tab:vidur-control} reproduces the recovery deadline contrast:
+H predicts 116/120 on-time offline jobs versus physical counts of 116, 113,
+and 116; H+guard gives 120/120 in both prediction and execution. All online
+requests meet deadlines in both. The six dynamic conditions have median
+resource APE of 0.77--2.47\%, except guard recovery at 14.74\%.
+Aggregate accuracy does not imply a matching control trajectory: steady-window
+target agreement is 33.0--35.5\%, and predicted API routing is 755 requests
+versus physical medians of 711 for H and 714 for H+guard. Fixed all1/all2
+median resource APE is at most 0.02\%, largely because capacity is fixed over
+the same observation window. These are descriptive comparisons, not a newly
+applied policy-accuracy gate.
+
+\paragraph{Reproduction.}
+\path{artifact/vidur_service_screen/} supplies operator profiles, request
+timings, predictions, and service-score verification.
+\path{artifact/vidur_control/} supplies reduced per-request results, lifecycle
+intervals, control targets, and a standard-library verifier for all 12
+predictions and 36 physical comparisons. These files accompany the paper;
+the release also supplies a CPU runner for the fixed predictions. They
+do not add physical runs to the 197-run paired corpus. Interface checks
+also preserve the earlier public-Llama native-output example in
+\path{artifact/vidur_cpu/}. Across the Qwen interface checks, native completion
+times match the accepted service-screen predictions exactly, and independent
+ledgers reproduce the saved occupation and deadline counts.
 
 \subsection{Per-repeat latency record}
 Table~\ref{tab:tail} preserves all three online tail statistics for every formal
@@ -174,6 +273,10 @@ on time. These definitions follow \path{scripts/maxopt_v3/acceptance.py};
 the extension's strict qualification uses the same timely/unfinished distinction.
 
 \input{replay_model_specification}
+
+E's equal-window target disagreement is 26.77\%, against the registered
+25\% diagnostic expectation. Predicted and observed switch counts match
+except for one burst-offline repeat (22 predicted, 24 observed).
 
 \subsection{Guard implementation map}
 The frozen \path{scripts/maxopt_v3/policy.py} implements the following
@@ -290,6 +393,10 @@ commercial API.
 \input{appendix_e2}
 \input{appendix_e2_policy}
 \input{appendix_e3}
+\input{appendix_e4}
+\input{appendix_e5_e6}
+\input{appendix_decision}
+\input{appendix_prices}
 \input{appendix_v5_mechanism}
 
 \input{external_validity}

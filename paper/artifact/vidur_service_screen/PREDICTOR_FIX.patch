@@ -1,0 +1,32 @@
+--- a/scripts/predict_service.py
++++ b/scripts/predict_service.py
+@@ -134,6 +134,8 @@
+     from vidur.execution_time_predictor import ExecutionTimePredictorRegistry
+     from vidur.execution_time_predictor.random_forrest_execution_time_predictor import RandomForrestExecutionTimePredictor
+     from vidur.simulator import Simulator
++    from vidur.entities import Request, Replica
++    from vidur.events import BaseEvent
+     from vidur.types import ExecutionTimePredictorType
+     from vidur.utils.random import set_seeds
+ 
+@@ -177,6 +179,10 @@
+     output = []
+     try:
+         for group_index, group in enumerate(groups):
++            # Vidur entity IDs are process-global; each independent service group
++            # must start from the same local namespace for replica_id=0.
++            Request._id = Replica._id = -1
++            BaseEvent._id = 0
+             directory = Path(work_dir) / f"group_{group_index:03d}"
+             directory.mkdir(parents=True, exist_ok=False)
+             trace = directory / "requests.csv"
+@@ -208,7 +214,8 @@
+                 raise RuntimeError("Native simulation did not drain")
+             records = []
+             for spec, request in zip(group["requests"], requests):
+-                if request.size != (spec["input_tokens"], spec["output_tokens"]) or request.arrived_at != spec["arrival_s"]:
++                if (request.size != (spec["input_tokens"], spec["output_tokens"])
++                        or not math.isclose(float(request.arrived_at), float(spec["arrival_s"]), rel_tol=0.0, abs_tol=1e-12)):
+                     raise RuntimeError("Native generator changed request semantics")
+                 if not request.completed or request.num_processed_tokens != request.total_tokens:
+                     raise RuntimeError("Native request incomplete")

@@ -1,0 +1,197 @@
+{
+  "scope": "Retrospective Vidur service plus frozen FidelityLoop lifecycle/control",
+  "cases": [
+    {
+      "case_id": "all1__locked_test_burst_offline_v3",
+      "policy": "all1",
+      "window": "locked_test_burst_offline_v3",
+      "horizon": 2100,
+      "prediction_id": "all1__locked_test_burst_offline_v3__cpu",
+      "physical_ids": [
+        "all1__locked_test_burst_offline_v3__r1",
+        "all1__locked_test_burst_offline_v3__r2",
+        "all1__locked_test_burst_offline_v3__r3"
+      ],
+      "startup_seconds": 33.4965864305,
+      "shutdown_seconds": 2.2241611765,
+      "input_sha256": "845fc18127403b45fcdec1306ae88093958519c316b0054060fe9f48c6024964",
+      "profile_sha256": "8b0d25197d835ffa0f8b2907feaa5e572257df84c1ea2b2c604afaa405903d0f"
+    },
+    {
+      "case_id": "all1__locked_test_recovery_v3",
+      "policy": "all1",
+      "window": "locked_test_recovery_v3",
+      "horizon": 2100,
+      "prediction_id": "all1__locked_test_recovery_v3__cpu",
+      "physical_ids": [
+        "all1__locked_test_recovery_v3__r1",
+        "all1__locked_test_recovery_v3__r2",
+        "all1__locked_test_recovery_v3__r3"
+      ],
+      "startup_seconds": 33.4965864305,
+      "shutdown_seconds": 2.2241611765,
+      "input_sha256": "5a14e3ee94927e7a4e46a6d964b74ffbff4a3129e499f3eb9419cfb6af47f406",
+      "profile_sha256": "8b0d25197d835ffa0f8b2907feaa5e572257df84c1ea2b2c604afaa405903d0f"
+    },
+    {
+      "case_id": "all1__locked_test_steady_v3",
+      "policy": "all1",
+      "window": "locked_test_steady_v3",
+      "horizon": 2100,
+      "prediction_id": "all1__locked_test_steady_v3__cpu",
+      "physical_ids": [
+        "all1__locked_test_steady_v3__r1",
+        "all1__locked_test_steady_v3__r2",
+        "all1__locked_test_steady_v3__r3"
+      ],
+      "startup_seconds": 33.4965864305,
+      "shutdown_seconds": 2.2241611765,
+      "input_sha256": "9f7a83381301732f960ef8f9f57bbb2a167c1491e56f3c562c5b748bd9f94633",
+      "profile_sha256": "8b0d25197d835ffa0f8b2907feaa5e572257df84c1ea2b2c604afaa405903d0f"
+    },
+    {
+      "case_id": "all2__locked_test_burst_offline_v3",
+      "policy": "all2",
+      "window": "locked_test_burst_offline_v3",
+      "horizon": 2100,
+      "prediction_id": "all2__locked_test_burst_offline_v3__cpu",
+      "physical_ids": [
+        "all2__locked_test_burst_offline_v3__r1",
+        "all2__locked_test_burst_offline_v3__r2",
+        "all2__locked_test_burst_offline_v3__r3"
+      ],
+      "startup_seconds": 33.4965864305,
+      "shutdown_seconds": 2.2241611765,
+      "input_sha256": "845fc18127403b45fcdec1306ae88093958519c316b0054060fe9f48c6024964",
+      "profile_sha256": "8b0d25197d835ffa0f8b2907feaa5e572257df84c1ea2b2c604afaa405903d0f"
+    },
+    {
+      "case_id": "all2__locked_test_recovery_v3",
+      "policy": "all2",
+      "window": "locked_test_recovery_v3",
+      "horizon": 2100,
+      "prediction_id": "all2__locked_test_recovery_v3__cpu",
+      "physical_ids": [
+        "all2__locked_test_recovery_v3__r1",
+        "all2__locked_test_recovery_v3__r2",
+        "all2__locked_test_recovery_v3__r3"
+      ],
+      "startup_seconds": 33.4965864305,
+      "shutdown_seconds": 2.2241611765,
+      "input_sha256": "5a14e3ee94927e7a4e46a6d964b74ffbff4a3129e499f3eb9419cfb6af47f406",
+      "profile_sha256": "8b0d25197d835ffa0f8b2907feaa5e572257df84c1ea2b2c604afaa405903d0f"
+    },
+    {
+      "case_id": "all2__locked_test_steady_v3",
+      "policy": "all2",
+      "window": "locked_test_steady_v3",
+      "horizon": 2100,
+      "prediction_id": "all2__locked_test_steady_v3__cpu",
+      "physical_ids": [
+        "all2__locked_test_steady_v3__r1",
+        "all2__locked_test_steady_v3__r2",
+        "all2__locked_test_steady_v3__r3"
+      ],
+      "startup_seconds": 33.4965864305,
+      "shutdown_seconds": 2.2241611765,
+      "input_sha256": "9f7a83381301732f960ef8f9f57bbb2a167c1491e56f3c562c5b748bd9f94633",
+      "profile_sha256": "8b0d25197d835ffa0f8b2907feaa5e572257df84c1ea2b2c604afaa405903d0f"
+    },
+    {
+      "case_id": "hysteresis_u8_d0_c60__guard__locked_test_burst_offline_v3",
+      "policy": "guard",
+      "window": "locked_test_burst_offline_v3",
+      "horizon": 2100,
+      "prediction_id": "hysteresis_u8_d0_c60__guard__locked_test_burst_offline_v3__cpu",
+      "physical_ids": [
+        "hysteresis_u8_d0_c60__guard__locked_test_burst_offline_v3__r1",
+        "hysteresis_u8_d0_c60__guard__locked_test_burst_offline_v3__r2",
+        "hysteresis_u8_d0_c60__guard__locked_test_burst_offline_v3__r3"
+      ],
+      "startup_seconds": 33.4965864305,
+      "shutdown_seconds": 2.2241611765,
+      "input_sha256": "845fc18127403b45fcdec1306ae88093958519c316b0054060fe9f48c6024964",
+      "profile_sha256": "8b0d25197d835ffa0f8b2907feaa5e572257df84c1ea2b2c604afaa405903d0f"
+    },
+    {
+      "case_id": "hysteresis_u8_d0_c60__guard__locked_test_recovery_v3",
+      "policy": "guard",
+      "window": "locked_test_recovery_v3",
+      "horizon": 2100,
+      "prediction_id": "hysteresis_u8_d0_c60__guard__locked_test_recovery_v3__cpu",
+      "physical_ids": [
+        "hysteresis_u8_d0_c60__guard__locked_test_recovery_v3__r1",
+        "hysteresis_u8_d0_c60__guard__locked_test_recovery_v3__r2",
+        "hysteresis_u8_d0_c60__guard__locked_test_recovery_v3__r3"
+      ],
+      "startup_seconds": 33.4965864305,
+      "shutdown_seconds": 2.2241611765,
+      "input_sha256": "5a14e3ee94927e7a4e46a6d964b74ffbff4a3129e499f3eb9419cfb6af47f406",
+      "profile_sha256": "8b0d25197d835ffa0f8b2907feaa5e572257df84c1ea2b2c604afaa405903d0f"
+    },
+    {
+      "case_id": "hysteresis_u8_d0_c60__guard__locked_test_steady_v3",
+      "policy": "guard",
+      "window": "locked_test_steady_v3",
+      "horizon": 2100,
+      "prediction_id": "hysteresis_u8_d0_c60__guard__locked_test_steady_v3__cpu",
+      "physical_ids": [
+        "hysteresis_u8_d0_c60__guard__locked_test_steady_v3__r1",
+        "hysteresis_u8_d0_c60__guard__locked_test_steady_v3__r2",
+        "hysteresis_u8_d0_c60__guard__locked_test_steady_v3__r3"
+      ],
+      "startup_seconds": 33.4965864305,
+      "shutdown_seconds": 2.2241611765,
+      "input_sha256": "9f7a83381301732f960ef8f9f57bbb2a167c1491e56f3c562c5b748bd9f94633",
+      "profile_sha256": "8b0d25197d835ffa0f8b2907feaa5e572257df84c1ea2b2c604afaa405903d0f"
+    },
+    {
+      "case_id": "hysteresis_u8_d0_c60__locked_test_burst_offline_v3",
+      "policy": "H",
+      "window": "locked_test_burst_offline_v3",
+      "horizon": 2100,
+      "prediction_id": "hysteresis_u8_d0_c60__locked_test_burst_offline_v3__cpu",
+      "physical_ids": [
+        "hysteresis_u8_d0_c60__locked_test_burst_offline_v3__r1",
+        "hysteresis_u8_d0_c60__locked_test_burst_offline_v3__r2",
+        "hysteresis_u8_d0_c60__locked_test_burst_offline_v3__r3"
+      ],
+      "startup_seconds": 33.4965864305,
+      "shutdown_seconds": 2.2241611765,
+      "input_sha256": "845fc18127403b45fcdec1306ae88093958519c316b0054060fe9f48c6024964",
+      "profile_sha256": "8b0d25197d835ffa0f8b2907feaa5e572257df84c1ea2b2c604afaa405903d0f"
+    },
+    {
+      "case_id": "hysteresis_u8_d0_c60__locked_test_recovery_v3",
+      "policy": "H",
+      "window": "locked_test_recovery_v3",
+      "horizon": 2100,
+      "prediction_id": "hysteresis_u8_d0_c60__locked_test_recovery_v3__cpu",
+      "physical_ids": [
+        "hysteresis_u8_d0_c60__locked_test_recovery_v3__r1",
+        "hysteresis_u8_d0_c60__locked_test_recovery_v3__r2",
+        "hysteresis_u8_d0_c60__locked_test_recovery_v3__r3"
+      ],
+      "startup_seconds": 33.4965864305,
+      "shutdown_seconds": 2.2241611765,
+      "input_sha256": "5a14e3ee94927e7a4e46a6d964b74ffbff4a3129e499f3eb9419cfb6af47f406",
+      "profile_sha256": "8b0d25197d835ffa0f8b2907feaa5e572257df84c1ea2b2c604afaa405903d0f"
+    },
+    {
+      "case_id": "hysteresis_u8_d0_c60__locked_test_steady_v3",
+      "policy": "H",
+      "window": "locked_test_steady_v3",
+      "horizon": 2100,
+      "prediction_id": "hysteresis_u8_d0_c60__locked_test_steady_v3__cpu",
+      "physical_ids": [
+        "hysteresis_u8_d0_c60__locked_test_steady_v3__r1",
+        "hysteresis_u8_d0_c60__locked_test_steady_v3__r2",
+        "hysteresis_u8_d0_c60__locked_test_steady_v3__r3"
+      ],
+      "startup_seconds": 33.4965864305,
+      "shutdown_seconds": 2.2241611765,
+      "input_sha256": "9f7a83381301732f960ef8f9f57bbb2a167c1491e56f3c562c5b748bd9f94633",
+      "profile_sha256": "8b0d25197d835ffa0f8b2907feaa5e572257df84c1ea2b2c604afaa405903d0f"
+    }
+  ]
+}

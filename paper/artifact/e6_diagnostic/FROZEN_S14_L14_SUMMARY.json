@@ -1,0 +1,90 @@
+{
+  "S14": {
+    "feasibility": {
+      "accept_feasible": 4,
+      "false_pass": 4,
+      "block_infeasible": 0,
+      "false_block": 0,
+      "correct": 4,
+      "denominator": 8,
+      "planned_denominator": 8,
+      "actual_feasible_denominator": 4,
+      "actual_infeasible_denominator": 4,
+      "false_accept_rate": 1.0,
+      "false_reject_rate": 0.0
+    },
+    "per_window": {
+      "bridge_locked_test_recovery_v1": {
+        "valid_policy_cells": 4,
+        "planned_policy_cells": 4,
+        "means": {
+          "occupied_absolute_error_gpu_seconds": 526.3493380547495,
+          "scenario_cost_absolute_error": 0.47747008805474933,
+          "occupied_trajectory_l1_gpu_seconds": 1260.6628670644996,
+          "target_disagreement_fraction": 0.4253571428571429
+        }
+      },
+      "bridge_locked_test_steady_v1": {
+        "valid_policy_cells": 4,
+        "planned_policy_cells": 4,
+        "means": {
+          "occupied_absolute_error_gpu_seconds": 320.35209118799975,
+          "scenario_cost_absolute_error": 0.34361859118799953,
+          "occupied_trajectory_l1_gpu_seconds": 838.3896119712497,
+          "target_disagreement_fraction": 0.3114285714285714
+        }
+      }
+    },
+    "equal_window_means": {
+      "occupied_absolute_error_gpu_seconds": 423.35071462137466,
+      "scenario_cost_absolute_error": 0.41054433962137443,
+      "occupied_trajectory_l1_gpu_seconds": 1049.5262395178747,
+      "target_disagreement_fraction": 0.36839285714285713
+    },
+    "population": "full_8_policy_cells"
+  },
+  "L14": {
+    "feasibility": {
+      "accept_feasible": 4,
+      "false_pass": 0,
+      "block_infeasible": 4,
+      "false_block": 0,
+      "correct": 8,
+      "denominator": 8,
+      "planned_denominator": 8,
+      "actual_feasible_denominator": 4,
+      "actual_infeasible_denominator": 4,
+      "false_accept_rate": 0.0,
+      "false_reject_rate": 0.0
+    },
+    "per_window": {
+      "bridge_locked_test_recovery_v1": {
+        "valid_policy_cells": 4,
+        "planned_policy_cells": 4,
+        "means": {
+          "occupied_absolute_error_gpu_seconds": 36.0676500890001,
+          "scenario_cost_absolute_error": 0.03778340008900005,
+          "occupied_trajectory_l1_gpu_seconds": 280.9510114107498,
+          "target_disagreement_fraction": 0.09690476190476191
+        }
+      },
+      "bridge_locked_test_steady_v1": {
+        "valid_policy_cells": 4,
+        "planned_policy_cells": 4,
+        "means": {
+          "occupied_absolute_error_gpu_seconds": 100.85051248325027,
+          "scenario_cost_absolute_error": 0.09581351248325032,
+          "occupied_trajectory_l1_gpu_seconds": 395.3570872167498,
+          "target_disagreement_fraction": 0.15785714285714286
+        }
+      }
+    },
+    "equal_window_means": {
+      "occupied_absolute_error_gpu_seconds": 68.45908128612518,
+      "scenario_cost_absolute_error": 0.06679845628612519,
+      "occupied_trajectory_l1_gpu_seconds": 338.1540493137498,
+      "target_disagreement_fraction": 0.12738095238095237
+    },
+    "population": "full_8_policy_cells"
+  }
+}

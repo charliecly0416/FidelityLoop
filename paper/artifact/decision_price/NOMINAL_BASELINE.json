@@ -1,0 +1,260 @@
+{
+  "status": "RETROSPECTIVE_DIRECTION_PRECHECK",
+  "scope": "Known recorded candidate pools, one selected policy per campaign/model; no new algorithm, GPU execution, independent workload or prospective policy selection.",
+  "rows": [
+    {
+      "campaign": "E2",
+      "model": "C",
+      "candidates": 5,
+      "windows": 2,
+      "predicted_cost_minimizers": [
+        "ppo_C30_raw"
+      ],
+      "tie_at_released_data_precision": false,
+      "minimizing_set_all_repeats_feasible": {
+        "ppo_C30_raw": true
+      },
+      "selected_policy": "ppo_C30_raw",
+      "best_observed_feasible_policy": "ppo_C30_raw",
+      "selected_all_repeats_feasible": true,
+      "cost_regret_scenario_usd": 0.0,
+      "physical_passes": 6,
+      "physical_runs": 6,
+      "selected_actual_cost": 2.0769311663855,
+      "best_observed_feasible_cost": 2.0769311663855
+    },
+    {
+      "campaign": "E2",
+      "model": "C30",
+      "candidates": 5,
+      "windows": 2,
+      "predicted_cost_minimizers": [
+        "ppo_C_r2"
+      ],
+      "tie_at_released_data_precision": false,
+      "minimizing_set_all_repeats_feasible": {
+        "ppo_C_r2": false
+      },
+      "selected_policy": "ppo_C_r2",
+      "best_observed_feasible_policy": "ppo_C30_raw",
+      "selected_all_repeats_feasible": false,
+      "cost_regret_scenario_usd": null,
+      "physical_passes": 0,
+      "physical_runs": 6,
+      "selected_actual_cost": 2.8397916987188334
+    },
+    {
+      "campaign": "E3",
+      "model": "C",
+      "candidates": 6,
+      "windows": 2,
+      "predicted_cost_minimizers": [
+        "C30_s105_e0065"
+      ],
+      "tie_at_released_data_precision": false,
+      "minimizing_set_all_repeats_feasible": {
+        "C30_s105_e0065": true
+      },
+      "selected_policy": "C30_s105_e0065",
+      "best_observed_feasible_policy": "C30_s105_e0035",
+      "selected_all_repeats_feasible": true,
+      "cost_regret_scenario_usd": 0.05099993383224999,
+      "physical_passes": 4,
+      "physical_runs": 4,
+      "selected_actual_cost": 1.94232493149625,
+      "best_observed_feasible_cost": 1.891324997664
+    },
+    {
+      "campaign": "E3",
+      "model": "C30",
+      "candidates": 6,
+      "windows": 2,
+      "predicted_cost_minimizers": [
+        "C30_s105_e0035"
+      ],
+      "tie_at_released_data_precision": false,
+      "minimizing_set_all_repeats_feasible": {
+        "C30_s105_e0035": true
+      },
+      "selected_policy": "C30_s105_e0035",
+      "best_observed_feasible_policy": "C30_s105_e0035",
+      "selected_all_repeats_feasible": true,
+      "cost_regret_scenario_usd": 0.0,
+      "physical_passes": 4,
+      "physical_runs": 4,
+      "selected_actual_cost": 1.891324997664,
+      "best_observed_feasible_cost": 1.891324997664
+    },
+    {
+      "campaign": "E4",
+      "model": "C",
+      "candidates": 6,
+      "windows": 2,
+      "predicted_cost_minimizers": [
+        "C30_s105_e0035"
+      ],
+      "tie_at_released_data_precision": false,
+      "minimizing_set_all_repeats_feasible": {
+        "C30_s105_e0035": true
+      },
+      "selected_policy": "C30_s105_e0035",
+      "best_observed_feasible_policy": "hysteresis_u8_d0_c60__guard",
+      "selected_all_repeats_feasible": true,
+      "cost_regret_scenario_usd": 0.6978032484090002,
+      "physical_passes": 4,
+      "physical_runs": 4,
+      "selected_actual_cost": 1.881424444437,
+      "best_observed_feasible_cost": 1.1836211960279999
+    },
+    {
+      "campaign": "E4",
+      "model": "C30",
+      "candidates": 6,
+      "windows": 2,
+      "predicted_cost_minimizers": [
+        "hysteresis_u8_d0_c60__guard"
+      ],
+      "tie_at_released_data_precision": false,
+      "minimizing_set_all_repeats_feasible": {
+        "hysteresis_u8_d0_c60__guard": true
+      },
+      "selected_policy": "hysteresis_u8_d0_c60__guard",
+      "best_observed_feasible_policy": "hysteresis_u8_d0_c60__guard",
+      "selected_all_repeats_feasible": true,
+      "cost_regret_scenario_usd": 0.0,
+      "physical_passes": 4,
+      "physical_runs": 4,
+      "selected_actual_cost": 1.1836211960279999,
+      "best_observed_feasible_cost": 1.1836211960279999
+    },
+    {
+      "campaign": "E4",
+      "model": "C_sg",
+      "candidates": 6,
+      "windows": 2,
+      "predicted_cost_minimizers": [
+        "hysteresis_u8_d0_c60__guard"
+      ],
+      "tie_at_released_data_precision": false,
+      "minimizing_set_all_repeats_feasible": {
+        "hysteresis_u8_d0_c60__guard": true
+      },
+      "selected_policy": "hysteresis_u8_d0_c60__guard",
+      "best_observed_feasible_policy": "hysteresis_u8_d0_c60__guard",
+      "selected_all_repeats_feasible": true,
+      "cost_regret_scenario_usd": 0.0,
+      "physical_passes": 4,
+      "physical_runs": 4,
+      "selected_actual_cost": 1.1836211960279999,
+      "best_observed_feasible_cost": 1.1836211960279999
+    },
+    {
+      "campaign": "E5",
+      "model": "C",
+      "candidates": 4,
+      "windows": 3,
+      "predicted_cost_minimizers": [
+        "ppo_C_s101"
+      ],
+      "tie_at_released_data_precision": false,
+      "minimizing_set_all_repeats_feasible": {
+        "ppo_C_s101": true
+      },
+      "selected_policy": "ppo_C_s101",
+      "best_observed_feasible_policy": "hysteresis_u8_d0_c60__guard",
+      "selected_all_repeats_feasible": true,
+      "cost_regret_scenario_usd": 1.05003307473,
+      "physical_passes": 6,
+      "physical_runs": 6,
+      "selected_actual_cost": 2.1655027724678333,
+      "best_observed_feasible_cost": 1.1154696977378333
+    },
+    {
+      "campaign": "E5",
+      "model": "C30",
+      "candidates": 4,
+      "windows": 3,
+      "predicted_cost_minimizers": [
+        "hysteresis_u8_d0_c60__guard"
+      ],
+      "tie_at_released_data_precision": false,
+      "minimizing_set_all_repeats_feasible": {
+        "hysteresis_u8_d0_c60__guard": true
+      },
+      "selected_policy": "hysteresis_u8_d0_c60__guard",
+      "best_observed_feasible_policy": "hysteresis_u8_d0_c60__guard",
+      "selected_all_repeats_feasible": true,
+      "cost_regret_scenario_usd": 0.0,
+      "physical_passes": 6,
+      "physical_runs": 6,
+      "selected_actual_cost": 1.1154696977378333,
+      "best_observed_feasible_cost": 1.1154696977378333
+    },
+    {
+      "campaign": "E5",
+      "model": "C_sg",
+      "candidates": 4,
+      "windows": 3,
+      "predicted_cost_minimizers": [
+        "hysteresis_u8_d0_c60",
+        "hysteresis_u8_d0_c60__guard"
+      ],
+      "tie_at_released_data_precision": true,
+      "minimizing_set_all_repeats_feasible": {
+        "hysteresis_u8_d0_c60": true,
+        "hysteresis_u8_d0_c60__guard": true
+      },
+      "selected_policy": "hysteresis_u8_d0_c60",
+      "best_observed_feasible_policy": "hysteresis_u8_d0_c60__guard",
+      "selected_all_repeats_feasible": true,
+      "cost_regret_scenario_usd": 0.0034554988683332954,
+      "physical_passes": 6,
+      "physical_runs": 6,
+      "selected_actual_cost": 1.1189251966061666,
+      "best_observed_feasible_cost": 1.1154696977378333
+    },
+    {
+      "campaign": "E6",
+      "model": "L14",
+      "candidates": 2,
+      "windows": 2,
+      "predicted_cost_minimizers": [
+        "hysteresis_u8_d0_c60__guard"
+      ],
+      "tie_at_released_data_precision": false,
+      "minimizing_set_all_repeats_feasible": {
+        "hysteresis_u8_d0_c60__guard": true
+      },
+      "selected_policy": "hysteresis_u8_d0_c60__guard",
+      "best_observed_feasible_policy": "hysteresis_u8_d0_c60__guard",
+      "selected_all_repeats_feasible": true,
+      "cost_regret_scenario_usd": 0.0,
+      "physical_passes": 4,
+      "physical_runs": 4,
+      "selected_actual_cost": 1.6018804510532498,
+      "best_observed_feasible_cost": 1.6018804510532498
+    },
+    {
+      "campaign": "E6",
+      "model": "S14",
+      "candidates": 2,
+      "windows": 2,
+      "predicted_cost_minimizers": [
+        "hysteresis_u8_d0_c60",
+        "hysteresis_u8_d0_c60__guard"
+      ],
+      "tie_at_released_data_precision": true,
+      "minimizing_set_all_repeats_feasible": {
+        "hysteresis_u8_d0_c60": false,
+        "hysteresis_u8_d0_c60__guard": true
+      },
+      "selected_policy": "hysteresis_u8_d0_c60",
+      "best_observed_feasible_policy": "hysteresis_u8_d0_c60__guard",
+      "selected_all_repeats_feasible": false,
+      "cost_regret_scenario_usd": null,
+      "physical_passes": 0,
+      "physical_runs": 4,
+      "selected_actual_cost": 1.5148674046219999
+    }
+  ]
+}
