@@ -1,0 +1,49 @@
+{
+  "models": {
+    "O": "Share",
+    "C": "Lookup-69",
+    "C30": "Lookup-30",
+    "E": "Local",
+    "V": "Legacy-refit",
+    "S14": "14B-Hist",
+    "L14": "14B-Local",
+    "T30-14": "14B-30",
+    "C_sg": "Lookup-SG",
+    "V_prime": "Local-refit"
+  },
+  "policies": {
+    "C-1": "PPO-1",
+    "C-2": "PPO-2",
+    "C30-1": "PPO-3",
+    "C30-2": "PPO-4",
+    "C30-3": "PPO-5",
+    "N1": "PPO-6",
+    "N2": "PPO-7",
+    "N3": "PPO-8",
+    "N4": "PPO-9",
+    "N5": "PPO-10",
+    "N6": "PPO-11",
+    "PPO-C": "PPO-12",
+    "PPO-C30": "PPO-4"
+  },
+  "studies": {
+    "V3": "Held-out",
+    "V4": "External validity",
+    "Bridge": "Mixed-policy",
+    "E1": "Same-runtime",
+    "E2": "Deployment",
+    "E3": "Screening",
+    "E4": "Engine",
+    "E5": "Arrivals",
+    "E6": "14B",
+    "W1": "Controllers",
+    "W2": "Llama",
+    "W3": "Refit",
+    "W4-L": "Azure thinned",
+    "W4": "Azure full"
+  },
+  "note": "Display aliases only. Original file names, source IDs, statistical groups and frozen evidence are unchanged. Bridge PPO-C30 and E2 C30-2 share a checkpoint; their runtimes and outcomes remain separate.",
+  "contextual_models": {
+    "Azure archive E": "Earlier-local"
+  }
+}

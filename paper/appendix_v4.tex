@@ -1,14 +1,14 @@
-\section{V4 identity and evidence ledger}
-The V4 source records supplement, rather than replace, the 36 frozen V3 runs.
+\section{External-validity evidence ledger}
+The external-validity source records supplement, rather than replace, the 36 frozen held-out runs.
 Table~\ref{tab:coverage} distinguishes new execution, historical reuse, and gate
-roles. All 93 accepted identities are included once; the full-strength W4's
-18 gate-stopped policy cells are not counted as executions. W4-L's p075 and p050
+roles. All 93 accepted identities are included once; the full-strength Azure load study's
+18 gate-stopped policy cells are not counted as executions. The thinned-Azure study's p075 and p050
 gate batches are qualification evidence, not additional policy repeats.
 
 \begin{table*}[t]
 \centering
 \small
-\caption{V4 coverage and strict qualification. W4-L p050 fresh contains
+\caption{External-validity coverage and strict qualification. The thinned-Azure study p050 fresh contains
 all four policies; its 15/24 total must not replace their per-policy counts.}
 \label{tab:coverage}
 \par\vspace{4pt}
@@ -26,13 +26,13 @@ completed without censoring or missing work. Offline counts use each input's
 actual expected denominator; formal comparison windows here contain 120 jobs,
 whereas development windows may contain a different count or none.
 
-The generated V4 rows are bound to the CPU closeout's
+The generated external-validity rows are bound to the CPU closeout's
 \path{paper_data/TABLE_MANIFEST.json}, \path{run_metrics.csv},
 \path{window_summary.csv}, \path{equal_window_summary.csv}, and
 \path{w4l_pairs.csv}. The source root is
 \path{artifacts/max_optimization_v4_20260923/cpu_closeout_20260927/}.
 Repeated requests in these CSVs are evidence about a run, not independent
-replications. V3's P2 uses the equal average of within-window ratios; the W4-L
+replications. The held-out study's P2 uses the equal average of within-window ratios; the thinned-Azure study
 headline instead uses a ratio of equal-window means. The two statistics are
 reported under their own definitions and are not numerically pooled.
 
@@ -44,7 +44,7 @@ $\in\{120,300,600\}$ seconds. B-PRED uses Holt level/trend updates with
 $\alpha\in\{0.2,0.4,0.6\}$, $\beta\in\{0.1,0.3,0.5\}$, horizon
 $\in\{60,120,300\}$ seconds, and margin $\in\{0,1,2\}$ (81 candidates).
 B-MMC's utilization ceiling is drawn from $\{0.70,0.80,0.85,0.90\}$. Its
-service lookup is shared with E to isolate the target rule; this does not provide
+service lookup is shared with Local to isolate the target rule; this does not provide
 future information or make it an oracle. Development ranking places feasibility
 before equal-window cost; the preregistered center is retained if a family has
 no qualifying candidate. None of the three formal arms includes the guard.
@@ -62,15 +62,15 @@ to $[t-60,t)$ and checks the same three centers. It performs no grid search and
 reads no formal or locked-test outcome; it is semantic validation, not retuning.
 
 The runtime continuation is a comparability limitation, not an exclusion rule.
-Historical W1 cells 001/002 and continuation r14 remain in the nine-per-arm
-denominators. Baseline-versus-V3 comparisons are descriptive; their repeat indices
+Historical alternative-controller cells 001/002 and continuation r14 remain in the nine-per-arm
+denominators. Comparisons with the held-out study are descriptive; their repeat indices
 do not establish randomized pairing, and request-level resampling would not
 correct the confound.
 
 \begin{table}[t]
 \centering
 \small
-\caption{W1 online end-to-end p99 latency (seconds): minimum--maximum
+\caption{Alternative-controller online end-to-end p99 latency (seconds): minimum--maximum
 of the three completed-request per-run quantiles. These are repeat ranges, not
 confidence intervals or pooled request quantiles.}
 \label{tab:w1latency}
@@ -101,14 +101,14 @@ Intensity & front & back & strict & action\\
 \input{generated/v4_gate_rows.tex}
 \end{tabular*}
 \end{table}
-W2 H recovery cells 042/043 each contain 116 completed jobs out of the original
+The Llama study H recovery cells 042/043 each contain 116 completed jobs out of the original
 120; four unfinished jobs per cell remain in the denominator. Guard recovery
 cell 049/r2 completes 120 but has only 119 timely jobs. These facts explain why
 24/24 technical validity, 23/24 historical scientific acceptance, and 21/24
-strict qualification are not contradictory. W2-P is not established by a
+strict qualification are not contradictory. The Llama guard-feasibility criterion is not established by a
 technical or historical aggregate pass.
 
-For W4, the full-strength all2 gate stops the policy matrix after six scientific
+For the Azure load study, the full-strength all2 gate stops the policy matrix after six scientific
 failures. The p075 amendment gate also fails, despite eventual completion of all
 offline work. The first feasible p050 gate permits, but does not substitute for,
 24 fresh executions. In those fresh records H front/r1 and front/r3 each leave
@@ -122,7 +122,7 @@ The Azure input is the conversation CSV at immutable repository commit
 \path{2f1e5b666d4e3055fdbba98598ce2ec307767b9064e03e2fa46676dbcc7d0bf8}.
 Its three columns are timestamp, context tokens, and generated tokens; only
 timestamps construct the replay arrivals. The code trace is archived but not
-substituted. The W4-L integer-SHA rule preserves the parent source row and
+substituted. The thinned-Azure integer-SHA rule preserves the parent source row and
 timestamp of every retained online arrival and keeps the offline stream unchanged.
 Thus p050 means a locked online inclusion intensity, not half the offline work
 or a rescaled time axis. Neither p050 nor the unused optional p025 is a new
@@ -132,14 +132,14 @@ Independent CPU checks regenerate inputs and request metrics from raw records,
 and bind worker events to request identity and lifecycle generations. The
 supplemental provenance package closes the three missing original-source links;
 its isolated replay test suite passes 107 tests. This is verification of the
-available artifact, not new GPU evidence. The original V3 convenience-snapshot
+available artifact, not new GPU evidence. The original held-out convenience-snapshot
 warning remains historical and is not silently rewritten.
 
 \subsection{Time-segment cost accounting}
 \begin{table}[t]
 \centering
 \small
-\caption{W4-L 0.50 fresh comparison. Equal-window means preserve all three
+\caption{Thinned-Azure study 0.50 fresh comparison. Equal-window means preserve all three
 repeats in each window. Only all2 and H+guard qualify strictly in all six runs.
 Costs are scenario USD, not measured provider bills.}
 \label{tab:w4l}
@@ -155,7 +155,7 @@ Policy & strict & occupied & window & deployment\\
 \begin{table}[t]
 \centering
 \small
-\caption{W4-L p050 fresh equal-window segment means. Costs are scenario
+\caption{Thinned-Azure study p050 fresh equal-window segment means. Costs are scenario
 USD; occupied time is GPU seconds. The final 600 seconds supply about 81.96\%
 of guard's absolute whole-window saving against all2.}
 \label{tab:segments}
@@ -177,8 +177,8 @@ claims that every non-source second is empty or that the entire last 600
 seconds represent a production steady state.
 
 \section{CPU model evidence}
-\subsection{W2: within-model gates and common support}
-The accepted W2 analysis aligns 48 $O_x/E_x$ predictions with 24 physical
+\subsection{Llama: within-model gates and common support}
+The Llama analysis aligns 48 $O_x/E_x$ predictions with 24 physical
 sources. It preserves the six historical all2 identities exactly once. Both
 models are derived from development calibration only: $O_x$ uses a cell median
 and $E_x$ a cell maximum. The simulator consumes the two-GPU aggregate lookup,
@@ -197,8 +197,8 @@ and $N$ includes all online and offline arrivals. $Q$ is the integrated
 released-but-undispatched queue in request seconds. Unfinished jobs remain in
 $N$ and contribute queue time while queued up to cutoff. Losses are averaged
 over repeats within each window and then equally across windows, not over
-pooled requests or matched-local support. The W3 development horizon is 900 s.
-This prediction-error objective is distinct from monetary scenario cost. The W2 main
+pooled requests or matched-local support. The bounded-refit development horizon is 900 s.
+This prediction-error objective is distinct from monetary scenario cost. The Llama main
 gate is $L$ reduction $\geq20\%$ on H together with per-window occupied
 MAE $\leq O_x+21$ GPU seconds. The inherited occupied-improvement threshold is
 a separate diagnostic, not an alternative route to a pass.
@@ -206,7 +206,7 @@ a separate diagnostic, not an alternative route to a pass.
 \begin{table}[t]
 \centering
 \small
-\caption{W2 fixed-H model error; $O_x$ and $E_x$ have the same values at the
+\caption{Llama fixed-H model error; $O_x$ and $E_x$ have the same values at the
 shown precision. Each window first averages its two physical repeats.}
 \label{tab:w2model}
 \par\vspace{4pt}
@@ -244,8 +244,8 @@ scientific negative result. Evidence resides in \path{w2/decisions.json},
 \path{w2/prediction_errors.csv}, \path{w2/route_confusion.csv}, and
 \path{w2/target_comparison.csv} under the CPU closeout root stated above.
 
-\subsection{W3: bounded refit and an unmet improvement gate}
-The W3 development bundle contains a preformal drift record and two historical
+\subsection{Bounded lifecycle refit}
+The bounded-refit development bundle contains a preformal drift record and two historical
 Qwen engineering canaries (sparse and recovery), each with one observation.
 Their model bytes, engine configuration, and platform match the frozen formal
 deployment. The canaries contain 41 and 1440 ordinary completed GPU service
@@ -254,20 +254,20 @@ from formal IDs. These dynamic records are not independent fixed-concurrency
 experiments or additional formal repeats.
 
 A nine-cell grid varies startup by $0.9/1.0/1.1$ and shutdown by
-$0.8/1.0/1.2$ around E, subject to preformal observed floors of 24.958327 and
+$0.8/1.0/1.2$ around Local, subject to preformal observed floors of 24.958327 and
 1.897256 seconds. The development loss uses the same dimensionless definition
 above at its 900-second horizon, then averages the two windows equally. The
-selected $V'$ has startup 30.146928 seconds and shutdown 2.224161 seconds;
-only startup differs numerically from E. Setup, the service lookup, policy,
-guard model E, and all guard safety settings remain frozen. Prepare, fit, and
+selected Local-refit has startup 30.146928 seconds and shutdown 2.224161 seconds;
+only startup differs numerically from Local. Setup, the service lookup, policy,
+guard model Local, and all guard safety settings remain frozen. Prepare, fit, and
 evaluate locks are ordered and hash-bound; formal target/event/occupied values
-do not enter selection. Nevertheless, the prior V3 aggregate outcomes were
+do not enter selection. Nevertheless, the prior held-out aggregate outcomes were
 already known, so the procedure cannot be described as a new blind study.
 
 \begin{table}[t]
 \centering
 \small
-\caption{W3 fixed-H replay. Each window averages three physical repeats;
+\caption{Bounded-refit fixed-H replay. Each window averages three physical repeats;
 occupied MAE is in GPU seconds. Steady $L$ worsens. All occupied safety lines
 pass, but the equal-window improvement of 5.02\% misses the 10\% gate.}
 \label{tab:w3model}
@@ -275,7 +275,7 @@ pass, but the equal-window improvement of 5.02\% misses the 10\% gate.}
 \par\vspace{4pt}
 \begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}lrrrr@{}}
 \toprule
-Window & E $L$ & $V'$ $L$ & E occupied & $V'$ occupied\\
+Window & Local $L$ & \shortstack{Local-refit\\$L$} & \shortstack{Local\\occupied} & \shortstack{Local-refit\\occupied}\\
 \midrule
 steady & 0.012390 & 0.014516 & 66.34 & 70.67\\
 recovery & 0.012889 & 0.010865 & 66.95 & 66.95\\
@@ -286,11 +286,11 @@ burst-offline & 0.015303 & 0.013164 & 70.55 & 70.55\\
 
 All 36 accepted formal identities enter evaluation. Twelve unique deterministic
 replays per model are compared with the physical repeats, producing 72
-model-by-run error records; these are not 72 new executions. E's summary,
-requests, and events exactly reproduce all 12 frozen V3 prediction groups.
-The primary fixed-H equal-window loss is 0.0135273755 for E and 0.0128485693
-for $V'$, a reduction of 5.018019\%. The conjunctive improvement-and-safety
-gate therefore fails despite three passing $E+21$ safety checks. Guard's
+model-by-run error records; these are not 72 new executions. Local's summary,
+requests, and events exactly reproduce all 12 frozen held-out study prediction groups.
+The primary fixed-H equal-window loss is 0.0135273755 for Local and 0.0128485693
+for Local-refit, a reduction of 5.018019\%. The conjunctive improvement-and-safety
+gate therefore fails despite three passing $\text{Local}+21$ safety checks. Guard's
 4.073089\% reduction is descriptive and cannot replace the primary H result;
 all1/all2 are unchanged.
 

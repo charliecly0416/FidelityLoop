@@ -23,7 +23,7 @@ are excluded. Each campaign retains its own workload, runtime and price contract
 Costs are scenario USD; a dash excludes an infeasible selection from the
 feasible-cost comparison. P1+ counts repeated physical executions, not independent
 choices. $\dagger$ marks a prediction-cost tie between H and H+guard, resolved
-by archived ID to H. E5's two tied policies are physically feasible; E6's H
+by archived ID to H. The arrival study's two tied policies are physically feasible; the 14B study's H
 fails whereas H+guard passes.}
 \label{tab:decisionutility}
 \par\vspace{4pt}
@@ -31,23 +31,23 @@ fails whereas H+guard passes.}
 \toprule
 Study & Replay & Selected policy & Physical P1+ & Observed cost & Feasible cost gap (\%)\\
 \midrule
-\input{artifact/decision_utility/table_rows.tex}
+\input{generated/decision_utility_rows.tex}
 \end{tabular*}
 \end{table*}
 
 Table~\ref{tab:decisionutility} makes the practical consequences explicit.
-E2's C30 has a unique cost-minimizing candidate that fails every physical
-repeat. In E4 and E5, C excludes H+guard, the lowest-cost feasible policy
+The deployment study's Lookup-30 has a unique cost-minimizing candidate that fails every physical
+repeat. In the engine study and the arrival study, Lookup-69 excludes H+guard, the lowest-cost feasible policy
 in those measured pools; its chosen policies cost 58.95\% and 94.13\% more,
-respectively. C30 selects H+guard in both. These are opportunity costs under
+respectively. Lookup-30 selects H+guard in both. These are opportunity costs under
 the declared synthetic-API ledger, not commercial savings attributed to a
-new optimizer. E5's C$_{\rm sg}$ ties H and H+guard in prediction; their
+new optimizer. The arrival study's Lookup-SG ties H and H+guard in prediction; their
 0.31\% observed cost difference is descriptive and does not establish a
-reliable ranking. E6's S14 also ties these policies, so a failing choice is
+reliable ranking. The 14B study's 14B-Hist also ties these policies, so a failing choice is
 possible under the stated rule rather than inevitable under every tie-break.
 
-The candidate pools contain five, six, six, four and two policies in E2--E6,
-respectively. E3 therefore compares its six physically evaluated checkpoints,
+The candidate pools contain five, six, six, four and two policies in deployment, screening, engine, arrival, and 14B studies,
+respectively. The screening study therefore compares its six physically evaluated checkpoints,
 not all 90 screened candidates. This reanalysis adds no physical run or
 prospective selection test and does not choose a universally preferred replay
 model. The source bundle's \path{artifact/decision_utility/} reconstructs the
@@ -76,16 +76,15 @@ ID order selects H, but H+guard is also a minimizer.}
 \toprule
 Study & Replay & Selected policies & Feasible price cells & Cost gap range (\%)\\
 \midrule
-\input{artifact/decision_price/table_rows.tex}
+\input{generated/decision_price_rows.tex}
 \end{tabular*}
 \end{table*}
 
-E2's C30 uniquely selects the failing C-2 throughout the grid. E4 and E5's C
-selections remain feasible but costlier than the tested feasible minimum.
-E2's C and both E3 predictors change their choices with prices, confirming that
+The deployment study's Lookup-30 uniquely selects the failing PPO-2 throughout the grid. Lookup-69 selections in the engine and arrival studies remain feasible but costlier than the tested feasible minimum.
+The deployment study's Lookup-69 and both screening predictors change their choices with prices, confirming that
 the analysis reselects policies rather than simply repricing a fixed choice.
-The E5 and E6 ties persist throughout: E5's small H/guard cost difference does
-not establish a reliable ranking, and E6's failing choice depends on the
+The arrival study and 14B ties persist throughout: the arrival study's small H/guard cost difference does
+not establish a reliable ranking, and the 14B study's failing choice depends on the
 tie-break. The source bundle's \path{artifact/decision_price/} retains every
 price point, source-bound cost component, and selection, and exactly recovers
 the nominal-price results above. Fixed-event repricing does not model policies

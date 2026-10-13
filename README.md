@@ -4,7 +4,7 @@
 
 FidelityLoop is the research artifact accompanying the paper *FidelityLoop: Closed-Loop Validation of Elastic LLM-Serving Policies*. It connects replay predictions, policy decisions, lifecycle events, request identities, and deadline-aware cost accounting. The public CPU package supports interface checks, fixed-input replay, and result recomputation; the physical campaign reported in the paper was run separately on two NVIDIA A100 GPUs.
 
-Current paper: [main PDF](paper/main.pdf) · [supplement](paper/supplement.pdf) · [Overleaf ZIP](https://github.com/charliecly0416/FidelityLoop/releases/download/paper-v8r14-20261013/FidelityLoop_Overleaf_v8r14_20261013.zip).
+Current paper: [main PDF](paper/main.pdf) · [supplement](paper/supplement.pdf) · [Overleaf ZIP](https://github.com/charliecly0416/FidelityLoop/releases/download/paper-v8r15-20261013/FidelityLoop_Overleaf_v8r15_20261013.zip).
 
 ## What is included
 
@@ -43,13 +43,16 @@ backend. [CPU replay instructions](cpu_replay/README.md) regenerate the existing
 standard-library checks against 36 recorded physical runs. These retrospective
 predictions do not increase the original 197/239/555 corpus counts.
 
+Reader-facing model, study and checkpoint names are mapped to the unchanged
+archive IDs in [DISPLAY_NAMES.json](paper/DISPLAY_NAMES.json) and the supplement.
+
 ## Rebuilding the paper
 
 The anonymous main entry point is `paper/main.tex`; the independent supplement is `paper/supplement.tex`. The checked-in PDFs were built with the included MLSys style files. Compile from the `paper/` directory with pdfLaTeX and BibTeX. The source uses the anonymous author and facility placeholders required for review; authors should fill those only for a non-anonymous version.
 
 ## Evidence and scope
 
-`evidence/E2_PREDICTION_RECHECK.json` records the locked comparison: model C agrees with the physical feasibility outcome on 32/32 cells, while C30 agrees on 20/32. `evidence/E2_RESULTS_32.csv` and `evidence/E2_CONTINUOUS_32_RESULTS.json` contain the compact per-cell result ledger. The original archive hash is retained in `evidence/E2_RESULTS_MANIFEST.json`; the original archive is not required to run the public CPU checks.
+`evidence/E2_PREDICTION_RECHECK.json` records the locked comparison: Lookup-69 (archive C) agrees with the physical feasibility outcome on 32/32 cells, while Lookup-30 (archive C30) agrees on 20/32. `evidence/E2_RESULTS_32.csv` and `evidence/E2_CONTINUOUS_32_RESULTS.json` contain the compact per-cell result ledger. The original archive hash is retained in `evidence/E2_RESULTS_MANIFEST.json`; the original archive is not required to run the public CPU checks.
 
 `evidence/E3_SCREENING_EVIDENCE.json` records the follow-up: six new checkpoints all pass their four physical runs, including three rejected by C. Across 24 policy cells, C/C30 feasibility agreement is 18/24 and 24/24, and cost MAE is 0.3112/0.0163 scenario USD. E3 uses separate window allocations; it is not pooled with E2 and does not establish a generally superior screening model.
 

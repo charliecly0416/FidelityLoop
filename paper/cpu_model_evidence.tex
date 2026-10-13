@@ -12,17 +12,17 @@ basis. This service-subset result does not establish whole-stream or controller
 fidelity; the supplement reports coverage and target disagreement separately.
 
 \subsection{Same-environment lifecycle refit}
-W3 asks whether a bounded same-environment refit resolves the original V--E
-comparison's environment caveat. It selects $V'$ by loss on two preformal
+The bounded-refit study asks whether a bounded same-environment refit resolves the original Legacy-refit--Local
+comparison's environment caveat. It selects Local-refit by loss on two preformal
 development canaries; a separate preformal drift probe constrains lifecycle
 lower bounds. It freezes the model before CPU replay and evaluates all
 36 existing physical records without new GPU runs. On fixed H, equal-window
 $L$ falls from 0.01352738 to 0.01284857, a 5.02\% reduction below the registered
 10\% threshold, while every window satisfies the occupied-MAE safety line
-$V'\leq E+21$. Steady-window $L$ worsens despite the aggregate reduction.
+$\text{Local-refit}\leq\text{Local}+21$. Steady-window $L$ worsens despite the aggregate reduction.
 The result is a scientific negative, not evidence that refitting has no effect.
 Only lifecycle scalars are eligible for fitting; service, setup, and guard
-safety remain fixed. The researchers already knew V3's aggregate results,
+safety remain fixed. The researchers already knew the held-out study's aggregate results,
 although the fitting code never consumed formal outcomes. This is a bounded
 retrospective replay, not a newly blinded experiment, and it does not erase the
-historical V--E caveat.
+historical Legacy-refit--Local caveat.

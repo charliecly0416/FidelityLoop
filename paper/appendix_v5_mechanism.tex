@@ -1,7 +1,7 @@
 \section{Retrospective lifecycle-trajectory diagnosis}
 \label{sec:v5-trajectories}
 This analysis reuses all nine accepted fixed-H physical runs and the twelve
-unique O/C/C30/E predictions from the frozen V3 evaluation: three windows,
+unique Share/Lookup-69/Lookup-30/Local predictions from the frozen held-out evaluation: three windows,
 three physical repeats per window, and four model comparisons per run.
 The resulting 36 pairings are not new experiments or independent prediction
 samples. We neither refit a model nor replace the original M1 endpoint.
@@ -35,12 +35,12 @@ dispatch evidence is a retrospective locator, not a time when both eventual
 routes were already known. Route differences need not follow target differences.
 
 \subsection{An endpoint discrepancy at the cooldown boundary}
-The frozen C/C30 configurations differ only in the startup endpoint.
+The frozen Lookup-69/Lookup-30 configurations differ only in the startup endpoint.
 Their first common starts and subsequent divergences are shown in
-Table~\ref{tab:v5-endpoints}. C30 becomes ready after 30 s, but targets stay
-equal until the 60 s cooldown expires. At that tick C remains starting;
+Table~\ref{tab:v5-endpoints}. Lookup-30 becomes ready after 30 s, but targets stay
+equal until the 60 s cooldown expires. At that tick Lookup-69 remains starting;
 its queue-plus-running pressure exceeds the strict up-threshold of eight,
-and its target rises from one to two. C30 is ready with lower pressure and
+and its target rises from one to two. Lookup-30 is ready with lower pressure and
 keeps target one. Both controllers have identical target/cooldown state
 before this decision; swapping the observed inputs swaps this one-step action.
 This diagnoses the frozen simulator contrast, not a new physical intervention
@@ -53,14 +53,14 @@ frozen safety-delay parameters are not intervened on here.
 \begin{table*}[t]
 \centering
 \small
-\caption{First C/C30 startup contrast in all three windows. Times are seconds
+\caption{First Lookup-69/Lookup-30 startup contrast in all three windows. Times are seconds
 from window start; pressure is queued plus locally running requests. The first
 target difference occurs at common start plus 60 s in each window.}
 \label{tab:v5-endpoints}
 \par\vspace{4pt}
 \begin{tabular*}{0.92\linewidth}{@{\extracolsep{\fill}}lrrrrr@{}}
 \toprule
-Window & Common start & C30 ready & C ready & First target difference & Pressure C/C30\\
+Window & Common start & \shortstack{Lookup-30\\ready} & \shortstack{Lookup-69\\ready} & \shortstack{First target\\difference} & \shortstack{Pressure\\Lookup-69/Lookup-30}\\
 \midrule
 \input{generated/v5_endpoint_rows.tex}
 \end{tabular*}
@@ -72,16 +72,16 @@ in target at $t=3$ s, before any window restart. At that tick the models
 observe no local running request while the physical controllers still do;
 completion observation has crossed a decision tick. These differences cannot
 be attributed to window-restart timing. Conversely, steady repeats 1 and 3 have exactly
-the same 2,100 targets as C30 despite 154 and 152 state-count difference
+the same 2,100 targets as Lookup-30 despite 154 and 152 state-count difference
 ticks, 48 and 45 route differences, and nonzero occupied-resource errors.
 Readiness error therefore does not necessarily change a target.
 
-The steady E total MAE is 66.34 GPU\,$\cdot$\,s, close to C30's 67.18,
+The steady Local total MAE is 66.34 GPU\,$\cdot$\,s, close to Lookup-30's 67.18,
 but its mean trajectory error is 1,390.50 versus 114.32 GPU\,$\cdot$\,s.
-The same E trace disagrees on 66.73\% of target ticks on average.
+The same Local trace disagrees on 66.73\% of target ticks on average.
 Accurate total occupation can thus hide substantial temporal mismatch;
 this diagnostic does not retroactively select a different model or alter M1.
-All C30 pairings retain nonzero occupation error. The largest C30 target
+All Lookup-30 pairings retain nonzero occupation error. The largest Lookup-30 target
 residual is burst repeat 2 (637/2100 ticks); its longest mismatch spans
 $[1020,1144)$ s. This example is selected by an explicitly post-hoc maximum
 residual rule after the full audit, alongside all no-target-change cases.
