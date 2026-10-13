@@ -1,20 +1,20 @@
-Elastic LLM-serving policies change the capacity on which their own queues
-and control decisions depend. Accurate request-time predictions therefore do
-not establish whether a policy will meet deadlines after deployment. We
-present FidelityLoop, a closed-loop validation framework that runs rules,
-a deadline guard, and replay-trained PPO policies through a shared interface.
-Request identities align service timing, resource trajectories, control actions,
-and deadline-aware costs across replay, vLLM, and SGLang execution.
-In 36 preregistered runs on two A100 GPUs, a calibrated replay model improves
-matched-request timing while worsening occupied-resource prediction.
-Startup--cooldown interactions explain altered actions; retrospective replay with a Vidur
-service backend also exposes timing errors hidden by aggregate agreement.
-Tests on frozen PPO checkpoints, additional arrivals, and a 14B port show
-that a startup proxy that detects failed policies in one context can reject
-feasible policies or accept failing ones in another. These errors have practical
-consequences: retrospective replay selection chooses a policy that fails all
-six physical repeats; in another tested pool, it selects a feasible policy
-costing 58.95\% more than the lowest-cost feasible alternative under the
-scenario ledger. FidelityLoop makes both policies and their evaluators
-testable against physical deadline and resource outcomes. We release paired traces from 197 physical runs
-and CPU analysis tools under an explicit resource and synthetic-API cost contract.
+Replay models guide the selection of elastic LLM-serving policies, but accurate
+request timing and aggregate resource estimates need not preserve deployment
+decisions. We present FidelityLoop, a closed-loop validation framework that
+tests policy feasibility and resource use across replay and physical execution.
+A shared policy interface and identity ledger align requests, lifecycle
+transitions, and control actions across replay, vLLM, and SGLang, with Vidur
+as an external service model. Measurements on two A100 GPUs and replay
+contrasts reveal two failure mechanisms: startup timing can cross a controller's
+cooldown boundary and alter subsequent actions, while resource errors can
+cancel in aggregate despite temporal misalignment. Tests with rule-based and
+replay-trained PPO policies show that a startup proxy can produce false
+rejections in one deployment context and false acceptances in another.
+These errors change policy selection: retrospective screening selects a
+candidate that fails all six physical repeats; in another tested pool, it
+selects a feasible candidate costing 58.95\% more than the lowest-cost feasible
+alternative under the scenario ledger. FidelityLoop connects these decision
+errors to execution traces and makes the validation process reusable. We
+release paired traces from 197 physical runs, CPU analysis tools, and a
+fixed-input Vidur replay package under an explicit resource and synthetic-API
+cost contract.

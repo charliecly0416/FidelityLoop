@@ -18,22 +18,25 @@ The framework makes this diagnostic process reusable.
 
 The paper makes three contributions:
 \begin{enumerate}[leftmargin=*]
-\item \textbf{A closed-loop evaluation framework.} FidelityLoop separates the policy
-adapter from lifecycle execution and aligns causal observations, request
-identities, lifecycle generations, resource trajectories, and deadline-aware
-cost ledgers. Its adapters connect rules and learned policies to vLLM and
-SGLang, and can substitute Vidur service predictions in replay. Aligned traces
-retain failed requests in deadline denominators.
-\item \textbf{A lifecycle-fidelity diagnosis.} Held-out physical runs distinguish
-local-service, aggregate-resource, and trajectory fidelity. Event-level
-comparisons explain a startup-related divergence and show why aggregate resource
-error is insufficient for a closed-loop evaluator.
-\item \textbf{A reproducible policy evaluation.} A deadline guard and frozen PPO
-checkpoints test feasibility and resource--latency trade-offs. Follow-up
-checkpoint, arrival, serving-stack, and model-size studies test the evaluator's
-transfer across contexts. Retrospective deployment choices quantify the
-consequences of false accepts and false rejects. We release paired prediction
-and execution traces with CPU analysis tools.
+\item \textbf{A reusable closed-loop validation framework.} FidelityLoop separates
+policy adapters from lifecycle execution and aligns causal observations,
+request identities, resource trajectories, and deadline-aware cost ledgers.
+Its adapters connect rules and learned policies to vLLM and SGLang, and
+substitute Vidur service predictions in replay. The shared contract makes
+policies and their evaluators testable against physical execution.
+\item \textbf{Mechanisms of replay-to-deployment disagreement.} Held-out physical
+runs distinguish service, aggregate-resource, and trajectory fidelity.
+Event-level analysis and controlled replay contrasts expose startup--cooldown
+interactions and cancellation in aggregate resource error, explaining why
+local accuracy need not preserve closed-loop behavior.
+\item \textbf{Decision consequences and reproducible evidence.} Retrospective
+policy selection connects false accepts and false rejects to failed deployments
+and higher costs within tested candidate pools. Rule-based and frozen PPO
+policies, additional arrivals, serving-stack changes, and a model-size port
+exercise the validation framework across contexts. A guard case study
+quantifies deadline protection and resource--latency trade-offs. We release
+paired traces and CPU tools for inspecting these outcomes and replaying the
+fixed Vidur-backed cases.
 \end{enumerate}
 The release provides CPU interface checks, a fixed-event cost verifier, and
 a paired trace corpus\footnote{\url{https://anonymous.4open.science/r/FidelityLoop-144B/}};
@@ -847,14 +850,14 @@ no general safety guarantee, as the Llama failure illustrates. The supplement
 retains technical-attempt history and detailed boundaries.
 
 \section{Conclusion}
-FidelityLoop provides a replayable contract for connecting elastic-serving policy
-decisions to lifecycle execution and resource/cost accounting. Service-time
-fit, aggregate occupation, and control trajectories reveal different errors;
-the framework validates them together.
+FidelityLoop connects replay-based policy selection to physical deadline and
+resource outcomes through a shared policy interface and aligned execution
+records. Its measurements and replay contrasts show how startup--cooldown
+interactions and temporally misplaced capacity can undermine deployment
+decisions despite accurate service or aggregate-resource estimates.
 
-The guard and frozen PPO checkpoints demonstrate how this contract evaluates
-deadline protection alongside resource and cost trade-offs. Tests on new
-checkpoints, arrivals, and serving contexts show why the evaluator itself
-needs validation: earlier agreement can give way to false rejections or false
-accepts. FidelityLoop makes both the policy and its evaluator testable against
-physical deadline and resource outcomes.
+Across the tested contexts, replay errors can admit failing policies or
+exclude lower-cost feasible alternatives. Rule-based and learned policies,
+two serving engines, and an external service model exercise the same
+validation framework. The released paired traces and CPU tools make these
+failure modes inspectable and the validation process reusable.
