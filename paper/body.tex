@@ -288,7 +288,7 @@ Share assumes 1024 input and 128 output tokens/s, shared equally among concurren
 requests. The calibrated lookup uses median measured wall times per
 input/output/concurrency cell, interpolating in input length and concurrency
 (one to four requests per instance). These four lookup-based models share the values.
-The supplement details measurement sources, interpolation, and lifecycle fitting. Model bytes, tokenizer, workload identities,
+Supplement Section~B.1 details measurement sources, interpolation, and lifecycle fitting. Model bytes, tokenizer, workload identities,
 and the candidate grid are locked before held-out execution.
 
 For the engine study, Lookup-SG replaces Lookup-69's startup proxy with the median of 20
@@ -452,7 +452,7 @@ This deterioration is not uniform across windows. Holding service fixed,
 Lookup-30 lowers occupied MAE to 76.19 GPU seconds, isolating startup.
 
 Retrospective analysis of the frozen trajectories explains this endpoint effect
-and its limits (supplement). In all three windows, Lookup-69/Lookup-30 targets first diverge
+and its limits (Supplement Section~M). In all three windows, Lookup-69/Lookup-30 targets first diverge
 60 s after a common instance start: Lookup-69 remains unready with higher queue/running
 pressure; Lookup-30 is ready. This simulator contrast is not a physical intervention
 on startup or cooldown. Six burst/recovery physical repeats first disagree in
@@ -493,7 +493,7 @@ jobs on time versus 113--116 physically) and the guard's 120/120.
 For H and H+guard in steady, median occupied-resource absolute percentage error (APE) is
 2.47\%, yet target agreement is 33.0--35.5\%; guard recovery has 14.74\%
 occupied-resource APE. Thus the external backend preserves the key deadline
-contrast while revealing residual timing errors (supplement).
+contrast while revealing residual timing errors (Supplement Section~A.3).
 
 These rule-policy tests establish the need to check both outcomes and
 trajectories. We next let frozen learned checkpoints drive the same physical
@@ -555,8 +555,7 @@ precedes cooldown expiry, leaving time to serve queued work;
 in Lookup-69 replay and most physical restarts, readiness follows expiry,
 allowing almost immediate scale-down. Across the six physical
 PPO-2 runs, 72 of 73 restarts taking over 60\,s enter draining
-within two seconds of readiness (see the supplement's
-Retrospective deployment lifecycle diagnosis section).
+within two seconds of readiness (Supplement Section~G.2).
 
 The earlier 38-cell mixed-policy study contains rule, guard, and PPO
 arms on a separate runtime. Lookup-69 also has higher feasibility agreement and
@@ -648,7 +647,7 @@ predicted P1+ in every window, then minimizing mean predicted cost, selects
 PPO-2 in the deployment study under Lookup-30; it fails all six physical runs. In the engine study, Lookup-69 selects a
 feasible policy costing 58.95\% more than the lowest-cost feasible policy
 in the tested pool, which Lookup-30 and Lookup-SG select. Across a $3\times3$ GPU/API price grid, the deployment study's failing choice persists and
-the engine study's gap ranges from 16.56\% to 80.17\%. The supplement reports choices and ties. The interfaces
+the engine study's gap ranges from 16.56\% to 80.17\%. Supplement Section~K reports choices and ties. The interfaces
 transfer across serving contexts; physical outcomes validate both predictions
 and their consequences for policy selection.
 
