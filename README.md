@@ -7,18 +7,22 @@ these retrospective predictions remain separate from the original corpus below.
 
 This corpus pairs frozen replay predictions with recorded physical deployments from seven campaigns. It supports inspection and recomputation of request timing, deadline feasibility, control targets, and scenario resource/cost accounting. It is a release of existing experiments, not an additional experiment or a workload-generalization benchmark.
 
-| Campaign | Technically accepted physical runs | Unique replay predictions | Model/run pairs | Separate excluded attempts |
+| Study (archive ID) | Technically accepted physical runs | Unique replay predictions | Model/run pairs | Separate excluded attempts |
 |---|---:|---:|---:|---:|
-| V3 | 36 | 60 | 180 | 2 |
-| Bridge | 38 | 28 | 76 | 0 |
-| E2 | 32 | 24 | 64 | 4 |
-| E3 | 26 | 28 | 52 | 0 |
-| E4 | 26 | 42 | 78 | 2 |
-| E5 | 27 | 45 | 81 | 0 |
-| E6 | 12 | 12 | 24 | 0 |
+| Held-out fidelity (V3) | 36 | 60 | 180 | 2 |
+| Mixed-policy (Bridge) | 38 | 28 | 76 | 0 |
+| Policy deployment (E2) | 32 | 24 | 64 | 4 |
+| Checkpoint screening (E3) | 26 | 28 | 52 | 0 |
+| Serving-engine transfer (E4) | 26 | 42 | 78 | 2 |
+| Arrival transfer (E5) | 27 | 45 | 81 | 0 |
+| 14B model transfer (E6) | 12 | 12 | 24 | 0 |
 | Total | 197 | 239 | 555 | 8 |
 
 Technically accepted does not mean deadline-feasible: all 41 physical runs that fail strict P1+ remain included (V3: 3; Bridge: 20; E2: 12; E4: 2; E6: 4). Repeats reuse predictions; 555 pairs are not independent experiments. The eight aborted/technically failed attempts have inventory entries, not full usable trace records, and do not enter scientific metrics. This release covers these seven campaigns, not every supplementary experiment in the paper.
+
+The paper uses descriptive display names; raw records and commands retain
+the original archive IDs used below. [DISPLAY_NAMES.json](paper/DISPLAY_NAMES.json)
+maps models, studies and checkpoints without changing their identities.
 
 ## Run locally
 

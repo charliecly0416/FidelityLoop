@@ -14,8 +14,6 @@ Startup timing can cross a controller's cooldown boundary and change subsequent
 actions; resource errors can also cancel in the total while capacity is available
 at the wrong times. Across policies, arrivals, and serving contexts, controlled
 physical measurements connect these errors to deployment choices and costs.
-The framework provides a common way to diagnose these errors across policies
-and serving contexts.
 
 The paper makes three contributions:
 \begin{enumerate}[leftmargin=*]
@@ -158,7 +156,7 @@ windows plus a 30-minute protection band. A 60 s morphology filter defines the
 steady, recovery, and burst-offline classes (even, declining, and bursty online
 arrivals); a fixed SHA ordering takes
 the first eligible candidate in steady--recovery--burst order, subject to the
-registered separation constraint. Online rows are thinned with the inherited C2
+registered separation constraint. Online rows are thinned with the inherited
 integer threshold, while the 120 offline jobs are constructed at fixed 15 s
 spacing and 256-input/256-output token budgets. The two salts and all thresholds
 are fixed in \texttt{s4\_generation\_lock.json}; generated inputs are locked before replay
@@ -184,17 +182,12 @@ Window & arrivals & CV & peak/mean & lag-1\\
 \end{tabular*}
 \end{table}
 
-These derived windows represent a controlled lifecycle workload domain,
-not the full production population or original user tasks.
-
-The checkpoint-deployment study (E2) uses two separately generated and locked windows from the same
+The policy deployment study uses two separately generated and locked windows from the same
 construction pipeline, with no row overlap with the three held-out windows;
-the campaigns remain distinct and are never pooled. The checkpoint-screening
-study (E3), second-engine study (E4), and 14B port (E6) reuse these two windows. The recovery window contains 358 derived online arrivals and
+the campaigns remain distinct and are never pooled. The screening, engine, and 14B studies reuse these two windows. The recovery window contains 358 derived online arrivals and
 120 fixed offline arrivals (478 total); the steady window contains 944 online
-and 120 offline arrivals (1,064 total). Offline arrivals are spaced every 15 s,
-with 256 input and output tokens; the online rows retain their locked arrival
-timestamps. The window identities and input hashes are bound in the E2 lock.
+and 120 offline arrivals (1,064 total). The deployment lock binds window identities and input hashes; online timestamps
+and the offline construction above remain fixed.
 
 A separate external-validity study uses Azure conversation arrival traces
 associated with Splitwise \citep{patel2024splitwise}; its workload construction
@@ -212,31 +205,26 @@ utilization 0.8. Readiness required the per-process health probe and the dual-re
 barrier; cleanup required verified process release on both devices. These values are
 bound by each run's environment snapshot and GPU identity record.
 
-The held-out study and E2 both use two A100 GPUs. Before held-out execution, the deployment-adapted model (E)
-had its lifecycle parameters calibrated and frozen. The historical V--E comparison spans different
+The deployment-adapted model (Local) was calibrated and frozen before held-out execution. The historical Legacy-refit--Local comparison spans different
 hardware environments (A800 and A100), so it does not isolate the
 effect of calibration.
 
-E2 uses the same Qwen2.5-7B-Instruct stack under a separate runtime lock.
-Its 32 cells comprise one all2 capacity anchor and five frozen PPO arms per
-window, with three repeats per comparison arm. Checkpoint and tensor identities
-are bound into the results. An earlier 38-run campaign, termed Bridge, evaluated rule-based,
-guarded, and PPO policies under a separate runtime lock; its results
-are retained as supplementary evidence and are not pooled with E2.
-The follow-up screening study (E3) uses six previously undeployed checkpoints
-on the same two windows. Each window runs on a separate dual-A100 allocation
-with the registered serving stack: one all2 anchor and two repeats per arm,
-26 cells in total. E3 is analyzed separately from E2 and Bridge.
+The deployment study locks a separate runtime with the same Qwen/vLLM stack:
+one all2 anchor and five frozen PPO arms per window, with three repeats per
+PPO arm (32 runs). Checkpoint and tensor hashes bind policy identity. An earlier
+38-run mixed-policy study covers rules, guards, and PPO under another runtime.
+The screening study evaluates six previously undeployed checkpoints on the
+same two windows, each on a separate dual-A100 allocation: one all2 anchor
+and two repeats per arm (26 runs). These runtime groups remain separate.
 
-E4 runs SGLang 0.4.8 with PyTorch 2.7.1 and Transformers 4.52.3 on
-two A100 80GB PCIe GPUs. It reuses the Qwen weights, two windows,
-policy parameters, and accounting contract: six policy arms run twice per
-window, plus two all2 anchors (26 cells). It evaluates transfer of the
-complete serving stack; versioned configuration and token-input compatibility
-details appear in the supplement.
+The engine study transfers six policy arms to SGLang 0.4.8, PyTorch 2.7.1,
+and Transformers 4.52.3 on two A100 80GB PCIe GPUs. It retains the Qwen
+weights, windows, policies, and accounting contract: two repeats per
+arm/window plus two all2 anchors (26 runs). The supplement documents
+the full-stack change and token-input compatibility.
 
-E5 keeps the SGLang/7B stack and freezes C, C30, and C$_{\rm sg}$ before
-three additional windows (27 cells, including 24 policy cells). E6 ports the
+The arrival study retains the SGLang/7B stack and frozen predictors on
+three additional windows (27 cells, including 24 policy cells). The 14B study ports the
 contract to Qwen2.5-14B-Instruct/vLLM on the two locked windows (12 cells),
 freezing two predictors that differ only in startup; neither extension retrains
 PPO or searches policy parameters.
@@ -265,14 +253,14 @@ FidelityLoop retains admission, lifecycle transitions, and the frozen guard.
 A Qwen2.5-7B/A100 service screen precedes the retrospective policy comparison
 in Section~\ref{sec:crosslevel}; the supplement provides profiles and parameters.
 
-\subsection{Calibrated models}
+\subsection{Replay models}
 The replay models share an executor but differ in service and lifecycle timing
-(Table~\ref{tab:replay-model-parameters}). O uses an equal-share service model
-and an assumed 30\,s startup. C uses a measured service lookup and a historical
-69.219\,s startup proxy; C30 restores the 30\,s assumption. E combines the
-lookup with deployment-adapted lifecycle parameters; V retains a bounded
-refit from the earlier environment. O--C30 isolates the service model,
-whereas C--C30 isolates startup; O--C changes both.
+(Table~\ref{tab:replay-model-parameters}). Share uses an equal-share service model
+and an assumed 30\,s startup. Lookup-69 uses a measured service lookup and a historical
+69.219\,s startup proxy; Lookup-30 restores the 30\,s assumption. Local combines the
+lookup with deployment-adapted lifecycle parameters; Legacy-refit retains a bounded
+refit from the earlier environment. Share--Lookup-30 isolates the service model,
+whereas Lookup-69--Lookup-30 isolates startup; Share--Lookup-69 changes both.
 
 \begin{table}[t]
 \centering
@@ -286,33 +274,31 @@ Listed models share a 69.363\,s setup proxy outside the primary window ledger.}
 \toprule
 Model & Service & Startup & Shutdown\\
 \midrule
-O & equal-share & 30.000 & 7.059\\
-C & measured lookup & 69.219 & 7.059\\
-C30 & same lookup & 30.000 & 7.059\\
-E & same lookup & 33.497 & 2.224\\
-V & same lookup & 25.196 & 2.325\\
+Share & equal-share & 30.000 & 7.059\\
+Lookup-69 & measured lookup & 69.219 & 7.059\\
+Lookup-30 & same lookup & 30.000 & 7.059\\
+Local & same lookup & 33.497 & 2.224\\
+Legacy-refit & same lookup & 25.196 & 2.325\\
 \bottomrule
 \end{tabular*}
 \end{table}
 
-O assumes 1024 input and 128 output tokens/s, shared equally among concurrent
+Share assumes 1024 input and 128 output tokens/s, shared equally among concurrent
 requests. The calibrated lookup uses median measured wall times per
 input/output/concurrency cell, interpolating in input length and concurrency
-(one to four requests per instance). Its values are shared by C, C30, E, and V.
-The supplement's Replay model specification section details measurement sources,
-interpolation, and lifecycle fitting. Model bytes, tokenizer, workload identities,
+(one to four requests per instance). These four lookup-based models share the values.
+The supplement details measurement sources, interpolation, and lifecycle fitting. Model bytes, tokenizer, workload identities,
 and the candidate grid are locked before held-out execution.
 
-For E4, C$_{\rm sg}$ replaces C's startup proxy with the median of 20
+For the engine study, Lookup-SG replaces Lookup-69's startup proxy with the median of 20
 SGLang scale-outs measured while the other GPU serves a fixed background
-load: 27.568\,s. It retains C's service lookup and shutdown parameter.
-C, C30, and C$_{\rm sg}$ predictions are frozen before the policy runs;
+load: 27.568\,s. It retains Lookup-69's service lookup and shutdown parameter.
+Lookup-69, Lookup-30, and Lookup-SG predictions are frozen before the policy runs;
 the guard retains its separate safety estimates.
 
-E5 reuses these three models without recalibration. In E6, the historical-proxy
-predictor S14 and locally calibrated L14 share freshly measured 14B service,
-setup, shutdown, and guard parameters; only startup differs (69.219\,s versus
-46.067\,s). Both are frozen before physical execution.
+The arrival study reuses these models unchanged. The 14B study freezes
+14B-Hist and 14B-Local with freshly measured service, setup, shutdown,
+and guard parameters; only startup differs (69.219 versus 46.067\,s).
 
 For each model prediction and physical repeat of a window, the dimensionless
 lifecycle loss is
@@ -334,7 +320,7 @@ matched-local support. $L$ measures prediction error, separately from scenario
 cost $C$; the shorter development horizon is stated with that experiment.
 
 \subsection{PPO policy contract}
-The learned policy is trained only in the CPU replay environment, with C or C30
+The learned policy is trained only in the CPU replay environment, with Lookup-69 or Lookup-30
 as the training environment; the physical serving loop is used only after a
 checkpoint is frozen. At each one-second decision boundary, its 30-dimensional
 causal observation contains normalized time and target state, queue counts and
@@ -346,11 +332,10 @@ scenario-ledger cost, so training trades occupied resources, lifecycle events,
 API use, and deadline misses under the declared contract.
 
 Training uses the three development arrival regimes and paired seeds from the
-locked CPU PPO contract. The five E2 checkpoints are selected mechanically with C30 replay,
+locked CPU PPO contract. The five deployment checkpoints are selected mechanically with Lookup-30 replay,
 guard disabled, P1+ required in every validation window, and sorting by equal-window
-mean cost, checkpoint index, then seed. We label the frozen checkpoints
-C-1/C-2 and C30-1/C30-2/C30-3 by training environment, numbering them
-by seed and then episode, independently of physical outcomes.
+mean cost, checkpoint index, then seed. PPO-1 and PPO-2 were trained with Lookup-69; PPO-3--PPO-5 with Lookup-30.
+Checkpoint names denote fixed identities and are reused across studies.
 Training settings, data partitions, and checkpoint coordinates are
 detailed in the supplement's Frozen PPO training and selection
 contract section.
@@ -359,7 +344,7 @@ contract section.
 H uses up-threshold 8, down-threshold 0, and a 60 s cooldown. At each one-second
 tick, H reads queue and running counts plus its target/cooldown state, not the
 predictor's startup parameter. The guard's lifecycle-delay estimates use separately
-frozen safety parameters, distinct from the C/E simulator endpoints.
+frozen safety parameters, distinct from the Lookup-69/Local simulator endpoints.
 The guard observes only released queues, device states, and running-job ages;
 future arrivals and true completion or readiness times are unavailable. Let $P_t$
 be the pending offline request IDs and $b_t$ H's current target after its decision.
@@ -409,13 +394,12 @@ four-arm formal matrix to avoid pseudo-replication.
 The held-out study evaluates all1, all2, H, and H+guard on steady, recovery,
 and burst-offline windows, with three repeats per arm (36 formal runs). CPU verification uses the original acceptance code and lock-bound sources.
 Two operator-aborted attempts remain in history but not formal statistics.
-Metrics use run and window units, not independent-request sampling. Bridge's
-terminal counts, lifecycle occupation, and costs are recomputed from raw events;
-sealed summaries provide consistency checks. A technically valid negative result remains in the matrix.
+Metrics use run and window units. Raw-event recomputation checks terminal
+counts, lifecycle occupation, and costs against sealed summaries. A technically valid negative result remains in the matrix.
 
 The fixed gate order starts with full-capacity feasibility ($G_F$), then
-tests occupied-resource error (M1), deployment-adapted lifecycle loss (M1b),
-and matched-request service fidelity (M2). Target agreement (M3) is
+tests occupied-resource error, deployment-adapted lifecycle loss,
+and matched-request service fidelity. Target agreement is
 diagnostic. P1/P1+ and P2 then assess policy feasibility and cost, retaining
 H's failures as control evidence. This order separates model validity
 from the appeal of a policy's predicted savings.
@@ -428,17 +412,16 @@ and across serving contexts. The guard case study connects these validation
 results to the resource--latency trade-off.
 \subsection{Cross-level prediction fidelity}
 \label{sec:crosslevel}
-On fixed H, E's occupied MAE is 67.94 GPU seconds versus 543.51 for O
-(87.50\% lower). C30's improvement over C implicates startup. V reduces
-equal-window L by 34.24\% relative to E, but E uses deployment-adapted endpoints
-while V retains the earlier environment snapshot. M1b is therefore not a clean
-same-environment causal comparison.
+On fixed H, Local's occupied MAE is 67.94 GPU seconds versus 543.51 for Share
+(87.50\% lower). Lookup-30's improvement over Lookup-69 implicates startup. Legacy-refit reduces
+equal-window L by 34.24\% relative to Local, but Local uses deployment-adapted endpoints
+while Legacy-refit retains the earlier environment snapshot. This historical comparison does not isolate the effect of fitting.
 
-For local service fidelity, the fixed all1/all2 tests give a maximum window MAE of
-0.064 s for C, C30, E, and V, while O reaches 3.016 s. On dynamic arms, the
+In fixed all1/all2 tests, maximum service MAE is 0.064 s for all four
+lookup-based models, versus 3.016 s for Share. On dynamic arms, the
 minimum common support across model/route projections is 122 requests and the
-maximum common-support MAE is 0.129 s for C, 0.112 s for C30, 0.110 s for E, and
-0.112 s for V; O reaches 4.510 s. Common support is the intersection of request 
+maximum common-support MAE is 0.129 s for Lookup-69, 0.112 s for Lookup-30, 0.110 s for Local, and
+0.112 s for Legacy-refit; Share reaches 4.510 s. Common support is the intersection of request 
 IDs completed locally in the compared predictions and physical runs; coverage 
 and routing discrepancies are reported in the artifact.
 
@@ -461,31 +444,29 @@ Model & steady & recovery & burst & \shortstack{Occupied\\MAE} & $L$\\
 \end{tabular*}
 \end{table}
 
-The C-versus-O comparison reproduces the exploratory divergence: maximum matched-ID
+The Lookup-69-versus-Share comparison reproduces the exploratory divergence: maximum matched-ID
 service MAE falls from 4.510 to 0.129 s (about 35-fold), while equal-window
 occupied-resource MAE rises from 543.51 to 891.98 GPU seconds (64.1\%).
-The aggregate deterioration does not occur in every window. O--C changes both
-service and startup; the C--C30 contrast isolates startup, lowering occupied
-MAE to 76.19 GPU seconds.
+This deterioration is not uniform across windows. Holding service fixed,
+Lookup-30 lowers occupied MAE to 76.19 GPU seconds, isolating startup.
 
 Retrospective analysis of the frozen trajectories explains this endpoint effect
-and its limits (supplement). In all three windows, C/C30 targets first diverge
-60 s after a common instance start: C remains unready with higher queue/running
-pressure; C30 is ready. This simulator contrast is not a physical intervention
+and its limits (supplement). In all three windows, Lookup-69/Lookup-30 targets first diverge
+60 s after a common instance start: Lookup-69 remains unready with higher queue/running
+pressure; Lookup-30 is ready. This simulator contrast is not a physical intervention
 on startup or cooldown. Six burst/recovery physical repeats first disagree in
 target with predictions at 3 s, before any window restart. Conversely, steady
-repeats 1 and 3 match C30 targets throughout despite state, routing, and
+repeats 1 and 3 match Lookup-30 targets throughout despite state, routing, and
 occupation errors.
 
-Aggregate agreement can mask temporal misalignment. In steady, E and C30 have
-nearly equal total occupation MAE, but E's mean time-integrated absolute error in
+Aggregate agreement can mask temporal misalignment. In steady, Local and Lookup-30 have
+nearly equal total occupation MAE, but Local's mean time-integrated absolute error in
 occupied GPU count is 1390.504 versus 114.324 GPU seconds (Table~\ref{tab:trajectoryfocus}).
 Positive and negative count errors cancel in the total; their timing still
 matters to control. Together with the event-level counterexamples, this shows why neither startup
 correction nor target agreement alone establishes fidelity.
 The supplement retains all 36 prediction/physical pairs and 12 model/window
-means; this diagnosis neither changes M1 nor reselects a model. The later
-Bridge cells are a separate policy-contract study.
+means; this diagnosis neither changes the resource-error criterion nor reselects a model. The mixed-policy results come from a separate runtime.
 
 \begin{table}[t]
 \centering
@@ -505,7 +486,7 @@ Model & Total error & Trajectory error & Target diff. (\%)\\
 
 Replacing the service lookup with Vidur's profiled model tests the same
 validation contract with an external predictor. Twelve retrospective CPU
-rollouts retain E's lifecycle parameters and the original guard, and reuse
+rollouts retain Local's lifecycle parameters and the original guard, and reuse
 all 36 physical runs. They reproduce H's recovery misses (116/120 offline
 jobs on time versus 113--116 physically) and the guard's 120/120.
 For H and H+guard in steady, median occupied-resource absolute percentage error (APE) is
@@ -517,21 +498,19 @@ These rule-policy tests establish the need to check both outcomes and
 trajectories. We next let frozen learned checkpoints drive the same physical
 lifecycle and compare their predicted and observed feasibility and cost.
 
-\subsection{Policy execution and screening: feasibility is part of the result}
-E2 tests whether checkpoints selected in replay remain feasible in physical
+\subsection{Policy deployment and screening}
+The deployment study tests whether checkpoints selected in replay remain feasible in physical
 execution. In its re-provisioned runtime, 196 of 218 window restarts
 that reached readiness across the 30 PPO runs took over 60 s.
-Each window begins with an all2 capacity anchor; the five PPO arms
-then run in three repeats. All 32 cells are technically valid, and the package
-contains 36 attempts, including four preserved technical failures. C30-2 is the preregistered reference checkpoint. The table reports comparison means and one all2 run per window.
+All 32 cells are technically valid; four earlier technical failures remain
+in the audit trail. PPO-4 is the preregistered reference checkpoint.
 
 \begin{table}[t]
 \centering
 \small
-\caption{E2 policy execution on two A100 GPUs. P1+ requires every online and
-offline request to meet its deadline. Costs are registered-window scenario USD
-under the declared ledger. R/S report P1+ passes/runs in recovery/steady. The last column is cost
-reduction relative to all2; $\dagger$ marks a failed arm and is descriptive only.}
+\caption{Policy deployment on two A100 GPUs. Costs are mean scenario USD;
+R/S report P1+ passes/runs in recovery/steady. The last column is cost
+reduction relative to all2; $\dagger$ marks infeasible savings.}
 \label{tab:e2policy}
 \setlength{\tabcolsep}{2pt}
 \par\vspace{4pt}
@@ -546,88 +525,84 @@ Arm & R & S & Cost R & Cost S & Cost $\downarrow$ (\%)\\
 \begin{figure}[t]
 \centering
 \includegraphics[width=0.98\linewidth]{figures/fig5_e2_fidelity_strip.pdf}
-\caption{Replay-to-deployment feasibility for all 32 E2 cells. Blue and gray
-tiles are correct pass/fail directions; orange tiles are C30 false positives.
+\caption{Replay-to-deployment feasibility for all 32 deployment cells. Blue and gray
+tiles are correct pass/fail directions; orange tiles are Lookup-30 false positives.
 Black outlines mark cells that physically fail P1+.}
 \label{fig:e2strip}
 \end{figure}
 
-Three PPO arms pass all six physical repeats: C-1, C30-1, and
-C30-2; both all2 anchors also pass. The three feasible PPO arms have
+Three PPO arms pass all six physical repeats: PPO-1, PPO-3, and
+PPO-4; both all2 anchors also pass. The three feasible PPO arms have
 scenario costs 42.8--50.5\% below all2, but this comparison is conditional on
-the declared ledger and synthetic API sink. C-2 is a decisive negative case:
+the declared ledger and synthetic API sink. PPO-2 is a decisive negative case:
 it averages only 4--7 on-time offline requests out of 120 and leaves about 80
-unfinished, despite lower cost. C30-3 is a sharper boundary: it completes
+unfinished, despite lower cost. PPO-5 is a sharper boundary: it completes
 the offline stream eventually, but roughly 11 of 120 offline requests miss their
 deadline per repeat, so its lower cost is not feasible saving. Online requests are
-on time in every cell; the E2 failures
+on time in every cell; deployment failures
 are therefore isolated to the offline deadline path rather than hidden by an
 online regression.
 
-Predictions were frozen before physical execution. Table~\ref{tab:crosscampaign}
-compares each cell with its corresponding replay: C correctly predicts all 20
-passes and 12 failures, whereas C30 predicts all cells feasible and misses both
+Table~\ref{tab:crosscampaign} compares each run with its frozen replay: Lookup-69 correctly predicts all 20
+passes and 12 failures, whereas Lookup-30 predicts all cells feasible and misses both
 negative checkpoints. For each replay model, these 32 comparisons reuse 12
 policy/window predictions; the physical repeats are not independent predictions.
 The two replay models have window-cost MAE of 0.0804 and 0.4657 scenario USD,
-respectively. C-2 exposes a startup--cooldown interaction: the 60\,s cooldown
-begins at the capacity-target change. In C30 replay, readiness
+respectively. PPO-2 exposes a startup--cooldown interaction: the 60\,s cooldown
+begins at the capacity-target change. In Lookup-30 replay, readiness
 precedes cooldown expiry, leaving time to serve queued work;
-in C replay and most physical restarts, readiness follows expiry,
+in Lookup-69 replay and most physical restarts, readiness follows expiry,
 allowing almost immediate scale-down. Across the six physical
-C-2 runs, 72 of 73 restarts taking over 60\,s enter draining
+PPO-2 runs, 72 of 73 restarts taking over 60\,s enter draining
 within two seconds of readiness (see the supplement's
-Retrospective E2 lifecycle diagnosis section).
+Retrospective deployment lifecycle diagnosis section).
 
-The earlier 38-cell Bridge campaign contains rule, guard, and PPO
-arms on a separate runtime. C also has higher feasibility agreement and
+The earlier 38-cell mixed-policy study contains rule, guard, and PPO
+arms on a separate runtime. Lookup-69 also has higher feasibility agreement and
 lower cost MAE there (Table~\ref{tab:crosscampaign}); the campaigns are not pooled.
-This repeated agreement motivates testing C as a screening rule on new checkpoints.
+This repeated agreement motivates testing Lookup-69 as a screening rule on new checkpoints.
 
 \begin{table}[t]
 \centering
 \small
-\caption{Replay-to-deployment agreement and window-cost MAE for the historical
-campaigns. Bridge and E2 include all technically valid cells, including anchors
-and deadline failures; E3 includes its 24 policy cells. Cost MAE is in scenario USD.}
+\caption{Replay-to-deployment agreement and cost MAE (scenario USD). Mixed-policy
+and deployment include anchors and failures; screening includes its 24 policy runs.}
 \label{tab:crosscampaign}
 \setlength{\tabcolsep}{3pt}
 \par\vspace{4pt}
 \begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}llrr@{}}
 \toprule
-Campaign & Replay & Agreement & Cost MAE\\
+Study & Replay & Agreement & Cost MAE\\
 \midrule
 \input{generated/bridge_fidelity_rows.tex}
 \end{tabular*}
 \end{table}
 
-Both training environments yield passing and failing E2 checkpoints.
-E3 tests C on six previously undeployed checkpoints in a new execution
-context. From 90 eligible candidates, C predicts 67 feasible on both known
+Both training environments yield passing and failing deployment checkpoints.
+The screening study tests Lookup-69 on six previously undeployed checkpoints in a new execution
+context. From 90 eligible candidates, Lookup-69 predicts 67 feasible on both known
 windows and rejects 23. A fixed ordering selects three distinct trajectories
-from each group; C30 does not enter selection. All six pass every physical
-run (two windows, two repeats), as do both all2 anchors. C therefore falsely
-rejects three feasible candidates, while C30 accepts all six. Across the 24
-policy cells, C30 also has lower cost MAE (Table~\ref{tab:crosscampaign}),
-reversing the E2 ordering. These selected cases show that earlier agreement
-does not establish reliable screening of new checkpoints and execution
-conditions; they do not estimate population screening accuracy. The supplement
-records candidate selection, predictions, and the separate window allocations.
+from each group; Lookup-30 does not enter selection. All six pass every physical
+run (two windows, two repeats), as do both all2 anchors. Lookup-69 therefore falsely
+rejects three feasible candidates, while Lookup-30 accepts all six. Across the 24
+policy cells, Lookup-30 also has lower cost MAE (Table~\ref{tab:crosscampaign}),
+reversing the deployment-study ordering. These selected cases show that earlier agreement need not transfer to
+new checkpoints and execution conditions; they do not estimate population
+screening accuracy. The supplement records selection and execution details.
 
 \subsection{Transfer across serving contexts}
 \label{sec:e4}
-E4 tests whether the evaluation contract can carry unchanged policies to
+The engine study tests whether the evaluation contract can carry unchanged policies to
 SGLang and still distinguish feasible from infeasible executions. The six
-arms are H, H+guard, E2's C-1/C-2, and two E3 checkpoints selected by
-lowest historical mean cost within C's accepted and rejected groups.
-All 26 cells are technically valid. Both all2 anchors and all
-guarded and PPO runs satisfy P1+; H meets every deadline in recovery but
+arms are H, H+guard, the deployment study's PPO-1/PPO-2, and two screening checkpoints selected by
+lowest historical mean cost within Lookup-69's accepted and rejected groups.
+All 26 runs are technically valid. The all2, guarded, and PPO runs satisfy P1+; H meets every deadline in recovery but
 leaves one offline job unfinished in each steady repeat.
 
 \begin{table}[t]
 \centering
 \small
-\caption{E4: frozen predictions versus 24 SGLang policy runs. False accepts
+\caption{Engine study: frozen predictions versus 24 SGLang policy runs. False accepts
 are out of two infeasible runs; false rejects out of 22 feasible runs.
 Cost MAE includes the declared deadline penalty, in scenario USD.}
 \label{tab:e4prediction}
@@ -637,45 +612,42 @@ Cost MAE includes the declared deadline penalty, in scenario USD.}
 \toprule
 Replay & Agreement & \shortstack{False\\accepts} & \shortstack{False\\rejects} & Cost MAE\\
 \midrule
-C & 16/24 & 0/2 & 8/22 & 0.5420\\
-C30 & 24/24 & 0/2 & 0/22 & 0.0468\\
-C$_{\rm sg}$ & 24/24 & 0/2 & 0/22 & 0.0427\\
+Lookup-69 & 16/24 & 0/2 & 8/22 & 0.5420\\
+Lookup-30 & 24/24 & 0/2 & 0/22 & 0.0468\\
+Lookup-SG & 24/24 & 0/2 & 0/22 & 0.0427\\
 \bottomrule
 \end{tabular*}
 \end{table}
 
-The historical C proxy falsely rejects eight feasible runs, whereas C30 and
-C$_{\rm sg}$ match all 24 outcomes, including H's two failures
+The historical Lookup-69 proxy falsely rejects eight feasible runs, whereas Lookup-30 and
+Lookup-SG match all 24 outcomes, including H's two failures
 (Table~\ref{tab:e4prediction}). Measuring startup locally slightly lowers
-cost error relative to C30 but leaves feasibility judgments unchanged.
-Each model contributes 12 policy/window predictions, each compared with
-two physical repeats. Full results appear in the supplement.
+cost error relative to Lookup-30 but leaves feasibility judgments unchanged.
+Each model supplies 12 predictions, each compared with two physical repeats.
 
-E5 tests whether E4's calibration remains useful on additional arrivals,
-without refitting. On three new constructed windows, all 24 policy runs are
-feasible: C, C30, and C$_{\rm sg}$ agree on 14/24, 22/24, and 24/24,
-respectively. C$_{\rm sg}$ thus avoids the false rejections here; this
+The arrival study tests this calibration on additional arrivals without refitting. On three new constructed windows, all 24 policy runs are
+feasible: Lookup-69, Lookup-30, and Lookup-SG agree on 14/24, 22/24, and 24/24,
+respectively. Lookup-SG thus avoids the false rejections here; this
 all-feasible cohort does not test detection of infeasible policies.
 
-E6 tests remeasured lifecycle timing in Qwen2.5-14B-Instruct/vLLM.
-H fails all four runs; H+guard passes all four. Replacing S14's historical
-startup with the measured value in L14 raises agreement from 4/8 to 8/8
+The 14B study tests remeasured lifecycle timing in Qwen2.5-14B-Instruct/vLLM.
+H fails all four runs; H+guard passes all four. Replacing 14B-Hist's historical
+startup with the measured value in 14B-Local raises agreement from 4/8 to 8/8
 and lowers cost MAE from 0.4105 to 0.0668 scenario USD. A retrospective
 30\,s startup contrast, holding all other 14B fields fixed, reaches 6/8:
 it still falsely accepts H in steady. Each model supplies four policy/window
 predictions reused across two repeats. Event replay shows how longer startup
-changes control: S14 retains queue pressure through cooldown expiry and
+changes control: 14B-Hist retains queue pressure through cooldown expiry and
 raises the target to two GPUs, altering later dispatch and deadline outcomes.
 The supplement traces these feedback paths and distinguishes them from
 physical-state mismatches that precede restart.
 
 These errors also affect deployment choices. Retrospectively requiring
 predicted P1+ in every window, then minimizing mean predicted cost, selects
-E2's C-2 under C30; it fails all six physical runs. In E4, C selects a
+PPO-2 in the deployment study under Lookup-30; it fails all six physical runs. In the engine study, Lookup-69 selects a
 feasible policy costing 58.95\% more than the lowest-cost feasible policy
-in the tested pool, which C30 and C$_{\rm sg}$ select. Across a $3\times3$ GPU/API price grid, E2's failing choice persists and
-E4's gap ranges from 16.56\% to 80.17\%. The supplement reports all choices
-and ties under the scenario ledger. The interfaces
+in the tested pool, which Lookup-30 and Lookup-SG select. Across a $3\times3$ GPU/API price grid, the deployment study's failing choice persists and
+the engine study's gap ranges from 16.56\% to 80.17\%. The supplement reports choices and ties. The interfaces
 transfer across serving contexts; physical outcomes validate both predictions
 and their consequences for policy selection.
 
@@ -718,7 +690,7 @@ The primary ledger covers the same 2,100 s interval; the deployment ledger also
 charges setup and cleanup. The supplementary table retains both views, with
 unchanged prices and event streams.
 
-Before execution, E's locked recovery prediction identifies four unfinished
+Before execution, Local's locked recovery prediction identifies four unfinished
 offline requests; the three physical H repeats leave four, seven, and four
 unfinished, for 15 total misses. This prediction is interpreted alongside, not
 substituted for, the observed completion evidence.
@@ -777,15 +749,15 @@ External checks cover queue-target (B-HPA), Holt-predictive (B-PRED),
 and queueing-based (B-MMC) baselines, Llama, and Azure arrivals
 (supplement). Each baseline meets all deadlines in nine runs; H+guard costs less than B-HPA on two
 known Qwen windows, with higher API use and queue exposure. Retrospective
-replay of 24 Azure runs gives archived C, C30, E, and V identical 21/24 agreement,
-but C falsely accepts three runs while the others reject three feasible runs.
+replay of 24 Azure runs gives four archived lookup-based models identical 21/24 agreement,
+but Lookup-69 falsely accepts three runs while the others reject three feasible runs.
 H's physical repeats have mixed outcomes in both windows. Error direction
 therefore matters alongside aggregate agreement.
 
 \section{Discussion}
 FidelityLoop evaluates whether policies meet deadlines and what resources
-feasible executions consume. C30 reduces fixed-H resource error, whereas C
-matches feasibility better in Bridge and E2. Tests on new checkpoints,
+feasible executions consume. Lookup-30 reduces fixed-H resource error, whereas Lookup-69
+matches feasibility better in the mixed-policy study and the deployment study. Tests on new checkpoints,
 SGLang, and a 14B vLLM port show why predictions must be revalidated in each
 deployment context.
 
@@ -793,7 +765,7 @@ deployment context.
 Lifecycle validation should follow the controller's clock. For controllers
 that block scale-down until a target-change cooldown expires, readiness after
 expiry may permit immediate scale-down even when replay predicts a service
-interval protected from scale-down. E2 exhibits this interaction. Comparing deployment startup
+interval protected from scale-down. The deployment study exhibits this interaction. Comparing deployment startup
 timing with controller boundaries is therefore a useful diagnostic; setup
 and window scale-out should be measured separately. State and action
 trajectories also need inspection because aggregate resource error can
@@ -812,9 +784,8 @@ the Llama and Azure tests identify economic and workload boundaries;
 meeting one declared SLO does not establish suitability for tighter latency
 targets or heavier loads.
 
-The supplementary CPU microbenchmark times \texttt{adapter.decide} on
-reconstructed states outside live serving. It measures decision-call latency,
-not full-controller or end-to-end overhead.
+The supplementary CPU microbenchmark measures \texttt{adapter.decide} on
+reconstructed states, excluding live-serving and full-controller overhead.
 
 \paragraph{Practical validation.}
 Measure lifecycle timing for the deployment, then freeze predictions before
@@ -834,15 +805,16 @@ The studies cover two-GPU deployments, Qwen 7B/14B and Llama 8B, vLLM and
 SGLang, and selected trace-derived windows. Repeats measure execution
 robustness rather than independent workload coverage. Missing session identities,
 constructed offline pressure, and nonrandom checkpoint selection limit
-population-level inference; E3, E4, and E6 reuse known windows. E3 and E5 are
-all-feasible cohorts, while E4 and E6 contain two and four infeasible policy runs.
+population-level inference. Screening, engine, and 14B studies reuse known
+windows; screening and arrival cohorts are all feasible, whereas the engine
+and 14B cohorts contain two and four infeasible policy runs.
 The evidence does not establish large-scale heterogeneous deployment or a
 general ranking of replay models, PPO training environments, or PPO versus
 the guard; other model families and quantized inference remain untested.
 
-Runtime identities remain separate: deployment drift confounds V--E, E3 uses
-one allocation per window, and E4 changes the engine and dependencies together.
-E6 isolates startup within the 14B predictor, not the causal effect of model
+Runtime identities remain separate: deployment drift confounds Legacy-refit--Local, the screening study uses
+one allocation per window, and the engine study changes the engine and dependencies together.
+The 14B study isolates startup within the 14B predictor, not the causal effect of model
 size, engine, or hardware. The same-runtime baseline comparison includes
 dispatch differences, rather than isolating the guard. Guard repairs provide
 no general safety guarantee, as the Llama failure illustrates. The supplement

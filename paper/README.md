@@ -4,11 +4,11 @@ Build `main.tex` or `supplement.tex` with pdfLaTeX and BibTeX. Import this ZIP
 into Overleaf and select the entry point; all required figures, tables, styles,
 and references are included. No shell escape or external downloads are needed.
 
-This v8r14 source integrates the Vidur service model into the existing
+This source integrates the Vidur service model into the existing
 closed-loop validation argument. Twelve retrospective CPU rollouts are
 compared with all 36 original physical runs; no new policy GPU runs are added.
 The main body remains 10 pages, references start on page 11, and the main PDF
-has 12 pages. The separate supplement has 25 pages.
+has 12 pages. The supplement documents implementation and evidence details.
 
 The opening and conclusion explain how developers can use the framework to
 diagnose replay/deployment disagreements. The background and PPO introduction
@@ -57,3 +57,8 @@ address is https://anonymous.4open.science/r/FidelityLoop-144B/.
 `SHA256SUMS.txt` covers the source files. This build retains the MLSys 2025
 style and a ten-page body budget; check the target-year submission instructions
 when uploading.
+
+Display names are unified across the paper and figures. `DISPLAY_NAMES.json`
+and the supplement map these names to the unchanged archived IDs. After running
+the original artifact table generators, run `python refresh_display_tables.py`
+to update the two reader-facing table copies.

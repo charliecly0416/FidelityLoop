@@ -1,14 +1,15 @@
 \appendix
 \section{Reproduction and claim--evidence map}
 The source release includes synthetic interface checks, historical facade
-compatibility checks, and a standalone E1 accounting verifier.
-\path{REPRODUCING.md} gives the commands and expected outputs. In the E1 package,
+compatibility checks, and a standalone same-runtime accounting verifier.
+\path{REPRODUCING.md} gives the commands and expected outputs. In the same-runtime comparison package,
 \texttt{python -B verify.py} checks the manifest and recomputes 169 resource/cost
 values from reduced records. Its ten tests run with
 \texttt{python -B -m unittest}; physical-run acceptance is inherited.
 
 The paired trace corpus\footnote{\url{https://anonymous.4open.science/r/FidelityLoop-144B/}}
-covers the 36-run held-out study, Bridge, E2, E3, E4, E5, and E6:
+covers the held-out, mixed-policy, deployment, screening, engine, arrival,
+and 14B studies:
 197 technically accepted physical runs (including 41 strict P1+ failures)
 and 239 unique frozen predictions form 555 model/run pairs. Predictions are
 reused across physical repeats. The index separately lists eight excluded
@@ -21,7 +22,7 @@ The worked screening example also returns mismatched request IDs and reports
 false accepts/rejects with their physical denominators;
 \texttt{python -B verify.py} checks the complete corpus after extraction.
 This release supports analysis of the recorded deployments, not unseen-workload
-validation or rerunning model inference. The later T30-14, Azure, and Vidur-backed retrospective predictions are
+validation or rerunning model inference. The later 14B-30, Azure, and Vidur-backed retrospective predictions are
 supplied separately with the paper and are not included in these counts. The corpus's \path{SCHEMA.md} specifies the projection
 and accounting boundaries.
 
@@ -37,14 +38,16 @@ unavailable; the new index is not presented as the historical original.
 \begin{itemize}[leftmargin=*]
 \item Full-capacity feasibility: nine all2 reports and G-F in \path{decisions.json}.
 \item Model accuracy: \path{prediction_groups.csv}, \path{common_support.csv},
-      and \path{route_confusion.csv}; M1, M1b, and M2 in \path{decisions.json}.
+   and \path{route_confusion.csv}; M1, M1b, and M2 in \path{decisions.json}.
 \item H's negative result: 15 records in \path{misses.csv}; guard risk-active
-      ticks and IDs in \path{guard_events.csv}.
+   ticks and IDs in \path{guard_events.csv}.
 \item Guard feasibility and cost: nine guard runs in \path{run_metrics.csv},
-      with repeat-block comparisons in \path{paired_costs.csv}.
+   with repeat-block comparisons in \path{paired_costs.csv}.
 \item Production quality, physical energy, and provider billing: unsupported
-      by this dataset and excluded from the claims.
+   by this dataset and excluded from the claims.
 \end{itemize}
+
+\input{display_name_map}
 
 \subsection{Implementation footprint}
 Table~\ref{tab:implementation-footprint} separates policy logic from
@@ -119,10 +122,10 @@ All 36 groups underestimate makespan (10.88--26.40\%); the experiment does
 not isolate runtime-stack effects from omitted overhead.
 
 \paragraph{Policy and lifecycle evaluation.}
-The same profiled service model replaces E's lookup in 12 CPU rollouts:
+The same profiled service model replaces Local's lookup in 12 CPU rollouts:
 all1, all2, H, and H+guard on the original three windows. Each deterministic
 prediction is compared with all three existing physical repeats. This is a
-retrospective comparison without outcome fitting. E's startup/shutdown
+retrospective comparison without outcome fitting. Local's startup/shutdown
 parameters (33.497/2.224\,s), the guard's original lookup and safety estimates,
 and the synthetic API rules stay fixed. Thus lifecycle timing comes from
 FidelityLoop's frozen deployment model, not from Vidur's operator profiles.
@@ -216,17 +219,17 @@ latched reservation. Two operator-aborted attempts remain in the raw history and
 are excluded from the 36 formal runs; the 15 H recovery misses remain in the
 formal evidence and are not replaced by guarded outcomes.
 
-\subsection{Bridge campaign and guard audit}
-The separate Bridge campaign contains 38 locked cells: an all2 capacity anchor,
+\subsection{Mixed-policy evidence and guard audit}
+The mixed-policy study contains 38 locked cells: an all2 capacity anchor,
 two hysteresis down-threshold settings with and without the guard, and two frozen
 PPO policies, each evaluated on recovery and steady windows. It is historical
-evidence from a different runtime group, not an extension of the E2 pool. The
+evidence from a different runtime group, not an extension of the deployment cohort. The
 compact policy summary is shown below before the raw-event audit.
 
 \begin{table}[t]
 \centering
 \small
-\caption{Separate 38-cell Bridge campaign. Entries show recovery/steady P1+
+\caption{Separate 38-cell mixed-policy study. Entries show recovery/steady P1+
 counts, followed by operating cost in the same order.}
 \label{tab:bridgepolicy}
 \setlength{\tabcolsep}{2pt}
@@ -239,7 +242,7 @@ Policy & P1+ R & P1+ S & occupied R/S & cost R/S\\
 \end{tabular*}
 \end{table}
 
-The Bridge guard audit joins each recorded risk ID to its request terminal and
+The mixed-policy guard audit joins each recorded risk ID to its request terminal and
 absolute deadline; it does not rerun the policy or form a counterfactual. Each
 cell below aggregates three guarded repeats. A risk-active run has at least one
 nonempty risk-ID set; target raises are averaged over risk-active runs; deadline
@@ -248,7 +251,7 @@ misses count late or unfinished offline requests across the three repeats.
 \begin{table}[t]
 \centering
 \small
-\caption{Raw-event guard audit for the 12 guarded cells in the separate Bridge
+\caption{Raw-event guard audit for the 12 guarded cells in the separate mixed-policy study
 campaign.}
 \label{tab:bridgeguard}
 \setlength{\tabcolsep}{2pt}
@@ -261,7 +264,7 @@ Down & window & risk runs & raises/run & misses/360 & $P1+$ pass\\
 \end{tabular*}
 \end{table}
 
-\section{V3 accounting and gate details}
+\section{Held-out accounting and gate details}
 Completed requests have a completion terminal by the observation cutoff.
 On-time completion includes equality with the deadline; late completion is
 strictly after it. Unfinished requests lack a completed terminal at cutoff,
@@ -274,7 +277,7 @@ the extension's strict qualification uses the same timely/unfinished distinction
 
 \input{replay_model_specification}
 
-E's equal-window target disagreement is 26.77\%, against the registered
+Local's equal-window target disagreement is 26.77\%, against the registered
 25\% diagnostic expectation. Predicted and observed switch counts match
 except for one burst-offline repeat (22 predicted, 24 observed).
 
@@ -319,8 +322,8 @@ single-slot reservation; without an active reservation, online has priority.
 \begin{figure*}[t]
 \centering
 \includegraphics[width=\linewidth]{figures/fig2_model_error.pdf}
-\caption{Occupied prediction error on fixed H. C30, E, and V have lower
-error than O on all three windows; the main-text table also includes C.}
+\caption{Occupied prediction error on fixed H. Lookup-30, Local, and Legacy-refit have lower
+error than Share on all three windows; the main-text table also includes Lookup-69.}
 \end{figure*}
 \begin{figure*}[t]
 \centering
@@ -332,7 +335,7 @@ The guarded arm has no misses while reducing scenario cost relative to all1.}
 \begin{table}[h]
 \centering
 \small
-\caption{Accepted V3 cost ledger. Costs are means over three repeats;
+\caption{Accepted held-out cost ledger. Costs are means over three repeats;
 the final two columns are savings percentages.}
 \label{tab:costledger}
 \setlength{\tabcolsep}{2pt}
@@ -348,7 +351,7 @@ Window & all1 & H+guard & window & deployment\\
 \begin{table}[h]
 \centering
 \small
-\caption{Gate interpretation for the locked V3 route; M3 is diagnostic.}
+\caption{Gate interpretation for the held-out study; M3 is diagnostic.}
 \label{tab:gates}
 \setlength{\tabcolsep}{2pt}
 \par\vspace{4pt}
@@ -357,10 +360,10 @@ Window & all1 & H+guard & window & deployment\\
 Gate & observed result & interpretation\\
 \midrule
 G-F & all2: 9/9 & full-capacity feasibility\\
-M1 & E: 87.50\% reduction & occupied-resource gate\\
-M1b & V: 34.24\% $L$ reduction & environment caveat\\
-M2 & O fail; C/C30/E/V pass & matched-service fidelity\\
-M3 & E: 26.77\% & diagnostic, no veto\\
+M1 & Local: 87.50\% reduction & occupied-resource gate\\
+M1b & \shortstack[l]{Legacy-refit: 34.24\%\\$L$ reduction} & environment caveat\\
+M2 & \shortstack[l]{Share fails;\\lookup-based models pass} & matched-service fidelity\\
+M3 & Local: 26.77\% & diagnostic, no veto\\
 P1+ & H+guard: 9/9 & online/offline feasibility\\
 P2 & mean: 42.74\% & window-cost gate\\
 \bottomrule
@@ -371,7 +374,7 @@ P2 & mean: 42.74\% & window-cost gate\\
 \label{sec:api-delay-sensitivity}
 
 We replay the four frozen rule policies (all1, all2, H, and H+guard)
-on the three original windows under model E, varying only the fixed
+on the three original windows under model Local, varying only the fixed
 API service delay over $\{1,2,5,10,20,40,60\}$\,s. API capacity remains
 eight concurrent requests, with the same 10\,s routing wait, prices,
 and policy parameters. All 12 five-second baselines reproduce the

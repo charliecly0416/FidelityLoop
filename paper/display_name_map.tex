@@ -1,0 +1,61 @@
+\subsection{Display names and archive identities}
+Reader-facing names describe each study's role and each replay model's timing
+assumptions. Original archive IDs remain unchanged in released records and
+filenames; \path{DISPLAY_NAMES.json} gives the machine-readable mapping.
+The study labels group related questions, not a pooled execution cohort.
+\begin{table}[t]
+\centering\small
+\caption{Study names and original archive IDs. Each retains its own runtime,
+workload, prediction freeze, and analysis denominator.}
+\par\vspace{4pt}
+\begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}ll@{}}
+\toprule
+Paper name & Archive ID\\
+\midrule
+Held-out fidelity & V3\\
+Mixed-policy & Bridge\\
+Same-runtime comparison & E1\\
+Policy deployment & E2\\
+Checkpoint screening & E3\\
+Serving-engine transfer & E4\\
+Arrival transfer & E5\\
+14B model transfer & E6\\
+External validity & V4\\
+Controllers / Llama / Refit & W1 / W2 / W3\\
+Azure full / thinned & W4 / W4-L\\
+\bottomrule
+\end{tabular*}
+\end{table}
+
+The replay names map as follows: Share (O), Lookup-69 (C), Lookup-30 (C30),
+Local (E), Legacy-refit (V), Local-refit ($V'$), Lookup-SG ($C_{\rm sg}$),
+14B-Hist (S14), 14B-Local (L14), and 14B-30 (T30-14).
+Earlier-local denotes the Azure archive's E, whose startup is 25.196\,s;
+Local in the held-out study uses the deployment-adapted 33.497\,s value.
+Numeric suffixes in Lookup-69 and Lookup-30 summarize startup seconds;
+Table~\ref{tab:displaycheckpoint} maps the distinct learned policies.
+
+\begin{table}[t]
+\centering\small
+\caption{Stable checkpoint identities across studies. Original labels and
+training coordinates remain in the corresponding evidence tables.}
+\label{tab:displaycheckpoint}
+\par\vspace{4pt}
+\begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}ll@{}}
+\toprule
+Paper name & Original display label\\
+\midrule
+PPO-1 / PPO-2 & C-1 / C-2\\
+PPO-3 / PPO-4 / PPO-5 & C30-1 / C30-2 / C30-3\\
+PPO-6 / PPO-7 / PPO-8 & N1 / N2 / N3\\
+PPO-9 / PPO-10 / PPO-11 & N4 / N5 / N6\\
+PPO-12 & Bridge PPO-C\\
+\bottomrule
+\end{tabular*}
+\end{table}
+The mixed-policy study's PPO-C30 is the same checkpoint as PPO-4 in the
+deployment study (checkpoint SHA prefix \texttt{e03a5695}, tensor SHA prefix
+\texttt{9c6cd1c2}). PPO-12 is distinct (\texttt{c77d492d},
+\texttt{b38f1732}). Both mixed-policy PPO arms control capacity without the
+guard. Shared checkpoint identity does not merge their runtime groups or
+physical outcomes.
