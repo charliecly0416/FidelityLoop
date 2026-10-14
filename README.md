@@ -4,7 +4,7 @@
 
 FidelityLoop is the research artifact accompanying the paper *FidelityLoop: Closed-Loop Validation of Elastic LLM-Serving Policies*. It connects replay predictions, policy decisions, lifecycle events, request identities, and deadline-aware cost accounting. The public CPU package supports interface checks, fixed-input replay, and result recomputation; the physical campaign reported in the paper was run separately on two NVIDIA A100 GPUs.
 
-Current paper: [main PDF](paper/main.pdf) · [supplement](paper/supplement.pdf) · [Overleaf ZIP](https://github.com/charliecly0416/FidelityLoop/releases/download/paper-v8r17-20261013/FidelityLoop_Overleaf_v8r17_20261013.zip).
+Current paper: [main PDF](paper/main.pdf) · [supplement](paper/supplement.pdf) · [Overleaf ZIP](https://github.com/charliecly0416/FidelityLoop/releases/download/paper-v9-20261014/FidelityLoop_Overleaf_v9_20261014.zip).
 
 ## What is included
 
@@ -45,6 +45,14 @@ predictions do not increase the original 197/239/555 corpus counts.
 
 Reader-facing model, study and checkpoint names are mapped to the unchanged
 archive IDs in [DISPLAY_NAMES.json](paper/DISPLAY_NAMES.json) and the supplement.
+
+## Quantized deployment validation
+
+The [AWQ-Marlin artifact](paper/artifact/awq_formal/README.md) contains 12 physical
+runs and 18 frozen predictions, separate from the 197/239/555 corpus above.
+The three-predictor comparison uses eight policy runs; four capacity anchors
+are excluded. Run `python -B paper/artifact/awq_formal/verify.py` to recompute
+feasibility agreement and resource/cost errors from the released evidence.
 
 ## Rebuilding the paper
 

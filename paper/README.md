@@ -1,20 +1,29 @@
-# FidelityLoop paper source
+# FidelityLoop v9 paper source
 
 Build `main.tex` or `supplement.tex` with pdfLaTeX and BibTeX. Import this ZIP
 into Overleaf and select the entry point; all required figures, tables, styles,
 and references are included. No shell escape or external downloads are needed.
 
-This source integrates the Vidur service model into the existing
-closed-loop validation argument. Twelve retrospective CPU rollouts are
-compared with all 36 original physical runs; no new policy GPU runs are added.
-The main body remains 10 pages, references start on page 11, and the main PDF
-has 12 pages. The supplement documents implementation and evidence details.
+This source integrates Vidur and the AWQ-Marlin deployment-context study into
+the existing closed-loop validation argument. The AWQ extension adds 12 physical
+cells while keeping the policies, windows, deadlines, and accounting contract
+fixed; it is reported as a quantized-context validation, not a quantization-only
+causal comparison. The main body remains 10 pages, references start on page 11,
+and the main PDF has 12 pages. The supplement documents implementation and
+evidence details.
 
 The opening and conclusion explain how developers can use the framework to
 diagnose replay/deployment disagreements. The background and PPO introduction
-are concise; scientific results and experimental scope are unchanged.
+remain concise; the AWQ extension is the only new physical campaign.
 
-The source includes lightweight, standard-library comparison artifacts:
+The source includes lightweight, standard-library comparison artifacts.
+The reduced AWQ-Marlin receipt is in `artifact/awq_formal/`; model weights and
+full GPU journals remain in the separately archived return package:
+
+- `python -B artifact/awq_formal/verify.py` reproduces the three frozen
+  AWQ startup-predictor comparisons on all eight policy runs, retaining both
+  deadline failures. Four regression tests check evidence tampering and strict
+  deadline semantics.
 
 - `python -B artifact/vidur_control/verify.py` recomputes deadline counts,
   occupied resources and control-target agreement for 12 predictions and
@@ -49,8 +58,9 @@ It is distributed separately from this Overleaf ZIP at the anonymous release
 address below. Full GPU archives and model weights are not part of this ZIP.
 
 The companion paired-trace corpus covers the held-out study, Bridge, E2, E3,
-E4, E5, and E6: 197 physical runs, 239 original frozen predictions and 555
-pairs. All 41 strict deadline failures remain included. Repeats reuse
+E4, E5, and E6: 197 original physical runs, 239 original frozen predictions
+and 555 pairs. The AWQ extension is a separate 12-cell deployment-context
+archive and is not included in that historical corpus count. All 41 strict deadline failures remain included. Repeats reuse
 predictions; the pairs are not independent experiments. The anonymous release
 address is https://anonymous.4open.science/r/FidelityLoop-144B/.
 

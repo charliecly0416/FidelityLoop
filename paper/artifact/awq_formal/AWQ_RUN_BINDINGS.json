@@ -1,0 +1,11 @@
+{
+  "package_manifest_sha256": "ce920e90ce8a623d5dab85832ba2e6c6bcafcd4b0c7820849f57dd4422b640d4",
+  "design_sha256": "4a75b199c2df5200d789cc9578da2a5000d5efbf9c8145e9bd61af81dc20cd37",
+  "matrix_sha256": "d104684569b06a639390da6699fe3f046a6e72415e6b87434705b973cf108975",
+  "site": {
+    "python": "/deployment/software/miniconda3/envs/qwenguard_vllm/bin/python3.12",
+    "model": "/deployment/model/Qwen2.5-7B-Instruct-AWQ"
+  },
+  "precheck_path": "/deployment/llm-scheduling/docs/awq_formal_20261014/package/precheck",
+  "precheck_manifest_sha256": "087a311348d60cb6acdfb021630b5e72427e4ef6958173a65ebd7ad48e199a4c"
+}

@@ -75,9 +75,9 @@ The full return archive was independently recomputed from request terminals and 
 
 ## Paired trace corpus
 
-The `traces/` directory is a self-contained standard-library package. From there, run `python -B verify.py`, `python -B -m unittest -v test_trace`, and `python -B evaluate.py`. Verification checks 132 physical runs, 140 unique predictions and 372 mappings; the five tests cover deadline/cutoff semantics, resource clipping and malformed inputs. The standalone ZIP can be moved to an unrelated directory and used without this repository.
+The `traces/` directory is a self-contained standard-library package. From there, run `python -B verify.py`, `python -B -m unittest -v test_trace test_e4 test_e5_e6`, and `python -B evaluate.py`. Verification checks 197 physical runs, 239 unique predictions and 555 mappings; the tests cover deadline/cutoff semantics, resource clipping and malformed inputs. The standalone ZIP can be moved to an unrelated directory and used without this repository.
 
-The corpus preserves all 35 strict-deadline negative physical runs from the four campaigns. Six technical/aborted attempts appear only in its exclusion inventory. V3's old replay feasibility flag used a different threshold; the tools recompute strict outcomes from requests. E3's comparison excludes its two anchors. See `traces/SCHEMA.md` for exact time, event, accounting and redaction semantics. These checks reproduce projected measurements, not OS-level GPU release verification or model answers.
+The corpus preserves all 41 strict-deadline negative physical runs from the seven campaigns. Eight technical/aborted attempts appear only in its exclusion inventory. V3's old replay feasibility flag used a different threshold; the tools recompute strict outcomes from requests. E3's comparison excludes its two anchors. See `traces/SCHEMA.md` for exact time, event, accounting and redaction semantics. These checks reproduce projected measurements, not OS-level GPU release verification or model answers.
 
 ## Historical archive paths in the supplement
 
@@ -104,3 +104,15 @@ needed. The 12 existing predictions and 25,200 decisions are checked against
 the accepted outputs. The lightweight result checkers in [paper/README.md](paper/README.md)
 remain standard-library-only. Original paired corpus counts: 197 physical runs,
 239 original predictions, 555 pairs, with all 41 strict failures retained.
+
+## AWQ-Marlin deployment validation
+
+Run `python -B paper/artifact/awq_formal/verify.py` and
+`python -B -m unittest discover -s paper/artifact/awq_formal -p test_verify.py -v`.
+The verifier checks 18 frozen predictions against their receipt and reconstructs
+strict P1+ from 12 reduced physical accounting records. The comparison excludes
+four anchors and uses eight policy runs: AWQ-Hist agrees on 6/8 with two false
+rejections; AWQ-30 and AWQ-Local agree on 8/8. Four unique policy/window predictions
+per model are reused over two repeats. This archive is separate from the paired
+trace corpus above. `paper/PUBLIC_EXPORT.json` records path anonymization; the
+historical return manifest refers to the retained original files.

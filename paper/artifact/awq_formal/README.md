@@ -1,0 +1,7 @@
+# AWQ-Marlin formal deployment artifact
+
+This reduced artifact accompanies the AWQ-Marlin deployment-context extension in Appendix `Quantized deployment validation`. It preserves the frozen campaign matrix, run bindings, per-cell accounting records, summary metrics, and the independent site verification receipt. It does not redistribute model weights or full raw GPU event journals.
+
+The study uses Qwen2.5-7B-Instruct-AWQ with vLLM 0.9.0/AWQ-Marlin on one host with two A100 80GB GPUs. The policies, windows, deadlines, and accounting contract are inherited from the main study. Twelve physical cells were valid; AWQ-Local matched all eight policy feasibility outcomes and all 2,100 control ticks in each policy cell, with zero false accepts and zero false rejects. The counterfactual AWQ-Hist and AWQ-30 replays are included so the historical-startup boundary effect is auditable.
+
+`SUMMARY.json` is the canonical reduced result. `CPU_PREDICTION_RECEIPT.json` and the compressed `cells/` records preserve all 18 frozen AWQ predictions. `AWQ_PREDICTOR_COMPARISON.json` and `verify.py` recompute the three-startup comparison from those predictions and the reduced ledgers. The `accounting/` records bind physical outcomes to frozen predictions. `RETURN_MANIFEST.json` and the evidence files identify the complete GPU return package from which this reduced artifact was extracted. The archive is a deployment-context validation, not a quantization-only causal comparison.

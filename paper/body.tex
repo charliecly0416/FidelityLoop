@@ -31,9 +31,9 @@ local accuracy need not preserve closed-loop behavior.
 \item \textbf{Decision consequences and reproducible evidence.} Retrospective
 policy selection connects false accepts and false rejects to failed deployments
 and higher costs within tested candidate pools. Rule-based and frozen PPO
-policies, additional arrivals, serving-stack changes, and a model-size port
-exercise the validation framework across contexts. A guard case study
-quantifies deadline protection and resource--latency trade-offs. We release
+policies, additional arrivals, serving-stack changes, and model-size ports
+exercise the validation framework. A guard case study quantifies deadline
+protection and resource--latency trade-offs. We release
 paired traces and CPU tools for inspecting these outcomes and replaying the
 fixed Vidur-backed cases.
 \end{enumerate}
@@ -227,8 +227,8 @@ the full-stack change and token-input compatibility.
 The arrival study retains the SGLang/7B stack and frozen predictors on
 three additional windows (27 cells, including 24 policy cells). The 14B study ports the
 contract to Qwen2.5-14B-Instruct/vLLM on the two locked windows (12 cells),
-freezing two predictors that differ only in startup; neither extension retrains
-PPO or searches policy parameters.
+freezing two predictors that differ only in startup. Finally, 12 AWQ-Marlin cells
+validate the same 7B/vLLM contract under one quantized deployment context.
 
 \section{Method}
 Predictive replay and physical execution share a policy contract. Adapters read
@@ -422,8 +422,8 @@ In fixed all1/all2 tests, maximum service MAE is 0.064 s for all four
 lookup-based models, versus 3.016 s for Share. On dynamic arms, the
 minimum common support across model/route projections is 122 requests and the
 maximum common-support MAE is 0.129 s for Lookup-69, 0.112 s for Lookup-30, 0.110 s for Local, and
-0.112 s for Legacy-refit; Share reaches 4.510 s. Common support is the intersection of request 
-IDs completed locally in the compared predictions and physical runs; coverage 
+0.112 s for Legacy-refit; Share reaches 4.510 s. Common support is the intersection of request
+IDs completed locally in the compared predictions and physical runs; coverage
 and routing discrepancies are reported in the artifact.
 
 Table~\ref{tab:modelerror} reports window-wise occupied-resource errors for
@@ -452,7 +452,7 @@ This deterioration is not uniform across windows. Holding service fixed,
 Lookup-30 lowers occupied MAE to 76.19 GPU seconds, isolating startup.
 
 Retrospective analysis of the frozen trajectories explains this endpoint effect
-and its limits (Supplement Section~M). In all three windows, Lookup-69/Lookup-30 targets first diverge
+and its limits (Supplement Section~N). In all three windows, Lookup-69/Lookup-30 targets first diverge
 60 s after a common instance start: Lookup-69 remains unready with higher queue/running
 pressure; Lookup-30 is ready. This simulator contrast is not a physical intervention
 on startup or cooldown. Six burst/recovery physical repeats first disagree in
@@ -642,12 +642,20 @@ raises the target to two GPUs, altering later dispatch and deadline outcomes.
 The supplement traces these feedback paths and distinguishes them from
 physical-state mismatches that precede restart.
 
+The AWQ-Marlin cells transfer the contract to quantized Qwen2.5-7B/vLLM. All four
+all2 anchors pass, and AWQ-Local matches all eight policy outcomes with zero target
+disagreements (occupancy/cost MAE: 2.745 GPU seconds/0.00436 scenario USD). AWQ-Hist's
+69.219-second startup proxy falsely rejects both feasible H+guard steady repeats
+(6/8 correct); the 30-second AWQ-30 matches 8/8 with roughly $3\times$ the occupancy error. Both
+H/steady failures repeat the same unfinished offline request; details are in the
+supplement.
+
 These errors also affect deployment choices. Retrospectively requiring
 predicted P1+ in every window, then minimizing mean predicted cost, selects
 PPO-2 in the deployment study under Lookup-30; it fails all six physical runs. In the engine study, Lookup-69 selects a
 feasible policy costing 58.95\% more than the lowest-cost feasible policy
 in the tested pool, which Lookup-30 and Lookup-SG select. Across a $3\times3$ GPU/API price grid, the deployment study's failing choice persists and
-the engine study's gap ranges from 16.56\% to 80.17\%. Supplement Section~K reports choices and ties. The interfaces
+the engine study's gap ranges from 16.56\% to 80.17\%. Supplement Section~L reports choices and ties. The interfaces
 transfer across serving contexts; physical outcomes validate both predictions
 and their consequences for policy selection.
 
@@ -788,11 +796,9 @@ The supplementary CPU microbenchmark measures \texttt{adapter.decide} on
 reconstructed states, excluding live-serving and full-controller overhead.
 
 \paragraph{Practical validation.}
-Measure lifecycle timing for the deployment, then freeze predictions before
-physical execution. Check service timing, resource use, and control trajectories
-separately; report false accepts and false rejects, retaining each physical
-repeat. Condition savings on meeting deadlines. When arrivals or serving
-context change, repeat these checks under the same accounting contract.
+Measure lifecycle timing, freeze predictions, and compare service, resource, and
+control traces; report false accepts/rejects and condition savings on deadlines.
+Repeat these checks when arrivals or serving context change.
 
 \section{Scope and limitations}
 The synthetic API implements a five-second timer after routing wait, without
@@ -810,7 +816,9 @@ windows; screening and arrival cohorts are all feasible, whereas the engine
 and 14B cohorts contain two and four infeasible policy runs.
 The evidence does not establish large-scale heterogeneous deployment or a
 general ranking of replay models, PPO training environments, or PPO versus
-the guard; other model families and quantized inference remain untested.
+the guard. The AWQ result covers one 7B AWQ-Marlin deployment context; quantization
+causality, other quantizers, and other model families in quantized deployment
+remain untested.
 
 Runtime identities remain separate: deployment drift confounds Legacy-refit--Local, the screening study uses
 one allocation per window, and the engine study changes the engine and dependencies together.
@@ -821,14 +829,9 @@ no general safety guarantee, as the Llama failure illustrates. The supplement
 retains technical-attempt history and detailed boundaries.
 
 \section{Conclusion}
-FidelityLoop connects replay-based policy selection to physical deadline and
-resource outcomes through a shared policy interface and aligned execution
-records. Its measurements and replay contrasts show how startup--cooldown
-interactions and temporally misplaced capacity can undermine deployment
-decisions despite accurate service or aggregate-resource estimates.
-
-Across the tested contexts, replay errors can admit failing policies or
-exclude lower-cost feasible alternatives. Rule-based and learned policies,
-two serving engines, and an external service model exercise the same
-validation framework. The released traces and CPU tools let developers reproduce
-these diagnoses and reuse the validation contract.
+FidelityLoop links replay-based policy selection to physical deadline and
+resource outcomes. Startup--cooldown interactions and misplaced capacity can
+admit failing policies or exclude cheaper feasible alternatives despite accurate
+service or aggregate-resource estimates. Rule-based and learned policies, two
+serving engines, and an external service model exercise this validation contract;
+released traces and CPU tools support reuse.

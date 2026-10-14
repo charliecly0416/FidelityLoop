@@ -1,0 +1,397 @@
+{
+  "schema": "maxopt-bridge-campaign-state-v1",
+  "lock_sha256": "d43fc9f561c7a25820e91b6295067803a688a49e1475d6f598261225eeb56801",
+  "execution_evidence": "GPU_FORMAL_BRIDGE",
+  "remaining_wall_seconds": 146792.9458477497,
+  "planned": 12,
+  "effective": 12,
+  "actual_attempts": 12,
+  "retries_used": 0,
+  "complete": true,
+  "cells": {
+    "all2__bridge_locked_test_recovery_v1__r1": {
+      "cell": {
+        "run_id": "all2__bridge_locked_test_recovery_v1__r1",
+        "policy_id": "all2",
+        "window_id": "bridge_locked_test_recovery_v1",
+        "repeat": 1,
+        "kind": "CAPACITY",
+        "initial_status": "READY"
+      },
+      "status": "COMPLETED",
+      "attempts": [
+        {
+          "attempt": 1,
+          "folder": "/deployment/llm-scheduling/docs/awq_formal_20261014/AWQ_FORMAL_OUTPUT/campaign/cells/all2__bridge_locked_test_recovery_v1__r1/attempt_01",
+          "status": "COMPLETED",
+          "cell_manifest": {
+            "path": "/deployment/llm-scheduling/docs/awq_formal_20261014/AWQ_FORMAL_OUTPUT/campaign/cells/all2__bridge_locked_test_recovery_v1__r1/attempt_01/CELL_MANIFEST.json",
+            "sha256": "c54e4cec9129e5289b5a76fc7f51df66532f6a1b0ab7f0a41cf3608163c2e2c4"
+          },
+          "event_sha256": "1141e3bed9683ac5bf92958037fc06044e35e912d2bbf914ab5e91371ed708fa",
+          "kind": "attempt_finished",
+          "previous_sha256": "3d3615b44f2e68defd810ba6230a914e951579dc2208763bf7d61ea8feddc371",
+          "result": {
+            "path": "/deployment/llm-scheduling/docs/awq_formal_20261014/AWQ_FORMAL_OUTPUT/campaign/cells/all2__bridge_locked_test_recovery_v1__r1/attempt_01/CELL_RESULT.json",
+            "sha256": "d937b05fc03bae0c1732ea4101decd691f481e01e57eff32ebca9d3fccce5c1d"
+          },
+          "run_id": "all2__bridge_locked_test_recovery_v1__r1",
+          "seq": 2
+        }
+      ],
+      "retry_authorized": false
+    },
+    "hysteresis_u8_d0_c60__bridge_locked_test_recovery_v1__r1": {
+      "cell": {
+        "run_id": "hysteresis_u8_d0_c60__bridge_locked_test_recovery_v1__r1",
+        "policy_id": "hysteresis_u8_d0_c60",
+        "window_id": "bridge_locked_test_recovery_v1",
+        "repeat": 1,
+        "kind": "COMPARISON",
+        "initial_status": "READY"
+      },
+      "status": "COMPLETED",
+      "attempts": [
+        {
+          "attempt": 1,
+          "folder": "/deployment/llm-scheduling/docs/awq_formal_20261014/AWQ_FORMAL_OUTPUT/campaign/cells/hysteresis_u8_d0_c60__bridge_locked_test_recovery_v1__r1/attempt_01",
+          "status": "COMPLETED",
+          "cell_manifest": {
+            "path": "/deployment/llm-scheduling/docs/awq_formal_20261014/AWQ_FORMAL_OUTPUT/campaign/cells/hysteresis_u8_d0_c60__bridge_locked_test_recovery_v1__r1/attempt_01/CELL_MANIFEST.json",
+            "sha256": "48e1c5cefff9cd9355869225d997850894ead2c16a0f25ba91d047255dfd8ad4"
+          },
+          "event_sha256": "1d8b743ebf01133e95bd36b5169eb674bcc2c40b80cf584c3572fffe1e3afa53",
+          "kind": "attempt_finished",
+          "previous_sha256": "d4bc23b73f6dd27ff53f6a65d6e98096bed3a1eca442a55ff71969085c858afe",
+          "result": {
+            "path": "/deployment/llm-scheduling/docs/awq_formal_20261014/AWQ_FORMAL_OUTPUT/campaign/cells/hysteresis_u8_d0_c60__bridge_locked_test_recovery_v1__r1/attempt_01/CELL_RESULT.json",
+            "sha256": "add45cca8a279c27237f92666566e716b0547c0adf544e92f285a2351257d12e"
+          },
+          "run_id": "hysteresis_u8_d0_c60__bridge_locked_test_recovery_v1__r1",
+          "seq": 4
+        }
+      ],
+      "retry_authorized": false
+    },
+    "hysteresis_u8_d0_c60__guard__bridge_locked_test_recovery_v1__r1": {
+      "cell": {
+        "run_id": "hysteresis_u8_d0_c60__guard__bridge_locked_test_recovery_v1__r1",
+        "policy_id": "hysteresis_u8_d0_c60__guard",
+        "window_id": "bridge_locked_test_recovery_v1",
+        "repeat": 1,
+        "kind": "COMPARISON",
+        "initial_status": "READY"
+      },
+      "status": "COMPLETED",
+      "attempts": [
+        {
+          "attempt": 1,
+          "folder": "/deployment/llm-scheduling/docs/awq_formal_20261014/AWQ_FORMAL_OUTPUT/campaign/cells/hysteresis_u8_d0_c60__guard__bridge_locked_test_recovery_v1__r1/attempt_01",
+          "status": "COMPLETED",
+          "cell_manifest": {
+            "path": "/deployment/llm-scheduling/docs/awq_formal_20261014/AWQ_FORMAL_OUTPUT/campaign/cells/hysteresis_u8_d0_c60__guard__bridge_locked_test_recovery_v1__r1/attempt_01/CELL_MANIFEST.json",
+            "sha256": "d392953542360f8da33bae5a4db6de08d193830587303b9828e07c2cef2530ce"
+          },
+          "event_sha256": "b4625afba43ba2e9e08f4c97782796d3336092ca11a9519f9cd2fb2c2f21519b",
+          "kind": "attempt_finished",
+          "previous_sha256": "87cf338714d7fc3c7991904bb7f0451445a0fd0784e4b070e2ff1acc2011779a",
+          "result": {
+            "path": "/deployment/llm-scheduling/docs/awq_formal_20261014/AWQ_FORMAL_OUTPUT/campaign/cells/hysteresis_u8_d0_c60__guard__bridge_locked_test_recovery_v1__r1/attempt_01/CELL_RESULT.json",
+            "sha256": "bc9253019751103809137c31b85f3f0a2078cdd2ee05e59802b83abc461fb658"
+          },
+          "run_id": "hysteresis_u8_d0_c60__guard__bridge_locked_test_recovery_v1__r1",
+          "seq": 6
+        }
+      ],
+      "retry_authorized": false
+    },
+    "all2__bridge_locked_test_recovery_v1__r2": {
+      "cell": {
+        "run_id": "all2__bridge_locked_test_recovery_v1__r2",
+        "policy_id": "all2",
+        "window_id": "bridge_locked_test_recovery_v1",
+        "repeat": 2,
+        "kind": "CAPACITY",
+        "initial_status": "READY"
+      },
+      "status": "COMPLETED",
+      "attempts": [
+        {
+          "attempt": 1,
+          "folder": "/deployment/llm-scheduling/docs/awq_formal_20261014/AWQ_FORMAL_OUTPUT/campaign/cells/all2__bridge_locked_test_recovery_v1__r2/attempt_01",
+          "status": "COMPLETED",
+          "cell_manifest": {
+            "path": "/deployment/llm-scheduling/docs/awq_formal_20261014/AWQ_FORMAL_OUTPUT/campaign/cells/all2__bridge_locked_test_recovery_v1__r2/attempt_01/CELL_MANIFEST.json",
+            "sha256": "15b756143f0af4f834a77691b43e488cfc6ab2ffe426a774c059bc54db2e9db0"
+          },
+          "event_sha256": "b16ec2cfe1dece1ec1fae1c5eb0d209252d1f5df422bf26d943db04f1d716e5e",
+          "kind": "attempt_finished",
+          "previous_sha256": "bf1603899c5d682b664dcc4e718b8239770398f39f010f041e4993ddde6174f3",
+          "result": {
+            "path": "/deployment/llm-scheduling/docs/awq_formal_20261014/AWQ_FORMAL_OUTPUT/campaign/cells/all2__bridge_locked_test_recovery_v1__r2/attempt_01/CELL_RESULT.json",
+            "sha256": "8d69e9f6fb719c363bfb4413f9e5411969cb892e221c01d30f02d3bfd719de7e"
+          },
+          "run_id": "all2__bridge_locked_test_recovery_v1__r2",
+          "seq": 8
+        }
+      ],
+      "retry_authorized": false
+    },
+    "hysteresis_u8_d0_c60__guard__bridge_locked_test_recovery_v1__r2": {
+      "cell": {
+        "run_id": "hysteresis_u8_d0_c60__guard__bridge_locked_test_recovery_v1__r2",
+        "policy_id": "hysteresis_u8_d0_c60__guard",
+        "window_id": "bridge_locked_test_recovery_v1",
+        "repeat": 2,
+        "kind": "COMPARISON",
+        "initial_status": "READY"
+      },
+      "status": "COMPLETED",
+      "attempts": [
+        {
+          "attempt": 1,
+          "folder": "/deployment/llm-scheduling/docs/awq_formal_20261014/AWQ_FORMAL_OUTPUT/campaign/cells/hysteresis_u8_d0_c60__guard__bridge_locked_test_recovery_v1__r2/attempt_01",
+          "status": "COMPLETED",
+          "cell_manifest": {
+            "path": "/deployment/llm-scheduling/docs/awq_formal_20261014/AWQ_FORMAL_OUTPUT/campaign/cells/hysteresis_u8_d0_c60__guard__bridge_locked_test_recovery_v1__r2/attempt_01/CELL_MANIFEST.json",
+            "sha256": "9b264b6b8aa6f32f5d08235d6b6fc930d1f344404b7efbdf0e4ade7f1f4e3a65"
+          },
+          "event_sha256": "54df0537faa7c62b8415e1fc2ad4a5642f4186a5c3d6560735e75547f9a16640",
+          "kind": "attempt_finished",
+          "previous_sha256": "42f20e03ae7e1902d71f16bb6b7f608dfaa305de62f3a40d92a899ba1fc72324",
+          "result": {
+            "path": "/deployment/llm-scheduling/docs/awq_formal_20261014/AWQ_FORMAL_OUTPUT/campaign/cells/hysteresis_u8_d0_c60__guard__bridge_locked_test_recovery_v1__r2/attempt_01/CELL_RESULT.json",
+            "sha256": "774d3dca5004b8a2db2e4607cdd1fe1fa6184590f353f7fe84905e569335ae7d"
+          },
+          "run_id": "hysteresis_u8_d0_c60__guard__bridge_locked_test_recovery_v1__r2",
+          "seq": 10
+        }
+      ],
+      "retry_authorized": false
+    },
+    "hysteresis_u8_d0_c60__bridge_locked_test_recovery_v1__r2": {
+      "cell": {
+        "run_id": "hysteresis_u8_d0_c60__bridge_locked_test_recovery_v1__r2",
+        "policy_id": "hysteresis_u8_d0_c60",
+        "window_id": "bridge_locked_test_recovery_v1",
+        "repeat": 2,
+        "kind": "COMPARISON",
+        "initial_status": "READY"
+      },
+      "status": "COMPLETED",
+      "attempts": [
+        {
+          "attempt": 1,
+          "folder": "/deployment/llm-scheduling/docs/awq_formal_20261014/AWQ_FORMAL_OUTPUT/campaign/cells/hysteresis_u8_d0_c60__bridge_locked_test_recovery_v1__r2/attempt_01",
+          "status": "COMPLETED",
+          "cell_manifest": {
+            "path": "/deployment/llm-scheduling/docs/awq_formal_20261014/AWQ_FORMAL_OUTPUT/campaign/cells/hysteresis_u8_d0_c60__bridge_locked_test_recovery_v1__r2/attempt_01/CELL_MANIFEST.json",
+            "sha256": "c63efe3b80e2518d3654515cf0448d829df192e9e389c8d04292ed9770819551"
+          },
+          "event_sha256": "e223508b5d89395ee28e1ca3fd4ac4f97e180aba2bc6e73236d25f7ee36e4096",
+          "kind": "attempt_finished",
+          "previous_sha256": "5de13a8aa6cc8b65e9862204ce9a1e2d8736c31099d62c6b3691480e2688b020",
+          "result": {
+            "path": "/deployment/llm-scheduling/docs/awq_formal_20261014/AWQ_FORMAL_OUTPUT/campaign/cells/hysteresis_u8_d0_c60__bridge_locked_test_recovery_v1__r2/attempt_01/CELL_RESULT.json",
+            "sha256": "77a5957141194e9b6d178859fff07931526b43f0ce81e937c6ad1e81ec8e4226"
+          },
+          "run_id": "hysteresis_u8_d0_c60__bridge_locked_test_recovery_v1__r2",
+          "seq": 12
+        }
+      ],
+      "retry_authorized": false
+    },
+    "all2__bridge_locked_test_steady_v1__r1": {
+      "cell": {
+        "run_id": "all2__bridge_locked_test_steady_v1__r1",
+        "policy_id": "all2",
+        "window_id": "bridge_locked_test_steady_v1",
+        "repeat": 1,
+        "kind": "CAPACITY",
+        "initial_status": "READY"
+      },
+      "status": "COMPLETED",
+      "attempts": [
+        {
+          "attempt": 1,
+          "folder": "/deployment/llm-scheduling/docs/awq_formal_20261014/AWQ_FORMAL_OUTPUT/campaign/cells/all2__bridge_locked_test_steady_v1__r1/attempt_01",
+          "status": "COMPLETED",
+          "cell_manifest": {
+            "path": "/deployment/llm-scheduling/docs/awq_formal_20261014/AWQ_FORMAL_OUTPUT/campaign/cells/all2__bridge_locked_test_steady_v1__r1/attempt_01/CELL_MANIFEST.json",
+            "sha256": "a40a5905016a15e06942b1369daf0a88e56af6add7398b25a82d25907f7c87f5"
+          },
+          "event_sha256": "302796380955cb429af89fbcf68a39719576125be0fd2af5fef39df7c3bfc8b1",
+          "kind": "attempt_finished",
+          "previous_sha256": "358d4f684b630c8109317dcbca0d77140b8fe06df61a9c1cc081cfc93e6f84d0",
+          "result": {
+            "path": "/deployment/llm-scheduling/docs/awq_formal_20261014/AWQ_FORMAL_OUTPUT/campaign/cells/all2__bridge_locked_test_steady_v1__r1/attempt_01/CELL_RESULT.json",
+            "sha256": "d4b51101f233ab5ca591c74e1416256c316da4c4fc4fddf8aa058262f5e6fd2f"
+          },
+          "run_id": "all2__bridge_locked_test_steady_v1__r1",
+          "seq": 14
+        }
+      ],
+      "retry_authorized": false
+    },
+    "hysteresis_u8_d0_c60__guard__bridge_locked_test_steady_v1__r1": {
+      "cell": {
+        "run_id": "hysteresis_u8_d0_c60__guard__bridge_locked_test_steady_v1__r1",
+        "policy_id": "hysteresis_u8_d0_c60__guard",
+        "window_id": "bridge_locked_test_steady_v1",
+        "repeat": 1,
+        "kind": "COMPARISON",
+        "initial_status": "READY"
+      },
+      "status": "COMPLETED",
+      "attempts": [
+        {
+          "attempt": 1,
+          "folder": "/deployment/llm-scheduling/docs/awq_formal_20261014/AWQ_FORMAL_OUTPUT/campaign/cells/hysteresis_u8_d0_c60__guard__bridge_locked_test_steady_v1__r1/attempt_01",
+          "status": "COMPLETED",
+          "cell_manifest": {
+            "path": "/deployment/llm-scheduling/docs/awq_formal_20261014/AWQ_FORMAL_OUTPUT/campaign/cells/hysteresis_u8_d0_c60__guard__bridge_locked_test_steady_v1__r1/attempt_01/CELL_MANIFEST.json",
+            "sha256": "92f6065bd8d90c0e060163c3377ddfeeec95516c6e9ffc81191e05edf4ec0950"
+          },
+          "event_sha256": "e97326b8000ac3aa3e4f70a3810b261a7ef81b5804780abd4ddd4a60d9a7674c",
+          "kind": "attempt_finished",
+          "previous_sha256": "884f7e57e79da2026053481b22887416529c6c34460491bd31c37cde0235ef37",
+          "result": {
+            "path": "/deployment/llm-scheduling/docs/awq_formal_20261014/AWQ_FORMAL_OUTPUT/campaign/cells/hysteresis_u8_d0_c60__guard__bridge_locked_test_steady_v1__r1/attempt_01/CELL_RESULT.json",
+            "sha256": "80d8a2c74d4204967bf6aaf04ccc3a2bb3fd84ded292a1c3945a8090e64c2b08"
+          },
+          "run_id": "hysteresis_u8_d0_c60__guard__bridge_locked_test_steady_v1__r1",
+          "seq": 16
+        }
+      ],
+      "retry_authorized": false
+    },
+    "hysteresis_u8_d0_c60__bridge_locked_test_steady_v1__r1": {
+      "cell": {
+        "run_id": "hysteresis_u8_d0_c60__bridge_locked_test_steady_v1__r1",
+        "policy_id": "hysteresis_u8_d0_c60",
+        "window_id": "bridge_locked_test_steady_v1",
+        "repeat": 1,
+        "kind": "COMPARISON",
+        "initial_status": "READY"
+      },
+      "status": "NEGATIVE_RESULT",
+      "attempts": [
+        {
+          "attempt": 1,
+          "folder": "/deployment/llm-scheduling/docs/awq_formal_20261014/AWQ_FORMAL_OUTPUT/campaign/cells/hysteresis_u8_d0_c60__bridge_locked_test_steady_v1__r1/attempt_01",
+          "status": "NEGATIVE_RESULT",
+          "cell_manifest": {
+            "path": "/deployment/llm-scheduling/docs/awq_formal_20261014/AWQ_FORMAL_OUTPUT/campaign/cells/hysteresis_u8_d0_c60__bridge_locked_test_steady_v1__r1/attempt_01/CELL_MANIFEST.json",
+            "sha256": "f667cf64d4d306c713af11e038764c36d1f0f54d997b033a36ca2072811665cd"
+          },
+          "event_sha256": "074601b9eb877d81e887fbc936263e245cf100cbc057c7300b7261fd34ebf167",
+          "kind": "attempt_finished",
+          "previous_sha256": "ecadddcfbb3fc063f3090c3daa9ff534e5aced1ab24e4440c39dd6c9d54d0983",
+          "result": {
+            "path": "/deployment/llm-scheduling/docs/awq_formal_20261014/AWQ_FORMAL_OUTPUT/campaign/cells/hysteresis_u8_d0_c60__bridge_locked_test_steady_v1__r1/attempt_01/CELL_RESULT.json",
+            "sha256": "c4f460499ef3733d71f11723977b581649b881b2444099fc2a3026233c975169"
+          },
+          "run_id": "hysteresis_u8_d0_c60__bridge_locked_test_steady_v1__r1",
+          "seq": 18
+        }
+      ],
+      "retry_authorized": false
+    },
+    "all2__bridge_locked_test_steady_v1__r2": {
+      "cell": {
+        "run_id": "all2__bridge_locked_test_steady_v1__r2",
+        "policy_id": "all2",
+        "window_id": "bridge_locked_test_steady_v1",
+        "repeat": 2,
+        "kind": "CAPACITY",
+        "initial_status": "READY"
+      },
+      "status": "COMPLETED",
+      "attempts": [
+        {
+          "attempt": 1,
+          "folder": "/deployment/llm-scheduling/docs/awq_formal_20261014/AWQ_FORMAL_OUTPUT/campaign/cells/all2__bridge_locked_test_steady_v1__r2/attempt_01",
+          "status": "COMPLETED",
+          "cell_manifest": {
+            "path": "/deployment/llm-scheduling/docs/awq_formal_20261014/AWQ_FORMAL_OUTPUT/campaign/cells/all2__bridge_locked_test_steady_v1__r2/attempt_01/CELL_MANIFEST.json",
+            "sha256": "83de5f07680a9b8d17bbb618d0bdc4e87104b0f4ad5e417e644761c610399412"
+          },
+          "event_sha256": "146fd89fe220891f10ddefd3fbfb4a57343bbed5780d150cf029fc21058cdcb8",
+          "kind": "attempt_finished",
+          "previous_sha256": "6f6f7564417f44ece4e0442537ce778a242e3e8646eef9565696a2592598cca9",
+          "result": {
+            "path": "/deployment/llm-scheduling/docs/awq_formal_20261014/AWQ_FORMAL_OUTPUT/campaign/cells/all2__bridge_locked_test_steady_v1__r2/attempt_01/CELL_RESULT.json",
+            "sha256": "6432a4391ee36759a6545440052be87fcf4ca2ddf07b722ad3ca962b10d3fbe7"
+          },
+          "run_id": "all2__bridge_locked_test_steady_v1__r2",
+          "seq": 20
+        }
+      ],
+      "retry_authorized": false
+    },
+    "hysteresis_u8_d0_c60__bridge_locked_test_steady_v1__r2": {
+      "cell": {
+        "run_id": "hysteresis_u8_d0_c60__bridge_locked_test_steady_v1__r2",
+        "policy_id": "hysteresis_u8_d0_c60",
+        "window_id": "bridge_locked_test_steady_v1",
+        "repeat": 2,
+        "kind": "COMPARISON",
+        "initial_status": "READY"
+      },
+      "status": "NEGATIVE_RESULT",
+      "attempts": [
+        {
+          "attempt": 1,
+          "folder": "/deployment/llm-scheduling/docs/awq_formal_20261014/AWQ_FORMAL_OUTPUT/campaign/cells/hysteresis_u8_d0_c60__bridge_locked_test_steady_v1__r2/attempt_01",
+          "status": "NEGATIVE_RESULT",
+          "cell_manifest": {
+            "path": "/deployment/llm-scheduling/docs/awq_formal_20261014/AWQ_FORMAL_OUTPUT/campaign/cells/hysteresis_u8_d0_c60__bridge_locked_test_steady_v1__r2/attempt_01/CELL_MANIFEST.json",
+            "sha256": "1881a0cd8bcafa49fac9b11fed870a9e814236019e98dfd3a55d351e099703da"
+          },
+          "event_sha256": "ab0f2073805a47c7482498e19acdb75dea3ecd12bc4d8860c884a8702d692856",
+          "kind": "attempt_finished",
+          "previous_sha256": "adc875615b164f14e8a9276bbb8be5632c7ded536f51609cb4b0c8d76eb40099",
+          "result": {
+            "path": "/deployment/llm-scheduling/docs/awq_formal_20261014/AWQ_FORMAL_OUTPUT/campaign/cells/hysteresis_u8_d0_c60__bridge_locked_test_steady_v1__r2/attempt_01/CELL_RESULT.json",
+            "sha256": "1346400dd0ba9bfc00dbe23495a3db6d7bfd5248d0faa0a23fec0681933245d9"
+          },
+          "run_id": "hysteresis_u8_d0_c60__bridge_locked_test_steady_v1__r2",
+          "seq": 22
+        }
+      ],
+      "retry_authorized": false
+    },
+    "hysteresis_u8_d0_c60__guard__bridge_locked_test_steady_v1__r2": {
+      "cell": {
+        "run_id": "hysteresis_u8_d0_c60__guard__bridge_locked_test_steady_v1__r2",
+        "policy_id": "hysteresis_u8_d0_c60__guard",
+        "window_id": "bridge_locked_test_steady_v1",
+        "repeat": 2,
+        "kind": "COMPARISON",
+        "initial_status": "READY"
+      },
+      "status": "COMPLETED",
+      "attempts": [
+        {
+          "attempt": 1,
+          "folder": "/deployment/llm-scheduling/docs/awq_formal_20261014/AWQ_FORMAL_OUTPUT/campaign/cells/hysteresis_u8_d0_c60__guard__bridge_locked_test_steady_v1__r2/attempt_01",
+          "status": "COMPLETED",
+          "cell_manifest": {
+            "path": "/deployment/llm-scheduling/docs/awq_formal_20261014/AWQ_FORMAL_OUTPUT/campaign/cells/hysteresis_u8_d0_c60__guard__bridge_locked_test_steady_v1__r2/attempt_01/CELL_MANIFEST.json",
+            "sha256": "b56f4397a3dab3455521760779a213dd2baefb2a78d721c6c397f54eadf9b9c1"
+          },
+          "event_sha256": "5c984391d828910293b63cd16a36551a6d6776a6d935cc6a9f476a4d5dfb5330",
+          "kind": "attempt_finished",
+          "previous_sha256": "c03702f5cf63b806b68ecbcb46ef3516a578a41f75cf9bd66f5a25e4accedf1d",
+          "result": {
+            "path": "/deployment/llm-scheduling/docs/awq_formal_20261014/AWQ_FORMAL_OUTPUT/campaign/cells/hysteresis_u8_d0_c60__guard__bridge_locked_test_steady_v1__r2/attempt_01/CELL_RESULT.json",
+            "sha256": "eddbfdd5954f2cbfbaac1ceecb08891615bedc4f98dd265323520c66b4d338f4"
+          },
+          "run_id": "hysteresis_u8_d0_c60__guard__bridge_locked_test_steady_v1__r2",
+          "seq": 24
+        }
+      ],
+      "retry_authorized": false
+    }
+  }
+}

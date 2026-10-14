@@ -55,8 +55,13 @@ def main():
                     raise ValueError(f"Equal-window MAE mismatch: {campaign}/{model}/{field}")
                 means[field] = value
             fa_text = f"{fa}/{failed}" if failed else "---"
-            label = "C$_{\\rm sg}$" if model == "C_sg" else model
-            table.append(f"{campaign.upper()} & {label} & {correct}/{len(group)} & {fa_text} & {fr}/{passed} & {means[fields[0]]:.4f} & {means[fields[1]]:.2f} & {means[fields[2]]:.2f}" + chr(92)*2)
+            # Match the reader-facing display names used by the paper table.
+            # The CSV keeps the archived model IDs; this mapping is presentation only.
+            study = "Arrivals" if campaign == "e5" else "14B"
+            labels = {"C": "Lookup-69", "C30": "Lookup-30", "C_sg": "Lookup-SG",
+                      "S14": "14B-Hist", "L14": "14B-Local"}
+            label = labels[model]
+            table.append(f"{study} & {label} & {correct}/{len(group)} & {fa_text} & {fr}/{passed} & {means[fields[0]]:.4f} & {means[fields[1]]:.2f} & {means[fields[2]]:.2f}" + chr(92)*2)
             checks.append({"campaign": campaign, "model": model, "correct": correct,
                            "cells": len(group), "false_accepts": fa, "false_rejects": fr})
     generated = ROOT.parents[1] / "generated/e5e6_rows.tex"
