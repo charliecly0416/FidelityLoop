@@ -1,0 +1,98 @@
+\section{Quantized deployment validation}
+\label{app:awq}
+
+The AWQ study extends the closed-loop validation contract to one quantized
+serving configuration. It is a deployment-context validation, rather than a
+quantization-only causal comparison: the quantized weights, kernel, loading
+path, and runtime are all part of the new configuration. The policies,
+workloads, deadlines, accounting prices, and guard rule remain those fixed in
+the main study.
+
+\paragraph{Fixed configuration.}
+We use Qwen2.5-7B-Instruct-AWQ with vLLM 0.9.0 and the AWQ-Marlin backend on
+one host with two A100 80GB PCIe GPUs. Each GPU runs an independent TP=1
+instance with FP16 activations, four local slots, a 4096-token context, eager
+execution, chunked prefill, and no prefix cache. The preceding precheck
+measured 19 service shapes (three repeats per shape on each GPU), 20 loaded
+scale-out cycles, and separately measured setup and release. It froze three
+CPU predictors that share the new service and guard parameters and differ only
+in startup: AWQ-Hist reuses the historical 69.219 s proxy, AWQ-30 uses 30 s,
+and AWQ-Local uses the measured 25.810 s median. Only AWQ-Local drives the
+physical controller; the other two are counterfactual CPU replays.
+
+\paragraph{Physical matrix.}
+The formal matrix has two locked windows, recovery and steady, and three
+policies: all2, H (the hysteresis policy), and H+guard. Each cell is repeated
+twice for 12 physical runs. The four all2 cells are capacity anchors. The
+remaining eight cells are compared with the frozen AWQ-Local prediction made
+before execution. A run is technically valid only after worker identity,
+request terminals, lifecycle cleanup, and the resource ledger pass independent
+CPU checks. No technical retry was used.
+
+\begin{table}[t]
+\centering
+\small
+\caption{AWQ-Marlin physical results, averaged over two repeats. The prediction
+and physical columns report P1+ passes over the two repeats; offline counts use
+120 arrivals per repeat. Occupancy (GPU seconds) and cost (scenario USD) are physical means.}
+\label{tab:awq-results}
+\setlength{\tabcolsep}{2pt}
+\par\vspace{4pt}
+\begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}llrrrrr@{}}
+\toprule
+Window & Policy & Pred. & Phys. & Offline & GPU sec. & Cost\\
+\midrule
+Recovery & H & 2/2 & 2/2 & 120/120 & 788.505 & 0.9536\\
+Recovery & H+guard & 2/2 & 2/2 & 120/120 & 788.623 & 0.9537\\
+Steady & H & 0/2 & 0/2 & 119/120 & 925.882 & 1.2698\\
+Steady & H+guard & 2/2 & 2/2 & 120/120 & 977.267 & 1.3137\\
+\bottomrule
+\end{tabular*}
+\end{table}
+
+\begin{table}[t]
+\centering
+\small
+\caption{Frozen AWQ predictions versus eight policy runs, excluding four
+capacity anchors. FA/FR count false accepts/rejects. Occupancy MAE is in GPU
+seconds; cost MAE is in scenario USD. Four policy/window predictions per model
+are each reused for two physical repeats.}
+\label{tab:awq-predictors}
+\setlength{\tabcolsep}{2pt}
+\par\vspace{4pt}
+\begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}lrrrrr@{}}
+\toprule
+Predictor & Correct & FA & FR & Occ. MAE & Cost MAE\\
+\midrule
+AWQ-Hist & 6/8 & 0 & 2 & 868.054 & 0.83361\\
+AWQ-30 & 8/8 & 0 & 0 & 8.495 & 0.02247\\
+AWQ-Local & 8/8 & 0 & 0 & 2.745 & 0.00436\\
+\bottomrule
+\end{tabular*}
+\end{table}
+
+\paragraph{Results and interpretation.}
+All four all2 anchors pass P1+, and all eight policy cells are technically
+valid. AWQ-Local predicts all eight policy outcomes correctly: the six feasible
+cells pass and the two H/steady cells fail in both repeats. Those two physical
+failures are scientific negative results, not technical failures: every online
+request is on time, while 119 of 120 offline requests meet their deadlines and
+one remains unfinished at the 2100 s cutoff. H+guard completes the same steady
+window in both repeats. The frozen policy target matches the physical target at
+all 2,100 ticks in every policy cell. Across the eight policy cells, mean
+absolute error is 2.745 GPU seconds for occupied resource and 0.00436 scenario
+USD for total cost; the corresponding mean trajectory L1 error is 3.143 GPU
+seconds.
+
+Table~\ref{tab:awq-predictors} compares all three frozen predictors against the
+same physical runs. AWQ-Hist falsely rejects both feasible H+guard steady
+repeats; AWQ-30 matches all eight outcomes with 3.09 times AWQ-Local's occupancy
+MAE. Thus historical startup reuse can change feasibility judgments even with
+shared local service estimates. All three correctly predict the H/steady failures.
+
+The AWQ archive retains the calibration records, frozen predictions, raw
+controller and worker events, per-cell request terminals, lifecycle ledgers,
+and independent CPU audit files. The reduced predictions and ledgers are recomputed by
+\path{artifact/awq_formal/verify.py}. These files are separate from the public
+197-run corpus counts in Appendix~A; the AWQ study should be counted as an
+additional deployment-context extension when the archive is made public.

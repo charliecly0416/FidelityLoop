@@ -1,0 +1,1101 @@
+{
+  "schema": "fidelityloop-awq-formal-analysis-v1",
+  "status": "COMPLETE_VERIFIED",
+  "planned_cells": 12,
+  "planned_policy_cells": 8,
+  "valid_policy_cells": 8,
+  "valid_cells": 12,
+  "anchors_all_pass": true,
+  "cells": [
+    {
+      "run_id": "all2__bridge_locked_test_recovery_v1__r1",
+      "policy_id": "all2",
+      "window_id": "bridge_locked_test_recovery_v1",
+      "repeat": 1,
+      "kind": "CAPACITY",
+      "initial_status": "READY",
+      "status": "VALID",
+      "attempts": [
+        {
+          "attempt": 1,
+          "technical_valid": true,
+          "classification": "COMPLETED",
+          "result_sha256": "d937b05fc03bae0c1732ea4101decd691f481e01e57eff32ebca9d3fccce5c1d"
+        }
+      ],
+      "request_metrics": {
+        "populations": {
+          "online": {
+            "arrivals": 358,
+            "completed": 358,
+            "on_time": 358,
+            "late": 0,
+            "unfinished": 0,
+            "not_on_time": 0,
+            "on_time_rate": 1.0
+          },
+          "offline": {
+            "arrivals": 120,
+            "completed": 120,
+            "on_time": 120,
+            "late": 0,
+            "unfinished": 0,
+            "not_on_time": 0,
+            "on_time_rate": 1.0
+          }
+        },
+        "unfinished": 0,
+        "completed": 478,
+        "late": 0,
+        "P1plus": true,
+        "historical_P1": true,
+        "post_horizon_completions": 0,
+        "horizon_seconds": 2100
+      },
+      "costs": {
+        "gpu": 4.2,
+        "startup": 0.0,
+        "shutdown": 0.0,
+        "synthetic_api": 0,
+        "operating": 4.2,
+        "offline_miss": 0.0,
+        "total": 4.2,
+        "units": "scenario_USD_not_real_bill",
+        "scope": "registered_observation_window"
+      },
+      "gpu_occupied_seconds": 4200.0,
+      "gpu_active_seconds": 4200.0,
+      "api_accepted": 0,
+      "online_arrivals": 358,
+      "api_share": 0.0,
+      "guard_diagnostics": null,
+      "classification": "COMPLETED",
+      "comparisons": {
+        "AWQ-Local": {
+          "predicted_P1plus": true,
+          "physical_P1plus": true,
+          "occupied_absolute_error_gpu_seconds": 0.0,
+          "scenario_cost_absolute_error": 0.0,
+          "occupied_trajectory_l1_gpu_seconds": 0.0,
+          "target_disagreement_ticks": 0,
+          "target_ticks": 2100,
+          "target_disagreement_fraction": 0.0,
+          "first_target_disagreement_tick": null
+        }
+      }
+    },
+    {
+      "run_id": "hysteresis_u8_d0_c60__bridge_locked_test_recovery_v1__r1",
+      "policy_id": "hysteresis_u8_d0_c60",
+      "window_id": "bridge_locked_test_recovery_v1",
+      "repeat": 1,
+      "kind": "COMPARISON",
+      "initial_status": "READY",
+      "status": "VALID",
+      "attempts": [
+        {
+          "attempt": 1,
+          "technical_valid": true,
+          "classification": "COMPLETED",
+          "result_sha256": "add45cca8a279c27237f92666566e716b0547c0adf544e92f285a2351257d12e"
+        }
+      ],
+      "request_metrics": {
+        "populations": {
+          "online": {
+            "arrivals": 358,
+            "completed": 358,
+            "on_time": 358,
+            "late": 0,
+            "unfinished": 0,
+            "not_on_time": 0,
+            "on_time_rate": 1.0
+          },
+          "offline": {
+            "arrivals": 120,
+            "completed": 120,
+            "on_time": 120,
+            "late": 0,
+            "unfinished": 0,
+            "not_on_time": 0,
+            "on_time_rate": 1.0
+          }
+        },
+        "unfinished": 0,
+        "completed": 478,
+        "late": 0,
+        "P1plus": true,
+        "historical_P1": true,
+        "post_horizon_completions": 0,
+        "horizon_seconds": 2100
+      },
+      "costs": {
+        "gpu": 0.788606470883,
+        "startup": 0.022,
+        "shutdown": 0.013000000000000001,
+        "synthetic_api": 0.126561,
+        "operating": 0.9501674708829999,
+        "offline_miss": 0.0,
+        "total": 0.9501674708829999,
+        "units": "scenario_USD_not_real_bill",
+        "scope": "registered_observation_window"
+      },
+      "gpu_occupied_seconds": 788.6064708829999,
+      "gpu_active_seconds": 485.601214973,
+      "api_accepted": 216,
+      "online_arrivals": 358,
+      "api_share": 0.6033519553072626,
+      "guard_diagnostics": null,
+      "classification": "COMPLETED",
+      "comparisons": {
+        "AWQ-Local": {
+          "predicted_P1plus": true,
+          "physical_P1plus": true,
+          "occupied_absolute_error_gpu_seconds": 2.751578827000003,
+          "scenario_cost_absolute_error": 0.004495578827000024,
+          "occupied_trajectory_l1_gpu_seconds": 2.7515788269999577,
+          "target_disagreement_ticks": 0,
+          "target_ticks": 2100,
+          "target_disagreement_fraction": 0.0,
+          "first_target_disagreement_tick": null
+        }
+      }
+    },
+    {
+      "run_id": "hysteresis_u8_d0_c60__guard__bridge_locked_test_recovery_v1__r1",
+      "policy_id": "hysteresis_u8_d0_c60__guard",
+      "window_id": "bridge_locked_test_recovery_v1",
+      "repeat": 1,
+      "kind": "COMPARISON",
+      "initial_status": "READY",
+      "status": "VALID",
+      "attempts": [
+        {
+          "attempt": 1,
+          "technical_valid": true,
+          "classification": "COMPLETED",
+          "result_sha256": "bc9253019751103809137c31b85f3f0a2078cdd2ee05e59802b83abc461fb658"
+        }
+      ],
+      "request_metrics": {
+        "populations": {
+          "online": {
+            "arrivals": 358,
+            "completed": 358,
+            "on_time": 358,
+            "late": 0,
+            "unfinished": 0,
+            "not_on_time": 0,
+            "on_time_rate": 1.0
+          },
+          "offline": {
+            "arrivals": 120,
+            "completed": 120,
+            "on_time": 120,
+            "late": 0,
+            "unfinished": 0,
+            "not_on_time": 0,
+            "on_time_rate": 1.0
+          }
+        },
+        "unfinished": 0,
+        "completed": 478,
+        "late": 0,
+        "P1plus": true,
+        "historical_P1": true,
+        "post_horizon_completions": 0,
+        "horizon_seconds": 2100
+      },
+      "costs": {
+        "gpu": 0.788211183439,
+        "startup": 0.022,
+        "shutdown": 0.013000000000000001,
+        "synthetic_api": 0.125372,
+        "operating": 0.9485831834389999,
+        "offline_miss": 0.0,
+        "total": 0.9485831834389999,
+        "units": "scenario_USD_not_real_bill",
+        "scope": "registered_observation_window"
+      },
+      "gpu_occupied_seconds": 788.211183439,
+      "gpu_active_seconds": 483.806436782,
+      "api_accepted": 214,
+      "online_arrivals": 358,
+      "api_share": 0.5977653631284916,
+      "guard_diagnostics": {
+        "risk_active_ticks": 0,
+        "first_risk_tick": null,
+        "target_above_same_tick_base_count": 0,
+        "target_above_base_ticks": [],
+        "reservation_ticks": 0,
+        "queued_offline_min_slack_seconds": 149,
+        "queued_offline_min_slack_first_tick": 1816,
+        "queued_offline_min_slack_occurrence_ticks": [
+          1816
+        ],
+        "nonempty_offline_queue_ticks": 1366,
+        "offline_local_dispatches": 120,
+        "offline_dispatches_while_reservation": 0,
+        "interpretation": "slack covers queued offline jobs, not running jobs; no queue is null; same-decision base target and reservation timing are descriptive, not physical causal counterfactuals"
+      },
+      "classification": "COMPLETED",
+      "comparisons": {
+        "AWQ-Local": {
+          "predicted_P1plus": true,
+          "physical_P1plus": true,
+          "occupied_absolute_error_gpu_seconds": 3.146866270999908,
+          "scenario_cost_absolute_error": 0.0060798662709999896,
+          "occupied_trajectory_l1_gpu_seconds": 3.1468662709998103,
+          "target_disagreement_ticks": 0,
+          "target_ticks": 2100,
+          "target_disagreement_fraction": 0.0,
+          "first_target_disagreement_tick": null
+        }
+      }
+    },
+    {
+      "run_id": "all2__bridge_locked_test_recovery_v1__r2",
+      "policy_id": "all2",
+      "window_id": "bridge_locked_test_recovery_v1",
+      "repeat": 2,
+      "kind": "CAPACITY",
+      "initial_status": "READY",
+      "status": "VALID",
+      "attempts": [
+        {
+          "attempt": 1,
+          "technical_valid": true,
+          "classification": "COMPLETED",
+          "result_sha256": "8d69e9f6fb719c363bfb4413f9e5411969cb892e221c01d30f02d3bfd719de7e"
+        }
+      ],
+      "request_metrics": {
+        "populations": {
+          "online": {
+            "arrivals": 358,
+            "completed": 358,
+            "on_time": 358,
+            "late": 0,
+            "unfinished": 0,
+            "not_on_time": 0,
+            "on_time_rate": 1.0
+          },
+          "offline": {
+            "arrivals": 120,
+            "completed": 120,
+            "on_time": 120,
+            "late": 0,
+            "unfinished": 0,
+            "not_on_time": 0,
+            "on_time_rate": 1.0
+          }
+        },
+        "unfinished": 0,
+        "completed": 478,
+        "late": 0,
+        "P1plus": true,
+        "historical_P1": true,
+        "post_horizon_completions": 0,
+        "horizon_seconds": 2100
+      },
+      "costs": {
+        "gpu": 4.2,
+        "startup": 0.0,
+        "shutdown": 0.0,
+        "synthetic_api": 0,
+        "operating": 4.2,
+        "offline_miss": 0.0,
+        "total": 4.2,
+        "units": "scenario_USD_not_real_bill",
+        "scope": "registered_observation_window"
+      },
+      "gpu_occupied_seconds": 4200.0,
+      "gpu_active_seconds": 4200.0,
+      "api_accepted": 0,
+      "online_arrivals": 358,
+      "api_share": 0.0,
+      "guard_diagnostics": null,
+      "classification": "COMPLETED",
+      "comparisons": {
+        "AWQ-Local": {
+          "predicted_P1plus": true,
+          "physical_P1plus": true,
+          "occupied_absolute_error_gpu_seconds": 0.0,
+          "scenario_cost_absolute_error": 0.0,
+          "occupied_trajectory_l1_gpu_seconds": 0.0,
+          "target_disagreement_ticks": 0,
+          "target_ticks": 2100,
+          "target_disagreement_fraction": 0.0,
+          "first_target_disagreement_tick": null
+        }
+      }
+    },
+    {
+      "run_id": "hysteresis_u8_d0_c60__guard__bridge_locked_test_recovery_v1__r2",
+      "policy_id": "hysteresis_u8_d0_c60__guard",
+      "window_id": "bridge_locked_test_recovery_v1",
+      "repeat": 2,
+      "kind": "COMPARISON",
+      "initial_status": "READY",
+      "status": "VALID",
+      "attempts": [
+        {
+          "attempt": 1,
+          "technical_valid": true,
+          "classification": "COMPLETED",
+          "result_sha256": "774d3dca5004b8a2db2e4607cdd1fe1fa6184590f353f7fe84905e569335ae7d"
+        }
+      ],
+      "request_metrics": {
+        "populations": {
+          "online": {
+            "arrivals": 358,
+            "completed": 358,
+            "on_time": 358,
+            "late": 0,
+            "unfinished": 0,
+            "not_on_time": 0,
+            "on_time_rate": 1.0
+          },
+          "offline": {
+            "arrivals": 120,
+            "completed": 120,
+            "on_time": 120,
+            "late": 0,
+            "unfinished": 0,
+            "not_on_time": 0,
+            "on_time_rate": 1.0
+          }
+        },
+        "unfinished": 0,
+        "completed": 478,
+        "late": 0,
+        "P1plus": true,
+        "historical_P1": true,
+        "post_horizon_completions": 0,
+        "horizon_seconds": 2100
+      },
+      "costs": {
+        "gpu": 0.789034350761,
+        "startup": 0.022,
+        "shutdown": 0.013000000000000001,
+        "synthetic_api": 0.134735,
+        "operating": 0.958769350761,
+        "offline_miss": 0.0,
+        "total": 0.958769350761,
+        "units": "scenario_USD_not_real_bill",
+        "scope": "registered_observation_window"
+      },
+      "gpu_occupied_seconds": 789.034350761,
+      "gpu_active_seconds": 458.773672083,
+      "api_accepted": 230,
+      "online_arrivals": 358,
+      "api_share": 0.6424581005586593,
+      "guard_diagnostics": {
+        "risk_active_ticks": 0,
+        "first_risk_tick": null,
+        "target_above_same_tick_base_count": 0,
+        "target_above_base_ticks": [],
+        "reservation_ticks": 0,
+        "queued_offline_min_slack_seconds": 153,
+        "queued_offline_min_slack_first_tick": 1032,
+        "queued_offline_min_slack_occurrence_ticks": [
+          1032
+        ],
+        "nonempty_offline_queue_ticks": 1397,
+        "offline_local_dispatches": 120,
+        "offline_dispatches_while_reservation": 0,
+        "interpretation": "slack covers queued offline jobs, not running jobs; no queue is null; same-decision base target and reservation timing are descriptive, not physical causal counterfactuals"
+      },
+      "classification": "COMPLETED",
+      "comparisons": {
+        "AWQ-Local": {
+          "predicted_P1plus": true,
+          "physical_P1plus": true,
+          "occupied_absolute_error_gpu_seconds": 2.3236989489998905,
+          "scenario_cost_absolute_error": 0.004106301051000072,
+          "occupied_trajectory_l1_gpu_seconds": 3.1888214670001043,
+          "target_disagreement_ticks": 0,
+          "target_ticks": 2100,
+          "target_disagreement_fraction": 0.0,
+          "first_target_disagreement_tick": null
+        }
+      }
+    },
+    {
+      "run_id": "hysteresis_u8_d0_c60__bridge_locked_test_recovery_v1__r2",
+      "policy_id": "hysteresis_u8_d0_c60",
+      "window_id": "bridge_locked_test_recovery_v1",
+      "repeat": 2,
+      "kind": "COMPARISON",
+      "initial_status": "READY",
+      "status": "VALID",
+      "attempts": [
+        {
+          "attempt": 1,
+          "technical_valid": true,
+          "classification": "COMPLETED",
+          "result_sha256": "77a5957141194e9b6d178859fff07931526b43f0ce81e937c6ad1e81ec8e4226"
+        }
+      ],
+      "request_metrics": {
+        "populations": {
+          "online": {
+            "arrivals": 358,
+            "completed": 358,
+            "on_time": 358,
+            "late": 0,
+            "unfinished": 0,
+            "not_on_time": 0,
+            "on_time_rate": 1.0
+          },
+          "offline": {
+            "arrivals": 120,
+            "completed": 120,
+            "on_time": 120,
+            "late": 0,
+            "unfinished": 0,
+            "not_on_time": 0,
+            "on_time_rate": 1.0
+          }
+        },
+        "unfinished": 0,
+        "completed": 478,
+        "late": 0,
+        "P1plus": true,
+        "historical_P1": true,
+        "post_horizon_completions": 0,
+        "horizon_seconds": 2100
+      },
+      "costs": {
+        "gpu": 0.788404163459,
+        "startup": 0.022,
+        "shutdown": 0.013000000000000001,
+        "synthetic_api": 0.133565,
+        "operating": 0.956969163459,
+        "offline_miss": 0.0,
+        "total": 0.956969163459,
+        "units": "scenario_USD_not_real_bill",
+        "scope": "registered_observation_window"
+      },
+      "gpu_occupied_seconds": 788.404163459,
+      "gpu_active_seconds": 437.556755722,
+      "api_accepted": 228,
+      "online_arrivals": 358,
+      "api_share": 0.6368715083798883,
+      "guard_diagnostics": null,
+      "classification": "COMPLETED",
+      "comparisons": {
+        "AWQ-Local": {
+          "predicted_P1plus": true,
+          "physical_P1plus": true,
+          "occupied_absolute_error_gpu_seconds": 2.9538862509999717,
+          "scenario_cost_absolute_error": 0.002306113749000027,
+          "occupied_trajectory_l1_gpu_seconds": 3.7393851090000334,
+          "target_disagreement_ticks": 0,
+          "target_ticks": 2100,
+          "target_disagreement_fraction": 0.0,
+          "first_target_disagreement_tick": null
+        }
+      }
+    },
+    {
+      "run_id": "all2__bridge_locked_test_steady_v1__r1",
+      "policy_id": "all2",
+      "window_id": "bridge_locked_test_steady_v1",
+      "repeat": 1,
+      "kind": "CAPACITY",
+      "initial_status": "READY",
+      "status": "VALID",
+      "attempts": [
+        {
+          "attempt": 1,
+          "technical_valid": true,
+          "classification": "COMPLETED",
+          "result_sha256": "d4b51101f233ab5ca591c74e1416256c316da4c4fc4fddf8aa058262f5e6fd2f"
+        }
+      ],
+      "request_metrics": {
+        "populations": {
+          "online": {
+            "arrivals": 944,
+            "completed": 944,
+            "on_time": 944,
+            "late": 0,
+            "unfinished": 0,
+            "not_on_time": 0,
+            "on_time_rate": 1.0
+          },
+          "offline": {
+            "arrivals": 120,
+            "completed": 120,
+            "on_time": 120,
+            "late": 0,
+            "unfinished": 0,
+            "not_on_time": 0,
+            "on_time_rate": 1.0
+          }
+        },
+        "unfinished": 0,
+        "completed": 1064,
+        "late": 0,
+        "P1plus": true,
+        "historical_P1": true,
+        "post_horizon_completions": 0,
+        "horizon_seconds": 2100
+      },
+      "costs": {
+        "gpu": 4.2,
+        "startup": 0.0,
+        "shutdown": 0.0,
+        "synthetic_api": 0,
+        "operating": 4.2,
+        "offline_miss": 0.0,
+        "total": 4.2,
+        "units": "scenario_USD_not_real_bill",
+        "scope": "registered_observation_window"
+      },
+      "gpu_occupied_seconds": 4200.0,
+      "gpu_active_seconds": 4200.0,
+      "api_accepted": 0,
+      "online_arrivals": 944,
+      "api_share": 0.0,
+      "guard_diagnostics": null,
+      "classification": "COMPLETED",
+      "comparisons": {
+        "AWQ-Local": {
+          "predicted_P1plus": true,
+          "physical_P1plus": true,
+          "occupied_absolute_error_gpu_seconds": 0.0,
+          "scenario_cost_absolute_error": 0.0,
+          "occupied_trajectory_l1_gpu_seconds": 0.0,
+          "target_disagreement_ticks": 0,
+          "target_ticks": 2100,
+          "target_disagreement_fraction": 0.0,
+          "first_target_disagreement_tick": null
+        }
+      }
+    },
+    {
+      "run_id": "hysteresis_u8_d0_c60__guard__bridge_locked_test_steady_v1__r1",
+      "policy_id": "hysteresis_u8_d0_c60__guard",
+      "window_id": "bridge_locked_test_steady_v1",
+      "repeat": 1,
+      "kind": "COMPARISON",
+      "initial_status": "READY",
+      "status": "VALID",
+      "attempts": [
+        {
+          "attempt": 1,
+          "technical_valid": true,
+          "classification": "COMPLETED",
+          "result_sha256": "80d8a2c74d4204967bf6aaf04ccc3a2bb3fd84ded292a1c3945a8090e64c2b08"
+        }
+      ],
+      "request_metrics": {
+        "populations": {
+          "online": {
+            "arrivals": 944,
+            "completed": 944,
+            "on_time": 944,
+            "late": 0,
+            "unfinished": 0,
+            "not_on_time": 0,
+            "on_time_rate": 1.0
+          },
+          "offline": {
+            "arrivals": 120,
+            "completed": 120,
+            "on_time": 120,
+            "late": 0,
+            "unfinished": 0,
+            "not_on_time": 0,
+            "on_time_rate": 1.0
+          }
+        },
+        "unfinished": 0,
+        "completed": 1064,
+        "late": 0,
+        "P1plus": true,
+        "historical_P1": true,
+        "post_horizon_completions": 0,
+        "horizon_seconds": 2100
+      },
+      "costs": {
+        "gpu": 0.97602542521,
+        "startup": 0.026000000000000002,
+        "shutdown": 0.014,
+        "synthetic_api": 0.293841,
+        "operating": 1.30986642521,
+        "offline_miss": 0.0,
+        "total": 1.30986642521,
+        "units": "scenario_USD_not_real_bill",
+        "scope": "registered_observation_window"
+      },
+      "gpu_occupied_seconds": 976.02542521,
+      "gpu_active_seconds": 626.330963213,
+      "api_accepted": 497,
+      "online_arrivals": 944,
+      "api_share": 0.5264830508474576,
+      "guard_diagnostics": {
+        "risk_active_ticks": 25,
+        "first_risk_tick": 2049,
+        "target_above_same_tick_base_count": 1,
+        "target_above_base_ticks": [
+          2049
+        ],
+        "reservation_ticks": 25,
+        "queued_offline_min_slack_seconds": 12,
+        "queued_offline_min_slack_first_tick": 2073,
+        "queued_offline_min_slack_occurrence_ticks": [
+          2073
+        ],
+        "nonempty_offline_queue_ticks": 1578,
+        "offline_local_dispatches": 120,
+        "offline_dispatches_while_reservation": 1,
+        "interpretation": "slack covers queued offline jobs, not running jobs; no queue is null; same-decision base target and reservation timing are descriptive, not physical causal counterfactuals"
+      },
+      "classification": "COMPLETED",
+      "comparisons": {
+        "AWQ-Local": {
+          "predicted_P1plus": true,
+          "physical_P1plus": true,
+          "occupied_absolute_error_gpu_seconds": 3.744782169999894,
+          "scenario_cost_absolute_error": 0.007862782169999916,
+          "occupied_trajectory_l1_gpu_seconds": 3.7447821699995902,
+          "target_disagreement_ticks": 0,
+          "target_ticks": 2100,
+          "target_disagreement_fraction": 0.0,
+          "first_target_disagreement_tick": null
+        }
+      }
+    },
+    {
+      "run_id": "hysteresis_u8_d0_c60__bridge_locked_test_steady_v1__r1",
+      "policy_id": "hysteresis_u8_d0_c60",
+      "window_id": "bridge_locked_test_steady_v1",
+      "repeat": 1,
+      "kind": "COMPARISON",
+      "initial_status": "READY",
+      "status": "VALID",
+      "attempts": [
+        {
+          "attempt": 1,
+          "technical_valid": true,
+          "classification": "NEGATIVE_RESULT",
+          "result_sha256": "c4f460499ef3733d71f11723977b581649b881b2444099fc2a3026233c975169"
+        }
+      ],
+      "request_metrics": {
+        "populations": {
+          "online": {
+            "arrivals": 944,
+            "completed": 944,
+            "on_time": 944,
+            "late": 0,
+            "unfinished": 0,
+            "not_on_time": 0,
+            "on_time_rate": 1.0
+          },
+          "offline": {
+            "arrivals": 120,
+            "completed": 119,
+            "on_time": 119,
+            "late": 0,
+            "unfinished": 1,
+            "not_on_time": 1,
+            "on_time_rate": 0.9916666666666667
+          }
+        },
+        "unfinished": 1,
+        "completed": 1063,
+        "late": 0,
+        "P1plus": false,
+        "historical_P1": false,
+        "post_horizon_completions": 0,
+        "horizon_seconds": 2100
+      },
+      "costs": {
+        "gpu": 0.9253360400499999,
+        "startup": 0.024,
+        "shutdown": 0.014,
+        "synthetic_api": 0.293239,
+        "operating": 1.25657504005,
+        "offline_miss": 0.01,
+        "total": 1.26657504005,
+        "units": "scenario_USD_not_real_bill",
+        "scope": "registered_observation_window"
+      },
+      "gpu_occupied_seconds": 925.33604005,
+      "gpu_active_seconds": 601.205810041,
+      "api_accepted": 496,
+      "online_arrivals": 944,
+      "api_share": 0.5254237288135594,
+      "guard_diagnostics": null,
+      "classification": "NEGATIVE_RESULT",
+      "comparisons": {
+        "AWQ-Local": {
+          "predicted_P1plus": false,
+          "physical_P1plus": false,
+          "occupied_absolute_error_gpu_seconds": 3.434167329999923,
+          "scenario_cost_absolute_error": 0.008154167330000073,
+          "occupied_trajectory_l1_gpu_seconds": 3.5278859680004295,
+          "target_disagreement_ticks": 0,
+          "target_ticks": 2100,
+          "target_disagreement_fraction": 0.0,
+          "first_target_disagreement_tick": null
+        }
+      }
+    },
+    {
+      "run_id": "all2__bridge_locked_test_steady_v1__r2",
+      "policy_id": "all2",
+      "window_id": "bridge_locked_test_steady_v1",
+      "repeat": 2,
+      "kind": "CAPACITY",
+      "initial_status": "READY",
+      "status": "VALID",
+      "attempts": [
+        {
+          "attempt": 1,
+          "technical_valid": true,
+          "classification": "COMPLETED",
+          "result_sha256": "6432a4391ee36759a6545440052be87fcf4ca2ddf07b722ad3ca962b10d3fbe7"
+        }
+      ],
+      "request_metrics": {
+        "populations": {
+          "online": {
+            "arrivals": 944,
+            "completed": 944,
+            "on_time": 944,
+            "late": 0,
+            "unfinished": 0,
+            "not_on_time": 0,
+            "on_time_rate": 1.0
+          },
+          "offline": {
+            "arrivals": 120,
+            "completed": 120,
+            "on_time": 120,
+            "late": 0,
+            "unfinished": 0,
+            "not_on_time": 0,
+            "on_time_rate": 1.0
+          }
+        },
+        "unfinished": 0,
+        "completed": 1064,
+        "late": 0,
+        "P1plus": true,
+        "historical_P1": true,
+        "post_horizon_completions": 0,
+        "horizon_seconds": 2100
+      },
+      "costs": {
+        "gpu": 4.2,
+        "startup": 0.0,
+        "shutdown": 0.0,
+        "synthetic_api": 0,
+        "operating": 4.2,
+        "offline_miss": 0.0,
+        "total": 4.2,
+        "units": "scenario_USD_not_real_bill",
+        "scope": "registered_observation_window"
+      },
+      "gpu_occupied_seconds": 4200.0,
+      "gpu_active_seconds": 4200.0,
+      "api_accepted": 0,
+      "online_arrivals": 944,
+      "api_share": 0.0,
+      "guard_diagnostics": null,
+      "classification": "COMPLETED",
+      "comparisons": {
+        "AWQ-Local": {
+          "predicted_P1plus": true,
+          "physical_P1plus": true,
+          "occupied_absolute_error_gpu_seconds": 0.0,
+          "scenario_cost_absolute_error": 0.0,
+          "occupied_trajectory_l1_gpu_seconds": 0.0,
+          "target_disagreement_ticks": 0,
+          "target_ticks": 2100,
+          "target_disagreement_fraction": 0.0,
+          "first_target_disagreement_tick": null
+        }
+      }
+    },
+    {
+      "run_id": "hysteresis_u8_d0_c60__bridge_locked_test_steady_v1__r2",
+      "policy_id": "hysteresis_u8_d0_c60",
+      "window_id": "bridge_locked_test_steady_v1",
+      "repeat": 2,
+      "kind": "COMPARISON",
+      "initial_status": "READY",
+      "status": "VALID",
+      "attempts": [
+        {
+          "attempt": 1,
+          "technical_valid": true,
+          "classification": "NEGATIVE_RESULT",
+          "result_sha256": "1346400dd0ba9bfc00dbe23495a3db6d7bfd5248d0faa0a23fec0681933245d9"
+        }
+      ],
+      "request_metrics": {
+        "populations": {
+          "online": {
+            "arrivals": 944,
+            "completed": 944,
+            "on_time": 944,
+            "late": 0,
+            "unfinished": 0,
+            "not_on_time": 0,
+            "on_time_rate": 1.0
+          },
+          "offline": {
+            "arrivals": 120,
+            "completed": 119,
+            "on_time": 119,
+            "late": 0,
+            "unfinished": 1,
+            "not_on_time": 1,
+            "on_time_rate": 0.9916666666666667
+          }
+        },
+        "unfinished": 1,
+        "completed": 1063,
+        "late": 0,
+        "P1plus": false,
+        "historical_P1": false,
+        "post_horizon_completions": 0,
+        "horizon_seconds": 2100
+      },
+      "costs": {
+        "gpu": 0.926427969173,
+        "startup": 0.024,
+        "shutdown": 0.014,
+        "synthetic_api": 0.298536,
+        "operating": 1.262963969173,
+        "offline_miss": 0.01,
+        "total": 1.272963969173,
+        "units": "scenario_USD_not_real_bill",
+        "scope": "registered_observation_window"
+      },
+      "gpu_occupied_seconds": 926.427969173,
+      "gpu_active_seconds": 590.628146218,
+      "api_accepted": 505,
+      "online_arrivals": 944,
+      "api_share": 0.534957627118644,
+      "guard_diagnostics": null,
+      "classification": "NEGATIVE_RESULT",
+      "comparisons": {
+        "AWQ-Local": {
+          "predicted_P1plus": false,
+          "physical_P1plus": false,
+          "occupied_absolute_error_gpu_seconds": 2.342238206999923,
+          "scenario_cost_absolute_error": 0.0017652382070001416,
+          "occupied_trajectory_l1_gpu_seconds": 2.43980951700021,
+          "target_disagreement_ticks": 0,
+          "target_ticks": 2100,
+          "target_disagreement_fraction": 0.0,
+          "first_target_disagreement_tick": null
+        }
+      }
+    },
+    {
+      "run_id": "hysteresis_u8_d0_c60__guard__bridge_locked_test_steady_v1__r2",
+      "policy_id": "hysteresis_u8_d0_c60__guard",
+      "window_id": "bridge_locked_test_steady_v1",
+      "repeat": 2,
+      "kind": "COMPARISON",
+      "initial_status": "READY",
+      "status": "VALID",
+      "attempts": [
+        {
+          "attempt": 1,
+          "technical_valid": true,
+          "classification": "COMPLETED",
+          "result_sha256": "eddbfdd5954f2cbfbaac1ceecb08891615bedc4f98dd265323520c66b4d338f4"
+        }
+      ],
+      "request_metrics": {
+        "populations": {
+          "online": {
+            "arrivals": 944,
+            "completed": 944,
+            "on_time": 944,
+            "late": 0,
+            "unfinished": 0,
+            "not_on_time": 0,
+            "on_time_rate": 1.0
+          },
+          "offline": {
+            "arrivals": 120,
+            "completed": 120,
+            "on_time": 120,
+            "late": 0,
+            "unfinished": 0,
+            "not_on_time": 0,
+            "on_time_rate": 1.0
+          }
+        },
+        "unfinished": 0,
+        "completed": 1064,
+        "late": 0,
+        "P1plus": true,
+        "historical_P1": true,
+        "post_horizon_completions": 0,
+        "horizon_seconds": 2100
+      },
+      "costs": {
+        "gpu": 0.978508825292,
+        "startup": 0.026000000000000002,
+        "shutdown": 0.014,
+        "synthetic_api": 0.299115,
+        "operating": 1.317623825292,
+        "offline_miss": 0.0,
+        "total": 1.317623825292,
+        "units": "scenario_USD_not_real_bill",
+        "scope": "registered_observation_window"
+      },
+      "gpu_occupied_seconds": 978.508825292,
+      "gpu_active_seconds": 614.013145649,
+      "api_accepted": 506,
+      "online_arrivals": 944,
+      "api_share": 0.5360169491525424,
+      "guard_diagnostics": {
+        "risk_active_ticks": 26,
+        "first_risk_tick": 2049,
+        "target_above_same_tick_base_count": 1,
+        "target_above_base_ticks": [
+          2049
+        ],
+        "reservation_ticks": 26,
+        "queued_offline_min_slack_seconds": 11,
+        "queued_offline_min_slack_first_tick": 2074,
+        "queued_offline_min_slack_occurrence_ticks": [
+          2074
+        ],
+        "nonempty_offline_queue_ticks": 1587,
+        "offline_local_dispatches": 120,
+        "offline_dispatches_while_reservation": 1,
+        "interpretation": "slack covers queued offline jobs, not running jobs; no queue is null; same-decision base target and reservation timing are descriptive, not physical causal counterfactuals"
+      },
+      "classification": "COMPLETED",
+      "comparisons": {
+        "AWQ-Local": {
+          "predicted_P1plus": true,
+          "physical_P1plus": true,
+          "occupied_absolute_error_gpu_seconds": 1.2613820879998912,
+          "scenario_cost_absolute_error": 0.00010538208799992788,
+          "occupied_trajectory_l1_gpu_seconds": 2.6018376360002566,
+          "target_disagreement_ticks": 0,
+          "target_ticks": 2100,
+          "target_disagreement_fraction": 0.0,
+          "first_target_disagreement_tick": null
+        }
+      }
+    }
+  ],
+  "model_comparisons": {
+    "AWQ-Local": {
+      "feasibility": {
+        "accept_feasible": 6,
+        "false_pass": 0,
+        "block_infeasible": 2,
+        "false_block": 0,
+        "correct": 8,
+        "denominator": 8,
+        "planned_denominator": 8,
+        "actual_feasible_denominator": 6,
+        "actual_infeasible_denominator": 2,
+        "false_accept_rate": 0.0,
+        "false_reject_rate": 0.0
+      },
+      "per_window": {
+        "bridge_locked_test_recovery_v1": {
+          "valid_policy_cells": 4,
+          "planned_policy_cells": 4,
+          "means": {
+            "occupied_absolute_error_gpu_seconds": 2.7940075744999433,
+            "scenario_cost_absolute_error": 0.004246964974500028,
+            "occupied_trajectory_l1_gpu_seconds": 3.206662918499976,
+            "target_disagreement_fraction": 0.0
+          }
+        },
+        "bridge_locked_test_steady_v1": {
+          "valid_policy_cells": 4,
+          "planned_policy_cells": 4,
+          "means": {
+            "occupied_absolute_error_gpu_seconds": 2.6956424487499078,
+            "scenario_cost_absolute_error": 0.0044718924487500145,
+            "occupied_trajectory_l1_gpu_seconds": 3.0785788227501216,
+            "target_disagreement_fraction": 0.0
+          }
+        }
+      },
+      "equal_window_means": {
+        "occupied_absolute_error_gpu_seconds": 2.7448250116249255,
+        "scenario_cost_absolute_error": 0.004359428711625021,
+        "occupied_trajectory_l1_gpu_seconds": 3.142620870625049,
+        "target_disagreement_fraction": 0.0
+      },
+      "population": "full_8_policy_cells",
+      "startup_seconds": 25.8097234915,
+      "predictor_comparison_artifact": "AWQ_PREDICTOR_COMPARISON.json"
+    },
+    "AWQ-Hist": {
+      "feasibility": {
+        "accept_feasible": 4,
+        "false_pass": 0,
+        "block_infeasible": 2,
+        "false_block": 2,
+        "correct": 6,
+        "denominator": 8,
+        "planned_denominator": 8,
+        "false_accept_rate": 0.0,
+        "false_reject_rate": 0.3333333333333333,
+        "actual_feasible_denominator": 6,
+        "actual_infeasible_denominator": 2
+      },
+      "equal_window_means": {
+        "occupied_absolute_error_gpu_seconds": 868.0539432641249,
+        "scenario_cost_absolute_error": 0.8336144432641248
+      },
+      "population": "full_8_policy_cells",
+      "startup_seconds": 69.219185665,
+      "false_reject_run_ids": [
+        "hysteresis_u8_d0_c60__guard__bridge_locked_test_steady_v1__r1",
+        "hysteresis_u8_d0_c60__guard__bridge_locked_test_steady_v1__r2"
+      ]
+    },
+    "AWQ-30": {
+      "feasibility": {
+        "accept_feasible": 6,
+        "false_pass": 0,
+        "block_infeasible": 2,
+        "false_block": 0,
+        "correct": 8,
+        "denominator": 8,
+        "planned_denominator": 8,
+        "false_accept_rate": 0.0,
+        "false_reject_rate": 0.0,
+        "actual_feasible_denominator": 6,
+        "actual_infeasible_denominator": 2
+      },
+      "equal_window_means": {
+        "occupied_absolute_error_gpu_seconds": 8.494825011624926,
+        "scenario_cost_absolute_error": 0.022472325011624952
+      },
+      "population": "full_8_policy_cells",
+      "startup_seconds": 30.0,
+      "false_reject_run_ids": []
+    }
+  },
+  "unique_policy_window_predictions_per_model": 4,
+  "interpretation": "Two known arrival-window cases on 7B AWQ; repeats share the frozen precheck predictions. No claim of independent workload generalization, universal guard safety, or isolated parameter-count causal effect. AWQ-Hist and AWQ-30 are counterfactual CPU replays; only AWQ-Local drove physical runs.",
+  "actual_attempts": 12,
+  "technical_retries_used": 0,
+  "package_manifest_sha256": "ce920e90ce8a623d5dab85832ba2e6c6bcafcd4b0c7820849f57dd4422b640d4",
+  "precheck_profile_sha256": "7cf772b541536c9d4b583d19c57f45277af1ecf0194113ad6c270f426ff56768",
+  "journal_sha256": "0d119691b0b6cdf95cd3e401ec77e48749ab6db5be5d2bfd629daea42ed73019"
+}

@@ -1,0 +1,17 @@
+{
+  "schema": "fidelityloop-public-export-v1",
+  "source_zip_sha256": "cdf4c8dfc4fe749738869ed7c157b574b57bdb09edb95f1ce83cb44c83c560c8",
+  "transformation": "Replace personal deployment directory prefix with /deployment in two provenance files. No scientific fields, paper text, PDFs, compressed predictions, or accounting records are changed. Historical RETURN_MANIFEST hashes identify retained original inputs; SHA256SUMS.txt checks the public files.",
+  "files": [
+    {
+      "path": "artifact/awq_formal/AWQ_RUN_BINDINGS.json",
+      "original_sha256": "5e17573a7c67db331cdd31b3c9e9aab68c418b1c9ff4ee4370503f56f8fb8c76",
+      "public_sha256": "b2740823669035a910e372e4321490700978711d50b149c40b2e651fde1b6929"
+    },
+    {
+      "path": "artifact/awq_formal/evidence/FINAL_STATUS.json",
+      "original_sha256": "1a4bbfa8719de2a433ef4c29fc407a727eb77abafb4ef3729f352172a3220c77",
+      "public_sha256": "000ea7b4b217e151cc89542bdc8e1a807eac32d7334c30db291c8fd0671eedb1"
+    }
+  ]
+}

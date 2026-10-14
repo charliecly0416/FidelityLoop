@@ -13,8 +13,11 @@ feasible runs in one deployment context and accepts a failing policy in another.
 These errors change policy selection: retrospective screening selects a
 candidate that fails all six physical repeats; in another tested pool, it
 selects a feasible candidate costing 58.95\% more than the lowest-cost feasible
-alternative under the scenario ledger. FidelityLoop links these decisions to
-execution traces so developers can diagnose why replay and deployment disagree. We
+alternative under the scenario ledger. A 12-cell AWQ-Marlin campaign further
+transfers the contract to quantized vLLM execution, matching all eight policy
+feasibility outcomes with no control-target disagreement. FidelityLoop links
+these decisions to execution traces so developers can diagnose why replay and
+deployment disagree. We
 release paired traces from 197 physical runs, including 36 preregistered runs,
 CPU analysis tools, and a
 fixed-input Vidur replay package under an explicit resource and synthetic-API

@@ -24,6 +24,14 @@ The paper uses descriptive display names; raw records and commands retain
 the original archive IDs used below. [DISPLAY_NAMES.json](paper/DISPLAY_NAMES.json)
 maps models, studies and checkpoints without changing their identities.
 
+## Quantized deployment validation
+
+The [AWQ-Marlin artifact](paper/artifact/awq_formal/README.md) contains 12 physical
+runs and 18 frozen predictions, separate from the 197/239/555 corpus above.
+The three-predictor comparison uses eight policy runs; four capacity anchors
+are excluded. Run `python -B paper/artifact/awq_formal/verify.py` to recompute
+feasibility agreement and resource/cost errors from the released evidence.
+
 ## Run locally
 
 Python 3.10 or newer and its standard library are sufficient. No packages, GPU, API, weights, original prompts, or network are required. From this directory:

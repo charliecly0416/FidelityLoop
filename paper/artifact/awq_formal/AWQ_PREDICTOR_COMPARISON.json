@@ -1,0 +1,268 @@
+{
+  "schema": "fidelityloop-awq-startup-comparison-v1",
+  "status": "PASS",
+  "scope": "Eight policy runs; four predictions per model reused over two repeats; four anchors excluded from means. Reduced evidence verification, not raw GPU execution.",
+  "source_receipt_sha256": "6f8b6440e0f66849e026288305cb66a2d810de7fb3143a9eb85da7889245826e",
+  "model_comparisons": {
+    "AWQ-Hist": {
+      "startup_seconds": 69.219185665,
+      "unique_policy_window_predictions": 4,
+      "denominator": 8,
+      "correct": 6,
+      "false_accepts": 0,
+      "false_rejects": 2,
+      "occupied_mae_gpu_seconds": 868.0539432641249,
+      "cost_mae_scenario_usd": 0.8336144432641248,
+      "false_reject_run_ids": [
+        "hysteresis_u8_d0_c60__guard__bridge_locked_test_steady_v1__r1",
+        "hysteresis_u8_d0_c60__guard__bridge_locked_test_steady_v1__r2"
+      ]
+    },
+    "AWQ-30": {
+      "startup_seconds": 30.0,
+      "unique_policy_window_predictions": 4,
+      "denominator": 8,
+      "correct": 8,
+      "false_accepts": 0,
+      "false_rejects": 0,
+      "occupied_mae_gpu_seconds": 8.494825011624926,
+      "cost_mae_scenario_usd": 0.022472325011624952,
+      "false_reject_run_ids": []
+    },
+    "AWQ-Local": {
+      "startup_seconds": 25.8097234915,
+      "unique_policy_window_predictions": 4,
+      "denominator": 8,
+      "correct": 8,
+      "false_accepts": 0,
+      "false_rejects": 0,
+      "occupied_mae_gpu_seconds": 2.7448250116249255,
+      "cost_mae_scenario_usd": 0.004359428711625021,
+      "false_reject_run_ids": []
+    }
+  },
+  "pairs": {
+    "AWQ-Hist": [
+      {
+        "run_id": "hysteresis_u8_d0_c60__bridge_locked_test_recovery_v1__r1",
+        "policy_id": "hysteresis_u8_d0_c60",
+        "window_id": "bridge_locked_test_recovery_v1",
+        "predicted_P1plus": true,
+        "physical_P1plus": true,
+        "occupied_absolute_error_gpu_seconds": 825.163736497,
+        "scenario_cost_absolute_error": 0.785901736497
+      },
+      {
+        "run_id": "hysteresis_u8_d0_c60__guard__bridge_locked_test_recovery_v1__r1",
+        "policy_id": "hysteresis_u8_d0_c60__guard",
+        "window_id": "bridge_locked_test_recovery_v1",
+        "predicted_P1plus": true,
+        "physical_P1plus": true,
+        "occupied_absolute_error_gpu_seconds": 825.5590239409999,
+        "scenario_cost_absolute_error": 0.787486023941
+      },
+      {
+        "run_id": "hysteresis_u8_d0_c60__guard__bridge_locked_test_recovery_v1__r2",
+        "policy_id": "hysteresis_u8_d0_c60__guard",
+        "window_id": "bridge_locked_test_recovery_v1",
+        "predicted_P1plus": true,
+        "physical_P1plus": true,
+        "occupied_absolute_error_gpu_seconds": 824.7358566189998,
+        "scenario_cost_absolute_error": 0.7772998566189999
+      },
+      {
+        "run_id": "hysteresis_u8_d0_c60__bridge_locked_test_recovery_v1__r2",
+        "policy_id": "hysteresis_u8_d0_c60",
+        "window_id": "bridge_locked_test_recovery_v1",
+        "predicted_P1plus": true,
+        "physical_P1plus": true,
+        "occupied_absolute_error_gpu_seconds": 825.3660439209999,
+        "scenario_cost_absolute_error": 0.779100043921
+      },
+      {
+        "run_id": "hysteresis_u8_d0_c60__guard__bridge_locked_test_steady_v1__r1",
+        "policy_id": "hysteresis_u8_d0_c60__guard",
+        "window_id": "bridge_locked_test_steady_v1",
+        "predicted_P1plus": false,
+        "physical_P1plus": true,
+        "occupied_absolute_error_gpu_seconds": 973.1569398399998,
+        "scenario_cost_absolute_error": 0.9458789398399996
+      },
+      {
+        "run_id": "hysteresis_u8_d0_c60__bridge_locked_test_steady_v1__r1",
+        "policy_id": "hysteresis_u8_d0_c60",
+        "window_id": "bridge_locked_test_steady_v1",
+        "predicted_P1plus": false,
+        "physical_P1plus": false,
+        "occupied_absolute_error_gpu_seconds": 850.4341673299999,
+        "scenario_cost_absolute_error": 0.8307581673299997
+      },
+      {
+        "run_id": "hysteresis_u8_d0_c60__bridge_locked_test_steady_v1__r2",
+        "policy_id": "hysteresis_u8_d0_c60",
+        "window_id": "bridge_locked_test_steady_v1",
+        "predicted_P1plus": false,
+        "physical_P1plus": false,
+        "occupied_absolute_error_gpu_seconds": 849.3422382069999,
+        "scenario_cost_absolute_error": 0.8243692382069998
+      },
+      {
+        "run_id": "hysteresis_u8_d0_c60__guard__bridge_locked_test_steady_v1__r2",
+        "policy_id": "hysteresis_u8_d0_c60__guard",
+        "window_id": "bridge_locked_test_steady_v1",
+        "predicted_P1plus": false,
+        "physical_P1plus": true,
+        "occupied_absolute_error_gpu_seconds": 970.6735397579998,
+        "scenario_cost_absolute_error": 0.9381215397579996
+      }
+    ],
+    "AWQ-30": [
+      {
+        "run_id": "hysteresis_u8_d0_c60__bridge_locked_test_recovery_v1__r1",
+        "policy_id": "hysteresis_u8_d0_c60",
+        "window_id": "bridge_locked_test_recovery_v1",
+        "predicted_P1plus": true,
+        "physical_P1plus": true,
+        "occupied_absolute_error_gpu_seconds": 2.751578827000003,
+        "scenario_cost_absolute_error": 0.010319578826999964
+      },
+      {
+        "run_id": "hysteresis_u8_d0_c60__guard__bridge_locked_test_recovery_v1__r1",
+        "policy_id": "hysteresis_u8_d0_c60__guard",
+        "window_id": "bridge_locked_test_recovery_v1",
+        "predicted_P1plus": true,
+        "physical_P1plus": true,
+        "occupied_absolute_error_gpu_seconds": 3.146866270999908,
+        "scenario_cost_absolute_error": 0.01190386627099993
+      },
+      {
+        "run_id": "hysteresis_u8_d0_c60__guard__bridge_locked_test_recovery_v1__r2",
+        "policy_id": "hysteresis_u8_d0_c60__guard",
+        "window_id": "bridge_locked_test_recovery_v1",
+        "predicted_P1plus": true,
+        "physical_P1plus": true,
+        "occupied_absolute_error_gpu_seconds": 2.3236989489998905,
+        "scenario_cost_absolute_error": 0.0017176989489998684
+      },
+      {
+        "run_id": "hysteresis_u8_d0_c60__bridge_locked_test_recovery_v1__r2",
+        "policy_id": "hysteresis_u8_d0_c60",
+        "window_id": "bridge_locked_test_recovery_v1",
+        "predicted_P1plus": true,
+        "physical_P1plus": true,
+        "occupied_absolute_error_gpu_seconds": 2.9538862509999717,
+        "scenario_cost_absolute_error": 0.003517886250999913
+      },
+      {
+        "run_id": "hysteresis_u8_d0_c60__guard__bridge_locked_test_steady_v1__r1",
+        "policy_id": "hysteresis_u8_d0_c60__guard",
+        "window_id": "bridge_locked_test_steady_v1",
+        "predicted_P1plus": true,
+        "physical_P1plus": true,
+        "occupied_absolute_error_gpu_seconds": 26.744782169999894,
+        "scenario_cost_absolute_error": 0.053970782169999953
+      },
+      {
+        "run_id": "hysteresis_u8_d0_c60__bridge_locked_test_steady_v1__r1",
+        "policy_id": "hysteresis_u8_d0_c60",
+        "window_id": "bridge_locked_test_steady_v1",
+        "predicted_P1plus": false,
+        "physical_P1plus": false,
+        "occupied_absolute_error_gpu_seconds": 3.434167329999923,
+        "scenario_cost_absolute_error": 0.029262167329999977
+      },
+      {
+        "run_id": "hysteresis_u8_d0_c60__bridge_locked_test_steady_v1__r2",
+        "policy_id": "hysteresis_u8_d0_c60",
+        "window_id": "bridge_locked_test_steady_v1",
+        "predicted_P1plus": false,
+        "physical_P1plus": false,
+        "occupied_absolute_error_gpu_seconds": 2.342238206999923,
+        "scenario_cost_absolute_error": 0.022873238207000046
+      },
+      {
+        "run_id": "hysteresis_u8_d0_c60__guard__bridge_locked_test_steady_v1__r2",
+        "policy_id": "hysteresis_u8_d0_c60__guard",
+        "window_id": "bridge_locked_test_steady_v1",
+        "predicted_P1plus": true,
+        "physical_P1plus": true,
+        "occupied_absolute_error_gpu_seconds": 24.26138208799989,
+        "scenario_cost_absolute_error": 0.046213382087999966
+      }
+    ],
+    "AWQ-Local": [
+      {
+        "run_id": "hysteresis_u8_d0_c60__bridge_locked_test_recovery_v1__r1",
+        "policy_id": "hysteresis_u8_d0_c60",
+        "window_id": "bridge_locked_test_recovery_v1",
+        "predicted_P1plus": true,
+        "physical_P1plus": true,
+        "occupied_absolute_error_gpu_seconds": 2.751578827000003,
+        "scenario_cost_absolute_error": 0.004495578827000024
+      },
+      {
+        "run_id": "hysteresis_u8_d0_c60__guard__bridge_locked_test_recovery_v1__r1",
+        "policy_id": "hysteresis_u8_d0_c60__guard",
+        "window_id": "bridge_locked_test_recovery_v1",
+        "predicted_P1plus": true,
+        "physical_P1plus": true,
+        "occupied_absolute_error_gpu_seconds": 3.146866270999908,
+        "scenario_cost_absolute_error": 0.0060798662709999896
+      },
+      {
+        "run_id": "hysteresis_u8_d0_c60__guard__bridge_locked_test_recovery_v1__r2",
+        "policy_id": "hysteresis_u8_d0_c60__guard",
+        "window_id": "bridge_locked_test_recovery_v1",
+        "predicted_P1plus": true,
+        "physical_P1plus": true,
+        "occupied_absolute_error_gpu_seconds": 2.3236989489998905,
+        "scenario_cost_absolute_error": 0.004106301051000072
+      },
+      {
+        "run_id": "hysteresis_u8_d0_c60__bridge_locked_test_recovery_v1__r2",
+        "policy_id": "hysteresis_u8_d0_c60",
+        "window_id": "bridge_locked_test_recovery_v1",
+        "predicted_P1plus": true,
+        "physical_P1plus": true,
+        "occupied_absolute_error_gpu_seconds": 2.9538862509999717,
+        "scenario_cost_absolute_error": 0.002306113749000027
+      },
+      {
+        "run_id": "hysteresis_u8_d0_c60__guard__bridge_locked_test_steady_v1__r1",
+        "policy_id": "hysteresis_u8_d0_c60__guard",
+        "window_id": "bridge_locked_test_steady_v1",
+        "predicted_P1plus": true,
+        "physical_P1plus": true,
+        "occupied_absolute_error_gpu_seconds": 3.744782169999894,
+        "scenario_cost_absolute_error": 0.007862782169999916
+      },
+      {
+        "run_id": "hysteresis_u8_d0_c60__bridge_locked_test_steady_v1__r1",
+        "policy_id": "hysteresis_u8_d0_c60",
+        "window_id": "bridge_locked_test_steady_v1",
+        "predicted_P1plus": false,
+        "physical_P1plus": false,
+        "occupied_absolute_error_gpu_seconds": 3.434167329999923,
+        "scenario_cost_absolute_error": 0.008154167330000073
+      },
+      {
+        "run_id": "hysteresis_u8_d0_c60__bridge_locked_test_steady_v1__r2",
+        "policy_id": "hysteresis_u8_d0_c60",
+        "window_id": "bridge_locked_test_steady_v1",
+        "predicted_P1plus": false,
+        "physical_P1plus": false,
+        "occupied_absolute_error_gpu_seconds": 2.342238206999923,
+        "scenario_cost_absolute_error": 0.0017652382070001416
+      },
+      {
+        "run_id": "hysteresis_u8_d0_c60__guard__bridge_locked_test_steady_v1__r2",
+        "policy_id": "hysteresis_u8_d0_c60__guard",
+        "window_id": "bridge_locked_test_steady_v1",
+        "predicted_P1plus": true,
+        "physical_P1plus": true,
+        "occupied_absolute_error_gpu_seconds": 1.2613820879998912,
+        "scenario_cost_absolute_error": 0.00010538208799992788
+      }
+    ]
+  }
+}
