@@ -1,4 +1,4 @@
-"""Validate the registered F4 protocol and copied input identities.
+"""Validate the registered F4 inputs and current released-paper bindings.
 
 This module performs no simulation, training, network access or GPU launch.
 """
@@ -9,7 +9,7 @@ from pathlib import Path
 
 _checkout = Path(__file__).resolve().parents[3]
 ROOT = _checkout if (_checkout / 'artifact').is_dir() else Path.cwd()
-DOC = ROOT / 'artifact' / 'bridge_execution'
+DOC = Path('artifact') / 'bridge_execution'
 INPUT = DOC / 'inputs'
 F4_IDS = (
     'hysteresis_u8_d0_c60', 'hysteresis_u8_d0_c60__guard',

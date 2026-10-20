@@ -1,0 +1,325 @@
+\section{Same-host capacity-configuration validation}
+\label{sec:capacity-validation}
+
+\subsection{Frozen design and accounting}
+Two complementary studies test whether replay labels and candidate choices remain reliable
+when allocated capacity and input multiplicity change together. The first pairs
+$N=2$ and $N=4$ on one host with four A800 80GB PCIe GPUs, using
+Qwen2.5-7B-Instruct FP16, vLLM 0.9.0, PyTorch 2.7.0, and independent TP1
+instances. It uses the previously studied recovery and middle-burst inputs,
+not new held-out windows. Two-replica inputs contain 478/509 requests
+(358/389 online and 120 offline). Four-replica inputs duplicate every row
+with independent IDs, producing 956/1,018 requests with unchanged arrival
+times, token budgets, and deadlines. This is capacity-matched weak scaling,
+not a same-load speedup comparison.
+
+The matrix is $2$ capacities $\times$ $2$ windows $\times$
+$3$ policies (all$N$, H, H+guard) $\times$ $2$ physical repeats: 24 cells,
+executed serially. Repeat 1 is primary; repeat 2 tests robustness.
+All$N$ remains ready throughout; H uses scale-out thresholds 8/16 at
+$N=2/4$, step size one, and a 60~s cooldown. The guard evaluates legal
+targets $0,\ldots,N$. Local request slots and synthetic-API admission slots
+are four per allocated GPU. The observation interval is 1,800~s of arrivals
+plus 300~s of continued control and dispatch. Setup precedes the observation
+origin; cleanup follows the cutoff. PPO is not part of this study: the
+original three-logit learned policies retain their two-device action space.
+
+Service and lifecycle calibration is separate for each capacity and precedes
+formal results. Each GPU measures 71 service points, three times each;
+ten loaded launch rounds provide 20/40 startup samples at $N=2/4$.
+Local startup medians are 32.590/39.729~s; guard startup safety p95 values
+are 79.571/42.066~s. Samples retain their observed cache conditions; no
+cold-cache claim is made. Each capacity's guard profile is common to all
+predictors and physical execution. Source, input, profiles, 48 complete
+predictions, and selection sets are hash-bound before the first formal
+setup. No scientific failure is rerun or used to retune a predictor.
+
+All 24 cells are technically valid, with all 2,100 decision ticks present
+per cell. There are two technical smoke executions and no formal retries;
+these and calibration are outside the 24 scientific cells. Every matched
+all$N$ capacity reference passes strict P1+, so no dynamic cell is skipped.
+Strict feasibility includes every planned online and offline request,
+including undispatched and unfinished work. Table~\ref{tab:capacity-physical}
+reports all physical results. Operating costs exclude setup, cleanup and
+miss penalties. Savings are defined only for feasible policy/reference
+pairs at the same $N$, window and repeat; costs across capacities are not
+subtracted to claim savings.
+
+\begin{table*}[t]
+\centering\small
+\caption{All 24 capacity-study cells, grouped by their two repeats.
+Offline counts are on-time completions out of 120 ($N=2$) or 240 ($N=4$)
+per repeat. All online requests meet deadlines in every cell.
+Costs are operating scenario USD; $\dagger$ marks an infeasible execution.
+P1+ reports passes/runs; other slash-separated values are repeat 1 / repeat 2.}
+\label{tab:capacity-physical}
+\setlength{\tabcolsep}{3pt}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}rllclll@{}}
+\toprule
+$N$ & Window & Policy & P1+ & Offline on time & Cost & Saving vs all$N$ (\%)\\
+\midrule
+2 & Recovery & all$N$ & 2/2 & 120/120 & 4.2000/4.2000 & 0.00/0.00 \\
+2 & Recovery & H & 2/2 & 120/120 & 1.1468/1.1452 & 72.70/72.73 \\
+2 & Recovery & H+guard & 2/2 & 120/120 & 1.0733/0.9645 & 74.45/77.04 \\
+\midrule
+2 & Burst & all$N$ & 2/2 & 120/120 & 4.2000/4.2000 & 0.00/0.00 \\
+2 & Burst & H & 2/2 & 120/120 & 0.9659/0.9658 & 77.00/77.00 \\
+2 & Burst & H+guard & 2/2 & 120/120 & 1.1507/0.9660 & 72.60/77.00 \\
+\midrule
+4 & Recovery & all$N$ & 2/2 & 240/240 & 8.4000/8.4000 & 0.00/0.00 \\
+4 & Recovery & H & 0/2 & 238/224 & 1.8817$\dagger$/1.4377$\dagger$ & --/-- \\
+4 & Recovery & H+guard & 2/2 & 240/240 & 1.8444/1.5069 & 78.04/82.06 \\
+\midrule
+4 & Burst & all$N$ & 2/2 & 240/240 & 8.4000/8.4000 & 0.00/0.00 \\
+4 & Burst & H & 1/2 & 236/240 & 1.6000$\dagger$/1.4830 & --/82.35 \\
+4 & Burst & H+guard & 2/2 & 240/240 & 1.4768/1.4828 & 82.42/82.35 \\
+\bottomrule
+\end{tabular*}
+\end{table*}
+
+\subsection{Physical outcomes and observed mechanism}
+All 12 two-replica cells pass. At four replicas, all four all$N$ references
+and all four H+guard cells pass, while H passes one of four executions.
+Its recovery repeats leave two and sixteen offline jobs undispatched;
+its first burst repeat leaves four. Every unfinished job is already due
+before the 2,100~s cutoff. There are no late completions in this study.
+
+The first four-replica recovery H run illustrates a tail-queue mechanism:
+its last active worker is shut down at 1,774.001~s, before two final offline
+arrivals at 1,785~s with deadlines at 2,085~s. The queue stays below H's
+scale-out threshold of 16, and capacity remains zero through drain.
+The guarded recovery run instead raises its target at 2,019~s with four
+offline jobs pending and subsequently meets every deadline. These are
+separate physical trajectories, not a controlled single-event intervention.
+Their frozen Local target predictions first differ from physical targets
+at tick 330, so a later restart alone cannot explain all preceding divergence.
+
+The hardware boundary matters. Four-replica all$N$ recovery/burst references
+serve 150/165 requests on each of GPUs 2 and 3 per repeat. In all eight
+four-replica dynamic cells, GPUs 2 and 3 serve zero requests. Ready capacity
+of at least three GPUs is observed for about 64--67~s, largely during initial
+capacity release; the guarded recovery primary also raises its target to four
+near the cutoff. Target/ready counts therefore do not establish service on
+the extra devices. These original windows establish capacity-configuration sensitivity and
+candidate-screening consequences. The pressure study below additionally
+exercises service on both extra devices after their initial release.
+
+\subsection{Frozen prediction and selection consequences}
+For each capacity and predictor, four distinct dynamic policy/window
+predictions are compared with four physical labels in each repeat.
+The all$N$ references are excluded from Table~\ref{tab:capacity-prediction};
+all predictors accept those feasible references. Repeat comparisons reuse
+the same predictions and do not form independent prediction samples.
+
+\begin{table}[t]
+\centering\small
+\caption{Dynamic-pool prediction labels and frozen two-window selection.
+Agreement denominators are four physical policy/window labels per repeat;
+FA/FR are descriptive false-accept/reject counts, not population error rates.
+Paired entries are repeat 1 and repeat 2.
+Selection retains all ties.}
+\label{tab:capacity-prediction}
+\setlength{\tabcolsep}{3pt}
+\begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}rlllll@{}}
+\toprule
+$N$ & Replay & Agreement & FA & FR & Selected set\\
+\midrule
+2 & Share & 2/4; 2/4 & 0/0 & 2/2 & H+guard \\
+2 & Lookup-69 & 4/4; 4/4 & 0/0 & 0/0 & \{H, H+guard\} \\
+2 & Lookup-30 & 4/4; 4/4 & 0/0 & 0/0 & \{H, H+guard\} \\
+2 & Local & 4/4; 4/4 & 0/0 & 0/0 & \{H, H+guard\} \\
+\midrule
+4 & Share & 3/4; 2/4 & 1/1 & 0/1 & H+guard \\
+4 & Lookup-69 & 2/4; 3/4 & 2/1 & 0/0 & \{H, H+guard\} \\
+4 & Lookup-30 & 3/4; 4/4 & 1/0 & 0/0 & H+guard \\
+4 & Local & 3/4; 4/4 & 1/0 & 0/0 & H+guard \\
+\bottomrule
+\end{tabular*}
+\end{table}
+
+Selection requires a candidate to be predicted strictly feasible on both
+windows, then minimizes equal-window mean operating cost over
+$\{\mathrm{H},\mathrm{H+guard}\}$, retaining all exact cost ties.
+At $N=2$, Lookup-69, Lookup-30 and Local tie both candidates, and both are
+physically feasible. At $N=4$, Lookup-69 still assigns the same predicted
+trajectory and cost to both policies in each window. Its selected set thus
+contains H, which is infeasible across the two windows in both physical
+repeats, and H+guard, which is feasible. No tie-break is invented to convert
+this set into a definite failing deployment.
+
+Share, Lookup-30 and Local instead select H+guard at $N=4$; it is the only
+candidate physically feasible on both windows in each repeat, giving zero
+feasible cost regret within this two-policy pool. Nevertheless, Lookup-30
+and Local falsely accept the first burst H execution, even though their
+recovery rejection removes H from two-window selection. In the second
+burst repeat H passes. Correct screening here therefore does not imply
+correct per-window labels or a universal ranking of predictors.
+
+\subsection{CPU audit and evidence scope}
+The accompanying \path{artifact/capacity_transfer/verify.py} uses only the
+Python standard library. It recomputes all 24 strict labels, clipped
+occupied-resource totals, operating costs, per-GPU request counts and
+48 prediction labels/costs, then reconstructs the frozen selected sets.
+The records contain request outcomes, lifecycle intervals, control ticks,
+and predicted state transitions; prompts and machine identifiers are removed.
+This supports reduced-record audit, not model-inference reruns. Full native
+receipts and frozen-source provenance are retained separately. These 24
+executions and the following 12 pressure executions are additional to the
+historical 197-run corpus and the eight full-day executions.
+
+\subsection{Capacity pressure with service on all four replicas}
+\label{sec:capacity-pressure}
+The pressure study tests the same contract when dynamic control activates
+additional replicas to serve requests. It retains every online arrival from the
+original recovery input and replicates each offline job twelve times only
+in $[300,1500)$~s; other offline arrivals are unchanged. Four-replica inputs
+duplicate each two-replica row. Only request and window IDs change: arrival
+times, token IDs, output budgets, provenance, and deadlines remain fixed.
+Two-replica inputs contain 358 online and 1,000 offline jobs (1,358 total);
+four-replica inputs contain 716 and 2,000 (2,716 total).
+
+The replication factor is chosen before any new GPU observation using the
+previously frozen per-capacity profiles. A recorded CPU-only protocol tests
+factors $8,12,16,20,24,28,32$ in ascending order and selects the first for
+which Local predicts feasible all$N$ at both capacities and N4 H+guard
+predicts the required extra-card exposure. In $[300,1800)$~s, each extra
+GPU must serve at least 20 requests, including at least ten after its second
+or later launch, and at least three replicas must be ready for 120~s.
+Factor 8 fails fourth-card exposure; factor 12 meets the criteria.
+An earlier whole-input replication design fails CPU all$N$ capacity checks
+and receives no GPU execution. Neither design uses new physical outcomes,
+false-accept/reject counts, predicted winners, or savings to select its load.
+The resulting workload is a constructed capacity-pressure test, not a
+held-out sample of replay accuracy or a new production trace.
+
+The 12-cell matrix is two capacities $\times$ three policies $\times$ two
+repeats, with one fixed pressure window. It uses the same host, ordered GPU
+identities, model files, software, runtime, policies, and raw-verified per-$N$
+calibration as the first study. There is no new calibration or policy tuning.
+Physical runs are serial, with capacities interleaved in a fixed order and
+each matched all$N$ reference preceding its dynamic candidates. The
+1,800~s arrival interval, 300~s drain, strict deadline contract, and
+accounting rules are unchanged. All 24 complete replay predictions and
+single-window selected sets are frozen before the first formal setup.
+All 12 cells are technically valid, with all 2,100 control ticks present;
+two technical smokes pass and no retry is used.
+
+\begin{table*}[t]
+\centering\small
+\caption{All 12 pressure-study cells. Offline on-time denominators are
+1,000 at $N=2$ and 2,000 at $N=4$ per repeat; every online request meets
+its deadline. P1+ reports passes/runs; other slash-separated entries are
+repeat 1 / repeat 2.
+Costs are operating scenario USD; $\dagger$ denotes infeasibility.}
+\label{tab:pressure-physical}
+\setlength{\tabcolsep}{3pt}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}rlclll@{}}
+\toprule
+$N$ & Policy & P1+ & Offline on time & Cost & Saving vs all$N$ (\%)\\
+\midrule
+2 & all$N$ & 2/2 & 1000/1000 & 4.2000/4.2000 & 0.00/0.00 \\
+2 & H & 1/2 & 996/1000 & 1.8911$\dagger$/2.0897 & --/50.24 \\
+2 & H+guard & 2/2 & 1000/1000 & 1.9824/1.9856 & 52.80/52.72 \\
+\midrule
+4 & all$N$ & 2/2 & 2000/2000 & 8.4000/8.4000 & 0.00/0.00 \\
+4 & H & 2/2 & 2000/2000 & 3.6033/3.4588 & 57.10/58.82 \\
+4 & H+guard & 2/2 & 2000/2000 & 3.4779/3.7848 & 58.60/54.94 \\
+\bottomrule
+\end{tabular*}
+\end{table*}
+
+Table~\ref{tab:pressure-physical} reports all results. The four all$N$
+references and all four H+guard executions pass. H leaves four offline
+jobs unfinished in the primary two-replica run and passes its other three
+executions. The second two-replica H run is feasible, so its first failure
+is not treated as deterministic. No completed request is late.
+
+All four N4 dynamic executions release and later restart both extra GPUs,
+which serve 302--332 and 54--68 requests in $[300,1800)$~s after their
+second or later launch (Table~\ref{tab:pressure-exposure}). Each passes the
+exposure criteria. This is request-serving capacity beyond setup or a
+target-only scale-out. Both policies satisfy every deadline at N4.
+H+guard's feasible savings against matched all4 are 58.60\% and 54.94\%;
+these are conditional on the declared scenario ledger, not cross-capacity
+speedup or real billing savings.
+
+\begin{table}[t]
+\centering\small
+\caption{Observed N4 capacity exposure in $[300,1800)$~s. GPU counts
+include only requests dispatched after that device's second or later launch.
+Ready means active and accepting requests, excluding draining.}
+\label{tab:pressure-exposure}
+\setlength{\tabcolsep}{4pt}
+\begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}lrrrr@{}}
+\toprule
+Policy & Repeat & GPU 2 & GPU 3 & Ready $\geq3$ (s)\\
+\midrule
+H & 1 & 332 & 62 & 328.61 \\
+H & 2 & 330 & 54 & 340.49 \\
+H+guard & 1 & 302 & 65 & 336.52 \\
+H+guard & 2 & 303 & 68 & 335.59 \\
+\bottomrule
+\end{tabular*}
+\end{table}
+
+\subsection{Pressure-study selection and cost robustness}
+Selection in this study requires predicted P1+ on its single window, then
+minimizes predicted operating cost among H and H+guard, retaining exact
+ties; an empty eligible set yields abstention. It is separate from the
+original study's two-window selection. Each capacity/predictor has two
+distinct dynamic predictions, reused for the two physical repeats;
+all$N$ remains a capacity reference outside selection.
+
+\begin{table}[t]
+\centering\small
+\caption{Pressure-study dynamic predictions and frozen single-window selection.
+Agreement uses two physical labels per repeat; FA/FR are counts, not
+estimated population rates. Paired entries are repeat 1 and repeat 2.}
+\label{tab:pressure-prediction}
+\setlength{\tabcolsep}{3pt}
+\begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}rlllll@{}}
+\toprule
+$N$ & Replay & Agreement & FA & FR & Selected set\\
+\midrule
+2 & Share & 2/2; 1/2 & 0/0 & 0/1 & H+guard \\
+2 & Lookup-69 & 1/2; 2/2 & 1/0 & 0/0 & \{H, H+guard\} \\
+2 & Lookup-30 & 2/2; 1/2 & 0/0 & 0/1 & H+guard \\
+2 & Local & 2/2; 1/2 & 0/0 & 0/1 & H+guard \\
+\midrule
+4 & Share & 2/2; 2/2 & 0/0 & 0/0 & H+guard \\
+4 & Lookup-69 & 0/2; 0/2 & 0/0 & 2/2 & abstain \\
+4 & Lookup-30 & 1/2; 1/2 & 0/0 & 1/1 & H+guard \\
+4 & Local & 2/2; 2/2 & 0/0 & 0/0 & H \\
+\bottomrule
+\end{tabular*}
+\end{table}
+
+At N4, Lookup-69 rejects both candidates and abstains, although both pass
+both physical repeats. In contrast, it accepts and ties both on the original
+short windows, where H is infeasible in three of four executions.
+The same startup proxy can therefore produce false acceptance in one
+capacity/load condition and false rejection in another.
+Share and Local match all four N4 pressure labels; Lookup-30 falsely
+rejects both H executions and selects the feasible guard.
+This agreement does not establish a universal best predictor.
+
+Local selects H at N4, while Share and Lookup-30 select H+guard.
+In the primary repeat, H costs 3.6033 versus H+guard's 3.4779 scenario USD,
+so Local's feasible cost gap is 3.61\%. In the second repeat, H costs
+3.4588 versus 3.7848 and is the cheaper candidate; selecting H+guard then
+incurs a 9.43\% gap. These within-repeat gaps describe the cost consequence
+of each frozen choice. The physical ranking reverses between repeats;
+with two observations per candidate, this does not isolate a systematic replay
+ranking error or establish either policy as consistently cheaper.
+At N2, Local, Lookup-30, and Share select H+guard, which is the cheaper
+feasible candidate in both repeats; Lookup-69's tie includes the failed
+primary H execution.
+
+The prompt-free \path{artifact/capacity_pressure/verify.py} recomputes all
+12 physical labels and costs, per-GPU restart exposure, and 24 frozen
+prediction labels/costs and selected sets using the standard library.
+It preserves all planned requests and both repeats. Together, the two
+studies add 36 physical cells (32 feasible and four infeasible) and 72
+frozen predictions, with separate input-selection and screening rules.
+The original-window and constructed-pressure results are reported
+separately rather than pooled into a population accuracy rate.

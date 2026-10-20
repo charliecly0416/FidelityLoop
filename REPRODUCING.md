@@ -116,3 +116,24 @@ rejections; AWQ-30 and AWQ-Local agree on 8/8. Four unique policy/window predict
 per model are reused over two repeats. This archive is separate from the paired
 trace corpus above. `paper/PUBLIC_EXPORT.json` records path anonymization; the
 historical return manifest refers to the retained original files.
+
+## Full-day arrivals and two/four-replica studies
+
+The current paper and its artifact include three additional studies:
+
+| Study | Physical executions | Primary predictions | Checker |
+|---|---:|---:|---|
+| Continuous full-day arrivals | 8 | 24 | `python -B paper/artifact/full_day/tools/recompute.py` |
+| Two/four-replica short windows | 24 | 48 | `python -B paper/artifact/capacity_transfer/verify.py` |
+| Two/four-replica offline pressure | 12 | 24 | `python -B paper/artifact/capacity_pressure/verify.py` |
+
+These 44 executions have their own pairing and input contracts, separate from
+the 197-run corpus and 12 AWQ executions. The capacity studies compare replica
+counts on one four-A800 host. The pressure checker verifies service by replicas
+2 and 3, including after restart. Cost-minimizing ties and unsuccessful outcomes
+remain included; repeat 1 is primary and repeat 2 is a robustness check.
+
+The standard-library checkers recompute retained request/lifecycle evidence;
+they do not rerun GPU inference. Full-day regression tests run with
+`python -B -m unittest discover -s paper/artifact/full_day/tests -v`.
+See [paper/README.md](paper/README.md) for the full result-checking command list.

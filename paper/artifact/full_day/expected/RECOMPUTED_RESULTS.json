@@ -1,0 +1,1825 @@
+{
+  "runs": [
+    {
+      "run_id": "D1_all2_r1",
+      "day": "D1",
+      "policy": "all2",
+      "repeat": 1,
+      "site": "Site-A",
+      "populations": {
+        "online": {
+          "arrivals": 6008,
+          "on_time": 6008,
+          "late": 0,
+          "unfinished": 0,
+          "on_time_rate": 1.0
+        },
+        "offline": {
+          "arrivals": 5760,
+          "on_time": 5760,
+          "late": 0,
+          "unfinished": 0,
+          "on_time_rate": 1.0
+        }
+      },
+      "online_only": true,
+      "P1plus": true,
+      "offline_successful_fraction": 1.0,
+      "gpu_seconds": 173400.0,
+      "per_gpu_seconds": {
+        "0": 86700.0,
+        "1": 86700.0
+      },
+      "startup_events": 0,
+      "shutdown_events": 0,
+      "startup_sample_count": 0,
+      "startup_p95": null,
+      "costs": {
+        "gpu": 173.4,
+        "startup": 0.0,
+        "shutdown": 0.0,
+        "synthetic_api": 0,
+        "offline_miss": 0.0
+      },
+      "operating_cost": 173.4,
+      "scenario_cost": 173.4,
+      "api_accepted": 0,
+      "policy_ticks": 86700,
+      "control_gaps": 0,
+      "abandoned_decisions": 0,
+      "max_tick_lateness": 0.204811854,
+      "max_actuation_lateness": 0.211861404,
+      "violations": []
+    },
+    {
+      "run_id": "D1_H_r1",
+      "day": "D1",
+      "policy": "H",
+      "repeat": 1,
+      "site": "Site-A",
+      "populations": {
+        "online": {
+          "arrivals": 6008,
+          "on_time": 6008,
+          "late": 0,
+          "unfinished": 0,
+          "on_time_rate": 1.0
+        },
+        "offline": {
+          "arrivals": 5760,
+          "on_time": 5759,
+          "late": 0,
+          "unfinished": 1,
+          "on_time_rate": 0.9998263888888889
+        }
+      },
+      "online_only": true,
+      "P1plus": false,
+      "offline_successful_fraction": 0.9998263888888889,
+      "gpu_seconds": 34251.324612403994,
+      "per_gpu_seconds": {
+        "0": 33390.476743051,
+        "1": 860.847869353
+      },
+      "startup_events": 499,
+      "shutdown_events": 501,
+      "startup_sample_count": 499,
+      "startup_p95": 46.04455484649999,
+      "costs": {
+        "gpu": 34.251324612404,
+        "startup": 0.998,
+        "shutdown": 0.501,
+        "synthetic_api": 3.6730069999999997,
+        "offline_miss": 0.01
+      },
+      "operating_cost": 39.423331612404,
+      "scenario_cost": 39.433331612404,
+      "api_accepted": 4185,
+      "policy_ticks": 86700,
+      "control_gaps": 0,
+      "abandoned_decisions": 0,
+      "max_tick_lateness": 0.211724292,
+      "max_actuation_lateness": 0.211786627,
+      "violations": [
+        {
+          "request_id": "D1-R03909",
+          "arrival_s": 86385,
+          "deadline_s": 86685,
+          "completed_at": null,
+          "dispatched_at": null,
+          "outcome": "unfinished"
+        }
+      ]
+    },
+    {
+      "run_id": "D1_Hguard_r1",
+      "day": "D1",
+      "policy": "Hguard",
+      "repeat": 1,
+      "site": "Site-A",
+      "populations": {
+        "online": {
+          "arrivals": 6008,
+          "on_time": 6008,
+          "late": 0,
+          "unfinished": 0,
+          "on_time_rate": 1.0
+        },
+        "offline": {
+          "arrivals": 5760,
+          "on_time": 5759,
+          "late": 1,
+          "unfinished": 0,
+          "on_time_rate": 0.9998263888888889
+        }
+      },
+      "online_only": true,
+      "P1plus": false,
+      "offline_successful_fraction": 0.9998263888888889,
+      "gpu_seconds": 35028.720582006,
+      "per_gpu_seconds": {
+        "0": 33881.773751912,
+        "1": 1146.946830094
+      },
+      "startup_events": 504,
+      "shutdown_events": 504,
+      "startup_sample_count": 504,
+      "startup_p95": 49.599410996799996,
+      "costs": {
+        "gpu": 35.028720582005995,
+        "startup": 1.008,
+        "shutdown": 0.504,
+        "synthetic_api": 3.7144019999999998,
+        "offline_miss": 0.01
+      },
+      "operating_cost": 40.255122582005995,
+      "scenario_cost": 40.26512258200599,
+      "api_accepted": 4266,
+      "policy_ticks": 86700,
+      "control_gaps": 0,
+      "abandoned_decisions": 0,
+      "max_tick_lateness": 0.019678375,
+      "max_actuation_lateness": 0.380501963,
+      "violations": [
+        {
+          "request_id": "D1-R03909",
+          "arrival_s": 86385,
+          "deadline_s": 86685,
+          "completed_at": 86691.087744004,
+          "dispatched_at": 86688.001138993,
+          "outcome": "late"
+        }
+      ]
+    },
+    {
+      "run_id": "D2_all2_r1",
+      "day": "D2",
+      "policy": "all2",
+      "repeat": 1,
+      "site": "Site-B",
+      "populations": {
+        "online": {
+          "arrivals": 5241,
+          "on_time": 5241,
+          "late": 0,
+          "unfinished": 0,
+          "on_time_rate": 1.0
+        },
+        "offline": {
+          "arrivals": 5760,
+          "on_time": 5760,
+          "late": 0,
+          "unfinished": 0,
+          "on_time_rate": 1.0
+        }
+      },
+      "online_only": true,
+      "P1plus": true,
+      "offline_successful_fraction": 1.0,
+      "gpu_seconds": 173400.0,
+      "per_gpu_seconds": {
+        "0": 86700.0,
+        "1": 86700.0
+      },
+      "startup_events": 0,
+      "shutdown_events": 0,
+      "startup_sample_count": 0,
+      "startup_p95": null,
+      "costs": {
+        "gpu": 173.4,
+        "startup": 0.0,
+        "shutdown": 0.0,
+        "synthetic_api": 0,
+        "offline_miss": 0.0
+      },
+      "operating_cost": 173.4,
+      "scenario_cost": 173.4,
+      "api_accepted": 0,
+      "policy_ticks": 86700,
+      "control_gaps": 0,
+      "abandoned_decisions": 0,
+      "max_tick_lateness": 0.210213742,
+      "max_actuation_lateness": 0.223034568,
+      "violations": []
+    },
+    {
+      "run_id": "D2_Hguard_r1",
+      "day": "D2",
+      "policy": "Hguard",
+      "repeat": 1,
+      "site": "Site-B",
+      "populations": {
+        "online": {
+          "arrivals": 5241,
+          "on_time": 5241,
+          "late": 0,
+          "unfinished": 0,
+          "on_time_rate": 1.0
+        },
+        "offline": {
+          "arrivals": 5760,
+          "on_time": 5760,
+          "late": 0,
+          "unfinished": 0,
+          "on_time_rate": 1.0
+        }
+      },
+      "online_only": true,
+      "P1plus": true,
+      "offline_successful_fraction": 1.0,
+      "gpu_seconds": 34056.978806708,
+      "per_gpu_seconds": {
+        "0": 32997.931161041,
+        "1": 1059.047645667
+      },
+      "startup_events": 489,
+      "shutdown_events": 490,
+      "startup_sample_count": 489,
+      "startup_p95": 48.55431803539998,
+      "costs": {
+        "gpu": 34.056978806708,
+        "startup": 0.978,
+        "shutdown": 0.49,
+        "synthetic_api": 2.9854279999999997,
+        "offline_miss": 0.0
+      },
+      "operating_cost": 38.510406806708005,
+      "scenario_cost": 38.510406806708005,
+      "api_accepted": 3517,
+      "policy_ticks": 86700,
+      "control_gaps": 0,
+      "abandoned_decisions": 0,
+      "max_tick_lateness": 0.454671095,
+      "max_actuation_lateness": 0.573596697,
+      "violations": []
+    },
+    {
+      "run_id": "D2_H_r1",
+      "day": "D2",
+      "policy": "H",
+      "repeat": 1,
+      "site": "Site-B",
+      "populations": {
+        "online": {
+          "arrivals": 5241,
+          "on_time": 5241,
+          "late": 0,
+          "unfinished": 0,
+          "on_time_rate": 1.0
+        },
+        "offline": {
+          "arrivals": 5760,
+          "on_time": 5755,
+          "late": 0,
+          "unfinished": 5,
+          "on_time_rate": 0.9991319444444444
+        }
+      },
+      "online_only": true,
+      "P1plus": false,
+      "offline_successful_fraction": 0.9991319444444444,
+      "gpu_seconds": 35329.339150809996,
+      "per_gpu_seconds": {
+        "0": 33656.560532872,
+        "1": 1672.778617938
+      },
+      "startup_events": 492,
+      "shutdown_events": 494,
+      "startup_sample_count": 492,
+      "startup_p95": 53.2517014221,
+      "costs": {
+        "gpu": 35.32933915080999,
+        "startup": 0.984,
+        "shutdown": 0.494,
+        "synthetic_api": 3.0028509999999997,
+        "offline_miss": 0.05
+      },
+      "operating_cost": 39.810190150809994,
+      "scenario_cost": 39.86019015080999,
+      "api_accepted": 3528,
+      "policy_ticks": 86700,
+      "control_gaps": 0,
+      "abandoned_decisions": 0,
+      "max_tick_lateness": 0.02072788,
+      "max_actuation_lateness": 0.021290929,
+      "violations": [
+        {
+          "request_id": "D2-R10690",
+          "arrival_s": 86325,
+          "deadline_s": 86625,
+          "completed_at": null,
+          "dispatched_at": null,
+          "outcome": "unfinished"
+        },
+        {
+          "request_id": "D2-R07582",
+          "arrival_s": 86340,
+          "deadline_s": 86640,
+          "completed_at": null,
+          "dispatched_at": null,
+          "outcome": "unfinished"
+        },
+        {
+          "request_id": "D2-R04787",
+          "arrival_s": 86355,
+          "deadline_s": 86655,
+          "completed_at": null,
+          "dispatched_at": null,
+          "outcome": "unfinished"
+        },
+        {
+          "request_id": "D2-R08041",
+          "arrival_s": 86370,
+          "deadline_s": 86670,
+          "completed_at": null,
+          "dispatched_at": null,
+          "outcome": "unfinished"
+        },
+        {
+          "request_id": "D2-R02247",
+          "arrival_s": 86385,
+          "deadline_s": 86685,
+          "completed_at": null,
+          "dispatched_at": null,
+          "outcome": "unfinished"
+        }
+      ]
+    },
+    {
+      "run_id": "D1_Hguard_r2",
+      "day": "D1",
+      "policy": "Hguard",
+      "repeat": 2,
+      "site": "Site-A",
+      "populations": {
+        "online": {
+          "arrivals": 6008,
+          "on_time": 6008,
+          "late": 0,
+          "unfinished": 0,
+          "on_time_rate": 1.0
+        },
+        "offline": {
+          "arrivals": 5760,
+          "on_time": 5749,
+          "late": 11,
+          "unfinished": 0,
+          "on_time_rate": 0.9980902777777778
+        }
+      },
+      "online_only": true,
+      "P1plus": false,
+      "offline_successful_fraction": 0.9980902777777778,
+      "gpu_seconds": 45721.721147041004,
+      "per_gpu_seconds": {
+        "0": 39254.295410368,
+        "1": 6467.425736673
+      },
+      "startup_events": 512,
+      "shutdown_events": 513,
+      "startup_sample_count": 512,
+      "startup_p95": 135.60660182114998,
+      "costs": {
+        "gpu": 45.721721147041,
+        "startup": 1.024,
+        "shutdown": 0.513,
+        "synthetic_api": 3.711718,
+        "offline_miss": 0.11
+      },
+      "operating_cost": 50.970439147041,
+      "scenario_cost": 51.080439147041,
+      "api_accepted": 4227,
+      "policy_ticks": 86700,
+      "control_gaps": 0,
+      "abandoned_decisions": 0,
+      "max_tick_lateness": 0.314185462,
+      "max_actuation_lateness": 0.405483255,
+      "violations": [
+        {
+          "request_id": "D1-R01571",
+          "arrival_s": 10470,
+          "deadline_s": 10770,
+          "completed_at": 10826.269960332,
+          "dispatched_at": 10823.001352704,
+          "outcome": "late"
+        },
+        {
+          "request_id": "D1-R05727",
+          "arrival_s": 10485,
+          "deadline_s": 10785,
+          "completed_at": 10826.258908342,
+          "dispatched_at": 10823.001802237,
+          "outcome": "late"
+        },
+        {
+          "request_id": "D1-R07419",
+          "arrival_s": 10500,
+          "deadline_s": 10800,
+          "completed_at": 10826.286919541,
+          "dispatched_at": 10823.001876162,
+          "outcome": "late"
+        },
+        {
+          "request_id": "D1-R09089",
+          "arrival_s": 10515,
+          "deadline_s": 10815,
+          "completed_at": 10826.269804854,
+          "dispatched_at": 10823.001934011,
+          "outcome": "late"
+        },
+        {
+          "request_id": "D1-R08942",
+          "arrival_s": 10905,
+          "deadline_s": 11205,
+          "completed_at": 11261.207305384,
+          "dispatched_at": 11258.00097086,
+          "outcome": "late"
+        },
+        {
+          "request_id": "D1-R11611",
+          "arrival_s": 10920,
+          "deadline_s": 11220,
+          "completed_at": 11261.212912423,
+          "dispatched_at": 11258.001108815,
+          "outcome": "late"
+        },
+        {
+          "request_id": "D1-R03195",
+          "arrival_s": 10935,
+          "deadline_s": 11235,
+          "completed_at": 11261.218577569,
+          "dispatched_at": 11258.001167882,
+          "outcome": "late"
+        },
+        {
+          "request_id": "D1-R00921",
+          "arrival_s": 10950,
+          "deadline_s": 11250,
+          "completed_at": 11261.230235467,
+          "dispatched_at": 11258.00122626,
+          "outcome": "late"
+        },
+        {
+          "request_id": "D1-R05970",
+          "arrival_s": 14685,
+          "deadline_s": 14985,
+          "completed_at": 15012.218122052,
+          "dispatched_at": 15009.001859776,
+          "outcome": "late"
+        },
+        {
+          "request_id": "D1-R11629",
+          "arrival_s": 14700,
+          "deadline_s": 15000,
+          "completed_at": 15012.218372312,
+          "dispatched_at": 15009.001987437,
+          "outcome": "late"
+        },
+        {
+          "request_id": "D1-R11477",
+          "arrival_s": 86325,
+          "deadline_s": 86625,
+          "completed_at": 86630.218242001,
+          "dispatched_at": 86627.001548754,
+          "outcome": "late"
+        }
+      ]
+    },
+    {
+      "run_id": "D1_H_r2",
+      "day": "D1",
+      "policy": "H",
+      "repeat": 2,
+      "site": "Site-B",
+      "populations": {
+        "online": {
+          "arrivals": 6008,
+          "on_time": 6008,
+          "late": 0,
+          "unfinished": 0,
+          "on_time_rate": 1.0
+        },
+        "offline": {
+          "arrivals": 5760,
+          "on_time": 5759,
+          "late": 0,
+          "unfinished": 1,
+          "on_time_rate": 0.9998263888888889
+        }
+      },
+      "online_only": true,
+      "P1plus": false,
+      "offline_successful_fraction": 0.9998263888888889,
+      "gpu_seconds": 34631.662098126,
+      "per_gpu_seconds": {
+        "0": 33586.000237039,
+        "1": 1045.661861087
+      },
+      "startup_events": 500,
+      "shutdown_events": 502,
+      "startup_sample_count": 500,
+      "startup_p95": 46.715469329550004,
+      "costs": {
+        "gpu": 34.631662098126,
+        "startup": 1.0,
+        "shutdown": 0.502,
+        "synthetic_api": 3.716668,
+        "offline_miss": 0.01
+      },
+      "operating_cost": 39.850330098126,
+      "scenario_cost": 39.860330098126,
+      "api_accepted": 4271,
+      "policy_ticks": 86700,
+      "control_gaps": 0,
+      "abandoned_decisions": 0,
+      "max_tick_lateness": 0.033534077,
+      "max_actuation_lateness": 0.033578036,
+      "violations": [
+        {
+          "request_id": "D1-R03909",
+          "arrival_s": 86385,
+          "deadline_s": 86685,
+          "completed_at": null,
+          "dispatched_at": null,
+          "outcome": "unfinished"
+        }
+      ]
+    }
+  ],
+  "predictions": [
+    {
+      "day": "D1",
+      "model": "Share",
+      "policy": "all2",
+      "P1plus": true,
+      "populations": {
+        "online": {
+          "arrivals": 6008,
+          "on_time": 6008,
+          "late": 0,
+          "unfinished": 0,
+          "on_time_rate": 1.0
+        },
+        "offline": {
+          "arrivals": 5760,
+          "on_time": 5760,
+          "late": 0,
+          "unfinished": 0,
+          "on_time_rate": 1.0
+        }
+      },
+      "frozen_scenario_cost": 173.4
+    },
+    {
+      "day": "D1",
+      "model": "Share",
+      "policy": "H",
+      "P1plus": false,
+      "populations": {
+        "online": {
+          "arrivals": 6008,
+          "on_time": 6008,
+          "late": 0,
+          "unfinished": 0,
+          "on_time_rate": 1.0
+        },
+        "offline": {
+          "arrivals": 5760,
+          "on_time": 5759,
+          "late": 0,
+          "unfinished": 1,
+          "on_time_rate": 0.9998263888888889
+        }
+      },
+      "frozen_scenario_cost": 37.88469139413534
+    },
+    {
+      "day": "D1",
+      "model": "Share",
+      "policy": "Hguard",
+      "P1plus": true,
+      "populations": {
+        "online": {
+          "arrivals": 6008,
+          "on_time": 6008,
+          "late": 0,
+          "unfinished": 0,
+          "on_time_rate": 1.0
+        },
+        "offline": {
+          "arrivals": 5760,
+          "on_time": 5760,
+          "late": 0,
+          "unfinished": 0,
+          "on_time_rate": 1.0
+        }
+      },
+      "frozen_scenario_cost": 37.93469139413534
+    },
+    {
+      "day": "D1",
+      "model": "Lookup69",
+      "policy": "all2",
+      "P1plus": true,
+      "populations": {
+        "online": {
+          "arrivals": 6008,
+          "on_time": 6008,
+          "late": 0,
+          "unfinished": 0,
+          "on_time_rate": 1.0
+        },
+        "offline": {
+          "arrivals": 5760,
+          "on_time": 5760,
+          "late": 0,
+          "unfinished": 0,
+          "on_time_rate": 1.0
+        }
+      },
+      "frozen_scenario_cost": 173.4
+    },
+    {
+      "day": "D1",
+      "model": "Lookup69",
+      "policy": "H",
+      "P1plus": true,
+      "populations": {
+        "online": {
+          "arrivals": 6008,
+          "on_time": 6008,
+          "late": 0,
+          "unfinished": 0,
+          "on_time_rate": 1.0
+        },
+        "offline": {
+          "arrivals": 5760,
+          "on_time": 5760,
+          "late": 0,
+          "unfinished": 0,
+          "on_time_rate": 1.0
+        }
+      },
+      "frozen_scenario_cost": 78.21527265553576
+    },
+    {
+      "day": "D1",
+      "model": "Lookup69",
+      "policy": "Hguard",
+      "P1plus": true,
+      "populations": {
+        "online": {
+          "arrivals": 6008,
+          "on_time": 6008,
+          "late": 0,
+          "unfinished": 0,
+          "on_time_rate": 1.0
+        },
+        "offline": {
+          "arrivals": 5760,
+          "on_time": 5760,
+          "late": 0,
+          "unfinished": 0,
+          "on_time_rate": 1.0
+        }
+      },
+      "frozen_scenario_cost": 78.21527265553576
+    },
+    {
+      "day": "D1",
+      "model": "Lookup30",
+      "policy": "all2",
+      "P1plus": true,
+      "populations": {
+        "online": {
+          "arrivals": 6008,
+          "on_time": 6008,
+          "late": 0,
+          "unfinished": 0,
+          "on_time_rate": 1.0
+        },
+        "offline": {
+          "arrivals": 5760,
+          "on_time": 5760,
+          "late": 0,
+          "unfinished": 0,
+          "on_time_rate": 1.0
+        }
+      },
+      "frozen_scenario_cost": 173.4
+    },
+    {
+      "day": "D1",
+      "model": "Lookup30",
+      "policy": "H",
+      "P1plus": false,
+      "populations": {
+        "online": {
+          "arrivals": 6008,
+          "on_time": 6008,
+          "late": 0,
+          "unfinished": 0,
+          "on_time_rate": 1.0
+        },
+        "offline": {
+          "arrivals": 5760,
+          "on_time": 5759,
+          "late": 0,
+          "unfinished": 1,
+          "on_time_rate": 0.9998263888888889
+        }
+      },
+      "frozen_scenario_cost": 37.55861826791384
+    },
+    {
+      "day": "D1",
+      "model": "Lookup30",
+      "policy": "Hguard",
+      "P1plus": true,
+      "populations": {
+        "online": {
+          "arrivals": 6008,
+          "on_time": 6008,
+          "late": 0,
+          "unfinished": 0,
+          "on_time_rate": 1.0
+        },
+        "offline": {
+          "arrivals": 5760,
+          "on_time": 5760,
+          "late": 0,
+          "unfinished": 0,
+          "on_time_rate": 1.0
+        }
+      },
+      "frozen_scenario_cost": 37.60861826791385
+    },
+    {
+      "day": "D1",
+      "model": "Local",
+      "policy": "all2",
+      "P1plus": true,
+      "populations": {
+        "online": {
+          "arrivals": 6008,
+          "on_time": 6008,
+          "late": 0,
+          "unfinished": 0,
+          "on_time_rate": 1.0
+        },
+        "offline": {
+          "arrivals": 5760,
+          "on_time": 5760,
+          "late": 0,
+          "unfinished": 0,
+          "on_time_rate": 1.0
+        }
+      },
+      "frozen_scenario_cost": 173.4
+    },
+    {
+      "day": "D1",
+      "model": "Local",
+      "policy": "H",
+      "P1plus": false,
+      "populations": {
+        "online": {
+          "arrivals": 6008,
+          "on_time": 6008,
+          "late": 0,
+          "unfinished": 0,
+          "on_time_rate": 1.0
+        },
+        "offline": {
+          "arrivals": 5760,
+          "on_time": 5759,
+          "late": 0,
+          "unfinished": 1,
+          "on_time_rate": 0.9998263888888889
+        }
+      },
+      "frozen_scenario_cost": 37.52966826791384
+    },
+    {
+      "day": "D1",
+      "model": "Local",
+      "policy": "Hguard",
+      "P1plus": true,
+      "populations": {
+        "online": {
+          "arrivals": 6008,
+          "on_time": 6008,
+          "late": 0,
+          "unfinished": 0,
+          "on_time_rate": 1.0
+        },
+        "offline": {
+          "arrivals": 5760,
+          "on_time": 5760,
+          "late": 0,
+          "unfinished": 0,
+          "on_time_rate": 1.0
+        }
+      },
+      "frozen_scenario_cost": 37.579668267913846
+    },
+    {
+      "day": "D2",
+      "model": "Share",
+      "policy": "all2",
+      "P1plus": true,
+      "populations": {
+        "online": {
+          "arrivals": 5241,
+          "on_time": 5241,
+          "late": 0,
+          "unfinished": 0,
+          "on_time_rate": 1.0
+        },
+        "offline": {
+          "arrivals": 5760,
+          "on_time": 5760,
+          "late": 0,
+          "unfinished": 0,
+          "on_time_rate": 1.0
+        }
+      },
+      "frozen_scenario_cost": 173.4
+    },
+    {
+      "day": "D2",
+      "model": "Share",
+      "policy": "H",
+      "P1plus": false,
+      "populations": {
+        "online": {
+          "arrivals": 5241,
+          "on_time": 5241,
+          "late": 0,
+          "unfinished": 0,
+          "on_time_rate": 1.0
+        },
+        "offline": {
+          "arrivals": 5760,
+          "on_time": 5752,
+          "late": 0,
+          "unfinished": 8,
+          "on_time_rate": 0.9986111111111111
+        }
+      },
+      "frozen_scenario_cost": 36.869236155318866
+    },
+    {
+      "day": "D2",
+      "model": "Share",
+      "policy": "Hguard",
+      "P1plus": true,
+      "populations": {
+        "online": {
+          "arrivals": 5241,
+          "on_time": 5241,
+          "late": 0,
+          "unfinished": 0,
+          "on_time_rate": 1.0
+        },
+        "offline": {
+          "arrivals": 5760,
+          "on_time": 5760,
+          "late": 0,
+          "unfinished": 0,
+          "on_time_rate": 1.0
+        }
+      },
+      "frozen_scenario_cost": 36.854251023408374
+    },
+    {
+      "day": "D2",
+      "model": "Lookup69",
+      "policy": "all2",
+      "P1plus": true,
+      "populations": {
+        "online": {
+          "arrivals": 5241,
+          "on_time": 5241,
+          "late": 0,
+          "unfinished": 0,
+          "on_time_rate": 1.0
+        },
+        "offline": {
+          "arrivals": 5760,
+          "on_time": 5760,
+          "late": 0,
+          "unfinished": 0,
+          "on_time_rate": 1.0
+        }
+      },
+      "frozen_scenario_cost": 173.4
+    },
+    {
+      "day": "D2",
+      "model": "Lookup69",
+      "policy": "H",
+      "P1plus": false,
+      "populations": {
+        "online": {
+          "arrivals": 5241,
+          "on_time": 5241,
+          "late": 0,
+          "unfinished": 0,
+          "on_time_rate": 1.0
+        },
+        "offline": {
+          "arrivals": 5760,
+          "on_time": 5755,
+          "late": 0,
+          "unfinished": 5,
+          "on_time_rate": 0.9991319444444444
+        }
+      },
+      "frozen_scenario_cost": 76.202380019553
+    },
+    {
+      "day": "D2",
+      "model": "Lookup69",
+      "policy": "Hguard",
+      "P1plus": false,
+      "populations": {
+        "online": {
+          "arrivals": 5241,
+          "on_time": 5241,
+          "late": 0,
+          "unfinished": 0,
+          "on_time_rate": 1.0
+        },
+        "offline": {
+          "arrivals": 5760,
+          "on_time": 5757,
+          "late": 3,
+          "unfinished": 0,
+          "on_time_rate": 0.9994791666666667
+        }
+      },
+      "frozen_scenario_cost": 76.36639488764253
+    },
+    {
+      "day": "D2",
+      "model": "Lookup30",
+      "policy": "all2",
+      "P1plus": true,
+      "populations": {
+        "online": {
+          "arrivals": 5241,
+          "on_time": 5241,
+          "late": 0,
+          "unfinished": 0,
+          "on_time_rate": 1.0
+        },
+        "offline": {
+          "arrivals": 5760,
+          "on_time": 5760,
+          "late": 0,
+          "unfinished": 0,
+          "on_time_rate": 1.0
+        }
+      },
+      "frozen_scenario_cost": 173.4
+    },
+    {
+      "day": "D2",
+      "model": "Lookup30",
+      "policy": "H",
+      "P1plus": false,
+      "populations": {
+        "online": {
+          "arrivals": 5241,
+          "on_time": 5241,
+          "late": 0,
+          "unfinished": 0,
+          "on_time_rate": 1.0
+        },
+        "offline": {
+          "arrivals": 5760,
+          "on_time": 5759,
+          "late": 0,
+          "unfinished": 1,
+          "on_time_rate": 0.9998263888888889
+        }
+      },
+      "frozen_scenario_cost": 36.17862875958738
+    },
+    {
+      "day": "D2",
+      "model": "Lookup30",
+      "policy": "Hguard",
+      "P1plus": true,
+      "populations": {
+        "online": {
+          "arrivals": 5241,
+          "on_time": 5241,
+          "late": 0,
+          "unfinished": 0,
+          "on_time_rate": 1.0
+        },
+        "offline": {
+          "arrivals": 5760,
+          "on_time": 5760,
+          "late": 0,
+          "unfinished": 0,
+          "on_time_rate": 1.0
+        }
+      },
+      "frozen_scenario_cost": 36.22762875958739
+    },
+    {
+      "day": "D2",
+      "model": "Local",
+      "policy": "all2",
+      "P1plus": true,
+      "populations": {
+        "online": {
+          "arrivals": 5241,
+          "on_time": 5241,
+          "late": 0,
+          "unfinished": 0,
+          "on_time_rate": 1.0
+        },
+        "offline": {
+          "arrivals": 5760,
+          "on_time": 5760,
+          "late": 0,
+          "unfinished": 0,
+          "on_time_rate": 1.0
+        }
+      },
+      "frozen_scenario_cost": 173.4
+    },
+    {
+      "day": "D2",
+      "model": "Local",
+      "policy": "H",
+      "P1plus": false,
+      "populations": {
+        "online": {
+          "arrivals": 5241,
+          "on_time": 5241,
+          "late": 0,
+          "unfinished": 0,
+          "on_time_rate": 1.0
+        },
+        "offline": {
+          "arrivals": 5760,
+          "on_time": 5759,
+          "late": 0,
+          "unfinished": 1,
+          "on_time_rate": 0.9998263888888889
+        }
+      },
+      "frozen_scenario_cost": 36.17862875958738
+    },
+    {
+      "day": "D2",
+      "model": "Local",
+      "policy": "Hguard",
+      "P1plus": true,
+      "populations": {
+        "online": {
+          "arrivals": 5241,
+          "on_time": 5241,
+          "late": 0,
+          "unfinished": 0,
+          "on_time_rate": 1.0
+        },
+        "offline": {
+          "arrivals": 5760,
+          "on_time": 5760,
+          "late": 0,
+          "unfinished": 0,
+          "on_time_rate": 1.0
+        }
+      },
+      "frozen_scenario_cost": 36.22762875958739
+    }
+  ],
+  "selection": {
+    "Share": [
+      "Hguard"
+    ],
+    "Lookup69": [],
+    "Lookup30": [
+      "Hguard"
+    ],
+    "Local": [
+      "Hguard"
+    ]
+  },
+  "confusion": {
+    "Share": {
+      "agreement": 3,
+      "false_accept": 1,
+      "false_reject": 0,
+      "cases": 4
+    },
+    "Lookup69": {
+      "agreement": 1,
+      "false_accept": 2,
+      "false_reject": 1,
+      "cases": 4
+    },
+    "Lookup30": {
+      "agreement": 3,
+      "false_accept": 1,
+      "false_reject": 0,
+      "cases": 4
+    },
+    "Local": {
+      "agreement": 3,
+      "false_accept": 1,
+      "false_reject": 0,
+      "cases": 4
+    }
+  },
+  "metric_projection": {
+    "scope": "fixed-trajectory metric projection, not removing offline arrivals or rerunning policies",
+    "primary_dynamic_cases": 4,
+    "primary_online_only_pass": 4,
+    "primary_mixed_pass": 1,
+    "primary_online_only_pass_but_mixed_fail": 3,
+    "all_dynamic_cases": 6,
+    "all_dynamic_online_only_pass": 6,
+    "all_dynamic_mixed_pass": 1,
+    "all_runs_online_only_pass": 8,
+    "all_runs_mixed_pass": 3
+  },
+  "deadline_score_sensitivity": [
+    {
+      "run_id": "D1_all2_r1",
+      "grace_seconds": 0,
+      "arrivals": 5760,
+      "on_time": 5760,
+      "late": 0,
+      "unfinished": 0,
+      "on_time_rate": 1.0
+    },
+    {
+      "run_id": "D1_all2_r1",
+      "grace_seconds": 1,
+      "arrivals": 5760,
+      "on_time": 5760,
+      "late": 0,
+      "unfinished": 0,
+      "on_time_rate": 1.0
+    },
+    {
+      "run_id": "D1_all2_r1",
+      "grace_seconds": 5,
+      "arrivals": 5760,
+      "on_time": 5760,
+      "late": 0,
+      "unfinished": 0,
+      "on_time_rate": 1.0
+    },
+    {
+      "run_id": "D1_all2_r1",
+      "grace_seconds": 10,
+      "arrivals": 5760,
+      "on_time": 5760,
+      "late": 0,
+      "unfinished": 0,
+      "on_time_rate": 1.0
+    },
+    {
+      "run_id": "D1_all2_r1",
+      "grace_seconds": 30,
+      "arrivals": 5760,
+      "on_time": 5760,
+      "late": 0,
+      "unfinished": 0,
+      "on_time_rate": 1.0
+    },
+    {
+      "run_id": "D1_all2_r1",
+      "grace_seconds": 60,
+      "arrivals": 5760,
+      "on_time": 5760,
+      "late": 0,
+      "unfinished": 0,
+      "on_time_rate": 1.0
+    },
+    {
+      "run_id": "D1_H_r1",
+      "grace_seconds": 0,
+      "arrivals": 5760,
+      "on_time": 5759,
+      "late": 0,
+      "unfinished": 1,
+      "on_time_rate": 0.9998263888888889
+    },
+    {
+      "run_id": "D1_H_r1",
+      "grace_seconds": 1,
+      "arrivals": 5760,
+      "on_time": 5759,
+      "late": 0,
+      "unfinished": 1,
+      "on_time_rate": 0.9998263888888889
+    },
+    {
+      "run_id": "D1_H_r1",
+      "grace_seconds": 5,
+      "arrivals": 5760,
+      "on_time": 5759,
+      "late": 0,
+      "unfinished": 1,
+      "on_time_rate": 0.9998263888888889
+    },
+    {
+      "run_id": "D1_H_r1",
+      "grace_seconds": 10,
+      "arrivals": 5760,
+      "on_time": 5759,
+      "late": 0,
+      "unfinished": 1,
+      "on_time_rate": 0.9998263888888889
+    },
+    {
+      "run_id": "D1_H_r1",
+      "grace_seconds": 30,
+      "arrivals": 5760,
+      "on_time": 5759,
+      "late": 0,
+      "unfinished": 1,
+      "on_time_rate": 0.9998263888888889
+    },
+    {
+      "run_id": "D1_H_r1",
+      "grace_seconds": 60,
+      "arrivals": 5760,
+      "on_time": 5759,
+      "late": 0,
+      "unfinished": 1,
+      "on_time_rate": 0.9998263888888889
+    },
+    {
+      "run_id": "D1_Hguard_r1",
+      "grace_seconds": 0,
+      "arrivals": 5760,
+      "on_time": 5759,
+      "late": 1,
+      "unfinished": 0,
+      "on_time_rate": 0.9998263888888889
+    },
+    {
+      "run_id": "D1_Hguard_r1",
+      "grace_seconds": 1,
+      "arrivals": 5760,
+      "on_time": 5759,
+      "late": 1,
+      "unfinished": 0,
+      "on_time_rate": 0.9998263888888889
+    },
+    {
+      "run_id": "D1_Hguard_r1",
+      "grace_seconds": 5,
+      "arrivals": 5760,
+      "on_time": 5759,
+      "late": 1,
+      "unfinished": 0,
+      "on_time_rate": 0.9998263888888889
+    },
+    {
+      "run_id": "D1_Hguard_r1",
+      "grace_seconds": 10,
+      "arrivals": 5760,
+      "on_time": 5760,
+      "late": 0,
+      "unfinished": 0,
+      "on_time_rate": 1.0
+    },
+    {
+      "run_id": "D1_Hguard_r1",
+      "grace_seconds": 30,
+      "arrivals": 5760,
+      "on_time": 5760,
+      "late": 0,
+      "unfinished": 0,
+      "on_time_rate": 1.0
+    },
+    {
+      "run_id": "D1_Hguard_r1",
+      "grace_seconds": 60,
+      "arrivals": 5760,
+      "on_time": 5760,
+      "late": 0,
+      "unfinished": 0,
+      "on_time_rate": 1.0
+    },
+    {
+      "run_id": "D2_all2_r1",
+      "grace_seconds": 0,
+      "arrivals": 5760,
+      "on_time": 5760,
+      "late": 0,
+      "unfinished": 0,
+      "on_time_rate": 1.0
+    },
+    {
+      "run_id": "D2_all2_r1",
+      "grace_seconds": 1,
+      "arrivals": 5760,
+      "on_time": 5760,
+      "late": 0,
+      "unfinished": 0,
+      "on_time_rate": 1.0
+    },
+    {
+      "run_id": "D2_all2_r1",
+      "grace_seconds": 5,
+      "arrivals": 5760,
+      "on_time": 5760,
+      "late": 0,
+      "unfinished": 0,
+      "on_time_rate": 1.0
+    },
+    {
+      "run_id": "D2_all2_r1",
+      "grace_seconds": 10,
+      "arrivals": 5760,
+      "on_time": 5760,
+      "late": 0,
+      "unfinished": 0,
+      "on_time_rate": 1.0
+    },
+    {
+      "run_id": "D2_all2_r1",
+      "grace_seconds": 30,
+      "arrivals": 5760,
+      "on_time": 5760,
+      "late": 0,
+      "unfinished": 0,
+      "on_time_rate": 1.0
+    },
+    {
+      "run_id": "D2_all2_r1",
+      "grace_seconds": 60,
+      "arrivals": 5760,
+      "on_time": 5760,
+      "late": 0,
+      "unfinished": 0,
+      "on_time_rate": 1.0
+    },
+    {
+      "run_id": "D2_Hguard_r1",
+      "grace_seconds": 0,
+      "arrivals": 5760,
+      "on_time": 5760,
+      "late": 0,
+      "unfinished": 0,
+      "on_time_rate": 1.0
+    },
+    {
+      "run_id": "D2_Hguard_r1",
+      "grace_seconds": 1,
+      "arrivals": 5760,
+      "on_time": 5760,
+      "late": 0,
+      "unfinished": 0,
+      "on_time_rate": 1.0
+    },
+    {
+      "run_id": "D2_Hguard_r1",
+      "grace_seconds": 5,
+      "arrivals": 5760,
+      "on_time": 5760,
+      "late": 0,
+      "unfinished": 0,
+      "on_time_rate": 1.0
+    },
+    {
+      "run_id": "D2_Hguard_r1",
+      "grace_seconds": 10,
+      "arrivals": 5760,
+      "on_time": 5760,
+      "late": 0,
+      "unfinished": 0,
+      "on_time_rate": 1.0
+    },
+    {
+      "run_id": "D2_Hguard_r1",
+      "grace_seconds": 30,
+      "arrivals": 5760,
+      "on_time": 5760,
+      "late": 0,
+      "unfinished": 0,
+      "on_time_rate": 1.0
+    },
+    {
+      "run_id": "D2_Hguard_r1",
+      "grace_seconds": 60,
+      "arrivals": 5760,
+      "on_time": 5760,
+      "late": 0,
+      "unfinished": 0,
+      "on_time_rate": 1.0
+    },
+    {
+      "run_id": "D2_H_r1",
+      "grace_seconds": 0,
+      "arrivals": 5760,
+      "on_time": 5755,
+      "late": 0,
+      "unfinished": 5,
+      "on_time_rate": 0.9991319444444444
+    },
+    {
+      "run_id": "D2_H_r1",
+      "grace_seconds": 1,
+      "arrivals": 5760,
+      "on_time": 5755,
+      "late": 0,
+      "unfinished": 5,
+      "on_time_rate": 0.9991319444444444
+    },
+    {
+      "run_id": "D2_H_r1",
+      "grace_seconds": 5,
+      "arrivals": 5760,
+      "on_time": 5755,
+      "late": 0,
+      "unfinished": 5,
+      "on_time_rate": 0.9991319444444444
+    },
+    {
+      "run_id": "D2_H_r1",
+      "grace_seconds": 10,
+      "arrivals": 5760,
+      "on_time": 5755,
+      "late": 0,
+      "unfinished": 5,
+      "on_time_rate": 0.9991319444444444
+    },
+    {
+      "run_id": "D2_H_r1",
+      "grace_seconds": 30,
+      "arrivals": 5760,
+      "on_time": 5755,
+      "late": 0,
+      "unfinished": 5,
+      "on_time_rate": 0.9991319444444444
+    },
+    {
+      "run_id": "D2_H_r1",
+      "grace_seconds": 60,
+      "arrivals": 5760,
+      "on_time": 5755,
+      "late": 0,
+      "unfinished": 5,
+      "on_time_rate": 0.9991319444444444
+    },
+    {
+      "run_id": "D1_Hguard_r2",
+      "grace_seconds": 0,
+      "arrivals": 5760,
+      "on_time": 5749,
+      "late": 11,
+      "unfinished": 0,
+      "on_time_rate": 0.9980902777777778
+    },
+    {
+      "run_id": "D1_Hguard_r2",
+      "grace_seconds": 1,
+      "arrivals": 5760,
+      "on_time": 5749,
+      "late": 11,
+      "unfinished": 0,
+      "on_time_rate": 0.9980902777777778
+    },
+    {
+      "run_id": "D1_Hguard_r2",
+      "grace_seconds": 5,
+      "arrivals": 5760,
+      "on_time": 5749,
+      "late": 11,
+      "unfinished": 0,
+      "on_time_rate": 0.9980902777777778
+    },
+    {
+      "run_id": "D1_Hguard_r2",
+      "grace_seconds": 10,
+      "arrivals": 5760,
+      "on_time": 5750,
+      "late": 10,
+      "unfinished": 0,
+      "on_time_rate": 0.9982638888888888
+    },
+    {
+      "run_id": "D1_Hguard_r2",
+      "grace_seconds": 30,
+      "arrivals": 5760,
+      "on_time": 5756,
+      "late": 4,
+      "unfinished": 0,
+      "on_time_rate": 0.9993055555555556
+    },
+    {
+      "run_id": "D1_Hguard_r2",
+      "grace_seconds": 60,
+      "arrivals": 5760,
+      "on_time": 5760,
+      "late": 0,
+      "unfinished": 0,
+      "on_time_rate": 1.0
+    },
+    {
+      "run_id": "D1_H_r2",
+      "grace_seconds": 0,
+      "arrivals": 5760,
+      "on_time": 5759,
+      "late": 0,
+      "unfinished": 1,
+      "on_time_rate": 0.9998263888888889
+    },
+    {
+      "run_id": "D1_H_r2",
+      "grace_seconds": 1,
+      "arrivals": 5760,
+      "on_time": 5759,
+      "late": 0,
+      "unfinished": 1,
+      "on_time_rate": 0.9998263888888889
+    },
+    {
+      "run_id": "D1_H_r2",
+      "grace_seconds": 5,
+      "arrivals": 5760,
+      "on_time": 5759,
+      "late": 0,
+      "unfinished": 1,
+      "on_time_rate": 0.9998263888888889
+    },
+    {
+      "run_id": "D1_H_r2",
+      "grace_seconds": 10,
+      "arrivals": 5760,
+      "on_time": 5759,
+      "late": 0,
+      "unfinished": 1,
+      "on_time_rate": 0.9998263888888889
+    },
+    {
+      "run_id": "D1_H_r2",
+      "grace_seconds": 30,
+      "arrivals": 5760,
+      "on_time": 5759,
+      "late": 0,
+      "unfinished": 1,
+      "on_time_rate": 0.9998263888888889
+    },
+    {
+      "run_id": "D1_H_r2",
+      "grace_seconds": 60,
+      "arrivals": 5760,
+      "on_time": 5759,
+      "late": 0,
+      "unfinished": 1,
+      "on_time_rate": 0.9998263888888889
+    }
+  ],
+  "startup_statistic_sensitivity": [
+    {
+      "day": "D1",
+      "policy": "H",
+      "quantile": 0.5,
+      "startup_seconds": 28.486242875000002,
+      "predicted_P1plus": false,
+      "physical_P1plus": false,
+      "frozen_scenario_cost": 37.52966826791384
+    },
+    {
+      "day": "D1",
+      "policy": "Hguard",
+      "quantile": 0.5,
+      "startup_seconds": 28.486242875000002,
+      "predicted_P1plus": true,
+      "physical_P1plus": false,
+      "frozen_scenario_cost": 37.579668267913846
+    },
+    {
+      "day": "D1",
+      "policy": "H",
+      "quantile": 0.75,
+      "startup_seconds": 28.699885777,
+      "predicted_P1plus": false,
+      "physical_P1plus": false,
+      "frozen_scenario_cost": 37.52966826791384
+    },
+    {
+      "day": "D1",
+      "policy": "Hguard",
+      "quantile": 0.75,
+      "startup_seconds": 28.699885777,
+      "predicted_P1plus": true,
+      "physical_P1plus": false,
+      "frozen_scenario_cost": 37.579668267913846
+    },
+    {
+      "day": "D1",
+      "policy": "H",
+      "quantile": 0.9,
+      "startup_seconds": 30.172042770200004,
+      "predicted_P1plus": false,
+      "physical_P1plus": false,
+      "frozen_scenario_cost": 37.593439267913844
+    },
+    {
+      "day": "D1",
+      "policy": "Hguard",
+      "quantile": 0.9,
+      "startup_seconds": 30.172042770200004,
+      "predicted_P1plus": true,
+      "physical_P1plus": false,
+      "frozen_scenario_cost": 37.64343926791385
+    },
+    {
+      "day": "D1",
+      "policy": "H",
+      "quantile": 0.95,
+      "startup_seconds": 34.13138782810002,
+      "predicted_P1plus": false,
+      "physical_P1plus": false,
+      "frozen_scenario_cost": 37.73419226791384
+    },
+    {
+      "day": "D1",
+      "policy": "Hguard",
+      "quantile": 0.95,
+      "startup_seconds": 34.13138782810002,
+      "predicted_P1plus": true,
+      "physical_P1plus": false,
+      "frozen_scenario_cost": 37.81019226791385
+    },
+    {
+      "day": "D1",
+      "policy": "H",
+      "quantile": 1.0,
+      "startup_seconds": 51.039126621,
+      "predicted_P1plus": false,
+      "physical_P1plus": false,
+      "frozen_scenario_cost": 40.18394864657835
+    },
+    {
+      "day": "D1",
+      "policy": "Hguard",
+      "quantile": 1.0,
+      "startup_seconds": 51.039126621,
+      "predicted_P1plus": false,
+      "physical_P1plus": false,
+      "frozen_scenario_cost": 40.26994864657835
+    },
+    {
+      "day": "D2",
+      "policy": "H",
+      "quantile": 0.5,
+      "startup_seconds": 29.1929133385,
+      "predicted_P1plus": false,
+      "physical_P1plus": false,
+      "frozen_scenario_cost": 36.17862875958738
+    },
+    {
+      "day": "D2",
+      "policy": "Hguard",
+      "quantile": 0.5,
+      "startup_seconds": 29.1929133385,
+      "predicted_P1plus": true,
+      "physical_P1plus": true,
+      "frozen_scenario_cost": 36.22762875958739
+    },
+    {
+      "day": "D2",
+      "policy": "H",
+      "quantile": 0.75,
+      "startup_seconds": 29.2420397245,
+      "predicted_P1plus": false,
+      "physical_P1plus": false,
+      "frozen_scenario_cost": 36.17862875958738
+    },
+    {
+      "day": "D2",
+      "policy": "Hguard",
+      "quantile": 0.75,
+      "startup_seconds": 29.2420397245,
+      "predicted_P1plus": true,
+      "physical_P1plus": true,
+      "frozen_scenario_cost": 36.22762875958739
+    },
+    {
+      "day": "D2",
+      "policy": "H",
+      "quantile": 0.9,
+      "startup_seconds": 30.0963048137,
+      "predicted_P1plus": false,
+      "physical_P1plus": false,
+      "frozen_scenario_cost": 36.212405759587384
+    },
+    {
+      "day": "D2",
+      "policy": "Hguard",
+      "quantile": 0.9,
+      "startup_seconds": 30.0963048137,
+      "predicted_P1plus": true,
+      "physical_P1plus": true,
+      "frozen_scenario_cost": 36.26140575958739
+    },
+    {
+      "day": "D2",
+      "policy": "H",
+      "quantile": 0.95,
+      "startup_seconds": 33.36140722350004,
+      "predicted_P1plus": false,
+      "physical_P1plus": false,
+      "frozen_scenario_cost": 36.29966175958739
+    },
+    {
+      "day": "D2",
+      "policy": "Hguard",
+      "quantile": 0.95,
+      "startup_seconds": 33.36140722350004,
+      "predicted_P1plus": true,
+      "physical_P1plus": true,
+      "frozen_scenario_cost": 36.37466175958739
+    },
+    {
+      "day": "D2",
+      "policy": "H",
+      "quantile": 1.0,
+      "startup_seconds": 80.638379818,
+      "predicted_P1plus": false,
+      "physical_P1plus": false,
+      "frozen_scenario_cost": 76.510298019553
+    },
+    {
+      "day": "D2",
+      "policy": "Hguard",
+      "quantile": 1.0,
+      "startup_seconds": 80.638379818,
+      "predicted_P1plus": false,
+      "physical_P1plus": true,
+      "frozen_scenario_cost": 76.67431288764253
+    }
+  ],
+  "startup_statistic_selection": [
+    {
+      "quantile": 0.5,
+      "choices": [
+        "Hguard"
+      ],
+      "agreement": 3
+    },
+    {
+      "quantile": 0.75,
+      "choices": [
+        "Hguard"
+      ],
+      "agreement": 3
+    },
+    {
+      "quantile": 0.9,
+      "choices": [
+        "Hguard"
+      ],
+      "agreement": 3
+    },
+    {
+      "quantile": 0.95,
+      "choices": [
+        "Hguard"
+      ],
+      "agreement": 3
+    },
+    {
+      "quantile": 1.0,
+      "choices": [],
+      "agreement": 3
+    }
+  ],
+  "d2_conditional_saving_percent": 77.79099953477046
+}

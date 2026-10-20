@@ -1,0 +1,41 @@
+\subsection{Online source-row isolation audit}
+\label{app:input-row-audit}
+We compare online source-row hashes across three training, three validation,
+and two deployment inputs. All 28 pairwise intersections are empty; the three
+validation-file hashes match the frozen training contract. Table~\ref{tab:input-row-audit}
+gives the included row counts and raw timestamp ranges in seconds from the
+source's time origin. Deployment hashes cover the retained online entries in the source-row maps,
+matching the generated online arrivals. Repeated hashes within
+a file explain the difference between row and unique-hash counts.
+
+\begin{table}[t]
+\centering\small
+\caption{Online source-row isolation. The released audit supplies the full
+$8\times8$ overlap matrix, file hashes, and generator identities.}
+\label{tab:input-row-audit}
+\setlength{\tabcolsep}{2pt}
+\par\vspace{4pt}
+\begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}lrrr@{}}
+\toprule
+Input & Rows & Unique & Timestamp range (s)\\
+\midrule
+Train burst & 385 & 382 & 819092--820687 \\
+Train recovery & 2422 & 2365 & 3063632--3065395 \\
+Train steady & 25 & 25 & 149467--151108 \\
+Validation burst & 717 & 716 & 3888009--3889799 \\
+Validation recovery & 660 & 660 & 3636000--3637786 \\
+Validation steady & 19 & 19 & 4059102--4060787 \\
+Deployment recovery & 358 & 358 & 5187869--5188472 \\
+Deployment steady & 944 & 933 & 5257803--5259322 \\
+\bottomrule
+\end{tabular*}
+\end{table}
+
+\path{artifact/input_cost_audit/INPUT_ROWS.json} releases only hashed row
+identities, timestamp offsets, source-file hashes, and generator identities;
+\texttt{python -B artifact/input\_cost\_audit/verify.py} recomputes the matrix
+and contract-hash checks. This reduced projection does not regenerate prompts
+or independently authenticate the original files. Empty intersections establish
+source-row separation, not session or prompt independence; the constructed
+offline jobs are outside this audit.
+

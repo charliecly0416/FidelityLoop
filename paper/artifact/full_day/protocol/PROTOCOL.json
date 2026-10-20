@@ -1,0 +1,453 @@
+{
+  "schema": "anonymous-full-day-audit-v1",
+  "arrival_seconds": 86400,
+  "drain_seconds": 300,
+  "horizon_seconds": 86700,
+  "devices": 2,
+  "deadlines": {
+    "online": 60,
+    "offline": 300
+  },
+  "sites": {
+    "Site-A": "primary D1 and guarded D1 repeat",
+    "Site-B": "primary D2 and H D1 repeat"
+  },
+  "scope": "audit projection only: score all arrivals, sum lifecycle intervals and API token charges; no inference or simulator execution",
+  "limitations": "two source days; host and primary day coupled; repeats not independent days; synthetic offline and API",
+  "input_semantics": "retained BurstGPT timestamps and numeric length budgets; fixed-corpus generation; no original user prompts; prompt token IDs omitted from audit projection",
+  "request_id_semantics": "lexicographic rank within source day, preserving source-ID order for any tie interpretation",
+  "price": {
+    "gpu_second": 0.001,
+    "startup_event": 0.002,
+    "shutdown_event": 0.001,
+    "api_input_token": 1e-06,
+    "api_output_budget": 3e-06,
+    "offline_miss": 0.01
+  },
+  "feasibility": "all planned online and offline requests complete by min(absolute deadline,86700); completed deadline equality included; no unfinished removals",
+  "selection": "fixed candidate pool H/Hguard; predicted strict P1plus on both days, then equal-day mean frozen scenario cost; retain ties within1e-9; otherwise abstain",
+  "prediction_cost_scope": "frozen source replay cost scalars are retained for selection; feasibility independently rescored from per-request predicted completion times; this audit does not rerun simulator or rebuild predictive cost traces",
+  "deadline_score_graces": [
+    0,
+    1,
+    5,
+    10,
+    30,
+    60
+  ],
+  "retrospective_sensitivity": true,
+  "runs": [
+    {
+      "run_id": "D1_all2_r1",
+      "day": "D1",
+      "policy": "all2",
+      "repeat": 1,
+      "site": "Site-A"
+    },
+    {
+      "run_id": "D1_H_r1",
+      "day": "D1",
+      "policy": "H",
+      "repeat": 1,
+      "site": "Site-A"
+    },
+    {
+      "run_id": "D1_Hguard_r1",
+      "day": "D1",
+      "policy": "Hguard",
+      "repeat": 1,
+      "site": "Site-A"
+    },
+    {
+      "run_id": "D2_all2_r1",
+      "day": "D2",
+      "policy": "all2",
+      "repeat": 1,
+      "site": "Site-B"
+    },
+    {
+      "run_id": "D2_Hguard_r1",
+      "day": "D2",
+      "policy": "Hguard",
+      "repeat": 1,
+      "site": "Site-B"
+    },
+    {
+      "run_id": "D2_H_r1",
+      "day": "D2",
+      "policy": "H",
+      "repeat": 1,
+      "site": "Site-B"
+    },
+    {
+      "run_id": "D1_Hguard_r2",
+      "day": "D1",
+      "policy": "Hguard",
+      "repeat": 2,
+      "site": "Site-A"
+    },
+    {
+      "run_id": "D1_H_r2",
+      "day": "D1",
+      "policy": "H",
+      "repeat": 2,
+      "site": "Site-B"
+    }
+  ],
+  "predictions": [
+    {
+      "file": "data/predictions/D1_Share_all2.jsonl.gz",
+      "day": "D1",
+      "site": "Site-A",
+      "model": "Share",
+      "policy": "all2",
+      "frozen_scenario_cost": 173.4
+    },
+    {
+      "file": "data/predictions/D1_Share_H.jsonl.gz",
+      "day": "D1",
+      "site": "Site-A",
+      "model": "Share",
+      "policy": "H",
+      "frozen_scenario_cost": 37.88469139413534
+    },
+    {
+      "file": "data/predictions/D1_Share_Hguard.jsonl.gz",
+      "day": "D1",
+      "site": "Site-A",
+      "model": "Share",
+      "policy": "Hguard",
+      "frozen_scenario_cost": 37.93469139413534
+    },
+    {
+      "file": "data/predictions/D1_Lookup69_all2.jsonl.gz",
+      "day": "D1",
+      "site": "Site-A",
+      "model": "Lookup69",
+      "policy": "all2",
+      "frozen_scenario_cost": 173.4
+    },
+    {
+      "file": "data/predictions/D1_Lookup69_H.jsonl.gz",
+      "day": "D1",
+      "site": "Site-A",
+      "model": "Lookup69",
+      "policy": "H",
+      "frozen_scenario_cost": 78.21527265553576
+    },
+    {
+      "file": "data/predictions/D1_Lookup69_Hguard.jsonl.gz",
+      "day": "D1",
+      "site": "Site-A",
+      "model": "Lookup69",
+      "policy": "Hguard",
+      "frozen_scenario_cost": 78.21527265553576
+    },
+    {
+      "file": "data/predictions/D1_Lookup30_all2.jsonl.gz",
+      "day": "D1",
+      "site": "Site-A",
+      "model": "Lookup30",
+      "policy": "all2",
+      "frozen_scenario_cost": 173.4
+    },
+    {
+      "file": "data/predictions/D1_Lookup30_H.jsonl.gz",
+      "day": "D1",
+      "site": "Site-A",
+      "model": "Lookup30",
+      "policy": "H",
+      "frozen_scenario_cost": 37.55861826791384
+    },
+    {
+      "file": "data/predictions/D1_Lookup30_Hguard.jsonl.gz",
+      "day": "D1",
+      "site": "Site-A",
+      "model": "Lookup30",
+      "policy": "Hguard",
+      "frozen_scenario_cost": 37.60861826791385
+    },
+    {
+      "file": "data/predictions/D1_Local_all2.jsonl.gz",
+      "day": "D1",
+      "site": "Site-A",
+      "model": "Local",
+      "policy": "all2",
+      "frozen_scenario_cost": 173.4
+    },
+    {
+      "file": "data/predictions/D1_Local_H.jsonl.gz",
+      "day": "D1",
+      "site": "Site-A",
+      "model": "Local",
+      "policy": "H",
+      "frozen_scenario_cost": 37.52966826791384
+    },
+    {
+      "file": "data/predictions/D1_Local_Hguard.jsonl.gz",
+      "day": "D1",
+      "site": "Site-A",
+      "model": "Local",
+      "policy": "Hguard",
+      "frozen_scenario_cost": 37.579668267913846
+    },
+    {
+      "file": "data/predictions/D2_Share_all2.jsonl.gz",
+      "day": "D2",
+      "site": "Site-B",
+      "model": "Share",
+      "policy": "all2",
+      "frozen_scenario_cost": 173.4
+    },
+    {
+      "file": "data/predictions/D2_Share_H.jsonl.gz",
+      "day": "D2",
+      "site": "Site-B",
+      "model": "Share",
+      "policy": "H",
+      "frozen_scenario_cost": 36.869236155318866
+    },
+    {
+      "file": "data/predictions/D2_Share_Hguard.jsonl.gz",
+      "day": "D2",
+      "site": "Site-B",
+      "model": "Share",
+      "policy": "Hguard",
+      "frozen_scenario_cost": 36.854251023408374
+    },
+    {
+      "file": "data/predictions/D2_Lookup69_all2.jsonl.gz",
+      "day": "D2",
+      "site": "Site-B",
+      "model": "Lookup69",
+      "policy": "all2",
+      "frozen_scenario_cost": 173.4
+    },
+    {
+      "file": "data/predictions/D2_Lookup69_H.jsonl.gz",
+      "day": "D2",
+      "site": "Site-B",
+      "model": "Lookup69",
+      "policy": "H",
+      "frozen_scenario_cost": 76.202380019553
+    },
+    {
+      "file": "data/predictions/D2_Lookup69_Hguard.jsonl.gz",
+      "day": "D2",
+      "site": "Site-B",
+      "model": "Lookup69",
+      "policy": "Hguard",
+      "frozen_scenario_cost": 76.36639488764253
+    },
+    {
+      "file": "data/predictions/D2_Lookup30_all2.jsonl.gz",
+      "day": "D2",
+      "site": "Site-B",
+      "model": "Lookup30",
+      "policy": "all2",
+      "frozen_scenario_cost": 173.4
+    },
+    {
+      "file": "data/predictions/D2_Lookup30_H.jsonl.gz",
+      "day": "D2",
+      "site": "Site-B",
+      "model": "Lookup30",
+      "policy": "H",
+      "frozen_scenario_cost": 36.17862875958738
+    },
+    {
+      "file": "data/predictions/D2_Lookup30_Hguard.jsonl.gz",
+      "day": "D2",
+      "site": "Site-B",
+      "model": "Lookup30",
+      "policy": "Hguard",
+      "frozen_scenario_cost": 36.22762875958739
+    },
+    {
+      "file": "data/predictions/D2_Local_all2.jsonl.gz",
+      "day": "D2",
+      "site": "Site-B",
+      "model": "Local",
+      "policy": "all2",
+      "frozen_scenario_cost": 173.4
+    },
+    {
+      "file": "data/predictions/D2_Local_H.jsonl.gz",
+      "day": "D2",
+      "site": "Site-B",
+      "model": "Local",
+      "policy": "H",
+      "frozen_scenario_cost": 36.17862875958738
+    },
+    {
+      "file": "data/predictions/D2_Local_Hguard.jsonl.gz",
+      "day": "D2",
+      "site": "Site-B",
+      "model": "Local",
+      "policy": "Hguard",
+      "frozen_scenario_cost": 36.22762875958739
+    }
+  ],
+  "startup_sensitivity": [
+    {
+      "file": "data/sensitivity/D1_H_q0.50.jsonl.gz",
+      "day": "D1",
+      "policy": "H",
+      "quantile": 0.5,
+      "startup_seconds": 28.486242875000002,
+      "frozen_scenario_cost": 37.52966826791384
+    },
+    {
+      "file": "data/sensitivity/D1_Hguard_q0.50.jsonl.gz",
+      "day": "D1",
+      "policy": "Hguard",
+      "quantile": 0.5,
+      "startup_seconds": 28.486242875000002,
+      "frozen_scenario_cost": 37.579668267913846
+    },
+    {
+      "file": "data/sensitivity/D1_H_q0.75.jsonl.gz",
+      "day": "D1",
+      "policy": "H",
+      "quantile": 0.75,
+      "startup_seconds": 28.699885777,
+      "frozen_scenario_cost": 37.52966826791384
+    },
+    {
+      "file": "data/sensitivity/D1_Hguard_q0.75.jsonl.gz",
+      "day": "D1",
+      "policy": "Hguard",
+      "quantile": 0.75,
+      "startup_seconds": 28.699885777,
+      "frozen_scenario_cost": 37.579668267913846
+    },
+    {
+      "file": "data/sensitivity/D1_H_q0.90.jsonl.gz",
+      "day": "D1",
+      "policy": "H",
+      "quantile": 0.9,
+      "startup_seconds": 30.172042770200004,
+      "frozen_scenario_cost": 37.593439267913844
+    },
+    {
+      "file": "data/sensitivity/D1_Hguard_q0.90.jsonl.gz",
+      "day": "D1",
+      "policy": "Hguard",
+      "quantile": 0.9,
+      "startup_seconds": 30.172042770200004,
+      "frozen_scenario_cost": 37.64343926791385
+    },
+    {
+      "file": "data/sensitivity/D1_H_q0.95.jsonl.gz",
+      "day": "D1",
+      "policy": "H",
+      "quantile": 0.95,
+      "startup_seconds": 34.13138782810002,
+      "frozen_scenario_cost": 37.73419226791384
+    },
+    {
+      "file": "data/sensitivity/D1_Hguard_q0.95.jsonl.gz",
+      "day": "D1",
+      "policy": "Hguard",
+      "quantile": 0.95,
+      "startup_seconds": 34.13138782810002,
+      "frozen_scenario_cost": 37.81019226791385
+    },
+    {
+      "file": "data/sensitivity/D1_H_q1.00.jsonl.gz",
+      "day": "D1",
+      "policy": "H",
+      "quantile": 1.0,
+      "startup_seconds": 51.039126621,
+      "frozen_scenario_cost": 40.18394864657835
+    },
+    {
+      "file": "data/sensitivity/D1_Hguard_q1.00.jsonl.gz",
+      "day": "D1",
+      "policy": "Hguard",
+      "quantile": 1.0,
+      "startup_seconds": 51.039126621,
+      "frozen_scenario_cost": 40.26994864657835
+    },
+    {
+      "file": "data/sensitivity/D2_H_q0.50.jsonl.gz",
+      "day": "D2",
+      "policy": "H",
+      "quantile": 0.5,
+      "startup_seconds": 29.1929133385,
+      "frozen_scenario_cost": 36.17862875958738
+    },
+    {
+      "file": "data/sensitivity/D2_Hguard_q0.50.jsonl.gz",
+      "day": "D2",
+      "policy": "Hguard",
+      "quantile": 0.5,
+      "startup_seconds": 29.1929133385,
+      "frozen_scenario_cost": 36.22762875958739
+    },
+    {
+      "file": "data/sensitivity/D2_H_q0.75.jsonl.gz",
+      "day": "D2",
+      "policy": "H",
+      "quantile": 0.75,
+      "startup_seconds": 29.2420397245,
+      "frozen_scenario_cost": 36.17862875958738
+    },
+    {
+      "file": "data/sensitivity/D2_Hguard_q0.75.jsonl.gz",
+      "day": "D2",
+      "policy": "Hguard",
+      "quantile": 0.75,
+      "startup_seconds": 29.2420397245,
+      "frozen_scenario_cost": 36.22762875958739
+    },
+    {
+      "file": "data/sensitivity/D2_H_q0.90.jsonl.gz",
+      "day": "D2",
+      "policy": "H",
+      "quantile": 0.9,
+      "startup_seconds": 30.0963048137,
+      "frozen_scenario_cost": 36.212405759587384
+    },
+    {
+      "file": "data/sensitivity/D2_Hguard_q0.90.jsonl.gz",
+      "day": "D2",
+      "policy": "Hguard",
+      "quantile": 0.9,
+      "startup_seconds": 30.0963048137,
+      "frozen_scenario_cost": 36.26140575958739
+    },
+    {
+      "file": "data/sensitivity/D2_H_q0.95.jsonl.gz",
+      "day": "D2",
+      "policy": "H",
+      "quantile": 0.95,
+      "startup_seconds": 33.36140722350004,
+      "frozen_scenario_cost": 36.29966175958739
+    },
+    {
+      "file": "data/sensitivity/D2_Hguard_q0.95.jsonl.gz",
+      "day": "D2",
+      "policy": "Hguard",
+      "quantile": 0.95,
+      "startup_seconds": 33.36140722350004,
+      "frozen_scenario_cost": 36.37466175958739
+    },
+    {
+      "file": "data/sensitivity/D2_H_q1.00.jsonl.gz",
+      "day": "D2",
+      "policy": "H",
+      "quantile": 1.0,
+      "startup_seconds": 80.638379818,
+      "frozen_scenario_cost": 76.510298019553
+    },
+    {
+      "file": "data/sensitivity/D2_Hguard_q1.00.jsonl.gz",
+      "day": "D2",
+      "policy": "Hguard",
+      "quantile": 1.0,
+      "startup_seconds": 80.638379818,
+      "frozen_scenario_cost": 76.67431288764253
+    }
+  ]
+}

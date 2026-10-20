@@ -1,0 +1,163 @@
+{
+  "status": "PASS",
+  "retrospective": true,
+  "reproduced_original_predictions": 12,
+  "physical": [
+    {
+      "policy": "hysteresis_u8_d0_c60",
+      "window": "bridge_locked_test_recovery_v1",
+      "run_id": "hysteresis_u8_d0_c60__bridge_locked_test_recovery_v1__r1",
+      "P1plus": false,
+      "occupied": 1054.87059599,
+      "cost": 1.2554335959900003
+    },
+    {
+      "policy": "hysteresis_u8_d0_c60__guard",
+      "window": "bridge_locked_test_recovery_v1",
+      "run_id": "hysteresis_u8_d0_c60__guard__bridge_locked_test_recovery_v1__r1",
+      "P1plus": true,
+      "occupied": 1128.189706933,
+      "cost": 1.263953706933
+    },
+    {
+      "policy": "hysteresis_u8_d0_c60__guard",
+      "window": "bridge_locked_test_recovery_v1",
+      "run_id": "hysteresis_u8_d0_c60__guard__bridge_locked_test_recovery_v1__r2",
+      "P1plus": true,
+      "occupied": 1252.213245223,
+      "cost": 1.3892822452230003
+    },
+    {
+      "policy": "hysteresis_u8_d0_c60",
+      "window": "bridge_locked_test_recovery_v1",
+      "run_id": "hysteresis_u8_d0_c60__bridge_locked_test_recovery_v1__r2",
+      "P1plus": false,
+      "occupied": 1062.226169471,
+      "cost": 1.266295169471
+    },
+    {
+      "policy": "hysteresis_u8_d0_c60__guard",
+      "window": "bridge_locked_test_steady_v1",
+      "run_id": "hysteresis_u8_d0_c60__guard__bridge_locked_test_steady_v1__r1",
+      "P1plus": true,
+      "occupied": 1756.683487122,
+      "cost": 2.0008244871220002
+    },
+    {
+      "policy": "hysteresis_u8_d0_c60",
+      "window": "bridge_locked_test_steady_v1",
+      "run_id": "hysteresis_u8_d0_c60__bridge_locked_test_steady_v1__r1",
+      "P1plus": false,
+      "occupied": 1599.2869481579999,
+      "cost": 1.829371948158
+    },
+    {
+      "policy": "hysteresis_u8_d0_c60",
+      "window": "bridge_locked_test_steady_v1",
+      "run_id": "hysteresis_u8_d0_c60__bridge_locked_test_steady_v1__r2",
+      "P1plus": false,
+      "occupied": 1465.218904869,
+      "cost": 1.708368904869
+    },
+    {
+      "policy": "hysteresis_u8_d0_c60__guard",
+      "window": "bridge_locked_test_steady_v1",
+      "run_id": "hysteresis_u8_d0_c60__guard__bridge_locked_test_steady_v1__r2",
+      "P1plus": true,
+      "occupied": 1512.299364935,
+      "cost": 1.7534613649350002
+    }
+  ],
+  "rows": [
+    {
+      "startup_seconds": 30.0,
+      "agreement": 6,
+      "false_accepts": 2,
+      "false_rejects": 0,
+      "occupied_mae": 269.12466640175046,
+      "cost_mae": 0.2609170414017505,
+      "predicted": {
+        "hysteresis_u8_d0_c60|bridge_locked_test_recovery_v1": {
+          "P1plus": false,
+          "occupied": 790.7636578219998,
+          "cost": 1.0210846578219999
+        },
+        "hysteresis_u8_d0_c60__guard|bridge_locked_test_recovery_v1": {
+          "P1plus": true,
+          "occupied": 852.7439626404997,
+          "cost": 1.0260649626404998
+        },
+        "hysteresis_u8_d0_c60|bridge_locked_test_steady_v1": {
+          "P1plus": true,
+          "occupied": 1347.7439626404994,
+          "cost": 1.5713389626404994
+        },
+        "hysteresis_u8_d0_c60__guard|bridge_locked_test_steady_v1": {
+          "P1plus": true,
+          "occupied": 1347.7439626404994,
+          "cost": 1.5713389626404994
+        }
+      }
+    },
+    {
+      "startup_seconds": 46.067357474999994,
+      "agreement": 8,
+      "false_accepts": 0,
+      "false_rejects": 0,
+      "occupied_mae": 68.45908128612518,
+      "cost_mae": 0.06679845628612519,
+      "predicted": {
+        "hysteresis_u8_d0_c60|bridge_locked_test_recovery_v1": {
+          "P1plus": false,
+          "occupied": 1059.763657822,
+          "cost": 1.261501657822
+        },
+        "hysteresis_u8_d0_c60__guard|bridge_locked_test_recovery_v1": {
+          "P1plus": true,
+          "occupied": 1121.7439626404998,
+          "cost": 1.2564819626405
+        },
+        "hysteresis_u8_d0_c60|bridge_locked_test_steady_v1": {
+          "P1plus": false,
+          "occupied": 1452.7439626404994,
+          "cost": 1.7009249626404994
+        },
+        "hysteresis_u8_d0_c60__guard|bridge_locked_test_steady_v1": {
+          "P1plus": true,
+          "occupied": 1514.7242674589993,
+          "cost": 1.7559052674589994
+        }
+      }
+    },
+    {
+      "startup_seconds": 69.219185665,
+      "agreement": 4,
+      "false_accepts": 4,
+      "false_rejects": 0,
+      "occupied_mae": 423.35071462137466,
+      "cost_mae": 0.4105443396213744,
+      "predicted": {
+        "hysteresis_u8_d0_c60|bridge_locked_test_recovery_v1": {
+          "P1plus": true,
+          "occupied": 1650.7242674589995,
+          "cost": 1.7712112674589995
+        },
+        "hysteresis_u8_d0_c60__guard|bridge_locked_test_recovery_v1": {
+          "P1plus": true,
+          "occupied": 1650.7242674589995,
+          "cost": 1.7712112674589995
+        },
+        "hysteresis_u8_d0_c60|bridge_locked_test_steady_v1": {
+          "P1plus": true,
+          "occupied": 1903.7242674589997,
+          "cost": 2.1666252674589996
+        },
+        "hysteresis_u8_d0_c60__guard|bridge_locked_test_steady_v1": {
+          "P1plus": true,
+          "occupied": 1903.7242674589997,
+          "cost": 2.1666252674589996
+        }
+      }
+    }
+  ]
+}

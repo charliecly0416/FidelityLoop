@@ -97,6 +97,42 @@ cost MAE, and trajectory L1 are 269.12 GPU seconds, 0.2609 scenario USD, and
 unchanged across the three models. This diagnoses the existing deployments;
 14B-30 was not frozen before those physical runs.
 
+\paragraph{Retrospective startup sweep.}
+To expose the sensitivity behind the fixed contrasts, we varied only the
+14B-Local startup scalar on a finite CPU grid. The guard, service lookup,
+physical outcomes, and all other fields remained fixed. Below the first 8/8 region, tested points alternate between 4/8 and 6/8; the
+two 8/8 regions are separated by a 6/8 region and followed by a 4/8 region.
+All errors are false accepts of H. These are sampled regions, not a continuous
+tolerance or a deployment threshold.
+
+\begin{table}[t]
+\centering
+\scriptsize
+\setlength{\tabcolsep}{3pt}
+\caption{Finite 14B startup sensitivity. Intervals summarize tested points;
+occupancy MAE ranges over those points.}
+\label{tab:14bsweep}
+\begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}lrrr@{}}
+\toprule
+Tested startup (s) & Agreement & FA/FR & Occupied MAE\\
+\midrule
+20.00--33.00 & 6/8 & 2/0 & 269.12--277.12\\
+34.00--39.00 & 4/8--6/8 & 2--4/0 & 203.62--269.62\\
+39.25--43.00 & 8/8 & 0/0 & 144.13--149.13\\
+43.25--44.00 & 6/8 & 2/0 & 182.48\\
+44.25--48.00 & 8/8 & 0/0 & 68.09--143.63\\
+48.25--90.00 & 4/8 & 4/0 & 358.35--523.85\\
+\bottomrule
+\end{tabular*}
+\end{table}
+
+The 20--90\,s grid uses 1\,s steps and the local region uses 0.25\,s
+steps. The measured-startup distribution places 19 of 20 calibration samples
+in the upper 8/8 region; the slowest sample (52.35\,s) lies in the 4/8
+region. Exact rows and replay outputs are retained under
+\path{artifact/14b_startup_sensitivity/}; the script reuses the frozen E6
+replay harness on CPU and adds no physical runs.
+
 \paragraph{From startup to tail deadlines.}
 All three H replays first restart at 195\,s in recovery and 138\,s in steady.
 At cooldown expiry (255/198\,s), 14B-Hist is still starting: its queue-plus-running

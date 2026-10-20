@@ -2243,13 +2243,13 @@
     },
     {
       "path": "test_trace.py",
-      "bytes": 2720,
-      "sha256": "8be68050667eb6cfa6ef2a6da633cc814e1f8a74b0487eaac62617f3afebd752"
+      "bytes": 4263,
+      "sha256": "01620796922df801402d372bb223c5250f4cfbc330656bebec4ce25de2257258"
     },
     {
       "path": "verify.py",
-      "bytes": 8247,
-      "sha256": "fc884383553e18f020a94423b2e034d4825f5ab06e403d8a51772fcf0b0b7aad"
+      "bytes": 8381,
+      "sha256": "0fd976fb9099af22f03c3d4f20d8461f3d79e2240a8168e25fcfa7a2e86519fe"
     },
     {
       "path": "worked_example.py",

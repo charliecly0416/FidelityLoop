@@ -2,9 +2,9 @@
 
 **Closed-loop validation of elastic LLM-serving policies.**
 
-FidelityLoop is the research artifact accompanying the paper *FidelityLoop: Closed-Loop Validation of Elastic LLM-Serving Policies*. It connects replay predictions, policy decisions, lifecycle events, request identities, and deadline-aware cost accounting. The public CPU package supports interface checks, fixed-input replay, and result recomputation; the physical campaign reported in the paper was run separately on two NVIDIA A100 GPUs.
+FidelityLoop is the research artifact accompanying the paper *FidelityLoop: Closed-Loop Validation of Elastic LLM-Serving Policies*. It connects replay predictions, policy decisions, lifecycle events, request identities, and deadline-aware cost accounting. The public CPU package supports interface checks, fixed-input replay, and result recomputation; the physical evaluation includes A100 campaigns and two-/four-replica studies on a four-A800 host.
 
-Current paper: [main PDF](paper/main.pdf) · [supplement](paper/supplement.pdf) · [Overleaf ZIP](https://github.com/charliecly0416/FidelityLoop/releases/download/paper-v9-20261014/FidelityLoop_Overleaf_v9_20261014.zip).
+Current paper: [main PDF](paper/main.pdf) · [supplement](paper/supplement.pdf) · [LaTeX sources](paper/PACKAGE_README.md).
 
 ## What is included
 
@@ -53,6 +53,24 @@ runs and 18 frozen predictions, separate from the 197/239/555 corpus above.
 The three-predictor comparison uses eight policy runs; four capacity anchors
 are excluded. Run `python -B paper/artifact/awq_formal/verify.py` to recompute
 feasibility agreement and resource/cost errors from the released evidence.
+
+## Full-day and four-replica validation
+
+The final paper adds eight full-day executions, 24 short-window two/four-replica
+executions, and 12 offline-pressure executions. These 44 executions are separate
+from the original 197-run corpus and the 12-run AWQ study. The pressure study
+checks that the third and fourth replicas serve requests after restart; the
+short-window study retains its original workload and selection contract.
+
+```text
+python -B paper/artifact/full_day/tools/recompute.py
+python -B -m unittest discover -s paper/artifact/full_day/tests -v
+python -B paper/artifact/capacity_transfer/verify.py
+python -B paper/artifact/capacity_pressure/verify.py
+```
+
+The [paper artifact guide](paper/README.md) links the inputs, retained records,
+and selection checks. All deadline failures remain included.
 
 ## Rebuilding the paper
 

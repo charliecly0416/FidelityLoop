@@ -1,24 +1,6 @@
-Replay models guide the selection of elastic LLM-serving policies, but accurate
-request timing and aggregate resource estimates need not preserve deployment
-decisions. We present FidelityLoop, a closed-loop validation framework that
-tests policy feasibility and resource use across replay and physical execution.
-A shared policy interface and identity ledger align requests, lifecycle
-transitions, and control actions across replay, vLLM, and SGLang, with Vidur
-as an external service model. Measurements on two A100 GPUs and replay
-contrasts reveal two failure mechanisms: startup timing can cross a controller's
-cooldown boundary and alter subsequent actions, while resource errors can
-cancel in aggregate despite temporal misalignment. Tests with rule-based and
-replay-trained PPO policies show that a startup proxy falsely rejects 8 of 22
-feasible runs in one deployment context and accepts a failing policy in another.
-These errors change policy selection: retrospective screening selects a
-candidate that fails all six physical repeats; in another tested pool, it
-selects a feasible candidate costing 58.95\% more than the lowest-cost feasible
-alternative under the scenario ledger. A 12-cell AWQ-Marlin campaign further
-transfers the contract to quantized vLLM execution, matching all eight policy
-feasibility outcomes with no control-target disagreement. FidelityLoop links
-these decisions to execution traces so developers can diagnose why replay and
-deployment disagree. We
-release paired traces from 197 physical runs, including 36 preregistered runs,
-CPU analysis tools, and a
-fixed-input Vidur replay package under an explicit resource and synthetic-API
-cost contract.
+Replay models guide elastic LLM-serving policies for online requests and deadline-constrained offline jobs sharing GPUs, but accurate timing and aggregate resource estimates need not preserve deployment decisions. We present FidelityLoop, a closed-loop framework aligning replay and physical execution through shared policy interfaces, request identities, and lifecycle accounting. It supports rule-based policies and PPO training in replay, followed by frozen-policy validation on vLLM/SGLang; Vidur supplies an alternative replay service model. Measurements on two A100 GPUs and controlled replay contrasts reveal two failure
+mechanisms: startup timing can cross a controller’s cooldown boundary and alter subsequent actions, while
+resource errors can cancel in aggregate despite temporal misalignment. A historical startup proxy falsely rejects eight of 22 physically feasible SGLang runs. Retrospective analysis shows replay-based selection choosing a policy that fails all six
+physical executions across two windows; in another tested pool, it chooses a feasible policy costing 58.95\% more than the
+lowest-cost feasible alternative under the scenario ledger. Validation also covers AWQ-quantized execution and active four-replica control. On full-day variable-length inputs, host-calibrated replay falsely accepts a guarded policy that misses physical offline deadlines. Request-aligned traces connect timing discrepancies to control actions and missed deadlines. We release paired traces from 197 physical runs, including 36 preregistered runs, companion records for 44 additional executions, CPU
+analysis tools, and fixed-input Vidur replay under an explicit resource and synthetic-API cost contract.
