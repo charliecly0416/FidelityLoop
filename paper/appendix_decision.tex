@@ -55,6 +55,23 @@ choices and table from reduced per-record metrics; the paired corpus provides
 the underlying request and accounting records.
 
 
+\subsection{Resource composition and observed-repeat stability}
+For the engine study's fixed Lookup-69 choice (PPO-7) and feasible comparator
+(H+guard), equal-window means are 1759.39 and 920.79 occupied GPU seconds,
+respectively; online API fractions are 27.83\% and 61.23\%. The API fractions
+use all online arrivals, averaging repeats within each window before weighting
+the two windows equally. The 58.95\% cost gap therefore combines local-resource
+and synthetic-API use under the declared prices; it does not measure total
+physical compute or equal-quality commercial inference cost.
+
+For each of these fixed policies, choosing one of the two existing repeats in
+each window gives four equal-window mean costs. Crossing the two sets gives
+16 cost ratios, spanning 55.44\%--62.62\%. The policy identities remain fixed:
+this is a descriptive envelope of observed repeats, not matched-pair inference,
+a confidence interval, or a new policy selection. The standard-library checker
+in \path{artifact/input_cost_audit/} recomputes both the resource composition
+and this envelope from released reduced evidence.
+
 \subsection{Price robustness of deployment choices}
 We reprice the same recorded events at GPU and synthetic-API price
 multipliers in $\{0.5,1,2\}\times\{0.5,1,2\}$, keeping startup, shutdown,

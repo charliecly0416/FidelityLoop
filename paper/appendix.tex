@@ -25,6 +25,13 @@ This release supports analysis of the recorded deployments, not unseen-workload
 validation or rerunning model inference. The later 14B-30, Azure, and Vidur-backed retrospective predictions are
 supplied separately with the paper and are not included in these counts. The corpus's \path{SCHEMA.md} specifies the projection
 and accounting boundaries.
+The full-day and A800 capacity studies below report eight and 36 additional
+physical executions, respectively, outside the historical corpus counts above.
+The accompanying \path{FidelityLoop_FullDay_Anonymous_CPU_Audit_20261019.zip}
+contains reduced full-day traces and CPU checks; the capacity study's prompt-free
+records and verifiers are in \path{artifact/capacity_transfer/} and
+\path{artifact/capacity_pressure/}. These additions
+are separate from the historical anonymous-mirror corpus.
 
 The remaining \path{scripts/}, \path{docs/}, and \path{artifacts/} paths in this
 supplement identify the separately retained full experiment archive. Its
@@ -34,6 +41,27 @@ require archived runs outside the compact source release. A recovery addendum re
 identical, hash-bound per-run copies and provides a newly generated
 archive integrity index. The original checksum sidecar remains
 unavailable; the new index is not presented as the historical original.
+
+\paragraph{Reproduction scopes.}
+Table~\ref{tab:reproduction-scopes} distinguishes the compact result checks,
+released records, native CPU execution, and separately archived GPU experiments.
+\begin{table}[t]
+\centering\small
+\caption{Reproduction inputs and supported outputs.}
+\label{tab:reproduction-scopes}
+\setlength{\tabcolsep}{3pt}
+\par\vspace{4pt}
+\begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}p{0.20\linewidth}p{0.33\linewidth}p{0.37\linewidth}@{}}
+\toprule
+Scope & Inputs & Recomputed output\\
+\midrule
+Reduced checks & Source-bundle records; standard Python library & Deadline, cost, selection, and audit arithmetic\\
+Paired traces & Companion historical corpus & Request-level mismatches and risk direction\\
+Native CPU replay & Companion fixed-input Vidur package; pinned dependencies & Twelve Vidur-backed policy predictions\\
+GPU re-execution & Separate full archive, weights, and serving environment & Physical inference; outside the compact release\\
+\bottomrule
+\end{tabular*}
+\end{table}
 
 \begin{itemize}[leftmargin=*]
 \item Full-capacity feasibility: nine all2 reports and G-F in \path{decisions.json}.
@@ -206,7 +234,9 @@ Policy & window & repeat & p95 & p99 & max\\
 \subsection{Evidence provenance and scope}
 The workload table is generated from \texttt{workload\_manifest.json}, whose source chain
 records the 1,404,294-row BurstGPT-derived input, the parent manifest, the forward
-pool selection, and the fixed thinning threshold. The selected windows have exact
+pool selection, and the fixed thinning threshold. The generation record
+\texttt{s4\_generation\_lock.json} fixes both hash salts and all selection
+thresholds before replay. The selected windows have exact
 prompt overlap counts of 60, 34, and 30 with their old parent windows in
 steady, recovery, and burst-offline, respectively; this is disclosed as an
 identity limitation rather than treated as session independence. The source has
@@ -404,3 +434,185 @@ commercial API.
 \input{appendix_v5_mechanism}
 
 \input{external_validity}
+
+\section{Full-day arrival and length replay}
+\label{sec:full-day-trace}
+
+\subsection{Inputs and execution contract}
+Two complete BurstGPT source days \citep{wang2024burstgpt}, D1 and D2
+(origin-aligned day indices 40 and 48),
+extend the window studies to continuous execution with variable online lengths.
+We apply the existing deterministic hash-thinning rule (retention probability
+0.267818), preserving retained timestamps without time compression.
+The days are the first eligible complete days in the evaluation region after
+excluding the listed physical-evaluation and PPO training/validation windows
+with 1,800 s protection on either side. Eligibility requires at least 5,000
+retained online requests per day and at most 944 in any half-hour block;
+no morphology-class filter or policy prediction enters selection.
+These nonconsecutive days are disjoint from those windows; their source rows
+had appeared in an earlier full-stream CPU replay.
+
+D1/D2 contain 6,008/5,241 online requests and 5,760 offline jobs each.
+Source input/output counts are mapped numerically to Qwen token budgets,
+clipped to 3,072 input and 1,024 output tokens. Fixed public-corpus prompts
+instantiate these budgets, rather than reconstructing source user content
+or its tokenizer. Input/output clipping affects 6/4 requests on D1 and
+22/14 on D2. The output cap is frozen by a development microbenchmark:
+choose the largest of \{1,024, 768, 512\} whose worst concurrency-four group
+time at input length 3,072 is at most 40 s across both GPUs and all three
+repeats on the first host; the second host must pass the same cap.
+
+Offline jobs arrive every 15 s with 256 input and 256 output tokens.
+Online/offline deadlines remain 60/300 s. The synthetic API retains eight
+slots, a 10 s routing wait, and a five-second service timer.
+Each run retains controller and lifecycle state for 86,400 s of arrivals
+and 300 s of drain; control and dispatch continue throughout the drain.
+The 48 half-hour blocks describe one continuous trajectory, not independent
+replicates. P1+ requires every planned online and offline request on time,
+including undispatched requests and tail obligations. Costs use the main
+paper's scenario ledger over the 86,700 s observation interval; setup and
+post-cutoff cleanup are separate.
+
+\subsection{Host-local calibration and comparison scope}
+Each run uses one dual-A100 80GB host, with Qwen2.5-7B-Instruct FP16 and
+the Qwen/vLLM settings in the main experimental setup. The primary D1 and D2
+comparisons use hosts M1 and M2, respectively; they are not four-GPU runs.
+Each host freezes its own service and lifecycle calibration before its
+formal executions. The trace service lookup uses input lengths
+\{1,128,512,2048,3072\}, output lengths
+\{1,32,128,256,512,768,1024\}, and concurrency one/four, with three repeats
+per GPU and an additional 256/256 concurrency-four point.
+These measurements instantiate the predictor families for this study;
+they are not the unchanged tables of the earlier fixed-length studies.
+
+Lookup-69, Lookup-30, and Local share that host's service table and differ
+only in startup: 69.219 s, 30 s, and the measured host median, respectively.
+Local's startup medians are 28.486 s on M1 and 29.193 s on M2.
+Share retains its analytic service model and 30 s startup.
+Median shutdown-to-release latencies are 2.172 s and 2.015 s.
+The guard uses one fixed safety profile per host, common to all replay
+predictors and physical execution: its startup safety estimates are
+34.131 s and 33.361 s, the empirical 95th percentiles of 20 loaded
+startup cycles per host. These estimates do not bound every later startup.
+No full-day outcome is used to retune calibration, policy thresholds,
+or the workload.
+
+The six primary runs compare all2, H, and H+guard
+on each day. Two D1 repeats are reported separately. The guarded repeat
+uses M1; the H repeat uses M2 and is not paired with the M1 D1 all2 reference
+for savings. Primary day and host are coupled, so these observations do not
+separate day effects from host effects.
+
+\subsection{Physical feasibility and scenario cost}
+Table~\ref{tab:full-day-physical} retains all eight completed runs.
+Both all2 anchors meet P1+. Every online request is timely;
+among the four primary dynamic runs, only D2 H+guard meets the joint contract.
+The feasible D2 guarded run costs 38.5104 versus 173.4000 for the same-host,
+same-day all2 anchor: a 77.79\% scenario-cost reduction.
+Lower recorded costs of infeasible runs are not feasible savings.
+
+\begin{table*}[t]
+\centering\small
+\caption{Full-day physical executions. Online on-time counts are 6,008/6,008
+on D1 and 5,241/5,241 on D2 in every run. Each row has 5,760 offline arrivals;
+late completions and unfinished requests are separate. Costs are scenario USD;
+occupied resource is launch-to-release GPU seconds within observation. The
+last two rows are D1 repeats, not additional source days.}
+\label{tab:full-day-physical}
+\par\vspace{4pt}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lllrrrrr@{}}
+\toprule
+Day/run & Host & Policy & Offline on time & Late & Unfinished & GPU seconds & Cost\\
+\midrule
+D1 & M1 & all2 & 5,760 & 0 & 0 & 173,400.00 & 173.4000\\
+D1 & M1 & H & 5,759 & 0 & 1 & 34,251.32 & 39.4333\\
+D1 & M1 & H+guard & 5,759 & 1 & 0 & 35,028.72 & 40.2651\\
+D2 & M2 & all2 & 5,760 & 0 & 0 & 173,400.00 & 173.4000\\
+D2 & M2 & H+guard & 5,760 & 0 & 0 & 34,056.98 & 38.5104\\
+D2 & M2 & H & 5,755 & 0 & 5 & 35,329.34 & 39.8602\\
+\midrule
+D1 repeat & M1 & H+guard & 5,749 & 11 & 0 & 45,721.72 & 51.0804\\
+D1 repeat & M2 & H & 5,759 & 0 & 1 & 34,631.66 & 39.8603\\
+\bottomrule
+\end{tabular*}
+\end{table*}
+
+\begin{table*}[t]
+\centering\small
+\caption{P1+ on primary dynamic full-day runs. Yes/No indicate all-arrival
+feasibility, with the same predicate for prediction and physical execution.
+The last row reports frozen selection from \{H, H+guard\}, requiring predicted
+P1+ on both days before minimizing equal-day mean scenario cost.}
+\label{tab:full-day-prediction}
+\par\vspace{4pt}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}llllll@{}}
+\toprule
+Day/policy & Physical & Share & Lookup-69 & Lookup-30 & Local\\
+\midrule
+D1 H & No & No & Yes & No & No\\
+D1 H+guard & No & Yes & Yes & Yes & Yes\\
+D2 H & No & No & No & No & No\\
+D2 H+guard & Yes & Yes & No & Yes & Yes\\
+\midrule
+Two-day selection & None feasible & H+guard & Abstain & H+guard & H+guard\\
+\bottomrule
+\end{tabular*}
+\end{table*}
+
+The primary failures involve the final offline arrivals. On D1, H never
+dispatches the job arriving at 86,385 s, due at 86,685 s; H+guard completes
+the same job at 86,691.088 s, 6.088 s late but before the observation cutoff.
+On D2, H leaves the last five offline jobs undispatched.
+Control and dispatch remain active until 86,700 s, so these are deadline
+violations rather than an earlier admission cutoff.
+H's tail queue remains below its scale-out threshold.
+For the D1 guarded tail event, the guard triggers near 86,642 s;
+the observed 45.360 s startup exceeds its frozen 34.131 s safety estimate.
+The device becomes ready near 86,687.361 s, followed by dispatch near
+86,688.001 s. This event links the timing underestimate to the deadline outcome;
+it does not establish a common cause for every violation.
+
+The D1 guarded repeat has ten late completions before drain and one during drain.
+Rescoring the fixed trajectories with 10 s or 30 s of extra deadline allowance
+leaves ten or four repeat completions late, respectively; the primary run's
+single miss disappears at 10 s. This changes scoring, not controller deadlines
+or actions.
+The D1 guarded repeat's observed launch-to-ready 95th percentile is 135.61 s, compared with
+49.61 s in the primary D1 guarded run. All eight runs retain every one of
+86,700 control ticks, with zero missed ticks, control gaps, or abandoned
+decisions; maximum observed actuation lateness is below one second.
+The violations therefore remain scientific outcomes, not excluded technical
+attempts.
+
+\subsection{Frozen prediction and deployment screening}
+Table~\ref{tab:full-day-prediction} compares strict feasibility for the four
+primary dynamic runs. All predictors also accept the two physically feasible
+all2 anchors. On these four dynamic runs, Share, Lookup-30, and Local each
+agree in three cases but falsely accept D1 H+guard; Lookup-69 agrees in one,
+falsely accepts both D1 dynamic policies, and falsely rejects D2 H+guard.
+These are descriptive case counts, not population error-rate estimates.
+
+The selection rule retains all ties within $10^{-9}$ scenario USD and excludes
+the two diagnostic repeats. Share, Lookup-30, and Local select H+guard,
+whose two-day feasibility is overturned by physical execution on D1.
+Lookup-69 abstains; this is not selection of all2, which is a capacity
+reference outside this dynamic candidate pool. Neither dynamic candidate
+is physically feasible on both days, so feasible two-day cost regret is
+undefined. The D2 conditional saving must not be interpreted as a feasible
+two-day deployment result.
+
+A retrospective CPU check replaces only replay startup with five statistics
+of the same frozen calibration samples: median, 75th, 90th, 95th percentile,
+and maximum. Service, shutdown, and guard parameters remain fixed. Median
+through the 95th percentile accept H+guard on both days and reject H;
+the sample maxima reject both policies on both days. The maximum-based
+predictor therefore correctly abstains for the two-day pool but falsely
+rejects the feasible D2 H+guard execution.
+All five variants match three of four physical labels, but differ in error
+direction and two-day choice.
+
+Full-day validation extends the decision-fidelity test to continuous state
+and variable request lengths: physical execution overturns a replay-selected
+choice despite timely completion of every online request.
+
+\input{appendix_capacity}

@@ -33,7 +33,7 @@ is deployed as \texttt{ppo\_C30\_raw}.
 \centering
 \small
 \caption{Paper labels and frozen checkpoint identities. Steps are those
-reached by the selected checkpoint. PPO-4 is the registered reference.}
+reached by the selected checkpoint. PPO-4 is the registered reference. Inclusion rules are listed below.}
 \label{tab:ppo-frozen-coordinates}
 \setlength{\tabcolsep}{2pt}
 \par\vspace{4pt}
@@ -49,6 +49,25 @@ PPO-5 & \texttt{C30-s103} & 103 & 75 & 157,500 \\
 \bottomrule
 \end{tabular*}
 \end{table}
+
+The set is structured rather than a global top-five ranking: PPO-1 is the
+seed-101/episode-40 counterpart matched to PPO-4; PPO-2 and PPO-3 are the second
+eligible checkpoints in Lookup-69 and Lookup-30 training, respectively;
+PPO-4 is the original reference without reselection; PPO-5 is the best eligible
+checkpoint within seed 103. These cases do not form a random sample for
+estimating the relative quality of the two training environments.
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=0.98\linewidth]{figures/fig5_e2_fidelity_strip.pdf}
+\caption{All 32 deployment cells. Blue and gray denote correct pass/fail
+directions; orange denotes Lookup-30 false acceptance. Black outlines mark
+physical P1+ failures. This complete strip complements the event-level timeline
+in the main paper.}
+\label{fig:e2-complete-strip}
+\end{figure}
+
+Figure~\ref{fig:e2-complete-strip} retains every deployment cell.
 
 \subsection{Retrospective deployment lifecycle diagnosis}
 \label{sec:e2-lifecycle-diagnosis}
@@ -95,3 +114,5 @@ recovery repeats. The text summarizes both windows and the passing-policy contro
 No new physical runs are introduced.}
 \label{fig:e2-cooldown-diagnosis}
 \end{figure*}
+
+\input{ppo_input_audit}

@@ -1,0 +1,181 @@
+\begin{thebibliography}{18}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Agrawal et~al.(2024{\natexlab{a}})Agrawal, Kedia, Mohan, Panwar,
+  Kwatra, Gulavani, Ramjee, and Tumanov]{vidur2024}
+Agrawal, A., Kedia, N., Mohan, J., Panwar, A., Kwatra, N., Gulavani, B.~S.,
+  Ramjee, R., and Tumanov, A.
+\newblock {Vidur: A Large-Scale Simulation Framework for LLM Inference}.
+\newblock In \emph{Proceedings of Machine Learning and Systems}, volume~6, pp.\
+   351--366, 2024{\natexlab{a}}.
+\newblock URL
+  \url{https://proceedings.mlsys.org/paper_files/paper/2024/hash/b74a8de47d2b3c928360e0a011f48351-Abstract-Conference.html}.
+
+\bibitem[Agrawal et~al.(2024{\natexlab{b}})Agrawal, Kedia, Panwar, Mohan,
+  Kwatra, Gulavani, Tumanov, and Ramjee]{agrawal2024sarathi}
+Agrawal, A., Kedia, N., Panwar, A., Mohan, J., Kwatra, N., Gulavani, B.,
+  Tumanov, A., and Ramjee, R.
+\newblock Taming {Throughput-Latency} tradeoff in {LLM} inference with
+  {Sarathi-Serve}.
+\newblock In \emph{18th USENIX Symposium on Operating Systems Design and
+  Implementation (OSDI 24)}, pp.\  117--134, Santa Clara, CA, July
+  2024{\natexlab{b}}. USENIX Association.
+\newblock ISBN 978-1-939133-40-3.
+\newblock URL
+  \url{https://www.usenix.org/conference/osdi24/presentation/agrawal}.
+
+\bibitem[Crankshaw et~al.(2020)Crankshaw, Sela, Mo, Zumar, Stoica, Gonzalez,
+  and Tumanov]{crankshaw2018inferline}
+Crankshaw, D., Sela, G.-E., Mo, X., Zumar, C., Stoica, I., Gonzalez, J., and
+  Tumanov, A.
+\newblock {InferLine: Latency-Aware Provisioning and Scaling for Prediction
+  Serving Pipelines}.
+\newblock In \emph{Proceedings of the 11th ACM Symposium on Cloud Computing},
+  pp.\  477--491, 2020.
+\newblock \doi{10.1145/3419111.3421285}.
+\newblock URL \url{https://doi.org/10.1145/3419111.3421285}.
+
+\bibitem[Fu et~al.(2024)Fu, Xue, Huang, Brabete, Ustiugov, Patel, and
+  Mai]{fu2024serverlessllm}
+Fu, Y., Xue, L., Huang, Y., Brabete, A.-O., Ustiugov, D., Patel, Y., and Mai,
+  L.
+\newblock {ServerlessLLM: Low-Latency Serverless Inference for Large Language
+  Models}.
+\newblock In \emph{18th USENIX Symposium on Operating Systems Design and
+  Implementation (OSDI 24)}, pp.\  135--153, 2024.
+\newblock URL \url{https://www.usenix.org/conference/osdi24/presentation/fu}.
+
+\bibitem[Gujarati et~al.(2020)Gujarati, Karimi, Alzayat, Hao, Kaufmann,
+  Vigfusson, and Mace]{gujarati2020clockwork_arxiv}
+Gujarati, A., Karimi, R., Alzayat, S., Hao, W., Kaufmann, A., Vigfusson, Y.,
+  and Mace, J.
+\newblock {Serving DNNs like Clockwork: Performance Predictability from the
+  Bottom Up}.
+\newblock In \emph{14th USENIX Symposium on Operating Systems Design and
+  Implementation (OSDI 20)}, pp.\  443--462, 2020.
+\newblock URL
+  \url{https://www.usenix.org/conference/osdi20/presentation/gujarati}.
+
+\bibitem[Kabakibo et~al.(2026)Kabakibo, Trivedi, and
+  Wang]{kabakibo2026coldstart}
+Kabakibo, H.~S., Trivedi, A., and Wang, L.
+\newblock {Breaking the Ice: Analyzing Cold Start Latency in vLLM}.
+\newblock In \emph{Proceedings of Machine Learning and Systems}, volume~8, pp.\
+   1187--1205, 2026.
+\newblock URL
+  \url{https://proceedings.mlsys.org/paper_files/paper/2026/hash/29416b66c2149872b9d1415a3fd2c5e0-Abstract-Conference.html}.
+
+\bibitem[Kwon et~al.(2023)Kwon, Li, Zhuang, Sheng, Zheng, Yu, Gonzalez, Zhang,
+  and Stoica]{kwon2023vllm}
+Kwon, W., Li, Z., Zhuang, S., Sheng, Y., Zheng, L., Yu, C.~H., Gonzalez, J.,
+  Zhang, H., and Stoica, I.
+\newblock {Efficient Memory Management for Large Language Model Serving with
+  PagedAttention}.
+\newblock In \emph{Proceedings of the 29th Symposium on Operating Systems
+  Principles}, pp.\  611--626, 2023.
+\newblock \doi{10.1145/3600006.3613165}.
+\newblock URL \url{https://doi.org/10.1145/3600006.3613165}.
+
+\bibitem[Patel et~al.(2024)Patel, Choukse, Zhang, Shah, Goiri, Maleki, and
+  Bianchini]{patel2024splitwise}
+Patel, P., Choukse, E., Zhang, C., Shah, A., Goiri, {\'I}., Maleki, S., and
+  Bianchini, R.
+\newblock {Splitwise: Efficient Generative LLM Inference Using Phase
+  Splitting}.
+\newblock In \emph{2024 ACM/IEEE 51st Annual International Symposium on
+  Computer Architecture (ISCA)}, pp.\  118--132, 2024.
+\newblock \doi{10.1109/isca59077.2024.00019}.
+\newblock URL \url{https://doi.org/10.1109/isca59077.2024.00019}.
+
+\bibitem[Qiao et~al.(2024)Qiao, Anzai, Yu, Ma, Yang, Wang, Kim, Wu, Zhou, Xing,
+  Gonzalez, Stoica, and Xu]{qiao2024conserve}
+Qiao, Y., Anzai, S., Yu, S., Ma, H., Yang, S., Wang, Y., Kim, M., Wu, Y., Zhou,
+  Y., Xing, J., Gonzalez, J.~E., Stoica, I., and Xu, H.
+\newblock {ConServe}: Fine-grained {GPU} harvesting for {LLM} online and
+  offline co-serving.
+\newblock \emph{arXiv preprint arXiv:2410.01228}, 2024.
+\newblock URL \url{https://arxiv.org/abs/2410.01228}.
+
+\bibitem[Schulman et~al.(2017)Schulman, Wolski, Dhariwal, Radford, and
+  Klimov]{schulman2017ppo}
+Schulman, J., Wolski, F., Dhariwal, P., Radford, A., and Klimov, O.
+\newblock {Proximal Policy Optimization Algorithms}, 2017.
+\newblock URL \url{https://arxiv.org/abs/1707.06347}.
+
+\bibitem[Sun et~al.(2024)Sun, Huang, Zhao, Xiao, Zhang, Li, and
+  Lin]{sun2024llumnix}
+Sun, B., Huang, Z., Zhao, H., Xiao, W., Zhang, X., Li, Y., and Lin, W.
+\newblock {Llumnix: Dynamic Scheduling for Large Language Model Serving}.
+\newblock In \emph{18th USENIX Symposium on Operating Systems Design and
+  Implementation (OSDI 24)}, pp.\  173--191, 2024.
+\newblock URL
+  \url{https://www.usenix.org/conference/osdi24/presentation/sun-biao}.
+
+\bibitem[Wang et~al.(2024)Wang, Chen, Li, Kang, Tang, He, Guo, Wang, Wang,
+  Zhou, and Chu]{wang2024burstgpt}
+Wang, Y., Chen, Y., Li, Z., Kang, X., Tang, Z., He, X., Guo, R., Wang, X.,
+  Wang, Q., Zhou, A.~C., and Chu, X.
+\newblock {BurstGPT: A Real-world Workload Dataset to Optimize LLM Serving
+  Systems}, 2024.
+\newblock URL \url{https://arxiv.org/abs/2401.17644v3}.
+
+\bibitem[Yang et~al.(2026)Yang, Zhang, Wu, Yan, Sun, and Chang]{charon2026}
+Yang, M., Zhang, Z., Wu, M., Yan, J., Sun, H., and Chang, L.-W.
+\newblock {Charon: A Unified and Fine-Grained Simulator for Large-Scale LLM
+  Training and Inference}.
+\newblock In \emph{Proceedings of Machine Learning and Systems}, volume~8, pp.\
+   94--107, 2026.
+\newblock URL
+  \url{https://proceedings.mlsys.org/paper_files/paper/2026/hash/dbc8ce0fdfcd55172d73fb05dbae07fc-Abstract-Conference.html}.
+
+\bibitem[Zhang et~al.(2019)Zhang, Yu, Wang, and Yan]{zhang2019mark}
+Zhang, C., Yu, M., Wang, W., and Yan, F.
+\newblock {MArk: Exploiting Cloud Services for Cost-Effective, SLO-Aware
+  Machine Learning Inference Serving}.
+\newblock In \emph{2019 USENIX Annual Technical Conference}, pp.\  1049--1062,
+  2019.
+\newblock URL
+  \url{https://www.usenix.org/conference/atc19/presentation/zhang-chengliang}.
+
+\bibitem[Zhang et~al.(2025{\natexlab{a}})Zhang, Guo, Tan, Guan, and
+  Jiang]{zhang2025kiss}
+Zhang, G., Guo, W., Tan, Z., Guan, Q., and Jiang, H.
+\newblock {KIS-S: A GPU-Aware Kubernetes Inference Simulator with RL-Based
+  Auto-Scaling}, 2025{\natexlab{a}}.
+\newblock URL \url{https://arxiv.org/abs/2507.07932}.
+
+\bibitem[Zhang et~al.(2025{\natexlab{b}})Zhang, Vippagunta, Nandagopal, Raman,
+  Xu, Pfeiffer, Chatterjee, Tan, Guo, and Jiang]{zhang2025aapa}
+Zhang, G., Vippagunta, S., Nandagopal, R., Raman, S., Xu, J., Pfeiffer, M.,
+  Chatterjee, S., Tan, Z., Guo, W., and Jiang, H.
+\newblock {AAPA: An Archetype-Aware Predictive Autoscaler with Uncertainty
+  Quantification for Serverless Workloads on Kubernetes}, 2025{\natexlab{b}}.
+\newblock URL \url{https://arxiv.org/abs/2507.05653}.
+
+\bibitem[Zhang et~al.(2023)Zhang, Tang, Khandelwal, and
+  Stoica]{zhang2023shepherd}
+Zhang, H., Tang, Y., Khandelwal, A., and Stoica, I.
+\newblock {SHEPHERD: Serving DNNs in the Wild}.
+\newblock In \emph{Proceedings of the 20th USENIX Symposium on Networked
+  Systems Design and Implementation}, pp.\  787--808, 2023.
+\newblock URL
+  \url{https://www.usenix.org/conference/nsdi23/presentation/zhang-hong}.
+
+\bibitem[Zheng et~al.(2024)Zheng, Yin, Xie, Sun, Huang, Yu, Cao, Kozyrakis,
+  Stoica, Gonzalez, Barrett, and Sheng]{zheng2024sglang}
+Zheng, L., Yin, L., Xie, Z., Sun, C., Huang, J., Yu, C.~H., Cao, S., Kozyrakis,
+  C., Stoica, I., Gonzalez, J.~E., Barrett, C., and Sheng, Y.
+\newblock {SGLang: Efficient Execution of Structured Language Model Programs}.
+\newblock In Globerson, A., Mackey, L., Belgrave, D., Fan, A., Paquet, U.,
+  Tomczak, J., and Zhang, C. (eds.), \emph{Advances in Neural Information
+  Processing Systems}, volume~37, pp.\  62557--62583. Curran Associates, Inc.,
+  2024.
+\newblock \doi{10.52202/079017-2000}.
+\newblock URL
+  \url{https://proceedings.neurips.cc/paper_files/paper/2024/file/724be4472168f31ba1c9ac630f15dec8-Paper-Conference.pdf}.
+
+\end{thebibliography}

@@ -1,0 +1,2293 @@
+{
+  "status": "PASS",
+  "retrospective": true,
+  "reproduced_original_predictions": 12,
+  "physical": [
+    {
+      "policy": "hysteresis_u8_d0_c60",
+      "window": "bridge_locked_test_recovery_v1",
+      "run_id": "hysteresis_u8_d0_c60__bridge_locked_test_recovery_v1__r1",
+      "P1plus": false,
+      "occupied": 1054.87059599,
+      "cost": 1.2554335959900003
+    },
+    {
+      "policy": "hysteresis_u8_d0_c60__guard",
+      "window": "bridge_locked_test_recovery_v1",
+      "run_id": "hysteresis_u8_d0_c60__guard__bridge_locked_test_recovery_v1__r1",
+      "P1plus": true,
+      "occupied": 1128.189706933,
+      "cost": 1.263953706933
+    },
+    {
+      "policy": "hysteresis_u8_d0_c60__guard",
+      "window": "bridge_locked_test_recovery_v1",
+      "run_id": "hysteresis_u8_d0_c60__guard__bridge_locked_test_recovery_v1__r2",
+      "P1plus": true,
+      "occupied": 1252.213245223,
+      "cost": 1.3892822452230003
+    },
+    {
+      "policy": "hysteresis_u8_d0_c60",
+      "window": "bridge_locked_test_recovery_v1",
+      "run_id": "hysteresis_u8_d0_c60__bridge_locked_test_recovery_v1__r2",
+      "P1plus": false,
+      "occupied": 1062.226169471,
+      "cost": 1.266295169471
+    },
+    {
+      "policy": "hysteresis_u8_d0_c60__guard",
+      "window": "bridge_locked_test_steady_v1",
+      "run_id": "hysteresis_u8_d0_c60__guard__bridge_locked_test_steady_v1__r1",
+      "P1plus": true,
+      "occupied": 1756.683487122,
+      "cost": 2.0008244871220002
+    },
+    {
+      "policy": "hysteresis_u8_d0_c60",
+      "window": "bridge_locked_test_steady_v1",
+      "run_id": "hysteresis_u8_d0_c60__bridge_locked_test_steady_v1__r1",
+      "P1plus": false,
+      "occupied": 1599.2869481579999,
+      "cost": 1.829371948158
+    },
+    {
+      "policy": "hysteresis_u8_d0_c60",
+      "window": "bridge_locked_test_steady_v1",
+      "run_id": "hysteresis_u8_d0_c60__bridge_locked_test_steady_v1__r2",
+      "P1plus": false,
+      "occupied": 1465.218904869,
+      "cost": 1.708368904869
+    },
+    {
+      "policy": "hysteresis_u8_d0_c60__guard",
+      "window": "bridge_locked_test_steady_v1",
+      "run_id": "hysteresis_u8_d0_c60__guard__bridge_locked_test_steady_v1__r2",
+      "P1plus": true,
+      "occupied": 1512.299364935,
+      "cost": 1.7534613649350002
+    }
+  ],
+  "rows": [
+    {
+      "startup_seconds": 20.0,
+      "agreement": 6,
+      "false_accepts": 2,
+      "false_rejects": 0,
+      "occupied_mae": 275.62466640175046,
+      "cost_mae": 0.28563654140175054,
+      "predicted": {
+        "hysteresis_u8_d0_c60|bridge_locked_test_recovery_v1": {
+          "P1plus": false,
+          "occupied": 790.7636578219998,
+          "cost": 1.0016136578219998
+        },
+        "hysteresis_u8_d0_c60__guard|bridge_locked_test_recovery_v1": {
+          "P1plus": true,
+          "occupied": 852.7439626404997,
+          "cost": 1.0065939626404998
+        },
+        "hysteresis_u8_d0_c60|bridge_locked_test_steady_v1": {
+          "P1plus": true,
+          "occupied": 1334.7439626404994,
+          "cost": 1.5413709626404992
+        },
+        "hysteresis_u8_d0_c60__guard|bridge_locked_test_steady_v1": {
+          "P1plus": true,
+          "occupied": 1334.7439626404994,
+          "cost": 1.5413709626404992
+        }
+      }
+    },
+    {
+      "startup_seconds": 21.0,
+      "agreement": 6,
+      "false_accepts": 2,
+      "false_rejects": 0,
+      "occupied_mae": 277.12466640175035,
+      "cost_mae": 0.2847905414017504,
+      "predicted": {
+        "hysteresis_u8_d0_c60|bridge_locked_test_recovery_v1": {
+          "P1plus": false,
+          "occupied": 790.7636578219998,
+          "cost": 1.003968657822
+        },
+        "hysteresis_u8_d0_c60__guard|bridge_locked_test_recovery_v1": {
+          "P1plus": true,
+          "occupied": 852.7439626404997,
+          "cost": 1.0089489626404997
+        },
+        "hysteresis_u8_d0_c60|bridge_locked_test_steady_v1": {
+          "P1plus": true,
+          "occupied": 1331.7439626404996,
+          "cost": 1.5407079626404996
+        },
+        "hysteresis_u8_d0_c60__guard|bridge_locked_test_steady_v1": {
+          "P1plus": true,
+          "occupied": 1331.7439626404996,
+          "cost": 1.5407079626404996
+        }
+      }
+    },
+    {
+      "startup_seconds": 22.0,
+      "agreement": 6,
+      "false_accepts": 2,
+      "false_rejects": 0,
+      "occupied_mae": 270.62466640175046,
+      "cost_mae": 0.2759390414017505,
+      "predicted": {
+        "hysteresis_u8_d0_c60|bridge_locked_test_recovery_v1": {
+          "P1plus": false,
+          "occupied": 790.7636578219998,
+          "cost": 1.006322657822
+        },
+        "hysteresis_u8_d0_c60__guard|bridge_locked_test_recovery_v1": {
+          "P1plus": true,
+          "occupied": 852.7439626404997,
+          "cost": 1.0113029626404997
+        },
+        "hysteresis_u8_d0_c60|bridge_locked_test_steady_v1": {
+          "P1plus": true,
+          "occupied": 1344.7439626404994,
+          "cost": 1.5560569626404994
+        },
+        "hysteresis_u8_d0_c60__guard|bridge_locked_test_steady_v1": {
+          "P1plus": true,
+          "occupied": 1344.7439626404994,
+          "cost": 1.5560569626404994
+        }
+      }
+    },
+    {
+      "startup_seconds": 23.0,
+      "agreement": 6,
+      "false_accepts": 2,
+      "false_rejects": 0,
+      "occupied_mae": 273.12466640175046,
+      "cost_mae": 0.2766940414017505,
+      "predicted": {
+        "hysteresis_u8_d0_c60|bridge_locked_test_recovery_v1": {
+          "P1plus": false,
+          "occupied": 790.7636578219998,
+          "cost": 1.0086586578219998
+        },
+        "hysteresis_u8_d0_c60__guard|bridge_locked_test_recovery_v1": {
+          "P1plus": true,
+          "occupied": 852.7439626404997,
+          "cost": 1.0136389626404998
+        },
+        "hysteresis_u8_d0_c60|bridge_locked_test_steady_v1": {
+          "P1plus": true,
+          "occupied": 1339.7439626404994,
+          "cost": 1.5522109626404994
+        },
+        "hysteresis_u8_d0_c60__guard|bridge_locked_test_steady_v1": {
+          "P1plus": true,
+          "occupied": 1339.7439626404994,
+          "cost": 1.5522109626404994
+        }
+      }
+    },
+    {
+      "startup_seconds": 24.0,
+      "agreement": 6,
+      "false_accepts": 2,
+      "false_rejects": 0,
+      "occupied_mae": 271.12466640175035,
+      "cost_mae": 0.27351654140175036,
+      "predicted": {
+        "hysteresis_u8_d0_c60|bridge_locked_test_recovery_v1": {
+          "P1plus": false,
+          "occupied": 790.7636578219998,
+          "cost": 1.0086586578219998
+        },
+        "hysteresis_u8_d0_c60__guard|bridge_locked_test_recovery_v1": {
+          "P1plus": true,
+          "occupied": 852.7439626404997,
+          "cost": 1.0136389626404998
+        },
+        "hysteresis_u8_d0_c60|bridge_locked_test_steady_v1": {
+          "P1plus": true,
+          "occupied": 1343.7439626404996,
+          "cost": 1.5585659626404997
+        },
+        "hysteresis_u8_d0_c60__guard|bridge_locked_test_steady_v1": {
+          "P1plus": true,
+          "occupied": 1343.7439626404996,
+          "cost": 1.5585659626404997
+        }
+      }
+    },
+    {
+      "startup_seconds": 25.0,
+      "agreement": 6,
+      "false_accepts": 2,
+      "false_rejects": 0,
+      "occupied_mae": 269.12466640175046,
+      "cost_mae": 0.2700400414017505,
+      "predicted": {
+        "hysteresis_u8_d0_c60|bridge_locked_test_recovery_v1": {
+          "P1plus": false,
+          "occupied": 790.7636578219998,
+          "cost": 1.0098436578219998
+        },
+        "hysteresis_u8_d0_c60__guard|bridge_locked_test_recovery_v1": {
+          "P1plus": true,
+          "occupied": 852.7439626404997,
+          "cost": 1.0148239626404998
+        },
+        "hysteresis_u8_d0_c60|bridge_locked_test_steady_v1": {
+          "P1plus": true,
+          "occupied": 1347.7439626404994,
+          "cost": 1.5643339626404995
+        },
+        "hysteresis_u8_d0_c60__guard|bridge_locked_test_steady_v1": {
+          "P1plus": true,
+          "occupied": 1347.7439626404994,
+          "cost": 1.5643339626404995
+        }
+      }
+    },
+    {
+      "startup_seconds": 26.0,
+      "agreement": 6,
+      "false_accepts": 2,
+      "false_rejects": 0,
+      "occupied_mae": 269.12466640175046,
+      "cost_mae": 0.2679885414017505,
+      "predicted": {
+        "hysteresis_u8_d0_c60|bridge_locked_test_recovery_v1": {
+          "P1plus": false,
+          "occupied": 790.7636578219998,
+          "cost": 1.012182657822
+        },
+        "hysteresis_u8_d0_c60__guard|bridge_locked_test_recovery_v1": {
+          "P1plus": true,
+          "occupied": 852.7439626404997,
+          "cost": 1.0171629626404999
+        },
+        "hysteresis_u8_d0_c60|bridge_locked_test_steady_v1": {
+          "P1plus": true,
+          "occupied": 1347.7439626404994,
+          "cost": 1.5660979626404994
+        },
+        "hysteresis_u8_d0_c60__guard|bridge_locked_test_steady_v1": {
+          "P1plus": true,
+          "occupied": 1347.7439626404994,
+          "cost": 1.5660979626404994
+        }
+      }
+    },
+    {
+      "startup_seconds": 27.0,
+      "agreement": 6,
+      "false_accepts": 2,
+      "false_rejects": 0,
+      "occupied_mae": 269.62466640175046,
+      "cost_mae": 0.2673300414017505,
+      "predicted": {
+        "hysteresis_u8_d0_c60|bridge_locked_test_recovery_v1": {
+          "P1plus": false,
+          "occupied": 790.7636578219998,
+          "cost": 1.0133516578219999
+        },
+        "hysteresis_u8_d0_c60__guard|bridge_locked_test_recovery_v1": {
+          "P1plus": true,
+          "occupied": 852.7439626404997,
+          "cost": 1.0183319626404999
+        },
+        "hysteresis_u8_d0_c60|bridge_locked_test_steady_v1": {
+          "P1plus": true,
+          "occupied": 1346.7439626404994,
+          "cost": 1.5662459626404994
+        },
+        "hysteresis_u8_d0_c60__guard|bridge_locked_test_steady_v1": {
+          "P1plus": true,
+          "occupied": 1346.7439626404994,
+          "cost": 1.5662459626404994
+        }
+      }
+    },
+    {
+      "startup_seconds": 28.0,
+      "agreement": 6,
+      "false_accepts": 2,
+      "false_rejects": 0,
+      "occupied_mae": 269.12466640175046,
+      "cost_mae": 0.2653490414017505,
+      "predicted": {
+        "hysteresis_u8_d0_c60|bridge_locked_test_recovery_v1": {
+          "P1plus": false,
+          "occupied": 790.7636578219998,
+          "cost": 1.0151396578219998
+        },
+        "hysteresis_u8_d0_c60__guard|bridge_locked_test_recovery_v1": {
+          "P1plus": true,
+          "occupied": 852.7439626404997,
+          "cost": 1.0201199626404998
+        },
+        "hysteresis_u8_d0_c60|bridge_locked_test_steady_v1": {
+          "P1plus": true,
+          "occupied": 1347.7439626404994,
+          "cost": 1.5684199626404995
+        },
+        "hysteresis_u8_d0_c60__guard|bridge_locked_test_steady_v1": {
+          "P1plus": true,
+          "occupied": 1347.7439626404994,
+          "cost": 1.5684199626404995
+        }
+      }
+    },
+    {
+      "startup_seconds": 29.0,
+      "agreement": 6,
+      "false_accepts": 2,
+      "false_rejects": 0,
+      "occupied_mae": 269.12466640175046,
+      "cost_mae": 0.2635890414017505,
+      "predicted": {
+        "hysteresis_u8_d0_c60|bridge_locked_test_recovery_v1": {
+          "P1plus": false,
+          "occupied": 790.7636578219998,
+          "cost": 1.016908657822
+        },
+        "hysteresis_u8_d0_c60__guard|bridge_locked_test_recovery_v1": {
+          "P1plus": true,
+          "occupied": 852.7439626404997,
+          "cost": 1.0218889626404999
+        },
+        "hysteresis_u8_d0_c60|bridge_locked_test_steady_v1": {
+          "P1plus": true,
+          "occupied": 1347.7439626404994,
+          "cost": 1.5701709626404994
+        },
+        "hysteresis_u8_d0_c60__guard|bridge_locked_test_steady_v1": {
+          "P1plus": true,
+          "occupied": 1347.7439626404994,
+          "cost": 1.5701709626404994
+        }
+      }
+    },
+    {
+      "startup_seconds": 30.0,
+      "agreement": 6,
+      "false_accepts": 2,
+      "false_rejects": 0,
+      "occupied_mae": 269.12466640175046,
+      "cost_mae": 0.2609170414017505,
+      "predicted": {
+        "hysteresis_u8_d0_c60|bridge_locked_test_recovery_v1": {
+          "P1plus": false,
+          "occupied": 790.7636578219998,
+          "cost": 1.0210846578219999
+        },
+        "hysteresis_u8_d0_c60__guard|bridge_locked_test_recovery_v1": {
+          "P1plus": true,
+          "occupied": 852.7439626404997,
+          "cost": 1.0260649626404998
+        },
+        "hysteresis_u8_d0_c60|bridge_locked_test_steady_v1": {
+          "P1plus": true,
+          "occupied": 1347.7439626404994,
+          "cost": 1.5713389626404994
+        },
+        "hysteresis_u8_d0_c60__guard|bridge_locked_test_steady_v1": {
+          "P1plus": true,
+          "occupied": 1347.7439626404994,
+          "cost": 1.5713389626404994
+        }
+      }
+    },
+    {
+      "startup_seconds": 31.0,
+      "agreement": 6,
+      "false_accepts": 2,
+      "false_rejects": 0,
+      "occupied_mae": 269.12466640175046,
+      "cost_mae": 0.2591665414017505,
+      "predicted": {
+        "hysteresis_u8_d0_c60|bridge_locked_test_recovery_v1": {
+          "P1plus": false,
+          "occupied": 790.7636578219998,
+          "cost": 1.0228316578219998
+        },
+        "hysteresis_u8_d0_c60__guard|bridge_locked_test_recovery_v1": {
+          "P1plus": true,
+          "occupied": 852.7439626404997,
+          "cost": 1.0278119626404998
+        },
+        "hysteresis_u8_d0_c60|bridge_locked_test_steady_v1": {
+          "P1plus": true,
+          "occupied": 1347.7439626404994,
+          "cost": 1.5730929626404995
+        },
+        "hysteresis_u8_d0_c60__guard|bridge_locked_test_steady_v1": {
+          "P1plus": true,
+          "occupied": 1347.7439626404994,
+          "cost": 1.5730929626404995
+        }
+      }
+    },
+    {
+      "startup_seconds": 32.0,
+      "agreement": 6,
+      "false_accepts": 2,
+      "false_rejects": 0,
+      "occupied_mae": 269.12466640175046,
+      "cost_mae": 0.2571150414017505,
+      "predicted": {
+        "hysteresis_u8_d0_c60|bridge_locked_test_recovery_v1": {
+          "P1plus": false,
+          "occupied": 790.7636578219998,
+          "cost": 1.0228316578219998
+        },
+        "hysteresis_u8_d0_c60__guard|bridge_locked_test_recovery_v1": {
+          "P1plus": true,
+          "occupied": 852.7439626404997,
+          "cost": 1.0278119626404998
+        },
+        "hysteresis_u8_d0_c60|bridge_locked_test_steady_v1": {
+          "P1plus": true,
+          "occupied": 1347.7439626404994,
+          "cost": 1.5771959626404994
+        },
+        "hysteresis_u8_d0_c60__guard|bridge_locked_test_steady_v1": {
+          "P1plus": true,
+          "occupied": 1347.7439626404994,
+          "cost": 1.5771959626404994
+        }
+      }
+    },
+    {
+      "startup_seconds": 33.0,
+      "agreement": 6,
+      "false_accepts": 2,
+      "false_rejects": 0,
+      "occupied_mae": 269.12466640175046,
+      "cost_mae": 0.25478354140175047,
+      "predicted": {
+        "hysteresis_u8_d0_c60|bridge_locked_test_recovery_v1": {
+          "P1plus": false,
+          "occupied": 790.7636578219998,
+          "cost": 1.0239886578219999
+        },
+        "hysteresis_u8_d0_c60__guard|bridge_locked_test_recovery_v1": {
+          "P1plus": true,
+          "occupied": 852.7439626404997,
+          "cost": 1.0289689626404999
+        },
+        "hysteresis_u8_d0_c60|bridge_locked_test_steady_v1": {
+          "P1plus": true,
+          "occupied": 1347.7439626404994,
+          "cost": 1.5807019626404994
+        },
+        "hysteresis_u8_d0_c60__guard|bridge_locked_test_steady_v1": {
+          "P1plus": true,
+          "occupied": 1347.7439626404994,
+          "cost": 1.5807019626404994
+        }
+      }
+    },
+    {
+      "startup_seconds": 34.0,
+      "agreement": 6,
+      "false_accepts": 2,
+      "false_rejects": 0,
+      "occupied_mae": 205.12466640175052,
+      "cost_mae": 0.22202904140175067,
+      "predicted": {
+        "hysteresis_u8_d0_c60|bridge_locked_test_recovery_v1": {
+          "P1plus": true,
+          "occupied": 820.7636578219997,
+          "cost": 0.9845826578219996
+        },
+        "hysteresis_u8_d0_c60__guard|bridge_locked_test_recovery_v1": {
+          "P1plus": true,
+          "occupied": 820.7636578219997,
+          "cost": 0.9845826578219996
+        },
+        "hysteresis_u8_d0_c60|bridge_locked_test_steady_v1": {
+          "P1plus": false,
+          "occupied": 1445.7439626404994,
+          "cost": 1.6606169626404994
+        },
+        "hysteresis_u8_d0_c60__guard|bridge_locked_test_steady_v1": {
+          "P1plus": true,
+          "occupied": 1507.7242674589993,
+          "cost": 1.7155972674589992
+        }
+      }
+    },
+    {
+      "startup_seconds": 35.0,
+      "agreement": 4,
+      "false_accepts": 4,
+      "false_rejects": 0,
+      "occupied_mae": 269.6197426063755,
+      "cost_mae": 0.27252161760637555,
+      "predicted": {
+        "hysteresis_u8_d0_c60|bridge_locked_test_recovery_v1": {
+          "P1plus": true,
+          "occupied": 820.7636578219997,
+          "cost": 0.9869116578219996
+        },
+        "hysteresis_u8_d0_c60__guard|bridge_locked_test_recovery_v1": {
+          "P1plus": true,
+          "occupied": 820.7636578219997,
+          "cost": 0.9869116578219996
+        },
+        "hysteresis_u8_d0_c60|bridge_locked_test_steady_v1": {
+          "P1plus": true,
+          "occupied": 1347.7439626404994,
+          "cost": 1.5847929626404995
+        },
+        "hysteresis_u8_d0_c60__guard|bridge_locked_test_steady_v1": {
+          "P1plus": true,
+          "occupied": 1347.7439626404994,
+          "cost": 1.5847929626404995
+        }
+      }
+    },
+    {
+      "startup_seconds": 36.0,
+      "agreement": 4,
+      "false_accepts": 4,
+      "false_rejects": 0,
+      "occupied_mae": 210.25100704925035,
+      "cost_mae": 0.22391261760637565,
+      "predicted": {
+        "hysteresis_u8_d0_c60|bridge_locked_test_recovery_v1": {
+          "P1plus": true,
+          "occupied": 820.7636578219997,
+          "cost": 0.9869116578219996
+        },
+        "hysteresis_u8_d0_c60__guard|bridge_locked_test_recovery_v1": {
+          "P1plus": true,
+          "occupied": 820.7636578219997,
+          "cost": 0.9869116578219996
+        },
+        "hysteresis_u8_d0_c60|bridge_locked_test_steady_v1": {
+          "P1plus": true,
+          "occupied": 1467.7439626404994,
+          "cost": 1.6820109626404993
+        },
+        "hysteresis_u8_d0_c60__guard|bridge_locked_test_steady_v1": {
+          "P1plus": true,
+          "occupied": 1467.7439626404994,
+          "cost": 1.6820109626404993
+        }
+      }
+    },
+    {
+      "startup_seconds": 37.0,
+      "agreement": 6,
+      "false_accepts": 2,
+      "false_rejects": 0,
+      "occupied_mae": 203.62466640175052,
+      "cost_mae": 0.21413054140175064,
+      "predicted": {
+        "hysteresis_u8_d0_c60|bridge_locked_test_recovery_v1": {
+          "P1plus": true,
+          "occupied": 820.7636578219997,
+          "cost": 0.9886636578219996
+        },
+        "hysteresis_u8_d0_c60__guard|bridge_locked_test_recovery_v1": {
+          "P1plus": true,
+          "occupied": 820.7636578219997,
+          "cost": 0.9886636578219996
+        },
+        "hysteresis_u8_d0_c60|bridge_locked_test_steady_v1": {
+          "P1plus": false,
+          "occupied": 1448.7439626404994,
+          "cost": 1.6723329626404995
+        },
+        "hysteresis_u8_d0_c60__guard|bridge_locked_test_steady_v1": {
+          "P1plus": true,
+          "occupied": 1510.7242674589993,
+          "cost": 1.7273132674589993
+        }
+      }
+    },
+    {
+      "startup_seconds": 38.0,
+      "agreement": 6,
+      "false_accepts": 2,
+      "false_rejects": 0,
+      "occupied_mae": 204.12466640175052,
+      "cost_mae": 0.2125655414017507,
+      "predicted": {
+        "hysteresis_u8_d0_c60|bridge_locked_test_recovery_v1": {
+          "P1plus": true,
+          "occupied": 820.7636578219997,
+          "cost": 0.9898296578219996
+        },
+        "hysteresis_u8_d0_c60__guard|bridge_locked_test_recovery_v1": {
+          "P1plus": true,
+          "occupied": 820.7636578219997,
+          "cost": 0.9898296578219996
+        },
+        "hysteresis_u8_d0_c60|bridge_locked_test_steady_v1": {
+          "P1plus": false,
+          "occupied": 1447.7439626404994,
+          "cost": 1.6742969626404993
+        },
+        "hysteresis_u8_d0_c60__guard|bridge_locked_test_steady_v1": {
+          "P1plus": true,
+          "occupied": 1509.7242674589993,
+          "cost": 1.7292772674589991
+        }
+      }
+    },
+    {
+      "startup_seconds": 39.0,
+      "agreement": 4,
+      "false_accepts": 4,
+      "false_rejects": 0,
+      "occupied_mae": 210.25100704925035,
+      "cost_mae": 0.2177791176063757,
+      "predicted": {
+        "hysteresis_u8_d0_c60|bridge_locked_test_recovery_v1": {
+          "P1plus": true,
+          "occupied": 820.7636578219997,
+          "cost": 0.9909966578219996
+        },
+        "hysteresis_u8_d0_c60__guard|bridge_locked_test_recovery_v1": {
+          "P1plus": true,
+          "occupied": 820.7636578219997,
+          "cost": 0.9909966578219996
+        },
+        "hysteresis_u8_d0_c60|bridge_locked_test_steady_v1": {
+          "P1plus": true,
+          "occupied": 1467.7439626404994,
+          "cost": 1.6901929626404992
+        },
+        "hysteresis_u8_d0_c60__guard|bridge_locked_test_steady_v1": {
+          "P1plus": true,
+          "occupied": 1467.7439626404994,
+          "cost": 1.6901929626404992
+        }
+      }
+    },
+    {
+      "startup_seconds": 40.0,
+      "agreement": 8,
+      "false_accepts": 0,
+      "false_rejects": 0,
+      "occupied_mae": 144.12959019712554,
+      "cost_mae": 0.1416584651971256,
+      "predicted": {
+        "hysteresis_u8_d0_c60|bridge_locked_test_recovery_v1": {
+          "P1plus": false,
+          "occupied": 908.7636578219997,
+          "cost": 1.1290446578219997
+        },
+        "hysteresis_u8_d0_c60__guard|bridge_locked_test_recovery_v1": {
+          "P1plus": true,
+          "occupied": 970.7439626404996,
+          "cost": 1.1240249626404997
+        },
+        "hysteresis_u8_d0_c60|bridge_locked_test_steady_v1": {
+          "P1plus": false,
+          "occupied": 1448.7439626404994,
+          "cost": 1.6794059626404994
+        },
+        "hysteresis_u8_d0_c60__guard|bridge_locked_test_steady_v1": {
+          "P1plus": true,
+          "occupied": 1510.7242674589993,
+          "cost": 1.7343862674589994
+        }
+      }
+    },
+    {
+      "startup_seconds": 41.0,
+      "agreement": 8,
+      "false_accepts": 0,
+      "false_rejects": 0,
+      "occupied_mae": 145.12959019712554,
+      "cost_mae": 0.14207496519712565,
+      "predicted": {
+        "hysteresis_u8_d0_c60|bridge_locked_test_recovery_v1": {
+          "P1plus": false,
+          "occupied": 905.7636578219997,
+          "cost": 1.1266326578219998
+        },
+        "hysteresis_u8_d0_c60__guard|bridge_locked_test_recovery_v1": {
+          "P1plus": true,
+          "occupied": 967.7439626404996,
+          "cost": 1.1216129626404996
+        },
+        "hysteresis_u8_d0_c60|bridge_locked_test_steady_v1": {
+          "P1plus": false,
+          "occupied": 1449.7439626404994,
+          "cost": 1.6809849626404993
+        },
+        "hysteresis_u8_d0_c60__guard|bridge_locked_test_steady_v1": {
+          "P1plus": true,
+          "occupied": 1511.7242674589993,
+          "cost": 1.7359652674589992
+        }
+      }
+    },
+    {
+      "startup_seconds": 42.0,
+      "agreement": 8,
+      "false_accepts": 0,
+      "false_rejects": 0,
+      "occupied_mae": 149.12959019712548,
+      "cost_mae": 0.13804196519712553,
+      "predicted": {
+        "hysteresis_u8_d0_c60|bridge_locked_test_recovery_v1": {
+          "P1plus": false,
+          "occupied": 906.7636578219998,
+          "cost": 1.137260657822
+        },
+        "hysteresis_u8_d0_c60__guard|bridge_locked_test_recovery_v1": {
+          "P1plus": true,
+          "occupied": 968.7439626404997,
+          "cost": 1.1322409626404997
+        },
+        "hysteresis_u8_d0_c60|bridge_locked_test_steady_v1": {
+          "P1plus": false,
+          "occupied": 1440.7439626404994,
+          "cost": 1.6784229626404994
+        },
+        "hysteresis_u8_d0_c60__guard|bridge_locked_test_steady_v1": {
+          "P1plus": true,
+          "occupied": 1502.7242674589993,
+          "cost": 1.7334032674589994
+        }
+      }
+    },
+    {
+      "startup_seconds": 43.0,
+      "agreement": 8,
+      "false_accepts": 0,
+      "false_rejects": 0,
+      "occupied_mae": 145.12959019712554,
+      "cost_mae": 0.1359244651971256,
+      "predicted": {
+        "hysteresis_u8_d0_c60|bridge_locked_test_recovery_v1": {
+          "P1plus": false,
+          "occupied": 912.7636578219997,
+          "cost": 1.1377286578219998
+        },
+        "hysteresis_u8_d0_c60__guard|bridge_locked_test_recovery_v1": {
+          "P1plus": true,
+          "occupied": 974.7439626404996,
+          "cost": 1.1327089626404996
+        },
+        "hysteresis_u8_d0_c60|bridge_locked_test_steady_v1": {
+          "P1plus": false,
+          "occupied": 1442.7439626404994,
+          "cost": 1.6821899626404995
+        },
+        "hysteresis_u8_d0_c60__guard|bridge_locked_test_steady_v1": {
+          "P1plus": true,
+          "occupied": 1504.7242674589993,
+          "cost": 1.7371702674589993
+        }
+      }
+    },
+    {
+      "startup_seconds": 44.0,
+      "agreement": 6,
+      "false_accepts": 2,
+      "false_rejects": 0,
+      "occupied_mae": 182.48089203275032,
+      "cost_mae": 0.18093754140175067,
+      "predicted": {
+        "hysteresis_u8_d0_c60|bridge_locked_test_recovery_v1": {
+          "P1plus": true,
+          "occupied": 859.7636578219997,
+          "cost": 1.0377196578219996
+        },
+        "hysteresis_u8_d0_c60__guard|bridge_locked_test_recovery_v1": {
+          "P1plus": true,
+          "occupied": 859.7636578219997,
+          "cost": 1.0377196578219996
+        },
+        "hysteresis_u8_d0_c60|bridge_locked_test_steady_v1": {
+          "P1plus": false,
+          "occupied": 1453.7439626404994,
+          "cost": 1.6896629626404993
+        },
+        "hysteresis_u8_d0_c60__guard|bridge_locked_test_steady_v1": {
+          "P1plus": true,
+          "occupied": 1515.7242674589993,
+          "cost": 1.7446432674589993
+        }
+      }
+    },
+    {
+      "startup_seconds": 45.0,
+      "agreement": 8,
+      "false_accepts": 0,
+      "false_rejects": 0,
+      "occupied_mae": 143.62959019712554,
+      "cost_mae": 0.1306524651971256,
+      "predicted": {
+        "hysteresis_u8_d0_c60|bridge_locked_test_recovery_v1": {
+          "P1plus": false,
+          "occupied": 911.7636578219997,
+          "cost": 1.1407936578219997
+        },
+        "hysteresis_u8_d0_c60__guard|bridge_locked_test_recovery_v1": {
+          "P1plus": true,
+          "occupied": 973.7439626404996,
+          "cost": 1.1357739626404997
+        },
+        "hysteresis_u8_d0_c60|bridge_locked_test_steady_v1": {
+          "P1plus": false,
+          "occupied": 1446.7439626404994,
+          "cost": 1.6896689626404995
+        },
+        "hysteresis_u8_d0_c60__guard|bridge_locked_test_steady_v1": {
+          "P1plus": true,
+          "occupied": 1508.7242674589993,
+          "cost": 1.7446492674589993
+        }
+      }
+    },
+    {
+      "startup_seconds": 46.0,
+      "agreement": 8,
+      "false_accepts": 0,
+      "false_rejects": 0,
+      "occupied_mae": 70.10285565512538,
+      "cost_mae": 0.06975973065512547,
+      "predicted": {
+        "hysteresis_u8_d0_c60|bridge_locked_test_recovery_v1": {
+          "P1plus": false,
+          "occupied": 1056.763657822,
+          "cost": 1.257924657822
+        },
+        "hysteresis_u8_d0_c60__guard|bridge_locked_test_recovery_v1": {
+          "P1plus": true,
+          "occupied": 1118.7439626404998,
+          "cost": 1.2529049626404998
+        },
+        "hysteresis_u8_d0_c60|bridge_locked_test_steady_v1": {
+          "P1plus": false,
+          "occupied": 1449.7439626404994,
+          "cost": 1.6955689626404993
+        },
+        "hysteresis_u8_d0_c60__guard|bridge_locked_test_steady_v1": {
+          "P1plus": true,
+          "occupied": 1511.7242674589993,
+          "cost": 1.7505492674589993
+        }
+      }
+    },
+    {
+      "startup_seconds": 47.0,
+      "agreement": 8,
+      "false_accepts": 0,
+      "false_rejects": 0,
+      "occupied_mae": 68.45908128612518,
+      "cost_mae": 0.06679845628612519,
+      "predicted": {
+        "hysteresis_u8_d0_c60|bridge_locked_test_recovery_v1": {
+          "P1plus": false,
+          "occupied": 1059.763657822,
+          "cost": 1.261501657822
+        },
+        "hysteresis_u8_d0_c60__guard|bridge_locked_test_recovery_v1": {
+          "P1plus": true,
+          "occupied": 1121.7439626404998,
+          "cost": 1.2564819626405
+        },
+        "hysteresis_u8_d0_c60|bridge_locked_test_steady_v1": {
+          "P1plus": false,
+          "occupied": 1452.7439626404994,
+          "cost": 1.7009249626404994
+        },
+        "hysteresis_u8_d0_c60__guard|bridge_locked_test_steady_v1": {
+          "P1plus": true,
+          "occupied": 1514.7242674589993,
+          "cost": 1.7559052674589994
+        }
+      }
+    },
+    {
+      "startup_seconds": 48.0,
+      "agreement": 8,
+      "false_accepts": 0,
+      "false_rejects": 0,
+      "occupied_mae": 68.09345337387515,
+      "cost_mae": 0.06556495628612524,
+      "predicted": {
+        "hysteresis_u8_d0_c60|bridge_locked_test_recovery_v1": {
+          "P1plus": false,
+          "occupied": 1062.763657822,
+          "cost": 1.265090657822
+        },
+        "hysteresis_u8_d0_c60__guard|bridge_locked_test_recovery_v1": {
+          "P1plus": true,
+          "occupied": 1124.7439626404998,
+          "cost": 1.2600709626404998
+        },
+        "hysteresis_u8_d0_c60|bridge_locked_test_steady_v1": {
+          "P1plus": false,
+          "occupied": 1451.7439626404994,
+          "cost": 1.7022699626404993
+        },
+        "hysteresis_u8_d0_c60__guard|bridge_locked_test_steady_v1": {
+          "P1plus": true,
+          "occupied": 1513.7242674589993,
+          "cost": 1.7572502674589991
+        }
+      }
+    },
+    {
+      "startup_seconds": 49.0,
+      "agreement": 4,
+      "false_accepts": 4,
+      "false_rejects": 0,
+      "occupied_mae": 358.35071462137466,
+      "cost_mae": 0.3215898396213745,
+      "predicted": {
+        "hysteresis_u8_d0_c60|bridge_locked_test_recovery_v1": {
+          "P1plus": true,
+          "occupied": 1650.7242674589995,
+          "cost": 1.7584052674589994
+        },
+        "hysteresis_u8_d0_c60__guard|bridge_locked_test_recovery_v1": {
+          "P1plus": true,
+          "occupied": 1650.7242674589995,
+          "cost": 1.7584052674589994
+        },
+        "hysteresis_u8_d0_c60|bridge_locked_test_steady_v1": {
+          "P1plus": true,
+          "occupied": 1773.7242674589997,
+          "cost": 2.001522267459
+        },
+        "hysteresis_u8_d0_c60__guard|bridge_locked_test_steady_v1": {
+          "P1plus": true,
+          "occupied": 1773.7242674589997,
+          "cost": 2.001522267459
+        }
+      }
+    },
+    {
+      "startup_seconds": 50.0,
+      "agreement": 4,
+      "false_accepts": 4,
+      "false_rejects": 0,
+      "occupied_mae": 362.35071462137466,
+      "cost_mae": 0.3273493396213745,
+      "predicted": {
+        "hysteresis_u8_d0_c60|bridge_locked_test_recovery_v1": {
+          "P1plus": true,
+          "occupied": 1650.7242674589995,
+          "cost": 1.7595732674589994
+        },
+        "hysteresis_u8_d0_c60__guard|bridge_locked_test_recovery_v1": {
+          "P1plus": true,
+          "occupied": 1650.7242674589995,
+          "cost": 1.7595732674589994
+        },
+        "hysteresis_u8_d0_c60|bridge_locked_test_steady_v1": {
+          "P1plus": true,
+          "occupied": 1781.7242674589997,
+          "cost": 2.011873267459
+        },
+        "hysteresis_u8_d0_c60__guard|bridge_locked_test_steady_v1": {
+          "P1plus": true,
+          "occupied": 1781.7242674589997,
+          "cost": 2.011873267459
+        }
+      }
+    },
+    {
+      "startup_seconds": 51.0,
+      "agreement": 4,
+      "false_accepts": 4,
+      "false_rejects": 0,
+      "occupied_mae": 371.35071462137466,
+      "cost_mae": 0.3372193396213743,
+      "predicted": {
+        "hysteresis_u8_d0_c60|bridge_locked_test_recovery_v1": {
+          "P1plus": true,
+          "occupied": 1670.7242674589995,
+          "cost": 1.7795732674589995
+        },
+        "hysteresis_u8_d0_c60__guard|bridge_locked_test_recovery_v1": {
+          "P1plus": true,
+          "occupied": 1670.7242674589995,
+          "cost": 1.7795732674589995
+        },
+        "hysteresis_u8_d0_c60|bridge_locked_test_steady_v1": {
+          "P1plus": true,
+          "occupied": 1779.7242674589997,
+          "cost": 2.0116132674589995
+        },
+        "hysteresis_u8_d0_c60__guard|bridge_locked_test_steady_v1": {
+          "P1plus": true,
+          "occupied": 1779.7242674589997,
+          "cost": 2.0116132674589995
+        }
+      }
+    },
+    {
+      "startup_seconds": 52.0,
+      "agreement": 4,
+      "false_accepts": 4,
+      "false_rejects": 0,
+      "occupied_mae": 364.35071462137466,
+      "cost_mae": 0.3316678396213745,
+      "predicted": {
+        "hysteresis_u8_d0_c60|bridge_locked_test_recovery_v1": {
+          "P1plus": true,
+          "occupied": 1650.7242674589995,
+          "cost": 1.7613162674589995
+        },
+        "hysteresis_u8_d0_c60__guard|bridge_locked_test_recovery_v1": {
+          "P1plus": true,
+          "occupied": 1650.7242674589995,
+          "cost": 1.7613162674589995
+        },
+        "hysteresis_u8_d0_c60|bridge_locked_test_steady_v1": {
+          "P1plus": true,
+          "occupied": 1785.7242674589997,
+          "cost": 2.018767267459
+        },
+        "hysteresis_u8_d0_c60__guard|bridge_locked_test_steady_v1": {
+          "P1plus": true,
+          "occupied": 1785.7242674589997,
+          "cost": 2.018767267459
+        }
+      }
+    },
+    {
+      "startup_seconds": 53.0,
+      "agreement": 4,
+      "false_accepts": 4,
+      "false_rejects": 0,
+      "occupied_mae": 365.35071462137466,
+      "cost_mae": 0.3347353396213745,
+      "predicted": {
+        "hysteresis_u8_d0_c60|bridge_locked_test_recovery_v1": {
+          "P1plus": true,
+          "occupied": 1650.7242674589995,
+          "cost": 1.7624912674589994
+        },
+        "hysteresis_u8_d0_c60__guard|bridge_locked_test_recovery_v1": {
+          "P1plus": true,
+          "occupied": 1650.7242674589995,
+          "cost": 1.7624912674589994
+        },
+        "hysteresis_u8_d0_c60|bridge_locked_test_steady_v1": {
+          "P1plus": true,
+          "occupied": 1787.7242674589997,
+          "cost": 2.023727267459
+        },
+        "hysteresis_u8_d0_c60__guard|bridge_locked_test_steady_v1": {
+          "P1plus": true,
+          "occupied": 1787.7242674589997,
+          "cost": 2.023727267459
+        }
+      }
+    },
+    {
+      "startup_seconds": 54.0,
+      "agreement": 4,
+      "false_accepts": 4,
+      "false_rejects": 0,
+      "occupied_mae": 366.35071462137466,
+      "cost_mae": 0.3369103396213745,
+      "predicted": {
+        "hysteresis_u8_d0_c60|bridge_locked_test_recovery_v1": {
+          "P1plus": true,
+          "occupied": 1650.7242674589995,
+          "cost": 1.7630732674589995
+        },
+        "hysteresis_u8_d0_c60__guard|bridge_locked_test_recovery_v1": {
+          "P1plus": true,
+          "occupied": 1650.7242674589995,
+          "cost": 1.7630732674589995
+        },
+        "hysteresis_u8_d0_c60|bridge_locked_test_steady_v1": {
+          "P1plus": true,
+          "occupied": 1789.7242674589997,
+          "cost": 2.027495267459
+        },
+        "hysteresis_u8_d0_c60__guard|bridge_locked_test_steady_v1": {
+          "P1plus": true,
+          "occupied": 1789.7242674589997,
+          "cost": 2.027495267459
+        }
+      }
+    },
+    {
+      "startup_seconds": 55.0,
+      "agreement": 4,
+      "false_accepts": 4,
+      "false_rejects": 0,
+      "occupied_mae": 423.35071462137466,
+      "cost_mae": 0.39448033962137447,
+      "predicted": {
+        "hysteresis_u8_d0_c60|bridge_locked_test_recovery_v1": {
+          "P1plus": true,
+          "occupied": 1650.7242674589995,
+          "cost": 1.7630732674589995
+        },
+        "hysteresis_u8_d0_c60__guard|bridge_locked_test_recovery_v1": {
+          "P1plus": true,
+          "occupied": 1650.7242674589995,
+          "cost": 1.7630732674589995
+        },
+        "hysteresis_u8_d0_c60|bridge_locked_test_steady_v1": {
+          "P1plus": true,
+          "occupied": 1903.7242674589997,
+          "cost": 2.1426352674589997
+        },
+        "hysteresis_u8_d0_c60__guard|bridge_locked_test_steady_v1": {
+          "P1plus": true,
+          "occupied": 1903.7242674589997,
+          "cost": 2.1426352674589997
+        }
+      }
+    },
+    {
+      "startup_seconds": 56.0,
+      "agreement": 4,
+      "false_accepts": 4,
+      "false_rejects": 0,
+      "occupied_mae": 423.35071462137466,
+      "cost_mae": 0.3965228396213745,
+      "predicted": {
+        "hysteresis_u8_d0_c60|bridge_locked_test_recovery_v1": {
+          "P1plus": true,
+          "occupied": 1650.7242674589995,
+          "cost": 1.7636492674589994
+        },
+        "hysteresis_u8_d0_c60__guard|bridge_locked_test_recovery_v1": {
+          "P1plus": true,
+          "occupied": 1650.7242674589995,
+          "cost": 1.7636492674589994
+        },
+        "hysteresis_u8_d0_c60|bridge_locked_test_steady_v1": {
+          "P1plus": true,
+          "occupied": 1903.7242674589997,
+          "cost": 2.146144267459
+        },
+        "hysteresis_u8_d0_c60__guard|bridge_locked_test_steady_v1": {
+          "P1plus": true,
+          "occupied": 1903.7242674589997,
+          "cost": 2.146144267459
+        }
+      }
+    },
+    {
+      "startup_seconds": 57.0,
+      "agreement": 4,
+      "false_accepts": 4,
+      "false_rejects": 0,
+      "occupied_mae": 423.35071462137466,
+      "cost_mae": 0.39798183962137434,
+      "predicted": {
+        "hysteresis_u8_d0_c60|bridge_locked_test_recovery_v1": {
+          "P1plus": true,
+          "occupied": 1650.7242674589995,
+          "cost": 1.7648122674589994
+        },
+        "hysteresis_u8_d0_c60__guard|bridge_locked_test_recovery_v1": {
+          "P1plus": true,
+          "occupied": 1650.7242674589995,
+          "cost": 1.7648122674589994
+        },
+        "hysteresis_u8_d0_c60|bridge_locked_test_steady_v1": {
+          "P1plus": true,
+          "occupied": 1903.7242674589997,
+          "cost": 2.1478992674589996
+        },
+        "hysteresis_u8_d0_c60__guard|bridge_locked_test_steady_v1": {
+          "P1plus": true,
+          "occupied": 1903.7242674589997,
+          "cost": 2.1478992674589996
+        }
+      }
+    },
+    {
+      "startup_seconds": 58.0,
+      "agreement": 4,
+      "false_accepts": 4,
+      "false_rejects": 0,
+      "occupied_mae": 423.35071462137466,
+      "cost_mae": 0.39886233962137446,
+      "predicted": {
+        "hysteresis_u8_d0_c60|bridge_locked_test_recovery_v1": {
+          "P1plus": true,
+          "occupied": 1650.7242674589995,
+          "cost": 1.7654122674589994
+        },
+        "hysteresis_u8_d0_c60__guard|bridge_locked_test_recovery_v1": {
+          "P1plus": true,
+          "occupied": 1650.7242674589995,
+          "cost": 1.7654122674589994
+        },
+        "hysteresis_u8_d0_c60|bridge_locked_test_steady_v1": {
+          "P1plus": true,
+          "occupied": 1903.7242674589997,
+          "cost": 2.149060267459
+        },
+        "hysteresis_u8_d0_c60__guard|bridge_locked_test_steady_v1": {
+          "P1plus": true,
+          "occupied": 1903.7242674589997,
+          "cost": 2.149060267459
+        }
+      }
+    },
+    {
+      "startup_seconds": 59.0,
+      "agreement": 4,
+      "false_accepts": 4,
+      "false_rejects": 0,
+      "occupied_mae": 423.35071462137466,
+      "cost_mae": 0.40004333962137456,
+      "predicted": {
+        "hysteresis_u8_d0_c60|bridge_locked_test_recovery_v1": {
+          "P1plus": true,
+          "occupied": 1650.7242674589995,
+          "cost": 1.7660132674589994
+        },
+        "hysteresis_u8_d0_c60__guard|bridge_locked_test_recovery_v1": {
+          "P1plus": true,
+          "occupied": 1650.7242674589995,
+          "cost": 1.7660132674589994
+        },
+        "hysteresis_u8_d0_c60|bridge_locked_test_steady_v1": {
+          "P1plus": true,
+          "occupied": 1903.7242674589997,
+          "cost": 2.150821267459
+        },
+        "hysteresis_u8_d0_c60__guard|bridge_locked_test_steady_v1": {
+          "P1plus": true,
+          "occupied": 1903.7242674589997,
+          "cost": 2.150821267459
+        }
+      }
+    },
+    {
+      "startup_seconds": 60.0,
+      "agreement": 4,
+      "false_accepts": 4,
+      "false_rejects": 0,
+      "occupied_mae": 423.35071462137466,
+      "cost_mae": 0.4006218396213746,
+      "predicted": {
+        "hysteresis_u8_d0_c60|bridge_locked_test_recovery_v1": {
+          "P1plus": true,
+          "occupied": 1650.7242674589995,
+          "cost": 1.7665852674589995
+        },
+        "hysteresis_u8_d0_c60__guard|bridge_locked_test_recovery_v1": {
+          "P1plus": true,
+          "occupied": 1650.7242674589995,
+          "cost": 1.7665852674589995
+        },
+        "hysteresis_u8_d0_c60|bridge_locked_test_steady_v1": {
+          "P1plus": true,
+          "occupied": 1903.7242674589997,
+          "cost": 2.151406267459
+        },
+        "hysteresis_u8_d0_c60__guard|bridge_locked_test_steady_v1": {
+          "P1plus": true,
+          "occupied": 1903.7242674589997,
+          "cost": 2.151406267459
+        }
+      }
+    },
+    {
+      "startup_seconds": 61.0,
+      "agreement": 4,
+      "false_accepts": 4,
+      "false_rejects": 0,
+      "occupied_mae": 423.35071462137466,
+      "cost_mae": 0.40119933962137444,
+      "predicted": {
+        "hysteresis_u8_d0_c60|bridge_locked_test_recovery_v1": {
+          "P1plus": true,
+          "occupied": 1650.7242674589995,
+          "cost": 1.7671602674589995
+        },
+        "hysteresis_u8_d0_c60__guard|bridge_locked_test_recovery_v1": {
+          "P1plus": true,
+          "occupied": 1650.7242674589995,
+          "cost": 1.7671602674589995
+        },
+        "hysteresis_u8_d0_c60|bridge_locked_test_steady_v1": {
+          "P1plus": true,
+          "occupied": 1903.7242674589997,
+          "cost": 2.151986267459
+        },
+        "hysteresis_u8_d0_c60__guard|bridge_locked_test_steady_v1": {
+          "P1plus": true,
+          "occupied": 1903.7242674589997,
+          "cost": 2.151986267459
+        }
+      }
+    },
+    {
+      "startup_seconds": 62.0,
+      "agreement": 4,
+      "false_accepts": 4,
+      "false_rejects": 0,
+      "occupied_mae": 423.35071462137466,
+      "cost_mae": 0.4017878396213745,
+      "predicted": {
+        "hysteresis_u8_d0_c60|bridge_locked_test_recovery_v1": {
+          "P1plus": true,
+          "occupied": 1650.7242674589995,
+          "cost": 1.7677432674589995
+        },
+        "hysteresis_u8_d0_c60__guard|bridge_locked_test_recovery_v1": {
+          "P1plus": true,
+          "occupied": 1650.7242674589995,
+          "cost": 1.7677432674589995
+        },
+        "hysteresis_u8_d0_c60|bridge_locked_test_steady_v1": {
+          "P1plus": true,
+          "occupied": 1903.7242674589997,
+          "cost": 2.1525802674589998
+        },
+        "hysteresis_u8_d0_c60__guard|bridge_locked_test_steady_v1": {
+          "P1plus": true,
+          "occupied": 1903.7242674589997,
+          "cost": 2.1525802674589998
+        }
+      }
+    },
+    {
+      "startup_seconds": 63.0,
+      "agreement": 4,
+      "false_accepts": 4,
+      "false_rejects": 0,
+      "occupied_mae": 423.35071462137466,
+      "cost_mae": 0.40237533962137445,
+      "predicted": {
+        "hysteresis_u8_d0_c60|bridge_locked_test_recovery_v1": {
+          "P1plus": true,
+          "occupied": 1650.7242674589995,
+          "cost": 1.7677432674589995
+        },
+        "hysteresis_u8_d0_c60__guard|bridge_locked_test_recovery_v1": {
+          "P1plus": true,
+          "occupied": 1650.7242674589995,
+          "cost": 1.7677432674589995
+        },
+        "hysteresis_u8_d0_c60|bridge_locked_test_steady_v1": {
+          "P1plus": true,
+          "occupied": 1903.7242674589997,
+          "cost": 2.1537552674589997
+        },
+        "hysteresis_u8_d0_c60__guard|bridge_locked_test_steady_v1": {
+          "P1plus": true,
+          "occupied": 1903.7242674589997,
+          "cost": 2.1537552674589997
+        }
+      }
+    },
+    {
+      "startup_seconds": 64.0,
+      "agreement": 4,
+      "false_accepts": 4,
+      "false_rejects": 0,
+      "occupied_mae": 423.35071462137466,
+      "cost_mae": 0.40353883962137455,
+      "predicted": {
+        "hysteresis_u8_d0_c60|bridge_locked_test_recovery_v1": {
+          "P1plus": true,
+          "occupied": 1650.7242674589995,
+          "cost": 1.7677432674589995
+        },
+        "hysteresis_u8_d0_c60__guard|bridge_locked_test_recovery_v1": {
+          "P1plus": true,
+          "occupied": 1650.7242674589995,
+          "cost": 1.7677432674589995
+        },
+        "hysteresis_u8_d0_c60|bridge_locked_test_steady_v1": {
+          "P1plus": true,
+          "occupied": 1903.7242674589997,
+          "cost": 2.156082267459
+        },
+        "hysteresis_u8_d0_c60__guard|bridge_locked_test_steady_v1": {
+          "P1plus": true,
+          "occupied": 1903.7242674589997,
+          "cost": 2.156082267459
+        }
+      }
+    },
+    {
+      "startup_seconds": 65.0,
+      "agreement": 4,
+      "false_accepts": 4,
+      "false_rejects": 0,
+      "occupied_mae": 423.35071462137466,
+      "cost_mae": 0.40559083962137454,
+      "predicted": {
+        "hysteresis_u8_d0_c60|bridge_locked_test_recovery_v1": {
+          "P1plus": true,
+          "occupied": 1650.7242674589995,
+          "cost": 1.7683492674589996
+        },
+        "hysteresis_u8_d0_c60__guard|bridge_locked_test_recovery_v1": {
+          "P1plus": true,
+          "occupied": 1650.7242674589995,
+          "cost": 1.7683492674589996
+        },
+        "hysteresis_u8_d0_c60|bridge_locked_test_steady_v1": {
+          "P1plus": true,
+          "occupied": 1903.7242674589997,
+          "cost": 2.159580267459
+        },
+        "hysteresis_u8_d0_c60__guard|bridge_locked_test_steady_v1": {
+          "P1plus": true,
+          "occupied": 1903.7242674589997,
+          "cost": 2.159580267459
+        }
+      }
+    },
+    {
+      "startup_seconds": 66.0,
+      "agreement": 4,
+      "false_accepts": 4,
+      "false_rejects": 0,
+      "occupied_mae": 423.35071462137466,
+      "cost_mae": 0.40704733962137457,
+      "predicted": {
+        "hysteresis_u8_d0_c60|bridge_locked_test_recovery_v1": {
+          "P1plus": true,
+          "occupied": 1650.7242674589995,
+          "cost": 1.7694862674589995
+        },
+        "hysteresis_u8_d0_c60__guard|bridge_locked_test_recovery_v1": {
+          "P1plus": true,
+          "occupied": 1650.7242674589995,
+          "cost": 1.7694862674589995
+        },
+        "hysteresis_u8_d0_c60|bridge_locked_test_steady_v1": {
+          "P1plus": true,
+          "occupied": 1903.7242674589997,
+          "cost": 2.161356267459
+        },
+        "hysteresis_u8_d0_c60__guard|bridge_locked_test_steady_v1": {
+          "P1plus": true,
+          "occupied": 1903.7242674589997,
+          "cost": 2.161356267459
+        }
+      }
+    },
+    {
+      "startup_seconds": 67.0,
+      "agreement": 4,
+      "false_accepts": 4,
+      "false_rejects": 0,
+      "occupied_mae": 423.35071462137466,
+      "cost_mae": 0.40850983962137444,
+      "predicted": {
+        "hysteresis_u8_d0_c60|bridge_locked_test_recovery_v1": {
+          "P1plus": true,
+          "occupied": 1650.7242674589995,
+          "cost": 1.7694862674589995
+        },
+        "hysteresis_u8_d0_c60__guard|bridge_locked_test_recovery_v1": {
+          "P1plus": true,
+          "occupied": 1650.7242674589995,
+          "cost": 1.7694862674589995
+        },
+        "hysteresis_u8_d0_c60|bridge_locked_test_steady_v1": {
+          "P1plus": true,
+          "occupied": 1903.7242674589997,
+          "cost": 2.1642812674589997
+        },
+        "hysteresis_u8_d0_c60__guard|bridge_locked_test_steady_v1": {
+          "P1plus": true,
+          "occupied": 1903.7242674589997,
+          "cost": 2.1642812674589997
+        }
+      }
+    },
+    {
+      "startup_seconds": 68.0,
+      "agreement": 4,
+      "false_accepts": 4,
+      "false_rejects": 0,
+      "occupied_mae": 423.35071462137466,
+      "cost_mae": 0.4093818396213745,
+      "predicted": {
+        "hysteresis_u8_d0_c60|bridge_locked_test_recovery_v1": {
+          "P1plus": true,
+          "occupied": 1650.7242674589995,
+          "cost": 1.7706362674589995
+        },
+        "hysteresis_u8_d0_c60__guard|bridge_locked_test_recovery_v1": {
+          "P1plus": true,
+          "occupied": 1650.7242674589995,
+          "cost": 1.7706362674589995
+        },
+        "hysteresis_u8_d0_c60|bridge_locked_test_steady_v1": {
+          "P1plus": true,
+          "occupied": 1903.7242674589997,
+          "cost": 2.1648752674589997
+        },
+        "hysteresis_u8_d0_c60__guard|bridge_locked_test_steady_v1": {
+          "P1plus": true,
+          "occupied": 1903.7242674589997,
+          "cost": 2.1648752674589997
+        }
+      }
+    },
+    {
+      "startup_seconds": 69.0,
+      "agreement": 4,
+      "false_accepts": 4,
+      "false_rejects": 0,
+      "occupied_mae": 423.35071462137466,
+      "cost_mae": 0.4096693396213745,
+      "predicted": {
+        "hysteresis_u8_d0_c60|bridge_locked_test_recovery_v1": {
+          "P1plus": true,
+          "occupied": 1650.7242674589995,
+          "cost": 1.7712112674589995
+        },
+        "hysteresis_u8_d0_c60__guard|bridge_locked_test_recovery_v1": {
+          "P1plus": true,
+          "occupied": 1650.7242674589995,
+          "cost": 1.7712112674589995
+        },
+        "hysteresis_u8_d0_c60|bridge_locked_test_steady_v1": {
+          "P1plus": true,
+          "occupied": 1903.7242674589997,
+          "cost": 2.1648752674589997
+        },
+        "hysteresis_u8_d0_c60__guard|bridge_locked_test_steady_v1": {
+          "P1plus": true,
+          "occupied": 1903.7242674589997,
+          "cost": 2.1648752674589997
+        }
+      }
+    },
+    {
+      "startup_seconds": 70.0,
+      "agreement": 4,
+      "false_accepts": 4,
+      "false_rejects": 0,
+      "occupied_mae": 423.35071462137466,
+      "cost_mae": 0.4105443396213744,
+      "predicted": {
+        "hysteresis_u8_d0_c60|bridge_locked_test_recovery_v1": {
+          "P1plus": true,
+          "occupied": 1650.7242674589995,
+          "cost": 1.7712112674589995
+        },
+        "hysteresis_u8_d0_c60__guard|bridge_locked_test_recovery_v1": {
+          "P1plus": true,
+          "occupied": 1650.7242674589995,
+          "cost": 1.7712112674589995
+        },
+        "hysteresis_u8_d0_c60|bridge_locked_test_steady_v1": {
+          "P1plus": true,
+          "occupied": 1903.7242674589997,
+          "cost": 2.1666252674589996
+        },
+        "hysteresis_u8_d0_c60__guard|bridge_locked_test_steady_v1": {
+          "P1plus": true,
+          "occupied": 1903.7242674589997,
+          "cost": 2.1666252674589996
+        }
+      }
+    },
+    {
+      "startup_seconds": 71.0,
+      "agreement": 4,
+      "false_accepts": 4,
+      "false_rejects": 0,
+      "occupied_mae": 423.35071462137466,
+      "cost_mae": 0.41141783962137446,
+      "predicted": {
+        "hysteresis_u8_d0_c60|bridge_locked_test_recovery_v1": {
+          "P1plus": true,
+          "occupied": 1650.7242674589995,
+          "cost": 1.7718072674589995
+        },
+        "hysteresis_u8_d0_c60__guard|bridge_locked_test_recovery_v1": {
+          "P1plus": true,
+          "occupied": 1650.7242674589995,
+          "cost": 1.7718072674589995
+        },
+        "hysteresis_u8_d0_c60|bridge_locked_test_steady_v1": {
+          "P1plus": true,
+          "occupied": 1903.7242674589997,
+          "cost": 2.1677762674589998
+        },
+        "hysteresis_u8_d0_c60__guard|bridge_locked_test_steady_v1": {
+          "P1plus": true,
+          "occupied": 1903.7242674589997,
+          "cost": 2.1677762674589998
+        }
+      }
+    },
+    {
+      "startup_seconds": 72.0,
+      "agreement": 4,
+      "false_accepts": 4,
+      "false_rejects": 0,
+      "occupied_mae": 423.35071462137466,
+      "cost_mae": 0.4122993396213745,
+      "predicted": {
+        "hysteresis_u8_d0_c60|bridge_locked_test_recovery_v1": {
+          "P1plus": true,
+          "occupied": 1650.7242674589995,
+          "cost": 1.7718072674589995
+        },
+        "hysteresis_u8_d0_c60__guard|bridge_locked_test_recovery_v1": {
+          "P1plus": true,
+          "occupied": 1650.7242674589995,
+          "cost": 1.7718072674589995
+        },
+        "hysteresis_u8_d0_c60|bridge_locked_test_steady_v1": {
+          "P1plus": true,
+          "occupied": 1903.7242674589997,
+          "cost": 2.1695392674589997
+        },
+        "hysteresis_u8_d0_c60__guard|bridge_locked_test_steady_v1": {
+          "P1plus": true,
+          "occupied": 1903.7242674589997,
+          "cost": 2.1695392674589997
+        }
+      }
+    },
+    {
+      "startup_seconds": 73.0,
+      "agreement": 4,
+      "false_accepts": 4,
+      "false_rejects": 0,
+      "occupied_mae": 423.35071462137466,
+      "cost_mae": 0.4134733396213745,
+      "predicted": {
+        "hysteresis_u8_d0_c60|bridge_locked_test_recovery_v1": {
+          "P1plus": true,
+          "occupied": 1650.7242674589995,
+          "cost": 1.7729852674589994
+        },
+        "hysteresis_u8_d0_c60__guard|bridge_locked_test_recovery_v1": {
+          "P1plus": true,
+          "occupied": 1650.7242674589995,
+          "cost": 1.7729852674589994
+        },
+        "hysteresis_u8_d0_c60|bridge_locked_test_steady_v1": {
+          "P1plus": true,
+          "occupied": 1903.7242674589997,
+          "cost": 2.170709267459
+        },
+        "hysteresis_u8_d0_c60__guard|bridge_locked_test_steady_v1": {
+          "P1plus": true,
+          "occupied": 1903.7242674589997,
+          "cost": 2.170709267459
+        }
+      }
+    },
+    {
+      "startup_seconds": 74.0,
+      "agreement": 4,
+      "false_accepts": 4,
+      "false_rejects": 0,
+      "occupied_mae": 423.35071462137466,
+      "cost_mae": 0.4152493396213745,
+      "predicted": {
+        "hysteresis_u8_d0_c60|bridge_locked_test_recovery_v1": {
+          "P1plus": true,
+          "occupied": 1650.7242674589995,
+          "cost": 1.7741802674589995
+        },
+        "hysteresis_u8_d0_c60__guard|bridge_locked_test_recovery_v1": {
+          "P1plus": true,
+          "occupied": 1650.7242674589995,
+          "cost": 1.7741802674589995
+        },
+        "hysteresis_u8_d0_c60|bridge_locked_test_steady_v1": {
+          "P1plus": true,
+          "occupied": 1903.7242674589997,
+          "cost": 2.173066267459
+        },
+        "hysteresis_u8_d0_c60__guard|bridge_locked_test_steady_v1": {
+          "P1plus": true,
+          "occupied": 1903.7242674589997,
+          "cost": 2.173066267459
+        }
+      }
+    },
+    {
+      "startup_seconds": 75.0,
+      "agreement": 4,
+      "false_accepts": 4,
+      "false_rejects": 0,
+      "occupied_mae": 423.35071462137466,
+      "cost_mae": 0.4167088396213744,
+      "predicted": {
+        "hysteresis_u8_d0_c60|bridge_locked_test_recovery_v1": {
+          "P1plus": true,
+          "occupied": 1650.7242674589995,
+          "cost": 1.7747712674589995
+        },
+        "hysteresis_u8_d0_c60__guard|bridge_locked_test_recovery_v1": {
+          "P1plus": true,
+          "occupied": 1650.7242674589995,
+          "cost": 1.7747712674589995
+        },
+        "hysteresis_u8_d0_c60|bridge_locked_test_steady_v1": {
+          "P1plus": true,
+          "occupied": 1903.7242674589997,
+          "cost": 2.1753942674589997
+        },
+        "hysteresis_u8_d0_c60__guard|bridge_locked_test_steady_v1": {
+          "P1plus": true,
+          "occupied": 1903.7242674589997,
+          "cost": 2.1753942674589997
+        }
+      }
+    },
+    {
+      "startup_seconds": 76.0,
+      "agreement": 4,
+      "false_accepts": 4,
+      "false_rejects": 0,
+      "occupied_mae": 423.35071462137466,
+      "cost_mae": 0.41788233962137444,
+      "predicted": {
+        "hysteresis_u8_d0_c60|bridge_locked_test_recovery_v1": {
+          "P1plus": true,
+          "occupied": 1650.7242674589995,
+          "cost": 1.7759602674589994
+        },
+        "hysteresis_u8_d0_c60__guard|bridge_locked_test_recovery_v1": {
+          "P1plus": true,
+          "occupied": 1650.7242674589995,
+          "cost": 1.7759602674589994
+        },
+        "hysteresis_u8_d0_c60|bridge_locked_test_steady_v1": {
+          "P1plus": true,
+          "occupied": 1903.7242674589997,
+          "cost": 2.176552267459
+        },
+        "hysteresis_u8_d0_c60__guard|bridge_locked_test_steady_v1": {
+          "P1plus": true,
+          "occupied": 1903.7242674589997,
+          "cost": 2.176552267459
+        }
+      }
+    },
+    {
+      "startup_seconds": 77.0,
+      "agreement": 4,
+      "false_accepts": 4,
+      "false_rejects": 0,
+      "occupied_mae": 423.35071462137466,
+      "cost_mae": 0.41964233962137454,
+      "predicted": {
+        "hysteresis_u8_d0_c60|bridge_locked_test_recovery_v1": {
+          "P1plus": true,
+          "occupied": 1650.7242674589995,
+          "cost": 1.7771292674589996
+        },
+        "hysteresis_u8_d0_c60__guard|bridge_locked_test_recovery_v1": {
+          "P1plus": true,
+          "occupied": 1650.7242674589995,
+          "cost": 1.7771292674589996
+        },
+        "hysteresis_u8_d0_c60|bridge_locked_test_steady_v1": {
+          "P1plus": true,
+          "occupied": 1903.7242674589997,
+          "cost": 2.178903267459
+        },
+        "hysteresis_u8_d0_c60__guard|bridge_locked_test_steady_v1": {
+          "P1plus": true,
+          "occupied": 1903.7242674589997,
+          "cost": 2.178903267459
+        }
+      }
+    },
+    {
+      "startup_seconds": 78.0,
+      "agreement": 4,
+      "false_accepts": 4,
+      "false_rejects": 0,
+      "occupied_mae": 423.35071462137466,
+      "cost_mae": 0.4216798396213744,
+      "predicted": {
+        "hysteresis_u8_d0_c60|bridge_locked_test_recovery_v1": {
+          "P1plus": true,
+          "occupied": 1650.7242674589995,
+          "cost": 1.7788642674589994
+        },
+        "hysteresis_u8_d0_c60__guard|bridge_locked_test_recovery_v1": {
+          "P1plus": true,
+          "occupied": 1650.7242674589995,
+          "cost": 1.7788642674589994
+        },
+        "hysteresis_u8_d0_c60|bridge_locked_test_steady_v1": {
+          "P1plus": true,
+          "occupied": 1903.7242674589997,
+          "cost": 2.1812432674589997
+        },
+        "hysteresis_u8_d0_c60__guard|bridge_locked_test_steady_v1": {
+          "P1plus": true,
+          "occupied": 1903.7242674589997,
+          "cost": 2.1812432674589997
+        }
+      }
+    },
+    {
+      "startup_seconds": 79.0,
+      "agreement": 4,
+      "false_accepts": 4,
+      "false_rejects": 0,
+      "occupied_mae": 423.35071462137466,
+      "cost_mae": 0.42314183962137447,
+      "predicted": {
+        "hysteresis_u8_d0_c60|bridge_locked_test_recovery_v1": {
+          "P1plus": true,
+          "occupied": 1650.7242674589995,
+          "cost": 1.7806252674589995
+        },
+        "hysteresis_u8_d0_c60__guard|bridge_locked_test_recovery_v1": {
+          "P1plus": true,
+          "occupied": 1650.7242674589995,
+          "cost": 1.7806252674589995
+        },
+        "hysteresis_u8_d0_c60|bridge_locked_test_steady_v1": {
+          "P1plus": true,
+          "occupied": 1903.7242674589997,
+          "cost": 2.1824062674589997
+        },
+        "hysteresis_u8_d0_c60__guard|bridge_locked_test_steady_v1": {
+          "P1plus": true,
+          "occupied": 1903.7242674589997,
+          "cost": 2.1824062674589997
+        }
+      }
+    },
+    {
+      "startup_seconds": 80.0,
+      "agreement": 4,
+      "false_accepts": 4,
+      "false_rejects": 0,
+      "occupied_mae": 441.35071462137466,
+      "cost_mae": 0.4385013396213745,
+      "predicted": {
+        "hysteresis_u8_d0_c60|bridge_locked_test_recovery_v1": {
+          "P1plus": true,
+          "occupied": 1674.7242674589995,
+          "cost": 1.8028752674589994
+        },
+        "hysteresis_u8_d0_c60__guard|bridge_locked_test_recovery_v1": {
+          "P1plus": true,
+          "occupied": 1674.7242674589995,
+          "cost": 1.8028752674589994
+        },
+        "hysteresis_u8_d0_c60|bridge_locked_test_steady_v1": {
+          "P1plus": true,
+          "occupied": 1915.7242674589997,
+          "cost": 2.190875267459
+        },
+        "hysteresis_u8_d0_c60__guard|bridge_locked_test_steady_v1": {
+          "P1plus": true,
+          "occupied": 1915.7242674589997,
+          "cost": 2.190875267459
+        }
+      }
+    },
+    {
+      "startup_seconds": 81.0,
+      "agreement": 4,
+      "false_accepts": 4,
+      "false_rejects": 0,
+      "occupied_mae": 441.35071462137466,
+      "cost_mae": 0.43965983962137434,
+      "predicted": {
+        "hysteresis_u8_d0_c60|bridge_locked_test_recovery_v1": {
+          "P1plus": true,
+          "occupied": 1674.7242674589995,
+          "cost": 1.8028752674589994
+        },
+        "hysteresis_u8_d0_c60__guard|bridge_locked_test_recovery_v1": {
+          "P1plus": true,
+          "occupied": 1674.7242674589995,
+          "cost": 1.8028752674589994
+        },
+        "hysteresis_u8_d0_c60|bridge_locked_test_steady_v1": {
+          "P1plus": true,
+          "occupied": 1915.7242674589997,
+          "cost": 2.1931922674589996
+        },
+        "hysteresis_u8_d0_c60__guard|bridge_locked_test_steady_v1": {
+          "P1plus": true,
+          "occupied": 1915.7242674589997,
+          "cost": 2.1931922674589996
+        }
+      }
+    },
+    {
+      "startup_seconds": 82.0,
+      "agreement": 4,
+      "false_accepts": 4,
+      "false_rejects": 0,
+      "occupied_mae": 441.35071462137466,
+      "cost_mae": 0.4408293396213744,
+      "predicted": {
+        "hysteresis_u8_d0_c60|bridge_locked_test_recovery_v1": {
+          "P1plus": true,
+          "occupied": 1674.7242674589995,
+          "cost": 1.8028752674589994
+        },
+        "hysteresis_u8_d0_c60__guard|bridge_locked_test_recovery_v1": {
+          "P1plus": true,
+          "occupied": 1674.7242674589995,
+          "cost": 1.8028752674589994
+        },
+        "hysteresis_u8_d0_c60|bridge_locked_test_steady_v1": {
+          "P1plus": true,
+          "occupied": 1915.7242674589997,
+          "cost": 2.1955312674589997
+        },
+        "hysteresis_u8_d0_c60__guard|bridge_locked_test_steady_v1": {
+          "P1plus": true,
+          "occupied": 1915.7242674589997,
+          "cost": 2.1955312674589997
+        }
+      }
+    },
+    {
+      "startup_seconds": 83.0,
+      "agreement": 4,
+      "false_accepts": 4,
+      "false_rejects": 0,
+      "occupied_mae": 441.35071462137466,
+      "cost_mae": 0.44258433962137433,
+      "predicted": {
+        "hysteresis_u8_d0_c60|bridge_locked_test_recovery_v1": {
+          "P1plus": true,
+          "occupied": 1674.7242674589995,
+          "cost": 1.8034632674589994
+        },
+        "hysteresis_u8_d0_c60__guard|bridge_locked_test_recovery_v1": {
+          "P1plus": true,
+          "occupied": 1674.7242674589995,
+          "cost": 1.8034632674589994
+        },
+        "hysteresis_u8_d0_c60|bridge_locked_test_steady_v1": {
+          "P1plus": true,
+          "occupied": 1915.7242674589997,
+          "cost": 2.1984532674589996
+        },
+        "hysteresis_u8_d0_c60__guard|bridge_locked_test_steady_v1": {
+          "P1plus": true,
+          "occupied": 1915.7242674589997,
+          "cost": 2.1984532674589996
+        }
+      }
+    },
+    {
+      "startup_seconds": 84.0,
+      "agreement": 4,
+      "false_accepts": 4,
+      "false_rejects": 0,
+      "occupied_mae": 477.85071462137466,
+      "cost_mae": 0.48497283962137444,
+      "predicted": {
+        "hysteresis_u8_d0_c60|bridge_locked_test_recovery_v1": {
+          "P1plus": true,
+          "occupied": 1747.7242674589995,
+          "cost": 1.8864892674589995
+        },
+        "hysteresis_u8_d0_c60__guard|bridge_locked_test_recovery_v1": {
+          "P1plus": true,
+          "occupied": 1747.7242674589995,
+          "cost": 1.8864892674589995
+        },
+        "hysteresis_u8_d0_c60|bridge_locked_test_steady_v1": {
+          "P1plus": true,
+          "occupied": 1915.7242674589997,
+          "cost": 2.2002042674589997
+        },
+        "hysteresis_u8_d0_c60__guard|bridge_locked_test_steady_v1": {
+          "P1plus": true,
+          "occupied": 1915.7242674589997,
+          "cost": 2.2002042674589997
+        }
+      }
+    },
+    {
+      "startup_seconds": 85.0,
+      "agreement": 4,
+      "false_accepts": 4,
+      "false_rejects": 0,
+      "occupied_mae": 441.35071462137466,
+      "cost_mae": 0.4460808396213746,
+      "predicted": {
+        "hysteresis_u8_d0_c60|bridge_locked_test_recovery_v1": {
+          "P1plus": true,
+          "occupied": 1674.7242674589995,
+          "cost": 1.8057862674589995
+        },
+        "hysteresis_u8_d0_c60__guard|bridge_locked_test_recovery_v1": {
+          "P1plus": true,
+          "occupied": 1674.7242674589995,
+          "cost": 1.8057862674589995
+        },
+        "hysteresis_u8_d0_c60|bridge_locked_test_steady_v1": {
+          "P1plus": true,
+          "occupied": 1915.7242674589997,
+          "cost": 2.203123267459
+        },
+        "hysteresis_u8_d0_c60__guard|bridge_locked_test_steady_v1": {
+          "P1plus": true,
+          "occupied": 1915.7242674589997,
+          "cost": 2.203123267459
+        }
+      }
+    },
+    {
+      "startup_seconds": 86.0,
+      "agreement": 4,
+      "false_accepts": 4,
+      "false_rejects": 0,
+      "occupied_mae": 441.35071462137466,
+      "cost_mae": 0.44928533962137446,
+      "predicted": {
+        "hysteresis_u8_d0_c60|bridge_locked_test_recovery_v1": {
+          "P1plus": true,
+          "occupied": 1674.7242674589995,
+          "cost": 1.8098592674589995
+        },
+        "hysteresis_u8_d0_c60__guard|bridge_locked_test_recovery_v1": {
+          "P1plus": true,
+          "occupied": 1674.7242674589995,
+          "cost": 1.8098592674589995
+        },
+        "hysteresis_u8_d0_c60|bridge_locked_test_steady_v1": {
+          "P1plus": true,
+          "occupied": 1915.7242674589997,
+          "cost": 2.2054592674589997
+        },
+        "hysteresis_u8_d0_c60__guard|bridge_locked_test_steady_v1": {
+          "P1plus": true,
+          "occupied": 1915.7242674589997,
+          "cost": 2.2054592674589997
+        }
+      }
+    },
+    {
+      "startup_seconds": 87.0,
+      "agreement": 4,
+      "false_accepts": 4,
+      "false_rejects": 0,
+      "occupied_mae": 477.85071462137466,
+      "cost_mae": 0.4899383396213746,
+      "predicted": {
+        "hysteresis_u8_d0_c60|bridge_locked_test_recovery_v1": {
+          "P1plus": true,
+          "occupied": 1747.7242674589995,
+          "cost": 1.8899682674589995
+        },
+        "hysteresis_u8_d0_c60__guard|bridge_locked_test_recovery_v1": {
+          "P1plus": true,
+          "occupied": 1747.7242674589995,
+          "cost": 1.8899682674589995
+        },
+        "hysteresis_u8_d0_c60|bridge_locked_test_steady_v1": {
+          "P1plus": true,
+          "occupied": 1915.7242674589997,
+          "cost": 2.206656267459
+        },
+        "hysteresis_u8_d0_c60__guard|bridge_locked_test_steady_v1": {
+          "P1plus": true,
+          "occupied": 1915.7242674589997,
+          "cost": 2.206656267459
+        }
+      }
+    },
+    {
+      "startup_seconds": 88.0,
+      "agreement": 4,
+      "false_accepts": 4,
+      "false_rejects": 0,
+      "occupied_mae": 451.85071462137466,
+      "cost_mae": 0.46746683962137464,
+      "predicted": {
+        "hysteresis_u8_d0_c60|bridge_locked_test_recovery_v1": {
+          "P1plus": true,
+          "occupied": 1695.7242674589995,
+          "cost": 1.8426682674589996
+        },
+        "hysteresis_u8_d0_c60__guard|bridge_locked_test_recovery_v1": {
+          "P1plus": true,
+          "occupied": 1695.7242674589995,
+          "cost": 1.8426682674589996
+        },
+        "hysteresis_u8_d0_c60|bridge_locked_test_steady_v1": {
+          "P1plus": true,
+          "occupied": 1915.7242674589997,
+          "cost": 2.209013267459
+        },
+        "hysteresis_u8_d0_c60__guard|bridge_locked_test_steady_v1": {
+          "P1plus": true,
+          "occupied": 1915.7242674589997,
+          "cost": 2.209013267459
+        }
+      }
+    },
+    {
+      "startup_seconds": 89.0,
+      "agreement": 4,
+      "false_accepts": 4,
+      "false_rejects": 0,
+      "occupied_mae": 460.85071462137466,
+      "cost_mae": 0.47704333962137463,
+      "predicted": {
+        "hysteresis_u8_d0_c60|bridge_locked_test_recovery_v1": {
+          "P1plus": true,
+          "occupied": 1713.7242674589995,
+          "cost": 1.8588982674589996
+        },
+        "hysteresis_u8_d0_c60__guard|bridge_locked_test_recovery_v1": {
+          "P1plus": true,
+          "occupied": 1713.7242674589995,
+          "cost": 1.8588982674589996
+        },
+        "hysteresis_u8_d0_c60|bridge_locked_test_steady_v1": {
+          "P1plus": true,
+          "occupied": 1915.7242674589997,
+          "cost": 2.211936267459
+        },
+        "hysteresis_u8_d0_c60__guard|bridge_locked_test_steady_v1": {
+          "P1plus": true,
+          "occupied": 1915.7242674589997,
+          "cost": 2.211936267459
+        }
+      }
+    },
+    {
+      "startup_seconds": 90.0,
+      "agreement": 4,
+      "false_accepts": 4,
+      "false_rejects": 0,
+      "occupied_mae": 523.8507146213746,
+      "cost_mae": 0.5319058396213745,
+      "predicted": {
+        "hysteresis_u8_d0_c60|bridge_locked_test_recovery_v1": {
+          "P1plus": true,
+          "occupied": 1839.7242674589993,
+          "cost": 1.9674422674589993
+        },
+        "hysteresis_u8_d0_c60__guard|bridge_locked_test_recovery_v1": {
+          "P1plus": true,
+          "occupied": 1839.7242674589993,
+          "cost": 1.9674422674589993
+        },
+        "hysteresis_u8_d0_c60|bridge_locked_test_steady_v1": {
+          "P1plus": true,
+          "occupied": 1915.7242674589997,
+          "cost": 2.213117267459
+        },
+        "hysteresis_u8_d0_c60__guard|bridge_locked_test_steady_v1": {
+          "P1plus": true,
+          "occupied": 1915.7242674589997,
+          "cost": 2.213117267459
+        }
+      }
+    },
+    {
+      "startup_seconds": 46.067357474999994,
+      "agreement": 8,
+      "false_accepts": 0,
+      "false_rejects": 0,
+      "occupied_mae": 68.45908128612518,
+      "cost_mae": 0.06679845628612519,
+      "predicted": {
+        "hysteresis_u8_d0_c60|bridge_locked_test_recovery_v1": {
+          "P1plus": false,
+          "occupied": 1059.763657822,
+          "cost": 1.261501657822
+        },
+        "hysteresis_u8_d0_c60__guard|bridge_locked_test_recovery_v1": {
+          "P1plus": true,
+          "occupied": 1121.7439626404998,
+          "cost": 1.2564819626405
+        },
+        "hysteresis_u8_d0_c60|bridge_locked_test_steady_v1": {
+          "P1plus": false,
+          "occupied": 1452.7439626404994,
+          "cost": 1.7009249626404994
+        },
+        "hysteresis_u8_d0_c60__guard|bridge_locked_test_steady_v1": {
+          "P1plus": true,
+          "occupied": 1514.7242674589993,
+          "cost": 1.7559052674589994
+        }
+      }
+    },
+    {
+      "startup_seconds": 69.219185665,
+      "agreement": 4,
+      "false_accepts": 4,
+      "false_rejects": 0,
+      "occupied_mae": 423.35071462137466,
+      "cost_mae": 0.4105443396213744,
+      "predicted": {
+        "hysteresis_u8_d0_c60|bridge_locked_test_recovery_v1": {
+          "P1plus": true,
+          "occupied": 1650.7242674589995,
+          "cost": 1.7712112674589995
+        },
+        "hysteresis_u8_d0_c60__guard|bridge_locked_test_recovery_v1": {
+          "P1plus": true,
+          "occupied": 1650.7242674589995,
+          "cost": 1.7712112674589995
+        },
+        "hysteresis_u8_d0_c60|bridge_locked_test_steady_v1": {
+          "P1plus": true,
+          "occupied": 1903.7242674589997,
+          "cost": 2.1666252674589996
+        },
+        "hysteresis_u8_d0_c60__guard|bridge_locked_test_steady_v1": {
+          "P1plus": true,
+          "occupied": 1903.7242674589997,
+          "cost": 2.1666252674589996
+        }
+      }
+    },
+    {
+      "startup_seconds": 27.568,
+      "agreement": 6,
+      "false_accepts": 2,
+      "false_rejects": 0,
+      "occupied_mae": 269.12466640175046,
+      "cost_mae": 0.2653490414017505,
+      "predicted": {
+        "hysteresis_u8_d0_c60|bridge_locked_test_recovery_v1": {
+          "P1plus": false,
+          "occupied": 790.7636578219998,
+          "cost": 1.0151396578219998
+        },
+        "hysteresis_u8_d0_c60__guard|bridge_locked_test_recovery_v1": {
+          "P1plus": true,
+          "occupied": 852.7439626404997,
+          "cost": 1.0201199626404998
+        },
+        "hysteresis_u8_d0_c60|bridge_locked_test_steady_v1": {
+          "P1plus": true,
+          "occupied": 1347.7439626404994,
+          "cost": 1.5684199626404995
+        },
+        "hysteresis_u8_d0_c60__guard|bridge_locked_test_steady_v1": {
+          "P1plus": true,
+          "occupied": 1347.7439626404994,
+          "cost": 1.5684199626404995
+        }
+      }
+    }
+  ]
+}

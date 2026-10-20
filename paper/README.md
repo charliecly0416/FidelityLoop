@@ -1,74 +1,70 @@
-# FidelityLoop v9 paper source
+# FidelityLoop paper and result checks
 
-Build `main.tex` or `supplement.tex` with pdfLaTeX and BibTeX. Import this ZIP
-into Overleaf and select the entry point; all required figures, tables, styles,
-and references are included. No shell escape or external downloads are needed.
+[Main paper](main.pdf) · [Supplement](supplement.pdf) ·
+[Original paired corpus](../README.md) · [Native CPU replay](../cpu_replay/README.md)
 
-This source integrates Vidur and the AWQ-Marlin deployment-context study into
-the existing closed-loop validation argument. The AWQ extension adds 12 physical
-cells while keeping the policies, windows, deadlines, and accounting contract
-fixed; it is reported as a quantized-context validation, not a quantization-only
-causal comparison. The main body remains 10 pages, references start on page 11,
-and the main PDF has 12 pages. The supplement documents implementation and
-evidence details.
+The main PDF is the checked Overleaf download for this review snapshot. It has
+a ten-page body, followed by references and AI Usage Disclosure. The supplement
+contains the experimental contracts and extended results, including the full-day
+and same-host capacity studies. Compile `main.tex` or `supplement.tex` with
+pdfLaTeX and BibTeX; figures and the MLSys style files are included.
 
-The opening and conclusion explain how developers can use the framework to
-diagnose replay/deployment disagreements. The background and PPO introduction
-remain concise; the AWQ extension is the only new physical campaign.
+## Recompute the added experiments
 
-The source includes lightweight, standard-library comparison artifacts.
-The reduced AWQ-Marlin receipt is in `artifact/awq_formal/`; model weights and
-full GPU journals remain in the separately archived return package:
+Run from this `paper/` directory with Python 3.10 or newer:
 
-- `python -B artifact/awq_formal/verify.py` reproduces the three frozen
-  AWQ startup-predictor comparisons on all eight policy runs, retaining both
-  deadline failures. Four regression tests check evidence tampering and strict
-  deadline semantics.
+```text
+python -B artifact/full_day/tools/recompute.py
+python -B -m unittest discover -s artifact/full_day/tests -v
+python -B artifact/capacity_transfer/verify.py
+python -B artifact/capacity_pressure/verify.py
+```
 
-- `python -B artifact/vidur_control/verify.py` recomputes deadline counts,
-  occupied resources and control-target agreement for 12 predictions and
-  36 physical comparisons. Four corruption/verification tests accompany it.
+The [full-day audit](artifact/full_day/README.md) contains all eight executions
+and 24 primary predictions. The [capacity audit](artifact/capacity_transfer/README.md)
+contains 24 executions and 48 predictions on the original short windows. The
+[pressure audit](artifact/capacity_pressure/README.md) contains 12 executions
+and 24 predictions on the constructed offline-pressure input. Their 44 physical
+executions are separate from the historical 197/239/555 corpus and from the
+12-run AWQ study. Every deadline failure remains included.
 
-- `python -B artifact/vidur_service_screen/verify.py` recomputes all five
-  fixed service-screen metrics from 90 reduced per-request records. This
-  separate microbenchmark is not part of the 197 policy-run corpus.
+The capacity checkers recompute per-request deadlines, occupied resources,
+scenario costs, device service exposure, and frozen candidate selection. The
+original-window study requires feasibility on two windows; the pressure study
+uses one window. Both retain cost ties and report repeat 1 as primary and
+repeat 2 as robustness. The full-day checker retains its day/host pairing.
 
-- `artifact/vidur_cpu/README.md` gives the two native-output evaluations and
-  nine adapter tests, plus an optional pinned-source Vidur rerun recipe.
+## Other result checks
 
-- `python -B artifact/decision_price/verify.py` checks all nine GPU/API price
-  combinations and recovers the nominal deployment choices.
-- `python -B artifact/decision_utility/verify.py` reproduces deployment choices
-  and observed consequences within the recorded E2–E6 candidate pools.
-- `python -B artifact/e5_e6/verify.py` reproduces the original E5/E6 comparison
-  table and the startup-only predictor contrast.
-- `python -B artifact/e6_diagnostic/verify.py` checks the retrospective 30-second
-  startup contrast and reduced event-chain evidence.
-- `python -B artifact/azure_diagnostic/verify.py` checks the retrospective Azure
-  comparison against strict per-request deadline feasibility.
-- `artifact/e4_startup_sensitivity/recompute.py` retains the prior sensitivity
-  analysis.
+Run these from `paper/`; each uses the standard library unless its README says
+otherwise:
 
-These lightweight checkers validate reduced evidence; they do not reproduce
-GPU inference or independently reconstruct the full machine journals. The later
-30-second, Azure and Vidur control analyses are retrospective and are separate from the
-original frozen-prediction corpus. An optional companion `cpu_replay/` package regenerates the 12 fixed Vidur-backed
-predictions using bundled source, measured profiles and pinned CPU dependencies.
-It is distributed separately from this Overleaf ZIP at the anonymous release
-address below. Full GPU archives and model weights are not part of this ZIP.
+| Command or directory | Checked evidence |
+|---|---|
+| `python -B artifact/awq_formal/verify.py` | 18 frozen predictions and 12 AWQ executions; eight policy runs enter the three-predictor comparison, with both failures retained |
+| `python -B artifact/input_cost_audit/verify.py` | 28 online source-row intersections, three hash bindings, fixed-policy cost means, and the 16-ratio observed-repeat envelope |
+| `python -B artifact/vidur_control/verify.py` | 12 retrospective predictions, deadline/resource errors, and target agreement against 36 physical runs |
+| `python -B artifact/vidur_service_screen/verify.py` | Five service-screen metrics from 90 request records, separate from the policy-run corpus |
+| `artifact/vidur_cpu/README.md` | Native-output evaluation, nine adapter tests, and the pinned Vidur rerun recipe |
+| `python -B artifact/decision_price/verify.py` | Nine GPU/API price combinations and their deployment choices |
+| `python -B artifact/decision_utility/verify.py` | Deployment choices and observed consequences in E2–E6 candidate pools |
+| `python -B artifact/e5_e6/verify.py` | Original E5/E6 comparison and startup-only contrast |
+| `python -B artifact/e6_diagnostic/verify.py` | Retrospective 30-second startup contrast and event chain |
+| `python -B artifact/azure_diagnostic/verify.py` | Retrospective Azure comparison under strict request deadlines |
+| `artifact/e4_startup_sensitivity/recompute.py` | Engine-study startup sensitivity |
 
-The companion paired-trace corpus covers the held-out study, Bridge, E2, E3,
-E4, E5, and E6: 197 original physical runs, 239 original frozen predictions
-and 555 pairs. The AWQ extension is a separate 12-cell deployment-context
-archive and is not included in that historical corpus count. All 41 strict deadline failures remain included. Repeats reuse
-predictions; the pairs are not independent experiments. The anonymous release
-address is https://anonymous.4open.science/r/FidelityLoop-144B/.
+The input-overlap checker establishes source-row separation, not session or
+prompt independence. Reduced records support arithmetic and consistency checks;
+they do not rerun GPU inference or authenticate the private machine journals.
+The 30-second, Azure, and Vidur analyses are retrospective and do not increase
+the original frozen-prediction counts.
 
-`SHA256SUMS.txt` covers the source files. This build retains the MLSys 2025
-style and a ten-page body budget; check the target-year submission instructions
-when uploading.
+The optional `../cpu_replay/` runner uses bundled source, measured profiles,
+and pinned dependencies to regenerate the 12 fixed Vidur predictions.
+Model weights and full GPU archives are not included. `DISPLAY_NAMES.json`
+maps display names to unchanged archive IDs. If regenerating the original
+tables, run `python refresh_display_tables.py` afterward to update display names.
 
-Display names are unified across the paper and figures. `DISPLAY_NAMES.json`
-and the supplement map these names to the unchanged archived IDs. After running
-the original artifact table generators, run `python refresh_display_tables.py`
-to update the two reader-facing table copies.
+`SHA256SUMS.txt` binds this paper tree. The root manifest binds the complete
+snapshot, while `INDEX.json` defines the original corpus. The review address remains
+https://anonymous.4open.science/r/FidelityLoop-144B/.

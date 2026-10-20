@@ -1,0 +1,104 @@
+{
+  "schema": "fidelityloop-fixed-engine-cost-projection-v1",
+  "price_input_sha256": "ba921cf7e0fcb20cf560e44d2e911793882e7e077ce749c54e7cb0615198dcd9",
+  "gpu_price_per_second": 0.001,
+  "aggregation": "Average repeats within window, then equal-weight recovery and steady. API fractions use all online arrivals.",
+  "runs": [
+    {
+      "record_id": "E4_physical_C30_s105_e0035_recovery_1",
+      "record_sha256": "c22d25bb70d8157f0bb28fd2557f15c262cac03191663e1d8978a80cfaa45b91",
+      "policy": "C30_s105_e0035",
+      "paper_label": "PPO-7",
+      "window": "recovery",
+      "repeat": 1,
+      "online_arrivals": 358,
+      "api_terminal_count": 108,
+      "terminal_source_sha256": "98dd9b1bfe31c590ac8f18ef32e8ba7dab4e8a87f17e35468aed6574d9aff038",
+      "terminal_count": 478
+    },
+    {
+      "record_id": "E4_physical_C30_s105_e0035_recovery_2",
+      "record_sha256": "d42e350aad98c25becf658fe98971d57f058df7411a10dba8b8836661b621d27",
+      "policy": "C30_s105_e0035",
+      "paper_label": "PPO-7",
+      "window": "recovery",
+      "repeat": 2,
+      "online_arrivals": 358,
+      "api_terminal_count": 104,
+      "terminal_source_sha256": "7ba4f0328a367673f77fa81d19fc6167586571cfb20ccfcb852316e6f48f952f",
+      "terminal_count": 478
+    },
+    {
+      "record_id": "E4_physical_C30_s105_e0035_steady_1",
+      "record_sha256": "a68ff0c1536858376ac65087e1c307a3333b470a6efb9a370061bbade7f1ec47",
+      "policy": "C30_s105_e0035",
+      "paper_label": "PPO-7",
+      "window": "steady",
+      "repeat": 1,
+      "online_arrivals": 944,
+      "api_terminal_count": 240,
+      "terminal_source_sha256": "21807910a20fb652c577cde22a105a66d574c135f3eaae86b72e2274c4286f53",
+      "terminal_count": 1064
+    },
+    {
+      "record_id": "E4_physical_C30_s105_e0035_steady_2",
+      "record_sha256": "2d234c259360bb769bc122f1619365dec77637ba6785264beef0051f5bb9fa68",
+      "policy": "C30_s105_e0035",
+      "paper_label": "PPO-7",
+      "window": "steady",
+      "repeat": 2,
+      "online_arrivals": 944,
+      "api_terminal_count": 252,
+      "terminal_source_sha256": "b464e9592479f37e880ec8c9f868691c3932dd440ca6b21097bfef0898bae1e4",
+      "terminal_count": 1064
+    },
+    {
+      "record_id": "E4_physical_hysteresis_u8_d0_c60__guard_recovery_1",
+      "record_sha256": "379f2cc1ee455d33f1527553afbb9eeb8d823c09370ddca0e87585c366341857",
+      "policy": "hysteresis_u8_d0_c60__guard",
+      "paper_label": "H+guard",
+      "window": "recovery",
+      "repeat": 1,
+      "online_arrivals": 358,
+      "api_terminal_count": 262,
+      "terminal_source_sha256": "c66a45946095acd2e428fa9b8d83c4b240de3c3f989b0fffba66cc08f91afece",
+      "terminal_count": 478
+    },
+    {
+      "record_id": "E4_physical_hysteresis_u8_d0_c60__guard_recovery_2",
+      "record_sha256": "2006409a10c36594c37c882ceba8df2eb4e1b506afd7267e605e9cd6540fbc91",
+      "policy": "hysteresis_u8_d0_c60__guard",
+      "paper_label": "H+guard",
+      "window": "recovery",
+      "repeat": 2,
+      "online_arrivals": 358,
+      "api_terminal_count": 223,
+      "terminal_source_sha256": "df6eeabbcdd47156c3e4297c53c3411b1526309ef1521ac455527b52f8bfaf29",
+      "terminal_count": 478
+    },
+    {
+      "record_id": "E4_physical_hysteresis_u8_d0_c60__guard_steady_1",
+      "record_sha256": "2e5f9139b3f0d7d85fa5e55ab6ac2ae5debe54bbec22c1dc6aada73cddde26cc",
+      "policy": "hysteresis_u8_d0_c60__guard",
+      "paper_label": "H+guard",
+      "window": "steady",
+      "repeat": 1,
+      "online_arrivals": 944,
+      "api_terminal_count": 523,
+      "terminal_source_sha256": "3517f286c54b774a78637bd31b11049d5c2a794d5afd49b45e6f6c50dd7eccef",
+      "terminal_count": 1064
+    },
+    {
+      "record_id": "E4_physical_hysteresis_u8_d0_c60__guard_steady_2",
+      "record_sha256": "8f3cadc5c746e581db86dbe51321cf298768497e654a7a32759ee5d6bdaa805a",
+      "policy": "hysteresis_u8_d0_c60__guard",
+      "paper_label": "H+guard",
+      "window": "steady",
+      "repeat": 2,
+      "online_arrivals": 944,
+      "api_terminal_count": 510,
+      "terminal_source_sha256": "2eabaee051ed7226c35a713b0e21c429129bb9a92408939858587936466d75f0",
+      "terminal_count": 1064
+    }
+  ]
+}
