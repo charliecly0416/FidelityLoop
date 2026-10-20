@@ -342,8 +342,8 @@
       "sha256": "f46ac70d8a42711fcab0ed9b6dc0c132cfe1bf516a64396b43bd05a627f5b6b5"
     },
     "tools/recompute.py": {
-      "bytes": 18700,
-      "sha256": "c3d089c84b225d261caa61997cb37f5cbebc922e9f89f9e919af47d960c08e33"
+      "bytes": 21143,
+      "sha256": "79f5d0f144c6af787a772f9a6c171398f0a40bac17133f2b20045f02ac79619b"
     }
   }
 }

@@ -38,6 +38,18 @@ python -B paper/artifact/capacity_pressure/verify.py
 These commands recompute recorded outcomes. GPU inference and new policy training
 require the serving and training environment described in the paper.
 
+## Source layout
+
+`load_trace.py` reads the paired records, `evaluate.py` computes the metrics,
+and `verify.py` checks them against the released inventory and summaries.
+The checkers under `paper/artifact/` audit individual studies from their local
+evidence files; each can run independently. The two capacity checkers share
+accounting rules but enforce different workload and device-exposure contracts.
+
+For the runnable control loop, start with `cpu_replay/src/controlled_vidur.py`
+and its service adapter, `service_predictor.py`. The pinned implementations
+under `cpu_replay/vendor/` retain their source provenance and licenses.
+
 ## Original paired corpus
 
 The corpus contains frozen predictions and physical traces from seven campaigns:

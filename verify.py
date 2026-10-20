@@ -105,7 +105,9 @@ def verify(root=ROOT):
     root = Path(root).resolve()
     manifest = json.loads((root / "MANIFEST.json").read_text())
     expected = {e["path"] for e in manifest["files"]} | {"MANIFEST.json"}
-    actual = {p.relative_to(root).as_posix() for p in root.rglob("*") if p.is_file()}
+    # Git metadata is not part of a downloaded release or its file manifest.
+    actual = {p.relative_to(root).as_posix() for p in root.rglob("*")
+              if p.is_file() and p.relative_to(root).parts[0] != ".git"}
     if actual != expected:
         raise ValueError("release inventory mismatch")
     for entry in manifest["files"]:

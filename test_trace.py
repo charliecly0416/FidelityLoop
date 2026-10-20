@@ -1,6 +1,11 @@
 """Small semantic checks, independent of archived numeric reference summaries."""
 import copy
 import unittest
+import json
+from pathlib import Path
+import tempfile
+from unittest.mock import patch
+from verify import verify
 from load_trace import measure
 
 
@@ -43,5 +48,36 @@ class TraceTests(unittest.TestCase):
     def test_unknown_request_not_silently_dropped(self):
         r = fixture(); r["ledger_events"][-1]["request_id"] = "unknown"
         with self.assertRaises(ValueError): measure(r)
+
+class ReleaseInventoryTests(unittest.TestCase):
+    def check_inventory(self, git_directory, extra_file=False):
+        with tempfile.TemporaryDirectory() as folder:
+            root = Path(folder)
+            (root / "MANIFEST.json").write_text(json.dumps({"files": []}))
+            if git_directory:
+                (root / ".git").mkdir()
+                (root / ".git" / "HEAD").write_text("ref: refs/heads/main\n")
+            else:
+                (root / ".git").write_text("gitdir: metadata\n")
+            if extra_file:
+                (root / "unexpected.txt").write_text("not in the release")
+            # Stop after inventory validation; no scientific corpus is needed here.
+            with patch("verify.read_index", side_effect=RuntimeError("inventory passed")):
+                if extra_file:
+                    with self.assertRaisesRegex(ValueError, "release inventory mismatch"):
+                        verify(root)
+                else:
+                    with self.assertRaisesRegex(RuntimeError, "inventory passed"):
+                        verify(root)
+
+    def test_clone_metadata_is_not_a_release_member(self):
+        self.check_inventory(git_directory=True)
+
+    def test_worktree_metadata_is_not_a_release_member(self):
+        self.check_inventory(git_directory=False)
+
+    def test_extra_release_member_is_still_rejected(self):
+        self.check_inventory(git_directory=True, extra_file=True)
+
 
 if __name__ == "__main__": unittest.main()
