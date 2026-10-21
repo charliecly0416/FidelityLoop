@@ -767,7 +767,7 @@ Repeat & risk ticks & target raises & tick range & slack range\\
 
 \begin{figure*}[t]
 \centering
-\includegraphics[width=0.96\linewidth]{figures/fig4_recovery_timeline.pdf}
+\includegraphics[width=0.84\linewidth]{figures/fig4_recovery_timeline.pdf}
 \caption{Recovery target and offline queue in repeat 1. The shaded final interval
 contains the guard raise at 1982 s, where the target trajectories first diverge.
 H leaves four offline jobs queued, while the guard clears them. Across all three
@@ -822,12 +822,13 @@ sweep of engine Lookup-SG preserved 24/24 through 41\,s and gave 22/24 at
 42\,s; the measured 27.6\,s median and the 69.2\,s historical proxy lie on
 opposite sides of this change.
 
-After developing rules or training PPO in replay, freeze candidates for physical
-validation. The validation set should include candidates that replay accepts and
-rejects to check for infeasible selections and overlooked feasible alternatives.
-Compare physically feasible candidates under the same cost ledger, retaining any
-ties in replay-based selection. If physical cost rankings reverse across repeats,
-report the results for each repeat.
+After developing rules or training PPO in replay, freeze candidates for
+physical validation. The validation set should include candidates that
+replay accepts and rejects to check for infeasible selections and
+overlooked feasible alternatives. Compare physically feasible candidates
+under the same cost ledger, retaining any ties in replay-based selection.
+If physical cost rankings reverse across repeats, report the results
+for each repeat.
 
 \section{Scope and limitations}
 The synthetic API is a five-second timer after routing wait, without answer generation or quality evaluation;
