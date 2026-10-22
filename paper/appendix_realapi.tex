@@ -1,0 +1,208 @@
+\section{Prospective selection with generated HTTP responses}
+\label{sec:realapi}
+
+\subsection{Protocol and candidate pool}
+This study tests the same prediction--selection--execution contract with actual
+response generation at the offload endpoint. On one host with four A800 80GB
+PCIe GPUs, two TP1 Qwen2.5-7B-Instruct FP16 replicas are elastic local workers;
+two further replicas remain ready as HTTP providers. This is a two-local,
+two-provider topology, distinct from Section~Q's four elastic workers. The
+stack is vLLM 0.9.0, PyTorch 2.7.0+cu126, and Transformers 4.51.1.
+All replicas use the same model weights and tokenizer. The recovery and steady
+inputs are the previously locked deployment windows: 358/944 online requests
+and 120 offline jobs each, with unchanged token IDs, arrivals, and deadlines.
+These are known reused inputs, not newly held-out arrivals.
+
+The candidate pool contains H, H+guard, PPO-1--5, and the earlier mixed-policy
+PPO-C (displayed here as PPO-12). All six checkpoints already exist; none is
+retrained, selected from new GPU outcomes, or expanded to four-device actions.
+The matrix is eight candidates times two windows times two repeats, plus
+four all2 references: 36 executions. All2 keeps both local replicas ready;
+the same two provider replicas remain allocated for every cell. Each run has
+1,800~s of arrivals and a 300~s drain. The strict P1+ test includes every
+planned request, including late, undispatched, and unfinished work.
+
+Frozen preparation binds inputs, checkpoint and source hashes, profiles,
+72 predictions, and selected sets before the first formal setup. The 72
+predictions comprise four predictors times eight candidates times two windows,
+plus eight reference predictions. The first formal setup begins 16.011~s
+after the freeze; all 36 execution receipts reference the same preparation
+and source seals. There are no formal retries or excluded scientific failures.
+The two physical repeats reuse each prediction, rather than constituting
+independent predictor samples.
+
+\subsection{HTTP execution and calibration}
+Local-ready slots retain online-first dispatch unless the guard reserves an offline slot. Online requests still queued
+10~s after arrival may offload to eight fixed provider slots (four per
+provider); offline jobs cannot offload. Each call submits the registered token
+IDs directly, without chat-template insertion or retokenization. Performance
+runs use greedy decoding with seed zero, ignored EOS, and the registered
+128/256 online/offline output budgets. HTTP completion requires a successful,
+validated generated response. There is no five-second padding or application
+retry. Native provider responses and client receipts are matched by request
+ID, payload hash, response hash, usage, and monotonic timestamps.
+
+Independent profiling precedes the freeze: five input lengths
+(128, 256, 512, 1024, 2048), two output budgets (128, 256), three concurrency
+levels (1, 2, 4), three batches, and four GPUs give 360 batches. Replay uses
+the median batch maximum, interpolated in input length and concurrency.
+Remaining service work advances at the rate for the current active
+concurrency. HTTP proxy overhead is a separate terminal stage. Formal response
+latencies do not fit these profiles.
+
+Twenty launch-to-ready samples, with another local replica continuously
+serving four background jobs, give a median of 29.195~s, p95 of 29.384~s,
+and maximum of 29.447~s. Local uses the measured median. The 69~s and 30~s
+predictors replace only startup with 69.219~s or 30~s, holding service,
+shutdown, and guard estimates fixed. These names denote study-specific
+models, not the original A100 parameter table: the 69~s variant carries over
+only the archived A100 startup estimate without remeasurement on A800.
+A fourth, CPU-only diagnostic
+retains Local's lifecycle but replaces provider service with an eight-slot
+five-second timer. All predictors and physical runs use the same separately
+frozen guard safety profile and five-second margin.
+
+\subsection{Accounting and selection}
+The primary system ledger charges local occupation and both fixed providers:
+\begin{equation}
+ C_{\rm sys}=.001(G_{\rm local}+4200)+.002S+.001D.
+\end{equation}
+The 4,200 GPU seconds are two providers allocated for the full 2,100~s
+observation, including when idle. Local GPU occupation extends from launch to
+verified release, clipped to the observation interval. Setup and cleanup are
+separate. Feasibility gates selection, so a deadline penalty is unnecessary
+in this cost. Values are scenario USD, not measured cloud bills.
+
+A secondary client ledger charges local occupation and lifecycle events plus
+$10^{-6}I+3\times10^{-6}B$ for token usage in successful HTTP responses.
+It describes a different pricing scenario; it is neither added to the system
+ledger nor used for the primary selection. In particular, provider capacity
+is not treated as free in the primary result.
+
+For each predictor, eligibility requires predicted P1+ in both windows.
+Selection minimizes equal-window mean predicted system cost, retaining all
+ties within $10^{-9}$. Physical comparison requires P1+ in all four
+candidate executions, then averages the two windows and two repeats equally.
+All2 is a capacity reference outside the eight-candidate selection pool.
+
+\begin{table*}[t]
+\centering\small
+\caption{All prospective physical outcomes. R/S list recovery/steady P1+
+passes out of two repeats. Costs are system scenario USD, repeat 1 / repeat 2;
+$\dagger$ marks an infeasible execution. Every online request meets its deadline.}
+\label{tab:realapi-all}
+\setlength{\tabcolsep}{4pt}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lccrrr@{}}
+\toprule
+Candidate & R & S & Recovery costs & Steady costs & Mean cost\\
+\midrule
+\input{generated/realapi_physical_rows.tex}
+\end{tabular*}
+\end{table*}
+
+\subsection{Physical results and choice consequences}
+All 36 cells are technically valid; 34 satisfy strict P1+. Both negative
+cells are H: recovery repeat 1 and steady repeat 2 each leave the last
+offline job unfinished. Its arrival is 1,785~s and deadline 2,085~s. It remains
+undispatched through the cutoff, with one offline request queued, no online
+queue, both local workers off, and H's target zero. These are local lifecycle
+and admission failures, not HTTP failures. H passes its other two executions.
+H+guard and every PPO checkpoint pass all four executions, giving seven
+consistently feasible candidates (Table~\ref{tab:realapi-all}).
+
+Across all cells, 11,137 offloads have successful validated responses:
+5,577 and 5,560 on the two providers. There are no HTTP errors, missing usage,
+or responses completed after the observation cutoff. Total recorded provider
+usage is 2,286,615 input tokens and 1,425,536 output tokens. Both endpoints
+serve offloads for every candidate. These responses establish actual inference
+on the offload path, without implying independent network or model diversity.
+
+Local selects H+guard, whose mean system cost is 5.2075. It is the cheapest
+of the seven consistently feasible candidates both overall and in each
+repeat's equal-window comparison. The historical startup proxy rejects the
+guard on steady and selects PPO-1, costing 6.2421. Its relative premium is
+$(6.2420812-5.2075119)/5.2075119=19.87\%$; the equivalent reduction relative
+to PPO-1 is 16.57\%. This is a within-pool, fixed-provider-allocation consequence,
+not a new policy-optimization result or a commercial API saving.
+
+\begin{table}[t]
+\centering\small
+\caption{Prediction versus 32 candidate executions. FA is out of two
+infeasible cells; FR out of 30 feasible cells. Each predictor has 16 distinct
+candidate/window predictions, reused across repeats. Cost MAE is system scenario USD.}
+\label{tab:realapi-predictions}
+\setlength{\tabcolsep}{3pt}
+\begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}lrrrr@{}}
+\toprule
+Predictor & Agreement & FA & FR & Cost MAE\\
+\midrule
+Local & 30/32 & 1/2 & 1/30 & 0.0610\\
+69\,s & 16/32 & 1/2 & 15/30 & 0.4661\\
+30\,s & 30/32 & 1/2 & 1/30 & 0.0610\\
+Local + timer & 30/32 & 1/2 & 1/30 & 0.0644\\
+\bottomrule
+\end{tabular*}
+\end{table}
+
+\begin{table}[t]
+\centering\small
+\caption{Key frozen predictions behind the prospective choice. R/S count
+on-time offline jobs out of 120; every predicted online request is timely.
+Cost is the predicted two-window mean. An ineligible candidate is excluded
+before cost ranking.}
+\label{tab:realapi-eligibility}
+\setlength{\tabcolsep}{3pt}
+\begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}llrrrl@{}}
+\toprule
+Replay & Candidate & R & S & Cost & Eligible\\
+\midrule
+Local & H+guard & 120 & 120 & 5.1394 & yes\\
+Local & PPO-1 & 120 & 120 & 6.2290 & yes\\
+69\,s & H+guard & 120 & 117 & 6.0235 & no\\
+69\,s & PPO-1 & 120 & 120 & 6.1757 & yes\\
+\bottomrule
+\end{tabular*}
+\end{table}
+
+The 69~s model predicts three late offline completions on steady, excluding
+H+guard despite predicting a lower mean cost than PPO-1
+(Table~\ref{tab:realapi-eligibility}). The physical guard has no misses. This
+choice difference follows the feasibility gate, not a cost tie. The traces
+support that selection consequence; we do not attribute this entire HTTP
+trajectory to one isolated startup event.
+
+Local is not a perfect classifier (Table~\ref{tab:realapi-predictions}). It
+accepts H on recovery, falsely accepting repeat 1, and rejects H on steady,
+falsely rejecting repeat 1. Rejecting H on steady nevertheless removes it
+from two-window selection. The 30~s predictor has identical predictions here;
+the timer diagnostic also selects H+guard and has the same labels. Therefore,
+this study validates a frozen selection with generated responses but does
+not show that local calibration or HTTP service modeling is necessary to
+select the winner on these inputs. It complements the earlier failure cases
+with a prospective successful choice and a measured alternative-choice cost.
+
+\subsection{Paired endpoint output check}
+A separate preformal check uses 64 hash-selected GSM8K test items
+\citep{cobbe2021gsm8k}, submitted in pairs through temporary local-HTTP and
+provider-HTTP replicas with the same weights, prompt template, and greedy
+decoding. This probe permits natural EOS with a maximum of 512 output tokens;
+it is separate from the fixed-budget performance inputs and does not select
+policies. Both routes answer 61/64 correctly, with the same per-item correctness
+vector, three shared failures, including one unparsed answer per route.
+There are no truncated responses or HTTP errors. The local-HTTP replica is
+not the formal local worker implementation. These descriptive observations
+check the configured endpoints; they neither establish statistical quality
+equivalence nor characterize heterogeneous commercial models.
+
+\subsection{Portable evidence and audit scope}
+The anonymous repository's \path{paper/artifact/realapi_prospective/verify.py} extracts the sealed
+anonymous evidence into a temporary directory and runs its standard-library
+CPU verifier. It checks all 36 normalized physical records, actual HTTP
+response hashes and usage, 64 candidate predictions, frozen selected sets,
+and all 128 paired quality responses. It also recomputes table means,
+feasibility counts, classification errors, and selected-policy cost gaps.
+The eight frozen all2 predictions are outside the released candidate-prediction
+set; all four physical references are included. These checks audit recorded
+execution and arithmetic; they do not rerun model inference or authenticate
+hardware independently. Full native journals and calibration provenance are
+retained separately from this portable release.

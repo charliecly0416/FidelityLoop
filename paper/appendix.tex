@@ -23,15 +23,18 @@ false accepts/rejects with their physical denominators;
 \texttt{python -B verify.py} checks the complete corpus after extraction.
 This release supports analysis of the recorded deployments, not unseen-workload
 validation or rerunning model inference. The later 14B-30, Azure, and Vidur-backed retrospective predictions are
-supplied separately with the paper and are not included in these counts. The corpus's \path{SCHEMA.md} specifies the projection
+available in the anonymous repository and are not included in these counts. The corpus's \path{SCHEMA.md} specifies the projection
 and accounting boundaries.
 The full-day and A800 capacity studies below report eight and 36 additional
 physical executions, respectively, outside the historical corpus counts above.
-The accompanying \path{FidelityLoop_FullDay_Anonymous_CPU_Audit_20261019.zip}
-contains reduced full-day traces and CPU checks; the capacity study's prompt-free
-records and verifiers are in \path{artifact/capacity_transfer/} and
-\path{artifact/capacity_pressure/}. These additions
-are separate from the historical anonymous-mirror corpus.
+Section~\ref{sec:realapi} adds 36 prospective HTTP executions.
+The anonymous repository linked above hosts the evidence and CPU tools;
+\path{artifact/} paths in this supplement are relative to its \path{paper/}
+directory. Sealed HTTP records are in \path{artifact/realapi_prospective/},
+reduced full-day traces and checks in \path{artifact/full_day/}, and capacity
+records and verifiers in \path{artifact/capacity_transfer/} and
+\path{artifact/capacity_pressure/}. These study-specific additions are outside
+the historical corpus counts.
 
 The remaining \path{scripts/}, \path{docs/}, and \path{artifacts/} paths in this
 supplement identify the separately retained full experiment archive. Its
@@ -293,6 +296,8 @@ Down & window & risk runs & raises/run & misses/360 & $P1+$ pass\\
 \input{generated/bridge_guard_audit_rows.tex}
 \end{tabular*}
 \end{table}
+
+\input{protocol_details}
 
 \section{Held-out accounting and gate details}
 Completed requests have a completion terminal by the observation cutoff.
@@ -616,3 +621,5 @@ and variable request lengths: physical execution overturns a replay-selected
 choice despite timely completion of every online request.
 
 \input{appendix_capacity}
+
+\input{appendix_realapi}

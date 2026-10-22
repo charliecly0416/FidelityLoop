@@ -1,0 +1,89 @@
+{
+  "candidate_cells": 32,
+  "comparisons": {
+    "Fixed30_real": {
+      "agreement": 30,
+      "cost_mae": 0.0610270067402211,
+      "false_accepts": 1,
+      "false_rejects": 1,
+      "selected": [
+        "H_d0_guard"
+      ],
+      "selected_physical_cost": {
+        "H_d0_guard": 5.20751191740825
+      },
+      "selected_premium_pct": {
+        "H_d0_guard": 0.0
+      }
+    },
+    "Hist69_real": {
+      "agreement": 16,
+      "cost_mae": 0.4661425299919781,
+      "false_accepts": 1,
+      "false_rejects": 15,
+      "selected": [
+        "ppo_C_s101"
+      ],
+      "selected_physical_cost": {
+        "ppo_C_s101": 6.24208115646425
+      },
+      "selected_premium_pct": {
+        "ppo_C_s101": 19.866862629685535
+      }
+    },
+    "Local_real": {
+      "agreement": 30,
+      "cost_mae": 0.0610270067402211,
+      "false_accepts": 1,
+      "false_rejects": 1,
+      "selected": [
+        "H_d0_guard"
+      ],
+      "selected_physical_cost": {
+        "H_d0_guard": 5.20751191740825
+      },
+      "selected_premium_pct": {
+        "H_d0_guard": 0.0
+      }
+    },
+    "Local_timer5": {
+      "agreement": 30,
+      "cost_mae": 0.06436532335296186,
+      "false_accepts": 1,
+      "false_rejects": 1,
+      "selected": [
+        "H_d0_guard"
+      ],
+      "selected_physical_cost": {
+        "H_d0_guard": 5.20751191740825
+      },
+      "selected_premium_pct": {
+        "H_d0_guard": 0.0
+      }
+    }
+  },
+  "consistently_feasible_candidates": {
+    "H_d0_guard": 5.20751191740825,
+    "ppo_C30_r2": 5.3672637986095,
+    "ppo_C30_raw": 5.57563612531475,
+    "ppo_C30_s103": 5.90857547013975,
+    "ppo_C_r2": 5.36607387749275,
+    "ppo_C_s101": 6.24208115646425,
+    "ppo_bridge_C": 5.7516474810775
+  },
+  "feasible_cells": 34,
+  "mean_system_costs": {
+    "H_d0": 5.2165935854785,
+    "H_d0_guard": 5.20751191740825,
+    "all2": 8.4,
+    "ppo_C30_r2": 5.3672637986095,
+    "ppo_C30_raw": 5.57563612531475,
+    "ppo_C30_s103": 5.90857547013975,
+    "ppo_C_r2": 5.36607387749275,
+    "ppo_C_s101": 6.24208115646425,
+    "ppo_bridge_C": 5.7516474810775
+  },
+  "physical_cells": 36,
+  "status": "PASS",
+  "successful_http_responses": 11137
+}

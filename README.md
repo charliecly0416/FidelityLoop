@@ -16,11 +16,16 @@ regenerates the existing 12 Vidur-backed policy predictions.
 | Continuous full-day arrivals | 8 | [Full-day audit](paper/artifact/full_day/README.md) |
 | Two/four-replica short windows | 24 | [Capacity audit](paper/artifact/capacity_transfer/README.md) |
 | Two/four-replica offline pressure | 12 | [Pressure audit](paper/artifact/capacity_pressure/README.md) |
+| Frozen selection with generated HTTP responses | 36 | [HTTP audit](paper/artifact/realapi_prospective/README.md) |
 
 The full-day and capacity studies supply the 44 additional executions described in
 the paper. They retain their own inputs, pairing rules, and comparison populations;
 they do not change the original 197-run corpus counts. The 12 AWQ executions are
-also separate. All recorded deadline failures remain in their respective studies.
+also separate. The prospective HTTP study adds 36 executions with two elastic
+local replicas and two fixed provider replicas on one four-A800 host. Its
+candidate pool, predictions, and choices were frozen before formal execution;
+the two arrival windows are reused inputs. All recorded deadline failures
+remain in their respective studies.
 
 The result checkers use Python 3.10 or newer and the standard library. They require
 no GPU, model weights, original prompts, external API, or network access. Run each
@@ -33,7 +38,13 @@ python -B paper/artifact/full_day/tools/recompute.py
 python -B -m unittest discover -s paper/artifact/full_day/tests -v
 python -B paper/artifact/capacity_transfer/verify.py
 python -B paper/artifact/capacity_pressure/verify.py
+python -B paper/artifact/realapi_prospective/verify.py
 ```
+
+The HTTP checker verifies 36 physical records, 64 candidate predictions, and
+128 paired output-check responses. It recomputes 34 feasible executions,
+11,137 successful offloads, and the 19.87% cost premium of the historical
+proxy's selected policy. It needs about 400 MB of temporary disk space.
 
 These commands recompute recorded outcomes. GPU inference and new policy training
 require the serving and training environment described in the paper.

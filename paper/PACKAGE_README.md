@@ -1,9 +1,15 @@
-# FidelityLoop v9r19 Overleaf package
+# Package contents
 
-Compile `main.tex` for the anonymous main paper and `supplement.tex` for the supplement.
-The package includes the referenced PDF figures and `references.bib`.
-Compile with pdfLaTeX and BibTeX; Overleaf generates the bibliography during compilation.
-The `artifact/` tree contains the CPU verifiers and retained replay evidence.
-For `artifact/14b_startup_sensitivity/recompute.py`, set
-`FIDELITYLOOP_E6_RECEIVED` to the frozen E6 package root before running the
-retrospective CPU verifier. No local absolute path is embedded in this package.
+`main.tex` and `supplement.tex` are separate anonymous submission entry points.
+Build with pdfLaTeX and BibTeX. Bibliographies are generated from the included
+`references.bib`; pre-generated `.bbl` files are not bundled.
+
+See `README.md` for verification commands and separately distributed companion
+materials, or `OVERLEAF_README_ZH.md` for Overleaf import instructions.
+The prospective HTTP evidence and standard-library verifier are bundled in
+`artifact/realapi_prospective/`; see its README for temporary-disk requirements.
+The reduced AWQ predictions and Vidur control CSVs required by the bundled
+verifiers are included. Full native GPU archives and model weights are separate.
+
+The optional retrospective `artifact/14b_startup_sensitivity/recompute.py`
+requires the frozen E6 package root in `FIDELITYLOOP_E6_RECEIVED`.

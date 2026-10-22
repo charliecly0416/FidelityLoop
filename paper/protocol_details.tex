@@ -1,0 +1,44 @@
+\subsection{Primary execution settings and detailed contrasts}
+The preregistered held-out study used two NVIDIA A100
+80GB PCIe GPUs at a university computing facility, each running an independent
+Qwen2.5-7B-Instruct instance with tensor parallelism (TP) of one. The serving stack
+was vLLM 0.9.0 \citep{kwon2023vllm} with PyTorch 2.7.0+cu126, Transformers 4.51.1, tokenizers 0.21.1,
+and NumPy 1.26.4. Settings were FP16, maximum model length 4096, batched-token
+limit 16,384, sequence limit 1,024, four local request slots, chunked prefill,
+no prefix caching, eager execution, and GPU memory utilization 0.8. Readiness
+required per-process health probes and a dual-ready barrier; cleanup verified
+both processes' release. Per-run environment and GPU records identify these settings.
+
+The three held-out windows follow the earlier evaluation windows with a
+30-minute exclusion interval. A predefined filter on 60 s arrival counts
+identifies steady, recovery, and burst-offline classes (even, declining, and
+bursty online arrivals). Deterministic hash ordering selects the first eligible
+window in steady--recovery--burst order, subject to fixed separation criteria.
+Online rows are thinned at a fixed threshold; each window receives 120 offline
+jobs at 15 s intervals with 256-input/256-output token budgets. Selection
+parameters and generated inputs are frozen before replay; the supplement
+identifies the reproducibility records.
+
+
+Replacing the service lookup with Vidur's profiled model tests the same
+validation contract with an external predictor. Twelve retrospective CPU
+rollouts retain Local's lifecycle parameters and the original guard, and reuse
+all 36 physical runs. They reproduce H's recovery misses (116/120 offline
+jobs on time versus 113--116 physically) and the guard's 120/120.
+For H and H+guard in steady, median occupied-resource absolute percentage error (APE) is
+2.47\%, yet target agreement is 33.0--35.5\%; guard recovery has 14.74\%
+occupied-resource APE. Thus the external backend preserves the key deadline
+contrast while revealing residual timing errors (Supplement Section~A.3).
+
+
+The 14B study tests remeasured lifecycle timing in Qwen2.5-14B-Instruct/vLLM.
+H fails all four runs; H+guard passes all four. Replacing 14B-Hist's historical
+startup with the measured value in 14B-Local raises agreement from 4/8 to 8/8
+and lowers cost MAE from 0.4105 to 0.0668 scenario USD. A retrospective
+startup-only replay (20--90\,s at 1\,s, with 0.25\,s near the measured value)
+yields 8/8 only at 39.25--43 and 44.25--48\,s; 43.25--44 returns 6/8 and
+48.25--90 returns 4/8, all errors being false accepts of H. The fixed 30\,s
+point is 6/8; 19/20 calibration samples lie in the upper tested region, while
+52.35\,s gives 4/8. The finite grid is non-monotonic; event replay links
+longer startup to cooldown pressure, target changes, and later deadline outcomes.
+

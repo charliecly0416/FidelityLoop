@@ -1,70 +1,59 @@
-# FidelityLoop paper and result checks
+# FidelityLoop paper source and verification records
 
-[Main paper](main.pdf) · [Supplement](supplement.pdf) ·
-[Original paired corpus](../README.md) · [Native CPU replay](../cpu_replay/README.md)
+Compile `main.tex` and `supplement.tex` separately with pdfLaTeX and BibTeX.
+All figures, table inputs, styles and bibliography files needed for compilation
+are included; no shell escape or external downloads are required. The main
+paper has a ten-page body, with references and AI Usage Disclosure afterward
+(12 pages total in the checked build). The separate supplement has 36 pages.
 
-The main PDF is the checked Overleaf download for this review snapshot. It has
-a ten-page body, followed by references and AI Usage Disclosure. The supplement
-contains the experimental contracts and extended results, including the full-day
-and same-host capacity studies. Compile `main.tex` or `supplement.tex` with
-pdfLaTeX and BibTeX; figures and the MLSys style files are included.
+## CPU checks
 
-## Recompute the added experiments
-
-Run from this `paper/` directory with Python 3.10 or newer:
+Run the following from the source root with Python's standard library:
 
 ```text
-python -B artifact/full_day/tools/recompute.py
-python -B -m unittest discover -s artifact/full_day/tests -v
+python -B artifact/input_cost_audit/verify.py
+python -B artifact/awq_formal/verify.py
+python -B artifact/vidur_control/verify.py
+python -B artifact/vidur_service_screen/verify.py
+python -B artifact/decision_price/verify.py
+python -B artifact/decision_utility/verify.py
+python -B artifact/e5_e6/verify.py
+python -B artifact/e6_diagnostic/verify.py
+python -B artifact/azure_diagnostic/verify.py
 python -B artifact/capacity_transfer/verify.py
 python -B artifact/capacity_pressure/verify.py
+python -B artifact/realapi_prospective/verify.py
 ```
 
-The [full-day audit](artifact/full_day/README.md) contains all eight executions
-and 24 primary predictions. The [capacity audit](artifact/capacity_transfer/README.md)
-contains 24 executions and 48 predictions on the original short windows. The
-[pressure audit](artifact/capacity_pressure/README.md) contains 12 executions
-and 24 predictions on the constructed offline-pressure input. Their 44 physical
-executions are separate from the historical 197/239/555 corpus and from the
-12-run AWQ study. Every deadline failure remains included.
+These checks recompute reduced-record results; they do not rerun GPU inference.
+Each study directory describes its inputs, measures and evidence scope.
+`artifact/vidur_cpu/README.md` also gives two offline request-output evaluations,
+adapter tests and an optional pinned-source native rerun recipe.
 
-The capacity checkers recompute per-request deadlines, occupied resources,
-scenario costs, device service exposure, and frozen candidate selection. The
-original-window study requires feasibility on two windows; the pressure study
-uses one window. Both retain cost ties and report repeat 1 as primary and
-repeat 2 as robustness. The full-day checker retains its day/host pairing.
+## Companion materials
 
-## Other result checks
-
-Run these from `paper/`; each uses the standard library unless its README says
-otherwise:
-
-| Command or directory | Checked evidence |
-|---|---|
-| `python -B artifact/awq_formal/verify.py` | 18 frozen predictions and 12 AWQ executions; eight policy runs enter the three-predictor comparison, with both failures retained |
-| `python -B artifact/input_cost_audit/verify.py` | 28 online source-row intersections, three hash bindings, fixed-policy cost means, and the 16-ratio observed-repeat envelope |
-| `python -B artifact/vidur_control/verify.py` | 12 retrospective predictions, deadline/resource errors, and target agreement against 36 physical runs |
-| `python -B artifact/vidur_service_screen/verify.py` | Five service-screen metrics from 90 request records, separate from the policy-run corpus |
-| `artifact/vidur_cpu/README.md` | Native-output evaluation, nine adapter tests, and the pinned Vidur rerun recipe |
-| `python -B artifact/decision_price/verify.py` | Nine GPU/API price combinations and their deployment choices |
-| `python -B artifact/decision_utility/verify.py` | Deployment choices and observed consequences in E2–E6 candidate pools |
-| `python -B artifact/e5_e6/verify.py` | Original E5/E6 comparison and startup-only contrast |
-| `python -B artifact/e6_diagnostic/verify.py` | Retrospective 30-second startup contrast and event chain |
-| `python -B artifact/azure_diagnostic/verify.py` | Retrospective Azure comparison under strict request deadlines |
-| `artifact/e4_startup_sensitivity/recompute.py` | Engine-study startup sensitivity |
-
-The input-overlap checker establishes source-row separation, not session or
-prompt independence. Reduced records support arithmetic and consistency checks;
-they do not rerun GPU inference or authenticate the private machine journals.
-The 30-second, Azure, and Vidur analyses are retrospective and do not increase
-the original frozen-prediction counts.
-
-The optional `../cpu_replay/` runner uses bundled source, measured profiles,
-and pinned dependencies to regenerate the 12 fixed Vidur predictions.
-Model weights and full GPU archives are not included. `DISPLAY_NAMES.json`
-maps display names to unchanged archive IDs. If regenerating the original
-tables, run `python refresh_display_tables.py` afterward to update display names.
-
-`SHA256SUMS.txt` binds this paper tree. The root manifest binds the complete
-snapshot, while `INDEX.json` defines the original corpus. The review address remains
+The anonymous release is available at
 https://anonymous.4open.science/r/FidelityLoop-144B/.
+The original paired-trace corpus, `cpu_replay/` and
+`paper/artifact/full_day/` are distributed there separately from this source ZIP.
+The full-day companion contains the recomputation tools and evidence for the
+eight physical executions on two full-day arrival streams. Model weights and
+complete native GPU journals are not included in this ZIP.
+
+The original corpus contains 197 physical runs, 239 frozen predictions and
+555 pairs, including all 41 strict deadline failures; prediction reuse does
+not make the pairs independent trials. The AWQ context study adds 12 executions.
+The later full-day, capacity-transfer and capacity-pressure studies add 8, 24
+and 12 executions respectively. The prospective HTTP study adds 36 executions, with its sealed portable
+evidence included in `artifact/realapi_prospective/evidence.zip`.
+The supplement reports these evidence groups
+separately. The four-replica pressure study includes service on both extra GPUs
+after restart; the original short-window study has a different exposure scope.
+
+## Source checksums
+
+`PACKAGE_MANIFEST.json` lists source sizes and SHA256 hashes, excluding itself
+and `SHA256SUMS.txt`. `SHA256SUMS.txt` covers all other source files and the
+manifest. Build caches and compiled submission PDFs are not included.
+`DISPLAY_NAMES.json` maps paper display names to archived IDs. Table regeneration
+instructions remain in the corresponding artifact directories.
